@@ -1,0 +1,26 @@
+{
+  "kind": "teacher",
+  "seed": 73000,
+  "sampling_seed": 74000,
+  "model": {
+    "vocab_size": 8,
+    "d_model": 64,
+    "n_head": 4,
+    "n_layer": 2,
+    "max_len": 32,
+    "dropout": 0.0
+  },
+  "objective": "ce",
+  "lr": 0.001,
+  "batch": 32,
+  "budgets": [
+    1200
+  ],
+  "checkpoints": [
+    400,
+    800,
+    1200
+  ],
+  "dataset": "data/raw/g2c_v1/reverse_6",
+  "job_dir": "results/g2c_overnight/reverse_6/teacher_0"
+}

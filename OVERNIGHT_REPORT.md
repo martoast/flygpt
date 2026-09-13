@@ -1,6 +1,6 @@
 # G2c overnight report
 
-Updated: 2026-09-13T12:13:34.273120+00:00. All results are computational; no living tissue was used.
+Updated: 2026-09-13T13:42:03.821416+00:00. All results are computational; no living tissue was used.
 
 This is adaptive exploratory research. The primary outcome is exact autoregressive complete-answer accuracy, including the end marker, on unseen input instances. Response CE is in nats per task symbol, not nats per byte.
 
@@ -12,9 +12,12 @@ The first task applies a fixed one-to-one substitution to six symbols from a fou
 
 | Task / candidate | Validation exact | Locked qualification exact | Gate |
 |---|---:|---:|---|
+| reverse_6/teacher_0 | 100.0% | 100.0% | PASS |
 | substitute_6/teacher_0 | 100.0% | 100.0% | PASS |
 
 A pass establishes ≥95% observed exact accuracy on this finite held-out sample. It does not prove correctness on every possible input. Thresholds were fixed before qualification.
+
+Baselines for **reverse_6**, on validation: GRU 100.0% exact; ngram1 0.0%, ngram3 0.0%, ngram6 0.0%. Teacher parameters: 102,656; GRU: 102,861.
 
 Baselines for **substitute_6**, on validation: GRU 100.0% exact; ngram1 0.0%, ngram3 0.0%, ngram6 0.0%. Teacher parameters: 102,656; GRU: 102,861.
 
@@ -22,6 +25,7 @@ Baselines for **substitute_6**, on validation: GRU 100.0% exact; ngram1 0.0%, ng
 
 | Task / substrate | Seed | Updates | KD exact | CE-only exact | Rewired KD exact | Transfer (pp) | Topology (pp) | KD zero-edge exact |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
+| reverse / full | 0 | 512 | 0.8% | 0.0% | 0.0% | +0.78 | +0.78 | 0.0% |
 | substitute / full | 0 | 1024 | 63.3% | 83.6% | 22.7% | -20.31 | +40.62 | 0.0% |
 | substitute / full | 0 | 512 | 11.7% | 25.8% | 10.9% | -14.06 | +0.78 | 0.0% |
 | substitute / induced_16384_edges_0p25 | 0 | 512 | 0.0% | 0.0% | 0.0% | +0.00 | +0.00 | 0.0% |
@@ -33,6 +37,9 @@ Each comparison has matched training examples/order, updates, optimizer, initial
 
 | Task / substrate / seed / updates | Condition | Response CE | Teacher KL | Exact teacher agreement | Zero-edge CE |
 |---|---|---:|---:|---:|---:|
+| reverse/full/0/512 | real_kd | 1.0939 | 1.0939 | 0.8% | 1.9358 |
+| reverse/full/0/512 | real_ce | 1.0592 | 1.0591 | 0.0% | 1.9283 |
+| reverse/full/0/512 | rewired_kd | 1.1448 | 1.1448 | 0.0% | 1.8042 |
 | substitute/full/0/1024 | real_kd | 0.2118 | 0.2118 | 63.3% | 1.9006 |
 | substitute/full/0/1024 | real_ce | 0.0592 | 0.0592 | 83.6% | 1.9251 |
 | substitute/full/0/1024 | rewired_kd | 0.6896 | 0.6896 | 22.7% | 1.7567 |
@@ -65,6 +72,9 @@ Each comparison has matched training examples/order, updates, optimizer, initial
 
 Every saved progress file contains per-update loss, gradient norm, response symbols seen, hidden-state RMS/saturation, validation exact accuracy/CE/KL at fixed checkpoints and cumulative wall-clock time. Final evaluation JSON retains per-instance predictions for paired analysis.
 
+- `results/g2c_overnight/reverse_6/full/seed_0/real_ce`: 512 updates, 3,584 response symbols, 21.4 min; latest validation exact 0.0%, CE 1.0519.
+- `results/g2c_overnight/reverse_6/full/seed_0/real_kd`: 512 updates, 3,584 response symbols, 21.4 min; latest validation exact 0.0%, CE 1.0666.
+- `results/g2c_overnight/reverse_6/full/seed_0/rewired_kd`: 512 updates, 3,584 response symbols, 21.9 min; latest validation exact 0.0%, CE 1.1499.
 - `results/g2c_overnight/substitute_6/full/seed_0/real_ce`: 1024 updates, 7,168 response symbols, 40.9 min; latest validation exact 81.2%, CE 0.0879.
 - `results/g2c_overnight/substitute_6/full/seed_0/real_kd`: 1024 updates, 7,168 response symbols, 40.9 min; latest validation exact 62.5%, CE 0.3055.
 - `results/g2c_overnight/substitute_6/full/seed_0/rewired_kd`: 1024 updates, 7,168 response symbols, 42.1 min; latest validation exact 28.1%, CE 0.6057.

@@ -1,0 +1,18 @@
+{
+  "seed": 0,
+  "label": "full",
+  "specs": [
+    "results/g2c_overnight/reverse_6/full/seed_0/real_kd/spec.json",
+    "results/g2c_overnight/reverse_6/full/seed_0/real_ce/spec.json",
+    "results/g2c_overnight/reverse_6/full/seed_0/rewired_kd/spec.json"
+  ],
+  "inputs": {
+    "results/g2c_overnight/reverse_6/full/seed_0/real_kd/spec.json": "dc07b8e221439a1c1ea6d28a926d769e232e1bad733fcdd4c608a3d4876007f5",
+    "results/g2c_overnight/reverse_6/full/seed_0/real_ce/spec.json": "7b9a9c11ddedc210a41bc322994aa624044ce4e3bf163242ad38e353ccab5d71",
+    "results/g2c_overnight/reverse_6/full/seed_0/rewired_kd/spec.json": "8a31a8ae444f369b12fe87ba4a74cbed9dddc9de98158ab74937343ca8ab88ec",
+    "results/g2c_overnight/reverse_6/teacher_0/qualification_receipt.json": "edb9c957f4f1210566129aac7123cfa2e99dcb9b99bd11234d64354f1677fcd4",
+    "configs/g2c_overnight_v1.json": "76d40a6792e0bee29c5c18337521f3b7b7a6ddd7cce333e4840bb6ba8067461c",
+    "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
+    "scripts/run_g2c_overnight.py": "87dba47fafe57c639cf4467adc1ff12e599d92998a88ff3e8d0a76fdf89808d9"
+  }
+}

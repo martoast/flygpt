@@ -1,0 +1,33 @@
+{
+  "teacher_parameters": 102656,
+  "gru_parameters": 102861,
+  "teacher": {
+    "accuracy": 1.0,
+    "response_ce": 3.466079614941212e-06,
+    "token_accuracy": 1.0,
+    "cases": 256,
+    "response_symbols": 1792
+  },
+  "gru": {
+    "accuracy": 1.0,
+    "response_ce": 0.00657782526104711,
+    "token_accuracy": 1.0,
+    "cases": 256,
+    "response_symbols": 1792
+  },
+  "ngram": {
+    "ngram1": {
+      "accuracy": 0.0,
+      "response_ce": 1.575997185795655
+    },
+    "ngram3": {
+      "accuracy": 0.0,
+      "response_ce": 1.3297661266948846
+    },
+    "ngram6": {
+      "accuracy": 0.0,
+      "response_ce": 1.1661112130681406
+    }
+  },
+  "qualification_rule": "Teacher must exceed 95% exact; baseline superiority is not required"
+}

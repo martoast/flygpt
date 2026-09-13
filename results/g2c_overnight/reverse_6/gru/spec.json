@@ -1,0 +1,22 @@
+{
+  "kind": "gru",
+  "seed": 73000,
+  "sampling_seed": 74000,
+  "model": {
+    "hidden": 175,
+    "embed": 16
+  },
+  "objective": "ce",
+  "lr": 0.001,
+  "batch": 32,
+  "budgets": [
+    1200
+  ],
+  "checkpoints": [
+    400,
+    800,
+    1200
+  ],
+  "dataset": "data/raw/g2c_v1/reverse_6",
+  "job_dir": "results/g2c_overnight/reverse_6/gru"
+}

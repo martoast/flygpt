@@ -1,0 +1,45 @@
+{
+  "kind": "graph",
+  "seed": 0,
+  "sampling_seed": 75000,
+  "model": {
+    "vocab_size": 8,
+    "embed_dim": 16,
+    "leak": 0.65,
+    "edge_scale": 0.9,
+    "input_fraction": 0.00615,
+    "output_fraction": 0.00615,
+    "inner_steps": 2,
+    "backend": "scipy",
+    "population_seed": 2026,
+    "degree_normalize": true
+  },
+  "objective": "ce",
+  "alpha": 0.5,
+  "temperature": 2.0,
+  "lr": 0.001,
+  "batch": 1,
+  "budgets": [
+    512,
+    1024
+  ],
+  "checkpoints": [
+    64,
+    128,
+    256,
+    512,
+    768,
+    1024
+  ],
+  "curve_cases": 32,
+  "dataset": "data/raw/g2c_v1/reverse_6",
+  "job_dir": "results/g2c_overnight/reverse_6/full/seed_0/real_ce",
+  "graph": "data/processed/malecns.npz",
+  "qualification_receipt": "results/g2c_overnight/reverse_6/teacher_0/qualification_receipt.json",
+  "teacher_spec": "results/g2c_overnight/reverse_6/teacher_0/spec.json",
+  "teacher_checkpoint": "results/g2c_overnight/reverse_6/teacher_0/model.pt",
+  "condition": "real_ce",
+  "substrate": "full",
+  "initialization": "same model seed, same input/output population seed; graph-dependent edges and degree normalization",
+  "evidence_tier": "exploratory"
+}

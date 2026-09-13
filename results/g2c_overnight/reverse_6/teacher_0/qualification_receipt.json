@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "threshold": 0.95,
+  "accuracy": 1.0,
+  "task": "reverse",
+  "attempt": 0,
+  "inputs": {
+    "results/g2c_overnight/reverse_6/teacher_0/spec.json": "5c161f2fcc8b7ca1c780d1894445ef52d919f15f2cf264b2070468ca07baaa6a",
+    "results/g2c_overnight/reverse_6/teacher_0/model.pt": "ebcf3cd1688b7f4f1060dcc76c48f082bab8073aad49f95fb297330ed39a6728",
+    "results/g2c_overnight/reverse_6/teacher_0/validation.json": "dc7548de6a707fa2749a5d675f0a69cf361e6e2056ba93f865935efa8a4aadea",
+    "results/g2c_overnight/reverse_6/teacher_0/qualification.json": "1fa0049c67c83f8638601ade005d4b5900376b90501c800b3037953049cecc1f",
+    "data/raw/g2c_v1/reverse_6/manifest.json": "e482b79fa38db66e60916c1d6583e842a7212d702e5151fdab8931f67e02da68",
+    "data/raw/g2c_v1/reverse_6/train.json": "5e3bc155f416fdf378ebe5960e2c8c859d2519081e48da86b6a6cec901a7d6dd",
+    "configs/g2c_overnight_v1.json": "76d40a6792e0bee29c5c18337521f3b7b7a6ddd7cce333e4840bb6ba8067461c",
+    "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225"
+  }
+}
