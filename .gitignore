@@ -32,3 +32,4 @@ data/raw/topology_confirmation_v1/test_confirm.json
 
 results/topology_confirmation_v2/*.lock
 data/raw/topology_confirmation_v2/test_confirm.json
+results/macmini_compiler_v2/*.lock

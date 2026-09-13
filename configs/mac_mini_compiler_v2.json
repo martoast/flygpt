@@ -1,0 +1,14 @@
+{
+  "study": "Mac mini matched compiler representation screen",
+  "seed": 200,
+  "sampling_seed": 75200,
+  "batch": 2,
+  "updates": 512,
+  "methods": ["CE", "hard", "soft_KD", "hidden", "relational"],
+  "reference_spec": "results/compiler_v1/methods/seed_0/C5_relational/spec.json",
+  "primary_split": "test_extension",
+  "branch_prefix": "experiment/mac-mini-compiler-v2",
+  "evidence": "Exploratory compiler screen on previously inspected original test; separate hardware cohort, not topology confirmation",
+  "primary_comparison": "Each teacher-based method minus same-machine teacher-hard CE exact accuracy",
+  "stopping": "All five methods at 512 updates; no tuning or automatic expansion based on results"
+}
