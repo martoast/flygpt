@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import matplotlib
 matplotlib.use('Agg')
+matplotlib.rcParams['svg.hashsalt']='flygpt-trajectory-v1'
 import matplotlib.pyplot as plt
 
 
@@ -26,7 +27,7 @@ def main():
     ax.set(title='Hidden state at byte boundaries');ax.legend(fontsize=8)
     for ax in axes.flat:ax.set_xlabel('Total training bytes seen');ax.grid(alpha=.2)
     fig.suptitle('Baseline A: full fixed MaleCNS graph, synthetic grammar, one seed\nSame 256 validation bytes; measured checkpoints only; no convergence or topology-advantage claim',fontsize=12)
-    fig.savefig(root/'trajectory.png',dpi=160);fig.savefig(root/'trajectory.svg');plt.close(fig)
+    fig.savefig(root/'trajectory.png',dpi=160);fig.savefig(root/'trajectory.svg',metadata={'Date':None});plt.close(fig)
 
 
 if __name__=='__main__':main()

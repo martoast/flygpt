@@ -1,0 +1,90 @@
+{
+  "created_utc": "2026-09-13T01:32:29Z",
+  "code_commit": "f5d8269b71e5b30539209340dfccc49415a04cde",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/graph_controls.py": "33ee74abdd522c8d808af0693c9419779f2baf84a1f46ec4611480bb8298308f",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": true,
+  "config": {
+    "checkpoint": "results/malecns_v1/target/snapshots/real_0_step_0128.pt",
+    "continuation_step": 128,
+    "evaluation_starts": [
+      1026,
+      1168,
+      1009,
+      1187,
+      371,
+      1612,
+      788,
+      1770
+    ],
+    "n_windows": 8,
+    "bytes_per_window": 32,
+    "saturation_definition": "abs(hidden state)>0.95 at byte boundaries"
+  },
+  "inputs": {
+    "results/malecns_v1/target/snapshots/real_0_step_0128.pt": "b4a912f4c025953c61b98dde34ddb45056a085f62724560043a4545cec15e96e",
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+    "results/malecns_v1/teacher.pt": "52ea8b709d3072a362d2a61727ac531a5e202f2a594344c724bde1818200f6de",
+    "data/raw/grammar_v1/validation.txt": "14ace6889686a2f6f5b28ee74667a26dc657014edc37e9ee2f88816ad5ed35c0"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "MaleCNS-based computation on synthetic grammar; no wetware",
+  "continuation_step": 128,
+  "validation_nats_per_byte": 2.5220775306224823,
+  "teacher_nats_per_byte": 0.32494498416781425,
+  "gap_to_teacher": 2.197132546454668,
+  "gap_to_rounded_0325": 2.197077530622482,
+  "teacher_kl_nats_per_byte": 2.2486705482006073,
+  "teacher_kl_temperature2_scaled_per_byte": 8.195454359054565,
+  "teacher_argmax_agreement": 0.19140625,
+  "byte_accuracy": 0.203125,
+  "zero_edge_ablation_nats_per_byte": 2.9045359790325165,
+  "ablation_minus_intact": 0.3824584484100342,
+  "gradient_norm": {
+    "last_unclipped": 1.879723310470581,
+    "mean_last_16_unclipped": 2.2025502920150757,
+    "clipping_threshold": 1.0
+  },
+  "hidden_state": {
+    "mean_l2_norm": 82.04160165414214,
+    "max_l2_norm": 101.12733459472656,
+    "mean_rms": 0.20094068002072163,
+    "mean_readout_l2_norm": 10.263168101198971,
+    "saturation_fraction": 0.0027505436412717456,
+    "observed_byte_boundary_states": 256,
+    "neurons_per_state": 166700
+  },
+  "bytes_seen": {
+    "pilot": 512,
+    "continuation": 4096,
+    "total": 4608
+  },
+  "training_wall_seconds": 939.3086697909748,
+  "diagnostic_wall_seconds": 48.32917591696605,
+  "validation_bytes": 256,
+  "topology_verified_by_sha256": true
+}

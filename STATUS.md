@@ -85,3 +85,13 @@ The query implementation's repeated-last-prompt-byte bug and hard-coded hosted
 paths have now been fixed. Automated tests check exact sparse gradients,
 disjoint populations, no bypass, topology-bound checkpoint loading, teacher
 causality, directed nulls, and preprocessing aggregation.
+
+### Continuation trajectory update
+
+The first two saved continuation checkpoints reduce validation CE from
+3.175374 (start) to 2.862806 (64 additional updates) to 2.522078 (128).
+That supports an initial learning trend, **still far from the teacher**.
+It does not establish convergence or a capacity limit. All requested causal,
+KL, agreement, gradient, state and timing diagnostics are recorded separately
+in `results/malecns_v1/target/TRAJECTORY.md` and `trajectory.json` as each
+checkpoint is inspected. The active architecture and optimizer remain fixed.
