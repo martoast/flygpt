@@ -34,7 +34,12 @@ backed up to Seagate; the tar and 18 embedded artifacts were hash-verified.
 See `results/malecns_v1/target/external_backup_1024.json`.
 
 G2's fixed 26-run schedule (one teacher, five seeds × five student conditions)
-is active after G1's matched control and final test. It uses
+was amended by the user after real seed-zero results: finish rewired KD seed
+zero and real CE-only seed zero, freeze G2 as exploratory, then switch to G2b.
+Seeds 1–4 and the remaining seed-zero conditions are postponed. The original
+per-run budgets, training source, and test lock are unchanged. The replacement
+handoff is recorded in `configs/g2_seed0_amendment.json` and
+`results/g2_v1/handoff.json`. G2 uses
 whole-sentence training and separate composition-span metrics; tests stay
 unused for model evaluation until all scheduled training completes. The teacher
 is trained and real seed-zero KD is progressing toward its fixed 512 budget.
@@ -45,6 +50,12 @@ all axes. See `results/g2_v1/INTERPRETATION.md` and the separate post hoc
 validation-only `span_diagnostics/REPORT.md`. The serial schedule is a sustained multi-day workload
 on this machine, not an immediate result; progress is written to
 `results/g2_v1/queue.json` and per-run logs.
+
+G2b's qualification executor is implemented. It first requires the prospective
+teacher gate to pass on validation and on a separate locked qualification
+split for every axis/operation category. Failed gates stop without launching
+students. Only a pass launches the conditional five-seed real-KD, real-CE,
+rewired-KD experiment. See `G2B_PROTOCOL.md`; G2b has no trained result yet.
 
 ## Historical milestone: 512 continuation updates
 

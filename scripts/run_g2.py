@@ -20,6 +20,8 @@ def run(mode, condition, seed):
 
 
 def main():
+    if Path('configs/g2_seed0_amendment.json').exists():
+        raise RuntimeError('Original G2 queue retired by user amendment; use scripts.finish_g2_start_g2b, not the five-seed schedule')
     ROOT.mkdir(parents=True,exist_ok=True)
     cfg = json.loads(Path('configs/g2_v1.json').read_text())
     save_json(ROOT/'queue.json',{'status':'waiting for G1 matched rewired comparison',

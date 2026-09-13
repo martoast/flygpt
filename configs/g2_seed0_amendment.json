@@ -1,0 +1,9 @@
+{
+  "reason": "User-directed resource reallocation after observing teacher weakness and real seed-zero results; not a preregistered stopping rule",
+  "retain": ["teacher_0", "real_kd_0", "rewired_kd_0", "real_ce_0"],
+  "student_updates_each": 512,
+  "postpone": ["rewired_ce_0", "gru_ce_0", "all student conditions at seeds 1,2,3,4"],
+  "evaluation": "Preserve the existing three-axis validation results and post hoc relation-span CE/KL comparison. Original G2 test lock remains intact; no test-based selection.",
+  "next": "G2b teacher qualification; launch its five-seed students only if both qualification gates pass",
+  "interpretation": "G2 exploratory seed-zero result; no replicated topology or generalization claim"
+}

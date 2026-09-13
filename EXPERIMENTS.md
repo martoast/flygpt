@@ -83,7 +83,15 @@ benefit without comparison to the CE-only student.
 - Validation may guide a prespecified search. Test stays unopened for model
   evaluation until choices are frozen. Dataset leakage auditing is allowed.
 
-G2 is running under the frozen protocol. A post hoc span-KL diagnostic was
+G2's per-run protocol remains frozen, but its run count was amended by the
+user after observing teacher weakness and real seed-zero results. Finish
+rewired KD seed zero and real CE-only seed zero, preserve the three-student
+comparison as G2 exploratory seed-zero, and postpone the remaining conditions
+and seeds 1–4. `configs/g2_seed0_amendment.json` records this retrospective
+resource decision. It is not the original stopping plan and does not unlock
+G2 test data. G2b qualification follows automatically after preservation.
+
+A post hoc span-KL diagnostic was
 added in a separate read-only script after observing real seed-zero step 256;
 it changes neither the objective nor model evaluation's test lock. Its matched
 256/512 results and teacher qualifications are documented in

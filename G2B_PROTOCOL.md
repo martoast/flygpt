@@ -67,7 +67,38 @@ does not qualify under this protocol. No claim of a uniquely transformer
 function follows even if it passes. The purpose is to establish a clear
 generalization target before attempting transfer.
 
-After qualification, freeze a separate matched student protocol before
-training students. Use the full MaleCNS topology, rewiring and CE-only controls;
+The conditional matched student protocol is frozen before G2b training
+in `configs/g2b_execution_v1.json`. Use the full MaleCNS topology, rewiring and CE-only controls;
 evaluate response CE, exact response accuracy and teacher KL on identical
 target positions. G1 and G2 remain separately reported experiments.
+
+## Implemented execution and handoff
+
+`scripts.finish_g2_start_g2b` replaces the retired G2 scheduler, waits for the
+already-running rewired seed-zero process, completes MaleCNS CE-only seed zero,
+and preserves that three-student G2 comparison. G2 seeds 1–4 and the other
+seed-zero conditions are postponed by the explicit amendment in
+`configs/g2_seed0_amendment.json`. This change followed observed results and
+must not be described as the original stopping plan. G2 test data remain locked.
+
+It then invokes `scripts.run_g2b`. Teacher and approximately parameter-matched
+GRU runs use all five seeds and the fixed 1,000-update budget. The implementation
+in `scripts/g2b_experiment.py` masks every prompt target, evaluates response CE,
+and generates answers without supplying any answer prefix. Baselines use the
+same validation/qualification records; retrieval uses exact Levenshtein distance
+and lexical tie-breaking. No response masking or generation vocabulary shortcut
+is applied to make a model appear successful.
+
+`scripts/g2b_gate.py` tests all six categories against every recorded threshold.
+A failed gate is recorded as `teacher_not_qualified` and launches zero students.
+Passing validation opens the separate qualification split; passing both opens
+student training. Neither gate uses final student-test compositions.
+
+The conditional student protocol is fixed before any G2b training in
+`configs/g2b_execution_v1.json`: 512 updates per student, batch one, learning
+rate 0.001, five paired seeds, real KD, real CE-only, and rewired KD. Teacher
+seed equals student seed. The full topology, rate architecture and I/O rule
+match G2; all models start fresh. Distillation uses response-only CE/KL with
+alpha 0.5 and temperature 2. Only after all 15 student runs complete does the
+final test open for teacher, GRU and student evaluation, with edge ablations.
+No extra training is triggered by favorable or disappointing results.
