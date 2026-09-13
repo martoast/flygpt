@@ -1,0 +1,22 @@
+{
+  "utc": "2026-09-13T21:56:29.572751+00:00",
+  "reason": "User prioritizes fresh preregistered CE confirmation before further compiler screening",
+  "stopped_scheduler_pid": 21776,
+  "retained_active_child": {
+    "pid": 26433,
+    "module": "scripts.compiler_storage",
+    "args": [
+      "--engine",
+      "scripts.compiler_engine",
+      "train",
+      "--spec",
+      "results/compiler_v1/methods/seed_0/C1_hard/spec.json",
+      "--until",
+      "1024"
+    ],
+    "log": "results/compiler_v1/methods/seed_0/C1_hard/train.log",
+    "started_utc": "2026-09-13T21:41:40.135019+00:00"
+  },
+  "frozen_training_code_unchanged": true,
+  "remaining_compiler_tournament": "postponed; hard-label run allowed to finish"
+}
