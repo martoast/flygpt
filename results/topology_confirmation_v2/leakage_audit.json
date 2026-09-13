@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "unused_domain_size": 1152,
+  "test_count": 128,
+  "disjoint_from_all_previous_splits": true,
+  "test_sha256": "0ebd9b539ddb9a69b64bdbdc04c3620f3e0be0ee500f536b79ea937b87108fdb"
+}

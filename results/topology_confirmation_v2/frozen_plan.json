@@ -1,0 +1,91 @@
+{
+  "pairs": {
+    "100": {
+      "real_ce": "results/topology_confirmation_v2/pairs/seed_100/real_ce/spec.json",
+      "rewired_ce": "results/topology_confirmation_v2/pairs/seed_100/rewired_ce/spec.json"
+    },
+    "101": {
+      "real_ce": "results/topology_confirmation_v2/pairs/seed_101/real_ce/spec.json",
+      "rewired_ce": "results/topology_confirmation_v2/pairs/seed_101/rewired_ce/spec.json"
+    },
+    "102": {
+      "real_ce": "results/topology_confirmation_v2/pairs/seed_102/real_ce/spec.json",
+      "rewired_ce": "results/topology_confirmation_v2/pairs/seed_102/rewired_ce/spec.json"
+    },
+    "103": {
+      "real_ce": "results/topology_confirmation_v2/pairs/seed_103/real_ce/spec.json",
+      "rewired_ce": "results/topology_confirmation_v2/pairs/seed_103/rewired_ce/spec.json"
+    },
+    "104": {
+      "real_ce": "results/topology_confirmation_v2/pairs/seed_104/real_ce/spec.json",
+      "rewired_ce": "results/topology_confirmation_v2/pairs/seed_104/rewired_ce/spec.json"
+    }
+  },
+  "inputs": {
+    "/Users/alex/Desktop/flygpt_v01/scripts/run_topology_confirmation_v2.py": "74380e75e4e82a196db08574df1a7ce472b3b90f7d56b324ff2ec38010180a43",
+    "TOPOLOGY_CONFIRMATION_PREREGISTRATION_V2.md": "ee963abb851e7f545374210ff400feeae94d0c756c520799eb286dc7ff5d841d",
+    "configs/topology_confirmation_v2.json": "5314c6bc48b06ef14497e7eb7cf85672573a85fa9f5b675d1a1ed031c26076f1",
+    "data/processed/controls/rewired_877.npz": "4a44f4e9bb009b30a664b4a91455710eb6fe55e1d9c6f0d75264ec966207726f",
+    "data/processed/controls/rewired_878.npz": "c6e340348d47c002391730d1b270949039295e6d43821d24254e9f15f79f9732",
+    "data/processed/controls/rewired_879.npz": "715e15fcf8f5e4d59f1bb340c7909d1661628997dfd8811ceda1e63288272a1e",
+    "data/processed/controls/rewired_880.npz": "e9dbec221bc83c97f514ac91aa9dd912c69e9d5aae447cec741be07c6f948830",
+    "data/processed/controls/rewired_881.npz": "9613f480a864da65f0a85933cd033db1d63520993786b0b789b1b648df0c4b01",
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+    "data/raw/g2c_v1/substitute_6/manifest.json": "c162d46763ea56e17c750f0efdf2a186d5741f62013485fa40f0959c8fa160d4",
+    "data/raw/g2c_v1/substitute_6/qualification_0.json": "02b131400e52a740e82ea4e26ebbe8573f75176d3d2f9883139711a69ee3ff55",
+    "data/raw/g2c_v1/substitute_6/qualification_1.json": "08f7af2496a91e9377b01229e4c8fdeea5451ea8cb9c2bcd582226b2bb955c3b",
+    "data/raw/g2c_v1/substitute_6/test_capacity.json": "e2066ba878e6cc59737cb2f7fe2013c54f6b533e2be4a9e1856746739031bd25",
+    "data/raw/g2c_v1/substitute_6/test_extension.json": "984c3b910858044e04bd015527b5fc9116d02ad00eb3271b34e64239f8850179",
+    "data/raw/g2c_v1/substitute_6/test_main.json": "74355484395dc92cf3f09dae78e69fdafa6d04aee4c4a19a9bee5b2fb92b46ad",
+    "data/raw/g2c_v1/substitute_6/train.json": "982ad03930e087da741daf0b6248a666aeb14f6498d32d060f3284fdcc4b30e5",
+    "data/raw/g2c_v1/substitute_6/validation.json": "1bb6e34c402bc6b28bdc49073548ebb6083942530e07f7bdd3808989c9c05682",
+    "data/raw/topology_confirmation_v2/manifest.json": "f7510111f9fb114128d0e6f916eaedf39e3bf8218b5f410a666b69d8ff46f915",
+    "data/raw/topology_confirmation_v2/test_confirm.json": "0ebd9b539ddb9a69b64bdbdc04c3620f3e0be0ee500f536b79ea937b87108fdb",
+    "data/raw/topology_confirmation_v2/train.json": "982ad03930e087da741daf0b6248a666aeb14f6498d32d060f3284fdcc4b30e5",
+    "data/raw/topology_confirmation_v2/validation.json": "1bb6e34c402bc6b28bdc49073548ebb6083942530e07f7bdd3808989c9c05682",
+    "results/g2c_overnight/substitute_6/full/seed_0/real_ce/spec.json": "b8683eda9593e587e5eb4b365e2d2deb911608d821778ed17981eefda8b97fad",
+    "results/g2c_overnight/substitute_6/teacher_0/model.pt": "e5188035bb025a20df6503147dd3ff699780e157b8eea78085e2a71a13c381f7",
+    "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json": "20da00d9203117e061e7869c5dc95d67d750dbe2320642eb93d02fc4bfbce157",
+    "results/g2c_overnight/substitute_6/teacher_0/spec.json": "63979207ddd1b91be34245f85a21f7676f76ba53bc0bfd0c4fb666795c2f8b53",
+    "results/topology_confirmation_v2/graph_audits/rewired_877.json": "a9a82e99ddb3b6d35390d10972890abab62e233d3faa1641883e371cfbb2325c",
+    "results/topology_confirmation_v2/graph_audits/rewired_878.json": "78199496ff7e8c110317ff1489b070ea058c05cef72697fc74d3969d5adf80f4",
+    "results/topology_confirmation_v2/graph_audits/rewired_879.json": "547bdaf58b0186f661cef3a7e877fee79bfd4c6477e5766b9607ab1f5347c49b",
+    "results/topology_confirmation_v2/graph_audits/rewired_880.json": "d14e5b51d4db693817559786e466a781f5d842bc0a4c5b74a9396de83a375239",
+    "results/topology_confirmation_v2/graph_audits/rewired_881.json": "dbbe3fb7e3f73f3d07df1535eca0883f8c51aa6c0ed5f458b88cc4e844ca325f",
+    "results/topology_confirmation_v2/pairs/seed_100/real_ce/spec.json": "6e21d9bd1724c457249111eb5dd6b5491f37331e5e021a9b133f0b4d93453fe6",
+    "results/topology_confirmation_v2/pairs/seed_100/rewired_ce/spec.json": "3c30e9e025e3e39bf6664ceb0986d8540cb1ae91302983cd9fe4ce2199b6f3d3",
+    "results/topology_confirmation_v2/pairs/seed_101/real_ce/spec.json": "b66687872b10d460cae5ec9b0c10030c5c9bda53f96e272da7a77d4355896a88",
+    "results/topology_confirmation_v2/pairs/seed_101/rewired_ce/spec.json": "794e933cad38d1f0cf580c30f39f2a184836f6c570d8dae306320930e90ca1a4",
+    "results/topology_confirmation_v2/pairs/seed_102/real_ce/spec.json": "790548fa8aec016de8adf53965571e8ba733fa9df8b76e0b8628ad117950c559",
+    "results/topology_confirmation_v2/pairs/seed_102/rewired_ce/spec.json": "0897abadae2b3765d2b72e1e8058b90247409cb8123fa581647661636381f19b",
+    "results/topology_confirmation_v2/pairs/seed_103/real_ce/spec.json": "aa69a0c15ac91a68c6715de76feb1525ad448c73bc3a0a582d40d9d67e09baa6",
+    "results/topology_confirmation_v2/pairs/seed_103/rewired_ce/spec.json": "ff1811daf08d44010b3e05f5fdd2ade75088e3f2c4198e10bb030a58c5960c79",
+    "results/topology_confirmation_v2/pairs/seed_104/real_ce/spec.json": "50089a244f8a6c28eb0ae9867afec51e4d4e93e213c64ca4db678ff0060afd35",
+    "results/topology_confirmation_v2/pairs/seed_104/rewired_ce/spec.json": "2290cabf757a06f850aa23861e2e057af6177dcec3e6c8e8c6f14439d43f7345",
+    "results/topology_confirmation_v2/registration.json": "594c8be2f7f303558bbd403a9f8c2ed3b2901067e99055f9680230af666a22e9",
+    "scripts/compiler_storage.py": "f7d6eb4b3eadd2b89a580cdbb923712e24ed9a948d82d43ee5bd40ff7d1259f3",
+    "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
+    "scripts/run_compiler_v1.py": "2f273e66e98e44267692441a1461800983ba7f9a83715f6e1a12c71e25b773e7",
+    "scripts/run_g2c_overnight.py": "87dba47fafe57c639cf4467adc1ff12e599d92998a88ff3e8d0a76fdf89808d9",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45",
+    "tests/test_topology_confirmation_v2.py": "79325aa0045566f210d43cb3a099928c8119934ce7eb8c9d682b272fe05ad34f"
+  },
+  "test_gate": "all_ten_checkpoints_complete"
+}
