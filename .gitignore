@@ -16,3 +16,4 @@ results/**/*.npz
 results/**/*.npy
 results/**/*.log
 results/fly_real.pt
+results/**/*.pt.tmp

@@ -1,43 +1,87 @@
-# FlyGPT Lab v0.3 — Status
+# FlyGPT status — 2026-09-12
 
-## What has been demonstrated in this runtime
+## Measured real-data progress
 
-The end-to-end query path has been validated on a small synthetic sparse recurrent graph with **disjoint input and output neuron populations** and **three recurrent micro-steps per input symbol**.
+The official MaleCNS v1.0 minconf-0.5 segment table and curated annotations have
+been downloaded, hashed, and processed locally. The node rule is **non-null
+annotation superclass**, retaining every selected node, including isolates:
 
-Validation task:
-- Prompt 1: `Q:a?\nA:` → target `x`
-- Prompt 2: `Q:b?\nA:` → target `y`
-- Both prompts share the same final `A:` suffix, so the answer cannot be determined from the current symbol alone.
-- Network: 32 recurrent nodes, 320 directed edges, 9-character vocabulary.
-- Seed: 123.
+- 166,700 annotated neurons.
+- 25,582,938 directed neuron-pair edges.
+- 124,177,617 anatomical synaptic contacts between selected neurons.
+- Giant strongly connected component: 165,314 neurons.
 
-Result after training:
-- Intact recurrent graph: `a -> x`, `b -> y`
-- All recurrent edge weights set to zero: both prompts collapse to `:`.
+The raw segment table contains 151,856,684 rows and 311,833,243 contacts;
+126,273,746 rows have at least one endpoint outside the annotated neuron
+universe. Those excluded segments must not be mislabeled as extra neurons.
+See `results/malecns_v1/graph_provenance.json` and `graph_statistics.json` for
+source hashes, distributions, sampled path/clustering estimates, SCCs,
+structural spectral estimates, and annotation coverage.
 
-This is a causal ablation showing that prompt-specific information traverses the recurrent graph. It is **not yet a MaleCNS result** because the official binary graph could not be downloaded into this hosted runtime.
+Hardware: Apple M1, 8 GB RAM. Full-graph CPU CSR propagation with custom exact
+first-order autograd is feasible. CPU and MPS scatter were benchmarked and
+were slower. Full training/evaluation is substantially more expensive than
+an isolated recurrent tick. No full dense adjacency is allocated.
 
-Raw result: `results/query_path_validation.json`.
+## First language checkpoint: trained, but unsuccessful
 
-## Architecture correction from v0.2
+`results/fly_real.pt` is a local 101 MB checkpoint trained on the complete
+annotated MaleCNS graph, with fixed topology, trainable signed weights,
+disjoint input/output populations and two recurrent ticks per byte.
+The first supervised pilot used only 64 updates / 512 training bytes.
 
-v0.2 allowed the input projection and output readout to touch the same global hidden state. In an ablation, zeroing recurrent edges did not destroy the toy answer, revealing a shortcut. v0.3 fixes this by:
+On the same 256 validation bytes from a **synthetic grammar corpus**:
 
-1. Injecting symbols only into a dedicated input-neuron population.
-2. Reading logits only from a disjoint output-neuron population.
-3. Giving the recurrent graph multiple internal propagation ticks per symbol.
+| Model / intervention | CE, nats per byte |
+|---|---:|
+| Frozen three-layer TinyGPT teacher | 0.324945 |
+| Untrained MaleCNS model | 5.537795 |
+| Trained MaleCNS pilot | 3.175374 |
+| MaleCNS pilot, all recurrent edges zeroed | 3.081525 |
+| Smoothed training-corpus unigram baseline | 2.889558 |
 
-This makes recurrent connectivity causally necessary for prompt-dependent responses.
+The pilot is **not close to the teacher**. It also fails to beat the unigram
+baseline, and removing recurrence slightly improves its loss. Common-suffix
+prompts change intact logits, but this signal is not yet useful for prediction.
+Autoregressive querying runs and yields largely incoherent text. This does
+**not** meet the non-trivial held-out language / necessary recurrence success
+criterion. The arbitrary question "Why is the sky blue?" is outside the
+training corpus and has no reason to receive a meaningful answer.
 
-## Next run on the real connectome
+The first 24-update mixed-task memory screen is also inconclusive. Only one
+seed of real and GRU memory pilots has completed at this status update; do not
+present it as a five-seed result. Completed records live under
+`results/malecns_v1/memory/` and `language/`.
 
-1. Run `python download_malecns.py` on a machine with normal outbound access.
-2. Convert the official Feather edge table with `python -m src.prepare_malecns ...`.
-3. Run temporal-memory and query-path tests on the real MaleCNS graph plus matched controls.
-4. Train byte/character language models.
-5. Train a TinyGPT teacher and distill into the MaleCNS-constrained student.
-6. Run edge, region, sign, quantization, and weight-noise ablations.
+## Active teacher-gap continuation
 
-## Scientific boundary
+The user prioritized approaching the teacher's loss without changing topology.
+`configs/target_v1.json` fixes 512 additional updates with 32-byte contexts,
+frozen-teacher CE/KL distillation, learning rate 0.001, alpha 0.5 and temperature
+2. "Close" is defined in advance as <=0.425 nats/byte. Architecture/topology are
+unchanged. Checkpoints and validation results are saved at 64/128/256/512 steps.
+The run's existence is not evidence of success: consult
+`results/malecns_v1/target/real_0.json` when available for completed checkpoints.
 
-A successful digital MaleCNS language model would show that a computation can be instantiated on a biologically derived topology. It would **not** demonstrate that an intact living fly brain has been programmed. Physical synaptic-state writing remains a separate unsolved wetware problem.
+The five-seed matched screen is implemented and preregistered but **not yet
+complete**. Degree-preserving rewires request ten successful swaps per edge;
+construction is expensive on this machine. The screen ladder can resume from
+completed result files. It has been paused to prioritize the teacher-gap run;
+control construction continues separately. No A_bio result is available yet.
+
+## What is not demonstrated
+
+No useful natural-language MaleCNS model, topology advantage, successful
+teacher compilation, biological sign/time-constant constraints, spiking
+implementation, or wetware programming has been established. Later biological
+realism and programmability claims are gated on stronger computational results.
+
+## Historical synthetic milestone
+
+The older 32-node synthetic query-path experiment remains a software causal
+check: common-suffix prompts yielded different answers intact and collapsed
+under zero-edge ablation. It is a **synthetic graph**, not a MaleCNS finding.
+The query implementation's repeated-last-prompt-byte bug and hard-coded hosted
+paths have now been fixed. Automated tests check exact sparse gradients,
+disjoint populations, no bypass, topology-bound checkpoint loading, teacher
+causality, directed nulls, and preprocessing aggregation.

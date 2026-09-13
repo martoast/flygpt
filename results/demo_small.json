@@ -5,5 +5,6 @@
   "n_edges": 320,
   "val_ce": 1.2759398579597474,
   "bits_per_byte": 1.840792105551096,
-  "checkpoint": "results/demo_small.pt"
+  "checkpoint": "results/demo_small.pt",
+  "evidence_domain": "historical synthetic-graph demo; not MaleCNS or wetware"
 }

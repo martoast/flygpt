@@ -94,3 +94,16 @@ and temperature 2. Evaluation is at 64/128/256/512 updates on the same windows.
 The graph, populations, leak, and ticks remain unchanged. This is a feasibility
 run, not a biological-topology comparison. Apply the same extension to controls;
 do not report topology superiority until matched multi-seed runs complete.
+
+Read-only diagnostic amendment requested during baseline A: at every saved
+checkpoint, record forward teacher KL (T=1 and training-scaled T=2), teacher
+argmax agreement, zero-edge CE, pre-clipping training gradient norms,
+hidden-state L2/RMS and fraction abs(h)>0.95 at byte boundaries, cumulative
+training bytes, and elapsed training/diagnostic time. A companion process
+reads immutable checkpoint snapshots; it does not change the running model.
+
+After the fixed 512-update final checkpoint, evaluate the previously untouched
+synthetic-grammar test split exactly once with non-overlapping 32-byte target
+windows and the same frozen teacher. Use the final checkpoint, not a test-selected
+checkpoint. Paired window bootstrap intervals describe text-window variability,
+not variability across training seeds or proof of a biological topology effect.

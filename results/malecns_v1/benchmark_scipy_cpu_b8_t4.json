@@ -1,6 +1,6 @@
 {
-  "created_utc": "2026-09-13T01:18:21Z",
-  "code_commit": "6f84a0f807752eeaf5159b11f5a60337f77536a0",
+  "created_utc": "2026-09-13T01:12:00Z",
+  "code_commit": "2d42d1d0e4f69103bae632c54ac17d696f0e6f10",
   "source_sha256": {
     "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
@@ -11,20 +11,20 @@
     "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
     "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
     "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
-    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/provenance.py": "93bc17323d7d8aa2ecda908774dfbd2c2f3cde18e9f93fa59422ba0339e3e558",
     "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
-    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/sparse_ops.py": "5cbbf7951a6e2ec0f931f7ff7509972dbb01eadb084e9499779d96bbf1161637",
     "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
     "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
     "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
     "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
-    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+    "src/train_teacher.py": "c8e5aff65006a6b1fbf61d378f28f62b1036737032edd4fea94042b86235aa5b"
   },
   "worktree_dirty": true,
   "config": {
     "backend": "scipy",
     "device": "cpu",
-    "batch": 1,
+    "batch": 8,
     "threads": 4
   },
   "inputs": {
@@ -39,13 +39,13 @@
     "torch_threads": 4
   },
   "evidence_domain": "MaleCNS full annotated-neuron graph",
-  "warmup_seconds": 1.0287342499941587,
+  "warmup_seconds": 1.8534412910230458,
   "seconds_forward_backward_tick": [
-    0.207067665993236,
-    0.14775616698898375,
-    0.08353999996325001
+    0.7889081250177696,
+    0.7233513750252314,
+    0.6455912090023048
   ],
-  "peak_rss_bytes": 1007370240,
+  "peak_rss_bytes": 823132160,
   "n_nodes": 166700,
   "n_edges": 25582938
 }

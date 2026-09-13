@@ -47,7 +47,7 @@ for p in ['Q:a?\nA:','Q:b?\nA:']:
     c,pr=next_char(p,m); ablated[p]=c
 with torch.no_grad(): m.core.edge_w.copy_(saved)
 
-out={'seed':seed,'nodes':n,'edges':e,'vocab':chars,'steps':step+1,'final_loss':float(loss),'normal':normal,'edge_ablated':ablated,'loss_trace':losses}
+out={'evidence_domain':'synthetic graph; not MaleCNS or wetware','seed':seed,'nodes':n,'edges':e,'vocab':chars,'steps':step+1,'final_loss':float(loss),'normal':normal,'edge_ablated':ablated,'loss_trace':losses}
 Path('results/query_path_validation.json').write_text(json.dumps(out,indent=2))
 torch.save({'model':m.state_dict(),'stoi':stoi,'itos':itos,'graph':'data/processed/query_path_demo.npz','config':{'nodes':n,'edges':e}},'results/query_path_demo.pt')
 print(json.dumps(out,indent=2))

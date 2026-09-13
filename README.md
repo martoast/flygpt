@@ -1,6 +1,8 @@
 # FlyGPT Lab
 
-Research scaffold for testing whether externally learned sequence computation can be implemented by recurrent networks constrained to a Drosophila connectome.
+Computational research on transferring a small transformer teacher into a recurrent network constrained by the complete annotated MaleCNS neuron graph.
+
+**Current measured status:** the full real graph is loaded and a queryable pilot has been trained, but its grammar validation loss is 3.175 nats/byte versus the teacher’s 0.325. Zeroing recurrence improves this pilot, so useful connectome-dependent language computation is not yet demonstrated. See [STATUS.md](STATUS.md) and the recorded results.
 
 ## Core hypotheses
 - H1: a real connectome-constrained recurrent network can learn non-trivial sequence prediction.
@@ -21,7 +23,7 @@ Official dataset page: https://male-cns.janelia.org/download/
 ```bash
 pip install -r requirements.txt
 python -m src.prepare_malecns --input data/raw/connectome-weights-male-cns-v1.0-minconf-0.5.feather
-python -m src.train_sequence --graph data/processed/malecns_graph.npz --steps 2000
+python -m src.train_memory --graph data/processed/malecns.npz --out results/malecns_v1/memory/real_0.json
 ```
 
 ## Smoke test

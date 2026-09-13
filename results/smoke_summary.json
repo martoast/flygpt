@@ -11,5 +11,6 @@
     "acc_mean": 1.0,
     "loss_mean": 0.002517449682474964
   },
-  "runtime_s": 4.260395050048828
+  "runtime_s": 4.260395050048828,
+  "evidence_domain": "historical synthetic-graph demo; not MaleCNS or wetware"
 }
