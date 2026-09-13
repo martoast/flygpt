@@ -11,6 +11,8 @@ a replicated topology advantage. Five paired real/rewired CE seeds and a frozen
 teacher-transfer objective tournament are now scheduled. See the live
 [compiler report](COMPILER_REPORT.md), [protocol](COMPILER_BENCHMARK.md), and
 preserved [overnight results](OVERNIGHT_REPORT.md).
+The [decision tree](DECISION_TREE.md) fixes the order: paired CE replication,
+compiler parity, architecture-independence comparisons, then harder functions.
 
 **G1 — Finite-Grammar Functional Encoding** is frozen.
 **G2 — Finite-Grammar Compositional Generalization** closed as an exploratory

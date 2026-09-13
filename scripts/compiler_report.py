@@ -30,6 +30,7 @@ def main():
             acc=np.array([r['metrics']['real_ce']['accuracy'] for r in rs]);delta=np.array([r['A_topology_CE'] for r in rs])
             text=f'{label}: n={len(rs)}, mean MaleCNS CE {pc(acc.mean())}, mean paired topology difference {100*delta.mean():+.2f} pp.'
             if len(rs)>1:text+=f' Seed SD: {100*acc.std(ddof=1):.2f} pp (accuracy), {100*delta.std(ddof=1):.2f} pp (difference).'
+            text+=f' Paired gaps range from {100*delta.min():+.2f} to {100*delta.max():+.2f} pp; {int((delta>0).sum())}/{len(rs)} are positive.'
             lines += [text,'']
     historical=Path('results/g2c_overnight/substitute_6/full/seed_0/comparison_1024.json')
     if pairs and historical.exists():
@@ -56,7 +57,7 @@ def main():
         'C5 uses a separate batch-two cohort with ground-truth CE, hard-teacher CE and T=2 KD controls, each 512 updates / 1,024 examples. It cannot be compared to batch-one results as if optimization were identical.','']
     for p in sorted(ROOT.glob('relational/seed_*/comparison.json')):
         r=read(p);lines += [f'Relational seed {r["seed"]}: '+', '.join(k+' '+pc(m['accuracy']) for k,m in r['metrics'].items())+'.','']
-    lines+=['## Execution and provenance','']
+    lines+=['Next decisions follow [DECISION_TREE.md](DECISION_TREE.md): complete every CE pair, then the frozen teacher-only compiler tournament. New graph families and harder functions are not running.','', '## Execution and provenance','']
     active=ROOT/'active.json'
     if active.exists() and not read(active).get('idle'):
         a=read(active);lines += [f'Current job: `{a["log"]}` (PID {a["pid"]}).','']
