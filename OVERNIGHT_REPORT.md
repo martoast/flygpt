@@ -1,6 +1,6 @@
 # G2c overnight report
 
-Updated: 2026-09-13T12:11:07.616886+00:00. All results are computational; no living tissue was used.
+Updated: 2026-09-13T12:13:34.273120+00:00. All results are computational; no living tissue was used.
 
 This is adaptive exploratory research. The primary outcome is exact autoregressive complete-answer accuracy, including the end marker, on unseen input instances. Response CE is in nats per task symbol, not nats per byte.
 
@@ -26,6 +26,7 @@ Baselines for **substitute_6**, on validation: GRU 100.0% exact; ngram1 0.0%, ng
 | substitute / full | 0 | 512 | 11.7% | 25.8% | 10.9% | -14.06 | +0.78 | 0.0% |
 | substitute / induced_16384_edges_0p25 | 0 | 512 | 0.0% | 0.0% | 0.0% | +0.00 | +0.00 | 0.0% |
 | substitute / induced_16384_edges_1p0 | 0 | 512 | 0.0% | 0.8% | 0.0% | -0.78 | +0.00 | 0.0% |
+| substitute / induced_4096_edges_0p25 | 0 | 512 | 0.0% | 0.0% | 0.0% | +0.00 | +0.00 | 0.0% |
 | substitute / induced_4096_edges_1p0 | 0 | 512 | 0.0% | 0.0% | 0.0% | +0.00 | +0.00 | 0.0% |
 
 Each comparison has matched training examples/order, updates, optimizer, initialization rule, I/O populations and architecture. KD necessarily adds teacher forward-pass overhead; wall-clock times are recorded rather than claimed identical. “Full” uses all 166,700 MaleCNS neurons and 25,582,938 directed edges; induced subgraphs are explicitly labeled.
@@ -44,6 +45,9 @@ Each comparison has matched training examples/order, updates, optimizer, initial
 | substitute/induced_16384_edges_1p0/0/512 | real_kd | 1.1284 | 1.1284 | 0.0% | 1.9098 |
 | substitute/induced_16384_edges_1p0/0/512 | real_ce | 0.8047 | 0.8047 | 0.8% | 1.9660 |
 | substitute/induced_16384_edges_1p0/0/512 | rewired_kd | 1.2007 | 1.2007 | 0.0% | 1.9275 |
+| substitute/induced_4096_edges_0p25/0/512 | real_kd | 1.5994 | 1.5994 | 0.0% | 1.6604 |
+| substitute/induced_4096_edges_0p25/0/512 | real_ce | 1.4578 | 1.4577 | 0.0% | 1.6527 |
+| substitute/induced_4096_edges_0p25/0/512 | rewired_kd | 1.5985 | 1.5984 | 0.0% | 1.7427 |
 | substitute/induced_4096_edges_1p0/0/512 | real_kd | 1.2899 | 1.2899 | 0.0% | 1.6834 |
 | substitute/induced_4096_edges_1p0/0/512 | real_ce | 1.2444 | 1.2443 | 0.0% | 1.7938 |
 | substitute/induced_4096_edges_1p0/0/512 | rewired_kd | 1.2531 | 1.2531 | 0.0% | 1.6873 |
@@ -70,6 +74,9 @@ Every saved progress file contains per-update loss, gradient norm, response symb
 - `results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/real_ce`: 512 updates, 3,584 response symbols, 0.3 min; latest validation exact 0.0%, CE 0.7730.
 - `results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/real_kd`: 512 updates, 3,584 response symbols, 0.3 min; latest validation exact 0.0%, CE 1.1185.
 - `results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/rewired_kd`: 512 updates, 3,584 response symbols, 0.3 min; latest validation exact 0.0%, CE 1.1994.
+- `results/g2c_overnight/substitute_6/induced_4096_edges_0p25/seed_0/real_ce`: 512 updates, 3,584 response symbols, 0.1 min; latest validation exact 0.0%, CE 1.4532.
+- `results/g2c_overnight/substitute_6/induced_4096_edges_0p25/seed_0/real_kd`: 512 updates, 3,584 response symbols, 0.1 min; latest validation exact 0.0%, CE 1.5937.
+- `results/g2c_overnight/substitute_6/induced_4096_edges_0p25/seed_0/rewired_kd`: 512 updates, 3,584 response symbols, 0.1 min; latest validation exact 0.0%, CE 1.5934.
 - `results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/real_ce`: 512 updates, 3,584 response symbols, 0.1 min; latest validation exact 0.0%, CE 1.2436.
 - `results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/real_kd`: 512 updates, 3,584 response symbols, 0.1 min; latest validation exact 0.0%, CE 1.2917.
 - `results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/rewired_kd`: 512 updates, 3,584 response symbols, 0.1 min; latest validation exact 0.0%, CE 1.2488.

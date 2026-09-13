@@ -1,0 +1,18 @@
+{
+  "seed": 0,
+  "label": "induced_4096_edges_0p25",
+  "specs": [
+    "results/g2c_overnight/substitute_6/induced_4096_edges_0p25/seed_0/real_kd/spec.json",
+    "results/g2c_overnight/substitute_6/induced_4096_edges_0p25/seed_0/real_ce/spec.json",
+    "results/g2c_overnight/substitute_6/induced_4096_edges_0p25/seed_0/rewired_kd/spec.json"
+  ],
+  "inputs": {
+    "results/g2c_overnight/substitute_6/induced_4096_edges_0p25/seed_0/real_kd/spec.json": "7cb0d98ba8a14bc2e008e8692f2d6ce30abac50d07c2ba10129a115d946faef2",
+    "results/g2c_overnight/substitute_6/induced_4096_edges_0p25/seed_0/real_ce/spec.json": "aa057e44a740ce5acc335c763d213375ca8220b52d3aac814e0404da45735359",
+    "results/g2c_overnight/substitute_6/induced_4096_edges_0p25/seed_0/rewired_kd/spec.json": "9c4eac06b015142796efd5b6ff652bbf6c4d0ccce246a7193ba025c55db7656c",
+    "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json": "20da00d9203117e061e7869c5dc95d67d750dbe2320642eb93d02fc4bfbce157",
+    "configs/g2c_overnight_v1.json": "76d40a6792e0bee29c5c18337521f3b7b7a6ddd7cce333e4840bb6ba8067461c",
+    "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
+    "scripts/run_g2c_overnight.py": "87dba47fafe57c639cf4467adc1ff12e599d92998a88ff3e8d0a76fdf89808d9"
+  }
+}
