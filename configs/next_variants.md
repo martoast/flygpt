@@ -33,3 +33,16 @@ architecture change would need a different scientific claim and explicit
 bypass audit.
 
 No wetware claim follows from any of these digital rate-network experiments.
+
+Interpretation details to preserve when those experiments are designed:
+
+- More ticks at the same per-tick leak also changes per-byte decay. Report that
+  confound and consider a separately labelled time-matched control; do not
+  silently rescale leak in the B arm and call it a one-factor experiment.
+- Different input/output placement can change population degrees and shortest
+  access paths. Record those distributions and keep population sizes fixed.
+- A capacity claim needs more than a plateau: demonstrate adequate optimization
+  on an easier positive control, check gradients/stability and training-versus-
+  validation errors, and compare deliberate architecture changes under matched
+  budgets. Even then, conclusions apply to a specified parameterization/task,
+  not to the computational limits of a living fly brain.

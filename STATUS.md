@@ -95,3 +95,9 @@ It does not establish convergence or a capacity limit. All requested causal,
 KL, agreement, gradient, state and timing diagnostics are recorded separately
 in `results/malecns_v1/target/TRAJECTORY.md` and `trajectory.json` as each
 checkpoint is inspected. The active architecture and optimizer remain fixed.
+
+The fixed interface audit found 1,025 input and 1,025 output neurons with zero
+overlap, 938 direct input-to-output anatomical edges, and four output neurons
+unreachable from any input. Those nodes remain in baseline A. This audit is
+saved for the later placement variant; it is not a reason to alter the active
+run after observing losses.

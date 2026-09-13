@@ -26,6 +26,7 @@ No completed paired real/rewired comparison yet.
 |---:|---:|---:|
 | 0 | 3.1754 | 2.8504 |
 | 64 | 2.8628 | 2.5379 |
+| 128 | 2.5221 | 2.1971 |
 
 Complete: False. Single-seed feasibility only; no topology-superiority conclusion.
 
