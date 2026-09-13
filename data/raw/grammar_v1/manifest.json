@@ -1,0 +1,24 @@
+{
+  "kind": "synthetic compositional grammar, not natural-language understanding",
+  "splits": "independent draws; sentence overlap allowed by design; no shared byte positions",
+  "records": {
+    "train": {
+      "seed": 101,
+      "sentences": 2000,
+      "bytes": 45848,
+      "sha256": "fc35085b41f99511ff41712e972be1c3f57c63087b9c2ed14565c89a7c54421e"
+    },
+    "validation": {
+      "seed": 202,
+      "sentences": 100,
+      "bytes": 2327,
+      "sha256": "14ace6889686a2f6f5b28ee74667a26dc657014edc37e9ee2f88816ad5ed35c0"
+    },
+    "test": {
+      "seed": 303,
+      "sentences": 100,
+      "bytes": 2276,
+      "sha256": "846d4b26dec8d584a14b7487d0ccb972b18d5e9db6d2589c59a9c80398bfa811"
+    }
+  }
+}

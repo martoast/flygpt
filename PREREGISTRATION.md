@@ -40,3 +40,41 @@ A5 spiking/LIF dynamics with biologically plausible delays/time constants.
 
 ## Interpretation boundary
 Success demonstrates functional realizability in a connectome-constrained *model*. It does not demonstrate that the learned state can currently be written into living tissue, nor that anatomical synapse count equals a freely programmable biological weight.
+
+## 2026-09-12 hardware-limited screen v1 (before training)
+
+The machine is an 8 GB Apple M1. The complete annotated-neuron graph has
+166,700 nodes and 25,582,938 directed pairs. The initial fixed budgets are in
+`configs/screen_v1.json`: five seeds, all four graph conditions plus GRU,
+24 mixed-task memory updates and 64 byte-LM updates. This is a deliberately
+small feasibility screen (512 language-training bytes per seed), **not a
+sufficient language-capability or topology-advantage experiment**. Every
+attempt and failure must be reported. No fly-only tuning is allowed.
+
+Neuron inclusion: all unique annotation body IDs with non-null `superclass`,
+including isolated nodes. No edge threshold beyond one aggregated contact.
+Raw segments outside that universe are excluded and counted in provenance.
+
+Use random, fixed, disjoint input/output populations (population seed 2026),
+trainable signed weights initialized N(0, 0.9² / destination indegree),
+leak 0.65 and two ticks per byte. Anatomy-derived self-edges are allowed.
+No extra recurrent edges are allowed in the real condition. The neuron-local
+leak is part of the specified dynamics, not an added anatomical edge.
+
+The directed rewire fixes existing self-loops and requests 10 successful
+swaps per total edge. It reports acceptance and overlap; this does not prove
+Markov-chain mixing. Configuration controls are directed stub-matched
+multigraphs (self-loops and parallel edges allowed, independent edge weights).
+ER uses the same N, E and self-loop count. GRU is approximately parameter-matched.
+Equal tokens/steps do not imply equal wall-clock or FLOPs; report runtime.
+
+Memory uses a mixture of delayed bit/symbol, length-three copy, two-item
+associative recall, three-state grammar, and parity. Each task's readout is
+restricted to its known answer alphabet. C(delay) is reported as accuracy and
+chance-adjusted accuracy, not as a classical linear-reservoir capacity estimate.
+The eight-target-per-delay evaluation is too small for strong conclusions.
+The byte corpus is a synthetic compositional grammar with independently drawn
+splits, not a natural-language understanding benchmark. Report untrained,
+unigram and zero-edge losses, and paired seed-wise comparisons. Distillation
+uses the same initial seed and token budget as supervised training. The
+teacher has a separately reported, larger training budget.

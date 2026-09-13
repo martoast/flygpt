@@ -1,0 +1,17 @@
+{
+  "evidence_tier": "exploratory hardware-limited feasibility; not confirmatory",
+  "seeds": [0, 1, 2, 3, 4],
+  "conditions": ["real", "rewired", "configuration", "er", "gru"],
+  "control_seeds": [777, 778, 779, 780, 781],
+  "memory": {"steps": 24, "batch": 1, "train_delays": [0, 1, 2], "evaluation_delays": [0, 2, 4, 8], "targets_per_delay": 8},
+  "language": {"steps": 64, "block": 8, "batch": 1, "training_bytes": 512, "evaluation_bytes": 256},
+  "distillation": {"steps": 64, "block": 8, "batch": 1, "alpha": 0.5, "temperature": 2.0},
+  "teacher": {"layers": 3, "heads": 4, "embedding": 128, "steps": 1000, "block": 64, "batch": 8},
+  "learning_rate": 0.003,
+  "optimizer": "AdamW",
+  "weight_decay": 0.01,
+  "hyperparameter_search_trials": 0,
+  "topology_controls": "matched nodes and recurrent edge parameter count; directed configuration multigraph retains independent parallel-edge parameters",
+  "compute_matching": "identical optimizer steps and tokens across graph conditions; actual runtime reported, not claimed equal; GRU approximately parameter-matched",
+  "test_set": "held out until a later architecture freeze; these screens use validation only"
+}
