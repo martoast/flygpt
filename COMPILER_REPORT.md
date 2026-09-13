@@ -1,6 +1,6 @@
 # Compiler benchmark report
 
-Updated 2026-09-13T13:56:28.216569+00:00. Computational full MaleCNS experiments; no living tissue.
+Updated 2026-09-13T13:56:30.039541+00:00. Computational full MaleCNS experiments; no living tissue.
 
 The substitution dataset, teacher, 128-instance primary test (`test_extension`), recurrent architecture and optimization budgets are fixed. This test was already inspected: the tournament is exploratory, not fresh confirmatory evaluation. Exact complete-answer accuracy is primary.
 
