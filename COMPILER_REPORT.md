@@ -1,12 +1,10 @@
 # Compiler benchmark report
 
-Updated 2026-09-13T14:04:17.886009+00:00. Computational full MaleCNS experiments; no living tissue.
+Updated 2026-09-13T14:04:20.201182+00:00. Computational full MaleCNS experiments; no living tissue.
 
 The substitution dataset, teacher, 128-instance primary test (`test_extension`), recurrent architecture and optimization budgets are fixed. This test was already inspected: the tournament is exploratory, not fresh confirmatory evaluation. Exact complete-answer accuracy is primary.
 
 **Status:** running / queued. Empty result cells are pending, not failures.
-
-**Backup status:** Seagate is offline. New checkpoints are preserved in local staging with a 3 GiB free-space reserve; they are not yet externally backed up. Migration and hash verification resume automatically when the drive returns.
 
 Teacher-only generation audit: 2048/2048 generated training answers equal the original answers. Consequently hard-target CE has exactly the same objective as supervised CE. A separate run checks implementation equivalence; this does not establish improved sample efficiency or direct parameter translation.
 
