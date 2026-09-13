@@ -18,3 +18,5 @@ results/**/*.log
 results/fly_real.pt
 results/**/*.pt.tmp
 artifacts/
+data/processed/g2c_capacity/
+results/g2c_overnight/controller.lock
