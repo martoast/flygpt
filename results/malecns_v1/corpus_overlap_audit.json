@@ -1,0 +1,7 @@
+{
+  "train_sentences": 2000,
+  "unique_train_sentences": 379,
+  "validation_sentences": 100,
+  "validation_sentences_seen_verbatim_in_train": 100,
+  "interpretation": "Independent sample positions, but a small finite grammar. This is not a novel-composition or natural-language-understanding test. No test-split inspection performed."
+}

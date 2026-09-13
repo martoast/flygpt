@@ -101,3 +101,14 @@ overlap, 938 direct input-to-output anatomical edges, and four output neurons
 unreachable from any input. Those nodes remain in baseline A. This audit is
 saved for the later placement variant; it is not a reason to alter the active
 run after observing losses.
+
+At 256 additional updates, validation CE is **1.871875**, teacher KL is
+**1.601164**, and zero-edge CE is **2.956929**. This is continued improvement
+and a positive recurrent-edge ablation penalty on the fixed validation windows;
+it remains far from the teacher's 0.324945 CE.
+
+Corpus limitation: the grammar has only 384 possible sentences; the 2,000-line
+training corpus contains 379 unique sentences, and all 100 validation sentences
+occur verbatim somewhere in it. Split byte positions are distinct, as specified
+before training, but this task cannot establish novel-composition generalization.
+This audit does not change baseline A or unblind the final test split.
