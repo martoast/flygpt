@@ -83,3 +83,16 @@ def test_rewire_table_rebuild_keeps_exact_rng_trajectory():
     rebuilt,done_new,attempts_new=swaps(s.copy(),d.copy(),100,6000,777,600)
     np.testing.assert_array_equal(old,rebuilt)
     assert (done_old,attempts_old)==(done_new,attempts_new)
+
+
+def test_seeded_initialization_reconstruction_for_weight_audit():
+    from src.graph_lm import GraphLanguageModel
+    rng=np.random.default_rng(8);keys=rng.choice(100*100,600,replace=False)
+    s=keys//100;d=keys%100
+    torch.manual_seed(0)
+    model=GraphLanguageModel(100,s,d,embed_dim=16,edge_scale=.9,backend='scipy',degree_normalize=True)
+    torch.manual_seed(0);torch.randn(256,16)
+    initial=torch.randn_like(model.core.edge_w)*.9
+    degree=torch.bincount(model.core.dst,minlength=100).clamp_min(1)
+    initial/=degree[model.core.dst].sqrt()
+    torch.testing.assert_close(initial,model.core.edge_w,rtol=0,atol=0)

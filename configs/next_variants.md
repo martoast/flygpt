@@ -46,3 +46,10 @@ Interpretation details to preserve when those experiments are designed:
   validation errors, and compare deliberate architecture changes under matched
   budgets. Even then, conclusions apply to a specified parameterization/task,
   not to the computational limits of a living fly brain.
+
+Separately from architectural variants B–E, a matched **CE-only continuation**
+is required before attributing any gain specifically to distillation rather
+than additional supervised training. This objective control must use A's
+initial checkpoint, additional bytes, sampling sequence, optimizer, and
+architecture. Improving KL/teacher agreement establishes closer behavior on
+measured inputs, not by itself a causal advantage of KL training over CE alone.

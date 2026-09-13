@@ -1,0 +1,38 @@
+{
+  "formula": "E=(L0-Lstudent)/(L0-Lteacher)",
+  "interpretation": "Normalized loss-gap closure, not a causal estimate of the benefit of distillation. Supervised-pilot learning is included in the untrained-baseline metric. A matched CE-only continuation is required to attribute improvements specifically to the teacher KL objective.",
+  "records": [
+    {
+      "continuation_step": 0,
+      "teacher_ce": 0.32494498416781425,
+      "student_ce": 3.1753737032413483,
+      "E_from_untrained": 0.45319188036034574,
+      "E_from_unigram": -0.1114459047243495,
+      "E_from_supervised_pilot": 0.0
+    },
+    {
+      "continuation_step": 64,
+      "teacher_ce": 0.32494498416781425,
+      "student_ce": 2.862806051969528,
+      "E_from_untrained": 0.5131528709679898,
+      "E_from_unigram": 0.010431212788095447,
+      "E_from_supervised_pilot": 0.10965636473569244
+    },
+    {
+      "continuation_step": 128,
+      "teacher_ce": 0.32494498416781425,
+      "student_ce": 2.5220775306224823,
+      "E_from_untrained": 0.5785160638163747,
+      "E_from_unigram": 0.14328888333424591,
+      "E_from_supervised_pilot": 0.22919225036127366
+    },
+    {
+      "continuation_step": 256,
+      "teacher_ce": 0.32494498416781425,
+      "student_ce": 1.871874988079071,
+      "E_from_untrained": 0.703246784951069,
+      "E_from_unigram": 0.39681739584029435,
+      "E_from_supervised_pilot": 0.45729917974793255
+    }
+  ]
+}
