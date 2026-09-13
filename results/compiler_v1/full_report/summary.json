@@ -1,6 +1,6 @@
 {
   "status": "interim",
-  "completed_pairs": 2,
+  "completed_pairs": 3,
   "pairs": [
     {
       "metrics": {
@@ -203,36 +203,147 @@
           "area_gap_real_minus_rewired": -0.20084607388596937
         }
       }
+    },
+    {
+      "metrics": {
+        "real_ce": {
+          "accuracy": 0.9453125,
+          "response_ce": 0.034120176904512585,
+          "token_accuracy": 0.9910714285714286,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.03411368407510703,
+          "zero_edge_ce": 1.84113509953022,
+          "exact_teacher_agreement": 0.9453125,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        },
+        "rewired_ce": {
+          "accuracy": 0.5625,
+          "response_ce": 0.21548919535624528,
+          "token_accuracy": 0.9229910714285714,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.21547718143223651,
+          "zero_edge_ce": 1.7366845841918672,
+          "exact_teacher_agreement": 0.5625,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        }
+      },
+      "cases": 128,
+      "seed": 2,
+      "updates": 1024,
+      "A_topology_CE": 0.3828125,
+      "case_analysis": {
+        "cases": 128,
+        "real_correct": 121,
+        "rewired_correct": 72,
+        "both_correct": 68,
+        "real_only": 53,
+        "rewired_only": 4,
+        "both_wrong": 3,
+        "gap": 0.3828125,
+        "paired_case_bootstrap_95": [
+          0.2890625,
+          0.4765625
+        ]
+      },
+      "learning": {
+        "steps": [
+          64,
+          128,
+          256,
+          512,
+          768,
+          1024
+        ],
+        "domain": "32 fixed validation cases; normalized trapezoidal area only over shared observed updates",
+        "accuracy": {
+          "real": [
+            0.0,
+            0.0,
+            0.0625,
+            0.5,
+            0.625,
+            0.96875
+          ],
+          "rewired": [
+            0.0,
+            0.0,
+            0.0625,
+            0.125,
+            0.25,
+            0.5
+          ],
+          "real_normalized_area": 0.44166666666666665,
+          "rewired_normalized_area": 0.17916666666666667,
+          "area_gap_real_minus_rewired": 0.26249999999999996
+        },
+        "response_ce": {
+          "real": [
+            1.3201399466821127,
+            0.9815265323434558,
+            0.7893524436014039,
+            0.3466858406152044,
+            0.18241144297644496,
+            0.044592849215925004
+          ],
+          "rewired": [
+            1.174475418669837,
+            0.9255336395331791,
+            0.9103843372847352,
+            0.5472786437187876,
+            0.4094999742561153,
+            0.2870733206759074
+          ],
+          "real_normalized_area": 0.44706612903059334,
+          "rewired_normalized_area": 0.607196819582688,
+          "area_gap_real_minus_rewired": -0.16013069055209467
+        }
+      }
     }
   ],
   "groups": {
     "all_seeds": {
-      "n": 2,
-      "real_mean": 0.84765625,
-      "rewired_mean": 0.578125,
-      "gap_mean": 0.26953125,
+      "n": 3,
+      "real_mean": 0.8802083333333334,
+      "rewired_mean": 0.5729166666666666,
+      "gap_mean": 0.3072916666666667,
       "gap_min": 0.125,
       "gap_max": 0.4140625,
-      "positive_gaps": 2,
-      "real_variance": 0.000274658203125,
-      "rewired_variance": 0.0352783203125,
-      "real_sd": 0.016572815184059706,
-      "rewired_sd": 0.18782523875267668,
-      "gap_sd": 0.2043980539367364,
+      "positive_gaps": 3,
+      "real_variance": 0.0033162434895833335,
+      "rewired_variance": 0.017720540364583332,
+      "real_sd": 0.05758683434243745,
+      "rewired_sd": 0.13311851999095892,
+      "gap_sd": 0.1586405667762295,
       "gap_mean_t95": [
-        -1.5669124032752488,
-        2.105974903275249
+        -0.08679334787561149,
+        0.7013766812089448
       ],
-      "variance_ratio_rewired_over_real": 128.44444444444446
+      "variance_ratio_rewired_over_real": 5.343558282208589
     },
     "fresh_seeds": {
-      "n": 1,
-      "real_mean": 0.859375,
-      "rewired_mean": 0.4453125,
-      "gap_mean": 0.4140625,
-      "gap_min": 0.4140625,
+      "n": 2,
+      "real_mean": 0.90234375,
+      "rewired_mean": 0.50390625,
+      "gap_mean": 0.3984375,
+      "gap_min": 0.3828125,
       "gap_max": 0.4140625,
-      "positive_gaps": 1
+      "positive_gaps": 2,
+      "real_variance": 0.003692626953125,
+      "rewired_variance": 0.006866455078125,
+      "real_sd": 0.060766989008218926,
+      "rewired_sd": 0.08286407592029854,
+      "gap_sd": 0.02209708691207961,
+      "gap_mean_t95": [
+        0.1999030509972704,
+        0.5969719490027297
+      ],
+      "variance_ratio_rewired_over_real": 1.859504132231405
     }
   },
   "graph_analysis": {
@@ -245,7 +356,10 @@
     "results/compiler_v1/paired_ce/seed_0/comparison.json": "fd48db0051ea33191eece8c06cf09b45b5d040fcf2ca0ec5b0adfc1d650bd82a",
     "results/compiler_v1/paired_ce/seed_1/real_ce_test.json": "841ddab795345b5480de1b744eae06cf1dec9a9bf167c7e13c77326ca9c65454",
     "results/compiler_v1/paired_ce/seed_1/rewired_ce_test.json": "73f61e78b48f5821cff1f06b49921e55d71e863f047c454768d4c2eea56ca5f2",
-    "results/compiler_v1/paired_ce/seed_1/comparison.json": "205cfc7e51ba4d3deb4d79b6d95bad169291f937218bb670d19eddc61f0b5397"
+    "results/compiler_v1/paired_ce/seed_1/comparison.json": "205cfc7e51ba4d3deb4d79b6d95bad169291f937218bb670d19eddc61f0b5397",
+    "results/compiler_v1/paired_ce/seed_2/real_ce_test.json": "ff5df7f1e870b53da93547280f2b6561352a40417c85f50b75d430105641d5a3",
+    "results/compiler_v1/paired_ce/seed_2/rewired_ce_test.json": "88ef3aa31dcbbb24e8a88a2f204881690c10edbc9d30541a5b7b2775f64111ae",
+    "results/compiler_v1/paired_ce/seed_2/comparison.json": "5fd44495cdd3f79b51514bd7ffbd1d49513eb7a9f9c6a78ddf4e2779da675555"
   },
   "analysis_spec_sha256": "39a89b78ca9d5ce5000fc2f8928996fac9eaabaecf5b092ccb07d191f57d34f1",
   "report_source_sha256": "bdc8974ec14c1b0fbb7fb4d2352ecc30fc874c6c9959325b37f36dcfddedc7ba"
