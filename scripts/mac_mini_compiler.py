@@ -28,7 +28,7 @@ def freeze(p,d):
     else: save_json(p,d)
     return str(p)
 
-def preflight():
+def preflight(benchmark_only=False):
     branch=subprocess.check_output(['git','branch','--show-current'],text=True).strip()
     if not branch.startswith(read(CFG)['branch_prefix']): raise RuntimeError('Switch to the assigned Mac mini branch first')
     verify(read(DEPENDENCIES)['inputs'])
@@ -37,8 +37,9 @@ def preflight():
     for line in Path('requirements-mac-mini.txt').read_text().splitlines():
         name,version=line.split('==');packages[name]=importlib.metadata.version(name)
         if packages[name]!=version: raise RuntimeError(f'Version mismatch: {name}')
-    if not (ROOT/'frozen_plan.json').exists() and shutil.disk_usage('.').free < 16*1024**3:
-        raise RuntimeError('At least 16 GiB free disk required before starting')
+    reserve_gib=4 if benchmark_only else 16
+    if not (ROOT/'frozen_plan.json').exists() and shutil.disk_usage('.').free < reserve_gib*1024**3:
+        raise RuntimeError(f'At least {reserve_gib} GiB free disk required before starting')
     return dict(utc=now(),branch=branch,platform=platform.platform(),python=platform.python_version(),
         packages=packages,hardware=subprocess.check_output(['sysctl','-n','machdep.cpu.brand_string','hw.memsize'],text=True).strip(),
         code_commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip())
@@ -68,7 +69,7 @@ def benchmark():
     """Disposable timing run; never a confirmatory checkpoint or model selection."""
     import fcntl
     from scripts import run_compiler_v1 as v
-    hardware=preflight();ROOT.mkdir(parents=True,exist_ok=True)
+    hardware=preflight(benchmark_only=True);ROOT.mkdir(parents=True,exist_ok=True)
     lock=(ROOT/'controller.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
     v.ROOT=ROOT;v.refresh=lambda:None
     awake=subprocess.Popen(['caffeinate','-is','-w',str(os.getpid())])
@@ -151,6 +152,6 @@ def run():
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--preflight',action='store_true');p.add_argument('--benchmark',action='store_true');a=p.parse_args()
-    if a.preflight:print(json.dumps(preflight(),indent=2))
+    if a.preflight:print(json.dumps(preflight(benchmark_only=a.benchmark),indent=2))
     elif a.benchmark:benchmark()
     else:run()

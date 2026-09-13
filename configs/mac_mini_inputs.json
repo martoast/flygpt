@@ -26,7 +26,7 @@
     "scripts/compiler_report.py": "7e405d0c4f6ee988094d570bf6f9a5d41074c2da10dce5e4546a322ed76c9501",
     "scripts/compiler_storage.py": "f7d6eb4b3eadd2b89a580cdbb923712e24ed9a948d82d43ee5bd40ff7d1259f3",
     "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
-    "scripts/mac_mini_compiler.py": "7c55a6991f3c8708e5fb778ab9653b0d65c899390c3d4b0b1adef334148f60af",
+    "scripts/mac_mini_compiler.py": "4e0301bd09cb95ed20d3106e40468809402dffdca047ec37623e5d1fe3ea89a3",
     "scripts/run_compiler_v1.py": "2f273e66e98e44267692441a1461800983ba7f9a83715f6e1a12c71e25b773e7",
     "scripts/run_g2c_overnight.py": "87dba47fafe57c639cf4467adc1ff12e599d92998a88ff3e8d0a76fdf89808d9",
     "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
