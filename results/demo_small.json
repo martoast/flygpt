@@ -1,0 +1,9 @@
+{
+  "control": "real",
+  "seed": 7,
+  "n_nodes": 48,
+  "n_edges": 320,
+  "val_ce": 1.2759398579597474,
+  "bits_per_byte": 1.840792105551096,
+  "checkpoint": "results/demo_small.pt"
+}

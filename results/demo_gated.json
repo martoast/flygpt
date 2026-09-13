@@ -1,0 +1,9 @@
+{
+  "control": "real",
+  "seed": 11,
+  "n_nodes": 64,
+  "n_edges": 900,
+  "val_ce": 2.194904315471649,
+  "bits_per_byte": 3.1665775711567328,
+  "checkpoint": "results/demo_gated.pt"
+}

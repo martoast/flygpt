@@ -1,0 +1,9 @@
+{
+  "control": "real",
+  "seed": 12,
+  "n_nodes": 64,
+  "n_edges": 900,
+  "val_ce": 2.1645910263061525,
+  "bits_per_byte": 3.122844739204638,
+  "checkpoint": "results/demo_ticks.pt"
+}
