@@ -2,7 +2,7 @@
 
 Computational research on transferring a small transformer teacher into a recurrent network constrained by the complete annotated MaleCNS neuron graph.
 
-**Current measured status:** the full real graph is loaded and a queryable pilot has been trained, but its grammar validation loss is 3.175 nats/byte versus the teacher’s 0.325. Zeroing recurrence improves this pilot, so useful connectome-dependent language computation is not yet demonstrated. See [STATUS.md](STATUS.md) and the [continuation trajectory](results/malecns_v1/target/TRAJECTORY.md) for newer checkpoints.
+**Current measured status:** the full real graph is loaded. Baseline A reaches **0.851 nats/byte** after 512 distillation-continuation updates, versus teacher **0.325**; zeroing recurrence raises loss to **3.107**. The curve is still descending, but this is one seed on a finite grammar with sentence overlap, not general language understanding or a topology-advantage result. See [STATUS.md](STATUS.md) and the [measured trajectory](results/malecns_v1/target/TRAJECTORY.md).
 
 ## Core hypotheses
 - H1: a real connectome-constrained recurrent network can learn non-trivial sequence prediction.
@@ -130,3 +130,17 @@ exist and their hashes match the stored result. Committed JSON alone does not
 stand in for an ignored binary. For a full independent rerun, archive the
 existing `results/malecns_v1` directory before launching the screen; preserve
 it for comparison, and do not mix its checkpoint diagnostics with a new run.
+
+Query the newer local checkpoint (the original pilot is preserved separately):
+
+```bash
+python -m src.query_flygpt --graph data/processed/malecns.npz \
+  --checkpoint results/malecns_v1/target/snapshots/real_0_step_0512.pt \
+  --prompt "the cat " --max-new 80
+```
+
+Baseline continuation is managed by `scripts/continue_baseline.py`; it keeps
+the architecture, optimizer state, and data-sampling trajectory fixed. The
+next saved evaluation is at 1,024 updates. See `extension_decisions.json` for
+the adaptive feasibility rule. The final test split is not used for those
+decisions.

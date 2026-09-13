@@ -1,0 +1,13 @@
+{
+  "policy": "adaptive feasibility, unchanged model/optimizer/data RNG; not confirmatory",
+  "decisions": [
+    {
+      "after_step": 512,
+      "next_step": 1024,
+      "ce_improvement": 1.0204380750656128,
+      "kl_improvement": 1.026194117963314,
+      "continue": true
+    }
+  ],
+  "maximum_continuation_updates": 2048
+}

@@ -33,6 +33,14 @@
       "E_from_untrained": 0.703246784951069,
       "E_from_unigram": 0.39681739584029435,
       "E_from_supervised_pilot": 0.45729917974793255
+    },
+    {
+      "continuation_step": 512,
+      "teacher_ce": 0.32494498416781425,
+      "student_ce": 0.8514369130134583,
+      "E_from_untrained": 0.8990011363234113,
+      "E_from_unigram": 0.7947090224462411,
+      "E_from_supervised_pilot": 0.8152937748196811
     }
   ]
 }

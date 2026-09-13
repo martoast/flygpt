@@ -1,5 +1,44 @@
 # FlyGPT status — 2026-09-12
 
+## Latest measured checkpoint: 512 continuation updates
+
+**Validation CE: 0.851437 nats/byte**, versus frozen teacher **0.324945**.
+The trajectory is **3.175374 → 2.862806 → 2.522078 → 1.871875 → 0.851437**
+at 0/64/128/256/512 additional updates. This supports continued learning on
+this finite grammar task, not an established asymptote or a capacity limit.
+
+- Teacher gap: 0.526492 nats/byte.
+- Forward teacher KL (T=1): 0.574970 nats/byte.
+- Teacher argmax agreement: 73.05%; target-byte accuracy: 69.14%.
+- Zero-edge ablation CE: 3.107468, a +2.256031 penalty relative to intact.
+- Last gradient L2 norm before clipping: 1.5157 (clipping threshold 1.0).
+- Hidden-state mean L2 norm: 81.34; mean RMS: 0.1992.
+- Fraction of sampled hidden values with abs(h)>0.95: 1.1744%.
+- Total student training bytes seen: 16,896, including the 512-byte CE pilot.
+- Cumulative training-process wall time: 2,943 seconds (about 49 minutes).
+
+The biological topology, populations, ticks, leak, and optimizer settings were
+unchanged during continuation. The model is still outside the predefined
+near-teacher threshold of 0.425. The same baseline has resumed toward 1,024
+updates with optimizer and data RNG state preserved. Conditional continuation
+can reach 2,048; the test split remains untouched until those decisions finish.
+No architectural variant has been started.
+
+The local 512-step checkpoint is
+`results/malecns_v1/target/snapshots/real_0_step_0512.pt`.
+`results/fly_real.pt` remains the original supervised pilot for provenance;
+use the snapshot path to query this newer model. All 15 control graphs (five
+seeds each of rewired/configuration/ER) have been constructed, but the matched
+training comparison remains incomplete. No biological-topology advantage or
+causal benefit of distillation over matched CE-only training is established.
+
+**Task boundary:** all validation sentences appear somewhere in the finite
+training corpus. This tests learning its predictive distribution, not novel
+composition, general language understanding, or wetware programming. Full
+metrics and plot: `results/malecns_v1/target/TRAJECTORY.md` and `trajectory.png`.
+
+The sections below retain the earlier pilot results and context.
+
 ## Measured real-data progress
 
 The official MaleCNS v1.0 minconf-0.5 segment table and curated annotations have
