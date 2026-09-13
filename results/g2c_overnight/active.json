@@ -1,0 +1,12 @@
+{
+  "pid": 18939,
+  "args": [
+    "train",
+    "--spec",
+    "results/g2c_overnight/substitute_6/gru/spec.json",
+    "--until",
+    "1200"
+  ],
+  "log": "results/g2c_overnight/substitute_6/gru/train.log",
+  "started_utc": "2026-09-13T09:07:46.819008+00:00"
+}

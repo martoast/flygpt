@@ -1,12 +1,12 @@
 # G2c overnight report
 
-Updated: 2026-09-13T09:07:16.664882+00:00. All results are computational; no living tissue was used.
+Updated: 2026-09-13T09:08:06.959919+00:00. All results are computational; no living tissue was used.
 
 This is adaptive exploratory research. The primary outcome is exact autoregressive complete-answer accuracy, including the end marker, on unseen input instances. Response CE is in nats per task symbol, not nats per byte.
 
 The first task applies a fixed one-to-one substitution to six symbols from a four-symbol alphabet. Training has 2,048 distinct inputs; validation 256; each qualification and final-test partition has 128. Instance IDs are allocated without replacement. This tests unseen instances at a fixed length, not length generalization or natural-language ability.
 
-**Run status: in progress.** Pending results must not be interpreted as failures or successes.
+**Execution stopped:** RuntimeError('Engine exited 1: results/g2c_overnight/substitute_6/gru/train.log')
 
 ## Did we establish a teacher that genuinely generalizes?
 

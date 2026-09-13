@@ -1,0 +1,5 @@
+{
+  "error": "RuntimeError('Engine exited 1: results/g2c_overnight/substitute_6/gru/train.log')",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/alex/Desktop/flygpt_v01/scripts/run_g2c_overnight.py\", line 221, in run\n    baselines(t,cfg)\n  File \"/Users/alex/Desktop/flygpt_v01/scripts/run_g2c_overnight.py\", line 107, in baselines\n    train(spec,ts['budgets'][-1]);val=evaluate(spec,'validation',job/'validation.json')\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alex/Desktop/flygpt_v01/scripts/run_g2c_overnight.py\", line 70, in train\n    child(['train','--spec',spec,'--until',until],job/'train.log')\n  File \"/Users/alex/Desktop/flygpt_v01/scripts/run_g2c_overnight.py\", line 64, in child\n    if proc.returncode:raise RuntimeError(f'Engine exited {proc.returncode}: {log}')\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: Engine exited 1: results/g2c_overnight/substitute_6/gru/train.log\n",
+  "utc": "2026-09-13T09:08:06.863334+00:00"
+}
