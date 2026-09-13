@@ -30,13 +30,13 @@ class CSRMultiply(torch.autograd.Function):
         ctx.save_for_backward(h, weights)
         ctx.indices, ctx.indptr = indices, indptr
         matrix = sparse.csr_matrix((weights.detach().numpy(), indices, indptr), shape=(h.shape[1], h.shape[1]))
-        return torch.from_numpy(np.ascontiguousarray(matrix.dot(h.detach().numpy().T).T))
+        return torch.from_numpy(np.stack([matrix.dot(row) for row in h.detach().numpy()]))
 
     @staticmethod
     def backward(ctx, grad):
         h, weights = ctx.saved_tensors
         g = grad.detach().contiguous().numpy()
         matrix = sparse.csr_matrix((weights.detach().numpy(), ctx.indices, ctx.indptr), shape=(h.shape[1], h.shape[1]))
-        dh = torch.from_numpy(np.ascontiguousarray(matrix.T.dot(g.T).T))
+        dh = torch.from_numpy(np.stack([matrix.T.dot(row) for row in g]))
         dw = torch.from_numpy(edge_gradient(h.detach().numpy(), g, ctx.indices, ctx.indptr))
         return dh, dw, None, None

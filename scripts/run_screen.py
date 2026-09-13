@@ -34,7 +34,7 @@ def controls():
 
 def ladder():
     cfg=json.loads(Path('configs/screen_v1.json').read_text())
-    for phase in ['memory','language','distill']:
+    for phase in ['language','memory','distill']:
         if phase=='distill':
             while not (ROOT/'teacher.json').exists():time.sleep(5)
         for seed in cfg['seeds']:

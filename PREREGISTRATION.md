@@ -78,3 +78,10 @@ splits, not a natural-language understanding benchmark. Report untrained,
 unigram and zero-edge losses, and paired seed-wise comparisons. Distillation
 uses the same initial seed and token budget as supervised training. The
 teacher has a separately reported, larger training budget.
+
+Ordering amendment before the first language result: the user explicitly
+prioritized closing the gap to the grammar teacher (0.324945 nats/byte on the
+fixed validation windows). After the initial real-graph memory screen, run the
+language conditions before the remaining memory conditions. Budgets and seeds
+are unchanged. A single successful checkpoint is feasibility evidence only;
+biological-topology claims still require the matched multi-seed comparisons.
