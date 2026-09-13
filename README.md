@@ -2,7 +2,7 @@
 
 Computational research on transferring a small transformer teacher into a recurrent network constrained by the complete annotated MaleCNS neuron graph.
 
-**Current measured status:** the full real graph is loaded and a queryable pilot has been trained, but its grammar validation loss is 3.175 nats/byte versus the teacher’s 0.325. Zeroing recurrence improves this pilot, so useful connectome-dependent language computation is not yet demonstrated. See [STATUS.md](STATUS.md) and the recorded results.
+**Current measured status:** the full real graph is loaded and a queryable pilot has been trained, but its grammar validation loss is 3.175 nats/byte versus the teacher’s 0.325. Zeroing recurrence improves this pilot, so useful connectome-dependent language computation is not yet demonstrated. See [STATUS.md](STATUS.md) and the [continuation trajectory](results/malecns_v1/target/TRAJECTORY.md) for newer checkpoints.
 
 ## Core hypotheses
 - H1: a real connectome-constrained recurrent network can learn non-trivial sequence prediction.

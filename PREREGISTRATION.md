@@ -107,3 +107,15 @@ synthetic-grammar test split exactly once with non-overlapping 32-byte target
 windows and the same frozen teacher. Use the final checkpoint, not a test-selected
 checkpoint. Paired window bootstrap intervals describe text-window variability,
 not variability across training seeds or proof of a biological topology effect.
+
+Adaptive continuation amendment (user requested that a descending curve be
+allowed to run; added after the 128-update result, before 256): retain baseline
+A unchanged, including optimizer and data RNG state. After 512, extend to 1024
+and then at most 2048 updates if the latest saved interval improves both
+validation CE and teacher KL by >=0.05 nats/byte and CE remains above 0.425.
+These are **validation-driven feasibility decisions**, not a confirmatory
+stopping rule. Reserve the untouched test split until these decisions finish.
+Do not infer a capacity limit if the allocation ends while the curve descends.
+Any later topology comparison must give controls the same final training
+budget, and new confirmatory seeds must use a frozen budget independent of
+those seeds' outcomes. Variants B–E remain unrun.

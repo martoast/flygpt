@@ -1,8 +1,9 @@
-"""One final independent test-set evaluation after the fixed 512-update run.
+"""One final independent test-set evaluation after the validation-based continuation decisions finish.
 
 Use the final checkpoint, never select it by test loss. No architecture edits,
 no training, and no implication that a plateau identifies a capacity bound.
 """
+import argparse
 import json
 import time
 from pathlib import Path
@@ -16,9 +17,10 @@ from src.provenance import manifest,save_json
 
 
 def main():
-    torch.set_num_threads(4);root=Path('results/malecns_v1/target');ck=root/'snapshots'/'real_0_step_0512.pt'
+    parser=argparse.ArgumentParser();parser.add_argument('--step',type=int,default=512);args=parser.parse_args()
+    torch.set_num_threads(4);root=Path('results/malecns_v1/target');ck=root/'snapshots'/f'real_0_step_{args.step:04d}.pt'
     data_path='data/raw/grammar_v1/test.txt'
-    record=manifest({'checkpoint':str(ck),'selection':'final fixed-budget checkpoint, not selected by test','window':32,'seed':42},[ck,data_path,'results/malecns_v1/teacher.pt'])
+    record=manifest({'checkpoint':str(ck),'selection':'final checkpoint after validation-based continuation policy, not selected by test','window':32,'seed':42},[ck,data_path,'results/malecns_v1/teacher.pt'])
     start=time.perf_counter();model=load_model('data/processed/malecns.npz',ck,'cpu')
     tc=torch.load('results/malecns_v1/teacher.pt',weights_only=True,map_location='cpu');teacher=TinyGPT(**tc['config']).eval();teacher.load_state_dict(tc['model'])
     data=bytes_from_file(data_path);windows=list(range(0,len(data)-32,32));rows=[]
