@@ -1,0 +1,7 @@
+{
+  "inputs": {
+    "configs/g2c_overnight_v1.json": "76d40a6792e0bee29c5c18337521f3b7b7a6ddd7cce333e4840bb6ba8067461c",
+    "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
+    "scripts/run_g2c_overnight.py": "87dba47fafe57c639cf4467adc1ff12e599d92998a88ff3e8d0a76fdf89808d9"
+  }
+}
