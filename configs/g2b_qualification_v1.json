@@ -1,0 +1,32 @@
+{
+  "experiment": "G2b — Teacher-qualified compositional transduction",
+  "status": "pre-training qualification protocol; no teacher or student result yet",
+  "dataset_seed": 20260914,
+  "task": "Deterministic role permutation of an explicit sentence; score response bytes only",
+  "operations": ["swap", "roles"],
+  "holdout_axes": ["attribute", "relation", "combined"],
+  "qualification_categories": "Each axis crossed with each operation, six categories; none may be pooled away",
+  "teacher": {"layers": 3, "heads": 4, "embedding": 128, "context_bytes": 128},
+  "seeds": [0, 1, 2, 3, 4],
+  "updates": 1000,
+  "batch": 8,
+  "learning_rate": 0.0003,
+  "optimizer": "AdamW",
+  "weight_decay": 0.01,
+  "gradient_clip": 1.0,
+  "training_loss": "CE on response bytes only; prompt is context, not a prediction target",
+  "baselines": ["byte n-gram orders 1,4,8,16 fitted on training only", "nearest-training-prompt retrieval with fixed Levenshtein distance and lexical tie-breaking", "GRU approximately parameter-matched to teacher with identical updates, data order, optimizer settings and seeds"],
+  "gate_each_category": {
+    "teacher_mean_exact_response_accuracy_min": 0.8,
+    "teacher_mean_exact_response_accuracy_margin_over_best_baseline_min": 0.1,
+    "teacher_mean_response_ce_reduction_vs_best_probabilistic_baseline_min_fraction": 0.2,
+    "paired_seed_and_composition_bootstrap_accuracy_margin_lower_bound_min": 0.0
+  },
+  "retrieval_metric": "Exact response accuracy; deterministic retrieval has no calibrated CE and must not be assigned an arbitrary finite log loss",
+  "generation": "Greedy autoregressive response from full prompt until newline or 64 bytes; no ground-truth response prefix and no vocabulary restriction",
+  "selection": "Fixed final checkpoint, zero hyperparameter search trials; evaluate every teacher seed and gate the prespecified aggregate, never choose a lucky seed",
+  "gate_sequence": "Screen on validation, then one locked qualification split only if validation passes; both must pass every category before any MaleCNS student launches",
+  "student_test": "Separate untouched composition pairs, not the teacher qualification split; student evaluation protocol must be frozen before student training",
+  "failure_policy": "If teacher gate fails, report failure and do not launch MaleCNS distillation; revise only as a new versioned experiment",
+  "interpretation": "Gate values chosen before G2b results; a qualified teacher supports a transfer experiment, not a biological-topology claim"
+}

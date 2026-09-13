@@ -94,6 +94,14 @@ provide their meaning. Length tests must preserve the target dependency across
 longer contexts. Structural tests must hold out productions while documenting
 which prerequisite productions remain observed.
 
+## G2b — Teacher-qualified compositional transduction
+
+The prospective G2b successor is documented in [G2B_PROTOCOL.md](G2B_PROTOCOL.md).
+Its deterministic transduction dataset and teacher qualification gate are
+specified before G2b training. No teacher has qualified and no G2b student
+training has been enabled by a passing gate yet. G2's relation focus is a post hoc
+exploratory analysis; attribute and combined outcomes remain reported.
+
 ## G3 — Natural-Language Modeling
 
 Future work on a corpus with documented train/validation/test decontamination.

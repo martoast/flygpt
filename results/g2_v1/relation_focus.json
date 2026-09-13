@@ -1,0 +1,17 @@
+{
+  "status": "post hoc exploratory focus selected after teacher validation; all other axes remain reported",
+  "checkpoint": 512,
+  "validation_sentences": 8,
+  "teacher_span_ce": 1.1767633282221281,
+  "ngram_span_ce": 1.58633167401234,
+  "rows": [
+    {
+      "condition": "real_kd",
+      "seed": 0,
+      "span_ce": 2.3972083788651686,
+      "teacher_span_ce": 1.1767633832418,
+      "span_kl": 2.139920243850121
+    }
+  ],
+  "paired_objective_comparisons": []
+}

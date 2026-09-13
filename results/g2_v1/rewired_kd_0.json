@@ -1,0 +1,2122 @@
+{
+  "created_utc": "2026-09-13T05:31:05Z",
+  "code_commit": "52c9cc2ad65884cb74b656b6d71d574a86b03a45",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": true,
+  "config": {
+    "experiment": "G2 \u2014 Finite-Grammar Compositional Generalization",
+    "tier": "exploratory fixed-budget screening; not confirmatory",
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "conditions": [
+      "real_kd",
+      "rewired_kd",
+      "real_ce",
+      "rewired_ce",
+      "gru_ce"
+    ],
+    "student_steps": 512,
+    "student_batch": 1,
+    "student_lr": 0.001,
+    "evaluation_steps": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "validation_sentences_per_axis": 8,
+    "final_validation_sentences_per_axis": 64,
+    "test_sentences_per_axis": 64,
+    "teacher_steps": 1000,
+    "teacher_batch": 8,
+    "teacher_lr": 0.0003,
+    "teacher_seed": 0,
+    "teacher_model": {
+      "vocab_size": 256,
+      "d_model": 128,
+      "n_head": 4,
+      "n_layer": 3,
+      "max_len": 64,
+      "dropout": 0.0
+    },
+    "model": {
+      "embed_dim": 16,
+      "leak": 0.65,
+      "edge_scale": 0.9,
+      "input_fraction": 0.00615,
+      "output_fraction": 0.00615,
+      "inner_steps": 2,
+      "backend": "scipy",
+      "population_seed": 2026,
+      "degree_normalize": true
+    },
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clip": 1.0,
+    "alpha": 0.5,
+    "temperature": 2.0,
+    "initialization": "fresh same-seed models, no G1 checkpoint or CE pilot",
+    "sampling": "uniform whole training sentences with replacement, generator seed 30000+student seed; state reset per sentence",
+    "teacher_sampling_seed": 40000,
+    "selection": "final fixed-budget checkpoint; no early stopping or hyperparameter search",
+    "compute": "equal sampled sentences, bytes and updates across student conditions within each seed; runtime measured separately",
+    "test_policy": "evaluate only after every scheduled model has finished training; no test-based reruns or selection",
+    "condition": "rewired_kd",
+    "seed": 0
+  },
+  "inputs": {
+    "data/raw/grammar_v2/manifest.json": "d00171f75ca11518c02f25551c5f4084a066cdf20fcd0da829fce8c5a36d6da0",
+    "data/raw/grammar_v2/train.jsonl": "24905a4b6484bb2fae7b5cdad1f002b32437a9fb02d6952cdbe1bbf4994b1d2b",
+    "configs/g2_v1.json": "61b25f5bfad06fd512557ae14b5b74d536748f4776a987cfafe47554ba2a83a0",
+    "data/processed/controls/rewired_777.npz": "b221c0f16deac5c91a185b7c0365a113497aa3ac2fc4b65277248a348b03ce41",
+    "results/g2_v1/teacher_0.pt": "f799d2c88247c9716ef4559a6bf542ef49a187e4adbc2bd6babfb1006c0145fc"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "trace": [
+    {
+      "step": 1,
+      "ce": 5.5373005867004395,
+      "kl": 20.733814239501953,
+      "gradient_norm": 0.7086684703826904,
+      "bytes_seen": 45
+    },
+    {
+      "step": 2,
+      "ce": 5.360479831695557,
+      "kl": 20.122879028320312,
+      "gradient_norm": 1.1344045400619507,
+      "bytes_seen": 89
+    },
+    {
+      "step": 3,
+      "ce": 4.221223831176758,
+      "kl": 17.433185577392578,
+      "gradient_norm": 3.047107458114624,
+      "bytes_seen": 133
+    },
+    {
+      "step": 4,
+      "ce": 3.8791556358337402,
+      "kl": 14.88128662109375,
+      "gradient_norm": 3.091076135635376,
+      "bytes_seen": 176
+    },
+    {
+      "step": 5,
+      "ce": 3.7860848903656006,
+      "kl": 13.434924125671387,
+      "gradient_norm": 2.8509159088134766,
+      "bytes_seen": 219
+    },
+    {
+      "step": 6,
+      "ce": 3.6955082416534424,
+      "kl": 13.045578002929688,
+      "gradient_norm": 3.922461986541748,
+      "bytes_seen": 264
+    },
+    {
+      "step": 7,
+      "ce": 3.593951940536499,
+      "kl": 12.5693359375,
+      "gradient_norm": 6.6554036140441895,
+      "bytes_seen": 307
+    },
+    {
+      "step": 8,
+      "ce": 3.021268844604492,
+      "kl": 11.27308464050293,
+      "gradient_norm": 4.162359237670898,
+      "bytes_seen": 349
+    },
+    {
+      "step": 9,
+      "ce": 3.2432687282562256,
+      "kl": 11.338510513305664,
+      "gradient_norm": 3.3188507556915283,
+      "bytes_seen": 394
+    },
+    {
+      "step": 10,
+      "ce": 3.7617757320404053,
+      "kl": 12.316740036010742,
+      "gradient_norm": 5.129144191741943,
+      "bytes_seen": 439
+    },
+    {
+      "step": 11,
+      "ce": 3.5008413791656494,
+      "kl": 11.542582511901855,
+      "gradient_norm": 3.5345988273620605,
+      "bytes_seen": 482
+    },
+    {
+      "step": 12,
+      "ce": 3.510298013687134,
+      "kl": 11.674723625183105,
+      "gradient_norm": 5.081934452056885,
+      "bytes_seen": 527
+    },
+    {
+      "step": 13,
+      "ce": 3.430837392807007,
+      "kl": 11.701654434204102,
+      "gradient_norm": 4.0941290855407715,
+      "bytes_seen": 571
+    },
+    {
+      "step": 14,
+      "ce": 3.295287847518921,
+      "kl": 11.302665710449219,
+      "gradient_norm": 3.962008237838745,
+      "bytes_seen": 615
+    },
+    {
+      "step": 15,
+      "ce": 3.213636875152588,
+      "kl": 11.357983589172363,
+      "gradient_norm": 4.69266414642334,
+      "bytes_seen": 659
+    },
+    {
+      "step": 16,
+      "ce": 3.221916437149048,
+      "kl": 11.342557907104492,
+      "gradient_norm": 5.955376625061035,
+      "bytes_seen": 706
+    },
+    {
+      "step": 17,
+      "ce": 3.2598955631256104,
+      "kl": 11.211637496948242,
+      "gradient_norm": 5.189121246337891,
+      "bytes_seen": 749
+    },
+    {
+      "step": 18,
+      "ce": 3.2135984897613525,
+      "kl": 11.08720874786377,
+      "gradient_norm": 4.485860347747803,
+      "bytes_seen": 795
+    },
+    {
+      "step": 19,
+      "ce": 3.1047861576080322,
+      "kl": 11.021526336669922,
+      "gradient_norm": 3.598158597946167,
+      "bytes_seen": 839
+    },
+    {
+      "step": 20,
+      "ce": 3.3188400268554688,
+      "kl": 11.220845222473145,
+      "gradient_norm": 5.462157249450684,
+      "bytes_seen": 881
+    },
+    {
+      "step": 21,
+      "ce": 3.044128179550171,
+      "kl": 10.020350456237793,
+      "gradient_norm": 3.048424005508423,
+      "bytes_seen": 924
+    },
+    {
+      "step": 22,
+      "ce": 3.1993908882141113,
+      "kl": 11.043408393859863,
+      "gradient_norm": 4.548605918884277,
+      "bytes_seen": 969
+    },
+    {
+      "step": 23,
+      "ce": 3.2679800987243652,
+      "kl": 11.051522254943848,
+      "gradient_norm": 5.858850002288818,
+      "bytes_seen": 1018
+    },
+    {
+      "step": 24,
+      "ce": 3.024385929107666,
+      "kl": 10.62728500366211,
+      "gradient_norm": 3.0303537845611572,
+      "bytes_seen": 1061
+    },
+    {
+      "step": 25,
+      "ce": 3.070265531539917,
+      "kl": 10.873340606689453,
+      "gradient_norm": 4.0655717849731445,
+      "bytes_seen": 1108
+    },
+    {
+      "step": 26,
+      "ce": 3.0730319023132324,
+      "kl": 10.89224624633789,
+      "gradient_norm": 3.4052019119262695,
+      "bytes_seen": 1154
+    },
+    {
+      "step": 27,
+      "ce": 3.385016679763794,
+      "kl": 11.171552658081055,
+      "gradient_norm": 6.3375396728515625,
+      "bytes_seen": 1196
+    },
+    {
+      "step": 28,
+      "ce": 3.4110445976257324,
+      "kl": 11.466177940368652,
+      "gradient_norm": 6.537598609924316,
+      "bytes_seen": 1241
+    },
+    {
+      "step": 29,
+      "ce": 3.007124662399292,
+      "kl": 10.588634490966797,
+      "gradient_norm": 4.797816276550293,
+      "bytes_seen": 1283
+    },
+    {
+      "step": 30,
+      "ce": 3.203333854675293,
+      "kl": 10.786600112915039,
+      "gradient_norm": 3.713170051574707,
+      "bytes_seen": 1330
+    },
+    {
+      "step": 31,
+      "ce": 3.43308162689209,
+      "kl": 11.263240814208984,
+      "gradient_norm": 5.402182579040527,
+      "bytes_seen": 1373
+    },
+    {
+      "step": 32,
+      "ce": 3.221308708190918,
+      "kl": 10.8659029006958,
+      "gradient_norm": 5.362387180328369,
+      "bytes_seen": 1415
+    },
+    {
+      "step": 33,
+      "ce": 3.172982931137085,
+      "kl": 10.717960357666016,
+      "gradient_norm": 4.5395379066467285,
+      "bytes_seen": 1461
+    },
+    {
+      "step": 34,
+      "ce": 3.029170274734497,
+      "kl": 10.387629508972168,
+      "gradient_norm": 2.9180407524108887,
+      "bytes_seen": 1508
+    },
+    {
+      "step": 35,
+      "ce": 3.089790105819702,
+      "kl": 10.810343742370605,
+      "gradient_norm": 4.744616508483887,
+      "bytes_seen": 1553
+    },
+    {
+      "step": 36,
+      "ce": 3.0940608978271484,
+      "kl": 10.741081237792969,
+      "gradient_norm": 3.572551965713501,
+      "bytes_seen": 1599
+    },
+    {
+      "step": 37,
+      "ce": 2.9504475593566895,
+      "kl": 10.690089225769043,
+      "gradient_norm": 2.9579522609710693,
+      "bytes_seen": 1644
+    },
+    {
+      "step": 38,
+      "ce": 3.0582947731018066,
+      "kl": 10.733419418334961,
+      "gradient_norm": 3.205162286758423,
+      "bytes_seen": 1688
+    },
+    {
+      "step": 39,
+      "ce": 3.1386806964874268,
+      "kl": 10.840829849243164,
+      "gradient_norm": 4.192875862121582,
+      "bytes_seen": 1735
+    },
+    {
+      "step": 40,
+      "ce": 3.114698886871338,
+      "kl": 9.812127113342285,
+      "gradient_norm": 5.63639497756958,
+      "bytes_seen": 1777
+    },
+    {
+      "step": 41,
+      "ce": 3.112025260925293,
+      "kl": 10.766849517822266,
+      "gradient_norm": 3.5868825912475586,
+      "bytes_seen": 1822
+    },
+    {
+      "step": 42,
+      "ce": 3.069789171218872,
+      "kl": 10.275094985961914,
+      "gradient_norm": 4.543349742889404,
+      "bytes_seen": 1862
+    },
+    {
+      "step": 43,
+      "ce": 3.0659878253936768,
+      "kl": 10.38694953918457,
+      "gradient_norm": 4.522444725036621,
+      "bytes_seen": 1905
+    },
+    {
+      "step": 44,
+      "ce": 3.236265182495117,
+      "kl": 10.771080017089844,
+      "gradient_norm": 4.36074161529541,
+      "bytes_seen": 1947
+    },
+    {
+      "step": 45,
+      "ce": 3.153686285018921,
+      "kl": 10.628636360168457,
+      "gradient_norm": 5.0799736976623535,
+      "bytes_seen": 1993
+    },
+    {
+      "step": 46,
+      "ce": 3.185326337814331,
+      "kl": 10.77038860321045,
+      "gradient_norm": 4.79355001449585,
+      "bytes_seen": 2037
+    },
+    {
+      "step": 47,
+      "ce": 3.2143094539642334,
+      "kl": 10.853736877441406,
+      "gradient_norm": 3.6850929260253906,
+      "bytes_seen": 2083
+    },
+    {
+      "step": 48,
+      "ce": 3.088839530944824,
+      "kl": 10.72451114654541,
+      "gradient_norm": 4.15576171875,
+      "bytes_seen": 2127
+    },
+    {
+      "step": 49,
+      "ce": 3.1715645790100098,
+      "kl": 10.819904327392578,
+      "gradient_norm": 5.007981300354004,
+      "bytes_seen": 2171
+    },
+    {
+      "step": 50,
+      "ce": 2.9116342067718506,
+      "kl": 10.552855491638184,
+      "gradient_norm": 3.762199640274048,
+      "bytes_seen": 2216
+    },
+    {
+      "step": 51,
+      "ce": 3.105215072631836,
+      "kl": 10.462236404418945,
+      "gradient_norm": 5.194108009338379,
+      "bytes_seen": 2258
+    },
+    {
+      "step": 52,
+      "ce": 3.0386011600494385,
+      "kl": 9.820916175842285,
+      "gradient_norm": 6.701869010925293,
+      "bytes_seen": 2299
+    },
+    {
+      "step": 53,
+      "ce": 2.912904739379883,
+      "kl": 10.583609580993652,
+      "gradient_norm": 3.494537591934204,
+      "bytes_seen": 2345
+    },
+    {
+      "step": 54,
+      "ce": 3.1337029933929443,
+      "kl": 10.767389297485352,
+      "gradient_norm": 5.766833782196045,
+      "bytes_seen": 2389
+    },
+    {
+      "step": 55,
+      "ce": 3.2600526809692383,
+      "kl": 10.7912015914917,
+      "gradient_norm": 5.422924041748047,
+      "bytes_seen": 2431
+    },
+    {
+      "step": 56,
+      "ce": 3.263917922973633,
+      "kl": 10.891647338867188,
+      "gradient_norm": 6.403507709503174,
+      "bytes_seen": 2478
+    },
+    {
+      "step": 57,
+      "ce": 2.9551007747650146,
+      "kl": 10.428738594055176,
+      "gradient_norm": 2.9198217391967773,
+      "bytes_seen": 2523
+    },
+    {
+      "step": 58,
+      "ce": 3.20780611038208,
+      "kl": 10.824012756347656,
+      "gradient_norm": 5.232261657714844,
+      "bytes_seen": 2569
+    },
+    {
+      "step": 59,
+      "ce": 2.9614675045013428,
+      "kl": 10.189947128295898,
+      "gradient_norm": 4.3019561767578125,
+      "bytes_seen": 2613
+    },
+    {
+      "step": 60,
+      "ce": 2.9093120098114014,
+      "kl": 10.382293701171875,
+      "gradient_norm": 4.271127223968506,
+      "bytes_seen": 2658
+    },
+    {
+      "step": 61,
+      "ce": 3.0932939052581787,
+      "kl": 10.619034767150879,
+      "gradient_norm": 4.295969009399414,
+      "bytes_seen": 2702
+    },
+    {
+      "step": 62,
+      "ce": 3.0694849491119385,
+      "kl": 10.710517883300781,
+      "gradient_norm": 4.492849826812744,
+      "bytes_seen": 2746
+    },
+    {
+      "step": 63,
+      "ce": 3.0157697200775146,
+      "kl": 10.340593338012695,
+      "gradient_norm": 5.732859134674072,
+      "bytes_seen": 2788
+    },
+    {
+      "step": 64,
+      "ce": 2.833317518234253,
+      "kl": 9.913644790649414,
+      "gradient_norm": 3.51247501373291,
+      "bytes_seen": 2832
+    }
+  ],
+  "evaluations": [
+    {
+      "step": 0,
+      "bytes_seen": 0,
+      "metrics": {
+        "validation_attribute": {
+          "metrics": {
+            "ce": 5.536949327083233,
+            "span_ce": 5.530961894989014,
+            "attribute_span_ce": 5.530961894989014,
+            "relation_span_ce": 5.533741505940755,
+            "unigram_ce": 2.801501530662185,
+            "ngram4_ce": 0.4369581986128582,
+            "unigram_span_ce": 2.697446747564746,
+            "ngram4_span_ce": 1.5338438329180228,
+            "unrestricted_grammar_oracle_ce": 0.21211061263036576,
+            "unrestricted_grammar_oracle_span_ce": 0.2218070977791825,
+            "teacher_ce": 0.4689173387373731,
+            "teacher_kl": 5.350719251267897,
+            "teacher_agreement": 0.0027322403506421654,
+            "final_hidden_rms": 0.016618500696495175,
+            "final_hidden_saturation": 0.0,
+            "bits_per_byte": 7.988129335836464,
+            "zero_edge_ce": 5.538003598406015
+          },
+          "sentences": 8,
+          "bytes": 366,
+          "rows": [
+            {
+              "bytes": 47,
+              "ce": 5.536594390869141,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 5.535791873931885,
+              "attribute_span_ce": 5.535791873931885,
+              "relation_span_ce": 5.534940719604492,
+              "unigram_ce": 2.728974559919124,
+              "ngram4_ce": 0.42512592615642936,
+              "unigram_span_ce": 2.5997942289005764,
+              "ngram4_span_ce": 1.5636207194543388,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "helps"
+              ],
+              "final_hidden_rms": 0.016803689301013947,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.2650286555290222,
+              "teacher_kl": 5.348870277404785,
+              "teacher_agreement": 0.021276595070958138
+            },
+            {
+              "bytes": 42,
+              "ce": 5.537242889404297,
+              "span_bytes": 4,
+              "attribute_span_bytes": 4,
+              "relation_span_bytes": 5,
+              "span_ce": 5.532337665557861,
+              "attribute_span_ce": 5.532337665557861,
+              "relation_span_ce": 5.526350975036621,
+              "unigram_ce": 2.7736391428158798,
+              "ngram4_ce": 0.4633486172938336,
+              "unigram_span_ce": 2.5388890883106616,
+              "ngram4_span_ce": 2.333133598627292,
+              "subject_attribute": [
+                "huge",
+                "red"
+              ],
+              "subject_relation": [
+                "bird",
+                "sees"
+              ],
+              "final_hidden_rms": 0.016307462006807327,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.23104906018664842,
+              "unrestricted_grammar_oracle_span_ce": 0.34657359027997264,
+              "teacher_ce": 0.7062164545059204,
+              "teacher_kl": 5.331246376037598,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 45,
+              "ce": 5.5373430252075195,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 5,
+              "span_ce": 5.535791873931885,
+              "attribute_span_ce": 5.535791873931885,
+              "relation_span_ce": 5.528188705444336,
+              "unigram_ce": 2.6925489481479223,
+              "ngram4_ce": 0.43409837354814024,
+              "unigram_span_ce": 2.5997942289005764,
+              "ngram4_span_ce": 1.5636207194543388,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "sees"
+              ],
+              "final_hidden_rms": 0.014796379953622818,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.21564578950753852,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.30188846588134766,
+              "teacher_kl": 5.347484111785889,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 47,
+              "ce": 5.537450313568115,
+              "span_bytes": 7,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 6,
+              "span_ce": 5.527660369873047,
+              "attribute_span_ce": 5.527660369873047,
+              "relation_span_ce": 5.536393642425537,
+              "unigram_ce": 2.8599690034036684,
+              "ngram4_ce": 0.43357915588981244,
+              "unigram_span_ce": 2.7828744608851532,
+              "ngram4_span_ce": 1.400517296471924,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "bird",
+                "helps"
+              ],
+              "final_hidden_rms": 0.016395505517721176,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.541090726852417,
+              "teacher_kl": 5.358519077301025,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 46,
+              "ce": 5.538847923278809,
+              "span_bytes": 7,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 6,
+              "span_ce": 5.527660369873047,
+              "attribute_span_ce": 5.527660369873047,
+              "relation_span_ce": 5.536393642425537,
+              "unigram_ce": 2.8916307003315858,
+              "ngram4_ce": 0.4338331210487772,
+              "unigram_span_ce": 2.7828744608851532,
+              "ngram4_span_ce": 1.400517296471924,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "bird",
+                "helps"
+              ],
+              "final_hidden_rms": 0.01689535193145275,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.21095783756172248,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.5431745648384094,
+              "teacher_kl": 5.356767177581787,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 47,
+              "ce": 5.535877704620361,
+              "span_bytes": 7,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 6,
+              "span_ce": 5.527660369873047,
+              "attribute_span_ce": 5.527660369873047,
+              "relation_span_ce": 5.54119873046875,
+              "unigram_ce": 2.8943866591204537,
+              "ngram4_ce": 0.43306851951466346,
+              "unigram_span_ce": 2.7828744608851532,
+              "ngram4_span_ce": 1.400517296471924,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "cat",
+                "likes"
+              ],
+              "final_hidden_rms": 0.017310695722699165,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.5158759951591492,
+              "teacher_kl": 5.362875938415527,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 45,
+              "ce": 5.535826683044434,
+              "span_bytes": 7,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 5,
+              "span_ce": 5.527660369873047,
+              "attribute_span_ce": 5.527660369873047,
+              "relation_span_ce": 5.5284929275512695,
+              "unigram_ce": 2.8069434543944323,
+              "ngram4_ce": 0.4506895685631181,
+              "unigram_span_ce": 2.7828744608851532,
+              "ngram4_span_ce": 1.400517296471924,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "dog",
+                "sees"
+              ],
+              "final_hidden_rms": 0.01705501787364483,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.21564578950753852,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.6333342790603638,
+              "teacher_kl": 5.348406791687012,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 47,
+              "ce": 5.536452293395996,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 5.535791873931885,
+              "attribute_span_ce": 5.535791873931885,
+              "relation_span_ce": 5.534940719604492,
+              "unigram_ce": 2.758468626374495,
+              "ngram4_ce": 0.42512592615642936,
+              "unigram_span_ce": 2.5997942289005764,
+              "ngram4_span_ce": 1.5636207194543388,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "helps"
+              ],
+              "final_hidden_rms": 0.01738390326499939,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.2714429497718811,
+              "teacher_kl": 5.349405288696289,
+              "teacher_agreement": 0.0
+            }
+          ]
+        },
+        "validation_relation": {
+          "metrics": {
+            "ce": 5.538221484736392,
+            "span_ce": 5.533361691694993,
+            "attribute_span_ce": 5.534658198660993,
+            "relation_span_ce": 5.533361691694993,
+            "unigram_ce": 2.846603140907208,
+            "ngram4_ce": 0.45117804298526276,
+            "unigram_span_ce": 2.8870542079509955,
+            "ngram4_span_ce": 1.58633167401234,
+            "unrestricted_grammar_oracle_ce": 0.21504843274989993,
+            "unrestricted_grammar_oracle_span_ce": 0.21327605555690624,
+            "teacher_ce": 0.34829939938978477,
+            "teacher_kl": 5.345369119723418,
+            "teacher_agreement": 0.0055401660398763306,
+            "final_hidden_rms": 0.016028473619371653,
+            "final_hidden_saturation": 0.0,
+            "bits_per_byte": 7.989964671373905,
+            "zero_edge_ce": 5.5393163200230475
+          },
+          "sentences": 8,
+          "bytes": 361,
+          "rows": [
+            {
+              "bytes": 44,
+              "ce": 5.539333820343018,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 5.534155368804932,
+              "attribute_span_ce": 5.535463809967041,
+              "relation_span_ce": 5.534155368804932,
+              "unigram_ce": 2.8841117131624614,
+              "ngram4_ce": 0.45033140315229087,
+              "unigram_span_ce": 3.012322212518157,
+              "ngram4_span_ce": 1.6498376103925088,
+              "subject_attribute": [
+                "tiny",
+                "green"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.015979386866092682,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.2205468301781644,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.2686193585395813,
+              "teacher_kl": 5.335410118103027,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 50,
+              "ce": 5.535728931427002,
+              "span_bytes": 8,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 8,
+              "span_ce": 5.534082412719727,
+              "attribute_span_ce": 5.5282883644104,
+              "relation_span_ce": 5.534082412719727,
+              "unigram_ce": 2.8225030173119285,
+              "ngram4_ce": 0.43629951531069167,
+              "unigram_span_ce": 3.0235190205117695,
+              "ngram4_span_ce": 1.3788045199311376,
+              "subject_attribute": [
+                "large",
+                "yellow"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.018965598195791245,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.19408121055678468,
+              "unrestricted_grammar_oracle_span_ce": 0.17328679513998632,
+              "teacher_ce": 0.4218294620513916,
+              "teacher_kl": 5.318602085113525,
+              "teacher_agreement": 0.019999999552965164
+            },
+            {
+              "bytes": 48,
+              "ce": 5.538326740264893,
+              "span_bytes": 8,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 8,
+              "span_ce": 5.535717964172363,
+              "attribute_span_ce": 5.534023761749268,
+              "relation_span_ce": 5.535717964172363,
+              "unigram_ce": 2.825626941513038,
+              "ngram4_ce": 0.4378996264092441,
+              "unigram_span_ce": 3.0235190205117695,
+              "ngram4_span_ce": 1.3788045199311376,
+              "subject_attribute": [
+                "small",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.015217036940157413,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20216792766331737,
+              "unrestricted_grammar_oracle_span_ce": 0.17328679513998632,
+              "teacher_ce": 0.41406121850013733,
+              "teacher_kl": 5.359003067016602,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 42,
+              "ce": 5.5389275550842285,
+              "span_bytes": 5,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 5,
+              "span_ce": 5.524977207183838,
+              "attribute_span_ce": 5.535463809967041,
+              "relation_span_ce": 5.524977207183838,
+              "unigram_ce": 2.826178720067618,
+              "ngram4_ce": 0.47003314063933166,
+              "unigram_span_ce": 2.4128998549993854,
+              "ngram4_span_ce": 1.9700861583229234,
+              "subject_attribute": [
+                "tiny",
+                "green"
+              ],
+              "subject_relation": [
+                "fox",
+                "sees"
+              ],
+              "final_hidden_rms": 0.01613137684762478,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.23104906018664842,
+              "unrestricted_grammar_oracle_span_ce": 0.2772588722239781,
+              "teacher_ce": 0.3539291024208069,
+              "teacher_kl": 5.353785037994385,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 41,
+              "ce": 5.53941011428833,
+              "span_bytes": 6,
+              "attribute_span_bytes": 5,
+              "relation_span_bytes": 6,
+              "span_ce": 5.538084030151367,
+              "attribute_span_ce": 5.539292335510254,
+              "relation_span_ce": 5.538084030151367,
+              "unigram_ce": 2.872784891184727,
+              "ngram4_ce": 0.48206821378067083,
+              "unigram_span_ce": 2.880916203492928,
+              "ngram4_span_ce": 1.6498376103925088,
+              "subject_attribute": [
+                "huge",
+                "blue"
+              ],
+              "subject_relation": [
+                "cat",
+                "helps"
+              ],
+              "final_hidden_rms": 0.016919884830713272,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.2366844031180301,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.3357773423194885,
+              "teacher_kl": 5.342188835144043,
+              "teacher_agreement": 0.024390242993831635
+            },
+            {
+              "bytes": 47,
+              "ce": 5.5380072593688965,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 5.535897731781006,
+              "attribute_span_ce": 5.534023761749268,
+              "relation_span_ce": 5.535897731781006,
+              "unigram_ce": 2.8946572969108857,
+              "ngram4_ce": 0.4241780093891512,
+              "unigram_span_ce": 3.012322212518157,
+              "ngram4_span_ce": 1.6498376103925088,
+              "subject_attribute": [
+                "small",
+                "green"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.014448295347392559,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.41400283575057983,
+              "teacher_kl": 5.3452677726745605,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 44,
+              "ce": 5.538815975189209,
+              "span_bytes": 8,
+              "attribute_span_bytes": 5,
+              "relation_span_bytes": 8,
+              "span_ce": 5.5338029861450195,
+              "attribute_span_ce": 5.539292335510254,
+              "relation_span_ce": 5.5338029861450195,
+              "unigram_ce": 2.867856911922052,
+              "ngram4_ce": 0.47547277780022695,
+              "unigram_span_ce": 3.0235190205117695,
+              "ngram4_span_ce": 1.3788045199311376,
+              "subject_attribute": [
+                "huge",
+                "blue"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.015767527744174004,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.2205468301781644,
+              "unrestricted_grammar_oracle_span_ce": 0.17328679513998632,
+              "teacher_ce": 0.2486458271741867,
+              "teacher_kl": 5.345746040344238,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 45,
+              "ce": 5.537691593170166,
+              "span_bytes": 5,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 5,
+              "span_ce": 5.526454448699951,
+              "attribute_span_ce": 5.534023761749268,
+              "relation_span_ce": 5.526454448699951,
+              "unigram_ce": 2.783317568207464,
+              "ngram4_ce": 0.4414039246542496,
+              "unigram_span_ce": 2.4128998549993854,
+              "ngram4_span_ce": 1.9700861583229234,
+              "subject_attribute": [
+                "small",
+                "green"
+              ],
+              "subject_relation": [
+                "fox",
+                "sees"
+              ],
+              "final_hidden_rms": 0.014798682183027267,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.21564578950753852,
+              "unrestricted_grammar_oracle_span_ce": 0.2772588722239781,
+              "teacher_ce": 0.30933281779289246,
+              "teacher_kl": 5.365085124969482,
+              "teacher_agreement": 0.0
+            }
+          ]
+        },
+        "validation_combined": {
+          "metrics": {
+            "ce": 5.5382677470168025,
+            "span_ce": 5.533305823200881,
+            "attribute_span_ce": 5.531443533690079,
+            "relation_span_ce": 5.5349223298846555,
+            "unigram_ce": 2.844389666759782,
+            "ngram4_ce": 0.6379815811204743,
+            "unigram_span_ce": 2.8258025461217677,
+            "ngram4_span_ce": 1.610254838498471,
+            "unrestricted_grammar_oracle_ce": 0.21269173759647636,
+            "unrestricted_grammar_oracle_span_ce": 0.22404757351432578,
+            "teacher_ce": 0.7030821563446359,
+            "teacher_kl": 5.326024480061989,
+            "teacher_agreement": 0.0,
+            "final_hidden_rms": 0.015701615484431386,
+            "final_hidden_saturation": 0.0,
+            "bits_per_byte": 7.990031413736434,
+            "zero_edge_ce": 5.539014884217145
+          },
+          "sentences": 8,
+          "bytes": 365,
+          "rows": [
+            {
+              "bytes": 45,
+              "ce": 5.53627872467041,
+              "span_bytes": 12,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 5,
+              "span_ce": 5.527288913726807,
+              "attribute_span_ce": 5.527660369873047,
+              "relation_span_ce": 5.526768684387207,
+              "unigram_ce": 2.822346001729232,
+              "ngram4_ce": 0.6467307906069729,
+              "unigram_span_ce": 2.628718375099416,
+              "ngram4_span_ce": 1.6378376555765064,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "fox",
+                "sees"
+              ],
+              "final_hidden_rms": 0.01645422913134098,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.21564578950753852,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 1.0320532321929932,
+              "teacher_kl": 5.362439155578613,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 47,
+              "ce": 5.537867069244385,
+              "span_bytes": 13,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 6,
+              "span_ce": 5.531818866729736,
+              "attribute_span_ce": 5.527660369873047,
+              "relation_span_ce": 5.536670684814453,
+              "unigram_ce": 2.893519646927673,
+              "ngram4_ce": 0.6123143321636947,
+              "unigram_span_ce": 2.8887734231773092,
+              "ngram4_span_ce": 1.5155882105891163,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.015127568505704403,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.21327605555690624,
+              "teacher_ce": 0.6746899485588074,
+              "teacher_kl": 5.32546854019165,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 48,
+              "ce": 5.5371012687683105,
+              "span_bytes": 11,
+              "attribute_span_bytes": 5,
+              "relation_span_bytes": 6,
+              "span_ce": 5.534975051879883,
+              "attribute_span_ce": 5.535466194152832,
+              "relation_span_ce": 5.534566879272461,
+              "unigram_ce": 2.868094605127041,
+              "ngram4_ce": 0.6142551179327127,
+              "unigram_span_ce": 2.885738672338157,
+              "ngram4_span_ce": 1.8124574641764342,
+              "subject_attribute": [
+                "small",
+                "blue"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.016147416085004807,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20216792766331737,
+              "unrestricted_grammar_oracle_span_ce": 0.2520535202036165,
+              "teacher_ce": 0.38581761717796326,
+              "teacher_kl": 5.345983982086182,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 47,
+              "ce": 5.538247108459473,
+              "span_bytes": 12,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 5.535486221313477,
+              "attribute_span_ce": 5.535791873931885,
+              "relation_span_ce": 5.535179615020752,
+              "unigram_ce": 2.8038709158317956,
+              "ngram4_ce": 0.6038611024303117,
+              "unigram_span_ce": 2.806058220709367,
+              "ngram4_span_ce": 1.6067291649234232,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.015138722024857998,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.4348776936531067,
+              "teacher_kl": 5.309378147125244,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 43,
+              "ce": 5.538375377655029,
+              "span_bytes": 12,
+              "attribute_span_bytes": 4,
+              "relation_span_bytes": 8,
+              "span_ce": 5.534549236297607,
+              "attribute_span_ce": 5.532337665557861,
+              "relation_span_ce": 5.5356550216674805,
+              "unigram_ce": 2.8528387990047004,
+              "ngram4_ce": 0.6845886575247466,
+              "unigram_span_ce": 2.861975709778067,
+              "ngram4_span_ce": 1.6969142128298553,
+              "subject_attribute": [
+                "huge",
+                "red"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.01577785238623619,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.2256758262288194,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 1.0818161964416504,
+              "teacher_kl": 5.304752349853516,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 46,
+              "ce": 5.538364410400391,
+              "span_bytes": 15,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 8,
+              "span_ce": 5.531313419342041,
+              "attribute_span_ce": 5.527660369873047,
+              "relation_span_ce": 5.534510135650635,
+              "unigram_ce": 2.8530208284317164,
+              "ngram4_ce": 0.6491391116324872,
+              "unigram_span_ce": 2.911218226019349,
+              "ngram4_span_ce": 1.388937148983504,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.013979485258460045,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.21095783756172248,
+              "unrestricted_grammar_oracle_span_ce": 0.18483924814931874,
+              "teacher_ce": 0.7145256996154785,
+              "teacher_kl": 5.322683811187744,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 42,
+              "ce": 5.5408525466918945,
+              "span_bytes": 10,
+              "attribute_span_bytes": 4,
+              "relation_span_bytes": 6,
+              "span_ce": 5.536782264709473,
+              "attribute_span_ce": 5.532337665557861,
+              "relation_span_ce": 5.539745330810547,
+              "unigram_ce": 2.8668302005102966,
+              "ngram4_ce": 0.6745356366090116,
+              "unigram_span_ce": 2.744105357420021,
+              "ngram4_span_ce": 1.9231560056864214,
+              "subject_attribute": [
+                "huge",
+                "red"
+              ],
+              "subject_relation": [
+                "cat",
+                "helps"
+              ],
+              "final_hidden_rms": 0.016140718013048172,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.23104906018664842,
+              "unrestricted_grammar_oracle_span_ce": 0.2772588722239781,
+              "teacher_ce": 0.8433203101158142,
+              "teacher_kl": 5.316883087158203,
+              "teacher_agreement": 0.0
+            },
+            {
+              "bytes": 47,
+              "ce": 5.539281845092773,
+              "span_bytes": 14,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 8,
+              "span_ce": 5.53524923324585,
+              "attribute_span_ce": 5.535791873931885,
+              "relation_span_ce": 5.5348429679870605,
+              "unigram_ce": 2.7964439554727356,
+              "ngram4_ce": 0.6273977084836987,
+              "unigram_span_ce": 2.8419226812498297,
+              "ngram4_span_ce": 1.4580114625839375,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.016846932470798492,
+              "final_hidden_saturation": 0.0,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.5257007479667664,
+              "teacher_kl": 5.318877696990967,
+              "teacher_agreement": 0.0
+            }
+          ]
+        }
+      },
+      "wall_seconds": 135.4868432499934
+    },
+    {
+      "step": 64,
+      "bytes_seen": 2832,
+      "metrics": {
+        "validation_attribute": {
+          "metrics": {
+            "ce": 2.983844689984139,
+            "span_ce": 2.6324634075164797,
+            "attribute_span_ce": 2.6324634075164797,
+            "relation_span_ce": 2.7551737149556477,
+            "unigram_ce": 2.801501530662185,
+            "ngram4_ce": 0.4369581986128582,
+            "unigram_span_ce": 2.697446747564746,
+            "ngram4_span_ce": 1.5338438329180228,
+            "unrestricted_grammar_oracle_ce": 0.21211061263036576,
+            "unrestricted_grammar_oracle_span_ce": 0.2218070977791825,
+            "teacher_ce": 0.4689173387373731,
+            "teacher_kl": 2.8311385287613167,
+            "teacher_agreement": 0.1530054641551659,
+            "final_hidden_rms": 0.6788352876901627,
+            "final_hidden_saturation": 0.13309538178145885,
+            "bits_per_byte": 4.304777937022984,
+            "zero_edge_ce": 5.066795265739732,
+            "normalized_teacher_gap_closure": 0.5037664803557
+          },
+          "sentences": 8,
+          "bytes": 366,
+          "rows": [
+            {
+              "bytes": 47,
+              "ce": 2.7488484382629395,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 2.642890691757202,
+              "attribute_span_ce": 2.642890691757202,
+              "relation_span_ce": 2.8829164505004883,
+              "unigram_ce": 2.728974559919124,
+              "ngram4_ce": 0.42512592615642936,
+              "unigram_span_ce": 2.5997942289005764,
+              "ngram4_span_ce": 1.5636207194543388,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "helps"
+              ],
+              "final_hidden_rms": 0.6788119077682495,
+              "final_hidden_saturation": 0.13302940130233765,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.2650286555290222,
+              "teacher_kl": 2.68843150138855,
+              "teacher_agreement": 0.1489361673593521
+            },
+            {
+              "bytes": 42,
+              "ce": 3.1447949409484863,
+              "span_bytes": 4,
+              "attribute_span_bytes": 4,
+              "relation_span_bytes": 5,
+              "span_ce": 2.6094777584075928,
+              "attribute_span_ce": 2.6094777584075928,
+              "relation_span_ce": 2.2449517250061035,
+              "unigram_ce": 2.7736391428158798,
+              "ngram4_ce": 0.4633486172938336,
+              "unigram_span_ce": 2.5388890883106616,
+              "ngram4_span_ce": 2.333133598627292,
+              "subject_attribute": [
+                "huge",
+                "red"
+              ],
+              "subject_relation": [
+                "bird",
+                "sees"
+              ],
+              "final_hidden_rms": 0.6788596510887146,
+              "final_hidden_saturation": 0.1331193745136261,
+              "unrestricted_grammar_oracle_ce": 0.23104906018664842,
+              "unrestricted_grammar_oracle_span_ce": 0.34657359027997264,
+              "teacher_ce": 0.7062164545059204,
+              "teacher_kl": 2.8638947010040283,
+              "teacher_agreement": 0.1428571492433548
+            },
+            {
+              "bytes": 45,
+              "ce": 2.740227460861206,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 5,
+              "span_ce": 2.642890691757202,
+              "attribute_span_ce": 2.642890691757202,
+              "relation_span_ce": 2.2409920692443848,
+              "unigram_ce": 2.6925489481479223,
+              "ngram4_ce": 0.43409837354814024,
+              "unigram_span_ce": 2.5997942289005764,
+              "ngram4_span_ce": 1.5636207194543388,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "sees"
+              ],
+              "final_hidden_rms": 0.6787939071655273,
+              "final_hidden_saturation": 0.13305938243865967,
+              "unrestricted_grammar_oracle_ce": 0.21564578950753852,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.30188846588134766,
+              "teacher_kl": 2.677610158920288,
+              "teacher_agreement": 0.15555556118488312
+            },
+            {
+              "bytes": 47,
+              "ce": 3.0897088050842285,
+              "span_bytes": 7,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 6,
+              "span_ce": 2.6290438175201416,
+              "attribute_span_ce": 2.6290438175201416,
+              "relation_span_ce": 2.8810160160064697,
+              "unigram_ce": 2.8599690034036684,
+              "ngram4_ce": 0.43357915588981244,
+              "unigram_span_ce": 2.7828744608851532,
+              "ngram4_span_ce": 1.400517296471924,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "bird",
+                "helps"
+              ],
+              "final_hidden_rms": 0.6788129210472107,
+              "final_hidden_saturation": 0.13302339613437653,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.541090726852417,
+              "teacher_kl": 2.9200432300567627,
+              "teacher_agreement": 0.1489361673593521
+            },
+            {
+              "bytes": 46,
+              "ce": 3.162776470184326,
+              "span_bytes": 7,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 6,
+              "span_ce": 2.6290438175201416,
+              "attribute_span_ce": 2.6290438175201416,
+              "relation_span_ce": 2.8810160160064697,
+              "unigram_ce": 2.8916307003315858,
+              "ngram4_ce": 0.4338331210487772,
+              "unigram_span_ce": 2.7828744608851532,
+              "ngram4_span_ce": 1.400517296471924,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "bird",
+                "helps"
+              ],
+              "final_hidden_rms": 0.6788058876991272,
+              "final_hidden_saturation": 0.1330173909664154,
+              "unrestricted_grammar_oracle_ce": 0.21095783756172248,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.5431745648384094,
+              "teacher_kl": 3.002046585083008,
+              "teacher_agreement": 0.15217390656471252
+            },
+            {
+              "bytes": 47,
+              "ce": 3.1861653327941895,
+              "span_bytes": 7,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 6,
+              "span_ce": 2.6290438175201416,
+              "attribute_span_ce": 2.6290438175201416,
+              "relation_span_ce": 3.5301246643066406,
+              "unigram_ce": 2.8943866591204537,
+              "ngram4_ce": 0.43306851951466346,
+              "unigram_span_ce": 2.7828744608851532,
+              "ngram4_span_ce": 1.400517296471924,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "cat",
+                "likes"
+              ],
+              "final_hidden_rms": 0.6788656711578369,
+              "final_hidden_saturation": 0.13316737115383148,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.5158759951591492,
+              "teacher_kl": 3.0115978717803955,
+              "teacher_agreement": 0.1489361673593521
+            },
+            {
+              "bytes": 45,
+              "ce": 2.9726386070251465,
+              "span_bytes": 7,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 5,
+              "span_ce": 2.6290438175201416,
+              "attribute_span_ce": 2.6290438175201416,
+              "relation_span_ce": 2.241032123565674,
+              "unigram_ce": 2.8069434543944323,
+              "ngram4_ce": 0.4506895685631181,
+              "unigram_span_ce": 2.7828744608851532,
+              "ngram4_span_ce": 1.400517296471924,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "dog",
+                "sees"
+              ],
+              "final_hidden_rms": 0.6788666844367981,
+              "final_hidden_saturation": 0.13317936658859253,
+              "unrestricted_grammar_oracle_ce": 0.21564578950753852,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.6333342790603638,
+              "teacher_kl": 2.7550735473632812,
+              "teacher_agreement": 0.17777778208255768
+            },
+            {
+              "bytes": 47,
+              "ce": 2.8356833457946777,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 2.642890691757202,
+              "attribute_span_ce": 2.642890691757202,
+              "relation_span_ce": 2.8829164505004883,
+              "unigram_ce": 2.758468626374495,
+              "ngram4_ce": 0.42512592615642936,
+              "unigram_span_ce": 2.5997942289005764,
+              "ngram4_span_ce": 1.5636207194543388,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "helps"
+              ],
+              "final_hidden_rms": 0.6788656711578369,
+              "final_hidden_saturation": 0.13316737115383148,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.2714429497718811,
+              "teacher_kl": 2.727761745452881,
+              "teacher_agreement": 0.1489361673593521
+            }
+          ]
+        },
+        "validation_relation": {
+          "metrics": {
+            "ce": 3.0899298098609056,
+            "span_ce": 2.9281323827230015,
+            "attribute_span_ce": 2.6899225255276296,
+            "relation_span_ce": 2.9281323827230015,
+            "unigram_ce": 2.846603140907208,
+            "ngram4_ce": 0.45117804298526276,
+            "unigram_span_ce": 2.8870542079509955,
+            "ngram4_span_ce": 1.58633167401234,
+            "unrestricted_grammar_oracle_ce": 0.21504843274989993,
+            "unrestricted_grammar_oracle_span_ce": 0.21327605555690624,
+            "teacher_ce": 0.34829939938978477,
+            "teacher_kl": 2.90909463679031,
+            "teacher_agreement": 0.1717451537580041,
+            "final_hidden_rms": 0.6788470447063446,
+            "final_hidden_saturation": 0.13310737907886505,
+            "bits_per_byte": 4.457826413381306,
+            "zero_edge_ce": 5.071413964776121,
+            "normalized_teacher_gap_closure": 0.47173958194634025
+          },
+          "sentences": 8,
+          "bytes": 361,
+          "rows": [
+            {
+              "bytes": 44,
+              "ce": 3.3039910793304443,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 3.5296709537506104,
+              "attribute_span_ce": 2.6181111335754395,
+              "relation_span_ce": 3.5296709537506104,
+              "unigram_ce": 2.8841117131624614,
+              "ngram4_ce": 0.45033140315229087,
+              "unigram_span_ce": 3.012322212518157,
+              "ngram4_span_ce": 1.6498376103925088,
+              "subject_attribute": [
+                "tiny",
+                "green"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.6788790822029114,
+              "final_hidden_saturation": 0.13314937055110931,
+              "unrestricted_grammar_oracle_ce": 0.2205468301781644,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.2686193585395813,
+              "teacher_kl": 3.0671706199645996,
+              "teacher_agreement": 0.15909090638160706
+            },
+            {
+              "bytes": 50,
+              "ce": 2.829685926437378,
+              "span_bytes": 8,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 8,
+              "span_ce": 2.921196699142456,
+              "attribute_span_ce": 2.651702880859375,
+              "relation_span_ce": 2.921196699142456,
+              "unigram_ce": 2.8225030173119285,
+              "ngram4_ce": 0.43629951531069167,
+              "unigram_span_ce": 3.0235190205117695,
+              "ngram4_span_ce": 1.3788045199311376,
+              "subject_attribute": [
+                "large",
+                "yellow"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.678795576095581,
+              "final_hidden_saturation": 0.1329634040594101,
+              "unrestricted_grammar_oracle_ce": 0.19408121055678468,
+              "unrestricted_grammar_oracle_span_ce": 0.17328679513998632,
+              "teacher_ce": 0.4218294620513916,
+              "teacher_kl": 2.788309335708618,
+              "teacher_agreement": 0.14000000059604645
+            },
+            {
+              "bytes": 48,
+              "ce": 2.9183120727539062,
+              "span_bytes": 8,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 8,
+              "span_ce": 2.9221932888031006,
+              "attribute_span_ce": 2.642219305038452,
+              "relation_span_ce": 2.9221932888031006,
+              "unigram_ce": 2.825626941513038,
+              "ngram4_ce": 0.4378996264092441,
+              "unigram_span_ce": 3.0235190205117695,
+              "ngram4_span_ce": 1.3788045199311376,
+              "subject_attribute": [
+                "small",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.6788448095321655,
+              "final_hidden_saturation": 0.13311338424682617,
+              "unrestricted_grammar_oracle_ce": 0.20216792766331737,
+              "unrestricted_grammar_oracle_span_ce": 0.17328679513998632,
+              "teacher_ce": 0.41406121850013733,
+              "teacher_kl": 2.837982416152954,
+              "teacher_agreement": 0.1875
+            },
+            {
+              "bytes": 42,
+              "ce": 3.088406562805176,
+              "span_bytes": 5,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 5,
+              "span_ce": 2.2423901557922363,
+              "attribute_span_ce": 2.6181111335754395,
+              "relation_span_ce": 2.2423901557922363,
+              "unigram_ce": 2.826178720067618,
+              "ngram4_ce": 0.47003314063933166,
+              "unigram_span_ce": 2.4128998549993854,
+              "ngram4_span_ce": 1.9700861583229234,
+              "subject_attribute": [
+                "tiny",
+                "green"
+              ],
+              "subject_relation": [
+                "fox",
+                "sees"
+              ],
+              "final_hidden_rms": 0.6788791418075562,
+              "final_hidden_saturation": 0.13314937055110931,
+              "unrestricted_grammar_oracle_ce": 0.23104906018664842,
+              "unrestricted_grammar_oracle_span_ce": 0.2772588722239781,
+              "teacher_ce": 0.3539291024208069,
+              "teacher_kl": 2.8251090049743652,
+              "teacher_agreement": 0.1666666716337204
+            },
+            {
+              "bytes": 41,
+              "ce": 3.2775015830993652,
+              "span_bytes": 6,
+              "attribute_span_bytes": 5,
+              "relation_span_bytes": 6,
+              "span_ce": 2.8887860774993896,
+              "attribute_span_ce": 2.8887157440185547,
+              "relation_span_ce": 2.8887860774993896,
+              "unigram_ce": 2.872784891184727,
+              "ngram4_ce": 0.48206821378067083,
+              "unigram_span_ce": 2.880916203492928,
+              "ngram4_span_ce": 1.6498376103925088,
+              "subject_attribute": [
+                "huge",
+                "blue"
+              ],
+              "subject_relation": [
+                "cat",
+                "helps"
+              ],
+              "final_hidden_rms": 0.6788977980613708,
+              "final_hidden_saturation": 0.1332213580608368,
+              "unrestricted_grammar_oracle_ce": 0.2366844031180301,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.3357773423194885,
+              "teacher_kl": 2.947502613067627,
+              "teacher_agreement": 0.17073170840740204
+            },
+            {
+              "bytes": 47,
+              "ce": 3.3065009117126465,
+              "span_bytes": 6,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 3.529787063598633,
+              "attribute_span_ce": 2.642219305038452,
+              "relation_span_ce": 3.529787063598633,
+              "unigram_ce": 2.8946572969108857,
+              "ngram4_ce": 0.4241780093891512,
+              "unigram_span_ce": 3.012322212518157,
+              "ngram4_span_ce": 1.6498376103925088,
+              "subject_attribute": [
+                "small",
+                "green"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.6788253784179688,
+              "final_hidden_saturation": 0.13308937847614288,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.41400283575057983,
+              "teacher_kl": 3.1345653533935547,
+              "teacher_agreement": 0.19148936867713928
+            },
+            {
+              "bytes": 44,
+              "ce": 3.2195985317230225,
+              "span_bytes": 8,
+              "attribute_span_bytes": 5,
+              "relation_span_bytes": 8,
+              "span_ce": 2.926326274871826,
+              "attribute_span_ce": 2.8887157440185547,
+              "relation_span_ce": 2.926326274871826,
+              "unigram_ce": 2.867856911922052,
+              "ngram4_ce": 0.47547277780022695,
+              "unigram_span_ce": 3.0235190205117695,
+              "ngram4_span_ce": 1.3788045199311376,
+              "subject_attribute": [
+                "huge",
+                "blue"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.6788606643676758,
+              "final_hidden_saturation": 0.13311338424682617,
+              "unrestricted_grammar_oracle_ce": 0.2205468301781644,
+              "unrestricted_grammar_oracle_span_ce": 0.17328679513998632,
+              "teacher_ce": 0.2486458271741867,
+              "teacher_kl": 2.989185094833374,
+              "teacher_agreement": 0.15909090638160706
+            },
+            {
+              "bytes": 45,
+              "ce": 2.830383539199829,
+              "span_bytes": 5,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 5,
+              "span_ce": 2.2407476902008057,
+              "attribute_span_ce": 2.642219305038452,
+              "relation_span_ce": 2.2407476902008057,
+              "unigram_ce": 2.783317568207464,
+              "ngram4_ce": 0.4414039246542496,
+              "unigram_span_ce": 2.4128998549993854,
+              "ngram4_span_ce": 1.9700861583229234,
+              "subject_attribute": [
+                "small",
+                "green"
+              ],
+              "subject_relation": [
+                "fox",
+                "sees"
+              ],
+              "final_hidden_rms": 0.6787939071655273,
+              "final_hidden_saturation": 0.13305938243865967,
+              "unrestricted_grammar_oracle_ce": 0.21564578950753852,
+              "unrestricted_grammar_oracle_span_ce": 0.2772588722239781,
+              "teacher_ce": 0.30933281779289246,
+              "teacher_kl": 2.694180727005005,
+              "teacher_agreement": 0.20000000298023224
+            }
+          ]
+        },
+        "validation_combined": {
+          "metrics": {
+            "ce": 3.098172479786285,
+            "span_ce": 2.873463035833956,
+            "attribute_span_ce": 2.6558316635048906,
+            "relation_span_ce": 3.062350704984845,
+            "unigram_ce": 2.844389666759782,
+            "ngram4_ce": 0.6379815811204743,
+            "unigram_span_ce": 2.8258025461217677,
+            "ngram4_span_ce": 1.610254838498471,
+            "unrestricted_grammar_oracle_ce": 0.21269173759647636,
+            "unrestricted_grammar_oracle_span_ce": 0.22404757351432578,
+            "teacher_ce": 0.7030821563446359,
+            "teacher_kl": 3.011848843587588,
+            "teacher_agreement": 0.15342465786084736,
+            "final_hidden_rms": 0.6788261532783508,
+            "final_hidden_saturation": 0.13306238874793053,
+            "bits_per_byte": 4.4697180724063355,
+            "zero_edge_ce": 5.072353624317744,
+            "normalized_teacher_gap_closure": 0.5046539003462133
+          },
+          "sentences": 8,
+          "bytes": 365,
+          "rows": [
+            {
+              "bytes": 45,
+              "ce": 2.963040590286255,
+              "span_bytes": 12,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 5,
+              "span_ce": 2.4672749042510986,
+              "attribute_span_ce": 2.6290438175201416,
+              "relation_span_ce": 2.240797996520996,
+              "unigram_ce": 2.822346001729232,
+              "ngram4_ce": 0.6467307906069729,
+              "unigram_span_ce": 2.628718375099416,
+              "ngram4_span_ce": 1.6378376555765064,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "fox",
+                "sees"
+              ],
+              "final_hidden_rms": 0.6788129806518555,
+              "final_hidden_saturation": 0.13302339613437653,
+              "unrestricted_grammar_oracle_ce": 0.21564578950753852,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 1.0320532321929932,
+              "teacher_kl": 3.2952303886413574,
+              "teacher_agreement": 0.15555556118488312
+            },
+            {
+              "bytes": 47,
+              "ce": 3.3054111003875732,
+              "span_bytes": 13,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 6,
+              "span_ce": 3.044785976409912,
+              "attribute_span_ce": 2.6290438175201416,
+              "relation_span_ce": 3.5298194885253906,
+              "unigram_ce": 2.893519646927673,
+              "ngram4_ce": 0.6123143321636947,
+              "unigram_span_ce": 2.8887734231773092,
+              "ngram4_span_ce": 1.5155882105891163,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.6788448691368103,
+              "final_hidden_saturation": 0.13311338424682617,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.21327605555690624,
+              "teacher_ce": 0.6746899485588074,
+              "teacher_kl": 3.1523382663726807,
+              "teacher_agreement": 0.1489361673593521
+            },
+            {
+              "bytes": 48,
+              "ce": 3.1446688175201416,
+              "span_bytes": 11,
+              "attribute_span_bytes": 5,
+              "relation_span_bytes": 6,
+              "span_ce": 3.231472969055176,
+              "attribute_span_ce": 2.873565196990967,
+              "relation_span_ce": 3.529729127883911,
+              "unigram_ce": 2.868094605127041,
+              "ngram4_ce": 0.6142551179327127,
+              "unigram_span_ce": 2.885738672338157,
+              "ngram4_span_ce": 1.8124574641764342,
+              "subject_attribute": [
+                "small",
+                "blue"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.6788373589515686,
+              "final_hidden_saturation": 0.13310137391090393,
+              "unrestricted_grammar_oracle_ce": 0.20216792766331737,
+              "unrestricted_grammar_oracle_span_ce": 0.2520535202036165,
+              "teacher_ce": 0.38581761717796326,
+              "teacher_kl": 3.026552200317383,
+              "teacher_agreement": 0.1875
+            },
+            {
+              "bytes": 47,
+              "ce": 3.1259803771972656,
+              "span_bytes": 12,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 6,
+              "span_ce": 3.086338996887207,
+              "attribute_span_ce": 2.642890691757202,
+              "relation_span_ce": 3.5297868251800537,
+              "unigram_ce": 2.8038709158317956,
+              "ngram4_ce": 0.6038611024303117,
+              "unigram_span_ce": 2.806058220709367,
+              "ngram4_span_ce": 1.6067291649234232,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "bird",
+                "likes"
+              ],
+              "final_hidden_rms": 0.6788448691368103,
+              "final_hidden_saturation": 0.13311338424682617,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 0.4348776936531067,
+              "teacher_kl": 3.001807689666748,
+              "teacher_agreement": 0.1489361673593521
+            },
+            {
+              "bytes": 43,
+              "ce": 3.2044153213500977,
+              "span_bytes": 12,
+              "attribute_span_bytes": 4,
+              "relation_span_bytes": 8,
+              "span_ce": 2.8233911991119385,
+              "attribute_span_ce": 2.6094777584075928,
+              "relation_span_ce": 2.9303481578826904,
+              "unigram_ce": 2.8528387990047004,
+              "ngram4_ce": 0.6845886575247466,
+              "unigram_span_ce": 2.861975709778067,
+              "ngram4_span_ce": 1.6969142128298553,
+              "subject_attribute": [
+                "huge",
+                "red"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.6788606643676758,
+              "final_hidden_saturation": 0.13311338424682617,
+              "unrestricted_grammar_oracle_ce": 0.2256758262288194,
+              "unrestricted_grammar_oracle_span_ce": 0.23104906018664842,
+              "teacher_ce": 1.0818161964416504,
+              "teacher_kl": 3.020148754119873,
+              "teacher_agreement": 0.13953489065170288
+            },
+            {
+              "bytes": 46,
+              "ce": 2.9727606773376465,
+              "span_bytes": 15,
+              "attribute_span_bytes": 7,
+              "relation_span_bytes": 8,
+              "span_ce": 2.7853734493255615,
+              "attribute_span_ce": 2.6290438175201416,
+              "relation_span_ce": 2.922161817550659,
+              "unigram_ce": 2.8530208284317164,
+              "ngram4_ce": 0.6491391116324872,
+              "unigram_span_ce": 2.911218226019349,
+              "ngram4_span_ce": 1.388937148983504,
+              "subject_attribute": [
+                "tiny",
+                "yellow"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.6788241863250732,
+              "final_hidden_saturation": 0.13304738700389862,
+              "unrestricted_grammar_oracle_ce": 0.21095783756172248,
+              "unrestricted_grammar_oracle_span_ce": 0.18483924814931874,
+              "teacher_ce": 0.7145256996154785,
+              "teacher_kl": 2.8487660884857178,
+              "teacher_agreement": 0.15217390656471252
+            },
+            {
+              "bytes": 42,
+              "ce": 3.2391514778137207,
+              "span_bytes": 10,
+              "attribute_span_bytes": 4,
+              "relation_span_bytes": 6,
+              "span_ce": 2.780475378036499,
+              "attribute_span_ce": 2.6094777584075928,
+              "relation_span_ce": 2.8944740295410156,
+              "unigram_ce": 2.8668302005102966,
+              "ngram4_ce": 0.6745356366090116,
+              "unigram_span_ce": 2.744105357420021,
+              "ngram4_span_ce": 1.9231560056864214,
+              "subject_attribute": [
+                "huge",
+                "red"
+              ],
+              "subject_relation": [
+                "cat",
+                "helps"
+              ],
+              "final_hidden_rms": 0.6787784099578857,
+              "final_hidden_saturation": 0.13296940922737122,
+              "unrestricted_grammar_oracle_ce": 0.23104906018664842,
+              "unrestricted_grammar_oracle_span_ce": 0.2772588722239781,
+              "teacher_ce": 0.8433203101158142,
+              "teacher_kl": 2.9269580841064453,
+              "teacher_agreement": 0.1428571492433548
+            },
+            {
+              "bytes": 47,
+              "ce": 2.84458327293396,
+              "span_bytes": 14,
+              "attribute_span_bytes": 6,
+              "relation_span_bytes": 8,
+              "span_ce": 2.8025002479553223,
+              "attribute_span_ce": 2.642890691757202,
+              "relation_span_ce": 2.9222075939178467,
+              "unigram_ce": 2.7964439554727356,
+              "ngram4_ce": 0.6273977084836987,
+              "unigram_span_ce": 2.8419226812498297,
+              "ngram4_span_ce": 1.4580114625839375,
+              "subject_attribute": [
+                "large",
+                "green"
+              ],
+              "subject_relation": [
+                "dog",
+                "follows"
+              ],
+              "final_hidden_rms": 0.6788058876991272,
+              "final_hidden_saturation": 0.1330173909664154,
+              "unrestricted_grammar_oracle_ce": 0.20646937293274967,
+              "unrestricted_grammar_oracle_span_ce": 0.19804205158855578,
+              "teacher_ce": 0.5257007479667664,
+              "teacher_kl": 2.8229408264160156,
+              "teacher_agreement": 0.1489361673593521
+            }
+          ]
+        }
+      },
+      "wall_seconds": 679.0624565829639
+    }
+  ],
+  "complete": false,
+  "checkpoint_sha256": "1fb28dd9fa4d37db5d6bcbc04b30ae5d965621eb4daed5b9e2bb28a4df9a3c9c",
+  "bytes_seen": 2832,
+  "runtime_seconds": 679.9571033749962
+}

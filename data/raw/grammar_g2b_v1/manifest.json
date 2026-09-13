@@ -1,0 +1,633 @@
+{
+  "experiment": "G2b \u2014 Teacher-qualified compositional transduction",
+  "status": "data only; no trained result",
+  "seed": 20260914,
+  "partitions": {
+    "attributes": {
+      "train": [
+        [
+          "small",
+          "red"
+        ],
+        [
+          "small",
+          "blue"
+        ],
+        [
+          "small",
+          "green"
+        ],
+        [
+          "small",
+          "yellow"
+        ],
+        [
+          "small",
+          "black"
+        ],
+        [
+          "large",
+          "blue"
+        ],
+        [
+          "large",
+          "green"
+        ],
+        [
+          "large",
+          "yellow"
+        ],
+        [
+          "large",
+          "black"
+        ],
+        [
+          "large",
+          "white"
+        ],
+        [
+          "tiny",
+          "green"
+        ],
+        [
+          "tiny",
+          "yellow"
+        ],
+        [
+          "tiny",
+          "black"
+        ],
+        [
+          "tiny",
+          "white"
+        ],
+        [
+          "tiny",
+          "pink"
+        ],
+        [
+          "huge",
+          "yellow"
+        ],
+        [
+          "huge",
+          "black"
+        ],
+        [
+          "huge",
+          "white"
+        ],
+        [
+          "huge",
+          "pink"
+        ],
+        [
+          "huge",
+          "gray"
+        ],
+        [
+          "short",
+          "red"
+        ],
+        [
+          "short",
+          "black"
+        ],
+        [
+          "short",
+          "white"
+        ],
+        [
+          "short",
+          "pink"
+        ],
+        [
+          "short",
+          "gray"
+        ],
+        [
+          "tall",
+          "red"
+        ],
+        [
+          "tall",
+          "blue"
+        ],
+        [
+          "tall",
+          "white"
+        ],
+        [
+          "tall",
+          "pink"
+        ],
+        [
+          "tall",
+          "gray"
+        ],
+        [
+          "wide",
+          "red"
+        ],
+        [
+          "wide",
+          "blue"
+        ],
+        [
+          "wide",
+          "green"
+        ],
+        [
+          "wide",
+          "pink"
+        ],
+        [
+          "wide",
+          "gray"
+        ],
+        [
+          "slim",
+          "red"
+        ],
+        [
+          "slim",
+          "blue"
+        ],
+        [
+          "slim",
+          "green"
+        ],
+        [
+          "slim",
+          "yellow"
+        ],
+        [
+          "slim",
+          "gray"
+        ]
+      ],
+      "validation": [
+        [
+          "small",
+          "white"
+        ],
+        [
+          "large",
+          "pink"
+        ],
+        [
+          "tiny",
+          "gray"
+        ],
+        [
+          "huge",
+          "red"
+        ],
+        [
+          "short",
+          "blue"
+        ],
+        [
+          "tall",
+          "green"
+        ],
+        [
+          "wide",
+          "yellow"
+        ],
+        [
+          "slim",
+          "black"
+        ]
+      ],
+      "qualification": [
+        [
+          "small",
+          "pink"
+        ],
+        [
+          "large",
+          "gray"
+        ],
+        [
+          "tiny",
+          "red"
+        ],
+        [
+          "huge",
+          "blue"
+        ],
+        [
+          "short",
+          "green"
+        ],
+        [
+          "tall",
+          "yellow"
+        ],
+        [
+          "wide",
+          "black"
+        ],
+        [
+          "slim",
+          "white"
+        ]
+      ],
+      "test": [
+        [
+          "small",
+          "gray"
+        ],
+        [
+          "large",
+          "red"
+        ],
+        [
+          "tiny",
+          "blue"
+        ],
+        [
+          "huge",
+          "green"
+        ],
+        [
+          "short",
+          "yellow"
+        ],
+        [
+          "tall",
+          "black"
+        ],
+        [
+          "wide",
+          "white"
+        ],
+        [
+          "slim",
+          "pink"
+        ]
+      ]
+    },
+    "relations": {
+      "train": [
+        [
+          "dog",
+          "sees"
+        ],
+        [
+          "dog",
+          "finds"
+        ],
+        [
+          "dog",
+          "likes"
+        ],
+        [
+          "dog",
+          "follows"
+        ],
+        [
+          "dog",
+          "hears"
+        ],
+        [
+          "cat",
+          "finds"
+        ],
+        [
+          "cat",
+          "likes"
+        ],
+        [
+          "cat",
+          "follows"
+        ],
+        [
+          "cat",
+          "hears"
+        ],
+        [
+          "cat",
+          "helps"
+        ],
+        [
+          "bird",
+          "likes"
+        ],
+        [
+          "bird",
+          "follows"
+        ],
+        [
+          "bird",
+          "hears"
+        ],
+        [
+          "bird",
+          "helps"
+        ],
+        [
+          "bird",
+          "watches"
+        ],
+        [
+          "fox",
+          "follows"
+        ],
+        [
+          "fox",
+          "hears"
+        ],
+        [
+          "fox",
+          "helps"
+        ],
+        [
+          "fox",
+          "watches"
+        ],
+        [
+          "fox",
+          "chases"
+        ],
+        [
+          "wolf",
+          "sees"
+        ],
+        [
+          "wolf",
+          "hears"
+        ],
+        [
+          "wolf",
+          "helps"
+        ],
+        [
+          "wolf",
+          "watches"
+        ],
+        [
+          "wolf",
+          "chases"
+        ],
+        [
+          "bear",
+          "sees"
+        ],
+        [
+          "bear",
+          "finds"
+        ],
+        [
+          "bear",
+          "helps"
+        ],
+        [
+          "bear",
+          "watches"
+        ],
+        [
+          "bear",
+          "chases"
+        ],
+        [
+          "mole",
+          "sees"
+        ],
+        [
+          "mole",
+          "finds"
+        ],
+        [
+          "mole",
+          "likes"
+        ],
+        [
+          "mole",
+          "watches"
+        ],
+        [
+          "mole",
+          "chases"
+        ],
+        [
+          "hare",
+          "sees"
+        ],
+        [
+          "hare",
+          "finds"
+        ],
+        [
+          "hare",
+          "likes"
+        ],
+        [
+          "hare",
+          "follows"
+        ],
+        [
+          "hare",
+          "chases"
+        ]
+      ],
+      "validation": [
+        [
+          "dog",
+          "helps"
+        ],
+        [
+          "cat",
+          "watches"
+        ],
+        [
+          "bird",
+          "chases"
+        ],
+        [
+          "fox",
+          "sees"
+        ],
+        [
+          "wolf",
+          "finds"
+        ],
+        [
+          "bear",
+          "likes"
+        ],
+        [
+          "mole",
+          "follows"
+        ],
+        [
+          "hare",
+          "hears"
+        ]
+      ],
+      "qualification": [
+        [
+          "dog",
+          "watches"
+        ],
+        [
+          "cat",
+          "chases"
+        ],
+        [
+          "bird",
+          "sees"
+        ],
+        [
+          "fox",
+          "finds"
+        ],
+        [
+          "wolf",
+          "likes"
+        ],
+        [
+          "bear",
+          "follows"
+        ],
+        [
+          "mole",
+          "hears"
+        ],
+        [
+          "hare",
+          "helps"
+        ]
+      ],
+      "test": [
+        [
+          "dog",
+          "chases"
+        ],
+        [
+          "cat",
+          "sees"
+        ],
+        [
+          "bird",
+          "finds"
+        ],
+        [
+          "fox",
+          "likes"
+        ],
+        [
+          "wolf",
+          "follows"
+        ],
+        [
+          "bear",
+          "hears"
+        ],
+        [
+          "mole",
+          "helps"
+        ],
+        [
+          "hare",
+          "watches"
+        ]
+      ]
+    }
+  },
+  "audit": {
+    "train_familiar": {
+      "records": 8192,
+      "unique_prompts": 8192,
+      "unique_responses": 8192,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 115,
+      "sha256": "eb3aa0acd6cce0191c338a33da0bd8059484da9abe6e761422fe4569e7a6bac1"
+    },
+    "validation_attribute": {
+      "records": 128,
+      "unique_prompts": 128,
+      "unique_responses": 128,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 113,
+      "sha256": "0e639ca2abed6d344f537ded53ee17679235bb86f461e4d06dbd05f52ae397df"
+    },
+    "validation_relation": {
+      "records": 128,
+      "unique_prompts": 128,
+      "unique_responses": 128,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 111,
+      "sha256": "9efce6f541c7d467b89eb4587bb2fa777f7c73973c92662ea43503009cdf6c27"
+    },
+    "validation_combined": {
+      "records": 128,
+      "unique_prompts": 128,
+      "unique_responses": 128,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 113,
+      "sha256": "abb1bc15b5339fb93ae7392a48c4349e2252b6fbd0c178f2ee21abcfd74a1791"
+    },
+    "qualification_attribute": {
+      "records": 128,
+      "unique_prompts": 128,
+      "unique_responses": 128,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 111,
+      "sha256": "4a533e1f1e376cde34cfd64b9d7f72860373de2ce357d599ef2cbad743b58233"
+    },
+    "qualification_relation": {
+      "records": 128,
+      "unique_prompts": 128,
+      "unique_responses": 128,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 113,
+      "sha256": "c2d3285c3b2d9082eb84577b6862ea6ad3c4a039b57cbbb279e2660631e18485"
+    },
+    "qualification_combined": {
+      "records": 128,
+      "unique_prompts": 128,
+      "unique_responses": 128,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 111,
+      "sha256": "222de8df2a6278be5a46e0922b50e16cd9bb120cfd4a2577e8d6267225f70265"
+    },
+    "test_attribute": {
+      "records": 128,
+      "unique_prompts": 128,
+      "unique_responses": 128,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 113,
+      "sha256": "d3c2202ed273b3f208c0a58984c1b71afc4b0ee7e560bbb6877e3aae497c2c5b"
+    },
+    "test_relation": {
+      "records": 128,
+      "unique_prompts": 128,
+      "unique_responses": 128,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 115,
+      "sha256": "945b920c19b332b349de38b0f64b9fd8ee65e5d2f129b90d48c0019f7c268846"
+    },
+    "test_combined": {
+      "records": 128,
+      "unique_prompts": 128,
+      "unique_responses": 128,
+      "prompt_overlap_with_other_splits": 0,
+      "answer_overlap_with_other_splits": 0,
+      "max_sequence_bytes": 115,
+      "sha256": "72150fc304e8dbc2b5e099f505efa6eef0256c026a8974309dec2436620b534b"
+    }
+  },
+  "generator_sha256": "fc3b526f4703b932145d9188da029873f8da1d6630c68798acf3143b6be8ebfe",
+  "qualification_protocol_sha256": "e51e46514f42ada319c475b90da2cc31dc356300d6b90aad86813f16a2d18e47"
+}

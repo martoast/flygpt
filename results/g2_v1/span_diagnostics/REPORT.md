@@ -7,3 +7,6 @@ Read-only validation diagnostic added after observing the real seed-zero 256 res
 | real_kd | 0 | 256 | validation_attribute | 2.5576 | 2.1003 | 2.4720 | 0.360 |
 | real_kd | 0 | 256 | validation_relation | 2.9916 | 1.1768 | 2.7470 | 0.231 |
 | real_kd | 0 | 256 | validation_combined | 2.7686 | 2.0162 | 2.7505 | 0.253 |
+| real_kd | 0 | 512 | validation_attribute | 1.9051 | 2.1003 | 1.8721 | 0.260 |
+| real_kd | 0 | 512 | validation_relation | 2.3972 | 1.1768 | 2.1399 | 0.212 |
+| real_kd | 0 | 512 | validation_combined | 2.2463 | 2.0162 | 2.2677 | 0.232 |

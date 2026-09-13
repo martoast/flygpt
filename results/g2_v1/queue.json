@@ -1,5 +1,5 @@
 {
   "status": "train",
-  "condition": "real_kd",
+  "condition": "rewired_kd",
   "seed": 0
 }
