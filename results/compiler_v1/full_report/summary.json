@@ -1,6 +1,6 @@
 {
   "status": "interim",
-  "completed_pairs": 3,
+  "completed_pairs": 4,
   "pairs": [
     {
       "metrics": {
@@ -304,46 +304,147 @@
           "area_gap_real_minus_rewired": -0.16013069055209467
         }
       }
+    },
+    {
+      "metrics": {
+        "real_ce": {
+          "accuracy": 0.9140625,
+          "response_ce": 0.05862272137372721,
+          "token_accuracy": 0.9854910714285714,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.05861742306141033,
+          "zero_edge_ce": 1.8895704905901636,
+          "exact_teacher_agreement": 0.9140625,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        },
+        "rewired_ce": {
+          "accuracy": 0.421875,
+          "response_ce": 0.2376006314298138,
+          "token_accuracy": 0.8962053571428571,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.23758992617617228,
+          "zero_edge_ce": 1.7650556000215667,
+          "exact_teacher_agreement": 0.421875,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        }
+      },
+      "cases": 128,
+      "seed": 3,
+      "updates": 1024,
+      "A_topology_CE": 0.4921875,
+      "case_analysis": {
+        "cases": 128,
+        "real_correct": 117,
+        "rewired_correct": 54,
+        "both_correct": 53,
+        "real_only": 64,
+        "rewired_only": 1,
+        "both_wrong": 10,
+        "gap": 0.4921875,
+        "paired_case_bootstrap_95": [
+          0.40625,
+          0.578125
+        ]
+      },
+      "learning": {
+        "steps": [
+          64,
+          128,
+          256,
+          512,
+          768,
+          1024
+        ],
+        "domain": "32 fixed validation cases; normalized trapezoidal area only over shared observed updates",
+        "accuracy": {
+          "real": [
+            0.0,
+            0.0,
+            0.0,
+            0.3125,
+            0.5625,
+            0.78125
+          ],
+          "rewired": [
+            0.0,
+            0.0,
+            0.0,
+            0.09375,
+            0.25,
+            0.59375
+          ],
+          "real_normalized_area": 0.3375,
+          "rewired_normalized_area": 0.17083333333333334,
+          "area_gap_real_minus_rewired": 0.16666666666666669
+        },
+        "response_ce": {
+          "real": [
+            1.265699646302632,
+            1.0727272118840898,
+            0.6733031304819244,
+            0.3346835220498698,
+            0.24176750696330732,
+            0.07699213393165596
+          ],
+          "rewired": [
+            1.6456793291228158,
+            1.0229133537837438,
+            0.9965279581291335,
+            0.6251428606254714,
+            0.3867389979506178,
+            0.18216917602278823
+          ],
+          "real_normalized_area": 0.44810922775594964,
+          "rewired_normalized_area": 0.6505772903982905,
+          "area_gap_real_minus_rewired": -0.20246806264234085
+        }
+      }
     }
   ],
   "groups": {
     "all_seeds": {
-      "n": 3,
-      "real_mean": 0.8802083333333334,
-      "rewired_mean": 0.5729166666666666,
-      "gap_mean": 0.3072916666666667,
+      "n": 4,
+      "real_mean": 0.888671875,
+      "rewired_mean": 0.53515625,
+      "gap_mean": 0.353515625,
       "gap_min": 0.125,
-      "gap_max": 0.4140625,
-      "positive_gaps": 3,
-      "real_variance": 0.0033162434895833335,
-      "rewired_variance": 0.017720540364583332,
-      "real_sd": 0.05758683434243745,
-      "rewired_sd": 0.13311851999095892,
-      "gap_sd": 0.1586405667762295,
+      "gap_max": 0.4921875,
+      "positive_gaps": 4,
+      "real_variance": 0.0024973551432291665,
+      "rewired_variance": 0.01751708984375,
+      "real_sd": 0.04997354443332158,
+      "rewired_sd": 0.13235214332888606,
+      "gap_sd": 0.15913674491056165,
       "gap_mean_t95": [
-        -0.08679334787561149,
-        0.7013766812089448
+        0.1002935520622536,
+        0.6067376979377463
       ],
-      "variance_ratio_rewired_over_real": 5.343558282208589
+      "variance_ratio_rewired_over_real": 7.014256619144604
     },
     "fresh_seeds": {
-      "n": 2,
-      "real_mean": 0.90234375,
-      "rewired_mean": 0.50390625,
-      "gap_mean": 0.3984375,
+      "n": 3,
+      "real_mean": 0.90625,
+      "rewired_mean": 0.4765625,
+      "gap_mean": 0.4296875,
       "gap_min": 0.3828125,
-      "gap_max": 0.4140625,
-      "positive_gaps": 2,
-      "real_variance": 0.003692626953125,
-      "rewired_variance": 0.006866455078125,
-      "real_sd": 0.060766989008218926,
-      "rewired_sd": 0.08286407592029854,
-      "gap_sd": 0.02209708691207961,
+      "gap_max": 0.4921875,
+      "positive_gaps": 3,
+      "real_variance": 0.00189208984375,
+      "rewired_variance": 0.00567626953125,
+      "real_sd": 0.04349815908460954,
+      "rewired_sd": 0.07534102157025746,
+      "gap_sd": 0.05633673867912483,
       "gap_mean_t95": [
-        0.1999030509972704,
-        0.5969719490027297
+        0.28973928289016254,
+        0.5696357171098374
       ],
-      "variance_ratio_rewired_over_real": 1.859504132231405
+      "variance_ratio_rewired_over_real": 3.0
     }
   },
   "graph_analysis": {
@@ -359,7 +460,10 @@
     "results/compiler_v1/paired_ce/seed_1/comparison.json": "205cfc7e51ba4d3deb4d79b6d95bad169291f937218bb670d19eddc61f0b5397",
     "results/compiler_v1/paired_ce/seed_2/real_ce_test.json": "ff5df7f1e870b53da93547280f2b6561352a40417c85f50b75d430105641d5a3",
     "results/compiler_v1/paired_ce/seed_2/rewired_ce_test.json": "88ef3aa31dcbbb24e8a88a2f204881690c10edbc9d30541a5b7b2775f64111ae",
-    "results/compiler_v1/paired_ce/seed_2/comparison.json": "5fd44495cdd3f79b51514bd7ffbd1d49513eb7a9f9c6a78ddf4e2779da675555"
+    "results/compiler_v1/paired_ce/seed_2/comparison.json": "5fd44495cdd3f79b51514bd7ffbd1d49513eb7a9f9c6a78ddf4e2779da675555",
+    "results/compiler_v1/paired_ce/seed_3/real_ce_test.json": "cc94c9e15fe91f8ac9fca347cfba4ad6a2b4e044e8222569798d238f303c0d9d",
+    "results/compiler_v1/paired_ce/seed_3/rewired_ce_test.json": "9df4ecd603179d5e7966308076e16bf61313164e614796df20da2e1b2f642cd6",
+    "results/compiler_v1/paired_ce/seed_3/comparison.json": "46c1214a0e22e13a70c9423ea374f2a74e6ef22057223b8ed85c8866577bc28f"
   },
   "analysis_spec_sha256": "39a89b78ca9d5ce5000fc2f8928996fac9eaabaecf5b092ccb07d191f57d34f1",
   "report_source_sha256": "bdc8974ec14c1b0fbb7fb4d2352ecc30fc874c6c9959325b37f36dcfddedc7ba"

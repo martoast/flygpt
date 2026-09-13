@@ -1,5 +1,5 @@
 {
-  "utc": "2026-09-13T20:04:33.596229+00:00",
+  "utc": "2026-09-13T21:41:34.976199+00:00",
   "external_connected": true,
   "offline_policy": "Preserve every checkpoint locally with 3 GiB free-space reserve; migrate and verify on reconnect"
 }

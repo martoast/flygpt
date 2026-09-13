@@ -1,0 +1,34 @@
+{
+  "metrics": {
+    "real_ce": {
+      "accuracy": 0.9609375,
+      "response_ce": 0.02458338890872775,
+      "token_accuracy": 0.9933035714285714,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.6756825379572935e-06,
+      "teacher_kl": 0.02457834904167352,
+      "zero_edge_ce": 1.9174585278545107,
+      "exact_teacher_agreement": 0.9609375,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "rewired_ce": {
+      "accuracy": 0.6171875,
+      "response_ce": 0.19580785210460558,
+      "token_accuracy": 0.9296875,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.6756825379572935e-06,
+      "teacher_kl": 0.19579734745535202,
+      "zero_edge_ce": 1.7510401319180215,
+      "exact_teacher_agreement": 0.6171875,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    }
+  },
+  "cases": 128,
+  "seed": 4,
+  "updates": 1024,
+  "A_topology_CE": 0.34375
+}
