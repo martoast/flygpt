@@ -1,6 +1,6 @@
 # Compiler benchmark report
 
-Updated 2026-09-13T15:16:24.780262+00:00. Computational full MaleCNS experiments; no living tissue.
+Updated 2026-09-13T16:29:27.330806+00:00. Computational full MaleCNS experiments; no living tissue.
 
 The substitution dataset, teacher, 128-instance primary test (`test_extension`), recurrent architecture and optimization budgets are fixed. This test was already inspected: the tournament is exploratory, not fresh confirmatory evaluation. Exact complete-answer accuracy is primary.
 
@@ -13,10 +13,13 @@ Teacher-only generation audit: 2048/2048 generated training answers equal the or
 | Seed | MaleCNS CE exact | Rewired CE exact | Difference (pp) | MaleCNS zero-edge exact |
 |---|---:|---:|---:|---:|
 | 0 | 83.6% | 71.1% | +12.50 | 0.0% |
+| 1 | 85.9% | 44.5% | +41.41 | 0.0% |
 
 Seed zero reuses the original real-CE checkpoint; it is not counted as a new independent replication. Rewired seed zero is newly trained. Seeds 1–4 are fresh paired replications.
 
-all available seeds: n=1, mean MaleCNS CE 83.6%, mean paired topology difference +12.50 pp. Paired gaps range from +12.50 to +12.50 pp; 1/1 are positive.
+all available seeds: n=2, mean MaleCNS CE 84.8%, mean paired topology difference +26.95 pp. Seed SD: 1.66 pp (accuracy), 20.44 pp (difference). Paired gaps range from +12.50 to +41.41 pp; 2/2 are positive.
+
+fresh seeds 1–4: n=1, mean MaleCNS CE 85.9%, mean paired topology difference +41.41 pp. Paired gaps range from +41.41 to +41.41 pp; 1/1 are positive.
 
 Seed-zero topology difference is +12.50 pp under CE versus +40.62 pp under KD; their difference is -28.12 pp. This is a descriptive topology-by-objective comparison, not a replicated interaction estimate.
 
@@ -35,10 +38,9 @@ Next decisions follow [DECISION_TREE.md](DECISION_TREE.md): complete every CE pa
 
 ## Execution and provenance
 
-Current job: `results/compiler_v1/paired_ce/seed_1/real_ce/train.log` (PID 22350).
-
 - `results/compiler_v1/paired_ce/seed_0/rewired_ce`: 1024 updates; 7168 response symbols; 41.7 min; validation exact 78.1%.
-- `results/compiler_v1/paired_ce/seed_1/real_ce`: 512 updates; 3584 response symbols; 21.2 min; validation exact 31.2%.
+- `results/compiler_v1/paired_ce/seed_1/real_ce`: 1024 updates; 7168 response symbols; 40.7 min; validation exact 81.2%.
+- `results/compiler_v1/paired_ce/seed_1/rewired_ce`: 1024 updates; 7168 response symbols; 41.7 min; validation exact 28.1%.
 
 Every checkpoint is preserved with hashes. Archives go to Seagate when available and to bounded local staging while disconnected; staged files are migrated and verified on reconnect. Final checkpoint references may be symlinks to conserve internal storage. Losses, hidden-state norms/saturation, gradients, optimizer state, RNG, input hashes and per-instance evaluation outputs are preserved. Source/protocol: `results/compiler_v1/frozen_plan.json` and `configs/compiler_v1.json`.
 
