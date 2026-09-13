@@ -66,7 +66,10 @@ def main():
     p.add_argument('--seed',type=int,required=True);p.add_argument('--swap-factor',type=int,default=10);a=p.parse_args()
     start=time.perf_counter();result=manifest(vars(a),[a.graph]);n,s,d,_=load_npz(a.graph);s,d,info=make_control(n,s,d,a.condition,a.seed,a.swap_factor)
     path=Path(f'data/processed/controls/{a.condition}_{a.seed}.npz');path.parent.mkdir(parents=True,exist_ok=True)
-    np.savez_compressed(path,n=np.array(n),src=s.astype(np.int32),dst=d.astype(np.int32))
+    temporary=path.with_suffix('.npz.tmp')
+    with temporary.open('wb') as stream:
+        np.savez_compressed(stream,n=np.array(n),src=s.astype(np.int32),dst=d.astype(np.int32))
+    temporary.replace(path)
     result.update(info);result.update(graph_sha256=sha256(path),runtime_seconds=time.perf_counter()-start)
     save_json(f'results/malecns_v1/controls/{a.condition}_{a.seed}.json',result);print(info,flush=True)
 

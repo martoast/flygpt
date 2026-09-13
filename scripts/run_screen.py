@@ -7,7 +7,7 @@ import subprocess
 import sys
 import time
 from pathlib import Path
-from src.provenance import save_json
+from src.provenance import save_json,sha256
 
 PYTHON=sys.executable
 ROOT=Path('results/malecns_v1')
@@ -24,7 +24,8 @@ def controls():
     for seed in range(5):
         for condition in ['rewired','configuration','er']:
             out=ROOT/'controls'/f'{condition}_{777+seed}.json'
-            if out.exists():continue
+            graph=Path(f'data/processed/controls/{condition}_{777+seed}.npz')
+            if out.exists() and graph.exists() and sha256(graph)==json.loads(out.read_text()).get('graph_sha256'):continue
             run(['-m','src.graph_controls','--graph','data/processed/malecns.npz','--condition',condition,'--seed',str(777+seed)],out.with_suffix('.log'))
 
 
@@ -37,11 +38,19 @@ def ladder():
             # Real first, then baseline, leaving producer time to build controls.
             for condition in ['real','gru','rewired','configuration','er']:
                 out=ROOT/phase/f'{condition}_{seed}.json'
-                if out.exists():continue
+                if out.exists():
+                    previous=json.loads(out.read_text())
+                    artifact=previous.get('checkpoint')
+                    if phase=='memory' or condition=='gru':continue
+                    if artifact and Path(artifact['path']).exists() and sha256(artifact['path'])==artifact['sha256']:continue
                 graph='data/processed/malecns.npz'
                 if condition not in ('real','gru'):
                     graph=f'data/processed/controls/{condition}_{seed+777}.npz'
-                    while not (ROOT/'controls'/f'{condition}_{seed+777}.json').exists():time.sleep(5)
+                    control_manifest=ROOT/'controls'/f'{condition}_{seed+777}.json'
+                    while True:
+                        if control_manifest.exists() and Path(graph).exists():
+                            if sha256(graph)==json.loads(control_manifest.read_text()).get('graph_sha256'):break
+                        time.sleep(5)
                 module='src.train_memory' if phase=='memory' else 'src.train_language'
                 command=['-m',module,'--graph',graph,'--condition',condition,'--seed',str(seed),'--steps',str(cfg['memory' if phase=='memory' else 'language']['steps']),'--out',str(out)]
                 if phase=='distill':command+=['--teacher',str(ROOT/'teacher.pt')]

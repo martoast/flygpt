@@ -124,3 +124,9 @@ path uses exact first derivatives and retains neuron states rather than
 per-edge activation tapes. No full dense adjacency is allocated. Run
 `python -m pytest -q` for gradient, causality, topology, preprocessing, and
 checkpoint-integrity tests.
+
+The screen runner resumes only when required local graph/checkpoint artifacts
+exist and their hashes match the stored result. Committed JSON alone does not
+stand in for an ignored binary. For a full independent rerun, archive the
+existing `results/malecns_v1` directory before launching the screen; preserve
+it for comparison, and do not mix its checkpoint diagnostics with a new run.
