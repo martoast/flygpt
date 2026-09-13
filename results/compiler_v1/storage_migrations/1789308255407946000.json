@@ -1,0 +1,15 @@
+{
+  "verified_external": true,
+  "checkpoints": [
+    {
+      "path": "/Users/alex/Desktop/flygpt_v01/artifacts/compiler_pending/results/compiler_v1/paired_ce/seed_0/rewired_ce/step_00064.pt",
+      "external": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v1/paired_ce/seed_0/rewired_ce/step_00064.pt",
+      "sha256": "485d4b7e0fc695d15cf5d201a65291caeb8525b7137a5c2fca05874004f25ae7"
+    },
+    {
+      "path": "/Users/alex/Desktop/flygpt_v01/artifacts/compiler_pending/results/compiler_v1/paired_ce/seed_0/rewired_ce/step_00128.pt",
+      "external": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v1/paired_ce/seed_0/rewired_ce/step_00128.pt",
+      "sha256": "3e79a7c4b9ef3dffd4b3bacfcd32e85b97ccd34140e92431d9112aa365749c6f"
+    }
+  ]
+}

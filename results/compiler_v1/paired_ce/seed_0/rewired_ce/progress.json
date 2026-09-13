@@ -87,7 +87,7 @@
   },
   "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
   "engine_sha256": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
-  "step": 64,
+  "step": 128,
   "session_budget": 1024,
   "trace": [
     {
@@ -729,6 +729,646 @@
       "response_symbols": 448,
       "hidden_rms": 0.12461446970701218,
       "saturation": 0.0
+    },
+    {
+      "step": 65,
+      "ce": 1.348469853401184,
+      "loss": 1.348469853401184,
+      "kl": null,
+      "gradient_norm": 1.858278512954712,
+      "response_symbols": 455,
+      "hidden_rms": 0.1178986206650734,
+      "saturation": 0.0
+    },
+    {
+      "step": 66,
+      "ce": 0.9636195302009583,
+      "loss": 0.9636195302009583,
+      "kl": null,
+      "gradient_norm": 2.1188831329345703,
+      "response_symbols": 462,
+      "hidden_rms": 0.13956528902053833,
+      "saturation": 0.0
+    },
+    {
+      "step": 67,
+      "ce": 1.4168777465820312,
+      "loss": 1.4168777465820312,
+      "kl": null,
+      "gradient_norm": 1.6967172622680664,
+      "response_symbols": 469,
+      "hidden_rms": 0.10388496518135071,
+      "saturation": 0.0
+    },
+    {
+      "step": 68,
+      "ce": 1.0163666009902954,
+      "loss": 1.0163666009902954,
+      "kl": null,
+      "gradient_norm": 1.3490734100341797,
+      "response_symbols": 476,
+      "hidden_rms": 0.10710984468460083,
+      "saturation": 0.0
+    },
+    {
+      "step": 69,
+      "ce": 1.5485090017318726,
+      "loss": 1.5485090017318726,
+      "kl": null,
+      "gradient_norm": 3.8653128147125244,
+      "response_symbols": 483,
+      "hidden_rms": 0.11470118165016174,
+      "saturation": 0.0
+    },
+    {
+      "step": 70,
+      "ce": 1.314601182937622,
+      "loss": 1.314601182937622,
+      "kl": null,
+      "gradient_norm": 1.5936533212661743,
+      "response_symbols": 490,
+      "hidden_rms": 0.10253320634365082,
+      "saturation": 0.0
+    },
+    {
+      "step": 71,
+      "ce": 1.0115619897842407,
+      "loss": 1.0115619897842407,
+      "kl": null,
+      "gradient_norm": 2.430912494659424,
+      "response_symbols": 497,
+      "hidden_rms": 0.10310262441635132,
+      "saturation": 0.0
+    },
+    {
+      "step": 72,
+      "ce": 1.1411588191986084,
+      "loss": 1.1411588191986084,
+      "kl": null,
+      "gradient_norm": 2.1181442737579346,
+      "response_symbols": 504,
+      "hidden_rms": 0.10294599086046219,
+      "saturation": 0.0
+    },
+    {
+      "step": 73,
+      "ce": 1.185998797416687,
+      "loss": 1.185998797416687,
+      "kl": null,
+      "gradient_norm": 1.8097174167633057,
+      "response_symbols": 511,
+      "hidden_rms": 0.0897773951292038,
+      "saturation": 0.0
+    },
+    {
+      "step": 74,
+      "ce": 0.8623767495155334,
+      "loss": 0.8623767495155334,
+      "kl": null,
+      "gradient_norm": 1.083572506904602,
+      "response_symbols": 518,
+      "hidden_rms": 0.12305096536874771,
+      "saturation": 0.0
+    },
+    {
+      "step": 75,
+      "ce": 1.2830183506011963,
+      "loss": 1.2830183506011963,
+      "kl": null,
+      "gradient_norm": 2.1933698654174805,
+      "response_symbols": 525,
+      "hidden_rms": 0.14148566126823425,
+      "saturation": 0.0
+    },
+    {
+      "step": 76,
+      "ce": 1.1410863399505615,
+      "loss": 1.1410863399505615,
+      "kl": null,
+      "gradient_norm": 1.6208916902542114,
+      "response_symbols": 532,
+      "hidden_rms": 0.13031210005283356,
+      "saturation": 0.0
+    },
+    {
+      "step": 77,
+      "ce": 0.9107131361961365,
+      "loss": 0.9107131361961365,
+      "kl": null,
+      "gradient_norm": 1.2645938396453857,
+      "response_symbols": 539,
+      "hidden_rms": 0.1361958086490631,
+      "saturation": 0.0
+    },
+    {
+      "step": 78,
+      "ce": 1.3010005950927734,
+      "loss": 1.3010005950927734,
+      "kl": null,
+      "gradient_norm": 1.7912214994430542,
+      "response_symbols": 546,
+      "hidden_rms": 0.13979622721672058,
+      "saturation": 0.0
+    },
+    {
+      "step": 79,
+      "ce": 1.3083428144454956,
+      "loss": 1.3083428144454956,
+      "kl": null,
+      "gradient_norm": 2.351682424545288,
+      "response_symbols": 553,
+      "hidden_rms": 0.16299466788768768,
+      "saturation": 1.7996400856645778e-05
+    },
+    {
+      "step": 80,
+      "ce": 1.494571566581726,
+      "loss": 1.494571566581726,
+      "kl": null,
+      "gradient_norm": 2.4881083965301514,
+      "response_symbols": 560,
+      "hidden_rms": 0.1133560836315155,
+      "saturation": 0.0
+    },
+    {
+      "step": 81,
+      "ce": 1.9428108930587769,
+      "loss": 1.9428108930587769,
+      "kl": null,
+      "gradient_norm": 3.4486255645751953,
+      "response_symbols": 567,
+      "hidden_rms": 0.13282643258571625,
+      "saturation": 0.0
+    },
+    {
+      "step": 82,
+      "ce": 1.3238424062728882,
+      "loss": 1.3238424062728882,
+      "kl": null,
+      "gradient_norm": 3.2451250553131104,
+      "response_symbols": 574,
+      "hidden_rms": 0.15337714552879333,
+      "saturation": 5.998800133966142e-06
+    },
+    {
+      "step": 83,
+      "ce": 1.1033424139022827,
+      "loss": 1.1033424139022827,
+      "kl": null,
+      "gradient_norm": 1.1550908088684082,
+      "response_symbols": 581,
+      "hidden_rms": 0.15405145287513733,
+      "saturation": 5.998800133966142e-06
+    },
+    {
+      "step": 84,
+      "ce": 1.1027308702468872,
+      "loss": 1.1027308702468872,
+      "kl": null,
+      "gradient_norm": 1.948251485824585,
+      "response_symbols": 588,
+      "hidden_rms": 0.13211630284786224,
+      "saturation": 0.0
+    },
+    {
+      "step": 85,
+      "ce": 1.1898362636566162,
+      "loss": 1.1898362636566162,
+      "kl": null,
+      "gradient_norm": 2.3311216831207275,
+      "response_symbols": 595,
+      "hidden_rms": 0.13821379840373993,
+      "saturation": 0.0
+    },
+    {
+      "step": 86,
+      "ce": 1.093459963798523,
+      "loss": 1.093459963798523,
+      "kl": null,
+      "gradient_norm": 1.9044345617294312,
+      "response_symbols": 602,
+      "hidden_rms": 0.1366291493177414,
+      "saturation": 0.0
+    },
+    {
+      "step": 87,
+      "ce": 1.5389368534088135,
+      "loss": 1.5389368534088135,
+      "kl": null,
+      "gradient_norm": 1.2807533740997314,
+      "response_symbols": 609,
+      "hidden_rms": 0.11440479010343552,
+      "saturation": 0.0
+    },
+    {
+      "step": 88,
+      "ce": 0.9102988839149475,
+      "loss": 0.9102988839149475,
+      "kl": null,
+      "gradient_norm": 1.113470196723938,
+      "response_symbols": 616,
+      "hidden_rms": 0.09676992893218994,
+      "saturation": 0.0
+    },
+    {
+      "step": 89,
+      "ce": 1.1663106679916382,
+      "loss": 1.1663106679916382,
+      "kl": null,
+      "gradient_norm": 1.2513768672943115,
+      "response_symbols": 623,
+      "hidden_rms": 0.09270753711462021,
+      "saturation": 0.0
+    },
+    {
+      "step": 90,
+      "ce": 1.2718124389648438,
+      "loss": 1.2718124389648438,
+      "kl": null,
+      "gradient_norm": 1.5414817333221436,
+      "response_symbols": 630,
+      "hidden_rms": 0.06747227907180786,
+      "saturation": 0.0
+    },
+    {
+      "step": 91,
+      "ce": 1.3219274282455444,
+      "loss": 1.3219274282455444,
+      "kl": null,
+      "gradient_norm": 1.845720648765564,
+      "response_symbols": 637,
+      "hidden_rms": 0.07047658413648605,
+      "saturation": 0.0
+    },
+    {
+      "step": 92,
+      "ce": 1.1989589929580688,
+      "loss": 1.1989589929580688,
+      "kl": null,
+      "gradient_norm": 0.8848050236701965,
+      "response_symbols": 644,
+      "hidden_rms": 0.08600644022226334,
+      "saturation": 0.0
+    },
+    {
+      "step": 93,
+      "ce": 1.1229602098464966,
+      "loss": 1.1229602098464966,
+      "kl": null,
+      "gradient_norm": 0.970629096031189,
+      "response_symbols": 651,
+      "hidden_rms": 0.10013211518526077,
+      "saturation": 0.0
+    },
+    {
+      "step": 94,
+      "ce": 1.1061073541641235,
+      "loss": 1.1061073541641235,
+      "kl": null,
+      "gradient_norm": 1.8319153785705566,
+      "response_symbols": 658,
+      "hidden_rms": 0.11008520424365997,
+      "saturation": 0.0
+    },
+    {
+      "step": 95,
+      "ce": 1.0147817134857178,
+      "loss": 1.0147817134857178,
+      "kl": null,
+      "gradient_norm": 1.4905762672424316,
+      "response_symbols": 665,
+      "hidden_rms": 0.12066323310136795,
+      "saturation": 0.0
+    },
+    {
+      "step": 96,
+      "ce": 1.1549102067947388,
+      "loss": 1.1549102067947388,
+      "kl": null,
+      "gradient_norm": 1.406231164932251,
+      "response_symbols": 672,
+      "hidden_rms": 0.1178479865193367,
+      "saturation": 0.0
+    },
+    {
+      "step": 97,
+      "ce": 1.1675704717636108,
+      "loss": 1.1675704717636108,
+      "kl": null,
+      "gradient_norm": 1.6515870094299316,
+      "response_symbols": 679,
+      "hidden_rms": 0.12818685173988342,
+      "saturation": 0.0
+    },
+    {
+      "step": 98,
+      "ce": 0.5555375218391418,
+      "loss": 0.5555375218391418,
+      "kl": null,
+      "gradient_norm": 1.0058748722076416,
+      "response_symbols": 686,
+      "hidden_rms": 0.13578040897846222,
+      "saturation": 0.0
+    },
+    {
+      "step": 99,
+      "ce": 1.1413265466690063,
+      "loss": 1.1413265466690063,
+      "kl": null,
+      "gradient_norm": 1.210897445678711,
+      "response_symbols": 693,
+      "hidden_rms": 0.13811162114143372,
+      "saturation": 0.0
+    },
+    {
+      "step": 100,
+      "ce": 1.3514877557754517,
+      "loss": 1.3514877557754517,
+      "kl": null,
+      "gradient_norm": 2.42673921585083,
+      "response_symbols": 700,
+      "hidden_rms": 0.1611965447664261,
+      "saturation": 0.0
+    },
+    {
+      "step": 101,
+      "ce": 1.4397584199905396,
+      "loss": 1.4397584199905396,
+      "kl": null,
+      "gradient_norm": 1.8919581174850464,
+      "response_symbols": 707,
+      "hidden_rms": 0.1284627616405487,
+      "saturation": 0.0
+    },
+    {
+      "step": 102,
+      "ce": 1.059187650680542,
+      "loss": 1.059187650680542,
+      "kl": null,
+      "gradient_norm": 1.7745516300201416,
+      "response_symbols": 714,
+      "hidden_rms": 0.1364695429801941,
+      "saturation": 0.0
+    },
+    {
+      "step": 103,
+      "ce": 1.2645670175552368,
+      "loss": 1.2645670175552368,
+      "kl": null,
+      "gradient_norm": 2.32049822807312,
+      "response_symbols": 721,
+      "hidden_rms": 0.14722105860710144,
+      "saturation": 0.0
+    },
+    {
+      "step": 104,
+      "ce": 0.876654326915741,
+      "loss": 0.876654326915741,
+      "kl": null,
+      "gradient_norm": 1.2921085357666016,
+      "response_symbols": 728,
+      "hidden_rms": 0.10127086937427521,
+      "saturation": 0.0
+    },
+    {
+      "step": 105,
+      "ce": 1.216328501701355,
+      "loss": 1.216328501701355,
+      "kl": null,
+      "gradient_norm": 1.881433367729187,
+      "response_symbols": 735,
+      "hidden_rms": 0.12660446763038635,
+      "saturation": 0.0
+    },
+    {
+      "step": 106,
+      "ce": 0.9232192635536194,
+      "loss": 0.9232192635536194,
+      "kl": null,
+      "gradient_norm": 0.768618643283844,
+      "response_symbols": 742,
+      "hidden_rms": 0.09980876743793488,
+      "saturation": 0.0
+    },
+    {
+      "step": 107,
+      "ce": 2.024470090866089,
+      "loss": 2.024470090866089,
+      "kl": null,
+      "gradient_norm": 2.9489235877990723,
+      "response_symbols": 749,
+      "hidden_rms": 0.15011732280254364,
+      "saturation": 1.7996400856645778e-05
+    },
+    {
+      "step": 108,
+      "ce": 1.1574137210845947,
+      "loss": 1.1574137210845947,
+      "kl": null,
+      "gradient_norm": 2.084510564804077,
+      "response_symbols": 756,
+      "hidden_rms": 0.1191447377204895,
+      "saturation": 0.0
+    },
+    {
+      "step": 109,
+      "ce": 1.750010371208191,
+      "loss": 1.750010371208191,
+      "kl": null,
+      "gradient_norm": 2.2899343967437744,
+      "response_symbols": 763,
+      "hidden_rms": 0.13263611495494843,
+      "saturation": 0.0
+    },
+    {
+      "step": 110,
+      "ce": 1.2408398389816284,
+      "loss": 1.2408398389816284,
+      "kl": null,
+      "gradient_norm": 1.4378774166107178,
+      "response_symbols": 770,
+      "hidden_rms": 0.1144615039229393,
+      "saturation": 0.0
+    },
+    {
+      "step": 111,
+      "ce": 1.0392863750457764,
+      "loss": 1.0392863750457764,
+      "kl": null,
+      "gradient_norm": 0.9663233160972595,
+      "response_symbols": 777,
+      "hidden_rms": 0.10108564049005508,
+      "saturation": 0.0
+    },
+    {
+      "step": 112,
+      "ce": 1.4132550954818726,
+      "loss": 1.4132550954818726,
+      "kl": null,
+      "gradient_norm": 1.446265697479248,
+      "response_symbols": 784,
+      "hidden_rms": 0.09474020451307297,
+      "saturation": 0.0
+    },
+    {
+      "step": 113,
+      "ce": 0.9711534380912781,
+      "loss": 0.9711534380912781,
+      "kl": null,
+      "gradient_norm": 1.0668129920959473,
+      "response_symbols": 791,
+      "hidden_rms": 0.08964034914970398,
+      "saturation": 0.0
+    },
+    {
+      "step": 114,
+      "ce": 0.786322295665741,
+      "loss": 0.786322295665741,
+      "kl": null,
+      "gradient_norm": 1.1305434703826904,
+      "response_symbols": 798,
+      "hidden_rms": 0.08300133049488068,
+      "saturation": 0.0
+    },
+    {
+      "step": 115,
+      "ce": 0.5081281065940857,
+      "loss": 0.5081281065940857,
+      "kl": null,
+      "gradient_norm": 1.7333825826644897,
+      "response_symbols": 805,
+      "hidden_rms": 0.10061367601156235,
+      "saturation": 0.0
+    },
+    {
+      "step": 116,
+      "ce": 0.9984656572341919,
+      "loss": 0.9984656572341919,
+      "kl": null,
+      "gradient_norm": 1.6034785509109497,
+      "response_symbols": 812,
+      "hidden_rms": 0.10329736024141312,
+      "saturation": 0.0
+    },
+    {
+      "step": 117,
+      "ce": 0.891365110874176,
+      "loss": 0.891365110874176,
+      "kl": null,
+      "gradient_norm": 2.213855028152466,
+      "response_symbols": 819,
+      "hidden_rms": 0.10835690796375275,
+      "saturation": 0.0
+    },
+    {
+      "step": 118,
+      "ce": 0.8132850527763367,
+      "loss": 0.8132850527763367,
+      "kl": null,
+      "gradient_norm": 1.7299927473068237,
+      "response_symbols": 826,
+      "hidden_rms": 0.09826779365539551,
+      "saturation": 0.0
+    },
+    {
+      "step": 119,
+      "ce": 0.9792607426643372,
+      "loss": 0.9792607426643372,
+      "kl": null,
+      "gradient_norm": 2.0345399379730225,
+      "response_symbols": 833,
+      "hidden_rms": 0.07060133665800095,
+      "saturation": 0.0
+    },
+    {
+      "step": 120,
+      "ce": 0.992841899394989,
+      "loss": 0.992841899394989,
+      "kl": null,
+      "gradient_norm": 1.1921628713607788,
+      "response_symbols": 840,
+      "hidden_rms": 0.10891131311655045,
+      "saturation": 0.0
+    },
+    {
+      "step": 121,
+      "ce": 0.9992324709892273,
+      "loss": 0.9992324709892273,
+      "kl": null,
+      "gradient_norm": 1.3043663501739502,
+      "response_symbols": 847,
+      "hidden_rms": 0.07599989324808121,
+      "saturation": 0.0
+    },
+    {
+      "step": 122,
+      "ce": 1.153189778327942,
+      "loss": 1.153189778327942,
+      "kl": null,
+      "gradient_norm": 2.7583398818969727,
+      "response_symbols": 854,
+      "hidden_rms": 0.14511607587337494,
+      "saturation": 0.0
+    },
+    {
+      "step": 123,
+      "ce": 1.179319143295288,
+      "loss": 1.179319143295288,
+      "kl": null,
+      "gradient_norm": 2.8806772232055664,
+      "response_symbols": 861,
+      "hidden_rms": 0.1648567020893097,
+      "saturation": 0.0
+    },
+    {
+      "step": 124,
+      "ce": 1.2644665241241455,
+      "loss": 1.2644665241241455,
+      "kl": null,
+      "gradient_norm": 1.721693515777588,
+      "response_symbols": 868,
+      "hidden_rms": 0.13010793924331665,
+      "saturation": 0.0
+    },
+    {
+      "step": 125,
+      "ce": 1.2225077152252197,
+      "loss": 1.2225077152252197,
+      "kl": null,
+      "gradient_norm": 2.228231191635132,
+      "response_symbols": 875,
+      "hidden_rms": 0.14978067576885223,
+      "saturation": 0.0
+    },
+    {
+      "step": 126,
+      "ce": 1.110710859298706,
+      "loss": 1.110710859298706,
+      "kl": null,
+      "gradient_norm": 1.7987383604049683,
+      "response_symbols": 882,
+      "hidden_rms": 0.14976748824119568,
+      "saturation": 0.0
+    },
+    {
+      "step": 127,
+      "ce": 1.1208966970443726,
+      "loss": 1.1208966970443726,
+      "kl": null,
+      "gradient_norm": 2.843447208404541,
+      "response_symbols": 889,
+      "hidden_rms": 0.13845984637737274,
+      "saturation": 0.0
+    },
+    {
+      "step": 128,
+      "ce": 1.1746660470962524,
+      "loss": 1.1746660470962524,
+      "kl": null,
+      "gradient_norm": 2.315541982650757,
+      "response_symbols": 896,
+      "hidden_rms": 0.14813798666000366,
+      "saturation": 5.998800133966142e-06
     }
   ],
   "evaluations": [
@@ -1354,6 +1994,679 @@
         ]
       },
       "wall_seconds": 182.5077598328935
+    },
+    {
+      "step": 128,
+      "validation": {
+        "metrics": {
+          "accuracy": 0.0,
+          "response_ce": 1.2344563560826438,
+          "token_accuracy": 0.5357142857142857,
+          "cases": 32,
+          "response_symbols": 224,
+          "teacher_ce": 2.227640570641652e-06,
+          "teacher_kl": 1.2344326015029634,
+          "exact_teacher_agreement": 0.0,
+          "teacher_exact": 1.0
+        },
+        "rows": [
+          {
+            "id": 1909,
+            "symbols": 7,
+            "nll": 8.461490631103516,
+            "exact": 0,
+            "generated": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 5,
+            "teacher_nll": 4.291527602617862e-06,
+            "kl_sum": 8.461424827575684,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1262,
+            "symbols": 7,
+            "nll": 11.369900703430176,
+            "exact": 0,
+            "generated": [
+              2,
+              2,
+              2,
+              3,
+              3,
+              3,
+              3,
+              4
+            ],
+            "token_correct": 3,
+            "teacher_nll": 2.6226034606224857e-06,
+            "kl_sum": 11.369856834411621,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 3846,
+            "symbols": 7,
+            "nll": 5.5476908683776855,
+            "exact": 0,
+            "generated": [
+              0,
+              0,
+              1,
+              1,
+              3,
+              3,
+              4
+            ],
+            "token_correct": 6,
+            "teacher_nll": 6.318078249023529e-06,
+            "kl_sum": 5.547613143920898,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 931,
+            "symbols": 7,
+            "nll": 13.390443801879883,
+            "exact": 0,
+            "generated": [
+              0,
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 2,
+            "teacher_nll": 1.3113019576849183e-06,
+            "kl_sum": 13.390424728393555,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 2315,
+            "symbols": 7,
+            "nll": 9.785677909851074,
+            "exact": 0,
+            "generated": [
+              3,
+              3,
+              3,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 2,
+            "teacher_nll": 1.907347382257285e-06,
+            "kl_sum": 9.785648345947266,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 3579,
+            "symbols": 7,
+            "nll": 10.402016639709473,
+            "exact": 0,
+            "generated": [
+              0,
+              0,
+              2,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 2,
+            "teacher_nll": 1.1920925544472993e-06,
+            "kl_sum": 10.401998519897461,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 2907,
+            "symbols": 7,
+            "nll": 10.920233726501465,
+            "exact": 0,
+            "generated": [
+              3,
+              2,
+              2,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 2.9563741918536834e-05,
+            "kl_sum": 10.919968605041504,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1318,
+            "symbols": 7,
+            "nll": 6.218453884124756,
+            "exact": 0,
+            "generated": [
+              2,
+              2,
+              2,
+              3,
+              3,
+              3,
+              4
+            ],
+            "token_correct": 5,
+            "teacher_nll": 1.54972008203913e-06,
+            "kl_sum": 6.218433380126953,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 2823,
+            "symbols": 7,
+            "nll": 10.006599426269531,
+            "exact": 0,
+            "generated": [
+              0,
+              0,
+              1,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 1.1324819752189796e-05,
+            "kl_sum": 10.006516456604004,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 3962,
+            "symbols": 7,
+            "nll": 7.481915473937988,
+            "exact": 0,
+            "generated": [
+              0,
+              0,
+              2,
+              3,
+              3,
+              3,
+              3,
+              4
+            ],
+            "token_correct": 6,
+            "teacher_nll": 2.7418109311838634e-06,
+            "kl_sum": 7.481875419616699,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 3498,
+            "symbols": 7,
+            "nll": 5.709970474243164,
+            "exact": 0,
+            "generated": [
+              2,
+              3,
+              3,
+              3,
+              3,
+              3,
+              2,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 1.6569985746173188e-05,
+            "kl_sum": 5.7097673416137695,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 736,
+            "symbols": 7,
+            "nll": 10.74356460571289,
+            "exact": 0,
+            "generated": [
+              3,
+              3,
+              3,
+              3,
+              1,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 2,
+            "teacher_nll": 1.4901086615282111e-05,
+            "kl_sum": 10.743359565734863,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1018,
+            "symbols": 7,
+            "nll": 9.61406421661377,
+            "exact": 0,
+            "generated": [
+              0,
+              0,
+              0,
+              3,
+              3,
+              3,
+              3,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 2.026556785494904e-06,
+            "kl_sum": 9.614034652709961,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 3457,
+            "symbols": 7,
+            "nll": 7.141166687011719,
+            "exact": 0,
+            "generated": [
+              2,
+              2,
+              3,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 5.245201464276761e-06,
+            "kl_sum": 7.14111328125,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1112,
+            "symbols": 7,
+            "nll": 7.277238368988037,
+            "exact": 0,
+            "generated": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 6.5565000113565475e-06,
+            "kl_sum": 7.277159690856934,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 384,
+            "symbols": 7,
+            "nll": 7.587594032287598,
+            "exact": 0,
+            "generated": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 3,
+            "teacher_nll": 1.072878330887761e-05,
+            "kl_sum": 7.587460994720459,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 81,
+            "symbols": 7,
+            "nll": 8.00190258026123,
+            "exact": 0,
+            "generated": [
+              1,
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 2.5033930342033273e-06,
+            "kl_sum": 8.001872062683105,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 3754,
+            "symbols": 7,
+            "nll": 5.8124589920043945,
+            "exact": 0,
+            "generated": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              3,
+              2,
+              4
+            ],
+            "token_correct": 5,
+            "teacher_nll": 0.00023184498422779143,
+            "kl_sum": 5.810158729553223,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 2715,
+            "symbols": 7,
+            "nll": 9.432453155517578,
+            "exact": 0,
+            "generated": [
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 3,
+            "teacher_nll": 9.894349204842001e-06,
+            "kl_sum": 9.432332992553711,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 153,
+            "symbols": 7,
+            "nll": 9.64992904663086,
+            "exact": 0,
+            "generated": [
+              1,
+              1,
+              3,
+              3,
+              3,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 5,
+            "teacher_nll": 2.8609974833671004e-05,
+            "kl_sum": 9.649673461914062,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1282,
+            "symbols": 7,
+            "nll": 5.237476348876953,
+            "exact": 0,
+            "generated": [
+              2,
+              2,
+              1,
+              1,
+              1,
+              2,
+              4
+            ],
+            "token_correct": 6,
+            "teacher_nll": 1.1920928244535389e-07,
+            "kl_sum": 5.237473011016846,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 840,
+            "symbols": 7,
+            "nll": 9.182354927062988,
+            "exact": 0,
+            "generated": [
+              0,
+              1,
+              1,
+              1,
+              3,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 2,
+            "teacher_nll": 1.7881386611406924e-06,
+            "kl_sum": 9.182328224182129,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 3545,
+            "symbols": 7,
+            "nll": 7.369403839111328,
+            "exact": 0,
+            "generated": [
+              0,
+              2,
+              2,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 5,
+            "teacher_nll": 4.529943453235319e-06,
+            "kl_sum": 7.369352340698242,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 875,
+            "symbols": 7,
+            "nll": 12.774053573608398,
+            "exact": 0,
+            "generated": [
+              0,
+              2,
+              3,
+              3,
+              3,
+              3,
+              2,
+              4
+            ],
+            "token_correct": 2,
+            "teacher_nll": 1.4305030163086485e-05,
+            "kl_sum": 12.773896217346191,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1672,
+            "symbols": 7,
+            "nll": 7.0277814865112305,
+            "exact": 0,
+            "generated": [
+              3,
+              3,
+              3,
+              3,
+              3,
+              2,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 9.775132639333606e-06,
+            "kl_sum": 7.027661323547363,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 3573,
+            "symbols": 7,
+            "nll": 8.26484489440918,
+            "exact": 0,
+            "generated": [
+              0,
+              0,
+              2,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 4.7683712978141557e-07,
+            "kl_sum": 8.264837265014648,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1496,
+            "symbols": 7,
+            "nll": 8.554058074951172,
+            "exact": 0,
+            "generated": [
+              2,
+              2,
+              2,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 4,
+            "teacher_nll": 2.4795279387035407e-05,
+            "kl_sum": 8.553824424743652,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1568,
+            "symbols": 7,
+            "nll": 6.842973232269287,
+            "exact": 0,
+            "generated": [
+              3,
+              3,
+              3,
+              1,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 3,
+            "teacher_nll": 2.5748922780621797e-05,
+            "kl_sum": 6.842687129974365,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1804,
+            "symbols": 7,
+            "nll": 8.639949798583984,
+            "exact": 0,
+            "generated": [
+              2,
+              2,
+              1,
+              1,
+              1,
+              1,
+              4
+            ],
+            "token_correct": 5,
+            "teacher_nll": 1.3113017303112429e-06,
+            "kl_sum": 8.639931678771973,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 850,
+            "symbols": 7,
+            "nll": 9.010309219360352,
+            "exact": 0,
+            "generated": [
+              0,
+              2,
+              2,
+              2,
+              2,
+              3,
+              4
+            ],
+            "token_correct": 2,
+            "teacher_nll": 3.6954827464796836e-06,
+            "kl_sum": 9.010254859924316,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 352,
+            "symbols": 7,
+            "nll": 8.177203178405762,
+            "exact": 0,
+            "generated": [
+              2,
+              2,
+              2,
+              3,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 3,
+            "teacher_nll": 7.152555667744309e-07,
+            "kl_sum": 8.177191734313965,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          },
+          {
+            "id": 1774,
+            "symbols": 7,
+            "nll": 10.883049964904785,
+            "exact": 0,
+            "generated": [
+              3,
+              3,
+              3,
+              3,
+              2,
+              2,
+              2,
+              4
+            ],
+            "token_correct": 3,
+            "teacher_nll": 2.0027095160912722e-05,
+            "kl_sum": 10.882771492004395,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          }
+        ]
+      },
+      "wall_seconds": 369.32518362498377
     }
   ],
   "archives": [
@@ -1362,9 +2675,15 @@
       "path": "/Users/alex/Desktop/flygpt_v01/artifacts/compiler_pending/results/compiler_v1/paired_ce/seed_0/rewired_ce/step_00064.pt",
       "sha256": "485d4b7e0fc695d15cf5d201a65291caeb8525b7137a5c2fca05874004f25ae7",
       "storage": "local_pending_external_backup"
+    },
+    {
+      "step": 128,
+      "path": "/Users/alex/Desktop/flygpt_v01/artifacts/compiler_pending/results/compiler_v1/paired_ce/seed_0/rewired_ce/step_00128.pt",
+      "sha256": "3e79a7c4b9ef3dffd4b3bacfcd32e85b97ccd34140e92431d9112aa365749c6f",
+      "storage": "local_pending_external_backup"
     }
   ],
-  "response_symbols": 448,
-  "checkpoint_sha256": "485d4b7e0fc695d15cf5d201a65291caeb8525b7137a5c2fca05874004f25ae7",
-  "wall_seconds": 184.31773249991238
+  "response_symbols": 896,
+  "checkpoint_sha256": "3e79a7c4b9ef3dffd4b3bacfcd32e85b97ccd34140e92431d9112aa365749c6f",
+  "wall_seconds": 371.237739999895
 }
