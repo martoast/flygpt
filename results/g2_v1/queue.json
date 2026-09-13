@@ -1,5 +1,6 @@
 {
-  "status": "train",
-  "condition": "rewired_kd",
-  "seed": 0
+  "status": "complete",
+  "scope": "amended seed-zero subset only",
+  "remaining_runs": "postponed by user",
+  "freeze_manifest": "results/g2_v1/frozen_seed0/manifest.json"
 }

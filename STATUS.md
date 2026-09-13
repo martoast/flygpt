@@ -1,5 +1,20 @@
 # FlyGPT status — 2026-09-12
 
+## Current outcome — 2026-09-13
+
+G2 exploratory seed zero is frozen and verified on Seagate. On the fixed
+relation spans, real CE-only beat real KD in both CE (2.1752 versus 2.3972) and
+teacher KL (1.9614 versus 2.1399). Rewired KD reached CE 2.6177 and KL 2.3519.
+This one-seed result does not support a beneficial distillation effect. G2's
+remaining runs are postponed and its test split remains locked.
+
+G2b completed all five teacher and five GRU training seeds, then **failed every
+validation qualification category**. Teacher exact-response accuracy was
+0/1,920; teacher response CE was worse than GRU in all six categories. No G2b
+connectome students launched, and neither its qualification split nor its final
+test split was evaluated. The pipeline stopped under the frozen failure policy.
+See `results/g2b_v1/OUTCOME.md`. Later sections retain historical progress notes.
+
 Experiment identity: **G1 — Finite-Grammar Functional Encoding**. This label
 does not change if subsequent experiments generalize. The audited G2 dataset
 is prepared separately: 2,048 distinct training sentences and three

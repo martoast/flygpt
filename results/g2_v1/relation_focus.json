@@ -6,12 +6,34 @@
   "ngram_span_ce": 1.58633167401234,
   "rows": [
     {
+      "condition": "real_ce",
+      "seed": 0,
+      "span_ce": 2.1752272752615123,
+      "teacher_span_ce": 1.1767633832418,
+      "span_kl": 1.9613669652205248
+    },
+    {
       "condition": "real_kd",
       "seed": 0,
       "span_ce": 2.3972083788651686,
       "teacher_span_ce": 1.1767633832418,
       "span_kl": 2.139920243850121
+    },
+    {
+      "condition": "rewired_kd",
+      "seed": 0,
+      "span_ce": 2.6176797976860633,
+      "teacher_span_ce": 1.1767633832418,
+      "span_kl": 2.351927610544058
     }
   ],
-  "paired_objective_comparisons": []
+  "paired_objective_comparisons": [
+    {
+      "topology": "real",
+      "seed": 0,
+      "ce_only_minus_kd_span_ce": -0.2219811036036563,
+      "ce_only_minus_kd_span_kl": -0.17855327862959625,
+      "both_improve_with_kd": false
+    }
+  ]
 }

@@ -3,12 +3,14 @@
 Computational research on transferring a small transformer teacher into a recurrent network constrained by the complete annotated MaleCNS neuron graph.
 
 The current experiment is **G1 — Finite-Grammar Functional Encoding**.
-**G2 — Finite-Grammar Compositional Generalization** is running on a separate
-audited dataset; early held-out-span results do not establish generalization.
+**G2 — Finite-Grammar Compositional Generalization** closed as an exploratory
+seed-zero comparison without a distillation benefit on relation spans.
+**G2b** failed its teacher validation qualification gate; no connectome
+students launched. See the [outcome](results/g2b_v1/OUTCOME.md).
 **G3 — Natural-Language Modeling** is
 future work. See the [experiment registry](EXPERIMENTS.md) for claim boundaries.
 
-**Current measured status:** G1 is frozen at **1,024 continuation updates**, with validation CE **0.395** versus teacher **0.325** and zero-edge CE **3.413**. It crossed the existing stopping threshold; no 2,048 run was launched. Final test CE is **0.404** versus teacher **0.341**. The matched rewired control reaches **0.411** validation and **0.414** test CE. This close one-seed comparison on a finite grammar with sentence overlap establishes neither sequence generalization nor biological topology advantage. G2 is active. See [STATUS.md](STATUS.md) and the [measured trajectory](results/malecns_v1/target/TRAJECTORY.md).
+**G1 measured status:** G1 is frozen at **1,024 continuation updates**, with validation CE **0.395** versus teacher **0.325** and zero-edge CE **3.413**. It crossed the existing stopping threshold; no 2,048 run was launched. Final test CE is **0.404** versus teacher **0.341**. The matched rewired control reaches **0.411** validation and **0.414** test CE. This close one-seed comparison on a finite grammar with sentence overlap establishes neither sequence generalization nor biological topology advantage. See [STATUS.md](STATUS.md) and the [measured trajectory](results/malecns_v1/target/TRAJECTORY.md).
 
 ## Core hypotheses
 - H1: a real connectome-constrained recurrent network can learn non-trivial sequence prediction.

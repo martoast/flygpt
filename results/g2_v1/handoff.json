@@ -1,5 +1,4 @@
 {
-  "status": "waiting for active rewired seed zero",
-  "active_pid": 17567,
-  "amendment_sha256": "75abf708959ae297ccc45701732531af4ccd23838fae0b3a247ca6ccfe7a5688"
+  "status": "G2 frozen; starting G2b qualification",
+  "amendment": "configs/g2_seed0_amendment.json"
 }

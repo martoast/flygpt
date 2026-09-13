@@ -1,0 +1,5461 @@
+{
+  "created_utc": "2026-09-13T07:51:59Z",
+  "code_commit": "2e5e699936152f8c30e064ee4b9ab40c9dc27338",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": true,
+  "config": {
+    "baseline": "retrieval",
+    "split": "validation",
+    "fit": "training responses only; retrieval uses training prompts"
+  },
+  "inputs": {
+    "configs/g2b_qualification_v1.json": "e51e46514f42ada319c475b90da2cc31dc356300d6b90aad86813f16a2d18e47",
+    "configs/g2b_execution_v1.json": "f6e5245b75f5329d4df772abdffbd08697b5d88c63af1547106940f77b95c581",
+    "data/raw/grammar_g2b_v1/manifest.json": "5e6de579bada154e17f6dccde73b9892b00c117ff0a7722ececa7e3c429019b0",
+    "data/raw/grammar_g2b_v1/train_familiar.jsonl": "eb3aa0acd6cce0191c338a33da0bd8059484da9abe6e761422fe4569e7a6bac1"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "rows": {
+    "attribute_swap": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall white dog hears the large black dog.\n>"
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small green dog follows the tall white bird.\n>"
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall gray cat follows the slim yellow fox.\n>"
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 43,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink bird hears the wide pink cat.\n>"
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small red cat helps the small blue fox.\n>"
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "helps"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny pink bear helps the tall pink bird.\n>"
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bear",
+          "finds"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink bear finds the wide blue hare.\n>"
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bird",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny green bird follows the large black cat.\n>"
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge white hare sees the large black bear.\n>"
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray hare finds the small black mole.\n>"
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "chases"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim yellow wolf chases the slim red wolf.\n>"
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "dog",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small yellow dog hears the huge pink cat.\n>"
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "follows"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large white cat follows the tall pink fox.\n>"
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small red dog follows the tall pink cat.\n>"
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny pink hare follows the tiny green bird.\n>"
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide gray wolf hears the large blue cat.\n>"
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black hare follows the large white cat.\n>"
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bear",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim blue bear watches the large yellow mole.\n>"
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small black cat finds the tiny black mole.\n>"
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large green fox chases the huge black mole.\n>"
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink cat hears the huge black wolf.\n>"
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small black dog likes the slim red hare.\n>"
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim blue mole watches the tall white wolf.\n>"
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "wolf",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short pink wolf helps the wide blue bird.\n>"
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim gray bear sees the short gray hare.\n>"
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bear",
+          "helps"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small red bird helps the wide green bird.\n>"
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide pink fox helps the tiny yellow bear.\n>"
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small yellow cat hears the tall gray cat.\n>"
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim green fox hears the slim gray bird.\n>"
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bear",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large white bear sees the small red wolf.\n>"
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim blue dog finds the wide green bear.\n>"
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bear",
+          "watches"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge yellow wolf watches the small red fox.\n>"
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black hare sees the wide red wolf.\n>"
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small green wolf hears the tall red wolf.\n>"
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray bear sees the wide gray wolf.\n>"
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short gray hare finds the small black hare.\n>"
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short red bear chases the small yellow mole.\n>"
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short red hare likes the large blue cat.\n>"
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large white bird follows the small yellow hare.\n>"
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short pink mole finds the slim red cat.\n>"
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "chases"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray mole chases the short pink fox.\n>"
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black hare likes the wide pink mole.\n>"
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink cat finds the slim blue bear.\n>"
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall pink dog hears the slim gray dog.\n>"
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "wolf",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink wolf helps the large green wolf.\n>"
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small red hare follows the short gray dog.\n>"
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge yellow wolf watches the small red fox.\n>"
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short gray bird hears the slim blue dog.\n>"
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "finds"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny green bear finds the tiny pink cat.\n>"
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short pink dog likes the huge white hare.\n>"
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall white bird hears the small black dog.\n>"
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall white cat likes the wide pink mole.\n>"
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black cat finds the wide pink bear.\n>"
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny green hare likes the small black mole.\n>"
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large black wolf watches the huge gray fox.\n>"
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray bird likes the large green dog.\n>"
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "fox",
+          "helps"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink fox helps the wide red bear.\n>"
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "chases"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large green fox chases the slim yellow fox.\n>"
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall red bird hears the large blue cat.\n>"
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "likes"
+        ],
+        "response_bytes": 43,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink mole likes the huge pink dog.\n>"
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "wolf",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black wolf helps the short black fox.\n>"
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim red mole likes the tall pink mole.\n>"
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short white fox hears the wide red fox.\n>"
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny pink fox follows the huge yellow cat.\n>"
+      }
+    ],
+    "attribute_roles": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink cat finds the slim blue bear.\n>"
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small green dog follows the tall white bird.\n>"
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "follows"
+        ],
+        "response_bytes": 55,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large white bird follows the small yellow hare.\n>"
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short red hare likes the large blue cat.\n>"
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny pink fox follows the huge yellow cat.\n>"
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall white dog hears the large black dog.\n>"
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide gray wolf hears the large blue cat.\n>"
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small red cat helps the small blue fox.\n>"
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small black dog likes the slim red hare.\n>"
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall white cat likes the wide pink mole.\n>"
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink cat hears the huge black wolf.\n>"
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short pink dog likes the huge white hare.\n>"
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black cat finds the wide pink bear.\n>"
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny pink hare follows the tiny green bird.\n>"
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short gray bird hears the slim blue dog.\n>"
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall gray cat follows the slim yellow fox.\n>"
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall pink dog hears the slim gray dog.\n>"
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim green fox hears the slim gray bird.\n>"
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink bird hears the wide pink cat.\n>"
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small yellow cat hears the tall gray cat.\n>"
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim gray bear sees the short gray hare.\n>"
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "chases"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large green fox chases the slim yellow fox.\n>"
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "wolf",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short pink wolf helps the wide blue bird.\n>"
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short white fox hears the wide red fox.\n>"
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small green wolf hears the tall red wolf.\n>"
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black hare likes the wide pink mole.\n>"
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny green hare likes the small black mole.\n>"
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short pink mole finds the slim red cat.\n>"
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim red mole likes the tall pink mole.\n>"
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bear",
+          "finds"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink bear finds the wide blue hare.\n>"
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge white hare sees the large black bear.\n>"
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bird",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny green bird follows the large black cat.\n>"
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge yellow wolf watches the small red fox.\n>"
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "chases"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim yellow wolf chases the slim red wolf.\n>"
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bear",
+          "watches"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge yellow wolf watches the small red fox.\n>"
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "helps"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny pink bear helps the tall pink bird.\n>"
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "fox",
+          "helps"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink fox helps the wide red bear.\n>"
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black hare sees the wide red wolf.\n>"
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "wolf",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black wolf helps the short black fox.\n>"
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short gray hare finds the small black hare.\n>"
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small black cat finds the tiny black mole.\n>"
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim blue dog finds the wide green bear.\n>"
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide pink fox helps the tiny yellow bear.\n>"
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large green fox chases the huge black mole.\n>"
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray bird likes the large green dog.\n>"
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large black wolf watches the huge gray fox.\n>"
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray bear sees the wide gray wolf.\n>"
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black hare follows the large white cat.\n>"
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "finds"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny green bear finds the tiny pink cat.\n>"
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small red hare follows the short gray dog.\n>"
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "dog",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small yellow dog hears the huge pink cat.\n>"
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray mole chases the short pink fox.\n>"
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray hare finds the small black mole.\n>"
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small red dog follows the tall pink cat.\n>"
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "wolf",
+          "sees"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink wolf helps the large green wolf.\n>"
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink mole likes the huge pink dog.\n>"
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall red bird hears the large blue cat.\n>"
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "follows"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large white cat follows the tall pink fox.\n>"
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bear",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large white bear sees the small red wolf.\n>"
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bear",
+          "watches"
+        ],
+        "response_bytes": 55,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim blue bear watches the large yellow mole.\n>"
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short red bear chases the small yellow mole.\n>"
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bear",
+          "helps"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small red bird helps the wide green bird.\n>"
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim blue mole watches the tall white wolf.\n>"
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall white bird hears the small black dog.\n>"
+      }
+    ],
+    "combined_swap": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge yellow bird hears the wide pink wolf.\n>"
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide red mole watches the large yellow bird.\n>"
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray hare likes the tall pink hare.\n>"
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink dog finds the wide gray mole.\n>"
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large yellow mole finds the small red mole.\n>"
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large black bear chases the large black hare.\n>"
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 42,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge white fox helps the slim blue fox.\n>"
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall pink dog finds the huge white bear.\n>"
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny black mole finds the wide red dog.\n>"
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim blue cat likes the short red dog.\n>"
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall blue cat helps the tiny yellow bird.\n>"
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small green fox watches the tiny yellow bear.\n>"
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small blue fox chases the slim blue mole.\n>"
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny black bird follows the tall pink dog.\n>"
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black bear chases the tiny pink wolf.\n>"
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 43,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny black wolf helps the wide pink fox.\n>"
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small green fox chases the huge white bear.\n>"
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray cat follows the wide pink bird.\n>"
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide red mole watches the large yellow bird.\n>"
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small blue hare sees the short white bear.\n>"
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall gray wolf watches the small red wolf.\n>"
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall white fox helps the slim blue bird.\n>"
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge white mole chases the large green fox.\n>"
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge yellow cat helps the short white bear.\n>"
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny green hare likes the tiny black dog.\n>"
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge black cat likes the large blue hare.\n>"
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short red cat likes the slim green hare.\n>"
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short pink hare likes the slim red bird.\n>"
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall gray dog finds the slim yellow hare.\n>"
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall white mole chases the huge pink mole.\n>"
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide blue mole watches the tiny yellow wolf.\n>"
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray dog hears the large yellow wolf.\n>"
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide blue bird likes the small red bird.\n>"
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide blue bird follows the large blue fox.\n>"
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large white dog hears the tall pink bird.\n>"
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black fox hears the tall pink cat.\n>"
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim red mole chases the short red mole.\n>"
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray wolf sees the wide gray mole.\n>"
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny black bear watches the huge pink wolf.\n>"
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large green fox helps the large green bear.\n>"
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black fox watches the small green bird.\n>"
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide gray fox watches the wide gray wolf.\n>"
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall white hare chases the huge white fox.\n>"
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall red fox watches the huge black mole.\n>"
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small red hare likes the huge gray cat.\n>"
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim blue mole finds the small green bear.\n>"
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny black mole finds the wide red dog.\n>"
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim red dog sees the slim blue mole.\n>"
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide gray mole sees the short pink wolf.\n>"
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide blue dog sees the small yellow bear.\n>"
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge yellow dog sees the short gray hare.\n>"
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short white fox helps the tall gray wolf.\n>"
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide gray cat follows the tall white dog.\n>"
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink hare follows the wide green bird.\n>"
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim gray wolf sees the wide blue hare.\n>"
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray fox hears the short black dog.\n>"
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge pink fox watches the large black bird.\n>"
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall white bird watches the slim yellow bear.\n>"
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large blue bear watches the short black mole.\n>"
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall blue bird watches the slim yellow wolf.\n>"
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small blue mole watches the small blue fox.\n>"
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge yellow bird watches the huge black bird.\n>"
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short gray fox helps the large black bear.\n>"
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide blue bird watches the slim red mole.\n>"
+      }
+    ],
+    "combined_roles": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small blue fox chases the slim blue mole.\n>"
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim blue mole finds the small green bear.\n>"
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray fox hears the short black dog.\n>"
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide gray fox watches the wide gray wolf.\n>"
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small green fox watches the tiny yellow bear.\n>"
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large white dog hears the tall pink bird.\n>"
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall gray dog finds the slim yellow hare.\n>"
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall pink dog finds the huge white bear.\n>"
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall white fox helps the slim blue bird.\n>"
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall red fox watches the huge black mole.\n>"
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink hare follows the wide green bird.\n>"
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray wolf sees the wide gray mole.\n>"
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide gray mole sees the short pink wolf.\n>"
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray dog hears the large yellow wolf.\n>"
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall blue cat helps the tiny yellow bird.\n>"
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny black mole finds the wide red dog.\n>"
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large green fox helps the large green bear.\n>"
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge black cat likes the large blue hare.\n>"
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small blue hare sees the short white bear.\n>"
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny black wolf helps the wide pink fox.\n>"
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim gray wolf sees the wide blue hare.\n>"
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge yellow dog sees the short gray hare.\n>"
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim blue cat likes the short red dog.\n>"
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide blue bird watches the slim red mole.\n>"
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 55,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide red mole watches the large yellow bird.\n>"
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black bear chases the tiny pink wolf.\n>"
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide red mole watches the large yellow bird.\n>"
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide blue dog sees the small yellow bear.\n>"
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 54,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall white bird watches the slim yellow bear.\n>"
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black fox hears the tall pink cat.\n>"
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny black bird follows the tall pink dog.\n>"
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny black bear watches the huge pink wolf.\n>"
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim red mole chases the short red mole.\n>"
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short red cat likes the slim green hare.\n>"
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short pink hare likes the slim red bird.\n>"
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 54,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge white mole chases the large green fox.\n>"
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge yellow bird watches the huge black bird.\n>"
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge white fox helps the slim blue fox.\n>"
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small blue mole watches the small blue fox.\n>"
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide blue bird likes the small red bird.\n>"
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small red hare likes the huge gray cat.\n>"
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black fox watches the small green bird.\n>"
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short gray fox helps the large black bear.\n>"
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide gray cat follows the tall white dog.\n>"
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray hare likes the tall pink hare.\n>"
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall blue bird watches the slim yellow wolf.\n>"
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small green fox chases the huge white bear.\n>"
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink fox watches the large black bird.\n>"
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short white fox helps the tall gray wolf.\n>"
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall white hare chases the huge white fox.\n>"
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim red dog sees the slim blue mole.\n>"
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge yellow cat helps the short white bear.\n>"
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large blue bear watches the short black mole.\n>"
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide blue bird follows the large blue fox.\n>"
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny black mole finds the wide red dog.\n>"
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall white mole chases the huge pink mole.\n>"
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny green hare likes the tiny black dog.\n>"
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large black bear chases the large black hare.\n>"
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large yellow mole finds the small red mole.\n>"
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge yellow bird hears the wide pink wolf.\n>"
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide blue mole watches the tiny yellow wolf.\n>"
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge pink dog finds the wide gray mole.\n>"
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall gray wolf watches the small red wolf.\n>"
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray cat follows the wide pink bird.\n>"
+      }
+    ],
+    "relation_swap": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "tall",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short white hare likes the small yellow bird.\n>"
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "huge",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large black bear chases the wide gray wolf.\n>"
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large blue hare sees the slim green dog.\n>"
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "tall",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall white dog hears the tiny black cat.\n>"
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "tiny",
+          "white"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny white wolf hears the tall white dog.\n>"
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide green fox hears the wide blue dog.\n>"
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide green bird likes the huge yellow dog.\n>"
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "large",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge white bear chases the tall white fox.\n>"
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "short",
+          "gray"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge gray bird follows the tiny yellow hare.\n>"
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small yellow fox follows the slim blue hare.\n>"
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "tiny",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small black hare follows the short gray fox.\n>"
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "small",
+          "red"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide red fox watches the wide green wolf.\n>"
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small green dog sees the short pink bear.\n>"
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "tall",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall blue cat likes the tall red mole.\n>"
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim green bird hears the tiny white fox.\n>"
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "short",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short white fox follows the tiny pink cat.\n>"
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim green bird likes the short black dog.\n>"
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "slim",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim yellow wolf hears the tall white wolf.\n>"
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny yellow dog sees the small blue bear.\n>"
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black wolf sees the wide green mole.\n>"
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "slim",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall gray bird hears the small red fox.\n>"
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "large",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large white dog finds the slim red mole.\n>"
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "wide",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small blue hare chases the large yellow mole.\n>"
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "tiny",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny pink fox watches the huge gray bear.\n>"
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large blue wolf sees the slim yellow wolf.\n>"
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "huge",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge yellow dog sees the short gray hare.\n>"
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small black bear chases the tall gray wolf.\n>"
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "tall",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall gray bear finds the tall pink cat.\n>"
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide red wolf sees the small blue bear.\n>"
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small black bird likes the tiny green dog.\n>"
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "short",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short red wolf helps the tiny black bear.\n>"
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tall",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tall blue bird watches the large blue bear.\n>"
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "huge",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge white fox helps the short pink wolf.\n>"
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short gray fox hears the wide gray dog.\n>"
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge black wolf helps the huge black bird.\n>"
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "slim",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim yellow bear finds the wide green mole.\n>"
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "wide",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide red mole sees the small yellow hare.\n>"
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small black bear chases the tall gray wolf.\n>"
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny yellow dog likes the tall gray mole.\n>"
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "small",
+          "red"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small red mole sees the small blue wolf.\n>"
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short gray hare sees the huge pink dog.\n>"
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "slim",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim red fox chases the small blue mole.\n>"
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short pink fox watches the tiny pink bird.\n>"
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "slim",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim blue cat follows the tiny yellow hare.\n>"
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim green bear chases the tall white bear.\n>"
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "tiny",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny black hare follows the slim gray bird.\n>"
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide gray bird hears the wide red fox.\n>"
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "small",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small blue bear sees the tall blue mole.\n>"
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the large blue cat follows the huge gray fox.\n>"
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short pink fox watches the short white mole.\n>"
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide green bird watches the small black bird.\n>"
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "tiny",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny black hare chases the tall pink hare.\n>"
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide green mole sees the large blue mole.\n>"
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "huge",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short gray wolf watches the wide green wolf.\n>"
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "short",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "exact": 0,
+        "retrieved_prompt": "swap|the short black bird hears the wide pink fox.\n>"
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small yellow fox helps the wide gray bird.\n>"
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small yellow bear chases the small green hare.\n>"
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "swap|the slim yellow dog finds the large yellow hare.\n>"
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "wide",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide green fox watches the slim gray bear.\n>"
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "huge",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the huge white bird helps the slim green bear.\n>"
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "tiny",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the tiny white cat helps the small blue wolf.\n>"
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "wide",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide gray hare likes the slim yellow hare.\n>"
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "swap|the small yellow dog sees the large yellow dog.\n>"
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "swap|the wide blue bear chases the slim blue bear.\n>"
+      }
+    ],
+    "relation_roles": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim green bird likes the short black dog.\n>"
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny yellow dog sees the small blue bear.\n>"
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short pink fox watches the tiny pink bird.\n>"
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide gray bird hears the wide red fox.\n>"
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short gray hare sees the huge pink dog.\n>"
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 54,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim yellow dog finds the large yellow hare.\n>"
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "huge",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge white bird helps the slim green bear.\n>"
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "small",
+          "red"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide red fox watches the wide green wolf.\n>"
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "tall",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall blue cat likes the tall red mole.\n>"
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black wolf sees the wide green mole.\n>"
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short gray fox hears the wide gray dog.\n>"
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "large",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge white bear chases the tall white fox.\n>"
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small black bird likes the tiny green dog.\n>"
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "slim",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall gray bird hears the small red fox.\n>"
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny yellow dog likes the tall gray mole.\n>"
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tiny",
+          "white"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny white wolf hears the tall white dog.\n>"
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small green dog sees the short pink bear.\n>"
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "large",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large white dog finds the slim red mole.\n>"
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "slim",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim yellow wolf hears the tall white wolf.\n>"
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "wide",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide gray hare likes the slim yellow hare.\n>"
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large blue hare sees the slim green dog.\n>"
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide green bird likes the huge yellow dog.\n>"
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "tiny",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny black hare chases the tall pink hare.\n>"
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "huge",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge yellow dog sees the short gray hare.\n>"
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "short",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short black bird hears the wide pink fox.\n>"
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small yellow fox follows the slim blue hare.\n>"
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "huge",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large black bear chases the wide gray wolf.\n>"
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "tiny",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny pink fox watches the huge gray bear.\n>"
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "slim",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim yellow bear finds the wide green mole.\n>"
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide red wolf sees the small blue bear.\n>"
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "wide",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide green fox watches the slim gray bear.\n>"
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tiny",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny black hare follows the slim gray bird.\n>"
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "tall",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall white dog hears the tiny black cat.\n>"
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge black wolf helps the huge black bird.\n>"
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide blue bear chases the slim blue bear.\n>"
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small yellow fox helps the wide gray bird.\n>"
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "slim",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 54,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim blue cat follows the tiny yellow hare.\n>"
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small black bear chases the tall gray wolf.\n>"
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "slim",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim red fox chases the small blue mole.\n>"
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "tall",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short white hare likes the small yellow bird.\n>"
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "short",
+          "gray"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge gray bird follows the tiny yellow hare.\n>"
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide green bird watches the small black bird.\n>"
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim green bird hears the tiny white fox.\n>"
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "tiny",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small black hare follows the short gray fox.\n>"
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide green mole sees the large blue mole.\n>"
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "short",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short white fox follows the tiny pink cat.\n>"
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large blue wolf sees the slim yellow wolf.\n>"
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "huge",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the huge white fox helps the short pink wolf.\n>"
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 54,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small yellow bear chases the small green hare.\n>"
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the slim green bear chases the tall white bear.\n>"
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "short",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short red wolf helps the tiny black bear.\n>"
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "wide",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small blue hare chases the large yellow mole.\n>"
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "small",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small blue bear sees the tall blue mole.\n>"
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 54,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short pink fox watches the short white mole.\n>"
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "tall",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall blue bird watches the large blue bear.\n>"
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the large blue cat follows the huge gray fox.\n>"
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small black bear chases the tall gray wolf.\n>"
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 53,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small yellow dog sees the large yellow dog.\n>"
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "huge",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the short gray wolf watches the wide green wolf.\n>"
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "tiny",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tiny white cat helps the small blue wolf.\n>"
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide green fox hears the wide blue dog.\n>"
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "wide",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 51,
+        "exact": 0,
+        "retrieved_prompt": "roles|the wide red mole sees the small yellow hare.\n>"
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "tall",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "exact": 0,
+        "retrieved_prompt": "roles|the tall gray bear finds the tall pink cat.\n>"
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "small",
+          "red"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "exact": 0,
+        "retrieved_prompt": "roles|the small red mole sees the small blue wolf.\n>"
+      }
+    ]
+  },
+  "metrics": {
+    "attribute_swap": {
+      "exact_accuracy": 0.0,
+      "cases": 64
+    },
+    "attribute_roles": {
+      "exact_accuracy": 0.0,
+      "cases": 64
+    },
+    "combined_swap": {
+      "exact_accuracy": 0.0,
+      "cases": 64
+    },
+    "combined_roles": {
+      "exact_accuracy": 0.0,
+      "cases": 64
+    },
+    "relation_swap": {
+      "exact_accuracy": 0.0,
+      "cases": 64
+    },
+    "relation_roles": {
+      "exact_accuracy": 0.0,
+      "cases": 64
+    }
+  }
+}

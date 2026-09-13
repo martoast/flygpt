@@ -1,0 +1,397 @@
+{
+  "experiment": "G2b v1",
+  "outcome": "failed validation qualification; no connectome students launched",
+  "external_backup_verified": true,
+  "files": [
+    {
+      "source": "results/g2b_v1/validation_teacher_4.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_teacher_4.log",
+      "sha256": "d03d7a48e721afa8673da510a9d8f1d7916520c09abb90adfb88d7bdec19363d"
+    },
+    {
+      "source": "results/g2b_v1/teacher_2.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_2.json",
+      "sha256": "3e00f2c701db61871e172aef8543edcf183e2bccecdf6976074ebf5b426fa33e"
+    },
+    {
+      "source": "results/g2b_v1/gru_1.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_1.pt",
+      "sha256": "816c6decaa401736f7143b87082c45983d22280e1eade2495f6530ab1d103890"
+    },
+    {
+      "source": "results/g2b_v1/gru_3.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_3.json",
+      "sha256": "afd47f0799f62b7b1bc5ba28ecd8effa50294a5aeb6da9ee3bd2026579a59584"
+    },
+    {
+      "source": "results/g2b_v1/validation_baselines.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_baselines.log",
+      "sha256": "e73ef04f8e191795870d08eb26aa4738d715994713239ce3472376c7fb0d4c36"
+    },
+    {
+      "source": "results/g2b_v1/teacher_3.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_3.pt",
+      "sha256": "720014413d2f5737c2970d1a4282a7decce71c02574db933c876416cf4c5154e"
+    },
+    {
+      "source": "results/g2b_v1/validation_teacher_2.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_teacher_2.log",
+      "sha256": "164f456e86aa3b227f36beb7a1bef5f08ea6b5dc6c5f37ec441dd58b2d19f2b3"
+    },
+    {
+      "source": "results/g2b_v1/gru_4.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_4.pt",
+      "sha256": "c13ca2db0c6d00f5c9e134e88e7eabd563fa49852bb6276d8d53ec98cc58f87f"
+    },
+    {
+      "source": "results/g2b_v1/validation_teacher_3.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_teacher_3.log",
+      "sha256": "a96876b37d351b26d8283a1cac94b542333edaad425fd2f206ae94ad021c7ebd"
+    },
+    {
+      "source": "results/g2b_v1/teacher_2.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_2.pt",
+      "sha256": "5b6bd249115c85fed69f90eff707177df0d1690ef5e1a6267fc9ea43cd52c0a8"
+    },
+    {
+      "source": "results/g2b_v1/gru_2.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_2.json",
+      "sha256": "1aa69243758ece19754c10119d484d4fca72857d2a401d941ed49dfd88d47631"
+    },
+    {
+      "source": "results/g2b_v1/validation_teacher_1.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_teacher_1.log",
+      "sha256": "df0a4f54673cf9d0b69ce77376a04a17b7d140dc62600f834294b394a2eb780c"
+    },
+    {
+      "source": "results/g2b_v1/teacher_3.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_3.json",
+      "sha256": "64f1f34c8936197b69737d5e432ebc50ebf7d2b057e3c3acda945c474c40dde8"
+    },
+    {
+      "source": "results/g2b_v1/gru_0.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_0.pt",
+      "sha256": "0e3360fdc429baf0c3da45b48546c78e11e73e5a659b177e8ccc3fc722ed8229"
+    },
+    {
+      "source": "results/g2b_v1/validation_teacher_0.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_teacher_0.log",
+      "sha256": "d426d07a0d864b58ebd226cbbae680d6632bd3a06a846b8631b9954d123505f0"
+    },
+    {
+      "source": "results/g2b_v1/train_gru_1.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_gru_1.log",
+      "sha256": "d7fda2a11eb0e511e9e607f305f39aa1df399154aa2639597092e7183c156226"
+    },
+    {
+      "source": "results/g2b_v1/train_gru_0.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_gru_0.log",
+      "sha256": "4df76c4bf7135f10aea3e946048d109b4c9cd1db394b4f466955d0fd33545cd4"
+    },
+    {
+      "source": "results/g2b_v1/train_gru_2.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_gru_2.log",
+      "sha256": "e17e8f1f06dfb39e4ecf2581e5909ca4e4074225db5d9f29883ef46c99858973"
+    },
+    {
+      "source": "results/g2b_v1/teacher_4.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_4.json",
+      "sha256": "77ed1b3649916c87f4cd4f0333aeeff1baa396c44f6ce699fa6a893eea305da8"
+    },
+    {
+      "source": "results/g2b_v1/train_gru_3.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_gru_3.log",
+      "sha256": "368410f388209bc5771426e5aa820836168dbee4f584f34e54a5712c78589d48"
+    },
+    {
+      "source": "results/g2b_v1/train_gru_4.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_gru_4.log",
+      "sha256": "811610897349c54a63f6ed3c92f0f57842ba7144287fd31ad3de23ea925bebbf"
+    },
+    {
+      "source": "results/g2b_v1/gru_4.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_4.json",
+      "sha256": "965313d13c672fa41b97db276930c0a24e21571d7313571982668d5cc3291cdf"
+    },
+    {
+      "source": "results/g2b_v1/validation_gru_4.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_gru_4.log",
+      "sha256": "6e32ea4e0b5637e4153a5a7db788c90068448a37755b68aeb2074b1e7c327e39"
+    },
+    {
+      "source": "results/g2b_v1/train_teacher_0.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_teacher_0.log",
+      "sha256": "d4c5e04d859ac615f25ff7fd638ff822d034ad079cae96d01b21b88cdc8b30e4"
+    },
+    {
+      "source": "results/g2b_v1/train_teacher_1.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_teacher_1.log",
+      "sha256": "e8de56fd5e107c68525a6f589aee83e52bd61430c50d85b98d927f3c67a1718e"
+    },
+    {
+      "source": "results/g2b_v1/train_teacher_3.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_teacher_3.log",
+      "sha256": "bb81b263b0ecfe666389878c0c513f70703eb142ab2daa6fb32855c63a993252"
+    },
+    {
+      "source": "results/g2b_v1/gate_validation.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gate_validation.json",
+      "sha256": "cc62d29c46c79a74fced6b420a80927cc4c6540ebc758f80d974003e47cea53a"
+    },
+    {
+      "source": "results/g2b_v1/train_teacher_2.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_teacher_2.log",
+      "sha256": "e0eb74b72f6980317ed6589f6c274369923530cb87897e7d17f54dd79de2fe5e"
+    },
+    {
+      "source": "results/g2b_v1/queue.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/queue.json",
+      "sha256": "868db7f70bcfd0bc38384d8da5666a96c4602ee89f40ff203958cd4be60140ae"
+    },
+    {
+      "source": "results/g2b_v1/validation_gru_2.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_gru_2.log",
+      "sha256": "33db960d1afe18b30fda94a9cde6f1e45313b60b00185dc79aac21aba645306f"
+    },
+    {
+      "source": "results/g2b_v1/validation_gru_3.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_gru_3.log",
+      "sha256": "dc15cb41f5bd175f934ad3d40f26ce591443612702627706f2d984eaab9472c9"
+    },
+    {
+      "source": "results/g2b_v1/validation_gru_1.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_gru_1.log",
+      "sha256": "c18e23fc94dec6d1f8f4bd54a670172ff99628fd0eb7cb914f905be1e33327c1"
+    },
+    {
+      "source": "results/g2b_v1/train_teacher_4.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/train_teacher_4.log",
+      "sha256": "e2e32a52441c1f0e840ffe7e21112c59a143902f71666f8470e076ff303eab0e"
+    },
+    {
+      "source": "results/g2b_v1/validation_gru_0.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_gru_0.log",
+      "sha256": "0c4a4e6f7e0678cf498b2f75d83069421f94d23b820a2bb3d1874f586aefd7d8"
+    },
+    {
+      "source": "results/g2b_v1/teacher_0.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_0.json",
+      "sha256": "90b19be46ed98503887e775bc9debd6328c97ebcb7b9cc01137c4b9f0b3afd24"
+    },
+    {
+      "source": "results/g2b_v1/teacher_1.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_1.pt",
+      "sha256": "8c9ae9b3cb6833bcd1647e8f51969fddfbe7a8e802d191f6b81acd03a15d29c0"
+    },
+    {
+      "source": "results/g2b_v1/controller.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/controller.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source": "results/g2b_v1/gru_3.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_3.pt",
+      "sha256": "fab1e7bfb5001d2b54bc74f98e8de96c6cce20a301112e5e135bca059ac289c5"
+    },
+    {
+      "source": "results/g2b_v1/gru_1.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_1.json",
+      "sha256": "53893f8793c63afa486179d548a3b5d212ef0759c4e696845bafb0424aeaa496"
+    },
+    {
+      "source": "results/g2b_v1/gru_0.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_0.json",
+      "sha256": "c348aba1b48f08afb3cb17fd16ffd562ec04c2d2aa2fa2bfa6cf8bb895d0a227"
+    },
+    {
+      "source": "results/g2b_v1/validation_gate.log",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation_gate.log",
+      "sha256": "90155c6348eab3cf216b55338042173c83e8ad0e0e539c782804883d27b062e1"
+    },
+    {
+      "source": "results/g2b_v1/gru_2.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/gru_2.pt",
+      "sha256": "d3a2538e9fde58894376938663e6d032a3383770f7ad86cc298fde0fb3a8803a"
+    },
+    {
+      "source": "results/g2b_v1/teacher_4.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_4.pt",
+      "sha256": "d6bf57ab9f4e7645e5bedf8584d5c667fce0fed7b88ba260f2ca0bdc5ed94d5e"
+    },
+    {
+      "source": "results/g2b_v1/GATE_VALIDATION.md",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/GATE_VALIDATION.md",
+      "sha256": "194b106964c61c8b25acceadf28698867e59b97fd3e07bd72fc60d858476b119"
+    },
+    {
+      "source": "results/g2b_v1/teacher_1.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_1.json",
+      "sha256": "c208dbf364dd47dafa12cc2a30fdd69995560bebb11cffe638bdac1df4eac90a"
+    },
+    {
+      "source": "results/g2b_v1/teacher_0.pt",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/teacher_0.pt",
+      "sha256": "19cbee909133d1f7ba0dfc48702e1a0edbce8a6ff7ffe2f6530cbf42f03f718c"
+    },
+    {
+      "source": "results/g2b_v1/validation/teacher_2.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/teacher_2.json",
+      "sha256": "9facfde6e2b90d758798b5e81c2b1ce6077fcccb6ccb47aec6f571306d9ab101"
+    },
+    {
+      "source": "results/g2b_v1/validation/gru_3.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/gru_3.json",
+      "sha256": "ee95079ba48dae23dedb0c1773cf34fb2009ff65a7e9ddbf25bc772b490a8a33"
+    },
+    {
+      "source": "results/g2b_v1/validation/ngram16.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/ngram16.json",
+      "sha256": "f1ed06d101fb5401ed38115246d6684ca9aecd385f451be09d2c1b64f19aaea8"
+    },
+    {
+      "source": "results/g2b_v1/validation/gru_2.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/gru_2.json",
+      "sha256": "d85c6b2cb82aa44800a03c3cfe40e2004fe62dead079ddaf94facf23dbf5315a"
+    },
+    {
+      "source": "results/g2b_v1/validation/teacher_3.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/teacher_3.json",
+      "sha256": "21b185af443c98d118ff2692046323db3fec600599242fcccd5397ae553c27f4"
+    },
+    {
+      "source": "results/g2b_v1/validation/ngram1.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/ngram1.json",
+      "sha256": "bd258d82dbdb49a2955c46c820097648d5037dc0da2cca64be9d6d98843baf90"
+    },
+    {
+      "source": "results/g2b_v1/validation/teacher_4.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/teacher_4.json",
+      "sha256": "fc7dcff6977f4ee4782488e15a316d4f7cb35b7370a2c88533aa25762395db5b"
+    },
+    {
+      "source": "results/g2b_v1/validation/gru_4.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/gru_4.json",
+      "sha256": "5e02c9f4a3bdcf5abbbaee29d385e1e784c4a16b2f28fef4fa1571dc02d4e39b"
+    },
+    {
+      "source": "results/g2b_v1/validation/ngram8.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/ngram8.json",
+      "sha256": "760dde5ee841aafadfdee0237a0f5d5fe35eab884523300154f7b962ef8caa3a"
+    },
+    {
+      "source": "results/g2b_v1/validation/ngram4.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/ngram4.json",
+      "sha256": "626c08083d497f1469be5ab4c907aa6a7baf20d2570d2064b79b3b5b992014b0"
+    },
+    {
+      "source": "results/g2b_v1/validation/teacher_0.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/teacher_0.json",
+      "sha256": "82cba09df31427c05dbef271887fc3f93afd0a9dedd50848e6d0a3094ececf76"
+    },
+    {
+      "source": "results/g2b_v1/validation/gru_1.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/gru_1.json",
+      "sha256": "a59b92246d92723a595cc842124b5e5093f5ebca7bcd86a28892731a3017cb4c"
+    },
+    {
+      "source": "results/g2b_v1/validation/gru_0.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/gru_0.json",
+      "sha256": "418a38941d16d29a17b5378484b3d531a1ee8fa598df5eca76bef87397f1f7b2"
+    },
+    {
+      "source": "results/g2b_v1/validation/retrieval.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/retrieval.json",
+      "sha256": "1ee1388ad8960ec48d0a22611e7d3d81e96b8b7b38560c942c8ebbcd4ed5226b"
+    },
+    {
+      "source": "results/g2b_v1/validation/teacher_1.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/results/g2b_v1/validation/teacher_1.json",
+      "sha256": "8e1e4cbc8a335cc69d13a02237c70ee775cf85aa78cf988178ca8d708d6e8fb8"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/qualification_combined.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/qualification_combined.jsonl",
+      "sha256": "222de8df2a6278be5a46e0922b50e16cd9bb120cfd4a2577e8d6267225f70265"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/test_attribute.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/test_attribute.jsonl",
+      "sha256": "d3c2202ed273b3f208c0a58984c1b71afc4b0ee7e560bbb6877e3aae497c2c5b"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/qualification_relation.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/qualification_relation.jsonl",
+      "sha256": "c2d3285c3b2d9082eb84577b6862ea6ad3c4a039b57cbbb279e2660631e18485"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/validation_combined.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/validation_combined.jsonl",
+      "sha256": "abb1bc15b5339fb93ae7392a48c4349e2252b6fbd0c178f2ee21abcfd74a1791"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/test_relation.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/test_relation.jsonl",
+      "sha256": "945b920c19b332b349de38b0f64b9fd8ee65e5d2f129b90d48c0019f7c268846"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/test_combined.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/test_combined.jsonl",
+      "sha256": "72150fc304e8dbc2b5e099f505efa6eef0256c026a8974309dec2436620b534b"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/validation_relation.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/validation_relation.jsonl",
+      "sha256": "9efce6f541c7d467b89eb4587bb2fa777f7c73973c92662ea43503009cdf6c27"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/validation_attribute.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/validation_attribute.jsonl",
+      "sha256": "0e639ca2abed6d344f537ded53ee17679235bb86f461e4d06dbd05f52ae397df"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/manifest.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/manifest.json",
+      "sha256": "5e6de579bada154e17f6dccde73b9892b00c117ff0a7722ececa7e3c429019b0"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/qualification_attribute.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/qualification_attribute.jsonl",
+      "sha256": "4a533e1f1e376cde34cfd64b9d7f72860373de2ce357d599ef2cbad743b58233"
+    },
+    {
+      "source": "data/raw/grammar_g2b_v1/train_familiar.jsonl",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/data/raw/grammar_g2b_v1/train_familiar.jsonl",
+      "sha256": "eb3aa0acd6cce0191c338a33da0bd8059484da9abe6e761422fe4569e7a6bac1"
+    },
+    {
+      "source": "configs/g2b_qualification_v1.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/configs/g2b_qualification_v1.json",
+      "sha256": "e51e46514f42ada319c475b90da2cc31dc356300d6b90aad86813f16a2d18e47"
+    },
+    {
+      "source": "configs/g2b_execution_v1.json",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/configs/g2b_execution_v1.json",
+      "sha256": "f6e5245b75f5329d4df772abdffbd08697b5d88c63af1547106940f77b95c581"
+    },
+    {
+      "source": "scripts/g2b_experiment.py",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/scripts/g2b_experiment.py",
+      "sha256": "1190e3f4df33bc27fbf3d68dc6a2bd26494adabaa9755c5b4e16b4adfd8360fb"
+    },
+    {
+      "source": "scripts/g2b_gate.py",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/scripts/g2b_gate.py",
+      "sha256": "a6de698290473876e201de8ac133a7f22a59f4863a1a716b4e72ecc3006cadb4"
+    },
+    {
+      "source": "scripts/run_g2b.py",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/scripts/run_g2b.py",
+      "sha256": "f2d00d3567461d3673dc664e913810a70d901654bbb9e7ef8218534e54cf6f81"
+    },
+    {
+      "source": "G2B_PROTOCOL.md",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2b-validation-gate-failed-v1/G2B_PROTOCOL.md",
+      "sha256": "862894f8afbf2117391208be87779122d22ef4dbf6da368d07401919934412ec"
+    }
+  ]
+}

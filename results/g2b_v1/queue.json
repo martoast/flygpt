@@ -1,0 +1,6 @@
+{
+  "status": "teacher_not_qualified",
+  "failed_stage": "validation",
+  "student_runs_launched": 0,
+  "next_action": "Report failed gate; no automatic rescue or connectome training"
+}

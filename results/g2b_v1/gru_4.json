@@ -1,0 +1,7059 @@
+{
+  "created_utc": "2026-09-13T07:51:16Z",
+  "code_commit": "2e5e699936152f8c30e064ee4b9ab40c9dc27338",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": true,
+  "config": {
+    "kind": "gru",
+    "seed": 4,
+    "model": {
+      "hidden": 356,
+      "embed_dim": 128
+    },
+    "steps": 1000,
+    "batch": 8,
+    "lr": 0.0003
+  },
+  "inputs": {
+    "configs/g2b_qualification_v1.json": "e51e46514f42ada319c475b90da2cc31dc356300d6b90aad86813f16a2d18e47",
+    "configs/g2b_execution_v1.json": "f6e5245b75f5329d4df772abdffbd08697b5d88c63af1547106940f77b95c581",
+    "data/raw/grammar_g2b_v1/manifest.json": "5e6de579bada154e17f6dccde73b9892b00c117ff0a7722ececa7e3c429019b0",
+    "data/raw/grammar_g2b_v1/train_familiar.jsonl": "eb3aa0acd6cce0191c338a33da0bd8059484da9abe6e761422fe4569e7a6bac1"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "script_sha256": "1190e3f4df33bc27fbf3d68dc6a2bd26494adabaa9755c5b4e16b4adfd8360fb",
+  "parameters": 643208,
+  "trace": [
+    {
+      "step": 1,
+      "response_ce": 5.593019485473633,
+      "loss": 5.593019485473633,
+      "gradient_norm": 0.8861980438232422,
+      "response_bytes": 385
+    },
+    {
+      "step": 2,
+      "response_ce": 5.52030086517334,
+      "loss": 5.52030086517334,
+      "gradient_norm": 0.9254797101020813,
+      "response_bytes": 754
+    },
+    {
+      "step": 3,
+      "response_ce": 5.4650421142578125,
+      "loss": 5.4650421142578125,
+      "gradient_norm": 0.8703213334083557,
+      "response_bytes": 1137
+    },
+    {
+      "step": 4,
+      "response_ce": 5.417665481567383,
+      "loss": 5.417665481567383,
+      "gradient_norm": 0.9218817949295044,
+      "response_bytes": 1542
+    },
+    {
+      "step": 5,
+      "response_ce": 5.3470282554626465,
+      "loss": 5.3470282554626465,
+      "gradient_norm": 0.9298310875892639,
+      "response_bytes": 1925
+    },
+    {
+      "step": 6,
+      "response_ce": 5.291014194488525,
+      "loss": 5.291014194488525,
+      "gradient_norm": 0.9559730887413025,
+      "response_bytes": 2312
+    },
+    {
+      "step": 7,
+      "response_ce": 5.226736068725586,
+      "loss": 5.226736068725586,
+      "gradient_norm": 1.0047600269317627,
+      "response_bytes": 2704
+    },
+    {
+      "step": 8,
+      "response_ce": 5.1501288414001465,
+      "loss": 5.1501288414001465,
+      "gradient_norm": 1.0703548192977905,
+      "response_bytes": 3076
+    },
+    {
+      "step": 9,
+      "response_ce": 5.08836555480957,
+      "loss": 5.08836555480957,
+      "gradient_norm": 1.0774813890457153,
+      "response_bytes": 3462
+    },
+    {
+      "step": 10,
+      "response_ce": 5.0338592529296875,
+      "loss": 5.0338592529296875,
+      "gradient_norm": 1.0968477725982666,
+      "response_bytes": 3852
+    },
+    {
+      "step": 11,
+      "response_ce": 4.927754878997803,
+      "loss": 4.927754878997803,
+      "gradient_norm": 1.2081384658813477,
+      "response_bytes": 4247
+    },
+    {
+      "step": 12,
+      "response_ce": 4.877138614654541,
+      "loss": 4.877138614654541,
+      "gradient_norm": 1.2154172658920288,
+      "response_bytes": 4625
+    },
+    {
+      "step": 13,
+      "response_ce": 4.726546764373779,
+      "loss": 4.726546764373779,
+      "gradient_norm": 1.392005443572998,
+      "response_bytes": 5009
+    },
+    {
+      "step": 14,
+      "response_ce": 4.631105899810791,
+      "loss": 4.631105899810791,
+      "gradient_norm": 1.4772909879684448,
+      "response_bytes": 5405
+    },
+    {
+      "step": 15,
+      "response_ce": 4.504846572875977,
+      "loss": 4.504846572875977,
+      "gradient_norm": 1.573830485343933,
+      "response_bytes": 5800
+    },
+    {
+      "step": 16,
+      "response_ce": 4.343108654022217,
+      "loss": 4.343108654022217,
+      "gradient_norm": 1.7702430486679077,
+      "response_bytes": 6186
+    },
+    {
+      "step": 17,
+      "response_ce": 4.264580249786377,
+      "loss": 4.264580249786377,
+      "gradient_norm": 1.7754015922546387,
+      "response_bytes": 6579
+    },
+    {
+      "step": 18,
+      "response_ce": 4.044558525085449,
+      "loss": 4.044558525085449,
+      "gradient_norm": 1.9519084692001343,
+      "response_bytes": 6966
+    },
+    {
+      "step": 19,
+      "response_ce": 3.855910062789917,
+      "loss": 3.855910062789917,
+      "gradient_norm": 2.0128374099731445,
+      "response_bytes": 7350
+    },
+    {
+      "step": 20,
+      "response_ce": 3.6231629848480225,
+      "loss": 3.6231629848480225,
+      "gradient_norm": 1.9992313385009766,
+      "response_bytes": 7743
+    },
+    {
+      "step": 21,
+      "response_ce": 3.444359302520752,
+      "loss": 3.444359302520752,
+      "gradient_norm": 1.8071353435516357,
+      "response_bytes": 8139
+    },
+    {
+      "step": 22,
+      "response_ce": 3.280989408493042,
+      "loss": 3.280989408493042,
+      "gradient_norm": 1.7588016986846924,
+      "response_bytes": 8525
+    },
+    {
+      "step": 23,
+      "response_ce": 3.1572587490081787,
+      "loss": 3.1572587490081787,
+      "gradient_norm": 1.9073224067687988,
+      "response_bytes": 8927
+    },
+    {
+      "step": 24,
+      "response_ce": 3.021359443664551,
+      "loss": 3.021359443664551,
+      "gradient_norm": 2.5721917152404785,
+      "response_bytes": 9315
+    },
+    {
+      "step": 25,
+      "response_ce": 3.0255939960479736,
+      "loss": 3.0255939960479736,
+      "gradient_norm": 2.5256528854370117,
+      "response_bytes": 9693
+    },
+    {
+      "step": 26,
+      "response_ce": 2.9505367279052734,
+      "loss": 2.9505367279052734,
+      "gradient_norm": 2.504276990890503,
+      "response_bytes": 10090
+    },
+    {
+      "step": 27,
+      "response_ce": 2.9061686992645264,
+      "loss": 2.9061686992645264,
+      "gradient_norm": 2.291471481323242,
+      "response_bytes": 10468
+    },
+    {
+      "step": 28,
+      "response_ce": 2.7722585201263428,
+      "loss": 2.7722585201263428,
+      "gradient_norm": 1.9810587167739868,
+      "response_bytes": 10859
+    },
+    {
+      "step": 29,
+      "response_ce": 2.7730424404144287,
+      "loss": 2.7730424404144287,
+      "gradient_norm": 1.4371893405914307,
+      "response_bytes": 11251
+    },
+    {
+      "step": 30,
+      "response_ce": 2.714920997619629,
+      "loss": 2.714920997619629,
+      "gradient_norm": 0.9070175290107727,
+      "response_bytes": 11641
+    },
+    {
+      "step": 31,
+      "response_ce": 2.701876640319824,
+      "loss": 2.701876640319824,
+      "gradient_norm": 0.9796038269996643,
+      "response_bytes": 12020
+    },
+    {
+      "step": 32,
+      "response_ce": 2.6670925617218018,
+      "loss": 2.6670925617218018,
+      "gradient_norm": 0.9693653583526611,
+      "response_bytes": 12419
+    },
+    {
+      "step": 33,
+      "response_ce": 2.668881893157959,
+      "loss": 2.668881893157959,
+      "gradient_norm": 1.0037730932235718,
+      "response_bytes": 12802
+    },
+    {
+      "step": 34,
+      "response_ce": 2.6569719314575195,
+      "loss": 2.6569719314575195,
+      "gradient_norm": 1.4469002485275269,
+      "response_bytes": 13197
+    },
+    {
+      "step": 35,
+      "response_ce": 2.5892202854156494,
+      "loss": 2.5892202854156494,
+      "gradient_norm": 1.1058913469314575,
+      "response_bytes": 13576
+    },
+    {
+      "step": 36,
+      "response_ce": 2.5600521564483643,
+      "loss": 2.5600521564483643,
+      "gradient_norm": 1.319998860359192,
+      "response_bytes": 13976
+    },
+    {
+      "step": 37,
+      "response_ce": 2.5477688312530518,
+      "loss": 2.5477688312530518,
+      "gradient_norm": 1.13706374168396,
+      "response_bytes": 14370
+    },
+    {
+      "step": 38,
+      "response_ce": 2.50506854057312,
+      "loss": 2.50506854057312,
+      "gradient_norm": 1.0363892316818237,
+      "response_bytes": 14763
+    },
+    {
+      "step": 39,
+      "response_ce": 2.4575536251068115,
+      "loss": 2.4575536251068115,
+      "gradient_norm": 1.2367008924484253,
+      "response_bytes": 15153
+    },
+    {
+      "step": 40,
+      "response_ce": 2.4650535583496094,
+      "loss": 2.4650535583496094,
+      "gradient_norm": 0.9475542902946472,
+      "response_bytes": 15552
+    },
+    {
+      "step": 41,
+      "response_ce": 2.463460922241211,
+      "loss": 2.463460922241211,
+      "gradient_norm": 0.8440078496932983,
+      "response_bytes": 15938
+    },
+    {
+      "step": 42,
+      "response_ce": 2.408094644546509,
+      "loss": 2.408094644546509,
+      "gradient_norm": 0.6947702765464783,
+      "response_bytes": 16333
+    },
+    {
+      "step": 43,
+      "response_ce": 2.4189488887786865,
+      "loss": 2.4189488887786865,
+      "gradient_norm": 0.8585976958274841,
+      "response_bytes": 16718
+    },
+    {
+      "step": 44,
+      "response_ce": 2.4142134189605713,
+      "loss": 2.4142134189605713,
+      "gradient_norm": 0.7330495119094849,
+      "response_bytes": 17102
+    },
+    {
+      "step": 45,
+      "response_ce": 2.4129230976104736,
+      "loss": 2.4129230976104736,
+      "gradient_norm": 0.8997262716293335,
+      "response_bytes": 17483
+    },
+    {
+      "step": 46,
+      "response_ce": 2.357541799545288,
+      "loss": 2.357541799545288,
+      "gradient_norm": 0.7515042424201965,
+      "response_bytes": 17867
+    },
+    {
+      "step": 47,
+      "response_ce": 2.302677631378174,
+      "loss": 2.302677631378174,
+      "gradient_norm": 0.8969663977622986,
+      "response_bytes": 18272
+    },
+    {
+      "step": 48,
+      "response_ce": 2.2985105514526367,
+      "loss": 2.2985105514526367,
+      "gradient_norm": 0.7362245321273804,
+      "response_bytes": 18667
+    },
+    {
+      "step": 49,
+      "response_ce": 2.2775087356567383,
+      "loss": 2.2775087356567383,
+      "gradient_norm": 0.8903199434280396,
+      "response_bytes": 19065
+    },
+    {
+      "step": 50,
+      "response_ce": 2.2426013946533203,
+      "loss": 2.2426013946533203,
+      "gradient_norm": 0.8438993096351624,
+      "response_bytes": 19452
+    },
+    {
+      "step": 51,
+      "response_ce": 2.2670881748199463,
+      "loss": 2.2670881748199463,
+      "gradient_norm": 0.6667160987854004,
+      "response_bytes": 19834
+    },
+    {
+      "step": 52,
+      "response_ce": 2.243241548538208,
+      "loss": 2.243241548538208,
+      "gradient_norm": 0.6982653737068176,
+      "response_bytes": 20240
+    },
+    {
+      "step": 53,
+      "response_ce": 2.1905646324157715,
+      "loss": 2.1905646324157715,
+      "gradient_norm": 0.7526238560676575,
+      "response_bytes": 20645
+    },
+    {
+      "step": 54,
+      "response_ce": 2.1719553470611572,
+      "loss": 2.1719553470611572,
+      "gradient_norm": 0.7809955477714539,
+      "response_bytes": 21049
+    },
+    {
+      "step": 55,
+      "response_ce": 2.194363594055176,
+      "loss": 2.194363594055176,
+      "gradient_norm": 0.6846805810928345,
+      "response_bytes": 21443
+    },
+    {
+      "step": 56,
+      "response_ce": 2.1567628383636475,
+      "loss": 2.1567628383636475,
+      "gradient_norm": 0.6085341572761536,
+      "response_bytes": 21837
+    },
+    {
+      "step": 57,
+      "response_ce": 2.1176812648773193,
+      "loss": 2.1176812648773193,
+      "gradient_norm": 0.6188100576400757,
+      "response_bytes": 22234
+    },
+    {
+      "step": 58,
+      "response_ce": 2.0660226345062256,
+      "loss": 2.0660226345062256,
+      "gradient_norm": 0.6359226107597351,
+      "response_bytes": 22617
+    },
+    {
+      "step": 59,
+      "response_ce": 2.085890054702759,
+      "loss": 2.085890054702759,
+      "gradient_norm": 0.6636924147605896,
+      "response_bytes": 22996
+    },
+    {
+      "step": 60,
+      "response_ce": 2.0785505771636963,
+      "loss": 2.0785505771636963,
+      "gradient_norm": 0.6877977848052979,
+      "response_bytes": 23372
+    },
+    {
+      "step": 61,
+      "response_ce": 2.054682731628418,
+      "loss": 2.054682731628418,
+      "gradient_norm": 0.5848956108093262,
+      "response_bytes": 23763
+    },
+    {
+      "step": 62,
+      "response_ce": 2.0286316871643066,
+      "loss": 2.0286316871643066,
+      "gradient_norm": 0.7743483781814575,
+      "response_bytes": 24160
+    },
+    {
+      "step": 63,
+      "response_ce": 1.97983717918396,
+      "loss": 1.97983717918396,
+      "gradient_norm": 0.627311110496521,
+      "response_bytes": 24566
+    },
+    {
+      "step": 64,
+      "response_ce": 1.967917561531067,
+      "loss": 1.967917561531067,
+      "gradient_norm": 0.5913335084915161,
+      "response_bytes": 24951
+    },
+    {
+      "step": 65,
+      "response_ce": 1.933577060699463,
+      "loss": 1.933577060699463,
+      "gradient_norm": 0.570836067199707,
+      "response_bytes": 25352
+    },
+    {
+      "step": 66,
+      "response_ce": 1.9139466285705566,
+      "loss": 1.9139466285705566,
+      "gradient_norm": 0.6285887360572815,
+      "response_bytes": 25738
+    },
+    {
+      "step": 67,
+      "response_ce": 1.9179798364639282,
+      "loss": 1.9179798364639282,
+      "gradient_norm": 0.6628561615943909,
+      "response_bytes": 26122
+    },
+    {
+      "step": 68,
+      "response_ce": 1.8984146118164062,
+      "loss": 1.8984146118164062,
+      "gradient_norm": 0.7542999386787415,
+      "response_bytes": 26512
+    },
+    {
+      "step": 69,
+      "response_ce": 1.867196798324585,
+      "loss": 1.867196798324585,
+      "gradient_norm": 0.6152066588401794,
+      "response_bytes": 26904
+    },
+    {
+      "step": 70,
+      "response_ce": 1.9260131120681763,
+      "loss": 1.9260131120681763,
+      "gradient_norm": 0.6765062212944031,
+      "response_bytes": 27280
+    },
+    {
+      "step": 71,
+      "response_ce": 1.9060535430908203,
+      "loss": 1.9060535430908203,
+      "gradient_norm": 0.8448927998542786,
+      "response_bytes": 27669
+    },
+    {
+      "step": 72,
+      "response_ce": 1.8900660276412964,
+      "loss": 1.8900660276412964,
+      "gradient_norm": 0.5876634120941162,
+      "response_bytes": 28061
+    },
+    {
+      "step": 73,
+      "response_ce": 1.8342746496200562,
+      "loss": 1.8342746496200562,
+      "gradient_norm": 0.5667310953140259,
+      "response_bytes": 28453
+    },
+    {
+      "step": 74,
+      "response_ce": 1.8511557579040527,
+      "loss": 1.8511557579040527,
+      "gradient_norm": 0.5524518489837646,
+      "response_bytes": 28826
+    },
+    {
+      "step": 75,
+      "response_ce": 1.7863101959228516,
+      "loss": 1.7863101959228516,
+      "gradient_norm": 0.605198860168457,
+      "response_bytes": 29228
+    },
+    {
+      "step": 76,
+      "response_ce": 1.7347075939178467,
+      "loss": 1.7347075939178467,
+      "gradient_norm": 0.8313024044036865,
+      "response_bytes": 29605
+    },
+    {
+      "step": 77,
+      "response_ce": 1.7784663438796997,
+      "loss": 1.7784663438796997,
+      "gradient_norm": 0.6668749451637268,
+      "response_bytes": 29989
+    },
+    {
+      "step": 78,
+      "response_ce": 1.7573344707489014,
+      "loss": 1.7573344707489014,
+      "gradient_norm": 0.5701397657394409,
+      "response_bytes": 30374
+    },
+    {
+      "step": 79,
+      "response_ce": 1.7254760265350342,
+      "loss": 1.7254760265350342,
+      "gradient_norm": 0.5880037546157837,
+      "response_bytes": 30755
+    },
+    {
+      "step": 80,
+      "response_ce": 1.7363823652267456,
+      "loss": 1.7363823652267456,
+      "gradient_norm": 0.6219515800476074,
+      "response_bytes": 31143
+    },
+    {
+      "step": 81,
+      "response_ce": 1.7000423669815063,
+      "loss": 1.7000423669815063,
+      "gradient_norm": 0.8105233907699585,
+      "response_bytes": 31530
+    },
+    {
+      "step": 82,
+      "response_ce": 1.6690508127212524,
+      "loss": 1.6690508127212524,
+      "gradient_norm": 0.6019877195358276,
+      "response_bytes": 31913
+    },
+    {
+      "step": 83,
+      "response_ce": 1.6817611455917358,
+      "loss": 1.6817611455917358,
+      "gradient_norm": 0.5803689956665039,
+      "response_bytes": 32304
+    },
+    {
+      "step": 84,
+      "response_ce": 1.622208595275879,
+      "loss": 1.622208595275879,
+      "gradient_norm": 0.5961413383483887,
+      "response_bytes": 32717
+    },
+    {
+      "step": 85,
+      "response_ce": 1.6417045593261719,
+      "loss": 1.6417045593261719,
+      "gradient_norm": 0.623329222202301,
+      "response_bytes": 33107
+    },
+    {
+      "step": 86,
+      "response_ce": 1.6482524871826172,
+      "loss": 1.6482524871826172,
+      "gradient_norm": 0.5967945456504822,
+      "response_bytes": 33499
+    },
+    {
+      "step": 87,
+      "response_ce": 1.5520727634429932,
+      "loss": 1.5520727634429932,
+      "gradient_norm": 0.5600255131721497,
+      "response_bytes": 33892
+    },
+    {
+      "step": 88,
+      "response_ce": 1.5714071989059448,
+      "loss": 1.5714071989059448,
+      "gradient_norm": 0.5529689788818359,
+      "response_bytes": 34276
+    },
+    {
+      "step": 89,
+      "response_ce": 1.6017221212387085,
+      "loss": 1.6017221212387085,
+      "gradient_norm": 0.6555952429771423,
+      "response_bytes": 34653
+    },
+    {
+      "step": 90,
+      "response_ce": 1.5602836608886719,
+      "loss": 1.5602836608886719,
+      "gradient_norm": 0.5908113121986389,
+      "response_bytes": 35031
+    },
+    {
+      "step": 91,
+      "response_ce": 1.5821017026901245,
+      "loss": 1.5821017026901245,
+      "gradient_norm": 0.6419081091880798,
+      "response_bytes": 35421
+    },
+    {
+      "step": 92,
+      "response_ce": 1.5557447671890259,
+      "loss": 1.5557447671890259,
+      "gradient_norm": 0.5464984774589539,
+      "response_bytes": 35810
+    },
+    {
+      "step": 93,
+      "response_ce": 1.5529841184616089,
+      "loss": 1.5529841184616089,
+      "gradient_norm": 0.6180205345153809,
+      "response_bytes": 36205
+    },
+    {
+      "step": 94,
+      "response_ce": 1.5049458742141724,
+      "loss": 1.5049458742141724,
+      "gradient_norm": 0.5438403487205505,
+      "response_bytes": 36600
+    },
+    {
+      "step": 95,
+      "response_ce": 1.5453355312347412,
+      "loss": 1.5453355312347412,
+      "gradient_norm": 0.6906588077545166,
+      "response_bytes": 36991
+    },
+    {
+      "step": 96,
+      "response_ce": 1.4823445081710815,
+      "loss": 1.4823445081710815,
+      "gradient_norm": 0.6718405485153198,
+      "response_bytes": 37375
+    },
+    {
+      "step": 97,
+      "response_ce": 1.4808716773986816,
+      "loss": 1.4808716773986816,
+      "gradient_norm": 0.7418719530105591,
+      "response_bytes": 37762
+    },
+    {
+      "step": 98,
+      "response_ce": 1.4405457973480225,
+      "loss": 1.4405457973480225,
+      "gradient_norm": 0.5515856742858887,
+      "response_bytes": 38148
+    },
+    {
+      "step": 99,
+      "response_ce": 1.4737553596496582,
+      "loss": 1.4737553596496582,
+      "gradient_norm": 0.5036109685897827,
+      "response_bytes": 38537
+    },
+    {
+      "step": 100,
+      "response_ce": 1.459621548652649,
+      "loss": 1.459621548652649,
+      "gradient_norm": 0.544195830821991,
+      "response_bytes": 38929
+    },
+    {
+      "step": 101,
+      "response_ce": 1.4175447225570679,
+      "loss": 1.4175447225570679,
+      "gradient_norm": 0.5363994836807251,
+      "response_bytes": 39311
+    },
+    {
+      "step": 102,
+      "response_ce": 1.4451946020126343,
+      "loss": 1.4451946020126343,
+      "gradient_norm": 0.5396025776863098,
+      "response_bytes": 39688
+    },
+    {
+      "step": 103,
+      "response_ce": 1.3481574058532715,
+      "loss": 1.3481574058532715,
+      "gradient_norm": 0.638680636882782,
+      "response_bytes": 40087
+    },
+    {
+      "step": 104,
+      "response_ce": 1.39188551902771,
+      "loss": 1.39188551902771,
+      "gradient_norm": 0.6439891457557678,
+      "response_bytes": 40475
+    },
+    {
+      "step": 105,
+      "response_ce": 1.3682957887649536,
+      "loss": 1.3682957887649536,
+      "gradient_norm": 0.5855473279953003,
+      "response_bytes": 40860
+    },
+    {
+      "step": 106,
+      "response_ce": 1.3883126974105835,
+      "loss": 1.3883126974105835,
+      "gradient_norm": 0.6448549032211304,
+      "response_bytes": 41250
+    },
+    {
+      "step": 107,
+      "response_ce": 1.3248677253723145,
+      "loss": 1.3248677253723145,
+      "gradient_norm": 0.636285126209259,
+      "response_bytes": 41633
+    },
+    {
+      "step": 108,
+      "response_ce": 1.3329304456710815,
+      "loss": 1.3329304456710815,
+      "gradient_norm": 0.6374078392982483,
+      "response_bytes": 42029
+    },
+    {
+      "step": 109,
+      "response_ce": 1.329627275466919,
+      "loss": 1.329627275466919,
+      "gradient_norm": 0.5764902830123901,
+      "response_bytes": 42422
+    },
+    {
+      "step": 110,
+      "response_ce": 1.3076404333114624,
+      "loss": 1.3076404333114624,
+      "gradient_norm": 0.6083927750587463,
+      "response_bytes": 42814
+    },
+    {
+      "step": 111,
+      "response_ce": 1.33209228515625,
+      "loss": 1.33209228515625,
+      "gradient_norm": 0.5877294540405273,
+      "response_bytes": 43192
+    },
+    {
+      "step": 112,
+      "response_ce": 1.3163574934005737,
+      "loss": 1.3163574934005737,
+      "gradient_norm": 0.597725510597229,
+      "response_bytes": 43585
+    },
+    {
+      "step": 113,
+      "response_ce": 1.2721049785614014,
+      "loss": 1.2721049785614014,
+      "gradient_norm": 0.6084949970245361,
+      "response_bytes": 43966
+    },
+    {
+      "step": 114,
+      "response_ce": 1.2859742641448975,
+      "loss": 1.2859742641448975,
+      "gradient_norm": 0.6563530564308167,
+      "response_bytes": 44353
+    },
+    {
+      "step": 115,
+      "response_ce": 1.2684752941131592,
+      "loss": 1.2684752941131592,
+      "gradient_norm": 0.6485876441001892,
+      "response_bytes": 44743
+    },
+    {
+      "step": 116,
+      "response_ce": 1.230650544166565,
+      "loss": 1.230650544166565,
+      "gradient_norm": 0.6119324564933777,
+      "response_bytes": 45122
+    },
+    {
+      "step": 117,
+      "response_ce": 1.25839102268219,
+      "loss": 1.25839102268219,
+      "gradient_norm": 0.5294141173362732,
+      "response_bytes": 45515
+    },
+    {
+      "step": 118,
+      "response_ce": 1.211022973060608,
+      "loss": 1.211022973060608,
+      "gradient_norm": 0.5216472744941711,
+      "response_bytes": 45899
+    },
+    {
+      "step": 119,
+      "response_ce": 1.2468632459640503,
+      "loss": 1.2468632459640503,
+      "gradient_norm": 0.4408210217952728,
+      "response_bytes": 46286
+    },
+    {
+      "step": 120,
+      "response_ce": 1.1952153444290161,
+      "loss": 1.1952153444290161,
+      "gradient_norm": 0.5751284956932068,
+      "response_bytes": 46672
+    },
+    {
+      "step": 121,
+      "response_ce": 1.1841142177581787,
+      "loss": 1.1841142177581787,
+      "gradient_norm": 0.5260840654373169,
+      "response_bytes": 47050
+    },
+    {
+      "step": 122,
+      "response_ce": 1.198147177696228,
+      "loss": 1.198147177696228,
+      "gradient_norm": 0.61932373046875,
+      "response_bytes": 47433
+    },
+    {
+      "step": 123,
+      "response_ce": 1.162878394126892,
+      "loss": 1.162878394126892,
+      "gradient_norm": 0.6558232307434082,
+      "response_bytes": 47822
+    },
+    {
+      "step": 124,
+      "response_ce": 1.1578246355056763,
+      "loss": 1.1578246355056763,
+      "gradient_norm": 0.46094080805778503,
+      "response_bytes": 48214
+    },
+    {
+      "step": 125,
+      "response_ce": 1.160936713218689,
+      "loss": 1.160936713218689,
+      "gradient_norm": 0.6815667748451233,
+      "response_bytes": 48606
+    },
+    {
+      "step": 126,
+      "response_ce": 1.1851063966751099,
+      "loss": 1.1851063966751099,
+      "gradient_norm": 0.6359265446662903,
+      "response_bytes": 48988
+    },
+    {
+      "step": 127,
+      "response_ce": 1.1261396408081055,
+      "loss": 1.1261396408081055,
+      "gradient_norm": 0.5804397463798523,
+      "response_bytes": 49373
+    },
+    {
+      "step": 128,
+      "response_ce": 1.0962271690368652,
+      "loss": 1.0962271690368652,
+      "gradient_norm": 0.5638836026191711,
+      "response_bytes": 49762
+    },
+    {
+      "step": 129,
+      "response_ce": 1.11082923412323,
+      "loss": 1.11082923412323,
+      "gradient_norm": 0.5404573082923889,
+      "response_bytes": 50148
+    },
+    {
+      "step": 130,
+      "response_ce": 1.1465730667114258,
+      "loss": 1.1465730667114258,
+      "gradient_norm": 0.6977391242980957,
+      "response_bytes": 50529
+    },
+    {
+      "step": 131,
+      "response_ce": 1.0846843719482422,
+      "loss": 1.0846843719482422,
+      "gradient_norm": 0.5360537171363831,
+      "response_bytes": 50907
+    },
+    {
+      "step": 132,
+      "response_ce": 1.0959162712097168,
+      "loss": 1.0959162712097168,
+      "gradient_norm": 0.5570291876792908,
+      "response_bytes": 51290
+    },
+    {
+      "step": 133,
+      "response_ce": 1.0644375085830688,
+      "loss": 1.0644375085830688,
+      "gradient_norm": 0.5136074423789978,
+      "response_bytes": 51679
+    },
+    {
+      "step": 134,
+      "response_ce": 1.0774617195129395,
+      "loss": 1.0774617195129395,
+      "gradient_norm": 0.5092024207115173,
+      "response_bytes": 52062
+    },
+    {
+      "step": 135,
+      "response_ce": 1.0576735734939575,
+      "loss": 1.0576735734939575,
+      "gradient_norm": 0.5239444375038147,
+      "response_bytes": 52458
+    },
+    {
+      "step": 136,
+      "response_ce": 1.057629108428955,
+      "loss": 1.057629108428955,
+      "gradient_norm": 0.6552050113677979,
+      "response_bytes": 52847
+    },
+    {
+      "step": 137,
+      "response_ce": 1.0593209266662598,
+      "loss": 1.0593209266662598,
+      "gradient_norm": 0.5303352475166321,
+      "response_bytes": 53245
+    },
+    {
+      "step": 138,
+      "response_ce": 1.0487236976623535,
+      "loss": 1.0487236976623535,
+      "gradient_norm": 0.6230069994926453,
+      "response_bytes": 53644
+    },
+    {
+      "step": 139,
+      "response_ce": 1.0450907945632935,
+      "loss": 1.0450907945632935,
+      "gradient_norm": 0.4798644185066223,
+      "response_bytes": 54024
+    },
+    {
+      "step": 140,
+      "response_ce": 1.0350618362426758,
+      "loss": 1.0350618362426758,
+      "gradient_norm": 0.5722947120666504,
+      "response_bytes": 54417
+    },
+    {
+      "step": 141,
+      "response_ce": 1.0183587074279785,
+      "loss": 1.0183587074279785,
+      "gradient_norm": 0.6224779486656189,
+      "response_bytes": 54791
+    },
+    {
+      "step": 142,
+      "response_ce": 1.0069454908370972,
+      "loss": 1.0069454908370972,
+      "gradient_norm": 0.4069611430168152,
+      "response_bytes": 55184
+    },
+    {
+      "step": 143,
+      "response_ce": 1.0214430093765259,
+      "loss": 1.0214430093765259,
+      "gradient_norm": 0.6323025822639465,
+      "response_bytes": 55557
+    },
+    {
+      "step": 144,
+      "response_ce": 0.9860661625862122,
+      "loss": 0.9860661625862122,
+      "gradient_norm": 0.4716889560222626,
+      "response_bytes": 55947
+    },
+    {
+      "step": 145,
+      "response_ce": 0.9654412269592285,
+      "loss": 0.9654412269592285,
+      "gradient_norm": 0.43271583318710327,
+      "response_bytes": 56343
+    },
+    {
+      "step": 146,
+      "response_ce": 0.9807969927787781,
+      "loss": 0.9807969927787781,
+      "gradient_norm": 0.6059304475784302,
+      "response_bytes": 56711
+    },
+    {
+      "step": 147,
+      "response_ce": 0.937218427658081,
+      "loss": 0.937218427658081,
+      "gradient_norm": 0.5320987105369568,
+      "response_bytes": 57107
+    },
+    {
+      "step": 148,
+      "response_ce": 0.9688161015510559,
+      "loss": 0.9688161015510559,
+      "gradient_norm": 0.6639193892478943,
+      "response_bytes": 57486
+    },
+    {
+      "step": 149,
+      "response_ce": 0.9476329684257507,
+      "loss": 0.9476329684257507,
+      "gradient_norm": 0.4964141547679901,
+      "response_bytes": 57869
+    },
+    {
+      "step": 150,
+      "response_ce": 0.9558508396148682,
+      "loss": 0.9558508396148682,
+      "gradient_norm": 0.5038163661956787,
+      "response_bytes": 58243
+    },
+    {
+      "step": 151,
+      "response_ce": 0.908791184425354,
+      "loss": 0.908791184425354,
+      "gradient_norm": 0.5791592001914978,
+      "response_bytes": 58635
+    },
+    {
+      "step": 152,
+      "response_ce": 0.9430485367774963,
+      "loss": 0.9430485367774963,
+      "gradient_norm": 0.5761834383010864,
+      "response_bytes": 59014
+    },
+    {
+      "step": 153,
+      "response_ce": 0.9245844483375549,
+      "loss": 0.9245844483375549,
+      "gradient_norm": 0.5106076598167419,
+      "response_bytes": 59402
+    },
+    {
+      "step": 154,
+      "response_ce": 0.9402079582214355,
+      "loss": 0.9402079582214355,
+      "gradient_norm": 0.5608536005020142,
+      "response_bytes": 59785
+    },
+    {
+      "step": 155,
+      "response_ce": 0.9176804423332214,
+      "loss": 0.9176804423332214,
+      "gradient_norm": 0.40843328833580017,
+      "response_bytes": 60171
+    },
+    {
+      "step": 156,
+      "response_ce": 0.904883623123169,
+      "loss": 0.904883623123169,
+      "gradient_norm": 0.482272744178772,
+      "response_bytes": 60549
+    },
+    {
+      "step": 157,
+      "response_ce": 0.893500804901123,
+      "loss": 0.893500804901123,
+      "gradient_norm": 0.48951980471611023,
+      "response_bytes": 60930
+    },
+    {
+      "step": 158,
+      "response_ce": 0.8825688362121582,
+      "loss": 0.8825688362121582,
+      "gradient_norm": 0.4939723610877991,
+      "response_bytes": 61315
+    },
+    {
+      "step": 159,
+      "response_ce": 0.88482266664505,
+      "loss": 0.88482266664505,
+      "gradient_norm": 0.40634891390800476,
+      "response_bytes": 61691
+    },
+    {
+      "step": 160,
+      "response_ce": 0.8680551648139954,
+      "loss": 0.8680551648139954,
+      "gradient_norm": 0.5709190964698792,
+      "response_bytes": 62089
+    },
+    {
+      "step": 161,
+      "response_ce": 0.8758839964866638,
+      "loss": 0.8758839964866638,
+      "gradient_norm": 0.4800410270690918,
+      "response_bytes": 62480
+    },
+    {
+      "step": 162,
+      "response_ce": 0.8987672328948975,
+      "loss": 0.8987672328948975,
+      "gradient_norm": 0.6055423617362976,
+      "response_bytes": 62868
+    },
+    {
+      "step": 163,
+      "response_ce": 0.8692562580108643,
+      "loss": 0.8692562580108643,
+      "gradient_norm": 0.5506557822227478,
+      "response_bytes": 63257
+    },
+    {
+      "step": 164,
+      "response_ce": 0.8595213294029236,
+      "loss": 0.8595213294029236,
+      "gradient_norm": 0.6469751000404358,
+      "response_bytes": 63632
+    },
+    {
+      "step": 165,
+      "response_ce": 0.8417783975601196,
+      "loss": 0.8417783975601196,
+      "gradient_norm": 0.4839071035385132,
+      "response_bytes": 64023
+    },
+    {
+      "step": 166,
+      "response_ce": 0.8694489598274231,
+      "loss": 0.8694489598274231,
+      "gradient_norm": 0.5510296821594238,
+      "response_bytes": 64402
+    },
+    {
+      "step": 167,
+      "response_ce": 0.8537635803222656,
+      "loss": 0.8537635803222656,
+      "gradient_norm": 0.40619781613349915,
+      "response_bytes": 64789
+    },
+    {
+      "step": 168,
+      "response_ce": 0.8403881192207336,
+      "loss": 0.8403881192207336,
+      "gradient_norm": 0.4774852693080902,
+      "response_bytes": 65177
+    },
+    {
+      "step": 169,
+      "response_ce": 0.8246079683303833,
+      "loss": 0.8246079683303833,
+      "gradient_norm": 0.4448496103286743,
+      "response_bytes": 65567
+    },
+    {
+      "step": 170,
+      "response_ce": 0.8197944760322571,
+      "loss": 0.8197944760322571,
+      "gradient_norm": 0.45265993475914,
+      "response_bytes": 65955
+    },
+    {
+      "step": 171,
+      "response_ce": 0.8143620491027832,
+      "loss": 0.8143620491027832,
+      "gradient_norm": 0.44493553042411804,
+      "response_bytes": 66345
+    },
+    {
+      "step": 172,
+      "response_ce": 0.7889017462730408,
+      "loss": 0.7889017462730408,
+      "gradient_norm": 0.4785560369491577,
+      "response_bytes": 66733
+    },
+    {
+      "step": 173,
+      "response_ce": 0.8154657483100891,
+      "loss": 0.8154657483100891,
+      "gradient_norm": 0.4957102835178375,
+      "response_bytes": 67135
+    },
+    {
+      "step": 174,
+      "response_ce": 0.794596791267395,
+      "loss": 0.794596791267395,
+      "gradient_norm": 0.40312156081199646,
+      "response_bytes": 67512
+    },
+    {
+      "step": 175,
+      "response_ce": 0.7838435173034668,
+      "loss": 0.7838435173034668,
+      "gradient_norm": 0.45034974813461304,
+      "response_bytes": 67892
+    },
+    {
+      "step": 176,
+      "response_ce": 0.8020056486129761,
+      "loss": 0.8020056486129761,
+      "gradient_norm": 0.4717162847518921,
+      "response_bytes": 68271
+    },
+    {
+      "step": 177,
+      "response_ce": 0.7845279574394226,
+      "loss": 0.7845279574394226,
+      "gradient_norm": 0.5171582698822021,
+      "response_bytes": 68647
+    },
+    {
+      "step": 178,
+      "response_ce": 0.7635699510574341,
+      "loss": 0.7635699510574341,
+      "gradient_norm": 0.5003920793533325,
+      "response_bytes": 69038
+    },
+    {
+      "step": 179,
+      "response_ce": 0.7973338961601257,
+      "loss": 0.7973338961601257,
+      "gradient_norm": 0.5127047896385193,
+      "response_bytes": 69425
+    },
+    {
+      "step": 180,
+      "response_ce": 0.7808417677879333,
+      "loss": 0.7808417677879333,
+      "gradient_norm": 0.5586937665939331,
+      "response_bytes": 69812
+    },
+    {
+      "step": 181,
+      "response_ce": 0.7384912967681885,
+      "loss": 0.7384912967681885,
+      "gradient_norm": 0.43354809284210205,
+      "response_bytes": 70195
+    },
+    {
+      "step": 182,
+      "response_ce": 0.7500517964363098,
+      "loss": 0.7500517964363098,
+      "gradient_norm": 0.4289676547050476,
+      "response_bytes": 70599
+    },
+    {
+      "step": 183,
+      "response_ce": 0.7682297229766846,
+      "loss": 0.7682297229766846,
+      "gradient_norm": 0.41365721821784973,
+      "response_bytes": 70981
+    },
+    {
+      "step": 184,
+      "response_ce": 0.7286691069602966,
+      "loss": 0.7286691069602966,
+      "gradient_norm": 0.3651532530784607,
+      "response_bytes": 71360
+    },
+    {
+      "step": 185,
+      "response_ce": 0.7426601052284241,
+      "loss": 0.7426601052284241,
+      "gradient_norm": 0.46450966596603394,
+      "response_bytes": 71749
+    },
+    {
+      "step": 186,
+      "response_ce": 0.7327404618263245,
+      "loss": 0.7327404618263245,
+      "gradient_norm": 0.4042160212993622,
+      "response_bytes": 72126
+    },
+    {
+      "step": 187,
+      "response_ce": 0.7251307368278503,
+      "loss": 0.7251307368278503,
+      "gradient_norm": 0.45680007338523865,
+      "response_bytes": 72505
+    },
+    {
+      "step": 188,
+      "response_ce": 0.7335727214813232,
+      "loss": 0.7335727214813232,
+      "gradient_norm": 0.36301755905151367,
+      "response_bytes": 72889
+    },
+    {
+      "step": 189,
+      "response_ce": 0.7298416495323181,
+      "loss": 0.7298416495323181,
+      "gradient_norm": 0.36909356713294983,
+      "response_bytes": 73284
+    },
+    {
+      "step": 190,
+      "response_ce": 0.7079753279685974,
+      "loss": 0.7079753279685974,
+      "gradient_norm": 0.3854202926158905,
+      "response_bytes": 73668
+    },
+    {
+      "step": 191,
+      "response_ce": 0.7141381502151489,
+      "loss": 0.7141381502151489,
+      "gradient_norm": 0.4666837453842163,
+      "response_bytes": 74047
+    },
+    {
+      "step": 192,
+      "response_ce": 0.7151277661323547,
+      "loss": 0.7151277661323547,
+      "gradient_norm": 0.40532466769218445,
+      "response_bytes": 74429
+    },
+    {
+      "step": 193,
+      "response_ce": 0.7034792900085449,
+      "loss": 0.7034792900085449,
+      "gradient_norm": 0.34885290265083313,
+      "response_bytes": 74808
+    },
+    {
+      "step": 194,
+      "response_ce": 0.6818413138389587,
+      "loss": 0.6818413138389587,
+      "gradient_norm": 0.4207506775856018,
+      "response_bytes": 75198
+    },
+    {
+      "step": 195,
+      "response_ce": 0.6842923164367676,
+      "loss": 0.6842923164367676,
+      "gradient_norm": 0.5234374403953552,
+      "response_bytes": 75592
+    },
+    {
+      "step": 196,
+      "response_ce": 0.7063960433006287,
+      "loss": 0.7063960433006287,
+      "gradient_norm": 0.5708968043327332,
+      "response_bytes": 75991
+    },
+    {
+      "step": 197,
+      "response_ce": 0.6750620603561401,
+      "loss": 0.6750620603561401,
+      "gradient_norm": 0.3975110948085785,
+      "response_bytes": 76379
+    },
+    {
+      "step": 198,
+      "response_ce": 0.6835085153579712,
+      "loss": 0.6835085153579712,
+      "gradient_norm": 0.49940982460975647,
+      "response_bytes": 76755
+    },
+    {
+      "step": 199,
+      "response_ce": 0.6811138391494751,
+      "loss": 0.6811138391494751,
+      "gradient_norm": 0.5115371942520142,
+      "response_bytes": 77144
+    },
+    {
+      "step": 200,
+      "response_ce": 0.6978328227996826,
+      "loss": 0.6978328227996826,
+      "gradient_norm": 0.5385419130325317,
+      "response_bytes": 77528
+    },
+    {
+      "step": 201,
+      "response_ce": 0.668983519077301,
+      "loss": 0.668983519077301,
+      "gradient_norm": 0.3992631435394287,
+      "response_bytes": 77925
+    },
+    {
+      "step": 202,
+      "response_ce": 0.6689438223838806,
+      "loss": 0.6689438223838806,
+      "gradient_norm": 0.3618548512458801,
+      "response_bytes": 78316
+    },
+    {
+      "step": 203,
+      "response_ce": 0.6774288415908813,
+      "loss": 0.6774288415908813,
+      "gradient_norm": 0.4143725335597992,
+      "response_bytes": 78710
+    },
+    {
+      "step": 204,
+      "response_ce": 0.6496357321739197,
+      "loss": 0.6496357321739197,
+      "gradient_norm": 0.48725783824920654,
+      "response_bytes": 79098
+    },
+    {
+      "step": 205,
+      "response_ce": 0.6761865615844727,
+      "loss": 0.6761865615844727,
+      "gradient_norm": 0.5061801075935364,
+      "response_bytes": 79483
+    },
+    {
+      "step": 206,
+      "response_ce": 0.6849921345710754,
+      "loss": 0.6849921345710754,
+      "gradient_norm": 0.6507216095924377,
+      "response_bytes": 79889
+    },
+    {
+      "step": 207,
+      "response_ce": 0.6673206090927124,
+      "loss": 0.6673206090927124,
+      "gradient_norm": 0.5063298940658569,
+      "response_bytes": 80285
+    },
+    {
+      "step": 208,
+      "response_ce": 0.6614511609077454,
+      "loss": 0.6614511609077454,
+      "gradient_norm": 0.35609886050224304,
+      "response_bytes": 80677
+    },
+    {
+      "step": 209,
+      "response_ce": 0.6571041941642761,
+      "loss": 0.6571041941642761,
+      "gradient_norm": 0.4462851583957672,
+      "response_bytes": 81062
+    },
+    {
+      "step": 210,
+      "response_ce": 0.6347908973693848,
+      "loss": 0.6347908973693848,
+      "gradient_norm": 0.4797839820384979,
+      "response_bytes": 81446
+    },
+    {
+      "step": 211,
+      "response_ce": 0.6317615509033203,
+      "loss": 0.6317615509033203,
+      "gradient_norm": 0.4435044527053833,
+      "response_bytes": 81841
+    },
+    {
+      "step": 212,
+      "response_ce": 0.6471684575080872,
+      "loss": 0.6471684575080872,
+      "gradient_norm": 0.4887272119522095,
+      "response_bytes": 82228
+    },
+    {
+      "step": 213,
+      "response_ce": 0.6354461908340454,
+      "loss": 0.6354461908340454,
+      "gradient_norm": 0.3458825945854187,
+      "response_bytes": 82618
+    },
+    {
+      "step": 214,
+      "response_ce": 0.6113494038581848,
+      "loss": 0.6113494038581848,
+      "gradient_norm": 0.5178123116493225,
+      "response_bytes": 83030
+    },
+    {
+      "step": 215,
+      "response_ce": 0.632678747177124,
+      "loss": 0.632678747177124,
+      "gradient_norm": 0.3960718512535095,
+      "response_bytes": 83425
+    },
+    {
+      "step": 216,
+      "response_ce": 0.619459331035614,
+      "loss": 0.619459331035614,
+      "gradient_norm": 0.470974326133728,
+      "response_bytes": 83801
+    },
+    {
+      "step": 217,
+      "response_ce": 0.6395884156227112,
+      "loss": 0.6395884156227112,
+      "gradient_norm": 0.5672810673713684,
+      "response_bytes": 84182
+    },
+    {
+      "step": 218,
+      "response_ce": 0.6030648946762085,
+      "loss": 0.6030648946762085,
+      "gradient_norm": 0.5159987807273865,
+      "response_bytes": 84571
+    },
+    {
+      "step": 219,
+      "response_ce": 0.608249843120575,
+      "loss": 0.608249843120575,
+      "gradient_norm": 0.3757982552051544,
+      "response_bytes": 84968
+    },
+    {
+      "step": 220,
+      "response_ce": 0.6018233895301819,
+      "loss": 0.6018233895301819,
+      "gradient_norm": 0.4876428544521332,
+      "response_bytes": 85365
+    },
+    {
+      "step": 221,
+      "response_ce": 0.6264100074768066,
+      "loss": 0.6264100074768066,
+      "gradient_norm": 0.4876972734928131,
+      "response_bytes": 85743
+    },
+    {
+      "step": 222,
+      "response_ce": 0.6073132157325745,
+      "loss": 0.6073132157325745,
+      "gradient_norm": 0.4137285053730011,
+      "response_bytes": 86124
+    },
+    {
+      "step": 223,
+      "response_ce": 0.6001556515693665,
+      "loss": 0.6001556515693665,
+      "gradient_norm": 0.473007470369339,
+      "response_bytes": 86519
+    },
+    {
+      "step": 224,
+      "response_ce": 0.607966423034668,
+      "loss": 0.607966423034668,
+      "gradient_norm": 0.3605653643608093,
+      "response_bytes": 86901
+    },
+    {
+      "step": 225,
+      "response_ce": 0.5918594598770142,
+      "loss": 0.5918594598770142,
+      "gradient_norm": 0.44238176941871643,
+      "response_bytes": 87289
+    },
+    {
+      "step": 226,
+      "response_ce": 0.6082355380058289,
+      "loss": 0.6082355380058289,
+      "gradient_norm": 0.3509575426578522,
+      "response_bytes": 87674
+    },
+    {
+      "step": 227,
+      "response_ce": 0.6174032688140869,
+      "loss": 0.6174032688140869,
+      "gradient_norm": 0.45376908779144287,
+      "response_bytes": 88058
+    },
+    {
+      "step": 228,
+      "response_ce": 0.5997403264045715,
+      "loss": 0.5997403264045715,
+      "gradient_norm": 0.5366404056549072,
+      "response_bytes": 88432
+    },
+    {
+      "step": 229,
+      "response_ce": 0.6098508834838867,
+      "loss": 0.6098508834838867,
+      "gradient_norm": 0.4497579336166382,
+      "response_bytes": 88818
+    },
+    {
+      "step": 230,
+      "response_ce": 0.5918075442314148,
+      "loss": 0.5918075442314148,
+      "gradient_norm": 0.4304448962211609,
+      "response_bytes": 89207
+    },
+    {
+      "step": 231,
+      "response_ce": 0.5776951909065247,
+      "loss": 0.5776951909065247,
+      "gradient_norm": 0.4694811999797821,
+      "response_bytes": 89598
+    },
+    {
+      "step": 232,
+      "response_ce": 0.5678364634513855,
+      "loss": 0.5678364634513855,
+      "gradient_norm": 0.4926449656486511,
+      "response_bytes": 89991
+    },
+    {
+      "step": 233,
+      "response_ce": 0.568609893321991,
+      "loss": 0.568609893321991,
+      "gradient_norm": 0.37131500244140625,
+      "response_bytes": 90386
+    },
+    {
+      "step": 234,
+      "response_ce": 0.5783593654632568,
+      "loss": 0.5783593654632568,
+      "gradient_norm": 0.43932417035102844,
+      "response_bytes": 90768
+    },
+    {
+      "step": 235,
+      "response_ce": 0.5846350789070129,
+      "loss": 0.5846350789070129,
+      "gradient_norm": 0.5320694446563721,
+      "response_bytes": 91155
+    },
+    {
+      "step": 236,
+      "response_ce": 0.5930623412132263,
+      "loss": 0.5930623412132263,
+      "gradient_norm": 0.46356821060180664,
+      "response_bytes": 91537
+    },
+    {
+      "step": 237,
+      "response_ce": 0.5927066206932068,
+      "loss": 0.5927066206932068,
+      "gradient_norm": 0.4617587924003601,
+      "response_bytes": 91913
+    },
+    {
+      "step": 238,
+      "response_ce": 0.5613127946853638,
+      "loss": 0.5613127946853638,
+      "gradient_norm": 0.4669837951660156,
+      "response_bytes": 92289
+    },
+    {
+      "step": 239,
+      "response_ce": 0.5441129207611084,
+      "loss": 0.5441129207611084,
+      "gradient_norm": 0.410083144903183,
+      "response_bytes": 92685
+    },
+    {
+      "step": 240,
+      "response_ce": 0.5575969219207764,
+      "loss": 0.5575969219207764,
+      "gradient_norm": 0.42575767636299133,
+      "response_bytes": 93073
+    },
+    {
+      "step": 241,
+      "response_ce": 0.5490456223487854,
+      "loss": 0.5490456223487854,
+      "gradient_norm": 0.4383569657802582,
+      "response_bytes": 93462
+    },
+    {
+      "step": 242,
+      "response_ce": 0.5778728723526001,
+      "loss": 0.5778728723526001,
+      "gradient_norm": 0.388614296913147,
+      "response_bytes": 93853
+    },
+    {
+      "step": 243,
+      "response_ce": 0.5652194023132324,
+      "loss": 0.5652194023132324,
+      "gradient_norm": 0.4202761650085449,
+      "response_bytes": 94240
+    },
+    {
+      "step": 244,
+      "response_ce": 0.5695745944976807,
+      "loss": 0.5695745944976807,
+      "gradient_norm": 0.37396547198295593,
+      "response_bytes": 94625
+    },
+    {
+      "step": 245,
+      "response_ce": 0.5639891624450684,
+      "loss": 0.5639891624450684,
+      "gradient_norm": 0.48074957728385925,
+      "response_bytes": 95007
+    },
+    {
+      "step": 246,
+      "response_ce": 0.5724647045135498,
+      "loss": 0.5724647045135498,
+      "gradient_norm": 0.510571300983429,
+      "response_bytes": 95398
+    },
+    {
+      "step": 247,
+      "response_ce": 0.5263992547988892,
+      "loss": 0.5263992547988892,
+      "gradient_norm": 0.42825189232826233,
+      "response_bytes": 95796
+    },
+    {
+      "step": 248,
+      "response_ce": 0.5479358434677124,
+      "loss": 0.5479358434677124,
+      "gradient_norm": 0.3829731047153473,
+      "response_bytes": 96181
+    },
+    {
+      "step": 249,
+      "response_ce": 0.5307691693305969,
+      "loss": 0.5307691693305969,
+      "gradient_norm": 0.34476107358932495,
+      "response_bytes": 96573
+    },
+    {
+      "step": 250,
+      "response_ce": 0.5516574382781982,
+      "loss": 0.5516574382781982,
+      "gradient_norm": 0.4626064896583557,
+      "response_bytes": 96956
+    },
+    {
+      "step": 251,
+      "response_ce": 0.5412017703056335,
+      "loss": 0.5412017703056335,
+      "gradient_norm": 0.42278334498405457,
+      "response_bytes": 97345
+    },
+    {
+      "step": 252,
+      "response_ce": 0.5430445671081543,
+      "loss": 0.5430445671081543,
+      "gradient_norm": 0.5028188228607178,
+      "response_bytes": 97728
+    },
+    {
+      "step": 253,
+      "response_ce": 0.5452204942703247,
+      "loss": 0.5452204942703247,
+      "gradient_norm": 0.45622655749320984,
+      "response_bytes": 98112
+    },
+    {
+      "step": 254,
+      "response_ce": 0.5541718006134033,
+      "loss": 0.5541718006134033,
+      "gradient_norm": 0.48411503434181213,
+      "response_bytes": 98506
+    },
+    {
+      "step": 255,
+      "response_ce": 0.5269780158996582,
+      "loss": 0.5269780158996582,
+      "gradient_norm": 0.48849183320999146,
+      "response_bytes": 98884
+    },
+    {
+      "step": 256,
+      "response_ce": 0.5446764826774597,
+      "loss": 0.5446764826774597,
+      "gradient_norm": 0.4599805176258087,
+      "response_bytes": 99257
+    },
+    {
+      "step": 257,
+      "response_ce": 0.5224772691726685,
+      "loss": 0.5224772691726685,
+      "gradient_norm": 0.3339029550552368,
+      "response_bytes": 99647
+    },
+    {
+      "step": 258,
+      "response_ce": 0.5337314605712891,
+      "loss": 0.5337314605712891,
+      "gradient_norm": 0.4101262092590332,
+      "response_bytes": 100032
+    },
+    {
+      "step": 259,
+      "response_ce": 0.5282622575759888,
+      "loss": 0.5282622575759888,
+      "gradient_norm": 0.5853952169418335,
+      "response_bytes": 100421
+    },
+    {
+      "step": 260,
+      "response_ce": 0.5375948548316956,
+      "loss": 0.5375948548316956,
+      "gradient_norm": 0.4080914258956909,
+      "response_bytes": 100810
+    },
+    {
+      "step": 261,
+      "response_ce": 0.5283938646316528,
+      "loss": 0.5283938646316528,
+      "gradient_norm": 0.491327702999115,
+      "response_bytes": 101196
+    },
+    {
+      "step": 262,
+      "response_ce": 0.5145353078842163,
+      "loss": 0.5145353078842163,
+      "gradient_norm": 0.4080076217651367,
+      "response_bytes": 101585
+    },
+    {
+      "step": 263,
+      "response_ce": 0.5097619891166687,
+      "loss": 0.5097619891166687,
+      "gradient_norm": 0.42450156807899475,
+      "response_bytes": 101979
+    },
+    {
+      "step": 264,
+      "response_ce": 0.5214101672172546,
+      "loss": 0.5214101672172546,
+      "gradient_norm": 0.4540539085865021,
+      "response_bytes": 102360
+    },
+    {
+      "step": 265,
+      "response_ce": 0.5201141238212585,
+      "loss": 0.5201141238212585,
+      "gradient_norm": 0.49952614307403564,
+      "response_bytes": 102751
+    },
+    {
+      "step": 266,
+      "response_ce": 0.5214931964874268,
+      "loss": 0.5214931964874268,
+      "gradient_norm": 0.572009265422821,
+      "response_bytes": 103136
+    },
+    {
+      "step": 267,
+      "response_ce": 0.5028285384178162,
+      "loss": 0.5028285384178162,
+      "gradient_norm": 0.41193538904190063,
+      "response_bytes": 103523
+    },
+    {
+      "step": 268,
+      "response_ce": 0.5089988708496094,
+      "loss": 0.5089988708496094,
+      "gradient_norm": 0.43543556332588196,
+      "response_bytes": 103907
+    },
+    {
+      "step": 269,
+      "response_ce": 0.4991845488548279,
+      "loss": 0.4991845488548279,
+      "gradient_norm": 0.4478776156902313,
+      "response_bytes": 104287
+    },
+    {
+      "step": 270,
+      "response_ce": 0.5067307353019714,
+      "loss": 0.5067307353019714,
+      "gradient_norm": 0.3023839592933655,
+      "response_bytes": 104673
+    },
+    {
+      "step": 271,
+      "response_ce": 0.488476425409317,
+      "loss": 0.488476425409317,
+      "gradient_norm": 0.38439449667930603,
+      "response_bytes": 105070
+    },
+    {
+      "step": 272,
+      "response_ce": 0.5202100276947021,
+      "loss": 0.5202100276947021,
+      "gradient_norm": 0.4255066514015198,
+      "response_bytes": 105441
+    },
+    {
+      "step": 273,
+      "response_ce": 0.518714189529419,
+      "loss": 0.518714189529419,
+      "gradient_norm": 0.45402875542640686,
+      "response_bytes": 105819
+    },
+    {
+      "step": 274,
+      "response_ce": 0.4970196485519409,
+      "loss": 0.4970196485519409,
+      "gradient_norm": 0.5243133902549744,
+      "response_bytes": 106227
+    },
+    {
+      "step": 275,
+      "response_ce": 0.49660229682922363,
+      "loss": 0.49660229682922363,
+      "gradient_norm": 0.378755658864975,
+      "response_bytes": 106611
+    },
+    {
+      "step": 276,
+      "response_ce": 0.4858517646789551,
+      "loss": 0.4858517646789551,
+      "gradient_norm": 0.5225079655647278,
+      "response_bytes": 107005
+    },
+    {
+      "step": 277,
+      "response_ce": 0.49008938670158386,
+      "loss": 0.49008938670158386,
+      "gradient_norm": 0.41480782628059387,
+      "response_bytes": 107398
+    },
+    {
+      "step": 278,
+      "response_ce": 0.518047571182251,
+      "loss": 0.518047571182251,
+      "gradient_norm": 0.5167219042778015,
+      "response_bytes": 107789
+    },
+    {
+      "step": 279,
+      "response_ce": 0.501629114151001,
+      "loss": 0.501629114151001,
+      "gradient_norm": 0.4441925883293152,
+      "response_bytes": 108168
+    },
+    {
+      "step": 280,
+      "response_ce": 0.48533517122268677,
+      "loss": 0.48533517122268677,
+      "gradient_norm": 0.36639484763145447,
+      "response_bytes": 108555
+    },
+    {
+      "step": 281,
+      "response_ce": 0.4696767032146454,
+      "loss": 0.4696767032146454,
+      "gradient_norm": 0.3245720863342285,
+      "response_bytes": 108951
+    },
+    {
+      "step": 282,
+      "response_ce": 0.4830479323863983,
+      "loss": 0.4830479323863983,
+      "gradient_norm": 0.44628745317459106,
+      "response_bytes": 109334
+    },
+    {
+      "step": 283,
+      "response_ce": 0.4806959629058838,
+      "loss": 0.4806959629058838,
+      "gradient_norm": 0.3521871566772461,
+      "response_bytes": 109720
+    },
+    {
+      "step": 284,
+      "response_ce": 0.5020939707756042,
+      "loss": 0.5020939707756042,
+      "gradient_norm": 0.46479880809783936,
+      "response_bytes": 110109
+    },
+    {
+      "step": 285,
+      "response_ce": 0.5115026235580444,
+      "loss": 0.5115026235580444,
+      "gradient_norm": 0.35986950993537903,
+      "response_bytes": 110496
+    },
+    {
+      "step": 286,
+      "response_ce": 0.4807805120944977,
+      "loss": 0.4807805120944977,
+      "gradient_norm": 0.3388887345790863,
+      "response_bytes": 110887
+    },
+    {
+      "step": 287,
+      "response_ce": 0.47240859270095825,
+      "loss": 0.47240859270095825,
+      "gradient_norm": 0.4267059862613678,
+      "response_bytes": 111277
+    },
+    {
+      "step": 288,
+      "response_ce": 0.49316585063934326,
+      "loss": 0.49316585063934326,
+      "gradient_norm": 0.4348902106285095,
+      "response_bytes": 111650
+    },
+    {
+      "step": 289,
+      "response_ce": 0.46294960379600525,
+      "loss": 0.46294960379600525,
+      "gradient_norm": 0.3373779058456421,
+      "response_bytes": 112052
+    },
+    {
+      "step": 290,
+      "response_ce": 0.47915902733802795,
+      "loss": 0.47915902733802795,
+      "gradient_norm": 0.5026087164878845,
+      "response_bytes": 112448
+    },
+    {
+      "step": 291,
+      "response_ce": 0.4715762734413147,
+      "loss": 0.4715762734413147,
+      "gradient_norm": 0.32378244400024414,
+      "response_bytes": 112829
+    },
+    {
+      "step": 292,
+      "response_ce": 0.4825536608695984,
+      "loss": 0.4825536608695984,
+      "gradient_norm": 0.3878931403160095,
+      "response_bytes": 113225
+    },
+    {
+      "step": 293,
+      "response_ce": 0.49141159653663635,
+      "loss": 0.49141159653663635,
+      "gradient_norm": 0.38468101620674133,
+      "response_bytes": 113609
+    },
+    {
+      "step": 294,
+      "response_ce": 0.46606147289276123,
+      "loss": 0.46606147289276123,
+      "gradient_norm": 0.34456127882003784,
+      "response_bytes": 114005
+    },
+    {
+      "step": 295,
+      "response_ce": 0.4737425446510315,
+      "loss": 0.4737425446510315,
+      "gradient_norm": 0.5208141803741455,
+      "response_bytes": 114398
+    },
+    {
+      "step": 296,
+      "response_ce": 0.48519349098205566,
+      "loss": 0.48519349098205566,
+      "gradient_norm": 0.4836704730987549,
+      "response_bytes": 114783
+    },
+    {
+      "step": 297,
+      "response_ce": 0.4852549135684967,
+      "loss": 0.4852549135684967,
+      "gradient_norm": 0.5793923735618591,
+      "response_bytes": 115161
+    },
+    {
+      "step": 298,
+      "response_ce": 0.4545876383781433,
+      "loss": 0.4545876383781433,
+      "gradient_norm": 0.45437929034233093,
+      "response_bytes": 115555
+    },
+    {
+      "step": 299,
+      "response_ce": 0.47475579380989075,
+      "loss": 0.47475579380989075,
+      "gradient_norm": 0.5400330424308777,
+      "response_bytes": 115933
+    },
+    {
+      "step": 300,
+      "response_ce": 0.44146203994750977,
+      "loss": 0.44146203994750977,
+      "gradient_norm": 0.4464462101459503,
+      "response_bytes": 116340
+    },
+    {
+      "step": 301,
+      "response_ce": 0.4700068235397339,
+      "loss": 0.4700068235397339,
+      "gradient_norm": 0.41705232858657837,
+      "response_bytes": 116721
+    },
+    {
+      "step": 302,
+      "response_ce": 0.4635396897792816,
+      "loss": 0.4635396897792816,
+      "gradient_norm": 0.41732513904571533,
+      "response_bytes": 117115
+    },
+    {
+      "step": 303,
+      "response_ce": 0.4564815163612366,
+      "loss": 0.4564815163612366,
+      "gradient_norm": 0.4107033610343933,
+      "response_bytes": 117519
+    },
+    {
+      "step": 304,
+      "response_ce": 0.47135478258132935,
+      "loss": 0.47135478258132935,
+      "gradient_norm": 0.36165526509284973,
+      "response_bytes": 117915
+    },
+    {
+      "step": 305,
+      "response_ce": 0.4838238060474396,
+      "loss": 0.4838238060474396,
+      "gradient_norm": 0.3941996693611145,
+      "response_bytes": 118299
+    },
+    {
+      "step": 306,
+      "response_ce": 0.4728828966617584,
+      "loss": 0.4728828966617584,
+      "gradient_norm": 0.31180137395858765,
+      "response_bytes": 118679
+    },
+    {
+      "step": 307,
+      "response_ce": 0.4660365581512451,
+      "loss": 0.4660365581512451,
+      "gradient_norm": 0.32431715726852417,
+      "response_bytes": 119061
+    },
+    {
+      "step": 308,
+      "response_ce": 0.47545546293258667,
+      "loss": 0.47545546293258667,
+      "gradient_norm": 0.4613497257232666,
+      "response_bytes": 119442
+    },
+    {
+      "step": 309,
+      "response_ce": 0.45736584067344666,
+      "loss": 0.45736584067344666,
+      "gradient_norm": 0.4052201807498932,
+      "response_bytes": 119826
+    },
+    {
+      "step": 310,
+      "response_ce": 0.4707919955253601,
+      "loss": 0.4707919955253601,
+      "gradient_norm": 0.3871065080165863,
+      "response_bytes": 120213
+    },
+    {
+      "step": 311,
+      "response_ce": 0.44514912366867065,
+      "loss": 0.44514912366867065,
+      "gradient_norm": 0.3953101634979248,
+      "response_bytes": 120603
+    },
+    {
+      "step": 312,
+      "response_ce": 0.4534604549407959,
+      "loss": 0.4534604549407959,
+      "gradient_norm": 0.43016669154167175,
+      "response_bytes": 120977
+    },
+    {
+      "step": 313,
+      "response_ce": 0.44809865951538086,
+      "loss": 0.44809865951538086,
+      "gradient_norm": 0.43965423107147217,
+      "response_bytes": 121374
+    },
+    {
+      "step": 314,
+      "response_ce": 0.452202171087265,
+      "loss": 0.452202171087265,
+      "gradient_norm": 0.3048610985279083,
+      "response_bytes": 121752
+    },
+    {
+      "step": 315,
+      "response_ce": 0.4438944458961487,
+      "loss": 0.4438944458961487,
+      "gradient_norm": 0.39846253395080566,
+      "response_bytes": 122131
+    },
+    {
+      "step": 316,
+      "response_ce": 0.45961833000183105,
+      "loss": 0.45961833000183105,
+      "gradient_norm": 0.3779534101486206,
+      "response_bytes": 122510
+    },
+    {
+      "step": 317,
+      "response_ce": 0.4583963453769684,
+      "loss": 0.4583963453769684,
+      "gradient_norm": 0.36941444873809814,
+      "response_bytes": 122890
+    },
+    {
+      "step": 318,
+      "response_ce": 0.4588056802749634,
+      "loss": 0.4588056802749634,
+      "gradient_norm": 0.4149859547615051,
+      "response_bytes": 123278
+    },
+    {
+      "step": 319,
+      "response_ce": 0.450654000043869,
+      "loss": 0.450654000043869,
+      "gradient_norm": 0.3372825086116791,
+      "response_bytes": 123660
+    },
+    {
+      "step": 320,
+      "response_ce": 0.45539185404777527,
+      "loss": 0.45539185404777527,
+      "gradient_norm": 0.4058116376399994,
+      "response_bytes": 124053
+    },
+    {
+      "step": 321,
+      "response_ce": 0.4527701139450073,
+      "loss": 0.4527701139450073,
+      "gradient_norm": 0.48841068148612976,
+      "response_bytes": 124442
+    },
+    {
+      "step": 322,
+      "response_ce": 0.4525732696056366,
+      "loss": 0.4525732696056366,
+      "gradient_norm": 0.27625560760498047,
+      "response_bytes": 124827
+    },
+    {
+      "step": 323,
+      "response_ce": 0.43698376417160034,
+      "loss": 0.43698376417160034,
+      "gradient_norm": 0.36052370071411133,
+      "response_bytes": 125216
+    },
+    {
+      "step": 324,
+      "response_ce": 0.43701979517936707,
+      "loss": 0.43701979517936707,
+      "gradient_norm": 0.4181271195411682,
+      "response_bytes": 125609
+    },
+    {
+      "step": 325,
+      "response_ce": 0.42912301421165466,
+      "loss": 0.42912301421165466,
+      "gradient_norm": 0.32954657077789307,
+      "response_bytes": 125997
+    },
+    {
+      "step": 326,
+      "response_ce": 0.4450460970401764,
+      "loss": 0.4450460970401764,
+      "gradient_norm": 0.5918861031532288,
+      "response_bytes": 126393
+    },
+    {
+      "step": 327,
+      "response_ce": 0.4551108479499817,
+      "loss": 0.4551108479499817,
+      "gradient_norm": 0.3787320852279663,
+      "response_bytes": 126779
+    },
+    {
+      "step": 328,
+      "response_ce": 0.42277711629867554,
+      "loss": 0.42277711629867554,
+      "gradient_norm": 0.41631659865379333,
+      "response_bytes": 127167
+    },
+    {
+      "step": 329,
+      "response_ce": 0.4394041895866394,
+      "loss": 0.4394041895866394,
+      "gradient_norm": 0.3201431334018707,
+      "response_bytes": 127555
+    },
+    {
+      "step": 330,
+      "response_ce": 0.45375874638557434,
+      "loss": 0.45375874638557434,
+      "gradient_norm": 0.44743213057518005,
+      "response_bytes": 127937
+    },
+    {
+      "step": 331,
+      "response_ce": 0.43691980838775635,
+      "loss": 0.43691980838775635,
+      "gradient_norm": 0.37081027030944824,
+      "response_bytes": 128331
+    },
+    {
+      "step": 332,
+      "response_ce": 0.44231942296028137,
+      "loss": 0.44231942296028137,
+      "gradient_norm": 0.5532246232032776,
+      "response_bytes": 128720
+    },
+    {
+      "step": 333,
+      "response_ce": 0.4442056119441986,
+      "loss": 0.4442056119441986,
+      "gradient_norm": 0.5287264585494995,
+      "response_bytes": 129095
+    },
+    {
+      "step": 334,
+      "response_ce": 0.44282206892967224,
+      "loss": 0.44282206892967224,
+      "gradient_norm": 0.4301035404205322,
+      "response_bytes": 129477
+    },
+    {
+      "step": 335,
+      "response_ce": 0.45774564146995544,
+      "loss": 0.45774564146995544,
+      "gradient_norm": 0.4866691529750824,
+      "response_bytes": 129855
+    },
+    {
+      "step": 336,
+      "response_ce": 0.41717052459716797,
+      "loss": 0.41717052459716797,
+      "gradient_norm": 0.343761146068573,
+      "response_bytes": 130253
+    },
+    {
+      "step": 337,
+      "response_ce": 0.43432101607322693,
+      "loss": 0.43432101607322693,
+      "gradient_norm": 0.37344032526016235,
+      "response_bytes": 130638
+    },
+    {
+      "step": 338,
+      "response_ce": 0.41747531294822693,
+      "loss": 0.41747531294822693,
+      "gradient_norm": 0.33167141675949097,
+      "response_bytes": 131034
+    },
+    {
+      "step": 339,
+      "response_ce": 0.4358198940753937,
+      "loss": 0.4358198940753937,
+      "gradient_norm": 0.3908165395259857,
+      "response_bytes": 131422
+    },
+    {
+      "step": 340,
+      "response_ce": 0.4144171476364136,
+      "loss": 0.4144171476364136,
+      "gradient_norm": 0.3704698979854584,
+      "response_bytes": 131821
+    },
+    {
+      "step": 341,
+      "response_ce": 0.41265976428985596,
+      "loss": 0.41265976428985596,
+      "gradient_norm": 0.455929160118103,
+      "response_bytes": 132223
+    },
+    {
+      "step": 342,
+      "response_ce": 0.41613516211509705,
+      "loss": 0.41613516211509705,
+      "gradient_norm": 0.42148521542549133,
+      "response_bytes": 132619
+    },
+    {
+      "step": 343,
+      "response_ce": 0.4260539412498474,
+      "loss": 0.4260539412498474,
+      "gradient_norm": 0.33645138144493103,
+      "response_bytes": 133002
+    },
+    {
+      "step": 344,
+      "response_ce": 0.4294801354408264,
+      "loss": 0.4294801354408264,
+      "gradient_norm": 0.35449349880218506,
+      "response_bytes": 133402
+    },
+    {
+      "step": 345,
+      "response_ce": 0.4223578870296478,
+      "loss": 0.4223578870296478,
+      "gradient_norm": 0.4612714946269989,
+      "response_bytes": 133797
+    },
+    {
+      "step": 346,
+      "response_ce": 0.431486040353775,
+      "loss": 0.431486040353775,
+      "gradient_norm": 0.3635891377925873,
+      "response_bytes": 134186
+    },
+    {
+      "step": 347,
+      "response_ce": 0.4473874270915985,
+      "loss": 0.4473874270915985,
+      "gradient_norm": 0.4093911349773407,
+      "response_bytes": 134568
+    },
+    {
+      "step": 348,
+      "response_ce": 0.41038987040519714,
+      "loss": 0.41038987040519714,
+      "gradient_norm": 0.2705129384994507,
+      "response_bytes": 134958
+    },
+    {
+      "step": 349,
+      "response_ce": 0.41170427203178406,
+      "loss": 0.41170427203178406,
+      "gradient_norm": 0.33013197779655457,
+      "response_bytes": 135353
+    },
+    {
+      "step": 350,
+      "response_ce": 0.4072731137275696,
+      "loss": 0.4072731137275696,
+      "gradient_norm": 0.3526398241519928,
+      "response_bytes": 135751
+    },
+    {
+      "step": 351,
+      "response_ce": 0.41485297679901123,
+      "loss": 0.41485297679901123,
+      "gradient_norm": 0.3511386215686798,
+      "response_bytes": 136140
+    },
+    {
+      "step": 352,
+      "response_ce": 0.41172048449516296,
+      "loss": 0.41172048449516296,
+      "gradient_norm": 0.3402002453804016,
+      "response_bytes": 136533
+    },
+    {
+      "step": 353,
+      "response_ce": 0.41947484016418457,
+      "loss": 0.41947484016418457,
+      "gradient_norm": 0.40983667969703674,
+      "response_bytes": 136921
+    },
+    {
+      "step": 354,
+      "response_ce": 0.4072006940841675,
+      "loss": 0.4072006940841675,
+      "gradient_norm": 0.41998642683029175,
+      "response_bytes": 137309
+    },
+    {
+      "step": 355,
+      "response_ce": 0.39709004759788513,
+      "loss": 0.39709004759788513,
+      "gradient_norm": 0.34481048583984375,
+      "response_bytes": 137713
+    },
+    {
+      "step": 356,
+      "response_ce": 0.42256298661231995,
+      "loss": 0.42256298661231995,
+      "gradient_norm": 0.33004552125930786,
+      "response_bytes": 138098
+    },
+    {
+      "step": 357,
+      "response_ce": 0.4265603721141815,
+      "loss": 0.4265603721141815,
+      "gradient_norm": 0.5414658188819885,
+      "response_bytes": 138478
+    },
+    {
+      "step": 358,
+      "response_ce": 0.3960513174533844,
+      "loss": 0.3960513174533844,
+      "gradient_norm": 0.38690099120140076,
+      "response_bytes": 138886
+    },
+    {
+      "step": 359,
+      "response_ce": 0.4069749414920807,
+      "loss": 0.4069749414920807,
+      "gradient_norm": 0.36851397156715393,
+      "response_bytes": 139282
+    },
+    {
+      "step": 360,
+      "response_ce": 0.4008086025714874,
+      "loss": 0.4008086025714874,
+      "gradient_norm": 0.40953555703163147,
+      "response_bytes": 139681
+    },
+    {
+      "step": 361,
+      "response_ce": 0.405650794506073,
+      "loss": 0.405650794506073,
+      "gradient_norm": 0.4463319778442383,
+      "response_bytes": 140070
+    },
+    {
+      "step": 362,
+      "response_ce": 0.40702810883522034,
+      "loss": 0.40702810883522034,
+      "gradient_norm": 0.43752211332321167,
+      "response_bytes": 140468
+    },
+    {
+      "step": 363,
+      "response_ce": 0.40808701515197754,
+      "loss": 0.40808701515197754,
+      "gradient_norm": 0.33459869027137756,
+      "response_bytes": 140862
+    },
+    {
+      "step": 364,
+      "response_ce": 0.4018287658691406,
+      "loss": 0.4018287658691406,
+      "gradient_norm": 0.348050594329834,
+      "response_bytes": 141255
+    },
+    {
+      "step": 365,
+      "response_ce": 0.4253710210323334,
+      "loss": 0.4253710210323334,
+      "gradient_norm": 0.4095074534416199,
+      "response_bytes": 141646
+    },
+    {
+      "step": 366,
+      "response_ce": 0.40555474162101746,
+      "loss": 0.40555474162101746,
+      "gradient_norm": 0.34865787625312805,
+      "response_bytes": 142038
+    },
+    {
+      "step": 367,
+      "response_ce": 0.4112807810306549,
+      "loss": 0.4112807810306549,
+      "gradient_norm": 0.3716574013233185,
+      "response_bytes": 142428
+    },
+    {
+      "step": 368,
+      "response_ce": 0.3981100618839264,
+      "loss": 0.3981100618839264,
+      "gradient_norm": 0.35381677746772766,
+      "response_bytes": 142813
+    },
+    {
+      "step": 369,
+      "response_ce": 0.3916557729244232,
+      "loss": 0.3916557729244232,
+      "gradient_norm": 0.3665301203727722,
+      "response_bytes": 143213
+    },
+    {
+      "step": 370,
+      "response_ce": 0.3993126153945923,
+      "loss": 0.3993126153945923,
+      "gradient_norm": 0.31054818630218506,
+      "response_bytes": 143606
+    },
+    {
+      "step": 371,
+      "response_ce": 0.41391974687576294,
+      "loss": 0.41391974687576294,
+      "gradient_norm": 0.3097986876964569,
+      "response_bytes": 143995
+    },
+    {
+      "step": 372,
+      "response_ce": 0.42624765634536743,
+      "loss": 0.42624765634536743,
+      "gradient_norm": 0.414937287569046,
+      "response_bytes": 144374
+    },
+    {
+      "step": 373,
+      "response_ce": 0.4386412501335144,
+      "loss": 0.4386412501335144,
+      "gradient_norm": 0.5122780799865723,
+      "response_bytes": 144750
+    },
+    {
+      "step": 374,
+      "response_ce": 0.4123813211917877,
+      "loss": 0.4123813211917877,
+      "gradient_norm": 0.3548925518989563,
+      "response_bytes": 145143
+    },
+    {
+      "step": 375,
+      "response_ce": 0.4098232090473175,
+      "loss": 0.4098232090473175,
+      "gradient_norm": 0.41769176721572876,
+      "response_bytes": 145534
+    },
+    {
+      "step": 376,
+      "response_ce": 0.40831974148750305,
+      "loss": 0.40831974148750305,
+      "gradient_norm": 0.38120728731155396,
+      "response_bytes": 145921
+    },
+    {
+      "step": 377,
+      "response_ce": 0.40228188037872314,
+      "loss": 0.40228188037872314,
+      "gradient_norm": 0.4017380177974701,
+      "response_bytes": 146308
+    },
+    {
+      "step": 378,
+      "response_ce": 0.4074658751487732,
+      "loss": 0.4074658751487732,
+      "gradient_norm": 0.4326000213623047,
+      "response_bytes": 146699
+    },
+    {
+      "step": 379,
+      "response_ce": 0.3919062614440918,
+      "loss": 0.3919062614440918,
+      "gradient_norm": 0.32870322465896606,
+      "response_bytes": 147086
+    },
+    {
+      "step": 380,
+      "response_ce": 0.41499781608581543,
+      "loss": 0.41499781608581543,
+      "gradient_norm": 0.3673650920391083,
+      "response_bytes": 147476
+    },
+    {
+      "step": 381,
+      "response_ce": 0.4005674719810486,
+      "loss": 0.4005674719810486,
+      "gradient_norm": 0.40032637119293213,
+      "response_bytes": 147876
+    },
+    {
+      "step": 382,
+      "response_ce": 0.41943979263305664,
+      "loss": 0.41943979263305664,
+      "gradient_norm": 0.3228970468044281,
+      "response_bytes": 148262
+    },
+    {
+      "step": 383,
+      "response_ce": 0.40485596656799316,
+      "loss": 0.40485596656799316,
+      "gradient_norm": 0.3685605525970459,
+      "response_bytes": 148644
+    },
+    {
+      "step": 384,
+      "response_ce": 0.40396180748939514,
+      "loss": 0.40396180748939514,
+      "gradient_norm": 0.3349379897117615,
+      "response_bytes": 149039
+    },
+    {
+      "step": 385,
+      "response_ce": 0.40555575489997864,
+      "loss": 0.40555575489997864,
+      "gradient_norm": 0.44316503405570984,
+      "response_bytes": 149430
+    },
+    {
+      "step": 386,
+      "response_ce": 0.4059939980506897,
+      "loss": 0.4059939980506897,
+      "gradient_norm": 0.5022040605545044,
+      "response_bytes": 149829
+    },
+    {
+      "step": 387,
+      "response_ce": 0.40061435103416443,
+      "loss": 0.40061435103416443,
+      "gradient_norm": 0.3416954576969147,
+      "response_bytes": 150222
+    },
+    {
+      "step": 388,
+      "response_ce": 0.40502268075942993,
+      "loss": 0.40502268075942993,
+      "gradient_norm": 0.5884104371070862,
+      "response_bytes": 150601
+    },
+    {
+      "step": 389,
+      "response_ce": 0.39772483706474304,
+      "loss": 0.39772483706474304,
+      "gradient_norm": 0.3338032364845276,
+      "response_bytes": 150990
+    },
+    {
+      "step": 390,
+      "response_ce": 0.41318294405937195,
+      "loss": 0.41318294405937195,
+      "gradient_norm": 0.41874340176582336,
+      "response_bytes": 151365
+    },
+    {
+      "step": 391,
+      "response_ce": 0.390411376953125,
+      "loss": 0.390411376953125,
+      "gradient_norm": 0.37259411811828613,
+      "response_bytes": 151758
+    },
+    {
+      "step": 392,
+      "response_ce": 0.39987874031066895,
+      "loss": 0.39987874031066895,
+      "gradient_norm": 0.3833461105823517,
+      "response_bytes": 152144
+    },
+    {
+      "step": 393,
+      "response_ce": 0.3912312388420105,
+      "loss": 0.3912312388420105,
+      "gradient_norm": 0.3235854208469391,
+      "response_bytes": 152533
+    },
+    {
+      "step": 394,
+      "response_ce": 0.41010037064552307,
+      "loss": 0.41010037064552307,
+      "gradient_norm": 0.5094139575958252,
+      "response_bytes": 152911
+    },
+    {
+      "step": 395,
+      "response_ce": 0.4052450358867645,
+      "loss": 0.4052450358867645,
+      "gradient_norm": 0.42299890518188477,
+      "response_bytes": 153288
+    },
+    {
+      "step": 396,
+      "response_ce": 0.4049164354801178,
+      "loss": 0.4049164354801178,
+      "gradient_norm": 0.4023546576499939,
+      "response_bytes": 153686
+    },
+    {
+      "step": 397,
+      "response_ce": 0.4251154065132141,
+      "loss": 0.4251154065132141,
+      "gradient_norm": 0.4470265507698059,
+      "response_bytes": 154063
+    },
+    {
+      "step": 398,
+      "response_ce": 0.41518634557724,
+      "loss": 0.41518634557724,
+      "gradient_norm": 0.5108694434165955,
+      "response_bytes": 154437
+    },
+    {
+      "step": 399,
+      "response_ce": 0.38492947816848755,
+      "loss": 0.38492947816848755,
+      "gradient_norm": 0.5015183091163635,
+      "response_bytes": 154832
+    },
+    {
+      "step": 400,
+      "response_ce": 0.4060843586921692,
+      "loss": 0.4060843586921692,
+      "gradient_norm": 0.38935697078704834,
+      "response_bytes": 155213
+    },
+    {
+      "step": 401,
+      "response_ce": 0.39219895005226135,
+      "loss": 0.39219895005226135,
+      "gradient_norm": 0.3139173090457916,
+      "response_bytes": 155606
+    },
+    {
+      "step": 402,
+      "response_ce": 0.407000869512558,
+      "loss": 0.407000869512558,
+      "gradient_norm": 0.3685845136642456,
+      "response_bytes": 155988
+    },
+    {
+      "step": 403,
+      "response_ce": 0.37890926003456116,
+      "loss": 0.37890926003456116,
+      "gradient_norm": 0.5272226333618164,
+      "response_bytes": 156395
+    },
+    {
+      "step": 404,
+      "response_ce": 0.4126151502132416,
+      "loss": 0.4126151502132416,
+      "gradient_norm": 0.4424385130405426,
+      "response_bytes": 156763
+    },
+    {
+      "step": 405,
+      "response_ce": 0.3974716067314148,
+      "loss": 0.3974716067314148,
+      "gradient_norm": 0.4104507267475128,
+      "response_bytes": 157156
+    },
+    {
+      "step": 406,
+      "response_ce": 0.4097699522972107,
+      "loss": 0.4097699522972107,
+      "gradient_norm": 0.33662357926368713,
+      "response_bytes": 157551
+    },
+    {
+      "step": 407,
+      "response_ce": 0.39558741450309753,
+      "loss": 0.39558741450309753,
+      "gradient_norm": 0.29649534821510315,
+      "response_bytes": 157943
+    },
+    {
+      "step": 408,
+      "response_ce": 0.4183877408504486,
+      "loss": 0.4183877408504486,
+      "gradient_norm": 0.4288882613182068,
+      "response_bytes": 158320
+    },
+    {
+      "step": 409,
+      "response_ce": 0.39479348063468933,
+      "loss": 0.39479348063468933,
+      "gradient_norm": 0.31786900758743286,
+      "response_bytes": 158708
+    },
+    {
+      "step": 410,
+      "response_ce": 0.41247010231018066,
+      "loss": 0.41247010231018066,
+      "gradient_norm": 0.4224139153957367,
+      "response_bytes": 159087
+    },
+    {
+      "step": 411,
+      "response_ce": 0.3862020671367645,
+      "loss": 0.3862020671367645,
+      "gradient_norm": 0.4986383020877838,
+      "response_bytes": 159491
+    },
+    {
+      "step": 412,
+      "response_ce": 0.40226349234580994,
+      "loss": 0.40226349234580994,
+      "gradient_norm": 0.42338231205940247,
+      "response_bytes": 159877
+    },
+    {
+      "step": 413,
+      "response_ce": 0.3929440677165985,
+      "loss": 0.3929440677165985,
+      "gradient_norm": 0.4381459057331085,
+      "response_bytes": 160278
+    },
+    {
+      "step": 414,
+      "response_ce": 0.40649843215942383,
+      "loss": 0.40649843215942383,
+      "gradient_norm": 0.46492063999176025,
+      "response_bytes": 160661
+    },
+    {
+      "step": 415,
+      "response_ce": 0.3855077922344208,
+      "loss": 0.3855077922344208,
+      "gradient_norm": 0.40261515974998474,
+      "response_bytes": 161057
+    },
+    {
+      "step": 416,
+      "response_ce": 0.3820222020149231,
+      "loss": 0.3820222020149231,
+      "gradient_norm": 0.4302296042442322,
+      "response_bytes": 161453
+    },
+    {
+      "step": 417,
+      "response_ce": 0.403373658657074,
+      "loss": 0.403373658657074,
+      "gradient_norm": 0.4908272922039032,
+      "response_bytes": 161834
+    },
+    {
+      "step": 418,
+      "response_ce": 0.38773655891418457,
+      "loss": 0.38773655891418457,
+      "gradient_norm": 0.4495387673377991,
+      "response_bytes": 162221
+    },
+    {
+      "step": 419,
+      "response_ce": 0.40003502368927,
+      "loss": 0.40003502368927,
+      "gradient_norm": 0.44587433338165283,
+      "response_bytes": 162602
+    },
+    {
+      "step": 420,
+      "response_ce": 0.39466431736946106,
+      "loss": 0.39466431736946106,
+      "gradient_norm": 0.5024836659431458,
+      "response_bytes": 162989
+    },
+    {
+      "step": 421,
+      "response_ce": 0.3787306547164917,
+      "loss": 0.3787306547164917,
+      "gradient_norm": 0.3416382670402527,
+      "response_bytes": 163383
+    },
+    {
+      "step": 422,
+      "response_ce": 0.4022730886936188,
+      "loss": 0.4022730886936188,
+      "gradient_norm": 0.48377862572669983,
+      "response_bytes": 163770
+    },
+    {
+      "step": 423,
+      "response_ce": 0.40899887681007385,
+      "loss": 0.40899887681007385,
+      "gradient_norm": 0.4172998368740082,
+      "response_bytes": 164155
+    },
+    {
+      "step": 424,
+      "response_ce": 0.3781813383102417,
+      "loss": 0.3781813383102417,
+      "gradient_norm": 0.3480340838432312,
+      "response_bytes": 164554
+    },
+    {
+      "step": 425,
+      "response_ce": 0.4056563079357147,
+      "loss": 0.4056563079357147,
+      "gradient_norm": 0.43106716871261597,
+      "response_bytes": 164933
+    },
+    {
+      "step": 426,
+      "response_ce": 0.39657479524612427,
+      "loss": 0.39657479524612427,
+      "gradient_norm": 0.4000904858112335,
+      "response_bytes": 165323
+    },
+    {
+      "step": 427,
+      "response_ce": 0.38096320629119873,
+      "loss": 0.38096320629119873,
+      "gradient_norm": 0.4779163897037506,
+      "response_bytes": 165722
+    },
+    {
+      "step": 428,
+      "response_ce": 0.4028412401676178,
+      "loss": 0.4028412401676178,
+      "gradient_norm": 0.39910459518432617,
+      "response_bytes": 166113
+    },
+    {
+      "step": 429,
+      "response_ce": 0.3847441077232361,
+      "loss": 0.3847441077232361,
+      "gradient_norm": 0.45159822702407837,
+      "response_bytes": 166506
+    },
+    {
+      "step": 430,
+      "response_ce": 0.3797455132007599,
+      "loss": 0.3797455132007599,
+      "gradient_norm": 0.45750099420547485,
+      "response_bytes": 166906
+    },
+    {
+      "step": 431,
+      "response_ce": 0.3796725869178772,
+      "loss": 0.3796725869178772,
+      "gradient_norm": 0.34598058462142944,
+      "response_bytes": 167300
+    },
+    {
+      "step": 432,
+      "response_ce": 0.4066052734851837,
+      "loss": 0.4066052734851837,
+      "gradient_norm": 0.40987202525138855,
+      "response_bytes": 167685
+    },
+    {
+      "step": 433,
+      "response_ce": 0.37019771337509155,
+      "loss": 0.37019771337509155,
+      "gradient_norm": 0.3571292459964752,
+      "response_bytes": 168089
+    },
+    {
+      "step": 434,
+      "response_ce": 0.3952254056930542,
+      "loss": 0.3952254056930542,
+      "gradient_norm": 0.4787760376930237,
+      "response_bytes": 168471
+    },
+    {
+      "step": 435,
+      "response_ce": 0.39669960737228394,
+      "loss": 0.39669960737228394,
+      "gradient_norm": 0.3276083171367645,
+      "response_bytes": 168852
+    },
+    {
+      "step": 436,
+      "response_ce": 0.39350953698158264,
+      "loss": 0.39350953698158264,
+      "gradient_norm": 0.33500543236732483,
+      "response_bytes": 169237
+    },
+    {
+      "step": 437,
+      "response_ce": 0.40198788046836853,
+      "loss": 0.40198788046836853,
+      "gradient_norm": 0.45065590739250183,
+      "response_bytes": 169616
+    },
+    {
+      "step": 438,
+      "response_ce": 0.37717461585998535,
+      "loss": 0.37717461585998535,
+      "gradient_norm": 0.2961764335632324,
+      "response_bytes": 170008
+    },
+    {
+      "step": 439,
+      "response_ce": 0.386939138174057,
+      "loss": 0.386939138174057,
+      "gradient_norm": 0.46191516518592834,
+      "response_bytes": 170392
+    },
+    {
+      "step": 440,
+      "response_ce": 0.39364245533943176,
+      "loss": 0.39364245533943176,
+      "gradient_norm": 0.3401802182197571,
+      "response_bytes": 170768
+    },
+    {
+      "step": 441,
+      "response_ce": 0.38409823179244995,
+      "loss": 0.38409823179244995,
+      "gradient_norm": 0.351637601852417,
+      "response_bytes": 171157
+    },
+    {
+      "step": 442,
+      "response_ce": 0.3920961022377014,
+      "loss": 0.3920961022377014,
+      "gradient_norm": 0.3927516043186188,
+      "response_bytes": 171543
+    },
+    {
+      "step": 443,
+      "response_ce": 0.39162829518318176,
+      "loss": 0.39162829518318176,
+      "gradient_norm": 0.42967358231544495,
+      "response_bytes": 171923
+    },
+    {
+      "step": 444,
+      "response_ce": 0.40017375349998474,
+      "loss": 0.40017375349998474,
+      "gradient_norm": 0.27687299251556396,
+      "response_bytes": 172304
+    },
+    {
+      "step": 445,
+      "response_ce": 0.3930005431175232,
+      "loss": 0.3930005431175232,
+      "gradient_norm": 0.47128430008888245,
+      "response_bytes": 172692
+    },
+    {
+      "step": 446,
+      "response_ce": 0.37226438522338867,
+      "loss": 0.37226438522338867,
+      "gradient_norm": 0.4612846076488495,
+      "response_bytes": 173093
+    },
+    {
+      "step": 447,
+      "response_ce": 0.3814144730567932,
+      "loss": 0.3814144730567932,
+      "gradient_norm": 0.39415112137794495,
+      "response_bytes": 173479
+    },
+    {
+      "step": 448,
+      "response_ce": 0.3924035131931305,
+      "loss": 0.3924035131931305,
+      "gradient_norm": 0.37447166442871094,
+      "response_bytes": 173863
+    },
+    {
+      "step": 449,
+      "response_ce": 0.3844715356826782,
+      "loss": 0.3844715356826782,
+      "gradient_norm": 0.25828325748443604,
+      "response_bytes": 174251
+    },
+    {
+      "step": 450,
+      "response_ce": 0.399036169052124,
+      "loss": 0.399036169052124,
+      "gradient_norm": 0.4161381721496582,
+      "response_bytes": 174640
+    },
+    {
+      "step": 451,
+      "response_ce": 0.387298583984375,
+      "loss": 0.387298583984375,
+      "gradient_norm": 0.5127404928207397,
+      "response_bytes": 175043
+    },
+    {
+      "step": 452,
+      "response_ce": 0.3892074525356293,
+      "loss": 0.3892074525356293,
+      "gradient_norm": 0.4920687973499298,
+      "response_bytes": 175423
+    },
+    {
+      "step": 453,
+      "response_ce": 0.3867453336715698,
+      "loss": 0.3867453336715698,
+      "gradient_norm": 0.38209810853004456,
+      "response_bytes": 175806
+    },
+    {
+      "step": 454,
+      "response_ce": 0.38291406631469727,
+      "loss": 0.38291406631469727,
+      "gradient_norm": 0.4006156027317047,
+      "response_bytes": 176193
+    },
+    {
+      "step": 455,
+      "response_ce": 0.38849887251853943,
+      "loss": 0.38849887251853943,
+      "gradient_norm": 0.3734006881713867,
+      "response_bytes": 176574
+    },
+    {
+      "step": 456,
+      "response_ce": 0.38931208848953247,
+      "loss": 0.38931208848953247,
+      "gradient_norm": 0.4408644437789917,
+      "response_bytes": 176950
+    },
+    {
+      "step": 457,
+      "response_ce": 0.38469386100769043,
+      "loss": 0.38469386100769043,
+      "gradient_norm": 0.3896121680736542,
+      "response_bytes": 177335
+    },
+    {
+      "step": 458,
+      "response_ce": 0.3758135735988617,
+      "loss": 0.3758135735988617,
+      "gradient_norm": 0.35059112310409546,
+      "response_bytes": 177728
+    },
+    {
+      "step": 459,
+      "response_ce": 0.37679746747016907,
+      "loss": 0.37679746747016907,
+      "gradient_norm": 0.6008535623550415,
+      "response_bytes": 178130
+    },
+    {
+      "step": 460,
+      "response_ce": 0.3928971588611603,
+      "loss": 0.3928971588611603,
+      "gradient_norm": 0.5052497386932373,
+      "response_bytes": 178529
+    },
+    {
+      "step": 461,
+      "response_ce": 0.36836758255958557,
+      "loss": 0.36836758255958557,
+      "gradient_norm": 0.3975841701030731,
+      "response_bytes": 178919
+    },
+    {
+      "step": 462,
+      "response_ce": 0.3861461877822876,
+      "loss": 0.3861461877822876,
+      "gradient_norm": 0.4681227207183838,
+      "response_bytes": 179307
+    },
+    {
+      "step": 463,
+      "response_ce": 0.3664112389087677,
+      "loss": 0.3664112389087677,
+      "gradient_norm": 0.3205735683441162,
+      "response_bytes": 179703
+    },
+    {
+      "step": 464,
+      "response_ce": 0.37738075852394104,
+      "loss": 0.37738075852394104,
+      "gradient_norm": 0.3589858114719391,
+      "response_bytes": 180090
+    },
+    {
+      "step": 465,
+      "response_ce": 0.36691519618034363,
+      "loss": 0.36691519618034363,
+      "gradient_norm": 0.3684602677822113,
+      "response_bytes": 180494
+    },
+    {
+      "step": 466,
+      "response_ce": 0.38238587975502014,
+      "loss": 0.38238587975502014,
+      "gradient_norm": 0.26494526863098145,
+      "response_bytes": 180881
+    },
+    {
+      "step": 467,
+      "response_ce": 0.3860333561897278,
+      "loss": 0.3860333561897278,
+      "gradient_norm": 0.4018988013267517,
+      "response_bytes": 181259
+    },
+    {
+      "step": 468,
+      "response_ce": 0.36993855237960815,
+      "loss": 0.36993855237960815,
+      "gradient_norm": 0.32043200731277466,
+      "response_bytes": 181652
+    },
+    {
+      "step": 469,
+      "response_ce": 0.3929740786552429,
+      "loss": 0.3929740786552429,
+      "gradient_norm": 0.43538951873779297,
+      "response_bytes": 182031
+    },
+    {
+      "step": 470,
+      "response_ce": 0.3682594299316406,
+      "loss": 0.3682594299316406,
+      "gradient_norm": 0.3649757504463196,
+      "response_bytes": 182428
+    },
+    {
+      "step": 471,
+      "response_ce": 0.3932666480541229,
+      "loss": 0.3932666480541229,
+      "gradient_norm": 0.41229549050331116,
+      "response_bytes": 182811
+    },
+    {
+      "step": 472,
+      "response_ce": 0.37957850098609924,
+      "loss": 0.37957850098609924,
+      "gradient_norm": 0.4061123728752136,
+      "response_bytes": 183198
+    },
+    {
+      "step": 473,
+      "response_ce": 0.397607684135437,
+      "loss": 0.397607684135437,
+      "gradient_norm": 0.5162637233734131,
+      "response_bytes": 183579
+    },
+    {
+      "step": 474,
+      "response_ce": 0.3817839026451111,
+      "loss": 0.3817839026451111,
+      "gradient_norm": 0.3353772759437561,
+      "response_bytes": 183972
+    },
+    {
+      "step": 475,
+      "response_ce": 0.38112273812294006,
+      "loss": 0.38112273812294006,
+      "gradient_norm": 0.3359219431877136,
+      "response_bytes": 184358
+    },
+    {
+      "step": 476,
+      "response_ce": 0.39299628138542175,
+      "loss": 0.39299628138542175,
+      "gradient_norm": 0.4547936022281647,
+      "response_bytes": 184737
+    },
+    {
+      "step": 477,
+      "response_ce": 0.3875531256198883,
+      "loss": 0.3875531256198883,
+      "gradient_norm": 0.46139076352119446,
+      "response_bytes": 185116
+    },
+    {
+      "step": 478,
+      "response_ce": 0.37396785616874695,
+      "loss": 0.37396785616874695,
+      "gradient_norm": 0.38799673318862915,
+      "response_bytes": 185499
+    },
+    {
+      "step": 479,
+      "response_ce": 0.3741626739501953,
+      "loss": 0.3741626739501953,
+      "gradient_norm": 0.4698106646537781,
+      "response_bytes": 185897
+    },
+    {
+      "step": 480,
+      "response_ce": 0.371527761220932,
+      "loss": 0.371527761220932,
+      "gradient_norm": 0.30204328894615173,
+      "response_bytes": 186273
+    },
+    {
+      "step": 481,
+      "response_ce": 0.3798867464065552,
+      "loss": 0.3798867464065552,
+      "gradient_norm": 0.34357672929763794,
+      "response_bytes": 186658
+    },
+    {
+      "step": 482,
+      "response_ce": 0.3759065568447113,
+      "loss": 0.3759065568447113,
+      "gradient_norm": 0.4005261957645416,
+      "response_bytes": 187053
+    },
+    {
+      "step": 483,
+      "response_ce": 0.36911505460739136,
+      "loss": 0.36911505460739136,
+      "gradient_norm": 0.32804590463638306,
+      "response_bytes": 187439
+    },
+    {
+      "step": 484,
+      "response_ce": 0.38040539622306824,
+      "loss": 0.38040539622306824,
+      "gradient_norm": 0.23862317204475403,
+      "response_bytes": 187829
+    },
+    {
+      "step": 485,
+      "response_ce": 0.3716934323310852,
+      "loss": 0.3716934323310852,
+      "gradient_norm": 0.29983627796173096,
+      "response_bytes": 188212
+    },
+    {
+      "step": 486,
+      "response_ce": 0.3672962486743927,
+      "loss": 0.3672962486743927,
+      "gradient_norm": 0.48521825671195984,
+      "response_bytes": 188604
+    },
+    {
+      "step": 487,
+      "response_ce": 0.3787893056869507,
+      "loss": 0.3787893056869507,
+      "gradient_norm": 0.3659681975841522,
+      "response_bytes": 188994
+    },
+    {
+      "step": 488,
+      "response_ce": 0.3786872327327728,
+      "loss": 0.3786872327327728,
+      "gradient_norm": 0.3716197609901428,
+      "response_bytes": 189379
+    },
+    {
+      "step": 489,
+      "response_ce": 0.3744058907032013,
+      "loss": 0.3744058907032013,
+      "gradient_norm": 0.466595858335495,
+      "response_bytes": 189785
+    },
+    {
+      "step": 490,
+      "response_ce": 0.36963528394699097,
+      "loss": 0.36963528394699097,
+      "gradient_norm": 0.4476213753223419,
+      "response_bytes": 190170
+    },
+    {
+      "step": 491,
+      "response_ce": 0.37411561608314514,
+      "loss": 0.37411561608314514,
+      "gradient_norm": 0.44195789098739624,
+      "response_bytes": 190562
+    },
+    {
+      "step": 492,
+      "response_ce": 0.3790525794029236,
+      "loss": 0.3790525794029236,
+      "gradient_norm": 0.38027364015579224,
+      "response_bytes": 190947
+    },
+    {
+      "step": 493,
+      "response_ce": 0.3733801245689392,
+      "loss": 0.3733801245689392,
+      "gradient_norm": 0.34214961528778076,
+      "response_bytes": 191330
+    },
+    {
+      "step": 494,
+      "response_ce": 0.3771071135997772,
+      "loss": 0.3771071135997772,
+      "gradient_norm": 0.40691614151000977,
+      "response_bytes": 191719
+    },
+    {
+      "step": 495,
+      "response_ce": 0.37022265791893005,
+      "loss": 0.37022265791893005,
+      "gradient_norm": 0.34963712096214294,
+      "response_bytes": 192107
+    },
+    {
+      "step": 496,
+      "response_ce": 0.3832415044307709,
+      "loss": 0.3832415044307709,
+      "gradient_norm": 0.34092381596565247,
+      "response_bytes": 192491
+    },
+    {
+      "step": 497,
+      "response_ce": 0.371066689491272,
+      "loss": 0.371066689491272,
+      "gradient_norm": 0.33623945713043213,
+      "response_bytes": 192891
+    },
+    {
+      "step": 498,
+      "response_ce": 0.38488903641700745,
+      "loss": 0.38488903641700745,
+      "gradient_norm": 0.452543705701828,
+      "response_bytes": 193274
+    },
+    {
+      "step": 499,
+      "response_ce": 0.3721046447753906,
+      "loss": 0.3721046447753906,
+      "gradient_norm": 0.4061853885650635,
+      "response_bytes": 193670
+    },
+    {
+      "step": 500,
+      "response_ce": 0.36857354640960693,
+      "loss": 0.36857354640960693,
+      "gradient_norm": 0.24680425226688385,
+      "response_bytes": 194059
+    },
+    {
+      "step": 501,
+      "response_ce": 0.3829008638858795,
+      "loss": 0.3829008638858795,
+      "gradient_norm": 0.33958712220191956,
+      "response_bytes": 194436
+    },
+    {
+      "step": 502,
+      "response_ce": 0.3718559145927429,
+      "loss": 0.3718559145927429,
+      "gradient_norm": 0.3638327121734619,
+      "response_bytes": 194830
+    },
+    {
+      "step": 503,
+      "response_ce": 0.37806135416030884,
+      "loss": 0.37806135416030884,
+      "gradient_norm": 0.428926557302475,
+      "response_bytes": 195228
+    },
+    {
+      "step": 504,
+      "response_ce": 0.3625543415546417,
+      "loss": 0.3625543415546417,
+      "gradient_norm": 0.41543686389923096,
+      "response_bytes": 195623
+    },
+    {
+      "step": 505,
+      "response_ce": 0.3625231385231018,
+      "loss": 0.3625231385231018,
+      "gradient_norm": 0.397833913564682,
+      "response_bytes": 196016
+    },
+    {
+      "step": 506,
+      "response_ce": 0.3713359236717224,
+      "loss": 0.3713359236717224,
+      "gradient_norm": 0.3142206370830536,
+      "response_bytes": 196413
+    },
+    {
+      "step": 507,
+      "response_ce": 0.3835675120353699,
+      "loss": 0.3835675120353699,
+      "gradient_norm": 0.41704797744750977,
+      "response_bytes": 196794
+    },
+    {
+      "step": 508,
+      "response_ce": 0.3602275252342224,
+      "loss": 0.3602275252342224,
+      "gradient_norm": 0.3711857795715332,
+      "response_bytes": 197196
+    },
+    {
+      "step": 509,
+      "response_ce": 0.3973460793495178,
+      "loss": 0.3973460793495178,
+      "gradient_norm": 0.504611074924469,
+      "response_bytes": 197568
+    },
+    {
+      "step": 510,
+      "response_ce": 0.3776973485946655,
+      "loss": 0.3776973485946655,
+      "gradient_norm": 0.3999384939670563,
+      "response_bytes": 197964
+    },
+    {
+      "step": 511,
+      "response_ce": 0.3813360929489136,
+      "loss": 0.3813360929489136,
+      "gradient_norm": 0.5859377384185791,
+      "response_bytes": 198336
+    },
+    {
+      "step": 512,
+      "response_ce": 0.3665393590927124,
+      "loss": 0.3665393590927124,
+      "gradient_norm": 0.4225521385669708,
+      "response_bytes": 198732
+    },
+    {
+      "step": 513,
+      "response_ce": 0.3658870756626129,
+      "loss": 0.3658870756626129,
+      "gradient_norm": 0.3161980211734772,
+      "response_bytes": 199127
+    },
+    {
+      "step": 514,
+      "response_ce": 0.35291916131973267,
+      "loss": 0.35291916131973267,
+      "gradient_norm": 0.3807888627052307,
+      "response_bytes": 199531
+    },
+    {
+      "step": 515,
+      "response_ce": 0.3755756914615631,
+      "loss": 0.3755756914615631,
+      "gradient_norm": 0.3199499249458313,
+      "response_bytes": 199917
+    },
+    {
+      "step": 516,
+      "response_ce": 0.3713630139827728,
+      "loss": 0.3713630139827728,
+      "gradient_norm": 0.45813804864883423,
+      "response_bytes": 200314
+    },
+    {
+      "step": 517,
+      "response_ce": 0.3609718084335327,
+      "loss": 0.3609718084335327,
+      "gradient_norm": 0.43963101506233215,
+      "response_bytes": 200718
+    },
+    {
+      "step": 518,
+      "response_ce": 0.39533329010009766,
+      "loss": 0.39533329010009766,
+      "gradient_norm": 0.5414347052574158,
+      "response_bytes": 201091
+    },
+    {
+      "step": 519,
+      "response_ce": 0.3723878860473633,
+      "loss": 0.3723878860473633,
+      "gradient_norm": 0.40549594163894653,
+      "response_bytes": 201479
+    },
+    {
+      "step": 520,
+      "response_ce": 0.3703089654445648,
+      "loss": 0.3703089654445648,
+      "gradient_norm": 0.42084601521492004,
+      "response_bytes": 201863
+    },
+    {
+      "step": 521,
+      "response_ce": 0.3610638678073883,
+      "loss": 0.3610638678073883,
+      "gradient_norm": 0.3566030263900757,
+      "response_bytes": 202256
+    },
+    {
+      "step": 522,
+      "response_ce": 0.35122817754745483,
+      "loss": 0.35122817754745483,
+      "gradient_norm": 0.3614239990711212,
+      "response_bytes": 202647
+    },
+    {
+      "step": 523,
+      "response_ce": 0.3544727861881256,
+      "loss": 0.3544727861881256,
+      "gradient_norm": 0.30368345975875854,
+      "response_bytes": 203045
+    },
+    {
+      "step": 524,
+      "response_ce": 0.37204399704933167,
+      "loss": 0.37204399704933167,
+      "gradient_norm": 0.4349241554737091,
+      "response_bytes": 203431
+    },
+    {
+      "step": 525,
+      "response_ce": 0.3741394579410553,
+      "loss": 0.3741394579410553,
+      "gradient_norm": 0.3859257698059082,
+      "response_bytes": 203822
+    },
+    {
+      "step": 526,
+      "response_ce": 0.3877212405204773,
+      "loss": 0.3877212405204773,
+      "gradient_norm": 0.39198440313339233,
+      "response_bytes": 204200
+    },
+    {
+      "step": 527,
+      "response_ce": 0.360129177570343,
+      "loss": 0.360129177570343,
+      "gradient_norm": 0.5246416926383972,
+      "response_bytes": 204606
+    },
+    {
+      "step": 528,
+      "response_ce": 0.37721487879753113,
+      "loss": 0.37721487879753113,
+      "gradient_norm": 0.6445411443710327,
+      "response_bytes": 205000
+    },
+    {
+      "step": 529,
+      "response_ce": 0.3616598844528198,
+      "loss": 0.3616598844528198,
+      "gradient_norm": 0.2412751019001007,
+      "response_bytes": 205396
+    },
+    {
+      "step": 530,
+      "response_ce": 0.3565452992916107,
+      "loss": 0.3565452992916107,
+      "gradient_norm": 0.31525030732154846,
+      "response_bytes": 205792
+    },
+    {
+      "step": 531,
+      "response_ce": 0.3783462345600128,
+      "loss": 0.3783462345600128,
+      "gradient_norm": 0.41505470871925354,
+      "response_bytes": 206167
+    },
+    {
+      "step": 532,
+      "response_ce": 0.3613404333591461,
+      "loss": 0.3613404333591461,
+      "gradient_norm": 0.36449113488197327,
+      "response_bytes": 206559
+    },
+    {
+      "step": 533,
+      "response_ce": 0.365621417760849,
+      "loss": 0.365621417760849,
+      "gradient_norm": 0.4124715030193329,
+      "response_bytes": 206953
+    },
+    {
+      "step": 534,
+      "response_ce": 0.35933300852775574,
+      "loss": 0.35933300852775574,
+      "gradient_norm": 0.32553160190582275,
+      "response_bytes": 207353
+    },
+    {
+      "step": 535,
+      "response_ce": 0.37564072012901306,
+      "loss": 0.37564072012901306,
+      "gradient_norm": 0.412815123796463,
+      "response_bytes": 207731
+    },
+    {
+      "step": 536,
+      "response_ce": 0.36335065960884094,
+      "loss": 0.36335065960884094,
+      "gradient_norm": 0.43732813000679016,
+      "response_bytes": 208125
+    },
+    {
+      "step": 537,
+      "response_ce": 0.37033572793006897,
+      "loss": 0.37033572793006897,
+      "gradient_norm": 0.45157095789909363,
+      "response_bytes": 208509
+    },
+    {
+      "step": 538,
+      "response_ce": 0.36289989948272705,
+      "loss": 0.36289989948272705,
+      "gradient_norm": 0.4382137954235077,
+      "response_bytes": 208899
+    },
+    {
+      "step": 539,
+      "response_ce": 0.37110430002212524,
+      "loss": 0.37110430002212524,
+      "gradient_norm": 0.30726131796836853,
+      "response_bytes": 209284
+    },
+    {
+      "step": 540,
+      "response_ce": 0.3702499270439148,
+      "loss": 0.3702499270439148,
+      "gradient_norm": 0.42027565836906433,
+      "response_bytes": 209682
+    },
+    {
+      "step": 541,
+      "response_ce": 0.37321025133132935,
+      "loss": 0.37321025133132935,
+      "gradient_norm": 0.45697519183158875,
+      "response_bytes": 210051
+    },
+    {
+      "step": 542,
+      "response_ce": 0.37127161026000977,
+      "loss": 0.37127161026000977,
+      "gradient_norm": 0.4933567941188812,
+      "response_bytes": 210440
+    },
+    {
+      "step": 543,
+      "response_ce": 0.364944189786911,
+      "loss": 0.364944189786911,
+      "gradient_norm": 0.42045193910598755,
+      "response_bytes": 210826
+    },
+    {
+      "step": 544,
+      "response_ce": 0.3753111660480499,
+      "loss": 0.3753111660480499,
+      "gradient_norm": 0.43905916810035706,
+      "response_bytes": 211216
+    },
+    {
+      "step": 545,
+      "response_ce": 0.36654147505760193,
+      "loss": 0.36654147505760193,
+      "gradient_norm": 0.37704572081565857,
+      "response_bytes": 211594
+    },
+    {
+      "step": 546,
+      "response_ce": 0.3686465919017792,
+      "loss": 0.3686465919017792,
+      "gradient_norm": 0.4741649925708771,
+      "response_bytes": 211981
+    },
+    {
+      "step": 547,
+      "response_ce": 0.3719887435436249,
+      "loss": 0.3719887435436249,
+      "gradient_norm": 0.3961600959300995,
+      "response_bytes": 212366
+    },
+    {
+      "step": 548,
+      "response_ce": 0.3610556721687317,
+      "loss": 0.3610556721687317,
+      "gradient_norm": 0.47462499141693115,
+      "response_bytes": 212765
+    },
+    {
+      "step": 549,
+      "response_ce": 0.36418113112449646,
+      "loss": 0.36418113112449646,
+      "gradient_norm": 0.3959868252277374,
+      "response_bytes": 213169
+    },
+    {
+      "step": 550,
+      "response_ce": 0.36408981680870056,
+      "loss": 0.36408981680870056,
+      "gradient_norm": 0.31972435116767883,
+      "response_bytes": 213546
+    },
+    {
+      "step": 551,
+      "response_ce": 0.37483900785446167,
+      "loss": 0.37483900785446167,
+      "gradient_norm": 0.39766982197761536,
+      "response_bytes": 213926
+    },
+    {
+      "step": 552,
+      "response_ce": 0.3590357005596161,
+      "loss": 0.3590357005596161,
+      "gradient_norm": 0.3158167600631714,
+      "response_bytes": 214323
+    },
+    {
+      "step": 553,
+      "response_ce": 0.3586721420288086,
+      "loss": 0.3586721420288086,
+      "gradient_norm": 0.3604823648929596,
+      "response_bytes": 214712
+    },
+    {
+      "step": 554,
+      "response_ce": 0.36324602365493774,
+      "loss": 0.36324602365493774,
+      "gradient_norm": 0.3242906332015991,
+      "response_bytes": 215108
+    },
+    {
+      "step": 555,
+      "response_ce": 0.38025614619255066,
+      "loss": 0.38025614619255066,
+      "gradient_norm": 0.3597560524940491,
+      "response_bytes": 215490
+    },
+    {
+      "step": 556,
+      "response_ce": 0.37479522824287415,
+      "loss": 0.37479522824287415,
+      "gradient_norm": 0.41510865092277527,
+      "response_bytes": 215879
+    },
+    {
+      "step": 557,
+      "response_ce": 0.38119232654571533,
+      "loss": 0.38119232654571533,
+      "gradient_norm": 0.3838978707790375,
+      "response_bytes": 216258
+    },
+    {
+      "step": 558,
+      "response_ce": 0.36782822012901306,
+      "loss": 0.36782822012901306,
+      "gradient_norm": 0.34486153721809387,
+      "response_bytes": 216651
+    },
+    {
+      "step": 559,
+      "response_ce": 0.3941778242588043,
+      "loss": 0.3941778242588043,
+      "gradient_norm": 0.34389376640319824,
+      "response_bytes": 217028
+    },
+    {
+      "step": 560,
+      "response_ce": 0.3666032552719116,
+      "loss": 0.3666032552719116,
+      "gradient_norm": 0.4512484669685364,
+      "response_bytes": 217404
+    },
+    {
+      "step": 561,
+      "response_ce": 0.37316080927848816,
+      "loss": 0.37316080927848816,
+      "gradient_norm": 0.5436672568321228,
+      "response_bytes": 217789
+    },
+    {
+      "step": 562,
+      "response_ce": 0.3585345447063446,
+      "loss": 0.3585345447063446,
+      "gradient_norm": 0.49152830243110657,
+      "response_bytes": 218177
+    },
+    {
+      "step": 563,
+      "response_ce": 0.3692629337310791,
+      "loss": 0.3692629337310791,
+      "gradient_norm": 0.37920406460762024,
+      "response_bytes": 218561
+    },
+    {
+      "step": 564,
+      "response_ce": 0.365223228931427,
+      "loss": 0.365223228931427,
+      "gradient_norm": 0.41124022006988525,
+      "response_bytes": 218955
+    },
+    {
+      "step": 565,
+      "response_ce": 0.38063523173332214,
+      "loss": 0.38063523173332214,
+      "gradient_norm": 0.45971933007240295,
+      "response_bytes": 219338
+    },
+    {
+      "step": 566,
+      "response_ce": 0.3602021336555481,
+      "loss": 0.3602021336555481,
+      "gradient_norm": 0.45832130312919617,
+      "response_bytes": 219735
+    },
+    {
+      "step": 567,
+      "response_ce": 0.3742220401763916,
+      "loss": 0.3742220401763916,
+      "gradient_norm": 0.33094048500061035,
+      "response_bytes": 220118
+    },
+    {
+      "step": 568,
+      "response_ce": 0.3593864440917969,
+      "loss": 0.3593864440917969,
+      "gradient_norm": 0.3989770710468292,
+      "response_bytes": 220510
+    },
+    {
+      "step": 569,
+      "response_ce": 0.353808730840683,
+      "loss": 0.353808730840683,
+      "gradient_norm": 0.2979406416416168,
+      "response_bytes": 220899
+    },
+    {
+      "step": 570,
+      "response_ce": 0.3578014671802521,
+      "loss": 0.3578014671802521,
+      "gradient_norm": 0.4279199540615082,
+      "response_bytes": 221295
+    },
+    {
+      "step": 571,
+      "response_ce": 0.3726227581501007,
+      "loss": 0.3726227581501007,
+      "gradient_norm": 0.38555416464805603,
+      "response_bytes": 221675
+    },
+    {
+      "step": 572,
+      "response_ce": 0.35524916648864746,
+      "loss": 0.35524916648864746,
+      "gradient_norm": 0.31724318861961365,
+      "response_bytes": 222067
+    },
+    {
+      "step": 573,
+      "response_ce": 0.368292897939682,
+      "loss": 0.368292897939682,
+      "gradient_norm": 0.3154914677143097,
+      "response_bytes": 222446
+    },
+    {
+      "step": 574,
+      "response_ce": 0.3650572597980499,
+      "loss": 0.3650572597980499,
+      "gradient_norm": 0.2956801652908325,
+      "response_bytes": 222829
+    },
+    {
+      "step": 575,
+      "response_ce": 0.3729742467403412,
+      "loss": 0.3729742467403412,
+      "gradient_norm": 0.3782200515270233,
+      "response_bytes": 223211
+    },
+    {
+      "step": 576,
+      "response_ce": 0.36832448840141296,
+      "loss": 0.36832448840141296,
+      "gradient_norm": 0.42165565490722656,
+      "response_bytes": 223597
+    },
+    {
+      "step": 577,
+      "response_ce": 0.35220617055892944,
+      "loss": 0.35220617055892944,
+      "gradient_norm": 0.5041764378547668,
+      "response_bytes": 223999
+    },
+    {
+      "step": 578,
+      "response_ce": 0.3737313151359558,
+      "loss": 0.3737313151359558,
+      "gradient_norm": 0.4055263102054596,
+      "response_bytes": 224377
+    },
+    {
+      "step": 579,
+      "response_ce": 0.37469062209129333,
+      "loss": 0.37469062209129333,
+      "gradient_norm": 0.40777483582496643,
+      "response_bytes": 224762
+    },
+    {
+      "step": 580,
+      "response_ce": 0.3579694926738739,
+      "loss": 0.3579694926738739,
+      "gradient_norm": 0.3074035346508026,
+      "response_bytes": 225148
+    },
+    {
+      "step": 581,
+      "response_ce": 0.3539043664932251,
+      "loss": 0.3539043664932251,
+      "gradient_norm": 0.39615777134895325,
+      "response_bytes": 225544
+    },
+    {
+      "step": 582,
+      "response_ce": 0.37542104721069336,
+      "loss": 0.37542104721069336,
+      "gradient_norm": 0.3953404724597931,
+      "response_bytes": 225923
+    },
+    {
+      "step": 583,
+      "response_ce": 0.37157323956489563,
+      "loss": 0.37157323956489563,
+      "gradient_norm": 0.33508142828941345,
+      "response_bytes": 226306
+    },
+    {
+      "step": 584,
+      "response_ce": 0.3658091425895691,
+      "loss": 0.3658091425895691,
+      "gradient_norm": 0.34484514594078064,
+      "response_bytes": 226694
+    },
+    {
+      "step": 585,
+      "response_ce": 0.38129177689552307,
+      "loss": 0.38129177689552307,
+      "gradient_norm": 0.4477783739566803,
+      "response_bytes": 227075
+    },
+    {
+      "step": 586,
+      "response_ce": 0.35047227144241333,
+      "loss": 0.35047227144241333,
+      "gradient_norm": 0.4948318600654602,
+      "response_bytes": 227478
+    },
+    {
+      "step": 587,
+      "response_ce": 0.36003124713897705,
+      "loss": 0.36003124713897705,
+      "gradient_norm": 0.479487806558609,
+      "response_bytes": 227877
+    },
+    {
+      "step": 588,
+      "response_ce": 0.36294782161712646,
+      "loss": 0.36294782161712646,
+      "gradient_norm": 0.32734471559524536,
+      "response_bytes": 228267
+    },
+    {
+      "step": 589,
+      "response_ce": 0.357596755027771,
+      "loss": 0.357596755027771,
+      "gradient_norm": 0.44874662160873413,
+      "response_bytes": 228653
+    },
+    {
+      "step": 590,
+      "response_ce": 0.3635003864765167,
+      "loss": 0.3635003864765167,
+      "gradient_norm": 0.5420629978179932,
+      "response_bytes": 229046
+    },
+    {
+      "step": 591,
+      "response_ce": 0.3731953501701355,
+      "loss": 0.3731953501701355,
+      "gradient_norm": 0.477010577917099,
+      "response_bytes": 229417
+    },
+    {
+      "step": 592,
+      "response_ce": 0.35038644075393677,
+      "loss": 0.35038644075393677,
+      "gradient_norm": 0.34230953454971313,
+      "response_bytes": 229816
+    },
+    {
+      "step": 593,
+      "response_ce": 0.3714744746685028,
+      "loss": 0.3714744746685028,
+      "gradient_norm": 0.435494601726532,
+      "response_bytes": 230201
+    },
+    {
+      "step": 594,
+      "response_ce": 0.3642469346523285,
+      "loss": 0.3642469346523285,
+      "gradient_norm": 0.3766954243183136,
+      "response_bytes": 230584
+    },
+    {
+      "step": 595,
+      "response_ce": 0.3498162627220154,
+      "loss": 0.3498162627220154,
+      "gradient_norm": 0.42833733558654785,
+      "response_bytes": 230987
+    },
+    {
+      "step": 596,
+      "response_ce": 0.37279731035232544,
+      "loss": 0.37279731035232544,
+      "gradient_norm": 0.38098737597465515,
+      "response_bytes": 231373
+    },
+    {
+      "step": 597,
+      "response_ce": 0.35799455642700195,
+      "loss": 0.35799455642700195,
+      "gradient_norm": 0.36522936820983887,
+      "response_bytes": 231761
+    },
+    {
+      "step": 598,
+      "response_ce": 0.3614688515663147,
+      "loss": 0.3614688515663147,
+      "gradient_norm": 0.4391479194164276,
+      "response_bytes": 232151
+    },
+    {
+      "step": 599,
+      "response_ce": 0.3557974100112915,
+      "loss": 0.3557974100112915,
+      "gradient_norm": 0.4369679093360901,
+      "response_bytes": 232541
+    },
+    {
+      "step": 600,
+      "response_ce": 0.3605596125125885,
+      "loss": 0.3605596125125885,
+      "gradient_norm": 0.38770878314971924,
+      "response_bytes": 232928
+    },
+    {
+      "step": 601,
+      "response_ce": 0.35900068283081055,
+      "loss": 0.35900068283081055,
+      "gradient_norm": 0.39173242449760437,
+      "response_bytes": 233316
+    },
+    {
+      "step": 602,
+      "response_ce": 0.35691511631011963,
+      "loss": 0.35691511631011963,
+      "gradient_norm": 0.3587709069252014,
+      "response_bytes": 233706
+    },
+    {
+      "step": 603,
+      "response_ce": 0.35503721237182617,
+      "loss": 0.35503721237182617,
+      "gradient_norm": 0.3514491319656372,
+      "response_bytes": 234104
+    },
+    {
+      "step": 604,
+      "response_ce": 0.3636021018028259,
+      "loss": 0.3636021018028259,
+      "gradient_norm": 0.3368033766746521,
+      "response_bytes": 234503
+    },
+    {
+      "step": 605,
+      "response_ce": 0.36632534861564636,
+      "loss": 0.36632534861564636,
+      "gradient_norm": 0.36549112200737,
+      "response_bytes": 234888
+    },
+    {
+      "step": 606,
+      "response_ce": 0.3650754690170288,
+      "loss": 0.3650754690170288,
+      "gradient_norm": 0.3492624759674072,
+      "response_bytes": 235267
+    },
+    {
+      "step": 607,
+      "response_ce": 0.34795936942100525,
+      "loss": 0.34795936942100525,
+      "gradient_norm": 0.3231492340564728,
+      "response_bytes": 235665
+    },
+    {
+      "step": 608,
+      "response_ce": 0.36170417070388794,
+      "loss": 0.36170417070388794,
+      "gradient_norm": 0.3561544716358185,
+      "response_bytes": 236056
+    },
+    {
+      "step": 609,
+      "response_ce": 0.35615870356559753,
+      "loss": 0.35615870356559753,
+      "gradient_norm": 0.37832698225975037,
+      "response_bytes": 236452
+    },
+    {
+      "step": 610,
+      "response_ce": 0.3687068521976471,
+      "loss": 0.3687068521976471,
+      "gradient_norm": 0.4025862216949463,
+      "response_bytes": 236836
+    },
+    {
+      "step": 611,
+      "response_ce": 0.3632155954837799,
+      "loss": 0.3632155954837799,
+      "gradient_norm": 0.37396836280822754,
+      "response_bytes": 237226
+    },
+    {
+      "step": 612,
+      "response_ce": 0.35712891817092896,
+      "loss": 0.35712891817092896,
+      "gradient_norm": 0.4122365117073059,
+      "response_bytes": 237624
+    },
+    {
+      "step": 613,
+      "response_ce": 0.36227551102638245,
+      "loss": 0.36227551102638245,
+      "gradient_norm": 0.38332200050354004,
+      "response_bytes": 238010
+    },
+    {
+      "step": 614,
+      "response_ce": 0.3752097487449646,
+      "loss": 0.3752097487449646,
+      "gradient_norm": 0.5469747185707092,
+      "response_bytes": 238389
+    },
+    {
+      "step": 615,
+      "response_ce": 0.354396253824234,
+      "loss": 0.354396253824234,
+      "gradient_norm": 0.35597944259643555,
+      "response_bytes": 238780
+    },
+    {
+      "step": 616,
+      "response_ce": 0.34722715616226196,
+      "loss": 0.34722715616226196,
+      "gradient_norm": 0.2932717204093933,
+      "response_bytes": 239177
+    },
+    {
+      "step": 617,
+      "response_ce": 0.360772967338562,
+      "loss": 0.360772967338562,
+      "gradient_norm": 0.3505088984966278,
+      "response_bytes": 239556
+    },
+    {
+      "step": 618,
+      "response_ce": 0.3419938087463379,
+      "loss": 0.3419938087463379,
+      "gradient_norm": 0.33812326192855835,
+      "response_bytes": 239952
+    },
+    {
+      "step": 619,
+      "response_ce": 0.34564778208732605,
+      "loss": 0.34564778208732605,
+      "gradient_norm": 0.3317756950855255,
+      "response_bytes": 240348
+    },
+    {
+      "step": 620,
+      "response_ce": 0.3508348762989044,
+      "loss": 0.3508348762989044,
+      "gradient_norm": 0.4340009093284607,
+      "response_bytes": 240742
+    },
+    {
+      "step": 621,
+      "response_ce": 0.36647850275039673,
+      "loss": 0.36647850275039673,
+      "gradient_norm": 0.41552940011024475,
+      "response_bytes": 241125
+    },
+    {
+      "step": 622,
+      "response_ce": 0.36864882707595825,
+      "loss": 0.36864882707595825,
+      "gradient_norm": 0.4548322260379791,
+      "response_bytes": 241507
+    },
+    {
+      "step": 623,
+      "response_ce": 0.35808202624320984,
+      "loss": 0.35808202624320984,
+      "gradient_norm": 0.3365730941295624,
+      "response_bytes": 241898
+    },
+    {
+      "step": 624,
+      "response_ce": 0.34660521149635315,
+      "loss": 0.34660521149635315,
+      "gradient_norm": 0.3620457649230957,
+      "response_bytes": 242294
+    },
+    {
+      "step": 625,
+      "response_ce": 0.34778138995170593,
+      "loss": 0.34778138995170593,
+      "gradient_norm": 0.41715437173843384,
+      "response_bytes": 242700
+    },
+    {
+      "step": 626,
+      "response_ce": 0.359058141708374,
+      "loss": 0.359058141708374,
+      "gradient_norm": 0.30420422554016113,
+      "response_bytes": 243089
+    },
+    {
+      "step": 627,
+      "response_ce": 0.351130872964859,
+      "loss": 0.351130872964859,
+      "gradient_norm": 0.36478757858276367,
+      "response_bytes": 243486
+    },
+    {
+      "step": 628,
+      "response_ce": 0.3422522246837616,
+      "loss": 0.3422522246837616,
+      "gradient_norm": 0.31139910221099854,
+      "response_bytes": 243882
+    },
+    {
+      "step": 629,
+      "response_ce": 0.34786438941955566,
+      "loss": 0.34786438941955566,
+      "gradient_norm": 0.3983975350856781,
+      "response_bytes": 244275
+    },
+    {
+      "step": 630,
+      "response_ce": 0.341666579246521,
+      "loss": 0.341666579246521,
+      "gradient_norm": 0.33364352583885193,
+      "response_bytes": 244675
+    },
+    {
+      "step": 631,
+      "response_ce": 0.3642696142196655,
+      "loss": 0.3642696142196655,
+      "gradient_norm": 0.4290924072265625,
+      "response_bytes": 245055
+    },
+    {
+      "step": 632,
+      "response_ce": 0.34748557209968567,
+      "loss": 0.34748557209968567,
+      "gradient_norm": 0.3577640950679779,
+      "response_bytes": 245444
+    },
+    {
+      "step": 633,
+      "response_ce": 0.3331214487552643,
+      "loss": 0.3331214487552643,
+      "gradient_norm": 0.3740173578262329,
+      "response_bytes": 245844
+    },
+    {
+      "step": 634,
+      "response_ce": 0.35748225450515747,
+      "loss": 0.35748225450515747,
+      "gradient_norm": 0.4625895321369171,
+      "response_bytes": 246223
+    },
+    {
+      "step": 635,
+      "response_ce": 0.3408586084842682,
+      "loss": 0.3408586084842682,
+      "gradient_norm": 0.30013230443000793,
+      "response_bytes": 246620
+    },
+    {
+      "step": 636,
+      "response_ce": 0.3747076392173767,
+      "loss": 0.3747076392173767,
+      "gradient_norm": 0.5488543510437012,
+      "response_bytes": 247007
+    },
+    {
+      "step": 637,
+      "response_ce": 0.34716543555259705,
+      "loss": 0.34716543555259705,
+      "gradient_norm": 0.4269898533821106,
+      "response_bytes": 247397
+    },
+    {
+      "step": 638,
+      "response_ce": 0.35464683175086975,
+      "loss": 0.35464683175086975,
+      "gradient_norm": 0.3667595088481903,
+      "response_bytes": 247782
+    },
+    {
+      "step": 639,
+      "response_ce": 0.3743843734264374,
+      "loss": 0.3743843734264374,
+      "gradient_norm": 0.455130010843277,
+      "response_bytes": 248156
+    },
+    {
+      "step": 640,
+      "response_ce": 0.35487109422683716,
+      "loss": 0.35487109422683716,
+      "gradient_norm": 0.3400796949863434,
+      "response_bytes": 248550
+    },
+    {
+      "step": 641,
+      "response_ce": 0.3540881276130676,
+      "loss": 0.3540881276130676,
+      "gradient_norm": 0.44174808263778687,
+      "response_bytes": 248949
+    },
+    {
+      "step": 642,
+      "response_ce": 0.36050552129745483,
+      "loss": 0.36050552129745483,
+      "gradient_norm": 0.3671300411224365,
+      "response_bytes": 249339
+    },
+    {
+      "step": 643,
+      "response_ce": 0.35175225138664246,
+      "loss": 0.35175225138664246,
+      "gradient_norm": 0.4160793721675873,
+      "response_bytes": 249734
+    },
+    {
+      "step": 644,
+      "response_ce": 0.3541387617588043,
+      "loss": 0.3541387617588043,
+      "gradient_norm": 0.3843885064125061,
+      "response_bytes": 250130
+    },
+    {
+      "step": 645,
+      "response_ce": 0.3602429926395416,
+      "loss": 0.3602429926395416,
+      "gradient_norm": 0.34742194414138794,
+      "response_bytes": 250514
+    },
+    {
+      "step": 646,
+      "response_ce": 0.3532371520996094,
+      "loss": 0.3532371520996094,
+      "gradient_norm": 0.4239177107810974,
+      "response_bytes": 250911
+    },
+    {
+      "step": 647,
+      "response_ce": 0.3733069896697998,
+      "loss": 0.3733069896697998,
+      "gradient_norm": 0.43854808807373047,
+      "response_bytes": 251291
+    },
+    {
+      "step": 648,
+      "response_ce": 0.35249656438827515,
+      "loss": 0.35249656438827515,
+      "gradient_norm": 0.3416791260242462,
+      "response_bytes": 251686
+    },
+    {
+      "step": 649,
+      "response_ce": 0.36414894461631775,
+      "loss": 0.36414894461631775,
+      "gradient_norm": 0.39572674036026,
+      "response_bytes": 252071
+    },
+    {
+      "step": 650,
+      "response_ce": 0.36365804076194763,
+      "loss": 0.36365804076194763,
+      "gradient_norm": 0.3431258797645569,
+      "response_bytes": 252450
+    },
+    {
+      "step": 651,
+      "response_ce": 0.35925620794296265,
+      "loss": 0.35925620794296265,
+      "gradient_norm": 0.5898745656013489,
+      "response_bytes": 252832
+    },
+    {
+      "step": 652,
+      "response_ce": 0.3362171947956085,
+      "loss": 0.3362171947956085,
+      "gradient_norm": 0.3124341666698456,
+      "response_bytes": 253231
+    },
+    {
+      "step": 653,
+      "response_ce": 0.34858396649360657,
+      "loss": 0.34858396649360657,
+      "gradient_norm": 0.33071982860565186,
+      "response_bytes": 253624
+    },
+    {
+      "step": 654,
+      "response_ce": 0.34905222058296204,
+      "loss": 0.34905222058296204,
+      "gradient_norm": 0.34944096207618713,
+      "response_bytes": 254010
+    },
+    {
+      "step": 655,
+      "response_ce": 0.35892149806022644,
+      "loss": 0.35892149806022644,
+      "gradient_norm": 0.35170939564704895,
+      "response_bytes": 254401
+    },
+    {
+      "step": 656,
+      "response_ce": 0.3515639901161194,
+      "loss": 0.3515639901161194,
+      "gradient_norm": 0.31134921312332153,
+      "response_bytes": 254793
+    },
+    {
+      "step": 657,
+      "response_ce": 0.34797632694244385,
+      "loss": 0.34797632694244385,
+      "gradient_norm": 0.28277480602264404,
+      "response_bytes": 255188
+    },
+    {
+      "step": 658,
+      "response_ce": 0.3483446538448334,
+      "loss": 0.3483446538448334,
+      "gradient_norm": 0.45662009716033936,
+      "response_bytes": 255577
+    },
+    {
+      "step": 659,
+      "response_ce": 0.35600146651268005,
+      "loss": 0.35600146651268005,
+      "gradient_norm": 0.333740234375,
+      "response_bytes": 255964
+    },
+    {
+      "step": 660,
+      "response_ce": 0.3347720503807068,
+      "loss": 0.3347720503807068,
+      "gradient_norm": 0.36851736903190613,
+      "response_bytes": 256359
+    },
+    {
+      "step": 661,
+      "response_ce": 0.3658509850502014,
+      "loss": 0.3658509850502014,
+      "gradient_norm": 0.40389111638069153,
+      "response_bytes": 256745
+    },
+    {
+      "step": 662,
+      "response_ce": 0.3422538936138153,
+      "loss": 0.3422538936138153,
+      "gradient_norm": 0.38917115330696106,
+      "response_bytes": 257141
+    },
+    {
+      "step": 663,
+      "response_ce": 0.36036646366119385,
+      "loss": 0.36036646366119385,
+      "gradient_norm": 0.4223708212375641,
+      "response_bytes": 257524
+    },
+    {
+      "step": 664,
+      "response_ce": 0.34886813163757324,
+      "loss": 0.34886813163757324,
+      "gradient_norm": 0.36922207474708557,
+      "response_bytes": 257911
+    },
+    {
+      "step": 665,
+      "response_ce": 0.34496256709098816,
+      "loss": 0.34496256709098816,
+      "gradient_norm": 0.40515556931495667,
+      "response_bytes": 258309
+    },
+    {
+      "step": 666,
+      "response_ce": 0.3483349680900574,
+      "loss": 0.3483349680900574,
+      "gradient_norm": 0.32224029302597046,
+      "response_bytes": 258700
+    },
+    {
+      "step": 667,
+      "response_ce": 0.3570300340652466,
+      "loss": 0.3570300340652466,
+      "gradient_norm": 0.41039344668388367,
+      "response_bytes": 259088
+    },
+    {
+      "step": 668,
+      "response_ce": 0.34819573163986206,
+      "loss": 0.34819573163986206,
+      "gradient_norm": 0.33485734462738037,
+      "response_bytes": 259482
+    },
+    {
+      "step": 669,
+      "response_ce": 0.34341636300086975,
+      "loss": 0.34341636300086975,
+      "gradient_norm": 0.4004523754119873,
+      "response_bytes": 259870
+    },
+    {
+      "step": 670,
+      "response_ce": 0.3652687966823578,
+      "loss": 0.3652687966823578,
+      "gradient_norm": 0.4022669196128845,
+      "response_bytes": 260241
+    },
+    {
+      "step": 671,
+      "response_ce": 0.3665151596069336,
+      "loss": 0.3665151596069336,
+      "gradient_norm": 0.45592546463012695,
+      "response_bytes": 260609
+    },
+    {
+      "step": 672,
+      "response_ce": 0.36841508746147156,
+      "loss": 0.36841508746147156,
+      "gradient_norm": 0.3847207725048065,
+      "response_bytes": 260994
+    },
+    {
+      "step": 673,
+      "response_ce": 0.3537692129611969,
+      "loss": 0.3537692129611969,
+      "gradient_norm": 0.44107240438461304,
+      "response_bytes": 261378
+    },
+    {
+      "step": 674,
+      "response_ce": 0.3568032681941986,
+      "loss": 0.3568032681941986,
+      "gradient_norm": 0.3653237521648407,
+      "response_bytes": 261770
+    },
+    {
+      "step": 675,
+      "response_ce": 0.3501952886581421,
+      "loss": 0.3501952886581421,
+      "gradient_norm": 0.29885005950927734,
+      "response_bytes": 262162
+    },
+    {
+      "step": 676,
+      "response_ce": 0.3586658537387848,
+      "loss": 0.3586658537387848,
+      "gradient_norm": 0.4533407390117645,
+      "response_bytes": 262554
+    },
+    {
+      "step": 677,
+      "response_ce": 0.3453940451145172,
+      "loss": 0.3453940451145172,
+      "gradient_norm": 0.32197606563568115,
+      "response_bytes": 262944
+    },
+    {
+      "step": 678,
+      "response_ce": 0.34606555104255676,
+      "loss": 0.34606555104255676,
+      "gradient_norm": 0.34505322575569153,
+      "response_bytes": 263327
+    },
+    {
+      "step": 679,
+      "response_ce": 0.36624449491500854,
+      "loss": 0.36624449491500854,
+      "gradient_norm": 0.3967539668083191,
+      "response_bytes": 263703
+    },
+    {
+      "step": 680,
+      "response_ce": 0.35125765204429626,
+      "loss": 0.35125765204429626,
+      "gradient_norm": 0.37652507424354553,
+      "response_bytes": 264091
+    },
+    {
+      "step": 681,
+      "response_ce": 0.3515479266643524,
+      "loss": 0.3515479266643524,
+      "gradient_norm": 0.38410484790802,
+      "response_bytes": 264487
+    },
+    {
+      "step": 682,
+      "response_ce": 0.36816632747650146,
+      "loss": 0.36816632747650146,
+      "gradient_norm": 0.43813657760620117,
+      "response_bytes": 264865
+    },
+    {
+      "step": 683,
+      "response_ce": 0.3372938632965088,
+      "loss": 0.3372938632965088,
+      "gradient_norm": 0.34747782349586487,
+      "response_bytes": 265266
+    },
+    {
+      "step": 684,
+      "response_ce": 0.34916558861732483,
+      "loss": 0.34916558861732483,
+      "gradient_norm": 0.36526408791542053,
+      "response_bytes": 265655
+    },
+    {
+      "step": 685,
+      "response_ce": 0.3448036015033722,
+      "loss": 0.3448036015033722,
+      "gradient_norm": 0.3593420684337616,
+      "response_bytes": 266042
+    },
+    {
+      "step": 686,
+      "response_ce": 0.34448564052581787,
+      "loss": 0.34448564052581787,
+      "gradient_norm": 0.3750040829181671,
+      "response_bytes": 266431
+    },
+    {
+      "step": 687,
+      "response_ce": 0.3473546504974365,
+      "loss": 0.3473546504974365,
+      "gradient_norm": 0.43322181701660156,
+      "response_bytes": 266828
+    },
+    {
+      "step": 688,
+      "response_ce": 0.3499082922935486,
+      "loss": 0.3499082922935486,
+      "gradient_norm": 0.36853310465812683,
+      "response_bytes": 267220
+    },
+    {
+      "step": 689,
+      "response_ce": 0.3543184995651245,
+      "loss": 0.3543184995651245,
+      "gradient_norm": 0.4154649078845978,
+      "response_bytes": 267609
+    },
+    {
+      "step": 690,
+      "response_ce": 0.3428901135921478,
+      "loss": 0.3428901135921478,
+      "gradient_norm": 0.3266887962818146,
+      "response_bytes": 267994
+    },
+    {
+      "step": 691,
+      "response_ce": 0.35845211148262024,
+      "loss": 0.35845211148262024,
+      "gradient_norm": 0.4648512303829193,
+      "response_bytes": 268382
+    },
+    {
+      "step": 692,
+      "response_ce": 0.3505537807941437,
+      "loss": 0.3505537807941437,
+      "gradient_norm": 0.33864831924438477,
+      "response_bytes": 268766
+    },
+    {
+      "step": 693,
+      "response_ce": 0.3416258990764618,
+      "loss": 0.3416258990764618,
+      "gradient_norm": 0.3923949599266052,
+      "response_bytes": 269151
+    },
+    {
+      "step": 694,
+      "response_ce": 0.3547806739807129,
+      "loss": 0.3547806739807129,
+      "gradient_norm": 0.31763046979904175,
+      "response_bytes": 269533
+    },
+    {
+      "step": 695,
+      "response_ce": 0.3458051085472107,
+      "loss": 0.3458051085472107,
+      "gradient_norm": 0.3838789761066437,
+      "response_bytes": 269924
+    },
+    {
+      "step": 696,
+      "response_ce": 0.3550795018672943,
+      "loss": 0.3550795018672943,
+      "gradient_norm": 0.35922521352767944,
+      "response_bytes": 270305
+    },
+    {
+      "step": 697,
+      "response_ce": 0.34998220205307007,
+      "loss": 0.34998220205307007,
+      "gradient_norm": 0.39448264241218567,
+      "response_bytes": 270693
+    },
+    {
+      "step": 698,
+      "response_ce": 0.35294416546821594,
+      "loss": 0.35294416546821594,
+      "gradient_norm": 0.37761956453323364,
+      "response_bytes": 271076
+    },
+    {
+      "step": 699,
+      "response_ce": 0.36843088269233704,
+      "loss": 0.36843088269233704,
+      "gradient_norm": 0.5278523564338684,
+      "response_bytes": 271446
+    },
+    {
+      "step": 700,
+      "response_ce": 0.33668053150177,
+      "loss": 0.33668053150177,
+      "gradient_norm": 0.3713907301425934,
+      "response_bytes": 271844
+    },
+    {
+      "step": 701,
+      "response_ce": 0.34259700775146484,
+      "loss": 0.34259700775146484,
+      "gradient_norm": 0.3202696442604065,
+      "response_bytes": 272237
+    },
+    {
+      "step": 702,
+      "response_ce": 0.3600460886955261,
+      "loss": 0.3600460886955261,
+      "gradient_norm": 0.4295257031917572,
+      "response_bytes": 272609
+    },
+    {
+      "step": 703,
+      "response_ce": 0.34221041202545166,
+      "loss": 0.34221041202545166,
+      "gradient_norm": 0.2330583781003952,
+      "response_bytes": 272993
+    },
+    {
+      "step": 704,
+      "response_ce": 0.348686158657074,
+      "loss": 0.348686158657074,
+      "gradient_norm": 0.44149547815322876,
+      "response_bytes": 273370
+    },
+    {
+      "step": 705,
+      "response_ce": 0.343524694442749,
+      "loss": 0.343524694442749,
+      "gradient_norm": 0.3327353596687317,
+      "response_bytes": 273753
+    },
+    {
+      "step": 706,
+      "response_ce": 0.33869630098342896,
+      "loss": 0.33869630098342896,
+      "gradient_norm": 0.433652400970459,
+      "response_bytes": 274143
+    },
+    {
+      "step": 707,
+      "response_ce": 0.3513071835041046,
+      "loss": 0.3513071835041046,
+      "gradient_norm": 0.3279792368412018,
+      "response_bytes": 274518
+    },
+    {
+      "step": 708,
+      "response_ce": 0.34595879912376404,
+      "loss": 0.34595879912376404,
+      "gradient_norm": 0.3459739685058594,
+      "response_bytes": 274898
+    },
+    {
+      "step": 709,
+      "response_ce": 0.34386399388313293,
+      "loss": 0.34386399388313293,
+      "gradient_norm": 0.4096803367137909,
+      "response_bytes": 275289
+    },
+    {
+      "step": 710,
+      "response_ce": 0.3594321012496948,
+      "loss": 0.3594321012496948,
+      "gradient_norm": 0.41110092401504517,
+      "response_bytes": 275672
+    },
+    {
+      "step": 711,
+      "response_ce": 0.34741300344467163,
+      "loss": 0.34741300344467163,
+      "gradient_norm": 0.4211583733558655,
+      "response_bytes": 276063
+    },
+    {
+      "step": 712,
+      "response_ce": 0.3503725826740265,
+      "loss": 0.3503725826740265,
+      "gradient_norm": 0.38168707489967346,
+      "response_bytes": 276452
+    },
+    {
+      "step": 713,
+      "response_ce": 0.34062671661376953,
+      "loss": 0.34062671661376953,
+      "gradient_norm": 0.4085962474346161,
+      "response_bytes": 276853
+    },
+    {
+      "step": 714,
+      "response_ce": 0.34059083461761475,
+      "loss": 0.34059083461761475,
+      "gradient_norm": 0.39788007736206055,
+      "response_bytes": 277246
+    },
+    {
+      "step": 715,
+      "response_ce": 0.34973788261413574,
+      "loss": 0.34973788261413574,
+      "gradient_norm": 0.4188668131828308,
+      "response_bytes": 277634
+    },
+    {
+      "step": 716,
+      "response_ce": 0.33634576201438904,
+      "loss": 0.33634576201438904,
+      "gradient_norm": 0.37724941968917847,
+      "response_bytes": 278036
+    },
+    {
+      "step": 717,
+      "response_ce": 0.3454999327659607,
+      "loss": 0.3454999327659607,
+      "gradient_norm": 0.2958911657333374,
+      "response_bytes": 278419
+    },
+    {
+      "step": 718,
+      "response_ce": 0.3348407447338104,
+      "loss": 0.3348407447338104,
+      "gradient_norm": 0.3636087477207184,
+      "response_bytes": 278815
+    },
+    {
+      "step": 719,
+      "response_ce": 0.36061352491378784,
+      "loss": 0.36061352491378784,
+      "gradient_norm": 0.4804154932498932,
+      "response_bytes": 279186
+    },
+    {
+      "step": 720,
+      "response_ce": 0.3387557864189148,
+      "loss": 0.3387557864189148,
+      "gradient_norm": 0.34585198760032654,
+      "response_bytes": 279578
+    },
+    {
+      "step": 721,
+      "response_ce": 0.3428126275539398,
+      "loss": 0.3428126275539398,
+      "gradient_norm": 0.32525068521499634,
+      "response_bytes": 279976
+    },
+    {
+      "step": 722,
+      "response_ce": 0.3378007411956787,
+      "loss": 0.3378007411956787,
+      "gradient_norm": 0.3645658493041992,
+      "response_bytes": 280366
+    },
+    {
+      "step": 723,
+      "response_ce": 0.3467094898223877,
+      "loss": 0.3467094898223877,
+      "gradient_norm": 0.312186598777771,
+      "response_bytes": 280751
+    },
+    {
+      "step": 724,
+      "response_ce": 0.3501650393009186,
+      "loss": 0.3501650393009186,
+      "gradient_norm": 0.3590061664581299,
+      "response_bytes": 281130
+    },
+    {
+      "step": 725,
+      "response_ce": 0.35105931758880615,
+      "loss": 0.35105931758880615,
+      "gradient_norm": 0.447384774684906,
+      "response_bytes": 281524
+    },
+    {
+      "step": 726,
+      "response_ce": 0.34669792652130127,
+      "loss": 0.34669792652130127,
+      "gradient_norm": 0.36260682344436646,
+      "response_bytes": 281902
+    },
+    {
+      "step": 727,
+      "response_ce": 0.3413650393486023,
+      "loss": 0.3413650393486023,
+      "gradient_norm": 0.31262966990470886,
+      "response_bytes": 282292
+    },
+    {
+      "step": 728,
+      "response_ce": 0.34020230174064636,
+      "loss": 0.34020230174064636,
+      "gradient_norm": 0.34397709369659424,
+      "response_bytes": 282678
+    },
+    {
+      "step": 729,
+      "response_ce": 0.357879638671875,
+      "loss": 0.357879638671875,
+      "gradient_norm": 0.3746166229248047,
+      "response_bytes": 283055
+    },
+    {
+      "step": 730,
+      "response_ce": 0.3518032133579254,
+      "loss": 0.3518032133579254,
+      "gradient_norm": 0.5367048978805542,
+      "response_bytes": 283444
+    },
+    {
+      "step": 731,
+      "response_ce": 0.34128016233444214,
+      "loss": 0.34128016233444214,
+      "gradient_norm": 0.34808745980262756,
+      "response_bytes": 283840
+    },
+    {
+      "step": 732,
+      "response_ce": 0.35138532519340515,
+      "loss": 0.35138532519340515,
+      "gradient_norm": 0.40548402070999146,
+      "response_bytes": 284214
+    },
+    {
+      "step": 733,
+      "response_ce": 0.3328985571861267,
+      "loss": 0.3328985571861267,
+      "gradient_norm": 0.35624366998672485,
+      "response_bytes": 284609
+    },
+    {
+      "step": 734,
+      "response_ce": 0.3323723077774048,
+      "loss": 0.3323723077774048,
+      "gradient_norm": 0.4339364171028137,
+      "response_bytes": 285012
+    },
+    {
+      "step": 735,
+      "response_ce": 0.3505620062351227,
+      "loss": 0.3505620062351227,
+      "gradient_norm": 0.3396938443183899,
+      "response_bytes": 285392
+    },
+    {
+      "step": 736,
+      "response_ce": 0.3460182249546051,
+      "loss": 0.3460182249546051,
+      "gradient_norm": 0.36216074228286743,
+      "response_bytes": 285778
+    },
+    {
+      "step": 737,
+      "response_ce": 0.350436806678772,
+      "loss": 0.350436806678772,
+      "gradient_norm": 0.41848355531692505,
+      "response_bytes": 286159
+    },
+    {
+      "step": 738,
+      "response_ce": 0.35294491052627563,
+      "loss": 0.35294491052627563,
+      "gradient_norm": 0.4418131411075592,
+      "response_bytes": 286549
+    },
+    {
+      "step": 739,
+      "response_ce": 0.3480015993118286,
+      "loss": 0.3480015993118286,
+      "gradient_norm": 0.39588049054145813,
+      "response_bytes": 286935
+    },
+    {
+      "step": 740,
+      "response_ce": 0.3411807119846344,
+      "loss": 0.3411807119846344,
+      "gradient_norm": 0.3194287121295929,
+      "response_bytes": 287327
+    },
+    {
+      "step": 741,
+      "response_ce": 0.3537543714046478,
+      "loss": 0.3537543714046478,
+      "gradient_norm": 0.4407111704349518,
+      "response_bytes": 287706
+    },
+    {
+      "step": 742,
+      "response_ce": 0.33876916766166687,
+      "loss": 0.33876916766166687,
+      "gradient_norm": 0.32284820079803467,
+      "response_bytes": 288091
+    },
+    {
+      "step": 743,
+      "response_ce": 0.3288141191005707,
+      "loss": 0.3288141191005707,
+      "gradient_norm": 0.3469497561454773,
+      "response_bytes": 288485
+    },
+    {
+      "step": 744,
+      "response_ce": 0.33071422576904297,
+      "loss": 0.33071422576904297,
+      "gradient_norm": 0.34659117460250854,
+      "response_bytes": 288881
+    },
+    {
+      "step": 745,
+      "response_ce": 0.3472707271575928,
+      "loss": 0.3472707271575928,
+      "gradient_norm": 0.3467983901500702,
+      "response_bytes": 289272
+    },
+    {
+      "step": 746,
+      "response_ce": 0.3498132526874542,
+      "loss": 0.3498132526874542,
+      "gradient_norm": 0.4225904047489166,
+      "response_bytes": 289660
+    },
+    {
+      "step": 747,
+      "response_ce": 0.3390488922595978,
+      "loss": 0.3390488922595978,
+      "gradient_norm": 0.3739752173423767,
+      "response_bytes": 290053
+    },
+    {
+      "step": 748,
+      "response_ce": 0.32457631826400757,
+      "loss": 0.32457631826400757,
+      "gradient_norm": 0.3319128453731537,
+      "response_bytes": 290456
+    },
+    {
+      "step": 749,
+      "response_ce": 0.3388603627681732,
+      "loss": 0.3388603627681732,
+      "gradient_norm": 0.3193008005619049,
+      "response_bytes": 290841
+    },
+    {
+      "step": 750,
+      "response_ce": 0.34173956513404846,
+      "loss": 0.34173956513404846,
+      "gradient_norm": 0.4263736605644226,
+      "response_bytes": 291234
+    },
+    {
+      "step": 751,
+      "response_ce": 0.3219371736049652,
+      "loss": 0.3219371736049652,
+      "gradient_norm": 0.31566113233566284,
+      "response_bytes": 291637
+    },
+    {
+      "step": 752,
+      "response_ce": 0.3460172712802887,
+      "loss": 0.3460172712802887,
+      "gradient_norm": 0.35354912281036377,
+      "response_bytes": 292020
+    },
+    {
+      "step": 753,
+      "response_ce": 0.3335021436214447,
+      "loss": 0.3335021436214447,
+      "gradient_norm": 0.35081803798675537,
+      "response_bytes": 292414
+    },
+    {
+      "step": 754,
+      "response_ce": 0.355324387550354,
+      "loss": 0.355324387550354,
+      "gradient_norm": 0.37285667657852173,
+      "response_bytes": 292792
+    },
+    {
+      "step": 755,
+      "response_ce": 0.34098485112190247,
+      "loss": 0.34098485112190247,
+      "gradient_norm": 0.3795887529850006,
+      "response_bytes": 293176
+    },
+    {
+      "step": 756,
+      "response_ce": 0.3489135205745697,
+      "loss": 0.3489135205745697,
+      "gradient_norm": 0.36775675415992737,
+      "response_bytes": 293559
+    },
+    {
+      "step": 757,
+      "response_ce": 0.3345477283000946,
+      "loss": 0.3345477283000946,
+      "gradient_norm": 0.38439786434173584,
+      "response_bytes": 293954
+    },
+    {
+      "step": 758,
+      "response_ce": 0.3530794382095337,
+      "loss": 0.3530794382095337,
+      "gradient_norm": 0.3879033029079437,
+      "response_bytes": 294328
+    },
+    {
+      "step": 759,
+      "response_ce": 0.3513048589229584,
+      "loss": 0.3513048589229584,
+      "gradient_norm": 0.3876875340938568,
+      "response_bytes": 294718
+    },
+    {
+      "step": 760,
+      "response_ce": 0.34012117981910706,
+      "loss": 0.34012117981910706,
+      "gradient_norm": 0.30215421319007874,
+      "response_bytes": 295102
+    },
+    {
+      "step": 761,
+      "response_ce": 0.3284813165664673,
+      "loss": 0.3284813165664673,
+      "gradient_norm": 0.3480483293533325,
+      "response_bytes": 295495
+    },
+    {
+      "step": 762,
+      "response_ce": 0.3457634449005127,
+      "loss": 0.3457634449005127,
+      "gradient_norm": 0.37172719836235046,
+      "response_bytes": 295875
+    },
+    {
+      "step": 763,
+      "response_ce": 0.3418470323085785,
+      "loss": 0.3418470323085785,
+      "gradient_norm": 0.42679721117019653,
+      "response_bytes": 296257
+    },
+    {
+      "step": 764,
+      "response_ce": 0.3464972972869873,
+      "loss": 0.3464972972869873,
+      "gradient_norm": 0.40674009919166565,
+      "response_bytes": 296640
+    },
+    {
+      "step": 765,
+      "response_ce": 0.3308965265750885,
+      "loss": 0.3308965265750885,
+      "gradient_norm": 0.3301018178462982,
+      "response_bytes": 297045
+    },
+    {
+      "step": 766,
+      "response_ce": 0.33143138885498047,
+      "loss": 0.33143138885498047,
+      "gradient_norm": 0.392412394285202,
+      "response_bytes": 297444
+    },
+    {
+      "step": 767,
+      "response_ce": 0.35388097167015076,
+      "loss": 0.35388097167015076,
+      "gradient_norm": 0.45054101943969727,
+      "response_bytes": 297817
+    },
+    {
+      "step": 768,
+      "response_ce": 0.33918580412864685,
+      "loss": 0.33918580412864685,
+      "gradient_norm": 0.3567032217979431,
+      "response_bytes": 298209
+    },
+    {
+      "step": 769,
+      "response_ce": 0.34523674845695496,
+      "loss": 0.34523674845695496,
+      "gradient_norm": 0.30952125787734985,
+      "response_bytes": 298592
+    },
+    {
+      "step": 770,
+      "response_ce": 0.351546049118042,
+      "loss": 0.351546049118042,
+      "gradient_norm": 0.33044782280921936,
+      "response_bytes": 298964
+    },
+    {
+      "step": 771,
+      "response_ce": 0.3415623903274536,
+      "loss": 0.3415623903274536,
+      "gradient_norm": 0.4149176776409149,
+      "response_bytes": 299356
+    },
+    {
+      "step": 772,
+      "response_ce": 0.35310590267181396,
+      "loss": 0.35310590267181396,
+      "gradient_norm": 0.38283735513687134,
+      "response_bytes": 299731
+    },
+    {
+      "step": 773,
+      "response_ce": 0.343902587890625,
+      "loss": 0.343902587890625,
+      "gradient_norm": 0.45757853984832764,
+      "response_bytes": 300121
+    },
+    {
+      "step": 774,
+      "response_ce": 0.3464348018169403,
+      "loss": 0.3464348018169403,
+      "gradient_norm": 0.38192570209503174,
+      "response_bytes": 300497
+    },
+    {
+      "step": 775,
+      "response_ce": 0.3376048803329468,
+      "loss": 0.3376048803329468,
+      "gradient_norm": 0.46792295575141907,
+      "response_bytes": 300886
+    },
+    {
+      "step": 776,
+      "response_ce": 0.34135913848876953,
+      "loss": 0.34135913848876953,
+      "gradient_norm": 0.37747591733932495,
+      "response_bytes": 301276
+    },
+    {
+      "step": 777,
+      "response_ce": 0.34194374084472656,
+      "loss": 0.34194374084472656,
+      "gradient_norm": 0.39695289731025696,
+      "response_bytes": 301676
+    },
+    {
+      "step": 778,
+      "response_ce": 0.3584524691104889,
+      "loss": 0.3584524691104889,
+      "gradient_norm": 0.4386025369167328,
+      "response_bytes": 302049
+    },
+    {
+      "step": 779,
+      "response_ce": 0.3480294942855835,
+      "loss": 0.3480294942855835,
+      "gradient_norm": 0.41931450366973877,
+      "response_bytes": 302439
+    },
+    {
+      "step": 780,
+      "response_ce": 0.34225407242774963,
+      "loss": 0.34225407242774963,
+      "gradient_norm": 0.4287387728691101,
+      "response_bytes": 302823
+    },
+    {
+      "step": 781,
+      "response_ce": 0.3344765901565552,
+      "loss": 0.3344765901565552,
+      "gradient_norm": 0.32750457525253296,
+      "response_bytes": 303220
+    },
+    {
+      "step": 782,
+      "response_ce": 0.34370195865631104,
+      "loss": 0.34370195865631104,
+      "gradient_norm": 0.3878392279148102,
+      "response_bytes": 303604
+    },
+    {
+      "step": 783,
+      "response_ce": 0.34509679675102234,
+      "loss": 0.34509679675102234,
+      "gradient_norm": 0.3573181629180908,
+      "response_bytes": 303983
+    },
+    {
+      "step": 784,
+      "response_ce": 0.34273892641067505,
+      "loss": 0.34273892641067505,
+      "gradient_norm": 0.35596105456352234,
+      "response_bytes": 304374
+    },
+    {
+      "step": 785,
+      "response_ce": 0.34596800804138184,
+      "loss": 0.34596800804138184,
+      "gradient_norm": 0.25724783539772034,
+      "response_bytes": 304752
+    },
+    {
+      "step": 786,
+      "response_ce": 0.34073370695114136,
+      "loss": 0.34073370695114136,
+      "gradient_norm": 0.394246906042099,
+      "response_bytes": 305129
+    },
+    {
+      "step": 787,
+      "response_ce": 0.3439747095108032,
+      "loss": 0.3439747095108032,
+      "gradient_norm": 0.39716559648513794,
+      "response_bytes": 305510
+    },
+    {
+      "step": 788,
+      "response_ce": 0.33586210012435913,
+      "loss": 0.33586210012435913,
+      "gradient_norm": 0.2995760440826416,
+      "response_bytes": 305907
+    },
+    {
+      "step": 789,
+      "response_ce": 0.33755022287368774,
+      "loss": 0.33755022287368774,
+      "gradient_norm": 0.33924803137779236,
+      "response_bytes": 306286
+    },
+    {
+      "step": 790,
+      "response_ce": 0.34757915139198303,
+      "loss": 0.34757915139198303,
+      "gradient_norm": 0.5196288228034973,
+      "response_bytes": 306680
+    },
+    {
+      "step": 791,
+      "response_ce": 0.3292163014411926,
+      "loss": 0.3292163014411926,
+      "gradient_norm": 0.4188172519207001,
+      "response_bytes": 307084
+    },
+    {
+      "step": 792,
+      "response_ce": 0.32961297035217285,
+      "loss": 0.32961297035217285,
+      "gradient_norm": 0.32310792803764343,
+      "response_bytes": 307485
+    },
+    {
+      "step": 793,
+      "response_ce": 0.34982985258102417,
+      "loss": 0.34982985258102417,
+      "gradient_norm": 0.4091776907444,
+      "response_bytes": 307864
+    },
+    {
+      "step": 794,
+      "response_ce": 0.3291410207748413,
+      "loss": 0.3291410207748413,
+      "gradient_norm": 0.31672027707099915,
+      "response_bytes": 308257
+    },
+    {
+      "step": 795,
+      "response_ce": 0.33653977513313293,
+      "loss": 0.33653977513313293,
+      "gradient_norm": 0.31398963928222656,
+      "response_bytes": 308646
+    },
+    {
+      "step": 796,
+      "response_ce": 0.33856645226478577,
+      "loss": 0.33856645226478577,
+      "gradient_norm": 0.36950957775115967,
+      "response_bytes": 309030
+    },
+    {
+      "step": 797,
+      "response_ce": 0.33412784337997437,
+      "loss": 0.33412784337997437,
+      "gradient_norm": 0.4404546618461609,
+      "response_bytes": 309427
+    },
+    {
+      "step": 798,
+      "response_ce": 0.33390718698501587,
+      "loss": 0.33390718698501587,
+      "gradient_norm": 0.3934284746646881,
+      "response_bytes": 309818
+    },
+    {
+      "step": 799,
+      "response_ce": 0.33071574568748474,
+      "loss": 0.33071574568748474,
+      "gradient_norm": 0.3079165816307068,
+      "response_bytes": 310211
+    },
+    {
+      "step": 800,
+      "response_ce": 0.34475839138031006,
+      "loss": 0.34475839138031006,
+      "gradient_norm": 0.4677974283695221,
+      "response_bytes": 310605
+    },
+    {
+      "step": 801,
+      "response_ce": 0.34606412053108215,
+      "loss": 0.34606412053108215,
+      "gradient_norm": 0.43349605798721313,
+      "response_bytes": 310980
+    },
+    {
+      "step": 802,
+      "response_ce": 0.343567818403244,
+      "loss": 0.343567818403244,
+      "gradient_norm": 0.3419693112373352,
+      "response_bytes": 311365
+    },
+    {
+      "step": 803,
+      "response_ce": 0.3318045735359192,
+      "loss": 0.3318045735359192,
+      "gradient_norm": 0.37059545516967773,
+      "response_bytes": 311760
+    },
+    {
+      "step": 804,
+      "response_ce": 0.32318055629730225,
+      "loss": 0.32318055629730225,
+      "gradient_norm": 0.3177490830421448,
+      "response_bytes": 312163
+    },
+    {
+      "step": 805,
+      "response_ce": 0.32384076714515686,
+      "loss": 0.32384076714515686,
+      "gradient_norm": 0.2831798791885376,
+      "response_bytes": 312550
+    },
+    {
+      "step": 806,
+      "response_ce": 0.32072776556015015,
+      "loss": 0.32072776556015015,
+      "gradient_norm": 0.3258354067802429,
+      "response_bytes": 312950
+    },
+    {
+      "step": 807,
+      "response_ce": 0.3323246240615845,
+      "loss": 0.3323246240615845,
+      "gradient_norm": 0.28476160764694214,
+      "response_bytes": 313343
+    },
+    {
+      "step": 808,
+      "response_ce": 0.3422706723213196,
+      "loss": 0.3422706723213196,
+      "gradient_norm": 0.45453357696533203,
+      "response_bytes": 313737
+    },
+    {
+      "step": 809,
+      "response_ce": 0.33714166283607483,
+      "loss": 0.33714166283607483,
+      "gradient_norm": 0.4953133165836334,
+      "response_bytes": 314128
+    },
+    {
+      "step": 810,
+      "response_ce": 0.32926130294799805,
+      "loss": 0.32926130294799805,
+      "gradient_norm": 0.30613216757774353,
+      "response_bytes": 314516
+    },
+    {
+      "step": 811,
+      "response_ce": 0.33754298090934753,
+      "loss": 0.33754298090934753,
+      "gradient_norm": 0.31751149892807007,
+      "response_bytes": 314907
+    },
+    {
+      "step": 812,
+      "response_ce": 0.3402472734451294,
+      "loss": 0.3402472734451294,
+      "gradient_norm": 0.4373856484889984,
+      "response_bytes": 315294
+    },
+    {
+      "step": 813,
+      "response_ce": 0.3490981161594391,
+      "loss": 0.3490981161594391,
+      "gradient_norm": 0.402673602104187,
+      "response_bytes": 315669
+    },
+    {
+      "step": 814,
+      "response_ce": 0.33082905411720276,
+      "loss": 0.33082905411720276,
+      "gradient_norm": 0.39039140939712524,
+      "response_bytes": 316059
+    },
+    {
+      "step": 815,
+      "response_ce": 0.3417166471481323,
+      "loss": 0.3417166471481323,
+      "gradient_norm": 0.42418524622917175,
+      "response_bytes": 316448
+    },
+    {
+      "step": 816,
+      "response_ce": 0.34386348724365234,
+      "loss": 0.34386348724365234,
+      "gradient_norm": 0.4341423511505127,
+      "response_bytes": 316842
+    },
+    {
+      "step": 817,
+      "response_ce": 0.3459557890892029,
+      "loss": 0.3459557890892029,
+      "gradient_norm": 0.4212522804737091,
+      "response_bytes": 317222
+    },
+    {
+      "step": 818,
+      "response_ce": 0.34381774067878723,
+      "loss": 0.34381774067878723,
+      "gradient_norm": 0.3511603772640228,
+      "response_bytes": 317609
+    },
+    {
+      "step": 819,
+      "response_ce": 0.3548877239227295,
+      "loss": 0.3548877239227295,
+      "gradient_norm": 0.4508996307849884,
+      "response_bytes": 317990
+    },
+    {
+      "step": 820,
+      "response_ce": 0.33440160751342773,
+      "loss": 0.33440160751342773,
+      "gradient_norm": 0.40384721755981445,
+      "response_bytes": 318376
+    },
+    {
+      "step": 821,
+      "response_ce": 0.34229370951652527,
+      "loss": 0.34229370951652527,
+      "gradient_norm": 0.3950306475162506,
+      "response_bytes": 318765
+    },
+    {
+      "step": 822,
+      "response_ce": 0.3394656181335449,
+      "loss": 0.3394656181335449,
+      "gradient_norm": 0.40701591968536377,
+      "response_bytes": 319153
+    },
+    {
+      "step": 823,
+      "response_ce": 0.32827073335647583,
+      "loss": 0.32827073335647583,
+      "gradient_norm": 0.30511531233787537,
+      "response_bytes": 319553
+    },
+    {
+      "step": 824,
+      "response_ce": 0.33408913016319275,
+      "loss": 0.33408913016319275,
+      "gradient_norm": 0.5917264223098755,
+      "response_bytes": 319948
+    },
+    {
+      "step": 825,
+      "response_ce": 0.333524614572525,
+      "loss": 0.333524614572525,
+      "gradient_norm": 0.3007268011569977,
+      "response_bytes": 320340
+    },
+    {
+      "step": 826,
+      "response_ce": 0.32761773467063904,
+      "loss": 0.32761773467063904,
+      "gradient_norm": 0.3299656808376312,
+      "response_bytes": 320732
+    },
+    {
+      "step": 827,
+      "response_ce": 0.3368750214576721,
+      "loss": 0.3368750214576721,
+      "gradient_norm": 0.37743523716926575,
+      "response_bytes": 321124
+    },
+    {
+      "step": 828,
+      "response_ce": 0.3334837257862091,
+      "loss": 0.3334837257862091,
+      "gradient_norm": 0.357860267162323,
+      "response_bytes": 321513
+    },
+    {
+      "step": 829,
+      "response_ce": 0.3291263282299042,
+      "loss": 0.3291263282299042,
+      "gradient_norm": 0.3496943414211273,
+      "response_bytes": 321906
+    },
+    {
+      "step": 830,
+      "response_ce": 0.33008989691734314,
+      "loss": 0.33008989691734314,
+      "gradient_norm": 0.32336312532424927,
+      "response_bytes": 322300
+    },
+    {
+      "step": 831,
+      "response_ce": 0.34485283493995667,
+      "loss": 0.34485283493995667,
+      "gradient_norm": 0.41790762543678284,
+      "response_bytes": 322677
+    },
+    {
+      "step": 832,
+      "response_ce": 0.33872365951538086,
+      "loss": 0.33872365951538086,
+      "gradient_norm": 0.4273471534252167,
+      "response_bytes": 323070
+    },
+    {
+      "step": 833,
+      "response_ce": 0.35074809193611145,
+      "loss": 0.35074809193611145,
+      "gradient_norm": 0.40021857619285583,
+      "response_bytes": 323462
+    },
+    {
+      "step": 834,
+      "response_ce": 0.3537333011627197,
+      "loss": 0.3537333011627197,
+      "gradient_norm": 0.43401074409484863,
+      "response_bytes": 323841
+    },
+    {
+      "step": 835,
+      "response_ce": 0.33719298243522644,
+      "loss": 0.33719298243522644,
+      "gradient_norm": 0.3950936198234558,
+      "response_bytes": 324231
+    },
+    {
+      "step": 836,
+      "response_ce": 0.33702248334884644,
+      "loss": 0.33702248334884644,
+      "gradient_norm": 0.4105078876018524,
+      "response_bytes": 324627
+    },
+    {
+      "step": 837,
+      "response_ce": 0.354687362909317,
+      "loss": 0.354687362909317,
+      "gradient_norm": 0.42295289039611816,
+      "response_bytes": 325004
+    },
+    {
+      "step": 838,
+      "response_ce": 0.3366834223270416,
+      "loss": 0.3366834223270416,
+      "gradient_norm": 0.3792875409126282,
+      "response_bytes": 325387
+    },
+    {
+      "step": 839,
+      "response_ce": 0.34012794494628906,
+      "loss": 0.34012794494628906,
+      "gradient_norm": 0.32226303219795227,
+      "response_bytes": 325776
+    },
+    {
+      "step": 840,
+      "response_ce": 0.3486117124557495,
+      "loss": 0.3486117124557495,
+      "gradient_norm": 0.39657658338546753,
+      "response_bytes": 326146
+    },
+    {
+      "step": 841,
+      "response_ce": 0.3269497752189636,
+      "loss": 0.3269497752189636,
+      "gradient_norm": 0.40790560841560364,
+      "response_bytes": 326542
+    },
+    {
+      "step": 842,
+      "response_ce": 0.3292944133281708,
+      "loss": 0.3292944133281708,
+      "gradient_norm": 0.3288742005825043,
+      "response_bytes": 326933
+    },
+    {
+      "step": 843,
+      "response_ce": 0.32360509037971497,
+      "loss": 0.32360509037971497,
+      "gradient_norm": 0.37866052985191345,
+      "response_bytes": 327335
+    },
+    {
+      "step": 844,
+      "response_ce": 0.33704376220703125,
+      "loss": 0.33704376220703125,
+      "gradient_norm": 0.3334940969944,
+      "response_bytes": 327714
+    },
+    {
+      "step": 845,
+      "response_ce": 0.33996865153312683,
+      "loss": 0.33996865153312683,
+      "gradient_norm": 0.4279387295246124,
+      "response_bytes": 328097
+    },
+    {
+      "step": 846,
+      "response_ce": 0.3331252336502075,
+      "loss": 0.3331252336502075,
+      "gradient_norm": 0.2645648419857025,
+      "response_bytes": 328492
+    },
+    {
+      "step": 847,
+      "response_ce": 0.34142714738845825,
+      "loss": 0.34142714738845825,
+      "gradient_norm": 0.43790945410728455,
+      "response_bytes": 328883
+    },
+    {
+      "step": 848,
+      "response_ce": 0.3484225571155548,
+      "loss": 0.3484225571155548,
+      "gradient_norm": 0.3807266354560852,
+      "response_bytes": 329260
+    },
+    {
+      "step": 849,
+      "response_ce": 0.3371488153934479,
+      "loss": 0.3371488153934479,
+      "gradient_norm": 0.2699550986289978,
+      "response_bytes": 329653
+    },
+    {
+      "step": 850,
+      "response_ce": 0.3331628143787384,
+      "loss": 0.3331628143787384,
+      "gradient_norm": 0.42702990770339966,
+      "response_bytes": 330043
+    },
+    {
+      "step": 851,
+      "response_ce": 0.33402496576309204,
+      "loss": 0.33402496576309204,
+      "gradient_norm": 0.38099730014801025,
+      "response_bytes": 330440
+    },
+    {
+      "step": 852,
+      "response_ce": 0.34108665585517883,
+      "loss": 0.34108665585517883,
+      "gradient_norm": 0.4033728241920471,
+      "response_bytes": 330820
+    },
+    {
+      "step": 853,
+      "response_ce": 0.3240099847316742,
+      "loss": 0.3240099847316742,
+      "gradient_norm": 0.43442001938819885,
+      "response_bytes": 331213
+    },
+    {
+      "step": 854,
+      "response_ce": 0.33944371342658997,
+      "loss": 0.33944371342658997,
+      "gradient_norm": 0.433590292930603,
+      "response_bytes": 331595
+    },
+    {
+      "step": 855,
+      "response_ce": 0.32802295684814453,
+      "loss": 0.32802295684814453,
+      "gradient_norm": 0.33990707993507385,
+      "response_bytes": 331986
+    },
+    {
+      "step": 856,
+      "response_ce": 0.34362849593162537,
+      "loss": 0.34362849593162537,
+      "gradient_norm": 0.4547850787639618,
+      "response_bytes": 332369
+    },
+    {
+      "step": 857,
+      "response_ce": 0.34904539585113525,
+      "loss": 0.34904539585113525,
+      "gradient_norm": 0.3922981023788452,
+      "response_bytes": 332748
+    },
+    {
+      "step": 858,
+      "response_ce": 0.31943079829216003,
+      "loss": 0.31943079829216003,
+      "gradient_norm": 0.3427848517894745,
+      "response_bytes": 333146
+    },
+    {
+      "step": 859,
+      "response_ce": 0.34313905239105225,
+      "loss": 0.34313905239105225,
+      "gradient_norm": 0.34889814257621765,
+      "response_bytes": 333535
+    },
+    {
+      "step": 860,
+      "response_ce": 0.3403463661670685,
+      "loss": 0.3403463661670685,
+      "gradient_norm": 0.38782942295074463,
+      "response_bytes": 333916
+    },
+    {
+      "step": 861,
+      "response_ce": 0.33313173055648804,
+      "loss": 0.33313173055648804,
+      "gradient_norm": 0.3048943281173706,
+      "response_bytes": 334310
+    },
+    {
+      "step": 862,
+      "response_ce": 0.32024046778678894,
+      "loss": 0.32024046778678894,
+      "gradient_norm": 0.3097193241119385,
+      "response_bytes": 334708
+    },
+    {
+      "step": 863,
+      "response_ce": 0.34693533182144165,
+      "loss": 0.34693533182144165,
+      "gradient_norm": 0.4332573711872101,
+      "response_bytes": 335089
+    },
+    {
+      "step": 864,
+      "response_ce": 0.3401862680912018,
+      "loss": 0.3401862680912018,
+      "gradient_norm": 0.43851158022880554,
+      "response_bytes": 335469
+    },
+    {
+      "step": 865,
+      "response_ce": 0.33577731251716614,
+      "loss": 0.33577731251716614,
+      "gradient_norm": 0.3157937526702881,
+      "response_bytes": 335861
+    },
+    {
+      "step": 866,
+      "response_ce": 0.33051103353500366,
+      "loss": 0.33051103353500366,
+      "gradient_norm": 0.350920706987381,
+      "response_bytes": 336260
+    },
+    {
+      "step": 867,
+      "response_ce": 0.33387884497642517,
+      "loss": 0.33387884497642517,
+      "gradient_norm": 0.29776114225387573,
+      "response_bytes": 336641
+    },
+    {
+      "step": 868,
+      "response_ce": 0.3352414667606354,
+      "loss": 0.3352414667606354,
+      "gradient_norm": 0.35657182335853577,
+      "response_bytes": 337033
+    },
+    {
+      "step": 869,
+      "response_ce": 0.33163970708847046,
+      "loss": 0.33163970708847046,
+      "gradient_norm": 0.42023178935050964,
+      "response_bytes": 337427
+    },
+    {
+      "step": 870,
+      "response_ce": 0.3329932689666748,
+      "loss": 0.3329932689666748,
+      "gradient_norm": 0.4680604934692383,
+      "response_bytes": 337817
+    },
+    {
+      "step": 871,
+      "response_ce": 0.34481561183929443,
+      "loss": 0.34481561183929443,
+      "gradient_norm": 0.4120878279209137,
+      "response_bytes": 338197
+    },
+    {
+      "step": 872,
+      "response_ce": 0.34444352984428406,
+      "loss": 0.34444352984428406,
+      "gradient_norm": 0.32314905524253845,
+      "response_bytes": 338585
+    },
+    {
+      "step": 873,
+      "response_ce": 0.34261423349380493,
+      "loss": 0.34261423349380493,
+      "gradient_norm": 0.4479183256626129,
+      "response_bytes": 338972
+    },
+    {
+      "step": 874,
+      "response_ce": 0.3304361402988434,
+      "loss": 0.3304361402988434,
+      "gradient_norm": 0.4089776575565338,
+      "response_bytes": 339363
+    },
+    {
+      "step": 875,
+      "response_ce": 0.35031306743621826,
+      "loss": 0.35031306743621826,
+      "gradient_norm": 0.4580322206020355,
+      "response_bytes": 339741
+    },
+    {
+      "step": 876,
+      "response_ce": 0.330567330121994,
+      "loss": 0.330567330121994,
+      "gradient_norm": 0.4854632616043091,
+      "response_bytes": 340142
+    },
+    {
+      "step": 877,
+      "response_ce": 0.35188448429107666,
+      "loss": 0.35188448429107666,
+      "gradient_norm": 0.5129242539405823,
+      "response_bytes": 340525
+    },
+    {
+      "step": 878,
+      "response_ce": 0.32839587330818176,
+      "loss": 0.32839587330818176,
+      "gradient_norm": 0.3469783663749695,
+      "response_bytes": 340912
+    },
+    {
+      "step": 879,
+      "response_ce": 0.3398444354534149,
+      "loss": 0.3398444354534149,
+      "gradient_norm": 0.35468655824661255,
+      "response_bytes": 341296
+    },
+    {
+      "step": 880,
+      "response_ce": 0.32892754673957825,
+      "loss": 0.32892754673957825,
+      "gradient_norm": 0.33132609724998474,
+      "response_bytes": 341689
+    },
+    {
+      "step": 881,
+      "response_ce": 0.3446176052093506,
+      "loss": 0.3446176052093506,
+      "gradient_norm": 0.3841310739517212,
+      "response_bytes": 342061
+    },
+    {
+      "step": 882,
+      "response_ce": 0.321609765291214,
+      "loss": 0.321609765291214,
+      "gradient_norm": 0.41727739572525024,
+      "response_bytes": 342454
+    },
+    {
+      "step": 883,
+      "response_ce": 0.32942354679107666,
+      "loss": 0.32942354679107666,
+      "gradient_norm": 0.3951462209224701,
+      "response_bytes": 342846
+    },
+    {
+      "step": 884,
+      "response_ce": 0.3277461528778076,
+      "loss": 0.3277461528778076,
+      "gradient_norm": 0.3471798002719879,
+      "response_bytes": 343237
+    },
+    {
+      "step": 885,
+      "response_ce": 0.3321582078933716,
+      "loss": 0.3321582078933716,
+      "gradient_norm": 0.32895371317863464,
+      "response_bytes": 343625
+    },
+    {
+      "step": 886,
+      "response_ce": 0.331846684217453,
+      "loss": 0.331846684217453,
+      "gradient_norm": 0.4035496413707733,
+      "response_bytes": 344019
+    },
+    {
+      "step": 887,
+      "response_ce": 0.3291225731372833,
+      "loss": 0.3291225731372833,
+      "gradient_norm": 0.518059253692627,
+      "response_bytes": 344416
+    },
+    {
+      "step": 888,
+      "response_ce": 0.3416878283023834,
+      "loss": 0.3416878283023834,
+      "gradient_norm": 0.39010921120643616,
+      "response_bytes": 344793
+    },
+    {
+      "step": 889,
+      "response_ce": 0.34384623169898987,
+      "loss": 0.34384623169898987,
+      "gradient_norm": 0.402998149394989,
+      "response_bytes": 345168
+    },
+    {
+      "step": 890,
+      "response_ce": 0.33512216806411743,
+      "loss": 0.33512216806411743,
+      "gradient_norm": 0.37225210666656494,
+      "response_bytes": 345556
+    },
+    {
+      "step": 891,
+      "response_ce": 0.33051183819770813,
+      "loss": 0.33051183819770813,
+      "gradient_norm": 0.5211199522018433,
+      "response_bytes": 345958
+    },
+    {
+      "step": 892,
+      "response_ce": 0.350414514541626,
+      "loss": 0.350414514541626,
+      "gradient_norm": 0.39072510600090027,
+      "response_bytes": 346343
+    },
+    {
+      "step": 893,
+      "response_ce": 0.3316881060600281,
+      "loss": 0.3316881060600281,
+      "gradient_norm": 0.3655001223087311,
+      "response_bytes": 346737
+    },
+    {
+      "step": 894,
+      "response_ce": 0.33180007338523865,
+      "loss": 0.33180007338523865,
+      "gradient_norm": 0.34158027172088623,
+      "response_bytes": 347140
+    },
+    {
+      "step": 895,
+      "response_ce": 0.3268416225910187,
+      "loss": 0.3268416225910187,
+      "gradient_norm": 0.3649497330188751,
+      "response_bytes": 347531
+    },
+    {
+      "step": 896,
+      "response_ce": 0.32656431198120117,
+      "loss": 0.32656431198120117,
+      "gradient_norm": 0.4025915265083313,
+      "response_bytes": 347921
+    },
+    {
+      "step": 897,
+      "response_ce": 0.33017686009407043,
+      "loss": 0.33017686009407043,
+      "gradient_norm": 0.276381254196167,
+      "response_bytes": 348306
+    },
+    {
+      "step": 898,
+      "response_ce": 0.35288727283477783,
+      "loss": 0.35288727283477783,
+      "gradient_norm": 0.4064830243587494,
+      "response_bytes": 348672
+    },
+    {
+      "step": 899,
+      "response_ce": 0.3443487286567688,
+      "loss": 0.3443487286567688,
+      "gradient_norm": 0.41692376136779785,
+      "response_bytes": 349059
+    },
+    {
+      "step": 900,
+      "response_ce": 0.34264498949050903,
+      "loss": 0.34264498949050903,
+      "gradient_norm": 0.43877485394477844,
+      "response_bytes": 349444
+    },
+    {
+      "step": 901,
+      "response_ce": 0.33827248215675354,
+      "loss": 0.33827248215675354,
+      "gradient_norm": 0.4875154495239258,
+      "response_bytes": 349833
+    },
+    {
+      "step": 902,
+      "response_ce": 0.3263431489467621,
+      "loss": 0.3263431489467621,
+      "gradient_norm": 0.28415414690971375,
+      "response_bytes": 350221
+    },
+    {
+      "step": 903,
+      "response_ce": 0.3203336298465729,
+      "loss": 0.3203336298465729,
+      "gradient_norm": 0.4082958996295929,
+      "response_bytes": 350619
+    },
+    {
+      "step": 904,
+      "response_ce": 0.34373530745506287,
+      "loss": 0.34373530745506287,
+      "gradient_norm": 0.3542419970035553,
+      "response_bytes": 351001
+    },
+    {
+      "step": 905,
+      "response_ce": 0.3315510153770447,
+      "loss": 0.3315510153770447,
+      "gradient_norm": 0.3769947588443756,
+      "response_bytes": 351399
+    },
+    {
+      "step": 906,
+      "response_ce": 0.3407951295375824,
+      "loss": 0.3407951295375824,
+      "gradient_norm": 0.38512200117111206,
+      "response_bytes": 351791
+    },
+    {
+      "step": 907,
+      "response_ce": 0.31745925545692444,
+      "loss": 0.31745925545692444,
+      "gradient_norm": 0.379652202129364,
+      "response_bytes": 352192
+    },
+    {
+      "step": 908,
+      "response_ce": 0.34020230174064636,
+      "loss": 0.34020230174064636,
+      "gradient_norm": 0.3840940296649933,
+      "response_bytes": 352563
+    },
+    {
+      "step": 909,
+      "response_ce": 0.3521754741668701,
+      "loss": 0.3521754741668701,
+      "gradient_norm": 0.43399420380592346,
+      "response_bytes": 352935
+    },
+    {
+      "step": 910,
+      "response_ce": 0.3287944793701172,
+      "loss": 0.3287944793701172,
+      "gradient_norm": 0.35681191086769104,
+      "response_bytes": 353318
+    },
+    {
+      "step": 911,
+      "response_ce": 0.334425687789917,
+      "loss": 0.334425687789917,
+      "gradient_norm": 0.3712764382362366,
+      "response_bytes": 353706
+    },
+    {
+      "step": 912,
+      "response_ce": 0.3483566343784332,
+      "loss": 0.3483566343784332,
+      "gradient_norm": 0.3952972888946533,
+      "response_bytes": 354086
+    },
+    {
+      "step": 913,
+      "response_ce": 0.3348701596260071,
+      "loss": 0.3348701596260071,
+      "gradient_norm": 0.3229425549507141,
+      "response_bytes": 354474
+    },
+    {
+      "step": 914,
+      "response_ce": 0.33020105957984924,
+      "loss": 0.33020105957984924,
+      "gradient_norm": 0.32000699639320374,
+      "response_bytes": 354866
+    },
+    {
+      "step": 915,
+      "response_ce": 0.3279460072517395,
+      "loss": 0.3279460072517395,
+      "gradient_norm": 0.3858878016471863,
+      "response_bytes": 355274
+    },
+    {
+      "step": 916,
+      "response_ce": 0.31651172041893005,
+      "loss": 0.31651172041893005,
+      "gradient_norm": 0.29263147711753845,
+      "response_bytes": 355674
+    },
+    {
+      "step": 917,
+      "response_ce": 0.34148508310317993,
+      "loss": 0.34148508310317993,
+      "gradient_norm": 0.2979275584220886,
+      "response_bytes": 356061
+    },
+    {
+      "step": 918,
+      "response_ce": 0.33281853795051575,
+      "loss": 0.33281853795051575,
+      "gradient_norm": 0.3498496115207672,
+      "response_bytes": 356454
+    },
+    {
+      "step": 919,
+      "response_ce": 0.3381863236427307,
+      "loss": 0.3381863236427307,
+      "gradient_norm": 0.2824501395225525,
+      "response_bytes": 356840
+    },
+    {
+      "step": 920,
+      "response_ce": 0.336452841758728,
+      "loss": 0.336452841758728,
+      "gradient_norm": 0.32127299904823303,
+      "response_bytes": 357228
+    },
+    {
+      "step": 921,
+      "response_ce": 0.3327547311782837,
+      "loss": 0.3327547311782837,
+      "gradient_norm": 0.4039398431777954,
+      "response_bytes": 357627
+    },
+    {
+      "step": 922,
+      "response_ce": 0.338044136762619,
+      "loss": 0.338044136762619,
+      "gradient_norm": 0.5079589486122131,
+      "response_bytes": 358018
+    },
+    {
+      "step": 923,
+      "response_ce": 0.3441733419895172,
+      "loss": 0.3441733419895172,
+      "gradient_norm": 0.31337812542915344,
+      "response_bytes": 358392
+    },
+    {
+      "step": 924,
+      "response_ce": 0.32652968168258667,
+      "loss": 0.32652968168258667,
+      "gradient_norm": 0.3796105980873108,
+      "response_bytes": 358782
+    },
+    {
+      "step": 925,
+      "response_ce": 0.32674500346183777,
+      "loss": 0.32674500346183777,
+      "gradient_norm": 0.39153853058815,
+      "response_bytes": 359175
+    },
+    {
+      "step": 926,
+      "response_ce": 0.3316250145435333,
+      "loss": 0.3316250145435333,
+      "gradient_norm": 0.4113573431968689,
+      "response_bytes": 359573
+    },
+    {
+      "step": 927,
+      "response_ce": 0.3438979983329773,
+      "loss": 0.3438979983329773,
+      "gradient_norm": 0.32258304953575134,
+      "response_bytes": 359945
+    },
+    {
+      "step": 928,
+      "response_ce": 0.3263032138347626,
+      "loss": 0.3263032138347626,
+      "gradient_norm": 0.3547343611717224,
+      "response_bytes": 360334
+    },
+    {
+      "step": 929,
+      "response_ce": 0.32862165570259094,
+      "loss": 0.32862165570259094,
+      "gradient_norm": 0.3863668739795685,
+      "response_bytes": 360727
+    },
+    {
+      "step": 930,
+      "response_ce": 0.33074119687080383,
+      "loss": 0.33074119687080383,
+      "gradient_norm": 0.4053891897201538,
+      "response_bytes": 361118
+    },
+    {
+      "step": 931,
+      "response_ce": 0.3346264064311981,
+      "loss": 0.3346264064311981,
+      "gradient_norm": 0.4764026999473572,
+      "response_bytes": 361500
+    },
+    {
+      "step": 932,
+      "response_ce": 0.33393388986587524,
+      "loss": 0.33393388986587524,
+      "gradient_norm": 0.3105851113796234,
+      "response_bytes": 361891
+    },
+    {
+      "step": 933,
+      "response_ce": 0.34560349583625793,
+      "loss": 0.34560349583625793,
+      "gradient_norm": 0.4142346680164337,
+      "response_bytes": 362261
+    },
+    {
+      "step": 934,
+      "response_ce": 0.3378669023513794,
+      "loss": 0.3378669023513794,
+      "gradient_norm": 0.3409896194934845,
+      "response_bytes": 362643
+    },
+    {
+      "step": 935,
+      "response_ce": 0.3363296389579773,
+      "loss": 0.3363296389579773,
+      "gradient_norm": 0.3886055648326874,
+      "response_bytes": 363028
+    },
+    {
+      "step": 936,
+      "response_ce": 0.32110628485679626,
+      "loss": 0.32110628485679626,
+      "gradient_norm": 0.3156200647354126,
+      "response_bytes": 363420
+    },
+    {
+      "step": 937,
+      "response_ce": 0.3178776502609253,
+      "loss": 0.3178776502609253,
+      "gradient_norm": 0.3361422121524811,
+      "response_bytes": 363823
+    },
+    {
+      "step": 938,
+      "response_ce": 0.32459384202957153,
+      "loss": 0.32459384202957153,
+      "gradient_norm": 0.3263608515262604,
+      "response_bytes": 364217
+    },
+    {
+      "step": 939,
+      "response_ce": 0.33738863468170166,
+      "loss": 0.33738863468170166,
+      "gradient_norm": 0.35321664810180664,
+      "response_bytes": 364600
+    },
+    {
+      "step": 940,
+      "response_ce": 0.32382431626319885,
+      "loss": 0.32382431626319885,
+      "gradient_norm": 0.4377370774745941,
+      "response_bytes": 364998
+    },
+    {
+      "step": 941,
+      "response_ce": 0.34360602498054504,
+      "loss": 0.34360602498054504,
+      "gradient_norm": 0.5188930034637451,
+      "response_bytes": 365384
+    },
+    {
+      "step": 942,
+      "response_ce": 0.3366248309612274,
+      "loss": 0.3366248309612274,
+      "gradient_norm": 0.28439292311668396,
+      "response_bytes": 365768
+    },
+    {
+      "step": 943,
+      "response_ce": 0.32330381870269775,
+      "loss": 0.32330381870269775,
+      "gradient_norm": 0.33100074529647827,
+      "response_bytes": 366162
+    },
+    {
+      "step": 944,
+      "response_ce": 0.3287758529186249,
+      "loss": 0.3287758529186249,
+      "gradient_norm": 0.38781002163887024,
+      "response_bytes": 366562
+    },
+    {
+      "step": 945,
+      "response_ce": 0.3439987003803253,
+      "loss": 0.3439987003803253,
+      "gradient_norm": 0.3882002830505371,
+      "response_bytes": 366944
+    },
+    {
+      "step": 946,
+      "response_ce": 0.32957926392555237,
+      "loss": 0.32957926392555237,
+      "gradient_norm": 0.359760582447052,
+      "response_bytes": 367339
+    },
+    {
+      "step": 947,
+      "response_ce": 0.34140127897262573,
+      "loss": 0.34140127897262573,
+      "gradient_norm": 0.36483627557754517,
+      "response_bytes": 367712
+    },
+    {
+      "step": 948,
+      "response_ce": 0.34546414017677307,
+      "loss": 0.34546414017677307,
+      "gradient_norm": 0.4076313078403473,
+      "response_bytes": 368091
+    },
+    {
+      "step": 949,
+      "response_ce": 0.32904189825057983,
+      "loss": 0.32904189825057983,
+      "gradient_norm": 0.34673675894737244,
+      "response_bytes": 368493
+    },
+    {
+      "step": 950,
+      "response_ce": 0.33428287506103516,
+      "loss": 0.33428287506103516,
+      "gradient_norm": 0.3780931830406189,
+      "response_bytes": 368887
+    },
+    {
+      "step": 951,
+      "response_ce": 0.33461055159568787,
+      "loss": 0.33461055159568787,
+      "gradient_norm": 0.3102135956287384,
+      "response_bytes": 369264
+    },
+    {
+      "step": 952,
+      "response_ce": 0.3275642395019531,
+      "loss": 0.3275642395019531,
+      "gradient_norm": 0.36005425453186035,
+      "response_bytes": 369656
+    },
+    {
+      "step": 953,
+      "response_ce": 0.326133131980896,
+      "loss": 0.326133131980896,
+      "gradient_norm": 0.3420478105545044,
+      "response_bytes": 370045
+    },
+    {
+      "step": 954,
+      "response_ce": 0.34517136216163635,
+      "loss": 0.34517136216163635,
+      "gradient_norm": 0.45729583501815796,
+      "response_bytes": 370424
+    },
+    {
+      "step": 955,
+      "response_ce": 0.33051276206970215,
+      "loss": 0.33051276206970215,
+      "gradient_norm": 0.283904105424881,
+      "response_bytes": 370820
+    },
+    {
+      "step": 956,
+      "response_ce": 0.3328178822994232,
+      "loss": 0.3328178822994232,
+      "gradient_norm": 0.3515356481075287,
+      "response_bytes": 371202
+    },
+    {
+      "step": 957,
+      "response_ce": 0.32188880443573,
+      "loss": 0.32188880443573,
+      "gradient_norm": 0.36046886444091797,
+      "response_bytes": 371597
+    },
+    {
+      "step": 958,
+      "response_ce": 0.33007973432540894,
+      "loss": 0.33007973432540894,
+      "gradient_norm": 0.30305904150009155,
+      "response_bytes": 371983
+    },
+    {
+      "step": 959,
+      "response_ce": 0.3182896077632904,
+      "loss": 0.3182896077632904,
+      "gradient_norm": 0.4526093304157257,
+      "response_bytes": 372381
+    },
+    {
+      "step": 960,
+      "response_ce": 0.32920122146606445,
+      "loss": 0.32920122146606445,
+      "gradient_norm": 0.3216989040374756,
+      "response_bytes": 372767
+    },
+    {
+      "step": 961,
+      "response_ce": 0.3489639461040497,
+      "loss": 0.3489639461040497,
+      "gradient_norm": 0.4038889706134796,
+      "response_bytes": 373136
+    },
+    {
+      "step": 962,
+      "response_ce": 0.32688790559768677,
+      "loss": 0.32688790559768677,
+      "gradient_norm": 0.2810790538787842,
+      "response_bytes": 373517
+    },
+    {
+      "step": 963,
+      "response_ce": 0.3183261752128601,
+      "loss": 0.3183261752128601,
+      "gradient_norm": 0.3219132423400879,
+      "response_bytes": 373917
+    },
+    {
+      "step": 964,
+      "response_ce": 0.3344520628452301,
+      "loss": 0.3344520628452301,
+      "gradient_norm": 0.34309810400009155,
+      "response_bytes": 374301
+    },
+    {
+      "step": 965,
+      "response_ce": 0.33715954422950745,
+      "loss": 0.33715954422950745,
+      "gradient_norm": 0.40175214409828186,
+      "response_bytes": 374685
+    },
+    {
+      "step": 966,
+      "response_ce": 0.3279561996459961,
+      "loss": 0.3279561996459961,
+      "gradient_norm": 0.35381239652633667,
+      "response_bytes": 375074
+    },
+    {
+      "step": 967,
+      "response_ce": 0.3287913203239441,
+      "loss": 0.3287913203239441,
+      "gradient_norm": 0.3833829462528229,
+      "response_bytes": 375466
+    },
+    {
+      "step": 968,
+      "response_ce": 0.32877540588378906,
+      "loss": 0.32877540588378906,
+      "gradient_norm": 0.28776347637176514,
+      "response_bytes": 375857
+    },
+    {
+      "step": 969,
+      "response_ce": 0.3178669214248657,
+      "loss": 0.3178669214248657,
+      "gradient_norm": 0.30772721767425537,
+      "response_bytes": 376257
+    },
+    {
+      "step": 970,
+      "response_ce": 0.33430618047714233,
+      "loss": 0.33430618047714233,
+      "gradient_norm": 0.3999963700771332,
+      "response_bytes": 376639
+    },
+    {
+      "step": 971,
+      "response_ce": 0.3339974880218506,
+      "loss": 0.3339974880218506,
+      "gradient_norm": 0.486086368560791,
+      "response_bytes": 377030
+    },
+    {
+      "step": 972,
+      "response_ce": 0.3234526216983795,
+      "loss": 0.3234526216983795,
+      "gradient_norm": 0.28955549001693726,
+      "response_bytes": 377429
+    },
+    {
+      "step": 973,
+      "response_ce": 0.33331653475761414,
+      "loss": 0.33331653475761414,
+      "gradient_norm": 0.3504553735256195,
+      "response_bytes": 377811
+    },
+    {
+      "step": 974,
+      "response_ce": 0.33267077803611755,
+      "loss": 0.33267077803611755,
+      "gradient_norm": 0.4190855920314789,
+      "response_bytes": 378198
+    },
+    {
+      "step": 975,
+      "response_ce": 0.32114291191101074,
+      "loss": 0.32114291191101074,
+      "gradient_norm": 0.3154022693634033,
+      "response_bytes": 378592
+    },
+    {
+      "step": 976,
+      "response_ce": 0.34427687525749207,
+      "loss": 0.34427687525749207,
+      "gradient_norm": 0.32139718532562256,
+      "response_bytes": 378968
+    },
+    {
+      "step": 977,
+      "response_ce": 0.32699060440063477,
+      "loss": 0.32699060440063477,
+      "gradient_norm": 0.5183290243148804,
+      "response_bytes": 379359
+    },
+    {
+      "step": 978,
+      "response_ce": 0.32221826910972595,
+      "loss": 0.32221826910972595,
+      "gradient_norm": 0.446194052696228,
+      "response_bytes": 379755
+    },
+    {
+      "step": 979,
+      "response_ce": 0.3373112082481384,
+      "loss": 0.3373112082481384,
+      "gradient_norm": 0.38476893305778503,
+      "response_bytes": 380133
+    },
+    {
+      "step": 980,
+      "response_ce": 0.3438267707824707,
+      "loss": 0.3438267707824707,
+      "gradient_norm": 0.3083440065383911,
+      "response_bytes": 380510
+    },
+    {
+      "step": 981,
+      "response_ce": 0.33827412128448486,
+      "loss": 0.33827412128448486,
+      "gradient_norm": 0.3369833827018738,
+      "response_bytes": 380899
+    },
+    {
+      "step": 982,
+      "response_ce": 0.3378930687904358,
+      "loss": 0.3378930687904358,
+      "gradient_norm": 0.3898487091064453,
+      "response_bytes": 381278
+    },
+    {
+      "step": 983,
+      "response_ce": 0.3393931984901428,
+      "loss": 0.3393931984901428,
+      "gradient_norm": 0.41476884484291077,
+      "response_bytes": 381663
+    },
+    {
+      "step": 984,
+      "response_ce": 0.3304511606693268,
+      "loss": 0.3304511606693268,
+      "gradient_norm": 0.3784846365451813,
+      "response_bytes": 382038
+    },
+    {
+      "step": 985,
+      "response_ce": 0.3292941749095917,
+      "loss": 0.3292941749095917,
+      "gradient_norm": 0.38766250014305115,
+      "response_bytes": 382426
+    },
+    {
+      "step": 986,
+      "response_ce": 0.3344084322452545,
+      "loss": 0.3344084322452545,
+      "gradient_norm": 0.35348471999168396,
+      "response_bytes": 382824
+    },
+    {
+      "step": 987,
+      "response_ce": 0.34976401925086975,
+      "loss": 0.34976401925086975,
+      "gradient_norm": 0.369080126285553,
+      "response_bytes": 383202
+    },
+    {
+      "step": 988,
+      "response_ce": 0.32738038897514343,
+      "loss": 0.32738038897514343,
+      "gradient_norm": 0.3907473683357239,
+      "response_bytes": 383595
+    },
+    {
+      "step": 989,
+      "response_ce": 0.3344143331050873,
+      "loss": 0.3344143331050873,
+      "gradient_norm": 0.34211301803588867,
+      "response_bytes": 383979
+    },
+    {
+      "step": 990,
+      "response_ce": 0.341092050075531,
+      "loss": 0.341092050075531,
+      "gradient_norm": 0.4394121468067169,
+      "response_bytes": 384362
+    },
+    {
+      "step": 991,
+      "response_ce": 0.3347291946411133,
+      "loss": 0.3347291946411133,
+      "gradient_norm": 0.32316818833351135,
+      "response_bytes": 384756
+    },
+    {
+      "step": 992,
+      "response_ce": 0.31983682513237,
+      "loss": 0.31983682513237,
+      "gradient_norm": 0.3200424015522003,
+      "response_bytes": 385160
+    },
+    {
+      "step": 993,
+      "response_ce": 0.33048754930496216,
+      "loss": 0.33048754930496216,
+      "gradient_norm": 0.32136571407318115,
+      "response_bytes": 385552
+    },
+    {
+      "step": 994,
+      "response_ce": 0.3336457312107086,
+      "loss": 0.3336457312107086,
+      "gradient_norm": 0.3704560399055481,
+      "response_bytes": 385947
+    },
+    {
+      "step": 995,
+      "response_ce": 0.33396342396736145,
+      "loss": 0.33396342396736145,
+      "gradient_norm": 0.5260680913925171,
+      "response_bytes": 386344
+    },
+    {
+      "step": 996,
+      "response_ce": 0.3289200961589813,
+      "loss": 0.3289200961589813,
+      "gradient_norm": 0.3163200914859772,
+      "response_bytes": 386725
+    },
+    {
+      "step": 997,
+      "response_ce": 0.32781749963760376,
+      "loss": 0.32781749963760376,
+      "gradient_norm": 0.4264930784702301,
+      "response_bytes": 387118
+    },
+    {
+      "step": 998,
+      "response_ce": 0.3299349248409271,
+      "loss": 0.3299349248409271,
+      "gradient_norm": 0.2748323082923889,
+      "response_bytes": 387506
+    },
+    {
+      "step": 999,
+      "response_ce": 0.32494160532951355,
+      "loss": 0.32494160532951355,
+      "gradient_norm": 0.3147321343421936,
+      "response_bytes": 387899
+    },
+    {
+      "step": 1000,
+      "response_ce": 0.33255621790885925,
+      "loss": 0.33255621790885925,
+      "gradient_norm": 0.2868783473968506,
+      "response_bytes": 388284
+    }
+  ],
+  "response_bytes": 388284,
+  "runtime_seconds": 32.967273249989375,
+  "complete": true,
+  "checkpoint_sha256": "c13ca2db0c6d00f5c9e134e88e7eabd563fa49852bb6276d8d53ec98cc58f87f"
+}

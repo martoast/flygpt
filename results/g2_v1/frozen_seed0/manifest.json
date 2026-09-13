@@ -1,0 +1,345 @@
+{
+  "experiment": "G2 exploratory seed-zero",
+  "status": "frozen",
+  "amendment": {
+    "reason": "User-directed resource reallocation after observing teacher weakness and real seed-zero results; not a preregistered stopping rule",
+    "retain": [
+      "teacher_0",
+      "real_kd_0",
+      "rewired_kd_0",
+      "real_ce_0"
+    ],
+    "student_updates_each": 512,
+    "postpone": [
+      "rewired_ce_0",
+      "gru_ce_0",
+      "all student conditions at seeds 1,2,3,4"
+    ],
+    "evaluation": "Preserve the existing three-axis validation results and post hoc relation-span CE/KL comparison. Original G2 test lock remains intact; no test-based selection.",
+    "next": "G2b teacher qualification; launch its five-seed students only if both qualification gates pass",
+    "interpretation": "G2 exploratory seed-zero result; no replicated topology or generalization claim"
+  },
+  "files": [
+    {
+      "source": "results/g2_v1/teacher_0.pt",
+      "sha256": "f799d2c88247c9716ef4559a6bf542ef49a187e4adbc2bd6babfb1006c0145fc",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/teacher_0.pt"
+    },
+    {
+      "source": "results/g2_v1/real_kd_0.pt",
+      "sha256": "950ac968ee297ee9eaef6f215b20dd9538a956c06460e0cd0762097d0f528b4a",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/real_kd_0.pt"
+    },
+    {
+      "source": "results/g2_v1/rewired_kd_0.pt",
+      "sha256": "f0a30e6db833bb7847b6026d65494e7b1d7fa01b518d32ba6b1cb5e0c7278584",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/rewired_kd_0.pt"
+    },
+    {
+      "source": "results/g2_v1/real_ce_0.pt",
+      "sha256": "1e6ab12a59255502e4d580a60775ae852c5ee61fd011553f3d32ecc516feec1c",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/real_ce_0.pt"
+    },
+    {
+      "source": "data/processed/malecns.npz",
+      "sha256": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/processed/malecns.npz"
+    },
+    {
+      "source": "data/processed/controls/rewired_777.npz",
+      "sha256": "b221c0f16deac5c91a185b7c0365a113497aa3ac2fc4b65277248a348b03ce41",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/processed/controls/rewired_777.npz"
+    },
+    {
+      "source": "data/raw/grammar_v2/train.jsonl",
+      "sha256": "24905a4b6484bb2fae7b5cdad1f002b32437a9fb02d6952cdbe1bbf4994b1d2b",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/train.jsonl"
+    },
+    {
+      "source": "data/raw/grammar_v2/validation_combined.txt",
+      "sha256": "f3aba2fa1dac6d387c519481b10fe386b5d690522e50523726fa2e03f880688e",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/validation_combined.txt"
+    },
+    {
+      "source": "data/raw/grammar_v2/test_attribute.jsonl",
+      "sha256": "8cdf63f8c5702b3c413af8262b808867bc60e413181b4d1980b6382c2ffb620e",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/test_attribute.jsonl"
+    },
+    {
+      "source": "data/raw/grammar_v2/validation_combined.jsonl",
+      "sha256": "64e2a1eedf748b133228d028c80ba9426a810b40b063ff250ca899d3ed0dcb6b",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/validation_combined.jsonl"
+    },
+    {
+      "source": "data/raw/grammar_v2/test_relation.jsonl",
+      "sha256": "2c7d9ae154ee6e8c0c1186dee408e2898671c72e989c9ba682c29c35ce479fc7",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/test_relation.jsonl"
+    },
+    {
+      "source": "data/raw/grammar_v2/train.txt",
+      "sha256": "9e3cfacb632942e0c3bcd9692a7fca5aa720e4fcc85af144c57bc316a368307c",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/train.txt"
+    },
+    {
+      "source": "data/raw/grammar_v2/validation_attribute.txt",
+      "sha256": "b308c979af38e914cddcb73e9bc9ca38ba8e2287ce9aa47b4ff90528c866a227",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/validation_attribute.txt"
+    },
+    {
+      "source": "data/raw/grammar_v2/validation_relation.txt",
+      "sha256": "8c109acad5ce9c7878604678bb0174f816c0f4b7461c3a696038117ad582728f",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/validation_relation.txt"
+    },
+    {
+      "source": "data/raw/grammar_v2/test_combined.jsonl",
+      "sha256": "19a73a826f6b96b82449e73ec2612fcb97150ae07132929646d4372a68bb47e0",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/test_combined.jsonl"
+    },
+    {
+      "source": "data/raw/grammar_v2/validation_relation.jsonl",
+      "sha256": "aebd30fc16453ab2016a9187bdc06657c75b83934c2f25901a15b15e0db75434",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/validation_relation.jsonl"
+    },
+    {
+      "source": "data/raw/grammar_v2/validation_attribute.jsonl",
+      "sha256": "9d54f04e895e40943c874da26f27ec49ff39d5186dbe36343b9732ae6c317a6f",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/validation_attribute.jsonl"
+    },
+    {
+      "source": "data/raw/grammar_v2/test_combined.txt",
+      "sha256": "266b06815b980887fd058e2b3c397feb1ee5ba0696479277746ef6263abad7db",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/test_combined.txt"
+    },
+    {
+      "source": "data/raw/grammar_v2/manifest.json",
+      "sha256": "d00171f75ca11518c02f25551c5f4084a066cdf20fcd0da829fce8c5a36d6da0",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/manifest.json"
+    },
+    {
+      "source": "data/raw/grammar_v2/test_relation.txt",
+      "sha256": "531183838d875110d4a93066bae74fa52cf06186dbd5addea4060e166c7746ea",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/test_relation.txt"
+    },
+    {
+      "source": "data/raw/grammar_v2/test_attribute.txt",
+      "sha256": "933a4cf5fd56d608182488ee6b5eb225ee0d9683f2c165b837f03b7301cad261",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/data/raw/grammar_v2/test_attribute.txt"
+    },
+    {
+      "source": "results/g2_v1/handoff.json",
+      "sha256": "dee44a8db5fbf5d0bd511d56dcd61c9bc2fda2bc37cb6ebc5e3c8a495de633ea",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/handoff.json"
+    },
+    {
+      "source": "results/g2_v1/real_kd_0.json",
+      "sha256": "00156ca7acb2698b63c13673a41e4729f4fbe8f4eb9cebc1789c1d9742179635",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/real_kd_0.json"
+    },
+    {
+      "source": "results/g2_v1/rewired_kd_0.json",
+      "sha256": "f498b7d5cb451e91a9efa0c21cdec357ac2cbe60324333b8ba2c72dd02687bcb",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/rewired_kd_0.json"
+    },
+    {
+      "source": "results/g2_v1/relation_focus.json",
+      "sha256": "6a96549fd2d05aef436d8c78829bded3ba66d1bcae02ae569f5fef65a680a84c",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/relation_focus.json"
+    },
+    {
+      "source": "results/g2_v1/queue.json",
+      "sha256": "1a214484a6d432ad0798d0a5860a256b3962550da58348ea2b529074b976616e",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/queue.json"
+    },
+    {
+      "source": "results/g2_v1/real_ce_0.json",
+      "sha256": "59719b0e212c12f36b536da236676d61b0af57d34848d8f5a5fb37ae66eb9364",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/real_ce_0.json"
+    },
+    {
+      "source": "results/g2_v1/teacher_0.json",
+      "sha256": "dca698dcfee223af99cb63c50363584ccfcf768417cf8251722564770ce47117",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/teacher_0.json"
+    },
+    {
+      "source": "results/g2_v1/span_diagnostics/real_kd_0_step0512.json",
+      "sha256": "1b4956a710c1948da361c7a805d9104ac14a01c06bdb19bb36d71b867f329255",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/span_diagnostics/real_kd_0_step0512.json"
+    },
+    {
+      "source": "results/g2_v1/span_diagnostics/rewired_kd_0_step0512.json",
+      "sha256": "25c829c8025f09aeae61422c3f4804aa92402578a765e890430338b7895f315b",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/span_diagnostics/rewired_kd_0_step0512.json"
+    },
+    {
+      "source": "results/g2_v1/span_diagnostics/real_ce_0_step0512.json",
+      "sha256": "92309cdf104ad0a63540951da9552d615fc9f3ab76ec5fd2fed3e38f7b3a3e1d",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/span_diagnostics/real_ce_0_step0512.json"
+    },
+    {
+      "source": "configs/g2_v1.json",
+      "sha256": "61b25f5bfad06fd512557ae14b5b74d536748f4776a987cfafe47554ba2a83a0",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/configs/g2_v1.json"
+    },
+    {
+      "source": "configs/g2_seed0_amendment.json",
+      "sha256": "75abf708959ae297ccc45701732531af4ccd23838fae0b3a247ca6ccfe7a5688",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/configs/g2_seed0_amendment.json"
+    },
+    {
+      "source": "results/g2_v1/INTERPRETATION.md",
+      "sha256": "18a5b254a9b2bb697c39ef0b8235737051ed0c0a7100d349b4b1f52080c8f3cf",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/INTERPRETATION.md"
+    },
+    {
+      "source": "results/g2_v1/RELATION_FOCUS.md",
+      "sha256": "9e65263b9b9b7e69f89b89ee57000b9ffb300292838c05ae4191b30ee1ccb182",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/RELATION_FOCUS.md"
+    },
+    {
+      "source": "results/g2_v1/G2_EXPLORATORY_SEED_ZERO.md",
+      "sha256": "060b32b4194a4528f133dd4460e53cf615fcd177aafbac86b84fca800ab9f2dd",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/results/g2_v1/G2_EXPLORATORY_SEED_ZERO.md"
+    },
+    {
+      "source": "src/train_language.py",
+      "sha256": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/train_language.py"
+    },
+    {
+      "source": "src/tinygpt.py",
+      "sha256": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/tinygpt.py"
+    },
+    {
+      "source": "src/train_teacher.py",
+      "sha256": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/train_teacher.py"
+    },
+    {
+      "source": "src/prepare_malecns.py",
+      "sha256": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/prepare_malecns.py"
+    },
+    {
+      "source": "src/tasks.py",
+      "sha256": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/tasks.py"
+    },
+    {
+      "source": "src/analysis.py",
+      "sha256": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/analysis.py"
+    },
+    {
+      "source": "src/graph_lm.py",
+      "sha256": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/graph_lm.py"
+    },
+    {
+      "source": "src/sparse_ops.py",
+      "sha256": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/sparse_ops.py"
+    },
+    {
+      "source": "src/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/__init__.py"
+    },
+    {
+      "source": "src/train_memory.py",
+      "sha256": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/train_memory.py"
+    },
+    {
+      "source": "src/model.py",
+      "sha256": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/model.py"
+    },
+    {
+      "source": "src/graph_controls.py",
+      "sha256": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/graph_controls.py"
+    },
+    {
+      "source": "src/distill.py",
+      "sha256": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/distill.py"
+    },
+    {
+      "source": "src/query_flygpt.py",
+      "sha256": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/query_flygpt.py"
+    },
+    {
+      "source": "src/provenance.py",
+      "sha256": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/provenance.py"
+    },
+    {
+      "source": "src/graphs.py",
+      "sha256": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/graphs.py"
+    },
+    {
+      "source": "src/audit_checkpoint.py",
+      "sha256": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/audit_checkpoint.py"
+    },
+    {
+      "source": "src/g2.py",
+      "sha256": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/src/g2.py"
+    },
+    {
+      "source": "scripts/g2_span_diagnostics.py",
+      "sha256": "8763f6a7b70ac1a2d45030d0d5229003f9545d791246974521a776417d5c7a28",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/scripts/g2_span_diagnostics.py"
+    },
+    {
+      "source": "scripts/report_g2_relation.py",
+      "sha256": "ceea490878874cd8e8ab1b5b3c20f24ed57abdabd6b8fe9d37c3d29d1fc48cf4",
+      "external_copy": "/Volumes/Seagate/FlyGPT Backups/G2-exploratory-seed-zero/scripts/report_g2_relation.py"
+    }
+  ],
+  "external_backup_verified": true,
+  "test_evaluated": false,
+  "relation_comparison": {
+    "status": "post hoc exploratory focus selected after teacher validation; all other axes remain reported",
+    "checkpoint": 512,
+    "validation_sentences": 8,
+    "teacher_span_ce": 1.1767633282221281,
+    "ngram_span_ce": 1.58633167401234,
+    "rows": [
+      {
+        "condition": "real_ce",
+        "seed": 0,
+        "span_ce": 2.1752272752615123,
+        "teacher_span_ce": 1.1767633832418,
+        "span_kl": 1.9613669652205248
+      },
+      {
+        "condition": "real_kd",
+        "seed": 0,
+        "span_ce": 2.3972083788651686,
+        "teacher_span_ce": 1.1767633832418,
+        "span_kl": 2.139920243850121
+      },
+      {
+        "condition": "rewired_kd",
+        "seed": 0,
+        "span_ce": 2.6176797976860633,
+        "teacher_span_ce": 1.1767633832418,
+        "span_kl": 2.351927610544058
+      }
+    ],
+    "paired_objective_comparisons": [
+      {
+        "topology": "real",
+        "seed": 0,
+        "ce_only_minus_kd_span_ce": -0.2219811036036563,
+        "ce_only_minus_kd_span_kl": -0.17855327862959625,
+        "both_improve_with_kd": false
+      }
+    ]
+  }
+}

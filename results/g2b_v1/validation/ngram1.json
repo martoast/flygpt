@@ -1,0 +1,5851 @@
+{
+  "created_utc": "2026-09-13T07:51:59Z",
+  "code_commit": "2e5e699936152f8c30e064ee4b9ab40c9dc27338",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": true,
+  "config": {
+    "baseline": "ngram1",
+    "split": "validation",
+    "fit": "training responses only; retrieval uses training prompts"
+  },
+  "inputs": {
+    "configs/g2b_qualification_v1.json": "e51e46514f42ada319c475b90da2cc31dc356300d6b90aad86813f16a2d18e47",
+    "configs/g2b_execution_v1.json": "f6e5245b75f5329d4df772abdffbd08697b5d88c63af1547106940f77b95c581",
+    "data/raw/grammar_g2b_v1/manifest.json": "5e6de579bada154e17f6dccde73b9892b00c117ff0a7722ececa7e3c429019b0",
+    "data/raw/grammar_g2b_v1/train_familiar.jsonl": "eb3aa0acd6cce0191c338a33da0bd8059484da9abe6e761422fe4569e7a6bac1"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "rows": {
+    "attribute_swap": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "nll": 73.742138774394,
+        "ce": 1.6030899733563913,
+        "exact": 0
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "nll": 73.57113265679848,
+        "ce": 1.5327319303499685,
+        "exact": 0
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "nll": 75.68476334831429,
+        "ce": 1.576765903089881,
+        "exact": 0
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 43,
+        "nll": 63.5547104019397,
+        "ce": 1.478016520975342,
+        "exact": 0
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 46,
+        "nll": 69.52450409962172,
+        "ce": 1.5114022630352548,
+        "exact": 0
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "helps"
+        ],
+        "response_bytes": 45,
+        "nll": 65.95721292792098,
+        "ce": 1.4657158428426884,
+        "exact": 0
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bear",
+          "finds"
+        ],
+        "response_bytes": 47,
+        "nll": 64.83862402271605,
+        "ce": 1.3795451919726818,
+        "exact": 0
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bird",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "nll": 70.28334236032933,
+        "ce": 1.4642362991735276,
+        "exact": 0
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "nll": 72.20769666630096,
+        "ce": 1.50432701388127,
+        "exact": 0
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "nll": 68.96766471673749,
+        "ce": 1.4992970590595107,
+        "exact": 0
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "chases"
+        ],
+        "response_bytes": 46,
+        "nll": 74.85632128085035,
+        "ce": 1.6273113321923989,
+        "exact": 0
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "dog",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "nll": 66.27377686355405,
+        "ce": 1.4727505969678678,
+        "exact": 0
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "follows"
+        ],
+        "response_bytes": 46,
+        "nll": 62.76456498327508,
+        "ce": 1.364447064853806,
+        "exact": 0
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "nll": 73.01490202704906,
+        "ce": 1.5535085537670013,
+        "exact": 0
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "nll": 71.45417402924913,
+        "ce": 1.4886286256093568,
+        "exact": 0
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "nll": 62.82098923822491,
+        "ce": 1.4277497554142025,
+        "exact": 0
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "nll": 74.42935388005685,
+        "ce": 1.550611539167851,
+        "exact": 0
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bear",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 81.5693710094925,
+        "ce": 1.5993994315586764,
+        "exact": 0
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 45,
+        "nll": 64.85887677047576,
+        "ce": 1.441308372677239,
+        "exact": 0
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "nll": 70.0040895043045,
+        "ce": 1.4894487128575427,
+        "exact": 0
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "nll": 64.0938965637346,
+        "ce": 1.4243088125274357,
+        "exact": 0
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "nll": 72.71948290639554,
+        "ce": 1.6527155205998987,
+        "exact": 0
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "nll": 77.07555144700822,
+        "ce": 1.5729704376940454,
+        "exact": 0
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "wolf",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "nll": 70.13241590953035,
+        "ce": 1.4921790619049011,
+        "exact": 0
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "nll": 72.09801982041175,
+        "ce": 1.6385913595548125,
+        "exact": 0
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bear",
+          "helps"
+        ],
+        "response_bytes": 48,
+        "nll": 76.23281119681573,
+        "ce": 1.5881835666003277,
+        "exact": 0
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "nll": 72.40557830424981,
+        "ce": 1.5405442192393577,
+        "exact": 0
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "nll": 73.0228838457486,
+        "ce": 1.6596109964942862,
+        "exact": 0
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "nll": 64.12424410534362,
+        "ce": 1.4249832023409694,
+        "exact": 0
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bear",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "nll": 75.86256030720295,
+        "ce": 1.6491860936348468,
+        "exact": 0
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "nll": 76.06863053773392,
+        "ce": 1.6536658812550853,
+        "exact": 0
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bear",
+          "watches"
+        ],
+        "response_bytes": 48,
+        "nll": 76.84285839767074,
+        "ce": 1.600892883284807,
+        "exact": 0
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "nll": 71.91923618012851,
+        "ce": 1.56346165608975,
+        "exact": 0
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "nll": 73.62790017229958,
+        "ce": 1.7122767481930135,
+        "exact": 0
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "nll": 67.1000284977249,
+        "ce": 1.5604657790168583,
+        "exact": 0
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 48,
+        "nll": 73.27995897312601,
+        "ce": 1.5266658119401253,
+        "exact": 0
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "nll": 79.75029449994355,
+        "ce": 1.661464468748824,
+        "exact": 0
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "nll": 72.89156288179488,
+        "ce": 1.5845991930824974,
+        "exact": 0
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "nll": 75.44789200554739,
+        "ce": 1.4793704314813214,
+        "exact": 0
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "nll": 72.24131053534855,
+        "ce": 1.641847966712467,
+        "exact": 0
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "chases"
+        ],
+        "response_bytes": 45,
+        "nll": 75.03747542663896,
+        "ce": 1.6674994539253103,
+        "exact": 0
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "nll": 70.49709340022373,
+        "ce": 1.532545508700516,
+        "exact": 0
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "nll": 69.70442137212301,
+        "ce": 1.5841913948209774,
+        "exact": 0
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "nll": 73.72451561118876,
+        "ce": 1.6755571729815628,
+        "exact": 0
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "wolf",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "nll": 70.87022322304477,
+        "ce": 1.5078770898520164,
+        "exact": 0
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "nll": 80.98695846318077,
+        "ce": 1.687228301316266,
+        "exact": 0
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "nll": 75.79634578195758,
+        "ce": 1.612688208126757,
+        "exact": 0
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "nll": 70.5289630933543,
+        "ce": 1.567310290963429,
+        "exact": 0
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "finds"
+        ],
+        "response_bytes": 45,
+        "nll": 64.85040390742502,
+        "ce": 1.4411200868316671,
+        "exact": 0
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "nll": 74.51174484171239,
+        "ce": 1.6198205400372259,
+        "exact": 0
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 47,
+        "nll": 71.17671896019326,
+        "ce": 1.5143982757487926,
+        "exact": 0
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "nll": 70.57374750947704,
+        "ce": 1.5342119023799357,
+        "exact": 0
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 45,
+        "nll": 67.25483865882316,
+        "ce": 1.4945519701960703,
+        "exact": 0
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "nll": 68.92476788421176,
+        "ce": 1.5316615085380392,
+        "exact": 0
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "nll": 68.94334931949794,
+        "ce": 1.4668797727552754,
+        "exact": 0
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "nll": 80.04876128861436,
+        "ce": 1.7031651338003055,
+        "exact": 0
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "fox",
+          "helps"
+        ],
+        "response_bytes": 44,
+        "nll": 62.383784477466115,
+        "ce": 1.4178132835787753,
+        "exact": 0
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "chases"
+        ],
+        "response_bytes": 46,
+        "nll": 72.02176898377296,
+        "ce": 1.5656906300820208,
+        "exact": 0
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "nll": 65.54138960937813,
+        "ce": 1.4895770365767758,
+        "exact": 0
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "likes"
+        ],
+        "response_bytes": 43,
+        "nll": 67.2674629986177,
+        "ce": 1.5643596046190162,
+        "exact": 0
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "wolf",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "nll": 75.55221673276176,
+        "ce": 1.6074939730374844,
+        "exact": 0
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "nll": 67.54268462649961,
+        "ce": 1.5350610142386274,
+        "exact": 0
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "nll": 61.447442709195165,
+        "ce": 1.3965327888453447,
+        "exact": 0
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "nll": 69.46829650062136,
+        "ce": 1.4780488617153482,
+        "exact": 0
+      }
+    ],
+    "attribute_roles": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "nll": 72.97136646252474,
+        "ce": 1.5202368013025989,
+        "exact": 0
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "nll": 79.0683348036423,
+        "ce": 1.5205449000700442,
+        "exact": 0
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "follows"
+        ],
+        "response_bytes": 55,
+        "nll": 81.40172343426786,
+        "ce": 1.4800313351685066,
+        "exact": 0
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "nll": 74.64453402251162,
+        "ce": 1.4928906804502324,
+        "exact": 0
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "nll": 75.00402122107366,
+        "ce": 1.47066708276615,
+        "exact": 0
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "nll": 78.143473679821,
+        "ce": 1.56286947359642,
+        "exact": 0
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 68.35671395867722,
+        "ce": 1.424098207472442,
+        "exact": 0
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 50,
+        "nll": 72.79144919002346,
+        "ce": 1.4558289838004692,
+        "exact": 0
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "nll": 79.76918157653283,
+        "ce": 1.6618579495111006,
+        "exact": 0
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "nll": 76.48905636458903,
+        "ce": 1.5297811272917807,
+        "exact": 0
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "nll": 67.36084165413637,
+        "ce": 1.3747110541660483,
+        "exact": 0
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "nll": 80.00894698855622,
+        "ce": 1.6001789397711244,
+        "exact": 0
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 49,
+        "nll": 70.52178374922491,
+        "ce": 1.439220076514794,
+        "exact": 0
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "nll": 74.30301241138271,
+        "ce": 1.4289040848342829,
+        "exact": 0
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "nll": 73.83443075736453,
+        "ce": 1.5068251174972354,
+        "exact": 0
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "nll": 80.08609825374133,
+        "ce": 1.54011727411041,
+        "exact": 0
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 78.12585051661577,
+        "ce": 1.6276218857628286,
+        "exact": 0
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "nll": 69.62144625218744,
+        "ce": 1.4208458418813763,
+        "exact": 0
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 47,
+        "nll": 67.99456788097521,
+        "ce": 1.4466929336377705,
+        "exact": 0
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 77.4242187511756,
+        "ce": 1.6130045573161584,
+        "exact": 0
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "nll": 76.49935472583877,
+        "ce": 1.5937365567883077,
+        "exact": 0
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "chases"
+        ],
+        "response_bytes": 50,
+        "nll": 76.4231038892,
+        "ce": 1.528462077784,
+        "exact": 0
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "wolf",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "nll": 75.62961805637418,
+        "ce": 1.482933687379886,
+        "exact": 0
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 65.8487776146222,
+        "ce": 1.3718495336379624,
+        "exact": 0
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "nll": 78.02923507772657,
+        "ce": 1.660196491015459,
+        "exact": 0
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "nll": 74.89842830565073,
+        "ce": 1.4979685661130144,
+        "exact": 0
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "nll": 70.67773902492851,
+        "ce": 1.442402837243439,
+        "exact": 0
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "nll": 75.12867149109063,
+        "ce": 1.5651806560643882,
+        "exact": 0
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "nll": 71.94401953192661,
+        "ce": 1.498833740248471,
+        "exact": 0
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bear",
+          "finds"
+        ],
+        "response_bytes": 51,
+        "nll": 71.88832269285334,
+        "ce": 1.4095749547618301,
+        "exact": 0
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 52,
+        "nll": 76.60903157172798,
+        "ce": 1.473250607148615,
+        "exact": 0
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bird",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "nll": 74.72319983936482,
+        "ce": 1.4369846122954775,
+        "exact": 0
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 80.19768068738463,
+        "ce": 1.5725035428898948,
+        "exact": 0
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "chases"
+        ],
+        "response_bytes": 50,
+        "nll": 81.90601995098763,
+        "ce": 1.6381203990197526,
+        "exact": 0
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bear",
+          "watches"
+        ],
+        "response_bytes": 52,
+        "nll": 81.24419330309776,
+        "ce": 1.56238833275188,
+        "exact": 0
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "helps"
+        ],
+        "response_bytes": 49,
+        "nll": 71.4544150747648,
+        "ce": 1.458253368872751,
+        "exact": 0
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "fox",
+          "helps"
+        ],
+        "response_bytes": 48,
+        "nll": 67.91950919791842,
+        "ce": 1.4149897749566336,
+        "exact": 0
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "nll": 76.32057108555554,
+        "ce": 1.5264114217111109,
+        "exact": 0
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "wolf",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "nll": 79.95355163818877,
+        "ce": 1.5677166987880151,
+        "exact": 0
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "likes"
+        ],
+        "response_bytes": 52,
+        "nll": 77.68129387855302,
+        "ce": 1.4938710361260197,
+        "exact": 0
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "finds"
+        ],
+        "response_bytes": 49,
+        "nll": 70.77418562558773,
+        "ce": 1.4443711352160762,
+        "exact": 0
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "dog",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "nll": 80.46996544316094,
+        "ce": 1.6093993088632188,
+        "exact": 0
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "nll": 75.67252339465156,
+        "ce": 1.4837749685225796,
+        "exact": 0
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "nll": 77.05378817444179,
+        "ce": 1.5108585916557213,
+        "exact": 0
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "nll": 83.35422895262458,
+        "ce": 1.6343966461298938,
+        "exact": 0
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 73.34468422492499,
+        "ce": 1.4381310632338233,
+        "exact": 0
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "nll": 68.85299963844169,
+        "ce": 1.4649574391157807,
+        "exact": 0
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "nll": 77.3167148357989,
+        "ce": 1.4868599006884404,
+        "exact": 0
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "finds"
+        ],
+        "response_bytes": 49,
+        "nll": 69.25173881285204,
+        "ce": 1.4133007920990213,
+        "exact": 0
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "nll": 82.73992960389755,
+        "ce": 1.5911524923826452,
+        "exact": 0
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "dog",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "nll": 70.67511176898105,
+        "ce": 1.4423492197751235,
+        "exact": 0
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "nll": 76.79044656735576,
+        "ce": 1.5671519707623625,
+        "exact": 0
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "nll": 73.36899962216447,
+        "ce": 1.4673799924432893,
+        "exact": 0
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "nll": 78.55062674750135,
+        "ce": 1.5402083675980658,
+        "exact": 0
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "wolf",
+          "sees"
+        ],
+        "response_bytes": 51,
+        "nll": 77.91992189318205,
+        "ce": 1.5278416057486677,
+        "exact": 0
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "nll": 70.15482395435976,
+        "ce": 1.492655828816165,
+        "exact": 0
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 69.98124708841362,
+        "ce": 1.457942647675284,
+        "exact": 0
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "follows"
+        ],
+        "response_bytes": 50,
+        "nll": 66.03151007367686,
+        "ce": 1.3206302014735372,
+        "exact": 0
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bear",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "nll": 80.26389521262998,
+        "ce": 1.6052779042525995,
+        "exact": 0
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bear",
+          "watches"
+        ],
+        "response_bytes": 55,
+        "nll": 88.61906967962975,
+        "ce": 1.6112558123569045,
+        "exact": 0
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "nll": 81.5032656406603,
+        "ce": 1.5673704930896213,
+        "exact": 0
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bear",
+          "helps"
+        ],
+        "response_bytes": 52,
+        "nll": 81.73001334365958,
+        "ce": 1.5717310258396073,
+        "exact": 0
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "nll": 78.828522587725,
+        "ce": 1.4873306148627359,
+        "exact": 0
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "hears"
+        ],
+        "response_bytes": 51,
+        "nll": 75.57805386562028,
+        "ce": 1.481922624816084,
+        "exact": 0
+      }
+    ],
+    "combined_swap": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 47,
+        "nll": 70.53553161704762,
+        "ce": 1.5007559918520772,
+        "exact": 0
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 49,
+        "nll": 77.93649354538427,
+        "ce": 1.590540684599679,
+        "exact": 0
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 44,
+        "nll": 68.5250011407366,
+        "ce": 1.5573863895621955,
+        "exact": 0
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 47,
+        "nll": 69.3517304061059,
+        "ce": 1.4755687320448063,
+        "exact": 0
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "nll": 73.93268807755379,
+        "ce": 1.6072323495120389,
+        "exact": 0
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "nll": 68.89147623001871,
+        "ce": 1.4352390881253898,
+        "exact": 0
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 42,
+        "nll": 63.89943803918958,
+        "ce": 1.5214151914092757,
+        "exact": 0
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "nll": 69.7951757641807,
+        "ce": 1.5172864296561022,
+        "exact": 0
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "nll": 72.31944693264273,
+        "ce": 1.6436237939236984,
+        "exact": 0
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "nll": 77.08321773551944,
+        "ce": 1.6757221246852052,
+        "exact": 0
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "nll": 74.92889779060145,
+        "ce": 1.5942318678851373,
+        "exact": 0
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 48,
+        "nll": 75.95214574239364,
+        "ce": 1.582336369633201,
+        "exact": 0
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "nll": 68.66084308096694,
+        "ce": 1.5257965129103765,
+        "exact": 0
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "nll": 72.40186454886683,
+        "ce": 1.5404652031673793,
+        "exact": 0
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "nll": 77.38164742919234,
+        "ce": 1.6121176547748404,
+        "exact": 0
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 43,
+        "nll": 61.1150374793045,
+        "ce": 1.4212799413791743,
+        "exact": 0
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "nll": 68.9396662063688,
+        "ce": 1.531992582363751,
+        "exact": 0
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 46,
+        "nll": 66.72116174409264,
+        "ce": 1.4504600379150574,
+        "exact": 0
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 83.39171631784545,
+        "ce": 1.6351316925067736,
+        "exact": 0
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "nll": 80.44733238511716,
+        "ce": 1.6417822935738198,
+        "exact": 0
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "nll": 78.74598125570098,
+        "ce": 1.6754464096957655,
+        "exact": 0
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "nll": 71.69709754159443,
+        "ce": 1.5586325552520528,
+        "exact": 0
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 50,
+        "nll": 78.84980904408367,
+        "ce": 1.5769961808816735,
+        "exact": 0
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "nll": 78.17355228722376,
+        "ce": 1.663267069940931,
+        "exact": 0
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 46,
+        "nll": 71.15899449517559,
+        "ce": 1.5469346629385998,
+        "exact": 0
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "nll": 67.14172044545712,
+        "ce": 1.4285472435203643,
+        "exact": 0
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "nll": 76.74264181751212,
+        "ce": 1.632822166330045,
+        "exact": 0
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "nll": 72.34126836244035,
+        "ce": 1.6075837413875633,
+        "exact": 0
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "nll": 73.1268837857682,
+        "ce": 1.5897148649080044,
+        "exact": 0
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "nll": 75.1570249267623,
+        "ce": 1.5657713526408814,
+        "exact": 0
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "nll": 79.19472284885188,
+        "ce": 1.6162188336500385,
+        "exact": 0
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 73.9516183739481,
+        "ce": 1.5406587161239187,
+        "exact": 0
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "nll": 74.11853471106699,
+        "ce": 1.6112724937188474,
+        "exact": 0
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "nll": 71.10101357834574,
+        "ce": 1.4812711162155363,
+        "exact": 0
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 45,
+        "nll": 65.45103833469607,
+        "ce": 1.4544675185488014,
+        "exact": 0
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "nll": 64.71021982099803,
+        "ce": 1.5048888330464658,
+        "exact": 0
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 45,
+        "nll": 76.51645455549315,
+        "ce": 1.7003656567887369,
+        "exact": 0
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "nll": 66.18470963829118,
+        "ce": 1.5041979463247996,
+        "exact": 0
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 46,
+        "nll": 66.87078578474534,
+        "ce": 1.4537127344509855,
+        "exact": 0
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "nll": 68.94783801852917,
+        "ce": 1.4988660438810688,
+        "exact": 0
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 46,
+        "nll": 74.00820294640842,
+        "ce": 1.6088739770958351,
+        "exact": 0
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 46,
+        "nll": 69.62923811451385,
+        "ce": 1.5136790894459533,
+        "exact": 0
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "nll": 79.13097968318071,
+        "ce": 1.6149179527179738,
+        "exact": 0
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "nll": 74.93429360471495,
+        "ce": 1.5292712980554073,
+        "exact": 0
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 45,
+        "nll": 73.31374599740253,
+        "ce": 1.629194355497834,
+        "exact": 0
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 47,
+        "nll": 74.8318424779516,
+        "ce": 1.5921668612330127,
+        "exact": 0
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "nll": 70.71386254979545,
+        "ce": 1.6071332397680784,
+        "exact": 0
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "nll": 64.90893561294318,
+        "ce": 1.475203082112345,
+        "exact": 0
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "nll": 66.03634184860422,
+        "ce": 1.5008259511046413,
+        "exact": 0
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "nll": 75.72528521180168,
+        "ce": 1.6111762811021633,
+        "exact": 0
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "nll": 74.5335299605415,
+        "ce": 1.620294129576989,
+        "exact": 0
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "nll": 70.70261127405531,
+        "ce": 1.5711691394234515,
+        "exact": 0
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "nll": 73.04800558737068,
+        "ce": 1.5542128848376742,
+        "exact": 0
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 49,
+        "nll": 72.12608557259453,
+        "ce": 1.4719609300529497,
+        "exact": 0
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "nll": 61.26093140193198,
+        "ce": 1.392293895498454,
+        "exact": 0
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 44,
+        "nll": 68.71869635457146,
+        "ce": 1.5617885535129878,
+        "exact": 0
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "nll": 71.81521114656137,
+        "ce": 1.4656165540114565,
+        "exact": 0
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "nll": 84.90023244599783,
+        "ce": 1.6980046489199565,
+        "exact": 0
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 48,
+        "nll": 75.91393096738537,
+        "ce": 1.581540228487195,
+        "exact": 0
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "nll": 82.81678995561141,
+        "ce": 1.690138570522682,
+        "exact": 0
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "nll": 71.49907408835364,
+        "ce": 1.521256895496886,
+        "exact": 0
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "nll": 75.08410341694638,
+        "ce": 1.532328641162171,
+        "exact": 0
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "nll": 72.49169191061766,
+        "ce": 1.542376423630163,
+        "exact": 0
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 46,
+        "nll": 76.01038071807636,
+        "ce": 1.652399580827747,
+        "exact": 0
+      }
+    ],
+    "combined_roles": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "nll": 75.71054175110419,
+        "ce": 1.54511309696131,
+        "exact": 0
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 51,
+        "nll": 79.23317738337863,
+        "ce": 1.553591713399581,
+        "exact": 0
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 48,
+        "nll": 73.12003125999848,
+        "ce": 1.5233339845833018,
+        "exact": 0
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "nll": 75.54454696962583,
+        "ce": 1.5108909393925165,
+        "exact": 0
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 52,
+        "nll": 79.21909083279539,
+        "ce": 1.5234440544768344,
+        "exact": 0
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 49,
+        "nll": 70.94824048153988,
+        "ce": 1.447923275133467,
+        "exact": 0
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "nll": 78.66260850622052,
+        "ce": 1.5732521701244104,
+        "exact": 0
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 50,
+        "nll": 74.19651066960772,
+        "ce": 1.4839302133921544,
+        "exact": 0
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 50,
+        "nll": 77.19429968843824,
+        "ce": 1.5438859937687648,
+        "exact": 0
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "nll": 80.84960245982691,
+        "ce": 1.5254641973552248,
+        "exact": 0
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 53,
+        "nll": 76.52742047802161,
+        "ce": 1.4439135939249361,
+        "exact": 0
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "nll": 73.23440830842844,
+        "ce": 1.5257168397589258,
+        "exact": 0
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "nll": 70.43767675403123,
+        "ce": 1.4674515990423174,
+        "exact": 0
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 52,
+        "nll": 75.70458951466485,
+        "ce": 1.4558574906666317,
+        "exact": 0
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "nll": 80.42609993744529,
+        "ce": 1.5769823517146135,
+        "exact": 0
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "nll": 76.72078183806978,
+        "ce": 1.5983496216264539,
+        "exact": 0
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "nll": 73.34917292395619,
+        "ce": 1.4669834584791237,
+        "exact": 0
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "nll": 74.19141911559441,
+        "ce": 1.45473370814891,
+        "exact": 0
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 53,
+        "nll": 83.29617076725073,
+        "ce": 1.5716258635330327,
+        "exact": 0
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "nll": 65.51637238473154,
+        "ce": 1.393965369887905,
+        "exact": 0
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "nll": 68.31063007206926,
+        "ce": 1.423138126501443,
+        "exact": 0
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "nll": 78.93486486596846,
+        "ce": 1.5786972973193694,
+        "exact": 0
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "nll": 81.48455264094645,
+        "ce": 1.629691052818929,
+        "exact": 0
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "nll": 81.92568957318834,
+        "ce": 1.6385137914637666,
+        "exact": 0
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 55,
+        "nll": 87.75452864966397,
+        "ce": 1.595536884539345,
+        "exact": 0
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "nll": 80.68711509320254,
+        "ce": 1.5516752902538948,
+        "exact": 0
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 53,
+        "nll": 80.78533192751786,
+        "ce": 1.5242515458022237,
+        "exact": 0
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 51,
+        "nll": 80.1266201172287,
+        "ce": 1.5711101983770333,
+        "exact": 0
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 54,
+        "nll": 88.16717753639958,
+        "ce": 1.6327255099333255,
+        "exact": 0
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "nll": 69.11155472642506,
+        "ce": 1.4704586112005331,
+        "exact": 0
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "nll": 74.1548356895836,
+        "ce": 1.4540163860702668,
+        "exact": 0
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "nll": 72.78609463985731,
+        "ce": 1.4557218927971463,
+        "exact": 0
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "nll": 82.4702859842136,
+        "ce": 1.6830670609023184,
+        "exact": 0
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "nll": 83.79234048764941,
+        "ce": 1.6429870683852825,
+        "exact": 0
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "nll": 75.19010674457392,
+        "ce": 1.5344919743790597,
+        "exact": 0
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 54,
+        "nll": 80.60278018480047,
+        "ce": 1.492644077496305,
+        "exact": 0
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "nll": 79.44691574876492,
+        "ce": 1.4989984103540552,
+        "exact": 0
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "nll": 68.30077294461661,
+        "ce": 1.4847994118394916,
+        "exact": 0
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 74.76601917875537,
+        "ce": 1.466000376054027,
+        "exact": 0
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "nll": 79.61573685791082,
+        "ce": 1.5923147371582163,
+        "exact": 0
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 49,
+        "nll": 78.84947071785483,
+        "ce": 1.6091728717929557,
+        "exact": 0
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "nll": 78.37101527822696,
+        "ce": 1.5674203055645393,
+        "exact": 0
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "nll": 76.89302681604467,
+        "ce": 1.5077064081577385,
+        "exact": 0
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "tiny",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "nll": 74.80097672808748,
+        "ce": 1.4666858181977938,
+        "exact": 0
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 48,
+        "nll": 74.02220328758044,
+        "ce": 1.5421292351579259,
+        "exact": 0
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "nll": 86.12225761962162,
+        "ce": 1.6249482569739928,
+        "exact": 0
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "nll": 75.98936487650609,
+        "ce": 1.5508033648266548,
+        "exact": 0
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "nll": 75.08215623696307,
+        "ce": 1.41664445730119,
+        "exact": 0
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "nll": 75.10394617948229,
+        "ce": 1.5327335954996386,
+        "exact": 0
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "nll": 85.08481111190115,
+        "ce": 1.6053737945641726,
+        "exact": 0
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "nll": 71.95863428308043,
+        "ce": 1.4991382142308423,
+        "exact": 0
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 51,
+        "nll": 82.57488719265075,
+        "ce": 1.6191154351500148,
+        "exact": 0
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 52,
+        "nll": 79.18087605778712,
+        "ce": 1.5227091549574445,
+        "exact": 0
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "nll": 72.85398471906252,
+        "ce": 1.4010381676742794,
+        "exact": 0
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "slim",
+          "black"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "nll": 75.11519745522249,
+        "ce": 1.5648999469838019,
+        "exact": 0
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "small",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "nll": 78.46249259077251,
+        "ce": 1.5088940882840869,
+        "exact": 0
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 50,
+        "nll": 72.91196563589234,
+        "ce": 1.4582393127178468,
+        "exact": 0
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "nll": 74.84530765873917,
+        "ce": 1.439332839591138,
+        "exact": 0
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "nll": 80.98238674769107,
+        "ce": 1.6196477349538214,
+        "exact": 0
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "wide",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 51,
+        "nll": 72.28850275776438,
+        "ce": 1.4174216227012624,
+        "exact": 0
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "short",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "nll": 82.4616679392536,
+        "ce": 1.5558805271557283,
+        "exact": 0
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "large",
+          "pink"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 51,
+        "nll": 76.40142907624318,
+        "ce": 1.498067236789082,
+        "exact": 0
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "tall",
+          "green"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 82.01292634610272,
+        "ce": 1.608096595021622,
+        "exact": 0
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "huge",
+          "red"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 50,
+        "nll": 71.12249664951968,
+        "ce": 1.4224499329903935,
+        "exact": 0
+      }
+    ],
+    "relation_swap": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "tall",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "nll": 79.36275457269593,
+        "ce": 1.6196480525039987,
+        "exact": 0
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "huge",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "nll": 68.73315685682651,
+        "ce": 1.4624075926984363,
+        "exact": 0
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "nll": 69.35591760411006,
+        "ce": 1.576270854638865,
+        "exact": 0
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "tall",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "nll": 70.7527640154706,
+        "ce": 1.5381035655537088,
+        "exact": 0
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "tiny",
+          "white"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "nll": 73.96370697356788,
+        "ce": 1.6079066733384322,
+        "exact": 0
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 45,
+        "nll": 68.51191927365753,
+        "ce": 1.5224870949701672,
+        "exact": 0
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 48,
+        "nll": 80.81217503054683,
+        "ce": 1.683586979803059,
+        "exact": 0
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "large",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "nll": 81.0376718557515,
+        "ce": 1.6538300378724795,
+        "exact": 0
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "short",
+          "gray"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "nll": 79.97844502183725,
+        "ce": 1.6322131637109643,
+        "exact": 0
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 49,
+        "nll": 78.52423705015612,
+        "ce": 1.602535450003186,
+        "exact": 0
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "tiny",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "nll": 72.43205009670218,
+        "ce": 1.5090010436812955,
+        "exact": 0
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "small",
+          "red"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "nll": 77.1787186992906,
+        "ce": 1.6421003978572468,
+        "exact": 0
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "nll": 69.50614663993039,
+        "ce": 1.5110031878245738,
+        "exact": 0
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "tall",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 44,
+        "nll": 72.78499162229737,
+        "ce": 1.654204355052213,
+        "exact": 0
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "nll": 75.00206001330767,
+        "ce": 1.6304795655066884,
+        "exact": 0
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "short",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "nll": 72.6177320791167,
+        "ce": 1.5450581293429086,
+        "exact": 0
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "nll": 81.64556429318348,
+        "ce": 1.6662360059833363,
+        "exact": 0
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "slim",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "nll": 75.95837645147608,
+        "ce": 1.6512690532929584,
+        "exact": 0
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "nll": 75.27035504696161,
+        "ce": 1.6014969158928003,
+        "exact": 0
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "nll": 71.95352658339735,
+        "ce": 1.564207099639073,
+        "exact": 0
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "slim",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "nll": 69.00364778443989,
+        "ce": 1.568264722373634,
+        "exact": 0
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "large",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 45,
+        "nll": 73.85394736472057,
+        "ce": 1.6411988303271237,
+        "exact": 0
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "wide",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 49,
+        "nll": 76.48647935930731,
+        "ce": 1.5609485583532103,
+        "exact": 0
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "tiny",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "nll": 71.13055638365262,
+        "ce": 1.5134160932692047,
+        "exact": 0
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "nll": 74.71901501658489,
+        "ce": 1.5897662769486147,
+        "exact": 0
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "huge",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 46,
+        "nll": 74.01298069146019,
+        "ce": 1.6089778411186997,
+        "exact": 0
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "nll": 72.30887794580092,
+        "ce": 1.5384867648042748,
+        "exact": 0
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "tall",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 44,
+        "nll": 66.78868903912178,
+        "ce": 1.5179247508891314,
+        "exact": 0
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "nll": 68.18078088372866,
+        "ce": 1.515128464082859,
+        "exact": 0
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "nll": 68.61590144512698,
+        "ce": 1.5247978098917108,
+        "exact": 0
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "short",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 46,
+        "nll": 72.33250087241028,
+        "ce": 1.572445671139354,
+        "exact": 0
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tall",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "nll": 70.77772871980144,
+        "ce": 1.505909121697903,
+        "exact": 0
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "huge",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 45,
+        "nll": 67.45404407840209,
+        "ce": 1.4989787572978241,
+        "exact": 0
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "nll": 68.52118753806987,
+        "ce": 1.5572997167743152,
+        "exact": 0
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 47,
+        "nll": 70.67663656346083,
+        "ce": 1.5037582247544858,
+        "exact": 0
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "slim",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 78.37696142120423,
+        "ce": 1.6328533629417548,
+        "exact": 0
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "wide",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 47,
+        "nll": 73.46935999145886,
+        "ce": 1.563177872158699,
+        "exact": 0
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "nll": 73.92586004549418,
+        "ce": 1.5401220842811287,
+        "exact": 0
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "nll": 75.95609154692575,
+        "ce": 1.6160870541899095,
+        "exact": 0
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "small",
+          "red"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "nll": 68.02738582198907,
+        "ce": 1.5820322284183506,
+        "exact": 0
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 44,
+        "nll": 65.76273520830136,
+        "ce": 1.4946076183704855,
+        "exact": 0
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "slim",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "nll": 75.80256609101045,
+        "ce": 1.6128205551278818,
+        "exact": 0
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 48,
+        "nll": 72.4215604093737,
+        "ce": 1.5087825085286186,
+        "exact": 0
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "slim",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 50,
+        "nll": 76.73963976161853,
+        "ce": 1.5347927952323708,
+        "exact": 0
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 48,
+        "nll": 81.24623704598422,
+        "ce": 1.6926299384580046,
+        "exact": 0
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "tiny",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 48,
+        "nll": 69.74817504991567,
+        "ce": 1.4530869802065765,
+        "exact": 0
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "nll": 70.86313095585176,
+        "ce": 1.6105257035420855,
+        "exact": 0
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "small",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 47,
+        "nll": 74.87444556351231,
+        "ce": 1.593073309861964,
+        "exact": 0
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 47,
+        "nll": 67.81544373000368,
+        "ce": 1.44288178148944,
+        "exact": 0
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 50,
+        "nll": 83.50486448552446,
+        "ce": 1.6700972897104893,
+        "exact": 0
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 49,
+        "nll": 75.95241425207634,
+        "ce": 1.5500492704505375,
+        "exact": 0
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "tiny",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 46,
+        "nll": 66.09563900781905,
+        "ce": 1.4368617175612837,
+        "exact": 0
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 45,
+        "nll": 66.11805350699468,
+        "ce": 1.4692900779332152,
+        "exact": 0
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "huge",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 47,
+        "nll": 73.75731367611789,
+        "ce": 1.5693045463003805,
+        "exact": 0
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "short",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 44,
+        "nll": 67.32790187770934,
+        "ce": 1.5301795881297577,
+        "exact": 0
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 74.7975808689663,
+        "ce": 1.5582829347701315,
+        "exact": 0
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 50,
+        "nll": 83.1557335181548,
+        "ce": 1.6631146703630961,
+        "exact": 0
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "nll": 78.8810901358746,
+        "ce": 1.577621802717492,
+        "exact": 0
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "wide",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 43,
+        "nll": 66.37514731333856,
+        "ce": 1.5436080770543852,
+        "exact": 0
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "huge",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 46,
+        "nll": 75.85930343464486,
+        "ce": 1.649115292057497,
+        "exact": 0
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "tiny",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 47,
+        "nll": 70.06170484570116,
+        "ce": 1.490674571185131,
+        "exact": 0
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "wide",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 46,
+        "nll": 76.67120982535145,
+        "ce": 1.6667654309859012,
+        "exact": 0
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "nll": 77.141089070812,
+        "ce": 1.574307940220653,
+        "exact": 0
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 47,
+        "nll": 75.91439680690141,
+        "ce": 1.615199932061732,
+        "exact": 0
+      }
+    ],
+    "relation_roles": [
+      {
+        "case_index": 0,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "nll": 87.59939572190395,
+        "ce": 1.6528187872057347,
+        "exact": 0
+      },
+      {
+        "case_index": 1,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 51,
+        "nll": 79.67168995238862,
+        "ce": 1.5621899990664434,
+        "exact": 0
+      },
+      {
+        "case_index": 2,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 52,
+        "nll": 76.78437274119226,
+        "ce": 1.4766225527152357,
+        "exact": 0
+      },
+      {
+        "case_index": 3,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 72.61610209656851,
+        "ce": 1.5128354603451772,
+        "exact": 0
+      },
+      {
+        "case_index": 4,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "nll": 70.16407011372839,
+        "ce": 1.4617514607026747,
+        "exact": 0
+      },
+      {
+        "case_index": 5,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 54,
+        "nll": 85.93078880601186,
+        "ce": 1.5913109038150344,
+        "exact": 0
+      },
+      {
+        "case_index": 6,
+        "subject_attribute": [
+          "huge",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 50,
+        "nll": 80.26063834007188,
+        "ce": 1.6052127668014375,
+        "exact": 0
+      },
+      {
+        "case_index": 7,
+        "subject_attribute": [
+          "small",
+          "red"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 80.44566378969232,
+        "ce": 1.5773659566606337,
+        "exact": 0
+      },
+      {
+        "case_index": 8,
+        "subject_attribute": [
+          "tall",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 48,
+        "nll": 79.83469029243463,
+        "ce": 1.6632227144257214,
+        "exact": 0
+      },
+      {
+        "case_index": 9,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "nll": 76.35486148882437,
+        "ce": 1.5270972297764873,
+        "exact": 0
+      },
+      {
+        "case_index": 10,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 48,
+        "nll": 72.92252244349689,
+        "ce": 1.5192192175728518,
+        "exact": 0
+      },
+      {
+        "case_index": 11,
+        "subject_attribute": [
+          "large",
+          "white"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "nll": 84.34313951976166,
+        "ce": 1.5913799909388993,
+        "exact": 0
+      },
+      {
+        "case_index": 12,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "nll": 73.01723635055401,
+        "ce": 1.4901476806235514,
+        "exact": 0
+      },
+      {
+        "case_index": 13,
+        "subject_attribute": [
+          "slim",
+          "gray"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 70.75661892515664,
+        "ce": 1.47409622760743,
+        "exact": 0
+      },
+      {
+        "case_index": 14,
+        "subject_attribute": [
+          "tiny",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "nll": 83.00579021706297,
+        "ce": 1.627564514060058,
+        "exact": 0
+      },
+      {
+        "case_index": 15,
+        "subject_attribute": [
+          "tiny",
+          "white"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "nll": 78.36504187899493,
+        "ce": 1.5673008375798987,
+        "exact": 0
+      },
+      {
+        "case_index": 16,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "nll": 73.90748154535743,
+        "ce": 1.4781496309071485,
+        "exact": 0
+      },
+      {
+        "case_index": 17,
+        "subject_attribute": [
+          "large",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 49,
+        "nll": 79.3511495115644,
+        "ce": 1.6194112145217225,
+        "exact": 0
+      },
+      {
+        "case_index": 18,
+        "subject_attribute": [
+          "slim",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "nll": 80.35971135690308,
+        "ce": 1.6071942271380615,
+        "exact": 0
+      },
+      {
+        "case_index": 19,
+        "subject_attribute": [
+          "wide",
+          "gray"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 50,
+        "nll": 82.20693454580376,
+        "ce": 1.6441386909160753,
+        "exact": 0
+      },
+      {
+        "case_index": 20,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 71.10888874482683,
+        "ce": 1.4814351821838923,
+        "exact": 0
+      },
+      {
+        "case_index": 21,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 52,
+        "nll": 85.21350993597382,
+        "ce": 1.6387213449225735,
+        "exact": 0
+      },
+      {
+        "case_index": 22,
+        "subject_attribute": [
+          "tiny",
+          "pink"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 50,
+        "nll": 72.04947043653954,
+        "ce": 1.4409894087307906,
+        "exact": 0
+      },
+      {
+        "case_index": 23,
+        "subject_attribute": [
+          "huge",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 50,
+        "nll": 78.41431559688715,
+        "ce": 1.568286311937743,
+        "exact": 0
+      },
+      {
+        "case_index": 24,
+        "subject_attribute": [
+          "short",
+          "red"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 48,
+        "nll": 69.08087301842613,
+        "ce": 1.4391848545505443,
+        "exact": 0
+      },
+      {
+        "case_index": 25,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 53,
+        "nll": 81.41159800589818,
+        "ce": 1.5360678869037394,
+        "exact": 0
+      },
+      {
+        "case_index": 26,
+        "subject_attribute": [
+          "huge",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "nll": 74.68698828554699,
+        "ce": 1.4644507506969997,
+        "exact": 0
+      },
+      {
+        "case_index": 27,
+        "subject_attribute": [
+          "tiny",
+          "pink"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 74.39750147405437,
+        "ce": 1.4587745387069484,
+        "exact": 0
+      },
+      {
+        "case_index": 28,
+        "subject_attribute": [
+          "slim",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 52,
+        "nll": 80.12993256192098,
+        "ce": 1.5409602415754036,
+        "exact": 0
+      },
+      {
+        "case_index": 29,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "nll": 72.58211578915565,
+        "ce": 1.481267669166442,
+        "exact": 0
+      },
+      {
+        "case_index": 30,
+        "subject_attribute": [
+          "wide",
+          "gray"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "nll": 70.77648221876555,
+        "ce": 1.5058826003992671,
+        "exact": 0
+      },
+      {
+        "case_index": 31,
+        "subject_attribute": [
+          "tiny",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "nll": 72.59701343204925,
+        "ce": 1.3960964121547934,
+        "exact": 0
+      },
+      {
+        "case_index": 32,
+        "subject_attribute": [
+          "tall",
+          "white"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 50,
+        "nll": 75.1540989208976,
+        "ce": 1.5030819784179519,
+        "exact": 0
+      },
+      {
+        "case_index": 33,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "nll": 76.17383871030466,
+        "ce": 1.4936046805942091,
+        "exact": 0
+      },
+      {
+        "case_index": 34,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "nll": 79.2198644709116,
+        "ce": 1.5533306759002274,
+        "exact": 0
+      },
+      {
+        "case_index": 35,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 52,
+        "nll": 77.64641925109989,
+        "ce": 1.4932003702134593,
+        "exact": 0
+      },
+      {
+        "case_index": 36,
+        "subject_attribute": [
+          "slim",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 54,
+        "nll": 81.14097466704557,
+        "ce": 1.5026106419823253,
+        "exact": 0
+      },
+      {
+        "case_index": 37,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "nll": 75.61434560981112,
+        "ce": 1.4826342276433553,
+        "exact": 0
+      },
+      {
+        "case_index": 38,
+        "subject_attribute": [
+          "slim",
+          "red"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 51,
+        "nll": 81.75639751973088,
+        "ce": 1.6030666180339388,
+        "exact": 0
+      },
+      {
+        "case_index": 39,
+        "subject_attribute": [
+          "tall",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 53,
+        "nll": 82.21159295482951,
+        "ce": 1.5511621312231985,
+        "exact": 0
+      },
+      {
+        "case_index": 40,
+        "subject_attribute": [
+          "short",
+          "gray"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "nll": 85.93227645055774,
+        "ce": 1.621363706614297,
+        "exact": 0
+      },
+      {
+        "case_index": 41,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 53,
+        "nll": 80.31522658389487,
+        "ce": 1.5153816336583938,
+        "exact": 0
+      },
+      {
+        "case_index": 42,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "nll": 79.4033949187347,
+        "ce": 1.588067898374694,
+        "exact": 0
+      },
+      {
+        "case_index": 43,
+        "subject_attribute": [
+          "tiny",
+          "black"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 52,
+        "nll": 74.18502123741897,
+        "ce": 1.4266350237965186,
+        "exact": 0
+      },
+      {
+        "case_index": 44,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 49,
+        "nll": 73.16775217713192,
+        "ce": 1.4932194321863657,
+        "exact": 0
+      },
+      {
+        "case_index": 45,
+        "subject_attribute": [
+          "short",
+          "gray"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "nll": 75.50509303485879,
+        "ce": 1.4804920202913487,
+        "exact": 0
+      },
+      {
+        "case_index": 46,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 51,
+        "nll": 79.12034992201191,
+        "ce": 1.5513794102355276,
+        "exact": 0
+      },
+      {
+        "case_index": 47,
+        "subject_attribute": [
+          "huge",
+          "pink"
+        ],
+        "subject_relation": [
+          "dog",
+          "helps"
+        ],
+        "response_bytes": 49,
+        "nll": 71.8553789838291,
+        "ce": 1.4664363057924306,
+        "exact": 0
+      },
+      {
+        "case_index": 48,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 54,
+        "nll": 89.10956494687525,
+        "ce": 1.650177128645838,
+        "exact": 0
+      },
+      {
+        "case_index": 49,
+        "subject_attribute": [
+          "slim",
+          "green"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "nll": 87.20006847470462,
+        "ce": 1.6769243937443197,
+        "exact": 0
+      },
+      {
+        "case_index": 50,
+        "subject_attribute": [
+          "short",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 50,
+        "nll": 76.7338357778373,
+        "ce": 1.534676715556746,
+        "exact": 0
+      },
+      {
+        "case_index": 51,
+        "subject_attribute": [
+          "wide",
+          "blue"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 53,
+        "nll": 82.44031078802776,
+        "ce": 1.5554775620382597,
+        "exact": 0
+      },
+      {
+        "case_index": 52,
+        "subject_attribute": [
+          "small",
+          "green"
+        ],
+        "subject_relation": [
+          "bear",
+          "likes"
+        ],
+        "response_bytes": 51,
+        "nll": 81.92414423364956,
+        "ce": 1.606355769287246,
+        "exact": 0
+      },
+      {
+        "case_index": 53,
+        "subject_attribute": [
+          "short",
+          "black"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 54,
+        "nll": 89.4201733406364,
+        "ce": 1.655929135937711,
+        "exact": 0
+      },
+      {
+        "case_index": 54,
+        "subject_attribute": [
+          "tall",
+          "blue"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 74.0446738102032,
+        "ce": 1.4518563492196705,
+        "exact": 0
+      },
+      {
+        "case_index": 55,
+        "subject_attribute": [
+          "large",
+          "blue"
+        ],
+        "subject_relation": [
+          "mole",
+          "follows"
+        ],
+        "response_bytes": 51,
+        "nll": 69.56841487072046,
+        "ce": 1.364086566092558,
+        "exact": 0
+      },
+      {
+        "case_index": 56,
+        "subject_attribute": [
+          "small",
+          "black"
+        ],
+        "subject_relation": [
+          "bird",
+          "chases"
+        ],
+        "response_bytes": 52,
+        "nll": 77.23132770950438,
+        "ce": 1.485217840567392,
+        "exact": 0
+      },
+      {
+        "case_index": 57,
+        "subject_attribute": [
+          "small",
+          "yellow"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 53,
+        "nll": 84.19078774094926,
+        "ce": 1.5885054290745144,
+        "exact": 0
+      },
+      {
+        "case_index": 58,
+        "subject_attribute": [
+          "huge",
+          "gray"
+        ],
+        "subject_relation": [
+          "cat",
+          "watches"
+        ],
+        "response_bytes": 51,
+        "nll": 77.02425876651962,
+        "ce": 1.5102795836572476,
+        "exact": 0
+      },
+      {
+        "case_index": 59,
+        "subject_attribute": [
+          "tiny",
+          "white"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 51,
+        "nll": 71.8146759864179,
+        "ce": 1.4081309016944685,
+        "exact": 0
+      },
+      {
+        "case_index": 60,
+        "subject_attribute": [
+          "wide",
+          "green"
+        ],
+        "subject_relation": [
+          "hare",
+          "hears"
+        ],
+        "response_bytes": 49,
+        "nll": 70.26489041437429,
+        "ce": 1.4339773553953936,
+        "exact": 0
+      },
+      {
+        "case_index": 61,
+        "subject_attribute": [
+          "wide",
+          "red"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 51,
+        "nll": 80.51905866159615,
+        "ce": 1.578805071796003,
+        "exact": 0
+      },
+      {
+        "case_index": 62,
+        "subject_attribute": [
+          "tall",
+          "gray"
+        ],
+        "subject_relation": [
+          "wolf",
+          "finds"
+        ],
+        "response_bytes": 48,
+        "nll": 72.32441375957409,
+        "ce": 1.5067586199911267,
+        "exact": 0
+      },
+      {
+        "case_index": 63,
+        "subject_attribute": [
+          "small",
+          "red"
+        ],
+        "subject_relation": [
+          "fox",
+          "sees"
+        ],
+        "response_bytes": 47,
+        "nll": 72.42872072741608,
+        "ce": 1.5410366112216187,
+        "exact": 0
+      }
+    ]
+  },
+  "metrics": {
+    "attribute_swap": {
+      "exact_accuracy": 0.0,
+      "cases": 64,
+      "ce": 1.544611707509109
+    },
+    "attribute_roles": {
+      "exact_accuracy": 0.0,
+      "cases": 64,
+      "ce": 1.5084995489599502
+    },
+    "combined_swap": {
+      "exact_accuracy": 0.0,
+      "cases": 64,
+      "ce": 1.5602909418024666
+    },
+    "combined_roles": {
+      "exact_accuracy": 0.0,
+      "cases": 64,
+      "ce": 1.526279746335843
+    },
+    "relation_swap": {
+      "exact_accuracy": 0.0,
+      "cases": 64,
+      "ce": 1.5713911939561735
+    },
+    "relation_roles": {
+      "exact_accuracy": 0.0,
+      "cases": 64,
+      "ce": 1.5331241708966385
+    }
+  }
+}

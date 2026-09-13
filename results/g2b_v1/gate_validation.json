@@ -1,0 +1,251 @@
+{
+  "stage": "validation",
+  "passed": false,
+  "categories": {
+    "attribute_swap": {
+      "passed": false,
+      "checks": {
+        "teacher_accuracy": false,
+        "accuracy_margin": false,
+        "ce_margin": false,
+        "bootstrap_margin": false
+      },
+      "teacher_accuracy": 0.0,
+      "teacher_ce": 0.638917139582121,
+      "baseline_accuracy": {
+        "gru": 0.0,
+        "ngram1": 0.0,
+        "ngram4": 0.0,
+        "ngram8": 0.0,
+        "ngram16": 0.0,
+        "retrieval": 0.0
+      },
+      "baseline_ce": {
+        "gru": 0.3963150702697526,
+        "ngram1": 1.544611707509109,
+        "ngram4": 0.5215254460024291,
+        "ngram8": 0.6196239160703216,
+        "ngram16": 1.1181808220460596
+      },
+      "accuracy_margin_over_best": 0.0,
+      "relative_ce_reduction_vs_best": -0.6121444464557981,
+      "paired_seed_composition_margin_95_ci": [
+        0.0,
+        0.0
+      ],
+      "seeds": 5,
+      "cases_per_seed": 64,
+      "composition_groups": 8
+    },
+    "attribute_roles": {
+      "passed": false,
+      "checks": {
+        "teacher_accuracy": false,
+        "accuracy_margin": false,
+        "ce_margin": false,
+        "bootstrap_margin": false
+      },
+      "teacher_accuracy": 0.0,
+      "teacher_ce": 0.5258378037206464,
+      "baseline_accuracy": {
+        "gru": 0.0,
+        "ngram1": 0.0,
+        "ngram4": 0.0,
+        "ngram8": 0.0,
+        "ngram16": 0.0,
+        "retrieval": 0.0
+      },
+      "baseline_ce": {
+        "gru": 0.36916909719533264,
+        "ngram1": 1.5084995489599502,
+        "ngram4": 0.4778589077999229,
+        "ngram8": 0.5519530769077283,
+        "ngram16": 0.9465983162040894
+      },
+      "accuracy_margin_over_best": 0.0,
+      "relative_ce_reduction_vs_best": -0.42438196402560235,
+      "paired_seed_composition_margin_95_ci": [
+        0.0,
+        0.0
+      ],
+      "seeds": 5,
+      "cases_per_seed": 64,
+      "composition_groups": 8
+    },
+    "relation_swap": {
+      "passed": false,
+      "checks": {
+        "teacher_accuracy": false,
+        "accuracy_margin": false,
+        "ce_margin": false,
+        "bootstrap_margin": false
+      },
+      "teacher_accuracy": 0.0,
+      "teacher_ce": 0.6120339582819092,
+      "baseline_accuracy": {
+        "gru": 0.0,
+        "ngram1": 0.0,
+        "ngram4": 0.0,
+        "ngram8": 0.0,
+        "ngram16": 0.0,
+        "retrieval": 0.0
+      },
+      "baseline_ce": {
+        "gru": 0.3290056178226005,
+        "ngram1": 1.5713911939561735,
+        "ngram4": 0.38331162819453707,
+        "ngram8": 0.43162259853758256,
+        "ngram16": 1.0463102345782678
+      },
+      "accuracy_margin_over_best": 0.0,
+      "relative_ce_reduction_vs_best": -0.8602538228144094,
+      "paired_seed_composition_margin_95_ci": [
+        0.0,
+        0.0
+      ],
+      "seeds": 5,
+      "cases_per_seed": 64,
+      "composition_groups": 8
+    },
+    "relation_roles": {
+      "passed": false,
+      "checks": {
+        "teacher_accuracy": false,
+        "accuracy_margin": false,
+        "ce_margin": false,
+        "bootstrap_margin": false
+      },
+      "teacher_accuracy": 0.0,
+      "teacher_ce": 0.5355324700212993,
+      "baseline_accuracy": {
+        "gru": 0.0,
+        "ngram1": 0.0,
+        "ngram4": 0.0,
+        "ngram8": 0.0,
+        "ngram16": 0.0,
+        "retrieval": 0.0
+      },
+      "baseline_ce": {
+        "gru": 0.3286194520077463,
+        "ngram1": 1.5331241708966385,
+        "ngram4": 0.4668447181880905,
+        "ngram8": 0.5002253365882281,
+        "ngram16": 0.7534868549752722
+      },
+      "accuracy_margin_over_best": 0.0,
+      "relative_ce_reduction_vs_best": -0.6296432446387126,
+      "paired_seed_composition_margin_95_ci": [
+        0.0,
+        0.0
+      ],
+      "seeds": 5,
+      "cases_per_seed": 64,
+      "composition_groups": 8
+    },
+    "combined_swap": {
+      "passed": false,
+      "checks": {
+        "teacher_accuracy": false,
+        "accuracy_margin": false,
+        "ce_margin": false,
+        "bootstrap_margin": false
+      },
+      "teacher_accuracy": 0.0,
+      "teacher_ce": 0.6292672669671381,
+      "baseline_accuracy": {
+        "gru": 0.0,
+        "ngram1": 0.0,
+        "ngram4": 0.0,
+        "ngram8": 0.0,
+        "ngram16": 0.0,
+        "retrieval": 0.0
+      },
+      "baseline_ce": {
+        "gru": 0.3933737957853851,
+        "ngram1": 1.5602909418024666,
+        "ngram4": 0.5241483679974541,
+        "ngram8": 0.6117097747216587,
+        "ngram16": 1.1025025944548765
+      },
+      "accuracy_margin_over_best": 0.0,
+      "relative_ce_reduction_vs_best": -0.5996674758438931,
+      "paired_seed_composition_margin_95_ci": [
+        0.0,
+        0.0
+      ],
+      "seeds": 5,
+      "cases_per_seed": 64,
+      "composition_groups": 45
+    },
+    "combined_roles": {
+      "passed": false,
+      "checks": {
+        "teacher_accuracy": false,
+        "accuracy_margin": false,
+        "ce_margin": false,
+        "bootstrap_margin": false
+      },
+      "teacher_accuracy": 0.0,
+      "teacher_ce": 0.554574388859076,
+      "baseline_accuracy": {
+        "gru": 0.0,
+        "ngram1": 0.0,
+        "ngram4": 0.0,
+        "ngram8": 0.0,
+        "ngram16": 0.0,
+        "retrieval": 0.0
+      },
+      "baseline_ce": {
+        "gru": 0.3879229281961586,
+        "ngram1": 1.5262797463358433,
+        "ngram4": 0.5889869006316792,
+        "ngram8": 0.6636781340644317,
+        "ngram16": 0.8316393992809293
+      },
+      "accuracy_margin_over_best": 0.0,
+      "relative_ce_reduction_vs_best": -0.4295994089285895,
+      "paired_seed_composition_margin_95_ci": [
+        0.0,
+        0.0
+      ],
+      "seeds": 5,
+      "cases_per_seed": 64,
+      "composition_groups": 45
+    }
+  },
+  "protocol_sha256": "e51e46514f42ada319c475b90da2cc31dc356300d6b90aad86813f16a2d18e47",
+  "execution_sha256": "f6e5245b75f5329d4df772abdffbd08697b5d88c63af1547106940f77b95c581",
+  "inputs": {
+    "results/g2b_v1/validation/teacher_0.json": "82cba09df31427c05dbef271887fc3f93afd0a9dedd50848e6d0a3094ececf76",
+    "results/g2b_v1/validation/teacher_1.json": "8e1e4cbc8a335cc69d13a02237c70ee775cf85aa78cf988178ca8d708d6e8fb8",
+    "results/g2b_v1/validation/teacher_2.json": "9facfde6e2b90d758798b5e81c2b1ce6077fcccb6ccb47aec6f571306d9ab101",
+    "results/g2b_v1/validation/teacher_3.json": "21b185af443c98d118ff2692046323db3fec600599242fcccd5397ae553c27f4",
+    "results/g2b_v1/validation/teacher_4.json": "fc7dcff6977f4ee4782488e15a316d4f7cb35b7370a2c88533aa25762395db5b",
+    "results/g2b_v1/validation/gru_0.json": "418a38941d16d29a17b5378484b3d531a1ee8fa598df5eca76bef87397f1f7b2",
+    "results/g2b_v1/validation/gru_1.json": "a59b92246d92723a595cc842124b5e5093f5ebca7bcd86a28892731a3017cb4c",
+    "results/g2b_v1/validation/gru_2.json": "d85c6b2cb82aa44800a03c3cfe40e2004fe62dead079ddaf94facf23dbf5315a",
+    "results/g2b_v1/validation/gru_3.json": "ee95079ba48dae23dedb0c1773cf34fb2009ff65a7e9ddbf25bc772b490a8a33",
+    "results/g2b_v1/validation/gru_4.json": "5e02c9f4a3bdcf5abbbaee29d385e1e784c4a16b2f28fef4fa1571dc02d4e39b",
+    "results/g2b_v1/validation/ngram1.json": "bd258d82dbdb49a2955c46c820097648d5037dc0da2cca64be9d6d98843baf90",
+    "results/g2b_v1/validation/ngram4.json": "626c08083d497f1469be5ab4c907aa6a7baf20d2570d2064b79b3b5b992014b0",
+    "results/g2b_v1/validation/ngram8.json": "760dde5ee841aafadfdee0237a0f5d5fe35eab884523300154f7b962ef8caa3a",
+    "results/g2b_v1/validation/ngram16.json": "f1ed06d101fb5401ed38115246d6684ca9aecd385f451be09d2c1b64f19aaea8",
+    "results/g2b_v1/validation/retrieval.json": "1ee1388ad8960ec48d0a22611e7d3d81e96b8b7b38560c942c8ebbcd4ed5226b",
+    "results/g2b_v1/teacher_0.pt": "19cbee909133d1f7ba0dfc48702e1a0edbce8a6ff7ffe2f6530cbf42f03f718c",
+    "configs/g2b_qualification_v1.json": "e51e46514f42ada319c475b90da2cc31dc356300d6b90aad86813f16a2d18e47",
+    "configs/g2b_execution_v1.json": "f6e5245b75f5329d4df772abdffbd08697b5d88c63af1547106940f77b95c581",
+    "data/raw/grammar_g2b_v1/manifest.json": "5e6de579bada154e17f6dccde73b9892b00c117ff0a7722ececa7e3c429019b0",
+    "results/g2b_v1/teacher_1.pt": "8c9ae9b3cb6833bcd1647e8f51969fddfbe7a8e802d191f6b81acd03a15d29c0",
+    "results/g2b_v1/teacher_2.pt": "5b6bd249115c85fed69f90eff707177df0d1690ef5e1a6267fc9ea43cd52c0a8",
+    "results/g2b_v1/teacher_3.pt": "720014413d2f5737c2970d1a4282a7decce71c02574db933c876416cf4c5154e",
+    "results/g2b_v1/teacher_4.pt": "d6bf57ab9f4e7645e5bedf8584d5c667fce0fed7b88ba260f2ca0bdc5ed94d5e",
+    "results/g2b_v1/gru_0.pt": "0e3360fdc429baf0c3da45b48546c78e11e73e5a659b177e8ccc3fc722ed8229",
+    "results/g2b_v1/gru_1.pt": "816c6decaa401736f7143b87082c45983d22280e1eade2495f6530ab1d103890",
+    "results/g2b_v1/gru_2.pt": "d3a2538e9fde58894376938663e6d032a3383770f7ad86cc298fde0fb3a8803a",
+    "results/g2b_v1/gru_3.pt": "fab1e7bfb5001d2b54bc74f98e8de96c6cce20a301112e5e135bca059ac289c5",
+    "results/g2b_v1/gru_4.pt": "c13ca2db0c6d00f5c9e134e88e7eabd563fa49852bb6276d8d53ec98cc58f87f",
+    "data/raw/grammar_g2b_v1/train_familiar.jsonl": "eb3aa0acd6cce0191c338a33da0bd8059484da9abe6e761422fe4569e7a6bac1"
+  },
+  "gate_script_sha256": "a6de698290473876e201de8ac133a7f22a59f4863a1a716b4e72ecc3006cadb4",
+  "scope": "Teacher qualification gate, not a confirmatory claim of architecture superiority; all six categories required"
+}
