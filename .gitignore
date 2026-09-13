@@ -29,3 +29,6 @@ results/compiler_v1/full_report/*.tmp
 results/**/*.json.tmp
 results/topology_confirmation_v1/*.lock
 data/raw/topology_confirmation_v1/test_confirm.json
+
+results/topology_confirmation_v2/*.lock
+data/raw/topology_confirmation_v2/test_confirm.json

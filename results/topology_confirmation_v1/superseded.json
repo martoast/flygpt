@@ -1,0 +1,11 @@
+{
+  "utc": "2026-09-13T22:29:33.575143+00:00",
+  "reason": "Explicit user correction: five fresh pairs / ten models, before any confirmation training or final test evaluation",
+  "superseded_protocol": "topology_confirmation_v1",
+  "replacement_protocol": "topology_confirmation_v2",
+  "confirmation_training_started": false,
+  "confirmation_test_evaluated": false,
+  "retained_active_child": {
+    "idle": true
+  }
+}

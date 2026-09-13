@@ -1,0 +1,31 @@
+{
+  "study": "G2c substitution topology confirmation v2 \u2014 user budget amendment",
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104
+  ],
+  "rewiring_seeds": [
+    877,
+    878,
+    879,
+    880,
+    881
+  ],
+  "updates": 1024,
+  "test_count": 128,
+  "test_assignment_salt": "flygpt-topology-confirmation-v1-2026-09-13",
+  "primary_split": "test_confirm",
+  "dataset": "data/raw/topology_confirmation_v2",
+  "source_dataset": "data/raw/g2c_v1/substitute_6",
+  "reference_spec": "results/g2c_overnight/substitute_6/full/seed_0/real_ce/spec.json",
+  "primary_analysis": "Two-sided paired Student-t test of seed accuracy differences, alpha 0.05; support requires positive mean and p < 0.05. Report 95% t interval. Exact paired sign-flip test is a sensitivity analysis, not an alternative route to success.",
+  "practical_secondary": "Report whether lower 95% interval exceeds +10 percentage points; this is secondary, not the primary gate.",
+  "stopping": "All 5 pairs at 1024 updates, final checkpoint only; no accuracy-dependent stopping, extensions, seed replacements or hyperparameter search.",
+  "test_gate": "No final test evaluation until all 10 checkpoints complete and frozen input hashes verify. Test IDs exclude every previously allocated dataset split.",
+  "failure_policy": "Nonfinite optimization is reported without replacement; execution faults may resume identical checkpoint/RNG/config, with incident recorded. Missing pairs prevent complete-study claim.",
+  "scope": "Confirmation conditional on the existing training/validation corpus and fixed-length substitution task, not an independent task or corpus replication. Graph and initialization remain paired; mechanism inference requires later crossed design.",
+  "amendment": "Five pairs explicitly requested by user before any confirmation training or test evaluation; v1 retained as superseded. Test assignment salt and all other settings unchanged."
+}
