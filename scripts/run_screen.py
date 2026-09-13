@@ -25,10 +25,6 @@ def controls():
         for condition in ['rewired','configuration','er']:
             out=ROOT/'controls'/f'{condition}_{777+seed}.json'
             if out.exists():continue
-            # The first rewired graph may already be under construction.
-            if condition=='rewired' and seed==0:
-                while not out.exists():time.sleep(5)
-                continue
             run(['-m','src.graph_controls','--graph','data/processed/malecns.npz','--condition',condition,'--seed',str(777+seed)],out.with_suffix('.log'))
 
 

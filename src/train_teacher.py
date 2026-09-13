@@ -1,5 +1,6 @@
 """Small reproducible byte transformer teacher, with compatible checkpoints."""
 import argparse
+import json
 import time
 from pathlib import Path
 import numpy as np
@@ -26,7 +27,7 @@ def main():
     result.update(validation=evaluate(TeacherAdapter(m),va,starts,32),trace=trace,training_tokens=a.steps*a.batch*a.block,
                   parameters=sum(p.numel() for p in m.parameters()),runtime_seconds=time.perf_counter()-start)
     out=Path(a.out);out.parent.mkdir(parents=True,exist_ok=True)
-    torch.save({'model':m.state_dict(),'config':config,'manifest':result},out)
+    torch.save({'model':m.state_dict(),'config':config,'manifest':json.loads(json.dumps(result))},out)
     result['checkpoint_sha256']=sha256(out);save_json(out.with_suffix('.json'),result);print(result['validation'],flush=True)
 
 

@@ -75,3 +75,50 @@ Then prepare the graph:
 python -m src.prepare_malecns \
   --input data/raw/connectome-weights-male-cns-v1.0-minconf-0.5.feather
 ```
+
+## Full MaleCNS local experiments (2026-09-12)
+
+The official v1.0 files have now been downloaded and processed locally. The
+complete annotated-neuron graph contains **166,700 neurons**, **25,582,938
+directed pairs**, and **124,177,617 contacts**. This is a computational model;
+no living tissue is involved. See `results/malecns_v1/graph_provenance.json` for
+hashes, annotation inclusion, excluded segments, and coverage. Raw Feather
+files and large checkpoints are deliberately ignored by Git.
+
+```bash
+uv venv --python python3.12 .venv
+uv pip install --python .venv/bin/python -r requirements-lock.txt
+source .venv/bin/activate
+python download_malecns.py
+python -m src.prepare_malecns --input data/raw/connectome-weights-male-cns-v1.0-minconf-0.5.feather
+python -m src.analysis --graph data/processed/malecns.npz
+python -m scripts.prepare_corpus
+python -m src.train_teacher
+```
+
+Run control construction and the training ladder in separate terminals:
+
+```bash
+python -m scripts.run_screen controls
+python -m scripts.run_screen ladder
+```
+
+Budgets and limitations are in `configs/screen_v1.json` and `PREREGISTRATION.md`.
+The ladder records five seeds for real, directed degree-rewired, directed
+configuration multigraph, ER, and approximately parameter-matched GRU models.
+The current corpus is synthetic grammar, not Shakespeare or TinyStories.
+The tiny screen is not sufficient for claims about language understanding.
+
+Once the real-language seed-zero run completes, its local checkpoint is:
+
+```bash
+python -m src.query_flygpt --graph data/processed/malecns.npz \
+  --checkpoint results/fly_real.pt --prompt "the cat " --max-new 80
+```
+
+Checkpoints verify the exact graph file hash. Input and output neurons are
+disjoint; there is no embedding-to-decoder connection. The CPU CSR autograd
+path uses exact first derivatives and retains neuron states rather than
+per-edge activation tapes. No full dense adjacency is allocated. Run
+`python -m pytest -q` for gradient, causality, topology, preprocessing, and
+checkpoint-integrity tests.

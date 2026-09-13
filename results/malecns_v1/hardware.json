@@ -1,0 +1,7 @@
+{
+  "chip": "Apple M1",
+  "memory_bytes": "8589934592",
+  "logical_cores": "8",
+  "physical_cores": "8",
+  "device_decision": "CPU SciPy custom autograd, based on full-graph propagation benchmark; MPS available but slower."
+}

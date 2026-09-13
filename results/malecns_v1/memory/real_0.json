@@ -1,0 +1,419 @@
+{
+  "created_utc": "2026-09-13T01:07:08Z",
+  "code_commit": "d010313b55da673a23107141aaf070cb6e5e5c73",
+  "worktree_dirty": false,
+  "config": {
+    "graph": "data/processed/malecns.npz",
+    "condition": "real",
+    "seed": 0,
+    "steps": 24,
+    "out": "results/malecns_v1/memory/real_0.json",
+    "model": {
+      "embed_dim": 16,
+      "leak": 0.65,
+      "edge_scale": 0.9,
+      "input_fraction": 0.00615,
+      "output_fraction": 0.00615,
+      "inner_steps": 2,
+      "backend": "scipy",
+      "population_seed": 2026,
+      "degree_normalize": true
+    },
+    "train_delays": [
+      0,
+      1,
+      2
+    ],
+    "eval_delays": [
+      0,
+      2,
+      4,
+      8
+    ],
+    "batch": 1,
+    "evaluation_batch": 8,
+    "lr": 0.003,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "interpretation": "budget-limited multitask feasibility screen; not confirmatory"
+  },
+  "inputs": {
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "parameters": 26199490,
+  "train_tokens": 128,
+  "trace": [
+    {
+      "step": 1,
+      "task": "delayed_bit",
+      "delay": 0,
+      "loss": 0.7036389112472534,
+      "gradient_norm": 0.8744850754737854
+    },
+    {
+      "step": 2,
+      "task": "delayed_symbol",
+      "delay": 2,
+      "loss": 2.103066921234131,
+      "gradient_norm": 1.3970286846160889
+    },
+    {
+      "step": 3,
+      "task": "copy",
+      "delay": 2,
+      "loss": 1.401756763458252,
+      "gradient_norm": 1.7954515218734741
+    },
+    {
+      "step": 4,
+      "task": "associative",
+      "delay": 1,
+      "loss": 1.508492350578308,
+      "gradient_norm": 4.17188024520874
+    },
+    {
+      "step": 5,
+      "task": "grammar",
+      "delay": 2,
+      "loss": 1.1190214157104492,
+      "gradient_norm": 3.316730499267578
+    },
+    {
+      "step": 6,
+      "task": "parity",
+      "delay": 2,
+      "loss": 0.6977653503417969,
+      "gradient_norm": 3.1459784507751465
+    },
+    {
+      "step": 7,
+      "task": "delayed_bit",
+      "delay": 0,
+      "loss": 0.1967424750328064,
+      "gradient_norm": 0.7401410341262817
+    },
+    {
+      "step": 8,
+      "task": "delayed_symbol",
+      "delay": 0,
+      "loss": 2.305577516555786,
+      "gradient_norm": 3.386406660079956
+    },
+    {
+      "step": 9,
+      "task": "copy",
+      "delay": 2,
+      "loss": 1.9447768926620483,
+      "gradient_norm": 7.006595611572266
+    },
+    {
+      "step": 10,
+      "task": "associative",
+      "delay": 0,
+      "loss": 5.198761463165283,
+      "gradient_norm": 20.431222915649414
+    },
+    {
+      "step": 11,
+      "task": "grammar",
+      "delay": 2,
+      "loss": 0.041863854974508286,
+      "gradient_norm": 0.4889967739582062
+    },
+    {
+      "step": 12,
+      "task": "parity",
+      "delay": 1,
+      "loss": 3.649817705154419,
+      "gradient_norm": 9.445344924926758
+    },
+    {
+      "step": 13,
+      "task": "delayed_bit",
+      "delay": 0,
+      "loss": 0.03161897137761116,
+      "gradient_norm": 0.20176184177398682
+    },
+    {
+      "step": 14,
+      "task": "delayed_symbol",
+      "delay": 2,
+      "loss": 1.8718385696411133,
+      "gradient_norm": 8.594242095947266
+    },
+    {
+      "step": 15,
+      "task": "copy",
+      "delay": 1,
+      "loss": 3.58549427986145,
+      "gradient_norm": 7.857314586639404
+    },
+    {
+      "step": 16,
+      "task": "associative",
+      "delay": 0,
+      "loss": 1.0705251693725586,
+      "gradient_norm": 10.878082275390625
+    },
+    {
+      "step": 17,
+      "task": "grammar",
+      "delay": 2,
+      "loss": 0.8679530024528503,
+      "gradient_norm": 7.566712379455566
+    },
+    {
+      "step": 18,
+      "task": "parity",
+      "delay": 0,
+      "loss": 0.9421007633209229,
+      "gradient_norm": 3.5236318111419678
+    },
+    {
+      "step": 19,
+      "task": "delayed_bit",
+      "delay": 1,
+      "loss": 0.43364256620407104,
+      "gradient_norm": 3.701381206512451
+    },
+    {
+      "step": 20,
+      "task": "delayed_symbol",
+      "delay": 2,
+      "loss": 2.2864909172058105,
+      "gradient_norm": 9.95837116241455
+    },
+    {
+      "step": 21,
+      "task": "copy",
+      "delay": 0,
+      "loss": 0.6141009330749512,
+      "gradient_norm": 3.821791410446167
+    },
+    {
+      "step": 22,
+      "task": "associative",
+      "delay": 0,
+      "loss": 4.292893409729004,
+      "gradient_norm": 20.2482852935791
+    },
+    {
+      "step": 23,
+      "task": "grammar",
+      "delay": 1,
+      "loss": 3.814573287963867,
+      "gradient_norm": 11.533151626586914
+    },
+    {
+      "step": 24,
+      "task": "parity",
+      "delay": 1,
+      "loss": 0.04415292665362358,
+      "gradient_norm": 0.533190906047821
+    }
+  ],
+  "scores": [
+    {
+      "task": "delayed_bit",
+      "delay": 0,
+      "n_targets": 8,
+      "chance": 0.5,
+      "accuracy": 0.5,
+      "ce": 2.6593177318573
+    },
+    {
+      "task": "delayed_bit",
+      "delay": 2,
+      "n_targets": 8,
+      "chance": 0.5,
+      "accuracy": 0.375,
+      "ce": 0.975255012512207
+    },
+    {
+      "task": "delayed_bit",
+      "delay": 4,
+      "n_targets": 8,
+      "chance": 0.5,
+      "accuracy": 0.375,
+      "ce": 2.624946355819702
+    },
+    {
+      "task": "delayed_bit",
+      "delay": 8,
+      "n_targets": 8,
+      "chance": 0.5,
+      "accuracy": 0.25,
+      "ce": 1.9685635566711426
+    },
+    {
+      "task": "delayed_symbol",
+      "delay": 0,
+      "n_targets": 8,
+      "chance": 0.125,
+      "accuracy": 0.125,
+      "ce": 2.1645002365112305
+    },
+    {
+      "task": "delayed_symbol",
+      "delay": 2,
+      "n_targets": 8,
+      "chance": 0.125,
+      "accuracy": 0.0,
+      "ce": 4.460052013397217
+    },
+    {
+      "task": "delayed_symbol",
+      "delay": 4,
+      "n_targets": 8,
+      "chance": 0.125,
+      "accuracy": 0.0,
+      "ce": 4.238234043121338
+    },
+    {
+      "task": "delayed_symbol",
+      "delay": 8,
+      "n_targets": 8,
+      "chance": 0.125,
+      "accuracy": 0.0,
+      "ce": 5.501626968383789
+    },
+    {
+      "task": "copy",
+      "delay": 0,
+      "n_targets": 24,
+      "chance": 0.25,
+      "accuracy": 0.125,
+      "ce": 5.478530406951904
+    },
+    {
+      "task": "copy",
+      "delay": 2,
+      "n_targets": 24,
+      "chance": 0.25,
+      "accuracy": 0.25,
+      "ce": 2.8100907802581787
+    },
+    {
+      "task": "copy",
+      "delay": 4,
+      "n_targets": 24,
+      "chance": 0.25,
+      "accuracy": 0.3333333432674408,
+      "ce": 1.9421850442886353
+    },
+    {
+      "task": "copy",
+      "delay": 8,
+      "n_targets": 24,
+      "chance": 0.25,
+      "accuracy": 0.2083333283662796,
+      "ce": 3.774338960647583
+    },
+    {
+      "task": "associative",
+      "delay": 0,
+      "n_targets": 8,
+      "chance": 0.25,
+      "accuracy": 0.5,
+      "ce": 5.068016052246094
+    },
+    {
+      "task": "associative",
+      "delay": 2,
+      "n_targets": 8,
+      "chance": 0.25,
+      "accuracy": 0.0,
+      "ce": 1.9909324645996094
+    },
+    {
+      "task": "associative",
+      "delay": 4,
+      "n_targets": 8,
+      "chance": 0.25,
+      "accuracy": 0.0,
+      "ce": 4.982407569885254
+    },
+    {
+      "task": "associative",
+      "delay": 8,
+      "n_targets": 8,
+      "chance": 0.25,
+      "accuracy": 0.125,
+      "ce": 5.191000938415527
+    },
+    {
+      "task": "grammar",
+      "delay": 0,
+      "n_targets": 8,
+      "chance": 0.3333333333333333,
+      "accuracy": 0.25,
+      "ce": 2.322314739227295
+    },
+    {
+      "task": "grammar",
+      "delay": 2,
+      "n_targets": 8,
+      "chance": 0.3333333333333333,
+      "accuracy": 0.5,
+      "ce": 3.010615348815918
+    },
+    {
+      "task": "grammar",
+      "delay": 4,
+      "n_targets": 8,
+      "chance": 0.3333333333333333,
+      "accuracy": 0.125,
+      "ce": 2.5880627632141113
+    },
+    {
+      "task": "grammar",
+      "delay": 8,
+      "n_targets": 8,
+      "chance": 0.3333333333333333,
+      "accuracy": 0.125,
+      "ce": 1.9551289081573486
+    },
+    {
+      "task": "parity",
+      "delay": 0,
+      "n_targets": 8,
+      "chance": 0.5,
+      "accuracy": 0.875,
+      "ce": 0.3799111247062683
+    },
+    {
+      "task": "parity",
+      "delay": 2,
+      "n_targets": 8,
+      "chance": 0.5,
+      "accuracy": 0.5,
+      "ce": 1.3675845861434937
+    },
+    {
+      "task": "parity",
+      "delay": 4,
+      "n_targets": 8,
+      "chance": 0.5,
+      "accuracy": 0.25,
+      "ce": 2.625844717025757
+    },
+    {
+      "task": "parity",
+      "delay": 8,
+      "n_targets": 8,
+      "chance": 0.5,
+      "accuracy": 0.375,
+      "ce": 3.2517709732055664
+    }
+  ],
+  "runtime_seconds": 254.3380294580129
+}

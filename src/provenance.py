@@ -29,7 +29,7 @@ def manifest(config, inputs=()):
         'config': config,
         'inputs': {str(p): sha256(p) for p in inputs},
         'hardware': {'platform': platform.platform(), 'machine': platform.machine(),
-                     'torch': torch.__version__, 'mps': torch.backends.mps.is_available(),
+                     'torch': str(torch.__version__), 'mps': torch.backends.mps.is_available(),
                      'cuda': torch.cuda.is_available(), 'torch_threads': torch.get_num_threads()},
         'evidence_domain': 'computational; see graph provenance for synthetic versus MaleCNS',
     }

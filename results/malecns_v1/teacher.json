@@ -1,0 +1,89 @@
+{
+  "created_utc": "2026-09-13T01:07:21Z",
+  "code_commit": "d010313b55da673a23107141aaf070cb6e5e5c73",
+  "worktree_dirty": false,
+  "config": {
+    "text": "data/raw/grammar_v1/train.txt",
+    "validation": "data/raw/grammar_v1/validation.txt",
+    "steps": 1000,
+    "block": 64,
+    "batch": 8,
+    "seed": 0,
+    "out": "results/malecns_v1/teacher.pt",
+    "model": {
+      "vocab_size": 256,
+      "d_model": 128,
+      "n_head": 4,
+      "n_layer": 3,
+      "max_len": 64,
+      "dropout": 0.0
+    },
+    "lr": 0.0003
+  },
+  "inputs": {
+    "data/raw/grammar_v1/train.txt": "fc35085b41f99511ff41712e972be1c3f57c63087b9c2ed14565c89a7c54421e",
+    "data/raw/grammar_v1/validation.txt": "14ace6889686a2f6f5b28ee74667a26dc657014edc37e9ee2f88816ad5ed35c0"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "validation": {
+    "ce": 0.32494498416781425,
+    "bits_per_byte": 0.46879651722064836,
+    "byte_accuracy": 0.82421875,
+    "n_bytes": 256
+  },
+  "trace": [
+    {
+      "step": 100,
+      "ce": 1.4515106678009033
+    },
+    {
+      "step": 200,
+      "ce": 1.177858591079712
+    },
+    {
+      "step": 300,
+      "ce": 0.922552227973938
+    },
+    {
+      "step": 400,
+      "ce": 0.6205528378486633
+    },
+    {
+      "step": 500,
+      "ce": 0.4668303430080414
+    },
+    {
+      "step": 600,
+      "ce": 0.350082665681839
+    },
+    {
+      "step": 700,
+      "ce": 0.3282839059829712
+    },
+    {
+      "step": 800,
+      "ce": 0.31827110052108765
+    },
+    {
+      "step": 900,
+      "ce": 0.31765785813331604
+    },
+    {
+      "step": 1000,
+      "ce": 0.29385337233543396
+    }
+  ],
+  "training_tokens": 512000,
+  "parameters": 636032,
+  "runtime_seconds": 24.78342666599201,
+  "checkpoint_sha256": "52ea8b709d3072a362d2a61727ac531a5e202f2a594344c724bde1818200f6de",
+  "checkpoint_format_note": "Normalized metadata to JSON primitive types for weights-only loading; parameters unchanged."
+}
