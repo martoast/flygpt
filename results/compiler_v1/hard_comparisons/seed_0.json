@@ -1,0 +1,40 @@
+{
+  "seed": 0,
+  "metrics": {
+    "accuracy": 0.8359375,
+    "response_ce": 0.05918001096038746,
+    "token_accuracy": 0.9765625,
+    "cases": 128,
+    "response_symbols": 896,
+    "teacher_ce": 1.6756825379572935e-06,
+    "teacher_kl": 0.05917605857108096,
+    "zero_edge_ce": 1.925116563481944,
+    "exact_teacher_agreement": 0.8359375,
+    "teacher_exact": 1.0,
+    "zero_edge_exact": 0.0
+  },
+  "CE_metrics": {
+    "accuracy": 0.8359375,
+    "response_ce": 0.05918001096038746,
+    "token_accuracy": 0.9765625,
+    "cases": 128,
+    "response_symbols": 896,
+    "teacher_ce": 1.6756825379572935e-06,
+    "teacher_kl": 0.05917605857108096,
+    "zero_edge_ce": 1.925116563481944,
+    "exact_teacher_agreement": 0.8359375,
+    "teacher_exact": 1.0,
+    "zero_edge_exact": 0.0
+  },
+  "A_transfer": 0.0,
+  "state_equivalence": {
+    "model": true,
+    "optimizer": true,
+    "rng": true,
+    "all_equal": true,
+    "inputs": {
+      "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v1/methods/seed_0/C1_hard/step_01024.pt": "a31dcf762d4e11072c4effab39bb9b062651d67e0a37453f31911a173adf7e82",
+      "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/full/seed_0/real_ce/step_01024.pt": "84b16209a72d75bf75d6bddef32a6d383f862683482f99af92f1de1404896635"
+    }
+  }
+}

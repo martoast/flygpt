@@ -1,6 +1,6 @@
 # Compiler benchmark report
 
-Updated 2026-09-13T21:41:34.942164+00:00. Computational full MaleCNS experiments; no living tissue.
+Updated 2026-09-13T22:29:32.776108+00:00. Computational full MaleCNS experiments; no living tissue.
 
 The substitution dataset, teacher, 128-instance primary test (`test_extension`), recurrent architecture and optimization budgets are fixed. This test was already inspected: the tournament is exploratory, not fresh confirmatory evaluation. Exact complete-answer accuracy is primary.
 
@@ -30,7 +30,9 @@ Seed-zero topology difference is +12.50 pp under CE versus +40.62 pp under KD; t
 
 | Method / seed | Exact | CE reference exact | Difference (pp) | Response CE | Teacher KL | Zero-edge exact |
 |---|---:|---:|---:|---:|---:|---:|
+| C1 hard / 0 | 83.6% | 83.6% | +0.00 | 0.0592 | 0.0592 | 0.0% |
 
+Hard seed 0 model/optimizer/RNG exact equivalence: True.
 
 
 Batch-one objective selection: pending; full-validation exact accuracy, then CE, then name determines selection before candidate test evaluation.
@@ -41,6 +43,7 @@ Next decisions follow [DECISION_TREE.md](DECISION_TREE.md): complete every CE pa
 
 ## Execution and provenance
 
+- `results/compiler_v1/methods/seed_0/C1_hard`: 1024 updates; 7168 response symbols; 40.6 min; validation exact 81.2%.
 - `results/compiler_v1/paired_ce/seed_0/rewired_ce`: 1024 updates; 7168 response symbols; 41.7 min; validation exact 78.1%.
 - `results/compiler_v1/paired_ce/seed_1/real_ce`: 1024 updates; 7168 response symbols; 40.7 min; validation exact 81.2%.
 - `results/compiler_v1/paired_ce/seed_1/rewired_ce`: 1024 updates; 7168 response symbols; 41.7 min; validation exact 28.1%.
