@@ -1,6 +1,7 @@
 """Full, automatically finalized paired-CE report from completed matched tests."""
 import argparse
 import datetime as dt
+import fcntl
 import json
 import os
 from pathlib import Path
@@ -99,7 +100,9 @@ def figures(pairs,curves):
     axes[1].axhline(0,color='gray',lw=.8);axes[1].set(title='Paired topology gap: real minus rewired',ylabel='Percentage points',ylim=(-100,100))
     for ax in axes:ax.set(xticks=range(5),xlabel='Paired seed',xlim=(-.5,4.5));ax.grid(axis='y',alpha=.2)
     fig.suptitle(f'CE-only substitution, 1,024 updates — {len(pairs)}/5 pairs complete')
-    for ext in ('png','pdf'):fig.savefig(OUT/f'final_accuracy.{ext}',dpi=160)
+    for ext in ('png','pdf'):
+        target=OUT/f'final_accuracy.{ext}';temp=target.with_suffix(target.suffix+'.tmp')
+        fig.savefig(temp,format=ext,dpi=160);temp.replace(target)
     plt.close(fig)
     fig,axes=plt.subplots(5,2,figsize=(10,12),layout='constrained')
     for seed in range(5):
@@ -113,10 +116,12 @@ def figures(pairs,curves):
     axes[0,0].legend(fontsize=8)
     for ax in axes[-1]:ax.set_xlabel('Optimizer updates')
     fig.suptitle('Validation learning curves: 32 fixed cases, distinct from the 128-case final test')
-    for ext in ('png','pdf'):fig.savefig(OUT/f'learning_curves.{ext}',dpi=130)
+    for ext in ('png','pdf'):
+        target=OUT/f'learning_curves.{ext}';temp=target.with_suffix(target.suffix+'.tmp')
+        fig.savefig(temp,format=ext,dpi=130);temp.replace(target)
     plt.close(fig)
 
-def render():
+def render_unlocked():
     pairs,curves,progress,inputs=collect();complete=len(pairs)==5
     graph=graph_correlations(pairs);verification=audit(pairs)
     final=complete and graph['status']=='computed' and verification['status']=='passed'
@@ -190,6 +195,12 @@ def render():
     temp=REPORT.with_suffix('.md.tmp');temp.write_text('\n'.join(lines));temp.replace(REPORT)
     return final
 
+def render():
+    OUT.mkdir(parents=True,exist_ok=True)
+    with (OUT/'render.lock').open('a') as handle:
+        fcntl.flock(handle,fcntl.LOCK_EX)
+        return render_unlocked()
+
 def signature():
     paths=list(ROOT.glob('paired_ce/seed_*/*.json'))+list(ROOT.glob('paired_ce/seed_*/*/progress.json'))+list((OUT/'graph_properties').glob('*.json'))
     return [(str(p),p.stat().st_mtime_ns) for p in sorted(paths)]
@@ -209,6 +220,12 @@ def publish():
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--watch',action='store_true');args=p.parse_args()
+    OUT.mkdir(parents=True,exist_ok=True)
+    watch_lock=None
+    if args.watch:
+        watch_lock=(OUT/'watcher.lock').open('a')
+        try:fcntl.flock(watch_lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+        except BlockingIOError:return
     last=None
     while True:
         sig=signature()

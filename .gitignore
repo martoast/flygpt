@@ -24,3 +24,6 @@ results/compiler_v1/controller.lock
 results/**/*.pt.link
 
 results/compiler_v1/notification_watcher.lock
+results/compiler_v1/full_report/*.lock
+results/compiler_v1/full_report/*.tmp
+results/**/*.json.tmp

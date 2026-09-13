@@ -1,6 +1,6 @@
 # Paired CE topology replication — full report
 
-Updated 2026-09-13T17:51:11.611269+00:00.
+Updated 2026-09-13T17:52:39.691882+00:00.
 
 **Status: INTERIM — 2/5 matched final comparisons complete.** The separate compiler-method tournament is not declared complete by this report.
 
