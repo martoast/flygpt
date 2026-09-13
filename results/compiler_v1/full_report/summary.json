@@ -1,0 +1,252 @@
+{
+  "status": "interim",
+  "completed_pairs": 2,
+  "pairs": [
+    {
+      "metrics": {
+        "real_ce": {
+          "accuracy": 0.8359375,
+          "response_ce": 0.05918001096038746,
+          "token_accuracy": 0.9765625,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.05917605857108096,
+          "zero_edge_ce": 1.925116563481944,
+          "exact_teacher_agreement": 0.8359375,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        },
+        "rewired_ce": {
+          "accuracy": 0.7109375,
+          "response_ce": 0.1445275838299754,
+          "token_accuracy": 0.9486607142857143,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.14452060873112973,
+          "zero_edge_ce": 1.7694833257368632,
+          "exact_teacher_agreement": 0.7109375,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        }
+      },
+      "cases": 128,
+      "seed": 0,
+      "updates": 1024,
+      "A_topology_CE": 0.125,
+      "case_analysis": {
+        "cases": 128,
+        "real_correct": 107,
+        "rewired_correct": 91,
+        "both_correct": 80,
+        "real_only": 27,
+        "rewired_only": 11,
+        "both_wrong": 10,
+        "gap": 0.125,
+        "paired_case_bootstrap_95": [
+          0.03125,
+          0.21875
+        ]
+      },
+      "learning": {
+        "steps": [
+          64,
+          128,
+          256,
+          512,
+          768,
+          1024
+        ],
+        "domain": "32 fixed validation cases; normalized trapezoidal area only over shared observed updates",
+        "accuracy": {
+          "real": [
+            0.0,
+            0.03125,
+            0.09375,
+            0.4375,
+            0.5625,
+            0.8125
+          ],
+          "rewired": [
+            0.0,
+            0.0,
+            0.09375,
+            0.34375,
+            0.375,
+            0.78125
+          ],
+          "real_normalized_area": 0.396875,
+          "rewired_normalized_area": 0.3145833333333333,
+          "area_gap_real_minus_rewired": 0.08229166666666665
+        },
+        "response_ce": {
+          "real": [
+            1.2405366386686052,
+            1.2103846690484457,
+            0.7790657989680767,
+            0.40034044267875807,
+            0.17182396235875785,
+            0.08789421755396429
+          ],
+          "rewired": [
+            1.3741430299622672,
+            1.2344563560826438,
+            0.7625637661133494,
+            0.43467135900365456,
+            0.2884836328615035,
+            0.11944853874488867
+          ],
+          "real_normalized_area": 0.48249925167127955,
+          "rewired_normalized_area": 0.5305309594930371,
+          "area_gap_real_minus_rewired": -0.04803170782175753
+        }
+      }
+    },
+    {
+      "metrics": {
+        "real_ce": {
+          "accuracy": 0.859375,
+          "response_ce": 0.06566837667846162,
+          "token_accuracy": 0.9799107142857143,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.06566105161177152,
+          "zero_edge_ce": 1.8787346354552679,
+          "exact_teacher_agreement": 0.859375,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        },
+        "rewired_ce": {
+          "accuracy": 0.4453125,
+          "response_ce": 0.3207438288539249,
+          "token_accuracy": 0.8872767857142857,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.3207320114265063,
+          "zero_edge_ce": 1.7466441839933395,
+          "exact_teacher_agreement": 0.4453125,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        }
+      },
+      "cases": 128,
+      "seed": 1,
+      "updates": 1024,
+      "A_topology_CE": 0.4140625,
+      "case_analysis": {
+        "cases": 128,
+        "real_correct": 110,
+        "rewired_correct": 57,
+        "both_correct": 50,
+        "real_only": 60,
+        "rewired_only": 7,
+        "both_wrong": 11,
+        "gap": 0.4140625,
+        "paired_case_bootstrap_95": [
+          0.3125,
+          0.515625
+        ]
+      },
+      "learning": {
+        "steps": [
+          64,
+          128,
+          256,
+          512,
+          768,
+          1024
+        ],
+        "domain": "32 fixed validation cases; normalized trapezoidal area only over shared observed updates",
+        "accuracy": {
+          "real": [
+            0.0,
+            0.0,
+            0.15625,
+            0.3125,
+            0.625,
+            0.8125
+          ],
+          "rewired": [
+            0.0,
+            0.0,
+            0.0,
+            0.0625,
+            0.4375,
+            0.28125
+          ],
+          "real_normalized_area": 0.38958333333333334,
+          "rewired_normalized_area": 0.17083333333333334,
+          "area_gap_real_minus_rewired": 0.21875
+        },
+        "response_ce": {
+          "real": [
+            1.3318832580532347,
+            0.8090940256203923,
+            0.6378255640821797,
+            0.48317172484738485,
+            0.1807418922960226,
+            0.09403822964564565
+          ],
+          "rewired": [
+            1.0924041899187225,
+            0.906614081135818,
+            0.9799066962940353,
+            0.6438859887421131,
+            0.3214209965829338,
+            0.47120507450641264
+          ],
+          "real_normalized_area": 0.44245268583791103,
+          "rewired_normalized_area": 0.6432987597238804,
+          "area_gap_real_minus_rewired": -0.20084607388596937
+        }
+      }
+    }
+  ],
+  "groups": {
+    "all_seeds": {
+      "n": 2,
+      "real_mean": 0.84765625,
+      "rewired_mean": 0.578125,
+      "gap_mean": 0.26953125,
+      "gap_min": 0.125,
+      "gap_max": 0.4140625,
+      "positive_gaps": 2,
+      "real_variance": 0.000274658203125,
+      "rewired_variance": 0.0352783203125,
+      "real_sd": 0.016572815184059706,
+      "rewired_sd": 0.18782523875267668,
+      "gap_sd": 0.2043980539367364,
+      "gap_mean_t95": [
+        -1.5669124032752488,
+        2.105974903275249
+      ],
+      "variance_ratio_rewired_over_real": 128.44444444444446
+    },
+    "fresh_seeds": {
+      "n": 1,
+      "real_mean": 0.859375,
+      "rewired_mean": 0.4453125,
+      "gap_mean": 0.4140625,
+      "gap_min": 0.4140625,
+      "gap_max": 0.4140625,
+      "positive_gaps": 1
+    }
+  },
+  "graph_analysis": {
+    "status": "pending all five final outcomes"
+  },
+  "artifact_audit_status": "pending completion of all five pairs",
+  "inputs": {
+    "results/compiler_v1/paired_ce/seed_0/real_ce_test.json": "6fa76fde73448620c08044a7f665755f6aee872e638ead54cee3443b262b8c5d",
+    "results/compiler_v1/paired_ce/seed_0/rewired_ce_test.json": "3d97826ad0e9b205ac735c3602446bbc0805e92a1dd3cf2e36a5ea068f0096e6",
+    "results/compiler_v1/paired_ce/seed_0/comparison.json": "fd48db0051ea33191eece8c06cf09b45b5d040fcf2ca0ec5b0adfc1d650bd82a",
+    "results/compiler_v1/paired_ce/seed_1/real_ce_test.json": "841ddab795345b5480de1b744eae06cf1dec9a9bf167c7e13c77326ca9c65454",
+    "results/compiler_v1/paired_ce/seed_1/rewired_ce_test.json": "73f61e78b48f5821cff1f06b49921e55d71e863f047c454768d4c2eea56ca5f2",
+    "results/compiler_v1/paired_ce/seed_1/comparison.json": "205cfc7e51ba4d3deb4d79b6d95bad169291f937218bb670d19eddc61f0b5397"
+  },
+  "analysis_spec_sha256": "39a89b78ca9d5ce5000fc2f8928996fac9eaabaecf5b092ccb07d191f57d34f1",
+  "report_source_sha256": "af216568161c9794d45ac66bbe4a978e5e7f5951a29d6ec7c6eb27a406164570"
+}

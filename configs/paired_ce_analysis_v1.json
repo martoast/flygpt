@@ -1,0 +1,15 @@
+{
+  "scope": "Full report for the existing five paired CE runs; no training or evaluation protocol changes",
+  "timing": "Exploratory analysis specification recorded after seeds 0 and 1 final results were available",
+  "primary_unit": "Paired seed, not 640 independent example-seed observations",
+  "groups": ["all five seeds including historical seed zero", "fresh seeds one through four"],
+  "summary": ["per-seed paired accuracy gaps", "paired mean gap", "sample SD of gaps", "95% Student-t interval for mean paired gap", "sample variance and SD of each condition", "rewired/MaleCNS sample variance ratio"],
+  "uncertainty": "Seed-t intervals assume approximately independent normally distributed seed differences; small-n, adaptive benchmark caveats mandatory. No variance significance test. Per-seed paired-example bootstrap intervals are descriptive and do not replace seed replication.",
+  "example_bootstrap": {"resamples":10000,"seed":94100,"interval":"percentile 2.5 to 97.5"},
+  "curves": "Shared 32-case validation set, exact accuracy and response CE at 64,128,256,512,768,1024; trapezoidal normalized area over updates 64-1024",
+  "graph_features": ["giant SCC fraction", "reciprocal directed-edge fraction excluding loops", "binary adjacency Perron estimate", "mean minimum input-population-to-output distance among reachable outputs", "fraction of output population reachable from any input neuron"],
+  "graph_estimation": {"power_iterations":80,"population_seed":2026,"population_fraction":0.00615},
+  "graph_correlation": "Only after all five rewired outcomes finish: descriptive Pearson and Spearman correlations, no causal attribution, fitted predictive model or p-value-based selection. Constant features undefined. Rewiring seed, weight initialization seed and sampling seed co-vary, so graph versus optimization effects are not identified.",
+  "report_status": "Interim until all five matched final evaluations and artifact audits complete; compiler-method tournament reported separately as pending/in progress",
+  "output": "PAIRED_CE_REPORT.md"
+}

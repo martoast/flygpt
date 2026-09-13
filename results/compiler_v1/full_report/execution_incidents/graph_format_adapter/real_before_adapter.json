@@ -1,0 +1,61 @@
+{
+  "created_utc": "2026-09-13T17:46:48Z",
+  "code_commit": "caf53a7d93958f58cdd7951d84a372819c8ffa23",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": true,
+  "config": {
+    "label": "real",
+    "binary": true,
+    "power_iterations": 80,
+    "population_seed": 2026,
+    "scope": "Structural estimates, not trained recurrent Jacobian stability"
+  },
+  "inputs": {
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+    "configs/paired_ce_analysis_v1.json": "39a89b78ca9d5ce5000fc2f8928996fac9eaabaecf5b092ccb07d191f57d34f1",
+    "/Users/alex/Desktop/flygpt_v01/scripts/paired_graph_diagnostics.py": "b62b44eff25aa48da3b6f93fe75b2a2900fb9f57faff92e9a256a7e83659eb0b"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 1
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "n_nodes": 166700,
+  "n_edges": 25582938,
+  "strongly_connected_components": 1385,
+  "giant_scc_fraction": 0.9916856628674265,
+  "reciprocal_fraction": 0.2989316626611818,
+  "binary_perron_estimate": 399.0749888184964,
+  "perron_relative_residual": 9.637883439697784e-10,
+  "input_output_mean_min_hops": 1.5661116552399608,
+  "output_reachable_fraction": 0.9960975609756098,
+  "input_output_min_hop_counts": {
+    "1": 461,
+    "2": 542,
+    "3": 18
+  },
+  "runtime_seconds": 4.396630125003867
+}
