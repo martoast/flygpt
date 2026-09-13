@@ -1,16 +1,28 @@
-"""Download the official Janelia MaleCNS v1.0 full connection graph.
-Public CC-BY data. Requires: pip install gcsfs tqdm
-"""
+"""Resumable official MaleCNS v1.0 download; raw data are never committed."""
+import subprocess
 from pathlib import Path
-import shutil
-import gcsfs
+from src.provenance import sha256, save_json
 
-BUCKET='flyem-male-cns'
-REMOTE='v1.0/connectome-data/flat-connectome/connectome-weights-male-cns-v1.0-minconf-0.5.feather'
-OUT=Path('data/raw/connectome-weights-male-cns-v1.0-minconf-0.5.feather')
-OUT.parent.mkdir(parents=True, exist_ok=True)
-fs=gcsfs.GCSFileSystem(token='anon')
-print(f'Downloading gs://{BUCKET}/{REMOTE} -> {OUT}')
-with fs.open(f'{BUCKET}/{REMOTE}','rb') as src, OUT.open('wb') as dst:
-    shutil.copyfileobj(src,dst,length=16*1024*1024)
-print('done', OUT, OUT.stat().st_size)
+BASE = 'https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/'
+FILES = ['connectome-weights-male-cns-v1.0-minconf-0.5.feather',
+         'body-annotations-male-cns-v1.0-minconf-0.5.feather']
+
+
+def main():
+    records = []
+    for name in FILES:
+        path = Path('data/raw') / name
+        path.parent.mkdir(parents=True, exist_ok=True)
+        if not path.exists():
+            part = path.with_suffix(path.suffix + '.part')
+            subprocess.run(['curl', '-fL', '--retry', '5', '-C', '-', '-o', str(part), BASE + name], check=True)
+            part.replace(path)
+        records.append({'file': str(path), 'url': BASE + name, 'bytes': path.stat().st_size,
+                        'sha256': sha256(path)})
+    save_json('results/malecns_v1/download.json', {
+        'dataset': 'MaleCNS v1.0 minconf 0.5', 'license': 'CC-BY',
+        'source': 'https://male-cns.janelia.org/download/', 'files': records})
+
+
+if __name__ == '__main__':
+    main()

@@ -21,7 +21,7 @@ torch.manual_seed(seed); np.random.seed(seed)
 n=32; e=320
 src,dst=er_graph(n,e,seed)
 A=sparse.coo_matrix((np.ones(e,dtype=np.float32),(src,dst)),shape=(n,n)).tocsr()
-sparse.save_npz('/mnt/data/flygpt_v01/data/processed/query_path_demo.npz',A)
+sparse.save_npz('data/processed/query_path_demo.npz',A)
 X=torch.tensor([[stoi[c] for c in s[:-1]] for s in SEQS],dtype=torch.long)
 Y=torch.tensor([[stoi[c] for c in s[1:]] for s in SEQS],dtype=torch.long)
 m=CharBrain(n,src,dst); opt=torch.optim.AdamW(m.parameters(),lr=.02,weight_decay=0)
@@ -48,6 +48,6 @@ for p in ['Q:a?\nA:','Q:b?\nA:']:
 with torch.no_grad(): m.core.edge_w.copy_(saved)
 
 out={'seed':seed,'nodes':n,'edges':e,'vocab':chars,'steps':step+1,'final_loss':float(loss),'normal':normal,'edge_ablated':ablated,'loss_trace':losses}
-Path('/mnt/data/flygpt_v01/results/query_path_validation.json').write_text(json.dumps(out,indent=2))
-torch.save({'model':m.state_dict(),'stoi':stoi,'itos':itos,'graph':'data/processed/query_path_demo.npz','config':{'nodes':n,'edges':e}},'/mnt/data/flygpt_v01/results/query_path_demo.pt')
+Path('results/query_path_validation.json').write_text(json.dumps(out,indent=2))
+torch.save({'model':m.state_dict(),'stoi':stoi,'itos':itos,'graph':'data/processed/query_path_demo.npz','config':{'nodes':n,'edges':e}},'results/query_path_demo.pt')
 print(json.dumps(out,indent=2))

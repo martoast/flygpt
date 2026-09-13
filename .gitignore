@@ -7,3 +7,11 @@ venv/
 !.env.example
 .DS_Store
 .pytest_cache/
+data/raw/*.feather
+data/raw/*.part
+data/processed/malecns*
+data/processed/controls/
+results/**/*.pt
+results/**/*.npz
+results/**/*.npy
+results/**/*.log

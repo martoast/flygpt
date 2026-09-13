@@ -1,0 +1,32 @@
+{
+  "created_utc": "2026-09-13T01:01:49Z",
+  "code_commit": "5615cae9ef5873e02a6d6df7a838144e80252c4f",
+  "worktree_dirty": true,
+  "config": {
+    "backend": "scipy",
+    "device": "cpu",
+    "batch": 1,
+    "threads": 4
+  },
+  "inputs": {
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "MaleCNS full annotated-neuron graph",
+  "warmup_seconds": 0.6676406250335276,
+  "seconds_forward_backward_tick": [
+    0.13874729198869318,
+    0.10580745799234137,
+    0.10154275002423674
+  ],
+  "peak_rss_bytes": 1564688384,
+  "n_nodes": 166700,
+  "n_edges": 25582938
+}

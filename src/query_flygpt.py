@@ -17,6 +17,10 @@ def sample_next(logits, temperature=0.8, top_k=40):
 def load_model(graph_path, ckpt_path, device):
     n, src, dst, _ = load_npz(graph_path)
     ckpt = torch.load(ckpt_path, map_location=device)
+    if ckpt.get('graph_sha256'):
+        from .provenance import sha256
+        if sha256(graph_path) != ckpt['graph_sha256']:
+            raise ValueError('Checkpoint graph hash does not match supplied graph')
     cfg = ckpt.get('config', {})
     model = GraphLanguageModel(
         n, src, dst,
@@ -27,27 +31,27 @@ def load_model(graph_path, ckpt_path, device):
         input_fraction=cfg.get('input_fraction', 0.25),
         output_fraction=cfg.get('output_fraction', 0.25),
         inner_steps=cfg.get('inner_steps', 3),
+        backend=cfg.get('backend', 'scatter'),
+        population_seed=cfg.get('population_seed'),
+        degree_normalize=cfg.get('degree_normalize', False),
     ).to(device)
+    for key in ('src', 'dst'):
+        if not torch.equal(getattr(model.core,key).cpu(), ckpt['model']['core.'+key].cpu()):
+            raise ValueError('Checkpoint topology differs from supplied graph')
     model.load_state_dict(ckpt['model'])
     model.eval()
     return model
 
 
 def generate(model, prompt: bytes, max_new=200, temperature=.8, top_k=40, device='cpu'):
-    h = None
-    if len(prompt):
-        x = torch.tensor([list(prompt)], dtype=torch.long, device=device)
-        with torch.no_grad():
-            _, h = model(x, h)
     out = bytearray(prompt)
-    current = prompt[-1] if prompt else ord('\n')
-    for _ in range(max_new):
-        x = torch.tensor([[current]], dtype=torch.long, device=device)
-        with torch.no_grad():
-            logits, h = model(x, h)
-        nxt = sample_next(logits[0, -1], temperature, top_k)
-        out.append(nxt)
-        current = nxt
+    initial = prompt if prompt else b'\n'
+    with torch.no_grad():
+        logits, h = model(torch.tensor([list(initial)], dtype=torch.long, device=device))
+        for _ in range(max_new):
+            nxt = sample_next(logits[0, -1], temperature, top_k)
+            out.append(nxt)
+            logits, h = model(torch.tensor([[nxt]], dtype=torch.long, device=device), h)
     return bytes(out)
 
 

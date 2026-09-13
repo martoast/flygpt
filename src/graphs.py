@@ -38,6 +38,10 @@ def degree_preserving_rewire(src,dst,n_swaps=None,seed=0):
     return src,dst
 
 def load_npz(path, binary=True):
+    with np.load(path) as data:
+        if 'src' in data:
+            src=data['src'].astype(np.int64);dst=data['dst'].astype(np.int64)
+            return int(data['n']),src,dst,np.ones(len(src),dtype=np.float32)
     mat=sparse.load_npz(path).tocoo()
     src=mat.row.astype(np.int64); dst=mat.col.astype(np.int64)
     val=np.ones_like(mat.data,dtype=np.float32) if binary else mat.data.astype(np.float32)
