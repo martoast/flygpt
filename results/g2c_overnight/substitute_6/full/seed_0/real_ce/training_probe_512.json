@@ -1,0 +1,1337 @@
+{
+  "created_utc": "2026-09-13T10:38:37Z",
+  "code_commit": "dab2019328547fa6c2013c305bbc2ad947d14d8b",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": true,
+  "config": {
+    "spec": "results/g2c_overnight/substitute_6/full/seed_0/real_ce/spec.json",
+    "split": "training_probe",
+    "teacher_forcing": "CE only; exact responses generated from prompt"
+  },
+  "inputs": {
+    "results/g2c_overnight/substitute_6/full/seed_0/real_ce/spec.json": "b8683eda9593e587e5eb4b365e2d2deb911608d821778ed17981eefda8b97fad",
+    "results/g2c_overnight/substitute_6/full/seed_0/real_ce/model.pt": "dabda2abf7638ce1c03d99cfb6c2894ad77253763281622d05cee23c9f0305df",
+    "data/raw/g2c_v1/substitute_6/manifest.json": "c162d46763ea56e17c750f0efdf2a186d5741f62013485fa40f0959c8fa160d4"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "metrics": {
+    "accuracy": 0.390625,
+    "response_ce": 0.35042986766036066,
+    "token_accuracy": 0.8683035714285714,
+    "cases": 64,
+    "response_symbols": 448,
+    "teacher_ce": 1.9597371280686915e-06,
+    "teacher_kl": 0.35041509011560784,
+    "exact_teacher_agreement": 0.390625,
+    "teacher_exact": 1.0
+  },
+  "rows": [
+    {
+      "id": 882,
+      "symbols": 7,
+      "nll": 4.003341197967529,
+      "exact": 0,
+      "generated": [
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 2.741812295425916e-06,
+      "kl_sum": 4.00331449508667,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 37,
+      "symbols": 7,
+      "nll": 0.44411954283714294,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        1,
+        3,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 2.4318505893461406e-05,
+      "kl_sum": 0.44405102729797363,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1040,
+      "symbols": 7,
+      "nll": 1.8341178894042969,
+      "exact": 0,
+      "generated": [
+        2,
+        1,
+        1,
+        2,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 0.0,
+      "kl_sum": 1.8341172933578491,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1811,
+      "symbols": 7,
+      "nll": 2.1048803329467773,
+      "exact": 0,
+      "generated": [
+        2,
+        0,
+        1,
+        1,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 2.264975591970142e-06,
+      "kl_sum": 2.1048686504364014,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3052,
+      "symbols": 7,
+      "nll": 3.6211178302764893,
+      "exact": 0,
+      "generated": [
+        3,
+        0,
+        0,
+        3,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 5.006779247196391e-06,
+      "kl_sum": 3.6210813522338867,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3285,
+      "symbols": 7,
+      "nll": 1.2421982288360596,
+      "exact": 0,
+      "generated": [
+        1,
+        1,
+        0,
+        2,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 1.9073476096309605e-06,
+      "kl_sum": 1.2421948909759521,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1942,
+      "symbols": 7,
+      "nll": 2.0985069274902344,
+      "exact": 0,
+      "generated": [
+        2,
+        0,
+        3,
+        2,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 7.629387255292386e-06,
+      "kl_sum": 2.098435163497925,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 958,
+      "symbols": 7,
+      "nll": 2.2671589851379395,
+      "exact": 0,
+      "generated": [
+        1,
+        0,
+        3,
+        0,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 3.3378573789377697e-06,
+      "kl_sum": 2.2671146392822266,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3772,
+      "symbols": 7,
+      "nll": 1.2690538167953491,
+      "exact": 1,
+      "generated": [
+        0,
+        3,
+        3,
+        0,
+        0,
+        1,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 1.3947451407148037e-05,
+      "kl_sum": 1.2689106464385986,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2075,
+      "symbols": 7,
+      "nll": 0.7133836150169373,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        1,
+        2,
+        3,
+        0,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 1.4185845429892652e-05,
+      "kl_sum": 0.7132955193519592,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 768,
+      "symbols": 7,
+      "nll": 1.0960850715637207,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 4.768370445162873e-07,
+      "kl_sum": 1.096081018447876,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3855,
+      "symbols": 7,
+      "nll": 0.4331204891204834,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 8.344647994817933e-07,
+      "kl_sum": 0.43311625719070435,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 747,
+      "symbols": 7,
+      "nll": 3.4141299724578857,
+      "exact": 0,
+      "generated": [
+        1,
+        0,
+        3,
+        3,
+        3,
+        0,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 4.517977504292503e-05,
+      "kl_sum": 3.4135799407958984,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3957,
+      "symbols": 7,
+      "nll": 0.9278835654258728,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        2,
+        0,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 2.7418125227995915e-06,
+      "kl_sum": 0.9278522729873657,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1001,
+      "symbols": 7,
+      "nll": 0.9871614575386047,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        0,
+        3,
+        3,
+        2,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 5.9126363339601085e-05,
+      "kl_sum": 0.9866489768028259,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 160,
+      "symbols": 7,
+      "nll": 0.09312647581100464,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        3,
+        3,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 5.841243364557158e-06,
+      "kl_sum": 0.09307757019996643,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1104,
+      "symbols": 7,
+      "nll": 1.796647310256958,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 4.7683710135970614e-07,
+      "kl_sum": 1.7966431379318237,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3096,
+      "symbols": 7,
+      "nll": 1.6450953483581543,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        1,
+        2,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 2.9444270694511943e-05,
+      "kl_sum": 1.6448217630386353,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2073,
+      "symbols": 7,
+      "nll": 0.6720110177993774,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        1,
+        2,
+        3,
+        2,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 1.2516929928096943e-05,
+      "kl_sum": 0.6719345450401306,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1919,
+      "symbols": 7,
+      "nll": 1.4154012203216553,
+      "exact": 0,
+      "generated": [
+        2,
+        2,
+        2,
+        0,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 1.0728833785833558e-06,
+      "kl_sum": 1.4153823852539062,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1712,
+      "symbols": 7,
+      "nll": 2.568500518798828,
+      "exact": 0,
+      "generated": [
+        2,
+        3,
+        3,
+        1,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 9.274262993130833e-05,
+      "kl_sum": 2.5681376457214355,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1449,
+      "symbols": 7,
+      "nll": 0.3476068377494812,
+      "exact": 1,
+      "generated": [
+        2,
+        2,
+        3,
+        3,
+        3,
+        2,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 3.4570675779832527e-06,
+      "kl_sum": 0.34758448600769043,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 4095,
+      "symbols": 7,
+      "nll": 0.11360558867454529,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 0.0,
+      "kl_sum": 0.11360526829957962,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 970,
+      "symbols": 7,
+      "nll": 2.6656641960144043,
+      "exact": 0,
+      "generated": [
+        1,
+        0,
+        0,
+        1,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 5.960463909104874e-07,
+      "kl_sum": 2.665656089782715,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2033,
+      "symbols": 7,
+      "nll": 1.808861494064331,
+      "exact": 0,
+      "generated": [
+        2,
+        0,
+        0,
+        1,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 1.7881380927065038e-06,
+      "kl_sum": 1.808843731880188,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2020,
+      "symbols": 7,
+      "nll": 1.3480937480926514,
+      "exact": 0,
+      "generated": [
+        2,
+        0,
+        0,
+        3,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 2.8610202207346447e-06,
+      "kl_sum": 1.348067283630371,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3378,
+      "symbols": 7,
+      "nll": 3.862600088119507,
+      "exact": 0,
+      "generated": [
+        0,
+        2,
+        1,
+        1,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 1.0728831512096804e-06,
+      "kl_sum": 3.862586498260498,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3738,
+      "symbols": 7,
+      "nll": 2.419278621673584,
+      "exact": 0,
+      "generated": [
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 9.65592607826693e-06,
+      "kl_sum": 2.419182777404785,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2535,
+      "symbols": 7,
+      "nll": 7.393983364105225,
+      "exact": 0,
+      "generated": [
+        3,
+        2,
+        3,
+        3,
+        3,
+        2,
+        4
+      ],
+      "token_correct": 4,
+      "teacher_nll": 1.192092668134137e-06,
+      "kl_sum": 7.393963813781738,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1779,
+      "symbols": 7,
+      "nll": 1.7779747247695923,
+      "exact": 0,
+      "generated": [
+        2,
+        3,
+        0,
+        1,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 4.2199659219477326e-05,
+      "kl_sum": 1.777751088142395,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3539,
+      "symbols": 7,
+      "nll": 4.778339385986328,
+      "exact": 0,
+      "generated": [
+        0,
+        2,
+        2,
+        1,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 1.9073476096309605e-06,
+      "kl_sum": 4.778328895568848,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1249,
+      "symbols": 7,
+      "nll": 1.1196849346160889,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        0,
+        3,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 2.8610211302293465e-06,
+      "kl_sum": 1.119652509689331,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 392,
+      "symbols": 7,
+      "nll": 7.598409175872803,
+      "exact": 0,
+      "generated": [
+        1,
+        2,
+        3,
+        3,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 4,
+      "teacher_nll": 3.3378573789377697e-06,
+      "kl_sum": 7.598376274108887,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3740,
+      "symbols": 7,
+      "nll": 5.242370128631592,
+      "exact": 0,
+      "generated": [
+        0,
+        3,
+        3,
+        3,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 8.940685802372172e-06,
+      "kl_sum": 5.242273807525635,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3445,
+      "symbols": 7,
+      "nll": 0.6542322635650635,
+      "exact": 1,
+      "generated": [
+        0,
+        2,
+        2,
+        0,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 2.264974000354414e-06,
+      "kl_sum": 0.6542037725448608,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3072,
+      "symbols": 7,
+      "nll": 0.3330621123313904,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 3.576272320060525e-06,
+      "kl_sum": 0.33304575085639954,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2380,
+      "symbols": 7,
+      "nll": 2.990102767944336,
+      "exact": 0,
+      "generated": [
+        3,
+        2,
+        2,
+        1,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 6.914130153745646e-06,
+      "kl_sum": 2.990049362182617,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 652,
+      "symbols": 7,
+      "nll": 6.917944431304932,
+      "exact": 0,
+      "generated": [
+        1,
+        3,
+        3,
+        1,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 8.702268132765312e-06,
+      "kl_sum": 6.917891025543213,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2489,
+      "symbols": 7,
+      "nll": 5.241600036621094,
+      "exact": 0,
+      "generated": [
+        3,
+        2,
+        3,
+        3,
+        3,
+        2,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 1.2755328498315066e-05,
+      "kl_sum": 5.241477966308594,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3819,
+      "symbols": 7,
+      "nll": 7.493965148925781,
+      "exact": 0,
+      "generated": [
+        0,
+        0,
+        3,
+        3,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 4,
+      "teacher_nll": 1.335140950686764e-05,
+      "kl_sum": 7.493803024291992,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3797,
+      "symbols": 7,
+      "nll": 1.2983794212341309,
+      "exact": 1,
+      "generated": [
+        0,
+        3,
+        0,
+        2,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 2.1457663024193607e-06,
+      "kl_sum": 1.2983614206314087,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2776,
+      "symbols": 7,
+      "nll": 2.168225049972534,
+      "exact": 0,
+      "generated": [
+        3,
+        3,
+        3,
+        2,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 1.239772518601967e-05,
+      "kl_sum": 2.1681110858917236,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 640,
+      "symbols": 7,
+      "nll": 0.2464393675327301,
+      "exact": 1,
+      "generated": [
+        1,
+        3,
+        3,
+        1,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 5.4836191338836215e-06,
+      "kl_sum": 0.2463962435722351,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2680,
+      "symbols": 7,
+      "nll": 4.894366264343262,
+      "exact": 0,
+      "generated": [
+        3,
+        3,
+        2,
+        3,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 6.1988730521989055e-06,
+      "kl_sum": 4.89430570602417,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3060,
+      "symbols": 7,
+      "nll": 3.2585721015930176,
+      "exact": 0,
+      "generated": [
+        3,
+        0,
+        0,
+        2,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 1.3947454135632142e-05,
+      "kl_sum": 3.2584502696990967,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 4019,
+      "symbols": 7,
+      "nll": 3.341876745223999,
+      "exact": 0,
+      "generated": [
+        0,
+        0,
+        3,
+        1,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 3.540469697327353e-05,
+      "kl_sum": 3.341561794281006,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3604,
+      "symbols": 7,
+      "nll": 2.613976240158081,
+      "exact": 0,
+      "generated": [
+        0,
+        3,
+        1,
+        2,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 8.94067943590926e-06,
+      "kl_sum": 2.6139562129974365,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1914,
+      "symbols": 7,
+      "nll": 4.143452167510986,
+      "exact": 0,
+      "generated": [
+        2,
+        0,
+        0,
+        3,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 8.344648563252122e-07,
+      "kl_sum": 4.14343786239624,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3122,
+      "symbols": 7,
+      "nll": 2.2877700328826904,
+      "exact": 0,
+      "generated": [
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 4.7683712978141557e-07,
+      "kl_sum": 2.2877631187438965,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2832,
+      "symbols": 7,
+      "nll": 1.2775853872299194,
+      "exact": 1,
+      "generated": [
+        3,
+        0,
+        1,
+        2,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 1.5854717275942676e-05,
+      "kl_sum": 1.2775925397872925,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3471,
+      "symbols": 7,
+      "nll": 1.910861611366272,
+      "exact": 0,
+      "generated": [
+        0,
+        2,
+        3,
+        1,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 4.672948853112757e-05,
+      "kl_sum": 1.9108309745788574,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3789,
+      "symbols": 7,
+      "nll": 5.13862419128418,
+      "exact": 0,
+      "generated": [
+        0,
+        3,
+        1,
+        1,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 4.291530785849318e-06,
+      "kl_sum": 5.138602256774902,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2646,
+      "symbols": 7,
+      "nll": 0.7227221727371216,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        2,
+        2,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 3.0994399367045844e-06,
+      "kl_sum": 0.7226995229721069,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2450,
+      "symbols": 7,
+      "nll": 5.555042266845703,
+      "exact": 0,
+      "generated": [
+        3,
+        2,
+        2,
+        3,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 4,
+      "teacher_nll": 1.2397705177136231e-05,
+      "kl_sum": 5.554913520812988,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 3318,
+      "symbols": 7,
+      "nll": 2.2030858993530273,
+      "exact": 0,
+      "generated": [
+        1,
+        1,
+        0,
+        0,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 8.225413694162853e-06,
+      "kl_sum": 2.2029967308044434,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2707,
+      "symbols": 7,
+      "nll": 2.0524563789367676,
+      "exact": 0,
+      "generated": [
+        3,
+        3,
+        3,
+        2,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 0.00010752214438980445,
+      "kl_sum": 2.051520347595215,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 127,
+      "symbols": 7,
+      "nll": 0.318106085062027,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        2,
+        0,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 4.41074053014745e-06,
+      "kl_sum": 0.31809985637664795,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 874,
+      "symbols": 7,
+      "nll": 0.6282318830490112,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 5.722036803490482e-06,
+      "kl_sum": 0.6281745433807373,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1803,
+      "symbols": 7,
+      "nll": 1.4057834148406982,
+      "exact": 1,
+      "generated": [
+        2,
+        0,
+        1,
+        1,
+        3,
+        0,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 5.960463909104874e-07,
+      "kl_sum": 1.405775785446167,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2102,
+      "symbols": 7,
+      "nll": 2.5370876789093018,
+      "exact": 0,
+      "generated": [
+        3,
+        1,
+        1,
+        2,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 5,
+      "teacher_nll": 6.079661943658721e-06,
+      "kl_sum": 2.537034511566162,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2643,
+      "symbols": 7,
+      "nll": 0.844791054725647,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        2,
+        2,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 8.165622421074659e-05,
+      "kl_sum": 0.8440253734588623,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    },
+    {
+      "id": 1789,
+      "symbols": 7,
+      "nll": 3.835073471069336,
+      "exact": 0,
+      "generated": [
+        2,
+        3,
+        0,
+        0,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 6,
+      "teacher_nll": 3.170922718709335e-05,
+      "kl_sum": 3.834810972213745,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 548,
+      "symbols": 7,
+      "nll": 4.653522968292236,
+      "exact": 0,
+      "generated": [
+        1,
+        1,
+        3,
+        2,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 4,
+      "teacher_nll": 8.821464689390268e-06,
+      "kl_sum": 4.653421878814697,
+      "exact_teacher_agreement": 0,
+      "teacher_exact": 1
+    },
+    {
+      "id": 2549,
+      "symbols": 7,
+      "nll": 0.9021289944648743,
+      "exact": 1,
+      "generated": [
+        3,
+        2,
+        0,
+        0,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7,
+      "teacher_nll": 1.788138433767017e-06,
+      "kl_sum": 0.9021152257919312,
+      "exact_teacher_agreement": 1,
+      "teacher_exact": 1
+    }
+  ]
+}

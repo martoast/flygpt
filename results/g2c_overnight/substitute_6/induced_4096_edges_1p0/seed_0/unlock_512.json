@@ -1,0 +1,17 @@
+{
+  "split": "test_capacity",
+  "choices_frozen": true,
+  "matched_updates": 512,
+  "inputs": {
+    "results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/frozen_choices.json": "a7967979b6566556d869f1f198689310ecf0ecbda21f66aecd73ec67b552f4b8",
+    "results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/real_kd/spec.json": "0d9577dea87ebb143cf89d968682645f3703ff69bb0d54ca108c9052850b1538",
+    "results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/real_ce/spec.json": "23d51def53804a0a5bbbae84a27a6736d015348a312254f0a27b1b4b9a31a8ae",
+    "results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/rewired_kd/spec.json": "1fcee2ac7d30c0f7222ad133f79719fa961c24f3b4ed8d55aadaa9d398799568",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/real_kd/step_00512.pt": "661d53b5981bc683ddcc106da14f8317e9219d588568db7817c1e83547157b02",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/real_ce/step_00512.pt": "6bd04689b314df9c543708da3377d9035df2e7c611b67f48249accb60e911e82",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/induced_4096_edges_1p0/seed_0/rewired_kd/step_00512.pt": "cbcae4aa6912ae9f8b9ed7fb3e4c1add1aecfbada3c3efdadba3c7068a8eab99",
+    "results/g2c_overnight/substitute_6/teacher_0/model.pt": "e5188035bb025a20df6503147dd3ff699780e157b8eea78085e2a71a13c381f7",
+    "results/g2c_overnight/substitute_6/teacher_0/spec.json": "63979207ddd1b91be34245f85a21f7676f76ba53bc0bfd0c4fb666795c2f8b53",
+    "data/raw/g2c_v1/substitute_6/manifest.json": "c162d46763ea56e17c750f0efdf2a186d5741f62013485fa40f0959c8fa160d4"
+  }
+}
