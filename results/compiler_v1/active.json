@@ -1,0 +1,15 @@
+{
+  "pid": 21787,
+  "module": "scripts.compiler_storage",
+  "args": [
+    "--engine",
+    "scripts.g2c_engine",
+    "train",
+    "--spec",
+    "results/compiler_v1/paired_ce/seed_0/rewired_ce/spec.json",
+    "--until",
+    "1024"
+  ],
+  "log": "results/compiler_v1/paired_ce/seed_0/rewired_ce/train.log",
+  "started_utc": "2026-09-13T13:56:32.899446+00:00"
+}

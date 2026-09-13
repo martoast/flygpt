@@ -1,6 +1,6 @@
 # Compiler benchmark report
 
-Updated 2026-09-13T13:59:04.102055+00:00. Computational full MaleCNS experiments; no living tissue.
+Updated 2026-09-13T14:00:54.281531+00:00. Computational full MaleCNS experiments; no living tissue.
 
 The substitution dataset, teacher, 128-instance primary test (`test_extension`), recurrent architecture and optimization budgets are fixed. This test was already inspected: the tournament is exploratory, not fresh confirmatory evaluation. Exact complete-answer accuracy is primary.
 
@@ -33,6 +33,7 @@ C5 uses a separate batch-two cohort with ground-truth CE, hard-teacher CE and T=
 
 Current job: `results/compiler_v1/paired_ce/seed_0/rewired_ce/train.log` (PID 21787).
 
+- `results/compiler_v1/paired_ce/seed_0/rewired_ce`: 64 updates; 448 response symbols; 3.1 min; validation exact 0.0%.
 
 Every checkpoint is preserved with hashes. Archives go to Seagate when available and to bounded local staging while disconnected; staged files are migrated and verified on reconnect. Final checkpoint references may be symlinks to conserve internal storage. Losses, hidden-state norms/saturation, gradients, optimizer state, RNG, input hashes and per-instance evaluation outputs are preserved. Source/protocol: `results/compiler_v1/frozen_plan.json` and `configs/compiler_v1.json`.
 
