@@ -20,3 +20,5 @@ results/**/*.pt.tmp
 artifacts/
 data/processed/g2c_capacity/
 results/g2c_overnight/controller.lock
+results/compiler_v1/controller.lock
+results/**/*.pt.link

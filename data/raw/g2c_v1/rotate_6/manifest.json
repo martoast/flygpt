@@ -1,0 +1,41 @@
+{
+  "version": "G2c-v1",
+  "task": "rotate",
+  "length": 6,
+  "vocabulary": 8,
+  "domain": 4096,
+  "disjoint_ids": true,
+  "split_assignment": "SHA256-sorted instance IDs, without replacement",
+  "counts": {
+    "train": {
+      "count": 2048,
+      "sha256": "0a5d9201331d0270e0598c860e9ce2cb8171c8f2f8b5dbe7233bd3bbff2a4498"
+    },
+    "validation": {
+      "count": 256,
+      "sha256": "09fad2bd9067dcc041cfc2ed86eb0e4e45825d1d387ed2caf0e781b749d4da5a"
+    },
+    "qualification_0": {
+      "count": 128,
+      "sha256": "673fdd74953808099729fbcdbe209fce03ea01fa0b369a41254084ade06d8852"
+    },
+    "qualification_1": {
+      "count": 128,
+      "sha256": "6f4f29854e0556fc772b5488564362ac9173e8f6f8ebd739f479117c4c2778c4"
+    },
+    "test_main": {
+      "count": 128,
+      "sha256": "fac59085671276b044235e5f0963ff69fd7cde5c4d84bc90bfaa68c7e63f9315"
+    },
+    "test_extension": {
+      "count": 128,
+      "sha256": "93466a7eda5ee708ed1261d1b3dadfabf72f5b12dc6f03512d4d30b391751b3c"
+    },
+    "test_capacity": {
+      "count": 128,
+      "sha256": "924520b38a23f7ed667638dafc7f31a74b19d58c320e820741db75c3aef02e45"
+    }
+  },
+  "generator_source_sha256": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
+  "claim": "Unseen complete instances from a fixed-length deterministic function; not length generalization"
+}

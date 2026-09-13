@@ -1,3 +1,4 @@
 {
-  "idle": true
+  "idle": true,
+  "superseded_by": "results/compiler_v1"
 }

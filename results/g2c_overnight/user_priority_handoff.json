@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-13T13:43:01.508849+00:00",
+  "old_controller": {
+    "pid": 18998,
+    "started_utc": "2026-09-13T09:08:28.187174+00:00"
+  },
+  "active_child": {
+    "pid": 21633,
+    "args": [
+      "evaluate",
+      "--spec",
+      "results/g2c_overnight/rotate_6/teacher_0/spec.json",
+      "--checkpoint",
+      "results/g2c_overnight/rotate_6/teacher_0/model.pt",
+      "--split",
+      "qualification_0",
+      "--out",
+      "results/g2c_overnight/rotate_6/teacher_0/qualification.json"
+    ],
+    "log": "results/g2c_overnight/rotate_6/teacher_0/qualification.log",
+    "started_utc": "2026-09-13T13:42:47.750127+00:00"
+  },
+  "reason": "User directs paired CE-only replication and compiler tournament; finish active reversal evaluation, postpone rotation/checksum and further substrate reductions",
+  "training_protocol_changed": false
+}

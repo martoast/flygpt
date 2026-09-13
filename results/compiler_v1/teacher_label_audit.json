@@ -1,0 +1,8 @@
+{
+  "matches": 2048,
+  "cases": 2048,
+  "all_identical": true,
+  "target_sha256": "9c47fd2cab4b4608d2aeaa3615177ef961bd59374e611f2820be9931dece3c2e",
+  "original_sha256": "982ad03930e087da741daf0b6248a666aeb14f6498d32d060f3284fdcc4b30e5",
+  "interpretation": "Identical labels imply identical hard-target CE objective, not an optimization advantage or compressed parameter translation"
+}

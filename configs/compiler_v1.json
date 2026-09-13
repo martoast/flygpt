@@ -1,0 +1,33 @@
+{
+  "experiment": "C1 compiler benchmark and paired CE topology replication",
+  "evidence_tier": "Exploratory: original substitution final test has already been inspected",
+  "dataset": "data/raw/g2c_v1/substitute_6",
+  "primary_split": "test_extension",
+  "teacher_spec": "results/g2c_overnight/substitute_6/teacher_0/spec.json",
+  "teacher_checkpoint": "results/g2c_overnight/substitute_6/teacher_0/model.pt",
+  "qualification_receipt": "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json",
+  "reference_spec": "results/g2c_overnight/substitute_6/full/seed_0/real_ce/spec.json",
+  "seeds": [0,1,2,3,4],
+  "updates": 1024,
+  "reuse_original_real_ce_seed_zero": true,
+  "ce_priority": "Paired real CE / rewired CE for each seed; seed-zero original checkpoint reused; seeds 1-4 are fresh replications",
+  "hard_target_rule": "Generate autoregressively from training prompts only; training loss receives exclusively teacher-generated responses; evaluate on unchanged original held-out labels",
+  "hard_equivalence_rule": "Run C1 seed zero independently. If all training targets and every model/optimizer/RNG tensor equal CE-only, document exact relabeling equivalence rather than spending on redundant deterministic reruns. Otherwise complete all five hard-label seeds.",
+  "tournament": {
+    "temperatures": [0.5,1,2,4,8],
+    "alpha": 0.5,
+    "curriculum": "alpha decreases linearly from 1 at update 1 to 0.5 at update 1024; temperature 2",
+    "hidden_alignment": "Hard-target CE plus weight-1 mean squared distance between L2-normalized learned projection of output-population states and frozen final teacher representations, at response prediction positions; projection discarded for inference",
+    "relational_alignment": "Separate matched batch-2 cohort: hard-target CE plus weight-1 squared difference of cross-example cosine similarity of output-population and teacher representations at each response prediction position; no auxiliary readout; 512 updates / 1024 examples",
+    "paired_controls": ["ground_truth_ce", "teacher_hard", "teacher_kd_T2"],
+    "screening_seed": 0,
+    "selection": "Freeze all methods before training; select highest full-validation exact accuracy among batch-1 temperature/curriculum/hidden candidates, break ties by response CE then method name, before evaluating any candidate on final test; all candidates receive equal training and are reported",
+    "replication": "Replicate the validation-selected batch-1 method on seeds 1-4, regardless of effect sign. Replicate relational batch-2 cohort on seeds 1-4 only if validation exact accuracy exceeds its hard-target control; report adaptive selection explicitly.",
+    "no_escalation": "Do not launch harder tasks or change data, final test, architecture, LR, budget, or stopping rule based on these results"
+  },
+  "match_tolerance_pp": 2,
+  "match_interpretation": "Exploratory descriptive parity target; not a statistically established noninferiority margin",
+  "primary": "Compiled minus CE-only exact accuracy, paired by seed and input; show original seed zero separately from fresh seeds 1-4",
+  "topology_control": "Real CE versus degree-preserving rewired CE with matched seeds, data order, I/O populations, optimizer and 1024 updates",
+  "artifact_policy": "All checkpoints and optimizer/RNG states on Seagate with hashes; code, specs, per-instance results and reports pushed to GitHub; checkpoint symlinks after archived verification limit internal-disk usage"
+}

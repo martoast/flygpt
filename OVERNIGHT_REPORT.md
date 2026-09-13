@@ -1,18 +1,19 @@
 # G2c overnight report
 
-Updated: 2026-09-13T13:42:03.821416+00:00. All results are computational; no living tissue was used.
+Updated: 2026-09-13T13:52:54.671326+00:00. All results are computational; no living tissue was used.
 
 This is adaptive exploratory research. The primary outcome is exact autoregressive complete-answer accuracy, including the end marker, on unseen input instances. Response CE is in nats per task symbol, not nats per byte.
 
 The first task applies a fixed one-to-one substitution to six symbols from a four-symbol alphabet. Training has 2,048 distinct inputs; validation 256; each qualification and final-test partition has 128. Instance IDs are allocated without replacement. This tests unseen instances at a fixed length, not length generalization or natural-language ability.
 
-**Run status: in progress.** Pending results must not be interpreted as failures or successes.
+**Run status:** Superseded by explicit user priority: reversal completed; paired CE replication and compiler benchmark take over. Rotation teacher qualification retained; no rotation students launched.
 
 ## Did we establish a teacher that genuinely generalizes?
 
 | Task / candidate | Validation exact | Locked qualification exact | Gate |
 |---|---:|---:|---|
 | reverse_6/teacher_0 | 100.0% | 100.0% | PASS |
+| rotate_6/teacher_0 | 100.0% | 100.0% | PASS |
 | substitute_6/teacher_0 | 100.0% | 100.0% | PASS |
 
 A pass establishes ≥95% observed exact accuracy on this finite held-out sample. It does not prove correctness on every possible input. Thresholds were fixed before qualification.
