@@ -17,7 +17,7 @@ from src.provenance import save_json,sha256
 
 ROOT=Path('results/g2c_overnight')
 CONFIG=Path('configs/g2c_overnight_v1.json')
-PYTHON=str(Path('.venv/bin/python').resolve())
+PYTHON=str(Path('.venv/bin/python').absolute())
 EXTERNAL=Path('/Volumes/Seagate/FlyGPT Backups/G2c-overnight')
 
 
