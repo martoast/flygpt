@@ -51,7 +51,7 @@ def main():
             '- **Which hypothesis is supported/falsified?** A qualified teacher removes the teacher-capability bottleneck for the passed task; no student-transfer conclusion yet.',
             '- **Single highest-value next experiment:** Finish the frozen full-MaleCNS KD / CE-only / rewired KD cohort and its locked exact-answer test.','']
     else:
-        r=full[-1];m=r['metrics'];kd=m['real_kd'];ce=m['real_ce']
+        r=max(full,key=lambda x:(x['updates'],x['seed']));m=r['metrics'];kd=m['real_kd'];ce=m['real_ce']
         lines += [f'- **Did MaleCNS itself generalize?** At {r["updates"]} updates, seed {r["seed"]}, distilled exact accuracy is {pct(kd["accuracy"])} and CE-only is {pct(ce["accuracy"])} on {kd["cases"]} unseen instances. Partial accuracy is not mastery.',
             f'- **Did distillation improve over CE-only?** Observed paired difference: {100*r["A_transfer"]:+.2f} percentage points. '+('This is an exploratory lead requiring independent seed replication.' if r['A_transfer']>0 else 'This comparison does not support a distillation advantage.'),
             f'- **Did recurrent-edge ablation destroy capability?** Distilled exact accuracy changes from {pct(kd["accuracy"])} to {pct(kd["zero_edge_exact"])}; response CE changes from {kd["response_ce"]:.4f} to {kd["zero_edge_ce"]:.4f}. '+('Without strong intact capability, this cannot establish destruction of a mastered function.' if kd['accuracy']<.95 else 'The measured ablation assesses necessity of recurrence for this checkpoint.'),

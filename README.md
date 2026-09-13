@@ -2,7 +2,14 @@
 
 Computational research on transferring a small transformer teacher into a recurrent network constrained by the complete annotated MaleCNS neuron graph.
 
-The current experiment is **G1 — Finite-Grammar Functional Encoding**.
+The current experiment is **G2c — Algorithmic Generalization Transfer**.
+The first transformer teacher achieved 100% exact answers on 256 validation
+and 128 locked qualification instances of a deterministic six-symbol
+substitution task. Full MaleCNS KD, CE-only, and degree-preserving rewired KD
+are being compared under a frozen protocol. Student success is not yet
+established. See the automatically updated [overnight report](OVERNIGHT_REPORT.md).
+
+**G1 — Finite-Grammar Functional Encoding** is frozen.
 **G2 — Finite-Grammar Compositional Generalization** closed as an exploratory
 seed-zero comparison without a distillation benefit on relation spans.
 **G2b** failed its teacher validation qualification gate; no connectome
