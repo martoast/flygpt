@@ -19,9 +19,9 @@ from src.provenance import manifest,save_json,sha256
 ROOT=Path('results/malecns_v1/target')
 
 
-def inspect(checkpoint,out,step,training_seconds,trace):
+def inspect(checkpoint,out,step,training_seconds,trace,graph='data/processed/malecns.npz',condition='real'):
     torch.set_num_threads(4);start=time.perf_counter()
-    graph='data/processed/malecns.npz';model=load_model(graph,checkpoint,'cpu')
+    model=load_model(graph,checkpoint,'cpu')
     tc=torch.load('results/malecns_v1/teacher.pt',map_location='cpu',weights_only=True)
     teacher=TinyGPT(**tc['config']).eval();teacher.load_state_dict(tc['model']);del tc
     data=bytes_from_file('data/raw/grammar_v1/validation.txt')
@@ -47,7 +47,8 @@ def inspect(checkpoint,out,step,training_seconds,trace):
     record=manifest({'checkpoint':str(checkpoint),'continuation_step':step,'evaluation_starts':starts,
                      'n_windows':8,'bytes_per_window':32,'saturation_definition':'abs(hidden state)>0.95 at byte boundaries'},
                     [checkpoint,graph,'results/malecns_v1/teacher.pt','data/raw/grammar_v1/validation.txt'])
-    record.update(evidence_domain='MaleCNS-based computation on synthetic grammar; no wetware',
+    record.update(evidence_domain=('MaleCNS-based' if condition=='real' else 'synthetic topology control')+' computation on synthetic grammar; no wetware',
+                  condition=condition,
                   continuation_step=step,validation_nats_per_byte=loss/count,teacher_nats_per_byte=teacher_loss/count,
                   gap_to_teacher=loss/count-teacher_loss/count,gap_to_rounded_0325=loss/count-.325,
                   teacher_kl_nats_per_byte=kl/count,teacher_kl_temperature2_scaled_per_byte=kl_t2/count,

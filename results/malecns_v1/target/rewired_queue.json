@@ -1,0 +1,5 @@
+{
+  "status": "waiting for baseline conclusion",
+  "seed": 0,
+  "policy": "64 CE pilot then identical 512/1024/2048 continuation stages completed by real; no control-dependent stopping"
+}

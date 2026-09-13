@@ -1,0 +1,93 @@
+{
+  "milestone": "MaleCNS seed 0, 512 additional updates",
+  "archive": "/Users/alex/Desktop/flygpt_v01/artifacts/malecns_seed0_step0512",
+  "checkpoint_sha256": "3d451c000cefe04b8ae79efd78b5802b47f11936322a996534c08a3a6225f9c2",
+  "training_code_commit": "bab9cea39d2c23136179d691614c2f9cebef9f00",
+  "optimizer_steps": [
+    512
+  ],
+  "sampling_state_reproduced": true,
+  "files": [
+    {
+      "source": "results/malecns_v1/target/snapshots/real_0_step_0512.pt",
+      "copy": "artifacts/malecns_seed0_step0512/results/malecns_v1/target/snapshots/real_0_step_0512.pt",
+      "sha256": "3d451c000cefe04b8ae79efd78b5802b47f11936322a996534c08a3a6225f9c2",
+      "bytes": 315777681
+    },
+    {
+      "source": "results/malecns_v1/teacher.pt",
+      "copy": "artifacts/malecns_seed0_step0512/results/malecns_v1/teacher.pt",
+      "sha256": "52ea8b709d3072a362d2a61727ac531a5e202f2a594344c724bde1818200f6de",
+      "bytes": 2559851
+    },
+    {
+      "source": "data/processed/malecns.npz",
+      "copy": "artifacts/malecns_seed0_step0512/data/processed/malecns.npz",
+      "sha256": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+      "bytes": 80522520
+    },
+    {
+      "source": "data/processed/malecns_body_ids.npy",
+      "copy": "artifacts/malecns_seed0_step0512/data/processed/malecns_body_ids.npy",
+      "sha256": "ab90597b7b0ce07cbc22cb39a65b70bea2ac73cc7fd225951bd9d73f2fc8dd3f",
+      "bytes": 1333728
+    },
+    {
+      "source": "results/fly_real.pt",
+      "copy": "artifacts/malecns_seed0_step0512/results/fly_real.pt",
+      "sha256": "07059fd47388084ed854e1e29e98d4d3ef8051fa9e2cf94bffb85f2b5a6111c8",
+      "bytes": 106136091
+    },
+    {
+      "source": "results/malecns_v1/target/trajectory/step_0512.json",
+      "copy": "artifacts/malecns_seed0_step0512/results/malecns_v1/target/trajectory/step_0512.json",
+      "sha256": "215f667fa02a739be70b1c1aec2156511935da09961a093e51e28194e1268cee",
+      "bytes": 4037
+    },
+    {
+      "source": "results/malecns_v1/target/real_0.json",
+      "copy": "artifacts/malecns_seed0_step0512/results/malecns_v1/target/real_0.json",
+      "sha256": "267ee206bd001e55cd4b7a02ea1f8eb273a0117061500f8d01ddb103737c9a50",
+      "bytes": 91729
+    },
+    {
+      "source": "results/malecns_v1/graph_provenance.json",
+      "copy": "artifacts/malecns_seed0_step0512/results/malecns_v1/graph_provenance.json",
+      "sha256": "20721961598f7dce32d36f016138fc3e1e78d4ec7377fd2debddc5e66447268f",
+      "bytes": 2707
+    },
+    {
+      "source": "results/malecns_v1/download.json",
+      "copy": "artifacts/malecns_seed0_step0512/results/malecns_v1/download.json",
+      "sha256": "02d666bd2ab1de347fc47f7d5f97b5ec8b881ac0fed42033fdba9fda4de8119f",
+      "bytes": 839
+    },
+    {
+      "source": "data/raw/grammar_v1/train.txt",
+      "copy": "artifacts/malecns_seed0_step0512/data/raw/grammar_v1/train.txt",
+      "sha256": "fc35085b41f99511ff41712e972be1c3f57c63087b9c2ed14565c89a7c54421e",
+      "bytes": 45848
+    },
+    {
+      "source": "data/raw/grammar_v1/validation.txt",
+      "copy": "artifacts/malecns_seed0_step0512/data/raw/grammar_v1/validation.txt",
+      "sha256": "14ace6889686a2f6f5b28ee74667a26dc657014edc37e9ee2f88816ad5ed35c0",
+      "bytes": 2327
+    },
+    {
+      "source": "requirements-lock.txt",
+      "copy": "artifacts/malecns_seed0_step0512/requirements-lock.txt",
+      "sha256": "23aa8bfd100d712fbacfdde9fad158bf9392dc106862bbfd11291ce46bfb819c",
+      "bytes": 1132
+    },
+    {
+      "source": "scripts/train_target.py",
+      "copy": "artifacts/malecns_seed0_step0512/scripts/train_target.py",
+      "sha256": "65b1507e4e6656d7c6de3928e1f9bfcc1066b04d6a10ae208c6ea78d7e6eda81",
+      "bytes": 5466
+    }
+  ],
+  "code_archive_sha256": "ee64ba08135572ec37800f38a740d8bb2008f78c1b4091862201daeca8b3c9be",
+  "sampling_sha256": "2f0bcf569be1d253fcb45e449143197f7cc13206c5364f016187ff4ecf5c715f",
+  "limitations": "Independent copies on the same disk, not an off-machine backup. Original run reported a dirty worktree; commit archive alone is not proof of the entire runtime source state. Recorded source hashes remain authoritative."
+}

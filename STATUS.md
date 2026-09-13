@@ -151,3 +151,24 @@ training corpus contains 379 unique sentences, and all 100 validation sentences
 occur verbatim somewhere in it. Split byte positions are distinct, as specified
 before training, but this task cannot establish novel-composition generalization.
 This audit does not change baseline A or unblind the final test split.
+
+### Preservation and primary control queue
+
+The 512-update milestone has an independently copied local archive at
+`artifacts/malecns_seed0_step0512/`. Its tracked manifest is
+`results/malecns_v1/target/milestone_0512_archive.json`. Checkpoint, teacher,
+graph, body-ID mapping, pilot, corpus and metric copies were hash-verified.
+All AdamW parameter states are at update 512; replaying the data sampler
+reproduces the saved RNG state exactly. Exact validation input/target bytes
+are archived. This is a same-disk copy, not an off-machine backup; large
+artifacts remain excluded from Git. The historical dirty-worktree flag is
+retained rather than treating the commit alone as complete source provenance.
+
+`python -m scripts.matched_rewired` queues seed-zero degree-preserving rewiring
+behind the existing baseline controller. It runs the same 64-update CE pilot,
+then the 512/1024/2048 continuation stages actually completed by baseline A,
+using identical data, optimizer settings, sampling seeds and architecture.
+Control performance does not determine its budget. Each completed stage gets
+the same KL, agreement, zero-edge, gradient and hidden-state diagnostics.
+Runtime is measured, not claimed equal. This first pair cannot establish a
+topology advantage; five paired exploratory seeds remain outstanding.
