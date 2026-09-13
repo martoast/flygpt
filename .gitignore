@@ -15,3 +15,4 @@ results/**/*.pt
 results/**/*.npz
 results/**/*.npy
 results/**/*.log
+results/fly_real.pt

@@ -24,6 +24,7 @@ def manifest(config, inputs=()):
     return {
         'created_utc': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
         'code_commit': git_output('rev-parse', 'HEAD'),
+        'source_sha256': {str(p): sha256(p) for p in sorted(Path('src').glob('*.py'))},
         'worktree_dirty': bool(git_output('status', '--porcelain', '--untracked-files=no')),
         'config': config,
         'inputs': {str(p): sha256(p) for p in inputs},

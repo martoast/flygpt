@@ -36,9 +36,15 @@ def load_model(graph_path, ckpt_path, device):
         degree_normalize=cfg.get('degree_normalize', False),
     ).to(device)
     for key in ('src', 'dst'):
+        if 'core.'+key not in ckpt['model']:
+            if not ckpt.get('graph_sha256'): raise ValueError('External topology requires graph hash')
+            continue
         if not torch.equal(getattr(model.core,key).cpu(), ckpt['model']['core.'+key].cpu()):
             raise ValueError('Checkpoint topology differs from supplied graph')
-    model.load_state_dict(ckpt['model'])
+    missing,unexpected=model.load_state_dict(ckpt['model'],strict=False)
+    allowed={'core.src','core.dst'} if ckpt.get('topology_buffers_external') else set()
+    if set(missing)!=allowed or unexpected:
+        raise ValueError(f'Incompatible checkpoint: missing={missing}, unexpected={unexpected}')
     model.eval()
     return model
 

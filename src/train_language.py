@@ -86,7 +86,7 @@ def main():
                                      'logit_l2':float((z1[:,-1]-z2[:,-1]).norm()),'state_l2':float((h1-h2).norm()),
                                      'note':'dependence diagnostic; not semantic correctness'}
         ckpt=Path(a.checkpoint or str(Path(a.out).with_suffix('.pt')));ckpt.parent.mkdir(parents=True,exist_ok=True)
-        torch.save({'model':model.state_dict(),'config':config,'graph':a.graph,'graph_sha256':sha256(a.graph),
+        torch.save({'model':{k:v for k,v in model.state_dict().items() if k not in ('core.src','core.dst')},'topology_buffers_external':True,'config':config,'graph':a.graph,'graph_sha256':sha256(a.graph),
                     'condition':a.condition,'seed':a.seed,'training':result['config'],'code_commit':result['code_commit'],
                     'evidence_domain':'MaleCNS-based' if a.condition=='real' else 'synthetic topology control'},ckpt)
         result['checkpoint']={'path':str(ckpt),'sha256':sha256(ckpt)}
