@@ -44,3 +44,25 @@ def test_frozen_cohort_cannot_be_rewritten(tmp_path):
     from scripts.run_g2c_overnight import frozen
     p=tmp_path/'freeze.json';frozen(p,{'updates':512});frozen(p,{'updates':512})
     with pytest.raises(AssertionError):frozen(p,{'updates':1024})
+
+
+def test_resume_preserves_optimizer_and_sampling_state(tmp_path,monkeypatch):
+    from src.provenance import save_json,sha256
+    monkeypatch.chdir(tmp_path)
+    root=e.make_data('substitute')
+    monkeypatch.setattr(e,'manifest',lambda config,inputs:{'config':config,'inputs':{str(p):sha256(p) for p in inputs}})
+    monkeypatch.setattr(e,'archive',lambda checkpoint,spec,step:{'step':step,'path':str(checkpoint),'sha256':sha256(checkpoint)})
+    specs=[]
+    for name in ('continuous','resumed'):
+        path=tmp_path/f'{name}.json'
+        save_json(path,{'kind':'gru','seed':19,'sampling_seed':23,'model':{'hidden':8,'embed':4},
+            'objective':'ce','lr':.001,'batch':2,'budgets':[2,4],'checkpoints':[2,4],
+            'dataset':str(root),'job_dir':str(tmp_path/name)})
+        specs.append(path)
+    e.train(specs[0],4);e.train(specs[1],2);e.train(specs[1],4)
+    a=torch.load(tmp_path/'continuous/model.pt',weights_only=True)
+    b=torch.load(tmp_path/'resumed/model.pt',weights_only=True)
+    assert torch.equal(a['rng'],b['rng'])
+    assert all(torch.equal(a['model'][k],b['model'][k]) for k in a['model'])
+    for key,state in a['optimizer']['state'].items():
+        assert all(torch.equal(value,b['optimizer']['state'][key][name]) for name,value in state.items())
