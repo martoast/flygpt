@@ -1,0 +1,12 @@
+{
+  "split": "test_extension",
+  "choices_frozen": true,
+  "warning": "Previously inspected fixed benchmark; no claim of fresh test blindness",
+  "inputs": {
+    "results/compiler_v1/frozen_plan.json": "2efdc208ae469afb718dd5a13ccc6ac008a0a3a9aa25a281231867de5b76ca76",
+    "results/compiler_v1/paired_ce/seed_2/real_ce/spec.json": "0b6689207089eedceb67d72bea0da3df24ea8ca2e472127f0bc9b0059930c971",
+    "results/compiler_v1/paired_ce/seed_2/rewired_ce/spec.json": "6a093ca6d61380002caf6c085284fa262e83be18793492e37f1143801280cf58",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v1/paired_ce/seed_2/real_ce/step_01024.pt": "5044a7a5a862d1861a71c1de7f1c869a55fcc21c21fb303d62a2918b0448fc80",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v1/paired_ce/seed_2/rewired_ce/step_01024.pt": "0248711587ae2cd8dc04a6d418e2ffe216a9748509fe59fba8be6396f7e5bab0"
+  }
+}
