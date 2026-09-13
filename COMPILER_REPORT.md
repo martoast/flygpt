@@ -1,6 +1,6 @@
 # Compiler benchmark report
 
-Updated 2026-09-13T14:04:20.201182+00:00. Computational full MaleCNS experiments; no living tissue.
+Updated 2026-09-13T14:52:30.228595+00:00. Computational full MaleCNS experiments; no living tissue.
 
 The substitution dataset, teacher, 128-instance primary test (`test_extension`), recurrent architecture and optimization budgets are fixed. This test was already inspected: the tournament is exploratory, not fresh confirmatory evaluation. Exact complete-answer accuracy is primary.
 
@@ -12,9 +12,13 @@ Teacher-only generation audit: 2048/2048 generated training answers equal the or
 
 | Seed | MaleCNS CE exact | Rewired CE exact | Difference (pp) | MaleCNS zero-edge exact |
 |---|---:|---:|---:|---:|
-| pending | — | — | — | — |
+| 0 | 83.6% | 71.1% | +12.50 | 0.0% |
 
 Seed zero reuses the original real-CE checkpoint; it is not counted as a new independent replication. Rewired seed zero is newly trained. Seeds 1–4 are fresh paired replications.
+
+all available seeds: n=1, mean MaleCNS CE 83.6%, mean paired topology difference +12.50 pp.
+
+Seed-zero topology difference is +12.50 pp under CE versus +40.62 pp under KD; their difference is -28.12 pp. This is a descriptive topology-by-objective comparison, not a replicated interaction estimate.
 
 ## Compiler outcomes
 
@@ -29,9 +33,7 @@ C5 uses a separate batch-two cohort with ground-truth CE, hard-teacher CE and T=
 
 ## Execution and provenance
 
-Current job: `results/compiler_v1/paired_ce/seed_0/rewired_ce/train.log` (PID 21787).
-
-- `results/compiler_v1/paired_ce/seed_0/rewired_ce`: 128 updates; 896 response symbols; 6.2 min; validation exact 0.0%.
+- `results/compiler_v1/paired_ce/seed_0/rewired_ce`: 1024 updates; 7168 response symbols; 41.7 min; validation exact 78.1%.
 
 Every checkpoint is preserved with hashes. Archives go to Seagate when available and to bounded local staging while disconnected; staged files are migrated and verified on reconnect. Final checkpoint references may be symlinks to conserve internal storage. Losses, hidden-state norms/saturation, gradients, optimizer state, RNG, input hashes and per-instance evaluation outputs are preserved. Source/protocol: `results/compiler_v1/frozen_plan.json` and `configs/compiler_v1.json`.
 
