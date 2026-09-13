@@ -1,5 +1,13 @@
 # FlyGPT preregistration v0.1
 
+Experiment identity clarification, recorded after the G1 512-update result:
+G1 is **Finite-Grammar Functional Encoding**, not sequence generalization.
+This clarification changes no active training settings or historical protocol.
+G2 is **Finite-Grammar Compositional Generalization**; its composition split is
+specified and audited before G2 training. G3 is **Natural-Language Modeling**.
+See [EXPERIMENTS.md](EXPERIMENTS.md). The G2 training-budget protocol is still
+pending; dataset preparation alone is not a preregistered trained experiment.
+
 ## Primary question
 Can a recurrent neural network whose allowed recurrent edges are fixed by the MaleCNS connectome learn autoregressive sequence/language tasks, and does real biological topology differ from topology-matched controls?
 

@@ -1,5 +1,19 @@
 # FlyGPT status — 2026-09-12
 
+Experiment identity: **G1 — Finite-Grammar Functional Encoding**. This label
+does not change if subsequent experiments generalize. The audited G2 dataset
+is prepared separately: 2,048 distinct training sentences and three
+64-sentence composition-holdout subsets each for validation and test, with
+zero verbatim training overlap and all words known. G2 training is pending.
+See [EXPERIMENTS.md](EXPERIMENTS.md).
+
+The frozen G1 512 archive is also backed up to the user-selected external USB
+Seagate drive. The 507,400,704-byte tar and all 15 embedded scientific artifacts
+were read back and hash-verified. The destination and checksum are recorded in
+`results/malecns_v1/target/external_backup_0512.json`. This is a separate physical
+disk, not cloud/off-site storage. The original local-only preservation manifest
+is retained as a historical record.
+
 ## Latest measured checkpoint: 512 continuation updates
 
 **Validation CE: 0.851437 nats/byte**, versus frozen teacher **0.324945**.

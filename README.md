@@ -2,6 +2,11 @@
 
 Computational research on transferring a small transformer teacher into a recurrent network constrained by the complete annotated MaleCNS neuron graph.
 
+The current experiment is **G1 — Finite-Grammar Functional Encoding**.
+**G2 — Finite-Grammar Compositional Generalization** has a separate audited
+dataset, with no trained result yet. **G3 — Natural-Language Modeling** is
+future work. See the [experiment registry](EXPERIMENTS.md) for claim boundaries.
+
 **Current measured status:** the full real graph is loaded. Baseline A reaches **0.851 nats/byte** after 512 distillation-continuation updates, versus teacher **0.325**; zeroing recurrence raises loss to **3.107**. The curve is still descending, but this is one seed on a finite grammar with sentence overlap, not general language understanding or a topology-advantage result. See [STATUS.md](STATUS.md) and the [measured trajectory](results/malecns_v1/target/TRAJECTORY.md).
 
 ## Core hypotheses

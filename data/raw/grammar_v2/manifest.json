@@ -1,0 +1,219 @@
+{
+  "experiment": "G2 \u2014 Finite-Grammar Compositional Generalization",
+  "version": 2,
+  "seed": 20260913,
+  "partitions": {
+    "attributes": {
+      "train": [
+        [
+          "small",
+          "red"
+        ],
+        [
+          "small",
+          "green"
+        ],
+        [
+          "large",
+          "blue"
+        ],
+        [
+          "large",
+          "yellow"
+        ],
+        [
+          "tiny",
+          "red"
+        ],
+        [
+          "tiny",
+          "green"
+        ],
+        [
+          "huge",
+          "blue"
+        ],
+        [
+          "huge",
+          "yellow"
+        ]
+      ],
+      "validation": [
+        [
+          "small",
+          "blue"
+        ],
+        [
+          "large",
+          "green"
+        ],
+        [
+          "tiny",
+          "yellow"
+        ],
+        [
+          "huge",
+          "red"
+        ]
+      ],
+      "test": [
+        [
+          "small",
+          "yellow"
+        ],
+        [
+          "large",
+          "red"
+        ],
+        [
+          "tiny",
+          "blue"
+        ],
+        [
+          "huge",
+          "green"
+        ]
+      ]
+    },
+    "relations": {
+      "train": [
+        [
+          "dog",
+          "sees"
+        ],
+        [
+          "dog",
+          "helps"
+        ],
+        [
+          "cat",
+          "follows"
+        ],
+        [
+          "cat",
+          "likes"
+        ],
+        [
+          "bird",
+          "sees"
+        ],
+        [
+          "bird",
+          "helps"
+        ],
+        [
+          "fox",
+          "follows"
+        ],
+        [
+          "fox",
+          "likes"
+        ]
+      ],
+      "validation": [
+        [
+          "dog",
+          "follows"
+        ],
+        [
+          "cat",
+          "helps"
+        ],
+        [
+          "bird",
+          "likes"
+        ],
+        [
+          "fox",
+          "sees"
+        ]
+      ],
+      "test": [
+        [
+          "dog",
+          "likes"
+        ],
+        [
+          "cat",
+          "sees"
+        ],
+        [
+          "bird",
+          "follows"
+        ],
+        [
+          "fox",
+          "helps"
+        ]
+      ]
+    }
+  },
+  "splits": {
+    "train": {
+      "sentences": 2048,
+      "unique_sentences": 2048,
+      "unseen_words": [],
+      "verbatim_training_overlap": null,
+      "bytes": 93696,
+      "sha256": "9e3cfacb632942e0c3bcd9692a7fca5aa720e4fcc85af144c57bc316a368307c",
+      "records_sha256": "24905a4b6484bb2fae7b5cdad1f002b32437a9fb02d6952cdbe1bbf4994b1d2b"
+    },
+    "validation_attribute": {
+      "sentences": 64,
+      "unique_sentences": 64,
+      "unseen_words": [],
+      "verbatim_training_overlap": 0,
+      "bytes": 2926,
+      "sha256": "b308c979af38e914cddcb73e9bc9ca38ba8e2287ce9aa47b4ff90528c866a227",
+      "records_sha256": "9d54f04e895e40943c874da26f27ec49ff39d5186dbe36343b9732ae6c317a6f"
+    },
+    "validation_relation": {
+      "sentences": 64,
+      "unique_sentences": 64,
+      "unseen_words": [],
+      "verbatim_training_overlap": 0,
+      "bytes": 2930,
+      "sha256": "8c109acad5ce9c7878604678bb0174f816c0f4b7461c3a696038117ad582728f",
+      "records_sha256": "aebd30fc16453ab2016a9187bdc06657c75b83934c2f25901a15b15e0db75434"
+    },
+    "validation_combined": {
+      "sentences": 64,
+      "unique_sentences": 64,
+      "unseen_words": [],
+      "verbatim_training_overlap": 0,
+      "bytes": 2927,
+      "sha256": "f3aba2fa1dac6d387c519481b10fe386b5d690522e50523726fa2e03f880688e",
+      "records_sha256": "64e2a1eedf748b133228d028c80ba9426a810b40b063ff250ca899d3ed0dcb6b"
+    },
+    "test_attribute": {
+      "sentences": 64,
+      "unique_sentences": 64,
+      "unseen_words": [],
+      "verbatim_training_overlap": 0,
+      "bytes": 2874,
+      "sha256": "933a4cf5fd56d608182488ee6b5eb225ee0d9683f2c165b837f03b7301cad261",
+      "records_sha256": "8cdf63f8c5702b3c413af8262b808867bc60e413181b4d1980b6382c2ffb620e"
+    },
+    "test_relation": {
+      "sentences": 64,
+      "unique_sentences": 64,
+      "unseen_words": [],
+      "verbatim_training_overlap": 0,
+      "bytes": 2937,
+      "sha256": "531183838d875110d4a93066bae74fa52cf06186dbd5addea4060e166c7746ea",
+      "records_sha256": "2c7d9ae154ee6e8c0c1186dee408e2898671c72e989c9ba682c29c35ce479fc7"
+    },
+    "test_combined": {
+      "sentences": 64,
+      "unique_sentences": 64,
+      "unseen_words": [],
+      "verbatim_training_overlap": 0,
+      "bytes": 3006,
+      "sha256": "266b06815b980887fd058e2b3c397feb1ee5ba0696479277746ef6263abad7db",
+      "records_sha256": "19a73a826f6b96b82449e73ec2612fcb97150ae07132929646d4372a68bb47e0"
+    }
+  },
+  "generator_sha256": "634aadf8a28b6bb9bcaa03f55cbdaa5160d5b29bd3e50dbc0e0b4c6a7c0a503d",
+  "status": "dataset prepared and audited; no G2 models trained or evaluated",
+  "rule": "Train on allowed pairs only. Validation and test use separate unseen pair sets. All words known. Object attributes remain in training support to isolate subject composition."
+}

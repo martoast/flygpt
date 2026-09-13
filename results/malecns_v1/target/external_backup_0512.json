@@ -1,0 +1,11 @@
+{
+  "experiment": "G1 \u2014 Finite-Grammar Functional Encoding",
+  "checkpoint_step": 512,
+  "destination": "/Volumes/Seagate/FlyGPT Backups/G1-Finite-Grammar-Functional-Encoding/seed0-step0512/FlyGPT-G1-seed0-step0512.tar",
+  "archive_sha256": "e680821b3cc82f2798f84320e253470113251b667e948b36fae83df446b06735",
+  "bytes": 507400704,
+  "verified_embedded_artifacts": 15,
+  "checkpoint_sha256": "3d451c000cefe04b8ae79efd78b5802b47f11936322a996534c08a3a6225f9c2",
+  "storage": "User-selected external Seagate USB disk; separate physical device, not cloud/off-site storage",
+  "verified_utc": "2026-09-13T02:42:11.979120+00:00"
+}
