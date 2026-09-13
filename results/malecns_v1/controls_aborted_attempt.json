@@ -1,0 +1,10 @@
+{
+  "condition": "rewired",
+  "seed": 777,
+  "requested_successful_swaps": 255829380,
+  "status": "aborted; no graph artifact or performance result produced",
+  "reason": "Numba set upsize/downsize depend on live used entries, not fill. Fixed-size delete/add churn accumulates tombstones, degrading lookup. Restart with periodic exact set rebuilds.",
+  "runtime_note": "approximately 41 minutes before termination; exact successful-swap count unavailable",
+  "implementation_at_start_commit": "9c4e6a7f0d66af304d0c89db5e80da6698a84f7c",
+  "training_impact": "No model topology, architecture, weights, optimizer or data changed."
+}

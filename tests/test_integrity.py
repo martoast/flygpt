@@ -73,3 +73,13 @@ def test_preprocessing_aggregates_before_threshold_and_retains_isolates(tmp_path
     pd.DataFrame({'body_pre':[1,1,4],'body_post':[2,2,1],'weight':[1,1,99]}).to_feather('g.feather')
     a=prepare('g.feather','g.npz','a.feather',min_weight=2)
     assert a.shape==(3,3) and a.nnz==1 and a[0,1]==2
+
+
+def test_rewire_table_rebuild_keeps_exact_rng_trajectory():
+    from src.graph_controls import swaps
+    rng=np.random.default_rng(45);keys=rng.choice(100*100,600,replace=False)
+    s=keys//100;d=keys%100
+    old,done_old,attempts_old=swaps(s.copy(),d.copy(),100,6000,777,0)
+    rebuilt,done_new,attempts_new=swaps(s.copy(),d.copy(),100,6000,777,600)
+    np.testing.assert_array_equal(old,rebuilt)
+    assert (done_old,attempts_old)==(done_new,attempts_new)

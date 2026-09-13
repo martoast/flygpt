@@ -9,10 +9,11 @@ from .provenance import manifest, save_json, sha256
 
 
 @njit(cache=True)
-def swaps(src,dst,n,count,seed):
+def swaps(src,dst,n,count,seed,rebuild_every=-1):
     np.random.seed(seed)
     present=set(src.astype(np.int64)*n+dst)
     done=0;attempts=0;m=len(src)
+    if rebuild_every<0:rebuild_every=m
     while done<count and attempts<count*20:
         attempts+=1;i=np.random.randint(m);j=np.random.randint(m)
         a=src[i];b=dst[i];c=src[j];d=dst[j]
@@ -21,6 +22,11 @@ def swaps(src,dst,n,count,seed):
         if k1 in present or k2 in present: continue
         present.remove(a*n+b);present.remove(c*n+d);present.add(k1);present.add(k2)
         dst[i]=d;dst[j]=b;done+=1
+        if rebuild_every>0 and done%rebuild_every==0:
+            # Numba sets resize by live size, not tombstone fill. Rebuild the
+            # exact same membership set; this consumes no random numbers.
+            present=set(src.astype(np.int64)*n+dst)
+            print('successful swaps',done,'of',count)
     return dst,done,attempts
 
 
@@ -58,10 +64,10 @@ def make_control(n,src,dst,condition,seed,swap_factor=10):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--graph',required=True);p.add_argument('--condition',choices=['rewired','configuration','er'],required=True)
     p.add_argument('--seed',type=int,required=True);p.add_argument('--swap-factor',type=int,default=10);a=p.parse_args()
-    start=time.perf_counter();n,s,d,_=load_npz(a.graph);s,d,info=make_control(n,s,d,a.condition,a.seed,a.swap_factor)
+    start=time.perf_counter();result=manifest(vars(a),[a.graph]);n,s,d,_=load_npz(a.graph);s,d,info=make_control(n,s,d,a.condition,a.seed,a.swap_factor)
     path=Path(f'data/processed/controls/{a.condition}_{a.seed}.npz');path.parent.mkdir(parents=True,exist_ok=True)
     np.savez_compressed(path,n=np.array(n),src=s.astype(np.int32),dst=d.astype(np.int32))
-    result=manifest(vars(a),[a.graph]);result.update(info);result.update(graph_sha256=sha256(path),runtime_seconds=time.perf_counter()-start)
+    result.update(info);result.update(graph_sha256=sha256(path),runtime_seconds=time.perf_counter()-start)
     save_json(f'results/malecns_v1/controls/{a.condition}_{a.seed}.json',result);print(info,flush=True)
 
 
