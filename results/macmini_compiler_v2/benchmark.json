@@ -1,0 +1,25 @@
+{
+  "hardware": {
+    "utc": "2026-09-13T23:23:46.525797+00:00",
+    "branch": "experiment/mac-mini-compiler-v2",
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "python": "3.12.12",
+    "packages": {
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "torch": "2.14.0",
+      "numba": "0.67.0",
+      "pytest": "9.1.1"
+    },
+    "hardware": "Apple M4\n17179869184",
+    "code_commit": "28429b09460ecb4e168a250dade6c706210a68ec"
+  },
+  "steps": 64,
+  "batch": 1,
+  "full_graph_sha256": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+  "wall_seconds": 139.18078120797873,
+  "seconds_through_first_validation": 135.4602327919565,
+  "invocation_wall_seconds": 160.33318870898802,
+  "includes_validation_and_checkpoint_overhead": true,
+  "next_action": "Report timing to primary agent for complete-pair allocation; do not independently start confirmation"
+}
