@@ -1,0 +1,24 @@
+{
+  "utc": "2026-09-13T23:29:38.715245+00:00",
+  "reason": "User added M4 mini and moved Seagate there; allocate complete pairs based on independent timing benchmark before new final tests",
+  "m1_seeds": [
+    100,
+    101
+  ],
+  "m4_seeds": [
+    102,
+    103,
+    104
+  ],
+  "retained_m1_child_pid": 27744,
+  "previous_scheduler_pid": 27097,
+  "adapter_sha256": "3b6f7bfe0616da62ea81511640faac36719ca60ce15e95e72a390ab57380a4a8",
+  "M1_first64_validation_seconds_approx": 181,
+  "M4_first64_validation_seconds": 135.4602327919565,
+  "all_architecture_optimizer_data_seeds_and_budgets_unchanged": true,
+  "test_gate": "All ten checkpoints complete before any final test; all final evaluation stays on M1",
+  "analysis_scope": "Primary paired t analysis unchanged; hardware assignment reported as two blocks, without hardware-specific inference",
+  "primary_root_mapping_on_worker": {
+    "/Users/alex/Desktop/flygpt_v01/": "/Users/alex/flygpt/"
+  }
+}
