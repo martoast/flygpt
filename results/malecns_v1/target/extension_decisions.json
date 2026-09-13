@@ -7,6 +7,13 @@
       "ce_improvement": 1.0204380750656128,
       "kl_improvement": 1.026194117963314,
       "continue": true
+    },
+    {
+      "after_step": 1024,
+      "next_step": 2048,
+      "ce_improvement": 0.45609283447265625,
+      "kl_improvement": 0.43757001496851444,
+      "continue": false
     }
   ],
   "maximum_continuation_updates": 2048

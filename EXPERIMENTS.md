@@ -14,9 +14,12 @@ Validation sentences occur in training. The measured 0.851 nats/byte and
 necessity on this task. They do not establish sequence generalization, exact
 reproduction of the teacher, a benefit specific to distillation versus CE-only
 training, or a benefit specific to biological wiring. G1 must retain this
-label even if later experiments succeed. Its ongoing continuation and primary
-matched rewired control remain unchanged. The earlier adaptive controller can
-extend through 2,048 updates; the control replays the completed stage budgets.
+label even if later experiments succeed. The target is now frozen at 1,024
+updates: CE 0.395344 crossed the existing 0.425 near-teacher threshold, so no
+2,048-update continuation was launched. Final G1 test CE is 0.403671 versus
+teacher 0.341370 on 2,272 bytes; zero-edge CE is 3.467236. This test has the
+same finite-grammar overlap limitation. The control replays the 512 and 1,024
+stage budgets and then receives identical final-test evaluation.
 
 ## G2 — Finite-Grammar Compositional Generalization
 
@@ -41,7 +44,25 @@ the next word may be intrinsically ambiguous. A lower G1 loss is not a target
 for G2. Low average byte loss alone could reflect predictable spelling and
 function words while held-out composition fails.
 
-Before launching G2, freeze a separate training/evaluation configuration:
+The separate training/evaluation configuration is now frozen in
+`configs/g2_v1.json`, before G2 training. It specifies a fresh 1,000-update
+TinyGPT teacher (batch 8), followed by 512-update students (batch 1), all using
+whole training sentences. Five paired seeds run real KD, rewired KD, real CE,
+rewired CE, and GRU CE. No early stopping or hyperparameter search is scheduled.
+Student AdamW learning rate is 0.001; teacher rate is 0.0003. Validation
+trajectories use the first eight audited sentences per axis; final evaluations
+use all 64 per axis. Runs are serial, with resumable student checkpoints and
+disk-space checks. `python -m scripts.run_g2` waits for the G1 matched control
+and its final test before launching this schedule.
+
+Evaluation rules:
+
+The n-gram reference is fitted to the complete training corpus and is not
+matched to the student's sampled-byte budget. The unrestricted symbolic
+grammar oracle is also an external reference, not a learned model. Initial
+student validation scores provide normalized teacher-gap closure on the same
+fixed validation sentences; this quantity is not evidence of a causal KD
+benefit without comparison to the CE-only student.
 
 - Train a fresh teacher on G2 training data only. Never distill logits from
   validation/test sentences; use the same prohibition for every student.
@@ -62,7 +83,7 @@ Before launching G2, freeze a separate training/evaluation configuration:
 - Validation may guide a prespecified search. Test stays unopened for model
   evaluation until choices are frozen. Dataset leakage auditing is allowed.
 
-G2 is prepared, not run. Lexical, length and structural splits are subsequent
+G2 is queued, not yet run. Lexical, length and structural splits are subsequent
 separate tests, not claims already covered by this dataset. Truly unseen words
 need an explicit learning/compositional rule; a byte vocabulary alone does not
 provide their meaning. Length tests must preserve the target dependency across

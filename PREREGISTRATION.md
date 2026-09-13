@@ -5,8 +5,10 @@ G1 is **Finite-Grammar Functional Encoding**, not sequence generalization.
 This clarification changes no active training settings or historical protocol.
 G2 is **Finite-Grammar Compositional Generalization**; its composition split is
 specified and audited before G2 training. G3 is **Natural-Language Modeling**.
-See [EXPERIMENTS.md](EXPERIMENTS.md). The G2 training-budget protocol is still
-pending; dataset preparation alone is not a preregistered trained experiment.
+See [EXPERIMENTS.md](EXPERIMENTS.md). G2's subsequent fixed-budget exploratory
+protocol is recorded in `configs/g2_v1.json` before G2 training: five seeds,
+512 updates per student condition, no search or early stopping, with test
+evaluation deferred until every scheduled training run finishes.
 
 ## Primary question
 Can a recurrent neural network whose allowed recurrent edges are fixed by the MaleCNS connectome learn autoregressive sequence/language tasks, and does real biological topology differ from topology-matched controls?

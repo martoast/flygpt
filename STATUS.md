@@ -14,7 +14,32 @@ were read back and hash-verified. The destination and checksum are recorded in
 disk, not cloud/off-site storage. The original local-only preservation manifest
 is retained as a historical record.
 
-## Latest measured checkpoint: 512 continuation updates
+## Frozen G1 target: 1,024 continuation updates
+
+Validation CE is **0.395344**, versus teacher **0.324945**, a gap of **0.070399**.
+Teacher KL is **0.137400**, agreement **84.375%**, and zero-edge CE **3.412906**.
+The predefined 0.425 near-teacher threshold was crossed: **no 2,048-update run**.
+Final test CE is **0.403671**, versus teacher **0.341370**, on 2,272 bytes;
+teacher KL is **0.112697**, agreement **87.764%**, and zero-edge CE **3.467236**.
+G1's test retains its finite-grammar sentence-overlap limitation. This is
+functional encoding evidence, not novel-composition generalization.
+
+The degree-preserving seed-zero control has started its matched CE pilot and
+will receive the same 512- and 1,024-update continuation stages. A matched
+topology result is still pending. The 1,024 target, optimizer and reproduced
+sampling state, graph, teacher, corpus and final test are independently
+backed up to Seagate; the tar and 18 embedded artifacts were hash-verified.
+See `results/malecns_v1/target/external_backup_1024.json`.
+
+G2's fixed 26-run schedule (one teacher, five seeds × five student conditions)
+is implemented and queued after G1's matched control and final test. It uses
+whole-sentence training and separate composition-span metrics; tests stay
+unused for model evaluation until all scheduled training completes. G2 has
+no trained result yet. The serial schedule is a sustained multi-day workload
+on this machine, not an immediate result; progress is written to
+`results/g2_v1/queue.json` and per-run logs.
+
+## Historical milestone: 512 continuation updates
 
 **Validation CE: 0.851437 nats/byte**, versus frozen teacher **0.324945**.
 The trajectory is **3.175374 → 2.862806 → 2.522078 → 1.871875 → 0.851437**

@@ -1,0 +1,38 @@
+{
+  "regime": "within the predefined near-teacher validation threshold; inspect held-out test and ablations",
+  "final_step": 1024,
+  "validation_trajectory": [
+    3.1753737032413483,
+    2.862806051969528,
+    2.5220775306224823,
+    1.871874988079071,
+    0.8514369130134583,
+    0.395344078540802
+  ],
+  "teacher_gap": 0.07039909437298775,
+  "single_seed": true,
+  "topology_advantage": "not established",
+  "extension_decisions": [
+    {
+      "after_step": 512,
+      "next_step": 1024,
+      "ce_improvement": 1.0204380750656128,
+      "kl_improvement": 1.026194117963314,
+      "continue": true
+    },
+    {
+      "after_step": 1024,
+      "next_step": 2048,
+      "ce_improvement": 0.45609283447265625,
+      "kl_improvement": 0.43757001496851444,
+      "continue": false
+    }
+  ],
+  "test": {
+    "student_ce": 0.4036714638202963,
+    "teacher_ce": 0.3413704085937688,
+    "teacher_kl": 0.11269664727676083,
+    "teacher_agreement": 0.8776408450704225,
+    "zero_edge_ce": 3.4672361998490886
+  }
+}

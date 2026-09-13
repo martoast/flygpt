@@ -9,5 +9,6 @@ Same 256 validation bytes and frozen teacher at every checkpoint. Single-seed fe
 | 128 | 4608 | 2.5221 | 2.1971 | 2.2487 | 0.191 | 2.9045 | 1.880 | 0.2009 | 0.002751 | 939.3 |
 | 256 | 8704 | 1.8719 | 1.5469 | 1.6012 | 0.395 | 2.9569 | 1.688 | 0.2141 | 0.011143 | 1599.9 |
 | 512 | 16896 | 0.8514 | 0.5265 | 0.5750 | 0.730 | 3.1075 | 1.516 | 0.1992 | 0.011744 | 2943.2 |
+| 1024 | 33280 | 0.3953 | 0.0704 | 0.1374 | 0.844 | 3.4129 | 0.539 | 0.1914 | 0.011309 | 5369.6 |
 
 Gradient norms are measured before clipping to 1.0. Saturation is abs(h)>0.95, sampled at byte boundaries. KL is forward KL(teacher || student), in nats per byte at T=1; the T=2 training-scaled KL is also retained in JSON. Training wall time excludes these separate diagnostic processes but can include resource contention.

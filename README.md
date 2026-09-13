@@ -7,7 +7,7 @@ The current experiment is **G1 — Finite-Grammar Functional Encoding**.
 dataset, with no trained result yet. **G3 — Natural-Language Modeling** is
 future work. See the [experiment registry](EXPERIMENTS.md) for claim boundaries.
 
-**Current measured status:** the full real graph is loaded. Baseline A reaches **0.851 nats/byte** after 512 distillation-continuation updates, versus teacher **0.325**; zeroing recurrence raises loss to **3.107**. The curve is still descending, but this is one seed on a finite grammar with sentence overlap, not general language understanding or a topology-advantage result. See [STATUS.md](STATUS.md) and the [measured trajectory](results/malecns_v1/target/TRAJECTORY.md).
+**Current measured status:** G1 is frozen at **1,024 continuation updates**, with validation CE **0.395** versus teacher **0.325** and zero-edge CE **3.413**. It crossed the existing stopping threshold; no 2,048 run was launched. Final test CE is **0.404** versus teacher **0.341**. This is one seed on a finite grammar with sentence overlap, not sequence generalization or a topology-advantage result. The matched rewired run is active; G2 is queued. See [STATUS.md](STATUS.md) and the [measured trajectory](results/malecns_v1/target/TRAJECTORY.md).
 
 ## Core hypotheses
 - H1: a real connectome-constrained recurrent network can learn non-trivial sequence prediction.

@@ -17,11 +17,14 @@ from src.provenance import manifest,save_json
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--step',type=int,default=512);args=parser.parse_args()
-    torch.set_num_threads(4);root=Path('results/malecns_v1/target');ck=root/'snapshots'/f'real_0_step_{args.step:04d}.pt'
+    parser=argparse.ArgumentParser();parser.add_argument('--step',type=int,default=512)
+    parser.add_argument('--condition',choices=['real','rewired'],default='real')
+    args=parser.parse_args()
+    torch.set_num_threads(4);root=Path('results/malecns_v1/target');ck=root/'snapshots'/f'{args.condition}_0_step_{args.step:04d}.pt'
+    graph='data/processed/malecns.npz' if args.condition=='real' else 'data/processed/controls/rewired_777.npz'
     data_path='data/raw/grammar_v1/test.txt'
     record=manifest({'checkpoint':str(ck),'selection':'final checkpoint after validation-based continuation policy, not selected by test','window':32,'seed':42},[ck,data_path,'results/malecns_v1/teacher.pt'])
-    start=time.perf_counter();model=load_model('data/processed/malecns.npz',ck,'cpu')
+    start=time.perf_counter();model=load_model(graph,ck,'cpu')
     tc=torch.load('results/malecns_v1/teacher.pt',weights_only=True,map_location='cpu');teacher=TinyGPT(**tc['config']).eval();teacher.load_state_dict(tc['model'])
     data=bytes_from_file(data_path);windows=list(range(0,len(data)-32,32));rows=[]
     with torch.no_grad():
@@ -38,13 +41,14 @@ def main():
     rng=np.random.default_rng(42);indices=rng.integers(0,len(rows),size=(10000,len(rows)))
     means={k:float(np.mean([r[k] for r in rows])) for k in rows[0] if k!='start'}
     gap=np.array([r['student_ce']-r['teacher_ce'] for r in rows]);ablation=np.array([r['zero_edge_ce']-r['student_ce'] for r in rows])
-    record.update(evidence_domain='MaleCNS-based computation on held-out synthetic grammar; one training seed',
+    record.update(evidence_domain=('MaleCNS-based' if args.condition=='real' else 'degree-preserving synthetic control')+' computation on G1 finite grammar with sentence overlap; one training seed',
+                  condition=args.condition,
                   metrics=means,n_test_bytes=32*len(rows),windows=rows,
                   paired_window_bootstrap={'gap_95_ci':np.percentile(gap[indices].mean(1),[2.5,97.5]).tolist(),
                                            'ablation_penalty_95_ci':np.percentile(ablation[indices].mean(1),[2.5,97.5]).tolist(),
                                            'limitation':'windows are not independent training seeds; neighboring text may be correlated'},
                   runtime_seconds=time.perf_counter()-start)
-    save_json(root/'final_test.json',record);print(means,flush=True)
+    save_json(root/('final_test.json' if args.condition=='real' else 'rewired_final_test.json'),record);print(means,flush=True)
 
 
 if __name__=='__main__':main()

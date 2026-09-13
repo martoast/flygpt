@@ -1,0 +1,635 @@
+{
+  "created_utc": "2026-09-13T02:47:20Z",
+  "code_commit": "066995ba813ea52deb002510427b0fbfdb45a6c2",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "cc0639e325a180145bc468d959cf8a03262271e5e44fbb55ba9319cf49f6abce",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": true,
+  "config": {
+    "checkpoint": "results/malecns_v1/target/snapshots/real_0_step_1024.pt",
+    "selection": "final checkpoint after validation-based continuation policy, not selected by test",
+    "window": 32,
+    "seed": 42
+  },
+  "inputs": {
+    "results/malecns_v1/target/snapshots/real_0_step_1024.pt": "479026dd66624c0a837cacbc24fedb4c26df7bb39f4494f936e285180fcdf6a4",
+    "data/raw/grammar_v1/test.txt": "846d4b26dec8d584a14b7487d0ccb972b18d5e9db6d2589c59a9c80398bfa811",
+    "results/malecns_v1/teacher.pt": "52ea8b709d3072a362d2a61727ac531a5e202f2a594344c724bde1818200f6de"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "MaleCNS-based computation on held-out synthetic grammar; one training seed",
+  "metrics": {
+    "student_ce": 0.4036714638202963,
+    "teacher_ce": 0.3413704085937688,
+    "teacher_kl": 0.11269664727676083,
+    "teacher_agreement": 0.8776408450704225,
+    "zero_edge_ce": 3.4672361998490886
+  },
+  "n_test_bytes": 2272,
+  "windows": [
+    {
+      "start": 0,
+      "student_ce": 0.20651066303253174,
+      "teacher_ce": 0.2575281262397766,
+      "teacher_kl": 0.07582537829875946,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.500457286834717
+    },
+    {
+      "start": 32,
+      "student_ce": 0.34967201948165894,
+      "teacher_ce": 0.2978229820728302,
+      "teacher_kl": 0.056463971734046936,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.7179505825042725
+    },
+    {
+      "start": 64,
+      "student_ce": 0.4176986515522003,
+      "teacher_ce": 0.3213116526603699,
+      "teacher_kl": 0.045197829604148865,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.3450002670288086
+    },
+    {
+      "start": 96,
+      "student_ce": 0.5427756309509277,
+      "teacher_ce": 0.39369139075279236,
+      "teacher_kl": 0.18088480830192566,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.6670734882354736
+    },
+    {
+      "start": 128,
+      "student_ce": 0.5281363129615784,
+      "teacher_ce": 0.34377771615982056,
+      "teacher_kl": 0.1706012487411499,
+      "teacher_agreement": 0.78125,
+      "zero_edge_ce": 3.6554667949676514
+    },
+    {
+      "start": 160,
+      "student_ce": 0.4172315001487732,
+      "teacher_ce": 0.34344348311424255,
+      "teacher_kl": 0.07247070223093033,
+      "teacher_agreement": 1.0,
+      "zero_edge_ce": 3.2542247772216797
+    },
+    {
+      "start": 192,
+      "student_ce": 0.4337339401245117,
+      "teacher_ce": 0.2972303330898285,
+      "teacher_kl": 0.12744352221488953,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.588177442550659
+    },
+    {
+      "start": 224,
+      "student_ce": 0.3599621653556824,
+      "teacher_ce": 0.3972827196121216,
+      "teacher_kl": 0.09736213088035583,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.5742809772491455
+    },
+    {
+      "start": 256,
+      "student_ce": 0.33052799105644226,
+      "teacher_ce": 0.37397706508636475,
+      "teacher_kl": 0.06795883923768997,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.217721939086914
+    },
+    {
+      "start": 288,
+      "student_ce": 0.3546362519264221,
+      "teacher_ce": 0.31216299533843994,
+      "teacher_kl": 0.059538133442401886,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.377704381942749
+    },
+    {
+      "start": 320,
+      "student_ce": 0.4754806458950043,
+      "teacher_ce": 0.32969939708709717,
+      "teacher_kl": 0.12112736701965332,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.5305817127227783
+    },
+    {
+      "start": 352,
+      "student_ce": 0.5385221242904663,
+      "teacher_ce": 0.3518691658973694,
+      "teacher_kl": 0.07000670582056046,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.2714250087738037
+    },
+    {
+      "start": 384,
+      "student_ce": 0.5421119332313538,
+      "teacher_ce": 0.3763633370399475,
+      "teacher_kl": 0.23780611157417297,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.3493494987487793
+    },
+    {
+      "start": 416,
+      "student_ce": 0.3283635377883911,
+      "teacher_ce": 0.2975026071071625,
+      "teacher_kl": 0.12875273823738098,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.636362314224243
+    },
+    {
+      "start": 448,
+      "student_ce": 0.3977823555469513,
+      "teacher_ce": 0.3566039204597473,
+      "teacher_kl": 0.06509653478860855,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.6048660278320312
+    },
+    {
+      "start": 480,
+      "student_ce": 0.6220290064811707,
+      "teacher_ce": 0.33917149901390076,
+      "teacher_kl": 0.13379071652889252,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.321181297302246
+    },
+    {
+      "start": 512,
+      "student_ce": 0.3488568365573883,
+      "teacher_ce": 0.3544823229312897,
+      "teacher_kl": 0.13345053791999817,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.5719966888427734
+    },
+    {
+      "start": 544,
+      "student_ce": 0.3222135305404663,
+      "teacher_ce": 0.3943999111652374,
+      "teacher_kl": 0.18211227655410767,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.5710859298706055
+    },
+    {
+      "start": 576,
+      "student_ce": 0.4193338453769684,
+      "teacher_ce": 0.34595856070518494,
+      "teacher_kl": 0.06954330205917358,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.4064598083496094
+    },
+    {
+      "start": 608,
+      "student_ce": 0.4678837060928345,
+      "teacher_ce": 0.4163118004798889,
+      "teacher_kl": 0.059983253479003906,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.4559731483459473
+    },
+    {
+      "start": 640,
+      "student_ce": 0.4199732542037964,
+      "teacher_ce": 0.33857205510139465,
+      "teacher_kl": 0.10890179127454758,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.5183372497558594
+    },
+    {
+      "start": 672,
+      "student_ce": 0.36307573318481445,
+      "teacher_ce": 0.3289526402950287,
+      "teacher_kl": 0.24304527044296265,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.3361964225769043
+    },
+    {
+      "start": 704,
+      "student_ce": 0.5458033680915833,
+      "teacher_ce": 0.4197096526622772,
+      "teacher_kl": 0.14216545224189758,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.1565189361572266
+    },
+    {
+      "start": 736,
+      "student_ce": 0.5432714223861694,
+      "teacher_ce": 0.30817723274230957,
+      "teacher_kl": 0.1320606917142868,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.24954891204834
+    },
+    {
+      "start": 768,
+      "student_ce": 0.39147162437438965,
+      "teacher_ce": 0.36622071266174316,
+      "teacher_kl": 0.0651109516620636,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.328648090362549
+    },
+    {
+      "start": 800,
+      "student_ce": 0.4632411301136017,
+      "teacher_ce": 0.36329907178878784,
+      "teacher_kl": 0.06440982222557068,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.703998327255249
+    },
+    {
+      "start": 832,
+      "student_ce": 0.39005473256111145,
+      "teacher_ce": 0.2853486239910126,
+      "teacher_kl": 0.10659680515527725,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.3833980560302734
+    },
+    {
+      "start": 864,
+      "student_ce": 0.3714996576309204,
+      "teacher_ce": 0.29601937532424927,
+      "teacher_kl": 0.07905969023704529,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.8009490966796875
+    },
+    {
+      "start": 896,
+      "student_ce": 0.3707743287086487,
+      "teacher_ce": 0.29640907049179077,
+      "teacher_kl": 0.08123578131198883,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.4025816917419434
+    },
+    {
+      "start": 928,
+      "student_ce": 0.3800030052661896,
+      "teacher_ce": 0.31760814785957336,
+      "teacher_kl": 0.13572365045547485,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.2371954917907715
+    },
+    {
+      "start": 960,
+      "student_ce": 0.40005773305892944,
+      "teacher_ce": 0.41637587547302246,
+      "teacher_kl": 0.09447501599788666,
+      "teacher_agreement": 0.78125,
+      "zero_edge_ce": 3.7133405208587646
+    },
+    {
+      "start": 992,
+      "student_ce": 0.31682395935058594,
+      "teacher_ce": 0.2513684928417206,
+      "teacher_kl": 0.09376997500658035,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.5986666679382324
+    },
+    {
+      "start": 1024,
+      "student_ce": 0.32817408442497253,
+      "teacher_ce": 0.31174829602241516,
+      "teacher_kl": 0.07244057953357697,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.3771491050720215
+    },
+    {
+      "start": 1056,
+      "student_ce": 0.27068036794662476,
+      "teacher_ce": 0.3536762297153473,
+      "teacher_kl": 0.06300090253353119,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.4353725910186768
+    },
+    {
+      "start": 1088,
+      "student_ce": 0.3090529441833496,
+      "teacher_ce": 0.3369634449481964,
+      "teacher_kl": 0.06358078867197037,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.444312572479248
+    },
+    {
+      "start": 1120,
+      "student_ce": 0.6210943460464478,
+      "teacher_ce": 0.4268072247505188,
+      "teacher_kl": 0.3131561279296875,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.631572723388672
+    },
+    {
+      "start": 1152,
+      "student_ce": 0.3441828489303589,
+      "teacher_ce": 0.3478958308696747,
+      "teacher_kl": 0.07182425260543823,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.6212406158447266
+    },
+    {
+      "start": 1184,
+      "student_ce": 0.40492433309555054,
+      "teacher_ce": 0.2964797616004944,
+      "teacher_kl": 0.15263180434703827,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.369025468826294
+    },
+    {
+      "start": 1216,
+      "student_ce": 0.30132099986076355,
+      "teacher_ce": 0.28149276971817017,
+      "teacher_kl": 0.06849411875009537,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.2838149070739746
+    },
+    {
+      "start": 1248,
+      "student_ce": 0.3703550398349762,
+      "teacher_ce": 0.2461933195590973,
+      "teacher_kl": 0.08274044096469879,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.3582754135131836
+    },
+    {
+      "start": 1280,
+      "student_ce": 0.3646424412727356,
+      "teacher_ce": 0.4197520315647125,
+      "teacher_kl": 0.10569298267364502,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.551051378250122
+    },
+    {
+      "start": 1312,
+      "student_ce": 0.35832181572914124,
+      "teacher_ce": 0.3185615539550781,
+      "teacher_kl": 0.08480198681354523,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.6866843700408936
+    },
+    {
+      "start": 1344,
+      "student_ce": 0.4389706552028656,
+      "teacher_ce": 0.45306992530822754,
+      "teacher_kl": 0.07007025182247162,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.330639123916626
+    },
+    {
+      "start": 1376,
+      "student_ce": 0.6083560585975647,
+      "teacher_ce": 0.36514487862586975,
+      "teacher_kl": 0.32615789771080017,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.701956272125244
+    },
+    {
+      "start": 1408,
+      "student_ce": 0.20365536212921143,
+      "teacher_ce": 0.27337849140167236,
+      "teacher_kl": 0.056599196046590805,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.6509146690368652
+    },
+    {
+      "start": 1440,
+      "student_ce": 0.36245521903038025,
+      "teacher_ce": 0.30696165561676025,
+      "teacher_kl": 0.09135423600673676,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.387697219848633
+    },
+    {
+      "start": 1472,
+      "student_ce": 0.588148295879364,
+      "teacher_ce": 0.3722149431705475,
+      "teacher_kl": 0.2685675323009491,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.203078269958496
+    },
+    {
+      "start": 1504,
+      "student_ce": 0.4146087169647217,
+      "teacher_ce": 0.4395650029182434,
+      "teacher_kl": 0.13043320178985596,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.7293410301208496
+    },
+    {
+      "start": 1536,
+      "student_ce": 0.576423704624176,
+      "teacher_ce": 0.36505359411239624,
+      "teacher_kl": 0.26604822278022766,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.315211296081543
+    },
+    {
+      "start": 1568,
+      "student_ce": 0.4723092317581177,
+      "teacher_ce": 0.41651004552841187,
+      "teacher_kl": 0.07590893656015396,
+      "teacher_agreement": 1.0,
+      "zero_edge_ce": 3.5145041942596436
+    },
+    {
+      "start": 1600,
+      "student_ce": 0.4243078827857971,
+      "teacher_ce": 0.3580315113067627,
+      "teacher_kl": 0.07405510544776917,
+      "teacher_agreement": 0.96875,
+      "zero_edge_ce": 3.3360378742218018
+    },
+    {
+      "start": 1632,
+      "student_ce": 0.5517300367355347,
+      "teacher_ce": 0.3214843273162842,
+      "teacher_kl": 0.12288736552000046,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.551013708114624
+    },
+    {
+      "start": 1664,
+      "student_ce": 0.48484373092651367,
+      "teacher_ce": 0.36389389634132385,
+      "teacher_kl": 0.14022377133369446,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.379312753677368
+    },
+    {
+      "start": 1696,
+      "student_ce": 0.33852943778038025,
+      "teacher_ce": 0.2818587124347687,
+      "teacher_kl": 0.08309390395879745,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.509922981262207
+    },
+    {
+      "start": 1728,
+      "student_ce": 0.31138017773628235,
+      "teacher_ce": 0.4125199317932129,
+      "teacher_kl": 0.061424702405929565,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.6050329208374023
+    },
+    {
+      "start": 1760,
+      "student_ce": 0.29752153158187866,
+      "teacher_ce": 0.3723299503326416,
+      "teacher_kl": 0.11577875167131424,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.790195941925049
+    },
+    {
+      "start": 1792,
+      "student_ce": 0.30492743849754333,
+      "teacher_ce": 0.3036061227321625,
+      "teacher_kl": 0.09921668469905853,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.5840301513671875
+    },
+    {
+      "start": 1824,
+      "student_ce": 0.3675435185432434,
+      "teacher_ce": 0.29041990637779236,
+      "teacher_kl": 0.07267142087221146,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.4227073192596436
+    },
+    {
+      "start": 1856,
+      "student_ce": 0.41817349195480347,
+      "teacher_ce": 0.42542025446891785,
+      "teacher_kl": 0.1219695657491684,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.360494613647461
+    },
+    {
+      "start": 1888,
+      "student_ce": 0.45944076776504517,
+      "teacher_ce": 0.4065459966659546,
+      "teacher_kl": 0.10604114830493927,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.5053114891052246
+    },
+    {
+      "start": 1920,
+      "student_ce": 0.3747588098049164,
+      "teacher_ce": 0.337630957365036,
+      "teacher_kl": 0.0677286833524704,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.446782112121582
+    },
+    {
+      "start": 1952,
+      "student_ce": 0.3804754316806793,
+      "teacher_ce": 0.36119604110717773,
+      "teacher_kl": 0.0760202556848526,
+      "teacher_agreement": 0.875,
+      "zero_edge_ce": 3.2848100662231445
+    },
+    {
+      "start": 1984,
+      "student_ce": 0.4077233672142029,
+      "teacher_ce": 0.34314805269241333,
+      "teacher_kl": 0.062453046441078186,
+      "teacher_agreement": 0.9375,
+      "zero_edge_ce": 3.201523542404175
+    },
+    {
+      "start": 2016,
+      "student_ce": 0.589694619178772,
+      "teacher_ce": 0.38432765007019043,
+      "teacher_kl": 0.20498228073120117,
+      "teacher_agreement": 0.78125,
+      "zero_edge_ce": 3.367398977279663
+    },
+    {
+      "start": 2048,
+      "student_ce": 0.30849456787109375,
+      "teacher_ce": 0.25463226437568665,
+      "teacher_kl": 0.04240221530199051,
+      "teacher_agreement": 0.96875,
+      "zero_edge_ce": 3.455360174179077
+    },
+    {
+      "start": 2080,
+      "student_ce": 0.2755410373210907,
+      "teacher_ce": 0.28396710753440857,
+      "teacher_kl": 0.06196758896112442,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.5132100582122803
+    },
+    {
+      "start": 2112,
+      "student_ce": 0.3032778203487396,
+      "teacher_ce": 0.36166107654571533,
+      "teacher_kl": 0.11503259837627411,
+      "teacher_agreement": 0.8125,
+      "zero_edge_ce": 3.3598618507385254
+    },
+    {
+      "start": 2144,
+      "student_ce": 0.3485190272331238,
+      "teacher_ce": 0.2760895788669586,
+      "teacher_kl": 0.07665719836950302,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.4306600093841553
+    },
+    {
+      "start": 2176,
+      "student_ce": 0.30716267228126526,
+      "teacher_ce": 0.2786213159561157,
+      "teacher_kl": 0.07958070933818817,
+      "teacher_agreement": 0.96875,
+      "zero_edge_ce": 3.5941505432128906
+    },
+    {
+      "start": 2208,
+      "student_ce": 0.17825715243816376,
+      "teacher_ce": 0.23110641539096832,
+      "teacher_kl": 0.07304873317480087,
+      "teacher_agreement": 0.90625,
+      "zero_edge_ce": 3.45674729347229
+    },
+    {
+      "start": 2240,
+      "student_ce": 0.5311823487281799,
+      "teacher_ce": 0.3686870038509369,
+      "teacher_kl": 0.27875176072120667,
+      "teacher_agreement": 0.84375,
+      "zero_edge_ce": 3.380645751953125
+    }
+  ],
+  "paired_window_bootstrap": {
+    "gap_95_ci": [
+      0.04197298660874366,
+      0.08293144263222184
+    ],
+    "ablation_penalty_95_ci": [
+      3.01658944922014,
+      3.1093877023112184
+    ],
+    "limitation": "windows are not independent training seeds; neighboring text may be correlated"
+  },
+  "runtime_seconds": 248.72354629199253
+}
