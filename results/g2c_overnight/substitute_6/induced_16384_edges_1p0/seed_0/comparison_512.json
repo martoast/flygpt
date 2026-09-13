@@ -1,0 +1,74 @@
+{
+  "task": "substitute",
+  "substrate": "induced_16384_edges_1p0",
+  "seed": 0,
+  "updates": 512,
+  "split": "test_capacity",
+  "metrics": {
+    "real_kd": {
+      "accuracy": 0.0,
+      "response_ce": 1.1283929502325398,
+      "token_accuracy": 0.43080357142857145,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.5354682238296772e-06,
+      "teacher_kl": 1.1283760161272116,
+      "zero_edge_ce": 1.9097922412412507,
+      "exact_teacher_agreement": 0.0,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "real_ce": {
+      "accuracy": 0.0078125,
+      "response_ce": 0.8047309041555438,
+      "token_accuracy": 0.6372767857142857,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.5354682238296772e-06,
+      "teacher_kl": 0.8047136486108813,
+      "zero_edge_ce": 1.9659734591841698,
+      "exact_teacher_agreement": 0.0078125,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "rewired_kd": {
+      "accuracy": 0.0,
+      "response_ce": 1.2006968344960893,
+      "token_accuracy": 0.359375,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.5354682238296772e-06,
+      "teacher_kl": 1.200680101024253,
+      "zero_edge_ce": 1.9274869422827448,
+      "exact_teacher_agreement": 0.0,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    }
+  },
+  "teacher": {
+    "accuracy": 1.0,
+    "response_ce": 1.5354682238296772e-06,
+    "token_accuracy": 1.0,
+    "cases": 128,
+    "response_symbols": 896
+  },
+  "A_transfer": -0.0078125,
+  "A_topology": 0.0,
+  "paired_case_bootstrap_95_transfer": [
+    -0.0234375,
+    0.0
+  ],
+  "paired_case_bootstrap_95_topology": [
+    0.0,
+    0.0
+  ],
+  "inference_limit": "Descriptive paired-case intervals; single/adaptively selected seeds do not establish a robust advantage",
+  "elapsed_seconds": 141.0660047919955,
+  "freeze": "results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/frozen_choices.json",
+  "unlock": "results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/unlock_512.json",
+  "checkpoint_paths": {
+    "results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/real_kd/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/real_kd/step_00512.pt",
+    "results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/real_ce/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/real_ce/step_00512.pt",
+    "results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/rewired_kd/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/induced_16384_edges_1p0/seed_0/rewired_kd/step_00512.pt"
+  }
+}
