@@ -1,0 +1,74 @@
+{
+  "task": "substitute",
+  "substrate": "full",
+  "seed": 0,
+  "updates": 1024,
+  "split": "test_extension",
+  "metrics": {
+    "real_kd": {
+      "accuracy": 0.6328125,
+      "response_ce": 0.2118309599424606,
+      "token_accuracy": 0.9341517857142857,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.6756825379572935e-06,
+      "teacher_kl": 0.21183363067194705,
+      "zero_edge_ce": 1.9006354074393,
+      "exact_teacher_agreement": 0.6328125,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "real_ce": {
+      "accuracy": 0.8359375,
+      "response_ce": 0.05918001096038746,
+      "token_accuracy": 0.9765625,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.6756825379572935e-06,
+      "teacher_kl": 0.05917605857108096,
+      "zero_edge_ce": 1.925116563481944,
+      "exact_teacher_agreement": 0.8359375,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "rewired_kd": {
+      "accuracy": 0.2265625,
+      "response_ce": 0.6896368049970728,
+      "token_accuracy": 0.8191964285714286,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.6756825379572935e-06,
+      "teacher_kl": 0.6896346174513123,
+      "zero_edge_ce": 1.7566767877766065,
+      "exact_teacher_agreement": 0.2265625,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    }
+  },
+  "teacher": {
+    "accuracy": 1.0,
+    "response_ce": 1.6756825379572935e-06,
+    "token_accuracy": 1.0,
+    "cases": 128,
+    "response_symbols": 896
+  },
+  "A_transfer": -0.203125,
+  "A_topology": 0.40625,
+  "paired_case_bootstrap_95_transfer": [
+    -0.296875,
+    -0.109375
+  ],
+  "paired_case_bootstrap_95_topology": [
+    0.3046875,
+    0.5
+  ],
+  "inference_limit": "Descriptive paired-case intervals; single/adaptively selected seeds do not establish a robust advantage",
+  "elapsed_seconds": 4874.881315500068,
+  "freeze": "results/g2c_overnight/substitute_6/full/seed_0/frozen_choices.json",
+  "unlock": "results/g2c_overnight/substitute_6/full/seed_0/unlock_1024.json",
+  "checkpoint_paths": {
+    "results/g2c_overnight/substitute_6/full/seed_0/real_kd/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/full/seed_0/real_kd/step_01024.pt",
+    "results/g2c_overnight/substitute_6/full/seed_0/real_ce/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/full/seed_0/real_ce/step_01024.pt",
+    "results/g2c_overnight/substitute_6/full/seed_0/rewired_kd/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/g2c_overnight/substitute_6/full/seed_0/rewired_kd/step_01024.pt"
+  }
+}
