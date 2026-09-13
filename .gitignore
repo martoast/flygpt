@@ -22,3 +22,5 @@ data/processed/g2c_capacity/
 results/g2c_overnight/controller.lock
 results/compiler_v1/controller.lock
 results/**/*.pt.link
+
+results/compiler_v1/notification_watcher.lock
