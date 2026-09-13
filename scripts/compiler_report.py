@@ -12,6 +12,9 @@ def main():
     if (ROOT/'failure.json').exists():lines+=['**Execution stopped:** '+read(ROOT/'failure.json')['error'],'']
     elif (ROOT/'completion.json').exists():lines+=['**Status:** frozen study completed.','']
     else:lines+=['**Status:** running / queued. Empty result cells are pending, not failures.','']
+    backup=ROOT/'backup_status.json'
+    if backup.exists() and not read(backup)['external_connected']:
+        lines+=['**Backup status:** Seagate is offline. New checkpoints are preserved in local staging with a 3 GiB free-space reserve; they are not yet externally backed up. Migration and hash verification resume automatically when the drive returns.','']
     audit=ROOT/'teacher_label_audit.json'
     if audit.exists():
         a=read(audit);lines += [f'Teacher-only generation audit: {a["matches"]}/{a["cases"]} generated training answers equal the original answers. '+('Consequently hard-target CE has exactly the same objective as supervised CE. A separate run checks implementation equivalence; this does not establish improved sample efficiency or direct parameter translation.' if a['all_identical'] else 'Targets are retained exactly as generated; original answers are not used to repair them.'),'']
@@ -28,6 +31,12 @@ def main():
             text=f'{label}: n={len(rs)}, mean MaleCNS CE {pc(acc.mean())}, mean paired topology difference {100*delta.mean():+.2f} pp.'
             if len(rs)>1:text+=f' Seed SD: {100*acc.std(ddof=1):.2f} pp (accuracy), {100*delta.std(ddof=1):.2f} pp (difference).'
             lines += [text,'']
+    historical=Path('results/g2c_overnight/substitute_6/full/seed_0/comparison_1024.json')
+    if pairs and historical.exists():
+        zero=next((r for r in pairs if r['seed']==0),None)
+        if zero:
+            kd=read(historical)['A_topology'];ce=zero['A_topology_CE']
+            lines += [f'Seed-zero topology difference is {100*ce:+.2f} pp under CE versus {100*kd:+.2f} pp under KD; their difference is {100*(ce-kd):+.2f} pp. This is a descriptive topology-by-objective comparison, not a replicated interaction estimate.','']
     lines+=['## Compiler outcomes','', '| Method / seed | Exact | CE reference exact | Difference (pp) | Response CE | Teacher KL | Zero-edge exact |','|---|---:|---:|---:|---:|---:|---:|']
     equivalence_notes=[]
     for p in sorted(ROOT.glob('hard_comparisons/seed_*.json')):
@@ -54,7 +63,7 @@ def main():
     for p in sorted(ROOT.glob('**/progress.json')):
         r=read(p);ev=r.get('evaluations',[]);m=ev[-1]['validation']['metrics'] if ev else {}
         lines.append(f'- `{p.parent}`: {r["step"]} updates; {r["response_symbols"]} response symbols; {r["wall_seconds"]/60:.1f} min; validation exact {pc(m.get("accuracy",0))}.')
-    lines+=['','All checkpoints are hash-verified on Seagate. Final local checkpoints may be symlinks to those archives to conserve internal storage. Losses, hidden-state norms/saturation, gradients, optimizer state, RNG, input hashes and per-instance evaluation outputs are preserved. Source/protocol: `results/compiler_v1/frozen_plan.json` and `configs/compiler_v1.json`.','',
+    lines+=['','Every checkpoint is preserved with hashes. Archives go to Seagate when available and to bounded local staging while disconnected; staged files are migrated and verified on reconnect. Final checkpoint references may be symlinks to conserve internal storage. Losses, hidden-state norms/saturation, gradients, optimizer state, RNG, input hashes and per-instance evaluation outputs are preserved. Source/protocol: `results/compiler_v1/frozen_plan.json` and `configs/compiler_v1.json`.','',
         'The unresolved questions are robustness across independent seeds, topology effects under CE, and whether teacher-derived objectives match or improve supervised training. “Matches” is a descriptive two-percentage-point target, not a formal noninferiority conclusion. Positive screening results alone are not robust transfer evidence.','']
     p=Path('COMPILER_REPORT.md');tmp=p.with_suffix('.md.tmp');tmp.write_text('\n'.join(lines));tmp.replace(p)
 if __name__=='__main__':main()

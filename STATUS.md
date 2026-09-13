@@ -2,14 +2,23 @@
 
 ## Current outcome — 2026-09-13
 
-G2c is now running under `configs/g2c_overnight_v1.json`. The first
+The current priority is paired full-MaleCNS / rewired CE-only substitution
+replication across seeds 0–4, followed by teacher-hard targets and a frozen
+compiler-objective tournament. Seed zero real CE is reused transparently;
+seeds 1–4 are fresh replications. See [COMPILER_REPORT.md](COMPILER_REPORT.md).
+The original test is unchanged but already inspected: the tournament is
+exploratory. Reversal finished as a secondary near-zero exact-accuracy result;
+no further task or substrate-reduction runs are scheduled in this study.
+
+G2c's initial teacher qualification used `configs/g2c_overnight_v1.json`. The first
 deterministic substitution teacher passed the fixed ≥95% exact-answer gate:
 100% on validation (256) and locked qualification (128), with disjoint input
 instances. The parameter-matched GRU also reached 100% validation accuracy;
-all three n-gram baselines reached 0%. Full MaleCNS KD, CE-only, and rewired KD
-are frozen at matched 512-update initial budgets. Final tests remain locked
-until each matched cohort finishes. See [OVERNIGHT_REPORT.md](OVERNIGHT_REPORT.md)
-for current progress and the eventual measured comparison. These are formal
+all three n-gram baselines reached 0%. At the matched 1,024-update extension,
+MaleCNS CE-only reached 83.6%, MaleCNS KD 63.3%, and rewired KD 22.7% on 128
+unseen test inputs; zero-edge exact accuracy was 0% in each condition. These
+are single-seed results. See [OVERNIGHT_REPORT.md](OVERNIGHT_REPORT.md).
+These are formal
 symbol tasks, not natural-language experiments or actual wetware.
 
 G2 exploratory seed zero is frozen and verified on Seagate. On the fixed
