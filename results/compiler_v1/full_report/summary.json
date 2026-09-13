@@ -1,6 +1,6 @@
 {
-  "status": "interim",
-  "completed_pairs": 4,
+  "status": "complete",
+  "completed_pairs": 5,
   "pairs": [
     {
       "metrics": {
@@ -405,52 +405,213 @@
           "area_gap_real_minus_rewired": -0.20246806264234085
         }
       }
+    },
+    {
+      "metrics": {
+        "real_ce": {
+          "accuracy": 0.9609375,
+          "response_ce": 0.02458338890872775,
+          "token_accuracy": 0.9933035714285714,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.02457834904167352,
+          "zero_edge_ce": 1.9174585278545107,
+          "exact_teacher_agreement": 0.9609375,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        },
+        "rewired_ce": {
+          "accuracy": 0.6171875,
+          "response_ce": 0.19580785210460558,
+          "token_accuracy": 0.9296875,
+          "cases": 128,
+          "response_symbols": 896,
+          "teacher_ce": 1.6756825379572935e-06,
+          "teacher_kl": 0.19579734745535202,
+          "zero_edge_ce": 1.7510401319180215,
+          "exact_teacher_agreement": 0.6171875,
+          "teacher_exact": 1.0,
+          "zero_edge_exact": 0.0
+        }
+      },
+      "cases": 128,
+      "seed": 4,
+      "updates": 1024,
+      "A_topology_CE": 0.34375,
+      "case_analysis": {
+        "cases": 128,
+        "real_correct": 123,
+        "rewired_correct": 79,
+        "both_correct": 78,
+        "real_only": 45,
+        "rewired_only": 1,
+        "both_wrong": 4,
+        "gap": 0.34375,
+        "paired_case_bootstrap_95": [
+          0.2578125,
+          0.4296875
+        ]
+      },
+      "learning": {
+        "steps": [
+          64,
+          128,
+          256,
+          512,
+          768,
+          1024
+        ],
+        "domain": "32 fixed validation cases; normalized trapezoidal area only over shared observed updates",
+        "accuracy": {
+          "real": [
+            0.0,
+            0.0,
+            0.03125,
+            0.25,
+            0.59375,
+            0.96875
+          ],
+          "rewired": [
+            0.0,
+            0.03125,
+            0.03125,
+            0.15625,
+            0.3125,
+            0.59375
+          ],
+          "real_normalized_area": 0.36041666666666666,
+          "rewired_normalized_area": 0.21354166666666666,
+          "area_gap_real_minus_rewired": 0.146875
+        },
+        "response_ce": {
+          "real": [
+            1.0876405600990569,
+            0.8878652144755635,
+            0.6043853749121938,
+            0.4316736777712192,
+            0.1616308586838256,
+            0.02558771281370095
+          ],
+          "rewired": [
+            1.2381791131837028,
+            1.0248280401740755,
+            0.7545702186013971,
+            0.5706846165869918,
+            0.390449243132025,
+            0.22116676836074994
+          ],
+          "real_normalized_area": 0.4075445198631357,
+          "rewired_normalized_area": 0.5804607498836483,
+          "area_gap_real_minus_rewired": -0.17291623002051254
+        }
+      }
     }
   ],
   "groups": {
     "all_seeds": {
-      "n": 4,
-      "real_mean": 0.888671875,
-      "rewired_mean": 0.53515625,
-      "gap_mean": 0.353515625,
+      "n": 5,
+      "real_mean": 0.903125,
+      "rewired_mean": 0.5515625,
+      "gap_mean": 0.3515625,
       "gap_min": 0.125,
       "gap_max": 0.4921875,
-      "positive_gaps": 4,
-      "real_variance": 0.0024973551432291665,
-      "rewired_variance": 0.01751708984375,
-      "real_sd": 0.04997354443332158,
-      "rewired_sd": 0.13235214332888606,
-      "gap_sd": 0.15913674491056165,
+      "positive_gaps": 5,
+      "real_variance": 0.00291748046875,
+      "rewired_variance": 0.014483642578125,
+      "real_sd": 0.054013706304511265,
+      "rewired_sd": 0.1203480061244265,
+      "gap_sd": 0.1378856452712718,
       "gap_mean_t95": [
-        0.1002935520622536,
-        0.6067376979377463
+        0.18035485839756668,
+        0.5227701416024333
       ],
-      "variance_ratio_rewired_over_real": 7.014256619144604
+      "variance_ratio_rewired_over_real": 4.964435146443515
     },
     "fresh_seeds": {
-      "n": 3,
-      "real_mean": 0.90625,
-      "rewired_mean": 0.4765625,
-      "gap_mean": 0.4296875,
-      "gap_min": 0.3828125,
+      "n": 4,
+      "real_mean": 0.919921875,
+      "rewired_mean": 0.51171875,
+      "gap_mean": 0.408203125,
+      "gap_min": 0.34375,
       "gap_max": 0.4921875,
-      "positive_gaps": 3,
-      "real_variance": 0.00189208984375,
-      "rewired_variance": 0.00567626953125,
-      "real_sd": 0.04349815908460954,
-      "rewired_sd": 0.07534102157025746,
-      "gap_sd": 0.05633673867912483,
+      "positive_gaps": 4,
+      "real_variance": 0.0020090738932291665,
+      "rewired_variance": 0.00872802734375,
+      "real_sd": 0.04482269395327736,
+      "rewired_sd": 0.09342391205547967,
+      "gap_sd": 0.06294599981912406,
       "gap_mean_t95": [
-        0.28973928289016254,
-        0.5696357171098374
+        0.30804199272161986,
+        0.5083642572783802
       ],
-      "variance_ratio_rewired_over_real": 3.0
+      "variance_ratio_rewired_over_real": 4.3443037974683545
     }
   },
   "graph_analysis": {
-    "status": "pending all five final outcomes"
+    "status": "computed",
+    "n": 5,
+    "correlations": {
+      "giant_scc_fraction": {
+        "pearson": 0.512089706786324,
+        "spearman": 0.5270462766947298,
+        "values": [
+          0.9917576484703059,
+          0.9917576484703059,
+          0.9917636472705459,
+          0.991751649670066,
+          0.9917636472705459
+        ]
+      },
+      "reciprocal_fraction": {
+        "pearson": -0.25035167417773074,
+        "spearman": 0.0,
+        "values": [
+          0.00517354662424656,
+          0.005179878994655674,
+          0.005168386915024319,
+          0.0051664324797128635,
+          0.005150406110158932
+        ]
+      },
+      "binary_perron_estimate": {
+        "pearson": 0.9685192736214873,
+        "spearman": 0.9999999999999999,
+        "values": [
+          362.535331854548,
+          362.19010706670554,
+          362.2894476248714,
+          362.10412167480314,
+          362.31929764840015
+        ]
+      },
+      "input_output_mean_min_hops": {
+        "pearson": -0.15578390214977098,
+        "spearman": -0.09999999999999999,
+        "values": [
+          1.5406464250734575,
+          1.5465230166503428,
+          1.514201762977473,
+          1.5367286973555339,
+          1.5328109696376102
+        ]
+      },
+      "output_reachable_fraction": {
+        "pearson": null,
+        "spearman": null,
+        "reason": "constant or missing feature/outcome",
+        "values": [
+          0.9960975609756098,
+          0.9960975609756098,
+          0.9960975609756098,
+          0.9960975609756098,
+          0.9960975609756098
+        ]
+      }
+    },
+    "limitation": "Post-hoc, multiple exploratory correlations; graph, initialization and data sampling seeds co-vary. No causal attribution or reliable predictive model."
   },
-  "artifact_audit_status": "pending completion of all five pairs",
+  "artifact_audit_status": "passed",
   "inputs": {
     "results/compiler_v1/paired_ce/seed_0/real_ce_test.json": "6fa76fde73448620c08044a7f665755f6aee872e638ead54cee3443b262b8c5d",
     "results/compiler_v1/paired_ce/seed_0/rewired_ce_test.json": "3d97826ad0e9b205ac735c3602446bbc0805e92a1dd3cf2e36a5ea068f0096e6",
@@ -463,7 +624,10 @@
     "results/compiler_v1/paired_ce/seed_2/comparison.json": "5fd44495cdd3f79b51514bd7ffbd1d49513eb7a9f9c6a78ddf4e2779da675555",
     "results/compiler_v1/paired_ce/seed_3/real_ce_test.json": "cc94c9e15fe91f8ac9fca347cfba4ad6a2b4e044e8222569798d238f303c0d9d",
     "results/compiler_v1/paired_ce/seed_3/rewired_ce_test.json": "9df4ecd603179d5e7966308076e16bf61313164e614796df20da2e1b2f642cd6",
-    "results/compiler_v1/paired_ce/seed_3/comparison.json": "46c1214a0e22e13a70c9423ea374f2a74e6ef22057223b8ed85c8866577bc28f"
+    "results/compiler_v1/paired_ce/seed_3/comparison.json": "46c1214a0e22e13a70c9423ea374f2a74e6ef22057223b8ed85c8866577bc28f",
+    "results/compiler_v1/paired_ce/seed_4/real_ce_test.json": "c3da841274e0819d3489b1ba6139dd522296e2d70f5a0c35525d3498aaa3d286",
+    "results/compiler_v1/paired_ce/seed_4/rewired_ce_test.json": "d4f74686718f5e684405b3474005ae19607afa222ab124058dc2662dcff54ecf",
+    "results/compiler_v1/paired_ce/seed_4/comparison.json": "651f08af6da68378ce7e2dba64019e9b74bb362a179243726837fe6ebb6725e0"
   },
   "analysis_spec_sha256": "39a89b78ca9d5ce5000fc2f8928996fac9eaabaecf5b092ccb07d191f57d34f1",
   "report_source_sha256": "bdc8974ec14c1b0fbb7fb4d2352ecc30fc874c6c9959325b37f36dcfddedc7ba"
