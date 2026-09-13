@@ -63,3 +63,18 @@ def test_objectives_resume_and_keep_original_query_architecture(small,objective,
     with torch.no_grad():
         z,_=model(torch.tensor([[5,0,6],[5,1,6]]))
     assert torch.equal(z[0],z[1]),'No input-to-output bypass may survive zero-edge recurrence'
+
+
+def test_offline_checkpoint_migrates_without_changing_reference(tmp_path,monkeypatch):
+    from scripts import compiler_storage as storage
+    disk=tmp_path/'usb';disk.mkdir();pending=tmp_path/'pending';backup=disk/'backup';state={'connected':False}
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(storage,'DISK',disk);monkeypatch.setattr(storage,'BACKUP',backup);monkeypatch.setattr(storage,'PENDING',pending)
+    monkeypatch.setattr(Path,'is_mount',lambda self:self==disk and state['connected'])
+    checkpoint=tmp_path/'model.pt';checkpoint.write_bytes(b'checkpoint bytes')
+    result=storage.archive(checkpoint,{'job_dir':'results/compiler_v1/example'},64)
+    reference=Path(result['path']);assert reference.read_bytes()==checkpoint.read_bytes()
+    assert result['storage']=='local_pending_external_backup' and not reference.is_symlink()
+    state['connected']=True;storage.flush_pending()
+    assert reference.is_symlink() and reference.read_bytes()==checkpoint.read_bytes()
+    assert sha256(reference)==result['sha256']

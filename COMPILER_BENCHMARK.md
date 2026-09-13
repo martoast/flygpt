@@ -58,3 +58,11 @@ source/data/teacher hashes are frozen before new training in `frozen_plan.json`.
 The previous overnight run is preserved. Reversal is a secondary negative result;
 rotation teacher qualification happened before the scheduling handoff, but no
 rotation student or further task experiment is scheduled in this study.
+
+Storage-only amendment before the first new training run: the USB drive
+became unavailable. Preserve every new checkpoint in local staging while it is
+offline, with a 3 GiB free-space reserve. If the reserve is reached, wait for the
+archive drive rather than discarding checkpoints. On reconnect, automatically
+copy and hash-verify staged checkpoints and retain their reference paths via
+symlinks. The failed pre-training launch and its original freeze are retained.
+No dataset, objective, optimizer, architecture, seed or test choice changed.

@@ -12,6 +12,7 @@ import numpy as np
 from scripts import g2c_engine as e
 from scripts.run_g2c_overnight import frozen,hashes,graph_paths
 from src.provenance import save_json,sha256
+from scripts.compiler_storage import flush_pending
 
 ROOT=Path('results/compiler_v1');CFG=Path('configs/compiler_v1.json')
 PY=str(Path('.venv/bin/python').absolute());DISK=Path('/Volumes/Seagate')
@@ -27,12 +28,14 @@ def event(message,**extra):
     print(message,extra,flush=True);refresh()
 
 def preserve(message):
-    if not DISK.is_mount():raise RuntimeError('Seagate disconnected')
-    paths=[ROOT,CFG,Path('scripts/compiler_engine.py'),Path('scripts/compiler_targets.py'),Path('scripts/run_compiler_v1.py'),Path('scripts/compiler_report.py'),Path('tests/test_compiler.py'),Path('COMPILER_BENCHMARK.md'),Path('COMPILER_REPORT.md')]
-    for root in paths:
-        for p in (root.rglob('*') if root.is_dir() else [root]):
-            if p.is_file() and p.suffix in ('.py','.json','.jsonl','.md'):
-                dest=BACKUP/p;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)
+    flush_pending()
+    save_json(ROOT/'backup_status.json',{'utc':now(),'external_connected':DISK.is_mount(),'offline_policy':'Preserve every checkpoint locally with 3 GiB free-space reserve; migrate and verify on reconnect'})
+    paths=[ROOT,CFG,Path('scripts/compiler_engine.py'),Path('scripts/compiler_targets.py'),Path('scripts/run_compiler_v1.py'),Path('scripts/compiler_storage.py'),Path('scripts/compiler_report.py'),Path('tests/test_compiler.py'),Path('COMPILER_BENCHMARK.md'),Path('COMPILER_REPORT.md')]
+    if DISK.is_mount():
+        for root in paths:
+            for p in (root.rglob('*') if root.is_dir() else [root]):
+                if p.is_file() and p.suffix in ('.py','.json','.jsonl','.md'):
+                    dest=BACKUP/p;dest.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,dest)
     subprocess.run(['git','add','--',*map(str,paths)],check=True)
     if subprocess.run(['git','diff','--cached','--quiet']).returncode:
         subprocess.run(['git','commit','-m',message],check=True)
@@ -41,6 +44,7 @@ def preserve(message):
 
 def child(module,args,log):
     log=Path(log);log.parent.mkdir(parents=True,exist_ok=True)
+    if args[0]=='train':args=['--engine',module,*args];module='scripts.compiler_storage'
     with log.open('a') as stream:
         p=subprocess.Popen([PY,'-m',module,*map(str,args)],stdin=subprocess.DEVNULL,stdout=stream,stderr=subprocess.STDOUT,
             env={**os.environ,'OMP_NUM_THREADS':'4','NUMBA_NUM_THREADS':'4'})
@@ -81,7 +85,7 @@ def plan(cfg):
             'C5_relational':spec(cfg,'C5_relational',seed,batch=2,objective='relational',hard=True)}
     paths=[p for group in (paired,screen,relational) for cohort in group.values() for p in cohort.values()]+list(hard.values())
     source_paths=[CFG,'scripts/compiler_engine.py','scripts/compiler_targets.py','scripts/run_compiler_v1.py','scripts/g2c_engine.py',*Path('src').glob('*.py'),ROOT/'teacher_training_targets.json',ROOT/'teacher_targets_provenance.json',cfg['teacher_checkpoint'],cfg['qualification_receipt'],*Path(cfg['dataset']).glob('*.json'),*paths]
-    source_paths+=sorted({p for pair in GRAPHS.values() for p in pair})
+    source_paths+=['scripts/compiler_storage.py',*sorted({p for pair in GRAPHS.values() for p in pair})]
     return frozen(ROOT/'frozen_plan.json',{'paired_ce':paired,'hard':hard,'screen':screen,'relational':relational,
         'created_before_new_training':True,'inputs':hashes(source_paths),'historical_seed_zero':'Reused transparently, not an independent replication'})
 
@@ -95,6 +99,11 @@ def train(path,engine):
         child(engine,['train','--spec',path,'--until',budget],job/'train.log')
     r=read(progress);assert r['step']==budget
     archive=next(x for x in r['archives'] if x['step']==budget)
+    if not Path(archive['path']).exists():
+        local=job/'model.pt'
+        if local.exists() and sha256(local)==archive['sha256']==r['checkpoint_sha256']:
+            return str(local)
+        raise RuntimeError('Neither archived checkpoint nor verified original local copy is accessible')
     assert sha256(archive['path'])==archive['sha256']==r['checkpoint_sha256']
     # Free only the replaceable local copy after verified off-machine preservation.
     local=job/'model.pt'
