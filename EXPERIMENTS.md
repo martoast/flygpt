@@ -83,7 +83,11 @@ benefit without comparison to the CE-only student.
 - Validation may guide a prespecified search. Test stays unopened for model
   evaluation until choices are frozen. Dataset leakage auditing is allowed.
 
-G2 is queued, not yet run. Lexical, length and structural splits are subsequent
+G2 is running under the frozen protocol. A post hoc span-KL diagnostic was
+added in a separate read-only script after observing real seed-zero step 256;
+it changes neither the objective nor model evaluation's test lock. Its matched
+256/512 results and teacher qualifications are documented in
+`results/g2_v1/INTERPRETATION.md`. Lexical, length and structural splits are subsequent
 separate tests, not claims already covered by this dataset. Truly unseen words
 need an explicit learning/compositional rule; a byte vocabulary alone does not
 provide their meaning. Length tests must preserve the target dependency across

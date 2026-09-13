@@ -4,7 +4,7 @@ Experiment identity: **G1 — Finite-Grammar Functional Encoding**. This label
 does not change if subsequent experiments generalize. The audited G2 dataset
 is prepared separately: 2,048 distinct training sentences and three
 64-sentence composition-holdout subsets each for validation and test, with
-zero verbatim training overlap and all words known. G2 training is pending.
+zero verbatim training overlap and all words known. G2 training is active.
 See [EXPERIMENTS.md](EXPERIMENTS.md).
 
 The frozen G1 512 archive is also backed up to the user-selected external USB
@@ -24,18 +24,25 @@ teacher KL is **0.112697**, agreement **87.764%**, and zero-edge CE **3.467236**
 G1's test retains its finite-grammar sentence-overlap limitation. This is
 functional encoding evidence, not novel-composition generalization.
 
-The degree-preserving seed-zero control has started its matched CE pilot and
-will receive the same 512- and 1,024-update continuation stages. A matched
-topology result is still pending. The 1,024 target, optimizer and reproduced
+The degree-preserving seed-zero control completed the matched training budget:
+validation CE is 0.411258 versus real 0.395344; final test CE is 0.413772 versus
+real 0.403671. Rewiring was better at 512 (0.745370 versus real 0.851437).
+This first pair is close and does not establish biological topology advantage.
+The 1,024 target, optimizer and reproduced
 sampling state, graph, teacher, corpus and final test are independently
 backed up to Seagate; the tar and 18 embedded artifacts were hash-verified.
 See `results/malecns_v1/target/external_backup_1024.json`.
 
 G2's fixed 26-run schedule (one teacher, five seeds × five student conditions)
-is implemented and queued after G1's matched control and final test. It uses
+is active after G1's matched control and final test. It uses
 whole-sentence training and separate composition-span metrics; tests stay
-unused for model evaluation until all scheduled training completes. G2 has
-no trained result yet. The serial schedule is a sustained multi-day workload
+unused for model evaluation until all scheduled training completes. The teacher
+is trained and real seed-zero KD is progressing toward its fixed 512 budget.
+At 256, ordinary CE improves but attribute-span CE is flat and relation/combined
+span CE worsens relative to 128. The teacher beats the n-gram reference only
+on relation holdouts. A strong generalizing teacher is not established across
+all axes. See `results/g2_v1/INTERPRETATION.md` and the separate post hoc
+validation-only `span_diagnostics/REPORT.md`. The serial schedule is a sustained multi-day workload
 on this machine, not an immediate result; progress is written to
 `results/g2_v1/queue.json` and per-run logs.
 

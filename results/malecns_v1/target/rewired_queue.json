@@ -1,6 +1,5 @@
 {
-  "status": "training matched continuation",
+  "status": "complete",
   "seed": 0,
-  "target_step": 512,
   "final_step": 1024
 }

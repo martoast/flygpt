@@ -1,0 +1,20 @@
+{
+  "pairs": [
+    {
+      "step": 512,
+      "real_ce": 0.8514369130134583,
+      "rewired_ce": 0.7453700751066208,
+      "A_bio_negative_ce": -0.10606683790683746
+    },
+    {
+      "step": 1024,
+      "real_ce": 0.395344078540802,
+      "rewired_ce": 0.4112575128674507,
+      "A_bio_negative_ce": 0.015913434326648712
+    }
+  ],
+  "seeds": [
+    0
+  ],
+  "interpretation": "One exploratory pair; no topology-superiority conclusion. Equal updates/bytes, runtime reported separately."
+}

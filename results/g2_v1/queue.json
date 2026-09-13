@@ -1,4 +1,5 @@
 {
-  "status": "waiting for G1 matched rewired comparison",
-  "protocol_sha256": "61b25f5bfad06fd512557ae14b5b74d536748f4776a987cfafe47554ba2a83a0"
+  "status": "train",
+  "condition": "real_kd",
+  "seed": 0
 }
