@@ -1,0 +1,2101 @@
+{
+  "created_utc": "2026-09-13T10:36:18Z",
+  "code_commit": "237243bf9032f5c8ae3ed5c796e815e51722fbbb",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": true,
+  "config": {
+    "spec": "results/g2c_overnight/substitute_6/teacher_0/spec.json",
+    "split": "test_main",
+    "teacher_forcing": "CE only; exact responses generated from prompt"
+  },
+  "inputs": {
+    "results/g2c_overnight/substitute_6/teacher_0/spec.json": "63979207ddd1b91be34245f85a21f7676f76ba53bc0bfd0c4fb666795c2f8b53",
+    "results/g2c_overnight/substitute_6/teacher_0/model.pt": "e5188035bb025a20df6503147dd3ff699780e157b8eea78085e2a71a13c381f7",
+    "data/raw/g2c_v1/substitute_6/manifest.json": "c162d46763ea56e17c750f0efdf2a186d5741f62013485fa40f0959c8fa160d4"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "metrics": {
+    "accuracy": 1.0,
+    "response_ce": 1.977569346564171e-06,
+    "token_accuracy": 1.0,
+    "cases": 128,
+    "response_symbols": 896
+  },
+  "rows": [
+    {
+      "id": 3297,
+      "symbols": 7,
+      "nll": 2.026557240242255e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        0,
+        3,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 581,
+      "symbols": 7,
+      "nll": 1.3470589692587964e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        3,
+        2,
+        1,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2298,
+      "symbols": 7,
+      "nll": 2.1457663024193607e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        0,
+        0,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1222,
+      "symbols": 7,
+      "nll": 1.0967203706968576e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1625,
+      "symbols": 7,
+      "nll": 1.2516929928096943e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        2,
+        2,
+        3,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3844,
+      "symbols": 7,
+      "nll": 3.4570653042464983e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3335,
+      "symbols": 7,
+      "nll": 1.7881380927065038e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        2,
+        1,
+        1,
+        2,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1333,
+      "symbols": 7,
+      "nll": 1.1920924407604616e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        2,
+        1,
+        0,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2693,
+      "symbols": 7,
+      "nll": 1.1324837942083832e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        3,
+        1,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1347,
+      "symbols": 7,
+      "nll": 9.536740890325746e-07,
+      "exact": 1,
+      "generated": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3668,
+      "symbols": 7,
+      "nll": 4.64915774500696e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3286,
+      "symbols": 7,
+      "nll": 7.867788553994615e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        0,
+        2,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2826,
+      "symbols": 7,
+      "nll": 2.741811158557539e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        0,
+        1,
+        1,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1052,
+      "symbols": 7,
+      "nll": 3.576274366423604e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        1,
+        2,
+        0,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1684,
+      "symbols": 7,
+      "nll": 1.2755341231240891e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        3,
+        2,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1743,
+      "symbols": 7,
+      "nll": 2.789470636344049e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        0,
+        1,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3698,
+      "symbols": 7,
+      "nll": 3.266285784775391e-05,
+      "exact": 1,
+      "generated": [
+        0,
+        3,
+        2,
+        0,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2935,
+      "symbols": 7,
+      "nll": 1.084802806872176e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        0,
+        2,
+        0,
+        2,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2778,
+      "symbols": 7,
+      "nll": 5.722036803490482e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        0,
+        2,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1768,
+      "symbols": 7,
+      "nll": 2.9563731004600413e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        0,
+        3,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2989,
+      "symbols": 7,
+      "nll": 2.7417894671089016e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        0,
+        3,
+        3,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2745,
+      "symbols": 7,
+      "nll": 1.0609581295284443e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        3,
+        0,
+        3,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2524,
+      "symbols": 7,
+      "nll": 1.1324833394610323e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        2,
+        0,
+        2,
+        0,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 70,
+      "symbols": 7,
+      "nll": 2.586814844107721e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2651,
+      "symbols": 7,
+      "nll": 4.398758028401062e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        2,
+        2,
+        3,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1192,
+      "symbols": 7,
+      "nll": 9.059875992534216e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        3,
+        3,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 942,
+      "symbols": 7,
+      "nll": 7.629383162566228e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        3,
+        3,
+        0,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3494,
+      "symbols": 7,
+      "nll": 5.960459020570852e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        2,
+        3,
+        3,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 242,
+      "symbols": 7,
+      "nll": 1.9073472685704473e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2993,
+      "symbols": 7,
+      "nll": 1.8596565496409312e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        0,
+        3,
+        0,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1709,
+      "symbols": 7,
+      "nll": 3.361676135682501e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        3,
+        3,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3429,
+      "symbols": 7,
+      "nll": 4.05310947826365e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        2,
+        2,
+        3,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1176,
+      "symbols": 7,
+      "nll": 8.463838639727328e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        3,
+        2,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2767,
+      "symbols": 7,
+      "nll": 1.180169238068629e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        0,
+        1,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 596,
+      "symbols": 7,
+      "nll": 4.41074053014745e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        3,
+        2,
+        2,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3568,
+      "symbols": 7,
+      "nll": 4.7683712978141557e-07,
+      "exact": 1,
+      "generated": [
+        0,
+        2,
+        0,
+        0,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1874,
+      "symbols": 7,
+      "nll": 4.410739620652748e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        0,
+        2,
+        2,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3942,
+      "symbols": 7,
+      "nll": 1.013277596939588e-05,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        2,
+        3,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1086,
+      "symbols": 7,
+      "nll": 1.907347837004636e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        1,
+        0,
+        0,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 333,
+      "symbols": 7,
+      "nll": 1.1801665095845237e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        2,
+        2,
+        1,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1713,
+      "symbols": 7,
+      "nll": 0.00011038436787202954,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        3,
+        0,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 397,
+      "symbols": 7,
+      "nll": 1.8596547306515276e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        2,
+        3,
+        1,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3320,
+      "symbols": 7,
+      "nll": 3.933900188712869e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        0,
+        0,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 155,
+      "symbols": 7,
+      "nll": 2.9921235181973316e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        3,
+        2,
+        3,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1870,
+      "symbols": 7,
+      "nll": 1.7881387748275301e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        0,
+        2,
+        1,
+        0,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 903,
+      "symbols": 7,
+      "nll": 5.006784249417251e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        3,
+        1,
+        2,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1063,
+      "symbols": 7,
+      "nll": 7.867782187531702e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        1,
+        3,
+        2,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3056,
+      "symbols": 7,
+      "nll": 1.6689295989635866e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        0,
+        0,
+        0,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 158,
+      "symbols": 7,
+      "nll": 2.598734135972336e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        3,
+        2,
+        0,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3197,
+      "symbols": 7,
+      "nll": 3.3378582884324715e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        2,
+        0,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3186,
+      "symbols": 7,
+      "nll": 1.5497203094128054e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2686,
+      "symbols": 7,
+      "nll": 5.245202373771463e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        2,
+        0,
+        0,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3881,
+      "symbols": 7,
+      "nll": 3.3497341064503416e-05,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        1,
+        3,
+        3,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1226,
+      "symbols": 7,
+      "nll": 9.29828456719406e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        0,
+        1,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 11,
+      "symbols": 7,
+      "nll": 2.1457461116369814e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        1,
+        1,
+        3,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1944,
+      "symbols": 7,
+      "nll": 2.1099949663039297e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        0,
+        3,
+        2,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2421,
+      "symbols": 7,
+      "nll": 3.0994374355941545e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        2,
+        2,
+        0,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2296,
+      "symbols": 7,
+      "nll": 3.3378582884324715e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        0,
+        0,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2596,
+      "symbols": 7,
+      "nll": 7.390962764475262e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        1,
+        3,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3512,
+      "symbols": 7,
+      "nll": 2.2053607608540915e-05,
+      "exact": 1,
+      "generated": [
+        0,
+        2,
+        3,
+        0,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2519,
+      "symbols": 7,
+      "nll": 1.4305111335488618e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        2,
+        0,
+        2,
+        2,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2339,
+      "symbols": 7,
+      "nll": 1.1920925544472993e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        2,
+        1,
+        3,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2133,
+      "symbols": 7,
+      "nll": 2.9086650101817213e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3585,
+      "symbols": 7,
+      "nll": 4.768362487084232e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        3,
+        1,
+        1,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2354,
+      "symbols": 7,
+      "nll": 6.5564918259042315e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        2,
+        1,
+        0,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2288,
+      "symbols": 7,
+      "nll": 5.125993084220681e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        0,
+        0,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3853,
+      "symbols": 7,
+      "nll": 2.0265570128685795e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1217,
+      "symbols": 7,
+      "nll": 2.5033932615770027e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        0,
+        1,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 586,
+      "symbols": 7,
+      "nll": 2.1457660750456853e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        3,
+        2,
+        1,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2200,
+      "symbols": 7,
+      "nll": 9.89435375231551e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        3,
+        2,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3886,
+      "symbols": 7,
+      "nll": 3.21864899888169e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        1,
+        3,
+        0,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2471,
+      "symbols": 7,
+      "nll": 1.788138433767017e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        2,
+        3,
+        3,
+        2,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2951,
+      "symbols": 7,
+      "nll": 1.7046855646185577e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        0,
+        3,
+        1,
+        2,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1646,
+      "symbols": 7,
+      "nll": 2.5033801648532972e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        2,
+        3,
+        0,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1105,
+      "symbols": 7,
+      "nll": 8.344647994817933e-07,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 879,
+      "symbols": 7,
+      "nll": 4.649156835512258e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        2,
+        3,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1297,
+      "symbols": 7,
+      "nll": 2.503392352082301e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        2,
+        1,
+        2,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2772,
+      "symbols": 7,
+      "nll": 6.556502739840653e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        0,
+        2,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1699,
+      "symbols": 7,
+      "nll": 4.470298154046759e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        3,
+        3,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1386,
+      "symbols": 7,
+      "nll": 3.576278402306343e-07,
+      "exact": 1,
+      "generated": [
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1825,
+      "symbols": 7,
+      "nll": 8.34464913168631e-07,
+      "exact": 1,
+      "generated": [
+        2,
+        0,
+        1,
+        3,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 794,
+      "symbols": 7,
+      "nll": 1.2516909919213504e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        1,
+        2,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2568,
+      "symbols": 7,
+      "nll": 5.125993993715383e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        1,
+        1,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2123,
+      "symbols": 7,
+      "nll": 6.437284355342854e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        2,
+        1,
+        3,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3768,
+      "symbols": 7,
+      "nll": 5.96045811107615e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        3,
+        3,
+        0,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 260,
+      "symbols": 7,
+      "nll": 4.768370445162873e-07,
+      "exact": 1,
+      "generated": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1692,
+      "symbols": 7,
+      "nll": 2.276887244079262e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        3,
+        2,
+        0,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1148,
+      "symbols": 7,
+      "nll": 3.933902007702272e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        2,
+        0,
+        0,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3492,
+      "symbols": 7,
+      "nll": 7.510173418268096e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        2,
+        3,
+        3,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 24,
+      "symbols": 7,
+      "nll": 8.427744614891708e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 688,
+      "symbols": 7,
+      "nll": 2.5510649720672518e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        3,
+        3,
+        0,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1732,
+      "symbols": 7,
+      "nll": 2.5987323169829324e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        0,
+        1,
+        2,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3278,
+      "symbols": 7,
+      "nll": 4.529948455456179e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1615,
+      "symbols": 7,
+      "nll": 5.042504199082032e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        2,
+        1,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3024,
+      "symbols": 7,
+      "nll": 1.2397721548040863e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        0,
+        0,
+        2,
+        1,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3292,
+      "symbols": 7,
+      "nll": 4.887576778855873e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        0,
+        2,
+        0,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3749,
+      "symbols": 7,
+      "nll": 0.00011169357458129525,
+      "exact": 1,
+      "generated": [
+        0,
+        3,
+        3,
+        3,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3900,
+      "symbols": 7,
+      "nll": 4.410736892168643e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2290,
+      "symbols": 7,
+      "nll": 3.814694082393544e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        0,
+        0,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2762,
+      "symbols": 7,
+      "nll": 2.932510687969625e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        0,
+        1,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 414,
+      "symbols": 7,
+      "nll": 4.649158654501662e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        2,
+        3,
+        2,
+        0,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3306,
+      "symbols": 7,
+      "nll": 5.245141073828563e-05,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        0,
+        3,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3867,
+      "symbols": 7,
+      "nll": 4.839790562982671e-05,
+      "exact": 1,
+      "generated": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 3302,
+      "symbols": 7,
+      "nll": 6.675708846159978e-06,
+      "exact": 1,
+      "generated": [
+        0,
+        1,
+        0,
+        3,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2129,
+      "symbols": 7,
+      "nll": 7.033331712591462e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        2,
+        2,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2808,
+      "symbols": 7,
+      "nll": 5.60283206141321e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        3,
+        0,
+        0,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1313,
+      "symbols": 7,
+      "nll": 5.960463340670685e-07,
+      "exact": 1,
+      "generated": [
+        2,
+        2,
+        1,
+        3,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2162,
+      "symbols": 7,
+      "nll": 5.364412572816946e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        2,
+        0,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1752,
+      "symbols": 7,
+      "nll": 1.9669445464387536e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        3,
+        0,
+        2,
+        3,
+        1,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2269,
+      "symbols": 7,
+      "nll": 2.896752266678959e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        0,
+        2,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1363,
+      "symbols": 7,
+      "nll": 1.6331558072124608e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 786,
+      "symbols": 7,
+      "nll": 1.0728831512096804e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        1,
+        2,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2257,
+      "symbols": 7,
+      "nll": 1.5973986592143774e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        0,
+        2,
+        1,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1531,
+      "symbols": 7,
+      "nll": 1.0847990779438987e-05,
+      "exact": 1,
+      "generated": [
+        2,
+        2,
+        0,
+        0,
+        3,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2469,
+      "symbols": 7,
+      "nll": 2.491443774488289e-05,
+      "exact": 1,
+      "generated": [
+        3,
+        2,
+        3,
+        3,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 341,
+      "symbols": 7,
+      "nll": 0.0,
+      "exact": 1,
+      "generated": [
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 243,
+      "symbols": 7,
+      "nll": 1.668929030529398e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1037,
+      "symbols": 7,
+      "nll": 4.053112206747755e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        1,
+        1,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1167,
+      "symbols": 7,
+      "nll": 8.106215318548493e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        1,
+        3,
+        1,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2557,
+      "symbols": 7,
+      "nll": 4.52994936495088e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        2,
+        0,
+        0,
+        0,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 415,
+      "symbols": 7,
+      "nll": 7.271757112903288e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        2,
+        3,
+        2,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 1311,
+      "symbols": 7,
+      "nll": 5.722039531974588e-06,
+      "exact": 1,
+      "generated": [
+        2,
+        2,
+        1,
+        2,
+        0,
+        0,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2074,
+      "symbols": 7,
+      "nll": 6.794907221774338e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        1,
+        1,
+        2,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 2978,
+      "symbols": 7,
+      "nll": 9.655921530793421e-06,
+      "exact": 1,
+      "generated": [
+        3,
+        0,
+        3,
+        3,
+        1,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 773,
+      "symbols": 7,
+      "nll": 1.6689288031557226e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        1,
+        1,
+        2,
+        2,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 890,
+      "symbols": 7,
+      "nll": 1.192092668134137e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        2,
+        0,
+        3,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 6,
+      "symbols": 7,
+      "nll": 8.67824419401586e-05,
+      "exact": 1,
+      "generated": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4
+      ],
+      "token_correct": 7
+    },
+    {
+      "id": 905,
+      "symbols": 7,
+      "nll": 3.5762750485446304e-06,
+      "exact": 1,
+      "generated": [
+        1,
+        0,
+        3,
+        1,
+        3,
+        2,
+        4
+      ],
+      "token_correct": 7
+    }
+  ]
+}
