@@ -1,0 +1,17 @@
+{
+  "purpose": "Close the fixed-MaleCNS validation loss gap to the grammar teacher",
+  "initialization": "64-step supervised pilot checkpoint; optimizer reset",
+  "additional_steps": 512,
+  "block_bytes": 32,
+  "batch": 1,
+  "learning_rate": 0.001,
+  "optimizer": "AdamW",
+  "weight_decay": 0.01,
+  "alpha": 0.5,
+  "temperature": 2.0,
+  "evaluation_steps": [0, 64, 128, 256, 512],
+  "close_threshold_nats_per_byte": 0.425,
+  "teacher_validation_nats_per_byte": 0.32494498416781425,
+  "topology": "Unchanged full graph; trainable signed weights only on existing edges",
+  "interpretation": "Feasibility first. Run the identical extension on controls. Five seeds required before exploratory topology comparisons. No confirmatory claim from this small validation set."
+}

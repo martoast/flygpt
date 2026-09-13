@@ -85,3 +85,12 @@ fixed validation windows). After the initial real-graph memory screen, run the
 language conditions before the remaining memory conditions. Budgets and seeds
 are unchanged. A single successful checkpoint is feasibility evidence only;
 biological-topology claims still require the matched multi-seed comparisons.
+
+Target continuation (specified before the first language validation result):
+`configs/target_v1.json` fixes a 512-update continuation from the 64-update CE
+pilot, with optimizer reset, 32-byte contexts, learning rate 0.001, alpha 0.5,
+and temperature 2. Evaluation is at 64/128/256/512 updates on the same windows.
+"Close" is operationalized as <=0.425 nats/byte, about 0.10 above the teacher.
+The graph, populations, leak, and ticks remain unchanged. This is a feasibility
+run, not a biological-topology comparison. Apply the same extension to controls;
+do not report topology superiority until matched multi-seed runs complete.

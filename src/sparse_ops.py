@@ -6,14 +6,15 @@ Numba computes the derivative of each allowed edge directly.
 """
 import numpy as np
 import torch
-from numba import njit
+from numba import njit, prange, set_num_threads
+set_num_threads(4)
 from scipy import sparse
 
 
-@njit(cache=True)
+@njit(cache=True, parallel=True)
 def edge_gradient(h, grad, indices, indptr):
     result = np.empty(indices.size, dtype=h.dtype)
-    for dst in range(indptr.size - 1):
+    for dst in prange(indptr.size - 1):
         for edge in range(indptr[dst], indptr[dst + 1]):
             value = 0.0
             for batch in range(h.shape[0]):
