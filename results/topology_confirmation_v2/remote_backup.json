@@ -1,0 +1,32 @@
+{
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_100/real_ce/step_01024.pt": {
+    "sha256": "762170b48842e8ff4bdbbd333cbea4b08d19eb92a348f072d57ab3d65d5200dd",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_100/real_ce/step_01024.pt",
+    "verified_utc_epoch": 1789342629.003671
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00064.pt": {
+    "sha256": "680839aa3770779683f1c011fac638c655a6199da6838cb4aa61880960069d31",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00064.pt",
+    "verified_utc_epoch": 1789342709.8084512
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00128.pt": {
+    "sha256": "6842fa129788ad2a96e3bcb9b3e5a8fd4c3208c99e72c3e444d9273dda817dbe",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00128.pt",
+    "verified_utc_epoch": 1789342802.432692
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00256.pt": {
+    "sha256": "24226790241fc941efb61906e41ed2d244dfcee017e71a2551836914358359cb",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00256.pt",
+    "verified_utc_epoch": 1789342937.308939
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00512.pt": {
+    "sha256": "f9668f03e88c16a40d8174d1ab52e36eb3cee37d43ccb5a13d789dcdb0af6a69",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00512.pt",
+    "verified_utc_epoch": 1789343391.8683898
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00768.pt": {
+    "sha256": "ed02f89fa9e09b81df818b3d4dc2123e80fe7091ab3e47d5146e49a6529139d7",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00768.pt",
+    "verified_utc_epoch": 1789343958.949131
+  }
+}
