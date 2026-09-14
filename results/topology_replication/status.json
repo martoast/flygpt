@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "seed": 600,
-  "condition": "real_ce",
-  "spec": "results/topology_replication/pairs/seed_600/real_ce/spec.json",
-  "utc": "2026-09-14T18:05:03.743328+00:00",
+  "condition": "rewired_ce",
+  "spec": "results/topology_replication/pairs/seed_600/rewired_ce/spec.json",
+  "utc": "2026-09-14T18:48:52.157568+00:00",
   "final_test_opened": false
 }
