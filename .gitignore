@@ -39,3 +39,9 @@ data/raw/compiler_v3/test_compiler_v3.json
 results/compiler_v3_relay/
 
 results/compiler_v3/distributed/*.lock
+
+data/raw/compiler_confirmation/test_compiler_confirmation.json
+
+results/compiler_confirmation/*.lock
+
+results/compiler_confirmation_relay/

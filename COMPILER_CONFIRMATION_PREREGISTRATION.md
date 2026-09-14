@@ -1,0 +1,25 @@
+# Compiler v3 independent replication
+
+Registered after inspecting pilot seed 300. The pilot is excluded from every replication estimate. Five new model/schedule seeds, 400–404, each run all six existing objectives, exclusively on the M4 Mac mini CPU with SciPy propagation and four threads. No hyperparameter search. Thirty models, batch eight, 512 updates / 4,096 example presentations each. Preserve the pilot's teacher, teacher-only training targets, full MaleCNS graph, I/O placement, dynamics, optimizer, loss coefficients, temperature, projection rules and evaluation checkpoints. This is computational substitution generalization, not natural-language or wetware evidence.
+
+## Data and blinding
+
+Training and 256-case validation remain byte-identical to the pilot. Of the 4,096 possible inputs, exclude all original G2c allocations, the topology confirmation test and compiler pilot test (3,200 IDs total). Select 512 of the remaining 896 by the fixed SHA256 salt in configuration. All models share these locked unseen inputs. Only generator/hash/leakage audits run before training; no final-test model evaluation occurs until all 30 final checkpoints are verified complete. The teacher is fixed, not requalified or selected using the new test. Keep the remaining 384 inputs unused.
+
+Run seeds in increasing order. Within each seed, retain the pilot order rule Random(33000 + seed). Each seed has fixed groups of eight, a fixed single-cycle derangement and a frozen group-sampling sequence from the unchanged engine. Audit every scheduled group's response-position relational difference above 1e-6 in float32 and float64, and its hidden-state difference. If any seed fails, archive the failure and stop the entire cohort; do not redraw that seed or alter its correspondence.
+
+## Hypotheses and endpoints
+
+Central paired contrasts: B_soft versus A_hard (teacher output distributions); C_hidden versus D_hidden_shuffled (hidden correspondence); E_relational versus F_relational_shuffled (relational correspondence). Also preregister C_hidden versus A_hard and E_relational versus A_hard as necessary comparisons for a representation method's benefit over answers alone.
+
+Two endpoints for each of these five contrasts: final exact-answer accuracy and response CE in nats per response symbol (including EOS, as in the unchanged evaluator). Positive benefit means method minus control accuracy, or control minus method CE. CE is a measure of probabilistic predictive quality; it does not by itself demonstrate an exact-answer capability gain or unique latent knowledge transfer.
+
+The analysis unit is the paired model seed, n=5, not the 512 test cases. Report every seed, paired mean benefit, sample SD, unadjusted two-sided 95% Student-t interval, two-sided paired-t p-value, and two-sided exhaustive sign-flip sensitivity p-value. Apply Holm correction jointly to the ten prespecified paired-t tests (five contrasts × two endpoints), family-wise alpha .05. An endpoint is statistically supported under this analysis only with positive mean benefit and Holm-adjusted p < .05. Report endpoint-specific conclusions; never choose whichever endpoint looks best and claim both improved. A representation-specific benefit over hard answers requires the matched-shuffle and hard-answer contrasts to pass on the same endpoint.
+
+The t analysis assumes approximately normal independent paired differences; n=5 is too small to validate this assumption well. Exact two-sided sign-flip p cannot be below .0625 with five pairs, even if all favor the method. Report this limitation explicitly and do not describe a t-based finding as distribution-free confirmation. Correlation between observations sharing teacher/data further limits scope to this teacher, task and corpus. No pooled pilot-plus-replication inference. No outlier exclusion or replacement of failed seeds.
+
+## Efficiency, causality and preservation
+
+Secondary endpoints: first observed validation accuracy >=85% at frozen updates 32,64,128,256,384,512, its observation interval/right censoring, learning-curve area, response KL, exact teacher agreement, hidden norms/saturation and gradients. No claim of faster acquisition if threshold observations coincide. All runs share hardware; standalone accounting includes full teacher-answer generation and, for B–F, full extraction/cache time, plus student setup/training. Cache reuse amortization is secondary. Teacher pretraining is excluded. Report evaluation and checkpoint overhead separately from training. Equal update opportunity is primary; raw compute costs may differ by objective.
+
+Evaluate zero-edge ablation for every final model. If performance survives substantially, qualify any claim that recurrent computation is necessary. Preserve all checkpoints, optimizer/RNG state, learning curves, code/config/data/teacher/graph hashes and hardware/runtime metadata on mini-attached Seagate. Publish the full frozen plan, specs, audit results and analysis code before full-budget training, then publish all results, including negative outcomes. No extensions, architecture changes, early success stopping or automatic next experiment.

@@ -1,0 +1,31 @@
+{
+  "version": "compiler-confirmation",
+  "task": "substitute",
+  "length": 6,
+  "counts": {
+    "train": {
+      "count": 2048,
+      "sha256": "982ad03930e087da741daf0b6248a666aeb14f6498d32d060f3284fdcc4b30e5"
+    },
+    "validation": {
+      "count": 256,
+      "sha256": "1bb6e34c402bc6b28bdc49073548ebb6083942530e07f7bdd3808989c9c05682"
+    },
+    "test_compiler_confirmation": {
+      "count": 512,
+      "sha256": "ec8415bdca28ae00af5fb8a6323ef907aeb22325b1ceb2a5dea3d684a954a40d"
+    }
+  },
+  "source_inputs": {
+    "data/raw/g2c_v1/substitute_6/manifest.json": "c162d46763ea56e17c750f0efdf2a186d5741f62013485fa40f0959c8fa160d4",
+    "data/raw/g2c_v1/substitute_6/train.json": "982ad03930e087da741daf0b6248a666aeb14f6498d32d060f3284fdcc4b30e5",
+    "data/raw/g2c_v1/substitute_6/validation.json": "1bb6e34c402bc6b28bdc49073548ebb6083942530e07f7bdd3808989c9c05682",
+    "data/raw/g2c_v1/substitute_6/qualification_0.json": "02b131400e52a740e82ea4e26ebbe8573f75176d3d2f9883139711a69ee3ff55",
+    "data/raw/g2c_v1/substitute_6/qualification_1.json": "08f7af2496a91e9377b01229e4c8fdeea5451ea8cb9c2bcd582226b2bb955c3b",
+    "data/raw/g2c_v1/substitute_6/test_main.json": "74355484395dc92cf3f09dae78e69fdafa6d04aee4c4a19a9bee5b2fb92b46ad",
+    "data/raw/g2c_v1/substitute_6/test_extension.json": "984c3b910858044e04bd015527b5fc9116d02ad00eb3271b34e64239f8850179",
+    "data/raw/g2c_v1/substitute_6/test_capacity.json": "e2066ba878e6cc59737cb2f7fe2013c54f6b533e2be4a9e1856746739031bd25",
+    "data/raw/topology_confirmation_v2/test_confirm.json": "0ebd9b539ddb9a69b64bdbdc04c3620f3e0be0ee500f536b79ea937b87108fdb",
+    "data/raw/compiler_v3/test_compiler_v3.json": "764b885579ddcb35136a8100c24968ff462a76fdefa1b5cebc43e3c92eae6be7"
+  }
+}

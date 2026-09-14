@@ -1,0 +1,50 @@
+{
+  "study": "Compiler v3 independent five-seed replication",
+  "root": "results/compiler_confirmation",
+  "dataset": "data/raw/compiler_confirmation",
+  "source_dataset": "data/raw/g2c_v1/substitute_6",
+  "reference_spec": "results/g2c_overnight/substitute_6/full/seed_0/real_ce/spec.json",
+  "teacher_spec": "results/g2c_overnight/substitute_6/teacher_0/spec.json",
+  "teacher_checkpoint": "results/g2c_overnight/substitute_6/teacher_0/model.pt",
+  "qualification_receipt": "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json",
+  "training_targets": "results/compiler_v1/teacher_training_targets.json",
+  "training_prompts": "results/compiler_v1/teacher_training_prompts.json",
+  "seeds": [
+    400,
+    401,
+    402,
+    403,
+    404
+  ],
+  "batch": 8,
+  "updates": 512,
+  "checkpoints": [
+    32,
+    64,
+    128,
+    256,
+    384,
+    512
+  ],
+  "curve_cases": 256,
+  "threshold": 0.85,
+  "shuffle_epsilon": 1e-06,
+  "temperature": 2.0,
+  "alignment_weight": 1.0,
+  "test_count": 512,
+  "test_salt": "flygpt-compiler-confirmation-2026-09-14-locked",
+  "primary_split": "test_compiler_confirmation",
+  "methods": [
+    "A_hard",
+    "B_soft",
+    "C_hidden",
+    "D_hidden_shuffled",
+    "E_relational",
+    "F_relational_shuffled"
+  ],
+  "evidence": "Preregistered five-seed replication conditional on a fixed teacher, task and training corpus; small-N inference",
+  "budget_rule": "512 updates and 4096 example presentations per method; identical fixed groups and group sampling schedule",
+  "soft_rule": "B is pure temperature-2 teacher KL; hard-answer CE is diagnostic only. This differs from earlier mixed CE/KL KD.",
+  "stopping": "All 30 models at 512 updates before any final test evaluation; no adaptive changes, replacements or extensions",
+  "machine": "M4 Mac mini CPU scipy four threads for all models"
+}

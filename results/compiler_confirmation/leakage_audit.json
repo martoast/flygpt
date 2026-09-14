@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "excluded": 3200,
+  "available_before_selection": 896,
+  "test_count": 512,
+  "remaining_unused": 384,
+  "test_sha256": "ec8415bdca28ae00af5fb8a6323ef907aeb22325b1ceb2a5dea3d684a954a40d"
+}
