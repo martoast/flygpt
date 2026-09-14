@@ -1,0 +1,11 @@
+{
+  "seed": 103,
+  "condition": "real_ce",
+  "checkpoint": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_103/real_ce/step_01024.pt",
+  "checkpoint_sha256": "22005013c6de330d21d3cfa367a065d514a88f5e44f9eb367813d46d9f364856",
+  "progress_sha256": "a13b4a73b27dbeec1fe13a5fba4ae69caaa952e5bf6d7b4ce28005648199a634",
+  "spec_sha256": "aa69a0c15ac91a68c6715de76feb1525ad448c73bc3a0a582d40d9d67e09baa6",
+  "hardware": "Apple M4, 16 GiB; Python 3.12.12; frozen package versions",
+  "amendment_sha256": "cfa664f33ab876d5897c577282dd4ecfc3dd8a83d04b148fba282dffd496fed5",
+  "final_test_opened": false
+}

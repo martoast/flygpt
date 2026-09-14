@@ -10,5 +10,9 @@
   "102": {
     "real_ce": "artifacts/m4_import/seed_102/real_ce.pt",
     "rewired_ce": "artifacts/m4_import/seed_102/rewired_ce.pt"
+  },
+  "103": {
+    "real_ce": "artifacts/m4_import/seed_103/real_ce.pt",
+    "rewired_ce": "artifacts/m4_import/seed_103/rewired_ce.pt"
   }
 }

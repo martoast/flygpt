@@ -88,5 +88,10 @@
     "sha256": "4da82479533fbb36b40548b1b203e9022021d5ac3fd0d3a616dc6c5f5d264f6d",
     "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00768.pt",
     "verified_utc_epoch": 1789348903.514646
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_01024.pt": {
+    "sha256": "142001f83245e78ad597a607a4dad1cd7ad3f5f4041a4acb347e2a08c21f84f2",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_01024.pt",
+    "verified_utc_epoch": 1789349587.415765
   }
 }
