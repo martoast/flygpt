@@ -37,3 +37,5 @@ results/compiler_v3/*.lock
 data/raw/compiler_v3/test_compiler_v3.json
 
 results/compiler_v3_relay/
+
+results/compiler_v3/distributed/*.lock
