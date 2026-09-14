@@ -1,8 +1,4 @@
 {
-  "stage": "training",
-  "seed": 300,
-  "method": "B_soft",
-  "pid": 22572,
-  "utc": "2026-09-14T11:49:09.904310+00:00",
-  "final_test_opened": false
+  "stage": "complete",
+  "utc": "2026-09-14T12:19:46.477632+00:00"
 }
