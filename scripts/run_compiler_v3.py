@@ -70,7 +70,8 @@ def publish(message):
 
 def make_spec(cfg,seed,method):
     base=read(cfg['reference_spec']);job=ROOT/f'seed_{seed}'/method
-    base.update(seed=seed,method=method,objective=method,projection_seed=225000+seed,job_dir=str(job),dataset=cfg['dataset'],
+    base.update(seed=seed,sampling_seed=75000+seed,group_seed=125000+seed,correspondence_seed=175000+seed,
+        method=method,objective=method,projection_seed=225000+seed,job_dir=str(job),dataset=cfg['dataset'],
         batch=cfg['batch'],budgets=[cfg['updates']],checkpoints=cfg['checkpoints'],curve_cases=cfg['curve_cases'],
         temperature=cfg['temperature'],alignment_weight=cfg['alignment_weight'],evidence_tier=cfg['evidence'],
         training_targets=cfg['training_targets'],training_targets_sha256=sha256(cfg['training_targets']),
