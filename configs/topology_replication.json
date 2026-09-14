@@ -1,0 +1,41 @@
+{
+  "study": "Topology independent ten-pair replication on M1",
+  "seeds": [
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609
+  ],
+  "rewiring_seeds": [
+    1900,
+    1901,
+    1902,
+    1903,
+    1904,
+    1905,
+    1906,
+    1907,
+    1908,
+    1909
+  ],
+  "updates": 1024,
+  "test_count": 128,
+  "test_assignment_salt": "flygpt-topology-replication-2026-09-14",
+  "primary_split": "test_topology_replication",
+  "dataset": "data/raw/topology_replication",
+  "source_dataset": "data/raw/g2c_v1/substitute_6",
+  "reference_spec": "results/g2c_overnight/substitute_6/full/seed_0/real_ce/spec.json",
+  "primary_analysis": "Two-sided paired Student-t test of seed accuracy differences, alpha 0.05; support requires positive mean and p < 0.05. Report 95% t interval. Exact paired sign-flip test is a sensitivity analysis, not an alternative route to success.",
+  "practical_secondary": "Report whether lower 95% interval exceeds +10 percentage points; this is secondary, not the primary gate.",
+  "stopping": "All 10 fresh pairs at 1024 updates, no replacements/extensions; original five-pair study excluded from primary inference",
+  "test_gate": "All 20 checkpoints complete before any final evaluation; exclude every earlier and currently reserved test allocation",
+  "failure_policy": "Nonfinite optimization is reported without replacement; execution faults may resume identical checkpoint/RNG/config, with incident recorded. Missing pairs prevent complete-study claim.",
+  "scope": "Confirmation conditional on the existing training/validation corpus and fixed-length substitution task, not an independent task or corpus replication. Graph and initialization remain paired; mechanism inference requires later crossed design.",
+  "machine": "M1 MacBook CPU/SciPy four threads for all training and evaluation"
+}

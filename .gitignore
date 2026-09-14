@@ -51,3 +51,9 @@ data/raw/compiler_efficiency/test_compiler_efficiency.json
 results/compiler_efficiency/*.lock
 
 results/compiler_efficiency_relay/
+
+data/raw/topology_replication/test_topology_replication.json
+
+results/topology_replication/*.lock
+
+results/topology_replication_backup/
