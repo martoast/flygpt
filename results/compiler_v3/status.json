@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "seed": 300,
-  "method": "D_hidden_shuffled",
+  "method": "E_relational",
   "pid": 22572,
-  "utc": "2026-09-14T11:48:22.427770+00:00",
+  "utc": "2026-09-14T11:48:43.344780+00:00",
   "final_test_opened": false
 }
