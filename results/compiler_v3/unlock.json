@@ -1,0 +1,14 @@
+{
+  "split": "test_compiler_v3",
+  "choices_frozen": true,
+  "inputs": {
+    "results/compiler_v3/frozen_plan.json": "e0f57d206962ac22ca3648cca7d585f7fccb4bafa1819f6962e1297a7256f97e",
+    "results/compiler_v3/publication_receipt.json": "0c3344e3fbf0ffa59c92efcc182d9395ae15b376cea00028730f0707196a2a2a",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/A_hard/step_00512.pt": "e80522bb4f43cfad38afe371c342fae2441d221eb3851d498881ed0ebe9055e2",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/D_hidden_shuffled/step_00512.pt": "cec7bf36c050383fdbed30533940cce7161bd9a1b5a9aa835bb18420e1795359",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/E_relational/step_00512.pt": "b09a8198b91fa8073a7c1a063ebf0d736ffc161e55b66a7a2cc26334cdd15bd4",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/F_relational_shuffled/step_00512.pt": "b5cd18e264e321dc5c6a88f3b50a2280104ec43a23c6b93f2f68af70ed1e1a1c",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/C_hidden/step_00512.pt": "cf1ed019f826cb672619e9c8b4cea4f76ce67d247a923461180fa6ec914ebec0",
+    "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/B_soft/step_00512.pt": "f45b8ac5d3070f37d88d4f619c2a9af4199141b470874235980379d945f0a482"
+  }
+}

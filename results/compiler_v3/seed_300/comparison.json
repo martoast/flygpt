@@ -1,0 +1,218 @@
+{
+  "metrics": {
+    "A_hard": {
+      "accuracy": 0.9375,
+      "response_ce": 0.033798813814947995,
+      "token_accuracy": 0.9888392857142857,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 2.0480516101611153e-06,
+      "teacher_kl": 0.0337940291979716,
+      "zero_edge_ce": 1.9649705961346626,
+      "exact_teacher_agreement": 0.9375,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "B_soft": {
+      "accuracy": 1.0,
+      "response_ce": 0.002273063012087327,
+      "token_accuracy": 1.0,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 2.0480516101611153e-06,
+      "teacher_kl": 0.0022860497600544045,
+      "zero_edge_ce": 1.9569934319172586,
+      "exact_teacher_agreement": 1.0,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "C_hidden": {
+      "accuracy": 1.0,
+      "response_ce": 0.005255915294323391,
+      "token_accuracy": 1.0,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 2.0480516101611153e-06,
+      "teacher_kl": 0.005251017106859633,
+      "zero_edge_ce": 2.0015869502510344,
+      "exact_teacher_agreement": 1.0,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "D_hidden_shuffled": {
+      "accuracy": 0.9609375,
+      "response_ce": 0.02093398468644279,
+      "token_accuracy": 0.9944196428571429,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 2.0480516101611153e-06,
+      "teacher_kl": 0.02092927554349444,
+      "zero_edge_ce": 1.997054519397872,
+      "exact_teacher_agreement": 0.9609375,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "E_relational": {
+      "accuracy": 1.0,
+      "response_ce": 0.0038959526682934404,
+      "token_accuracy": 1.0,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 2.0480516101611153e-06,
+      "teacher_kl": 0.003892532597823057,
+      "zero_edge_ce": 1.9944218322634697,
+      "exact_teacher_agreement": 1.0,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "F_relational_shuffled": {
+      "accuracy": 0.953125,
+      "response_ce": 0.024845675177597774,
+      "token_accuracy": 0.9933035714285714,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 2.0480516101611153e-06,
+      "teacher_kl": 0.02484170602838276,
+      "zero_edge_ce": 1.9945660382509232,
+      "exact_teacher_agreement": 0.953125,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    }
+  },
+  "cases": 128,
+  "learning": {
+    "A_hard": {
+      "validation_accuracy_area": 0.601953125,
+      "threshold": 0.85,
+      "threshold_reached": true,
+      "first_observed_crossing": {
+        "step": 384,
+        "examples_seen": 3072,
+        "acquisition_seconds": 3925.609040309908,
+        "wall_seconds": 5221.569539166987
+      },
+      "crossing_update_interval": [
+        256,
+        384
+      ],
+      "right_censored_after_updates": null,
+      "final_accuracy": 0.9375,
+      "acquisition_seconds": 5232.57281352143,
+      "end_to_end_seconds": 6797.289442749985
+    },
+    "B_soft": {
+      "validation_accuracy_area": 0.529296875,
+      "threshold": 0.85,
+      "threshold_reached": true,
+      "first_observed_crossing": {
+        "step": 384,
+        "examples_seen": 3072,
+        "acquisition_seconds": 3927.1343466262333,
+        "wall_seconds": 5218.907016374054
+      },
+      "crossing_update_interval": [
+        256,
+        384
+      ],
+      "right_censored_after_updates": null,
+      "final_accuracy": 0.98828125,
+      "acquisition_seconds": 5230.621896708442,
+      "end_to_end_seconds": 6789.282927749038
+    },
+    "C_hidden": {
+      "validation_accuracy_area": 0.6126302083333334,
+      "threshold": 0.85,
+      "threshold_reached": true,
+      "first_observed_crossing": {
+        "step": 384,
+        "examples_seen": 3072,
+        "acquisition_seconds": 5197.555314835743,
+        "wall_seconds": 7094.182697832002
+      },
+      "crossing_update_interval": [
+        256,
+        384
+      ],
+      "right_censored_after_updates": null,
+      "final_accuracy": 1.0,
+      "acquisition_seconds": 6925.8955712916795,
+      "end_to_end_seconds": 9202.99457695696
+    },
+    "D_hidden_shuffled": {
+      "validation_accuracy_area": 0.5548177083333333,
+      "threshold": 0.85,
+      "threshold_reached": true,
+      "first_observed_crossing": {
+        "step": 384,
+        "examples_seen": 3072,
+        "acquisition_seconds": 5232.97364062001,
+        "wall_seconds": 7142.185408583027
+      },
+      "crossing_update_interval": [
+        256,
+        384
+      ],
+      "right_censored_after_updates": null,
+      "final_accuracy": 0.9765625,
+      "acquisition_seconds": 6960.138630792033,
+      "end_to_end_seconds": 9250.169781291042
+    },
+    "E_relational": {
+      "validation_accuracy_area": 0.60625,
+      "threshold": 0.85,
+      "threshold_reached": true,
+      "first_observed_crossing": {
+        "step": 384,
+        "examples_seen": 3072,
+        "acquisition_seconds": 3925.9024267896893,
+        "wall_seconds": 5225.974056457984
+      },
+      "crossing_update_interval": [
+        256,
+        384
+      ],
+      "right_censored_after_updates": null,
+      "final_accuracy": 1.0,
+      "acquisition_seconds": 5232.007470082433,
+      "end_to_end_seconds": 6798.819344957999
+    },
+    "F_relational_shuffled": {
+      "validation_accuracy_area": 0.5986979166666667,
+      "threshold": 0.85,
+      "threshold_reached": true,
+      "first_observed_crossing": {
+        "step": 384,
+        "examples_seen": 3072,
+        "acquisition_seconds": 3924.871492286562,
+        "wall_seconds": 5220.935998374014
+      },
+      "crossing_update_interval": [
+        256,
+        384
+      ],
+      "right_censored_after_updates": null,
+      "final_accuracy": 0.9609375,
+      "acquisition_seconds": 5233.325155741419,
+      "end_to_end_seconds": 6797.328309083008
+    }
+  },
+  "gap_to_hard": {
+    "A_hard": 0.0,
+    "B_soft": 0.0625,
+    "C_hidden": 0.0625,
+    "D_hidden_shuffled": 0.0234375,
+    "E_relational": 0.0625,
+    "F_relational_shuffled": 0.015625
+  },
+  "representation_contrasts": {
+    "C_hidden": {
+      "vs_hard": 0.0625,
+      "vs_shuffled": 0.0390625
+    },
+    "E_relational": {
+      "vs_hard": 0.0625,
+      "vs_shuffled": 0.046875
+    }
+  },
+  "evidence": "One-seed engineering pilot, not a replicated finding; no topology comparison in this cohort"
+}

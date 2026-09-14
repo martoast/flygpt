@@ -1,0 +1,17 @@
+{
+  "method": "C_hidden",
+  "step": 512,
+  "host": "M1 MacBook",
+  "checkpoint": {
+    "path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/C_hidden/step_00512.pt",
+    "sha256": "cf1ed019f826cb672619e9c8b4cea4f76ce67d247a923461180fa6ec914ebec0"
+  },
+  "inputs": {
+    "results/compiler_v3/seed_300/C_hidden/progress.json": "5d78ff61df07b26aca0e093e5ea1c941d8a4ae5056ad5053803e28243a85cf2b",
+    "results/compiler_v3/seed_300/C_hidden/engine_source.py": "c172ed1e6a0be7670bed27745f7cd61b2720d5655e1a4b7b6bbe4668900a3d57",
+    "results/compiler_v3/seed_300/C_hidden/train.log": "5021cace32749c3e8a8e2e81136bdd95197c4a2e00a6896104d5641c450187a0",
+    "results/compiler_v3/distributed/C_hidden_imports.json": "56826bf1545012b2a555ccd57c28455efa027fb710d9f12fdf92989855f6a0ab"
+  },
+  "spec_sha256": "4919128586189f696ea7a3fc06ce0a69a8d63c49be680b6e9274152932f12c88",
+  "utc": "2026-09-14T09:34:22.221471+00:00"
+}

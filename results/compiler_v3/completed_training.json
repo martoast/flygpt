@@ -1,0 +1,10 @@
+{
+  "300": {
+    "A_hard": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/A_hard/step_00512.pt",
+    "D_hidden_shuffled": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/D_hidden_shuffled/step_00512.pt",
+    "E_relational": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/E_relational/step_00512.pt",
+    "F_relational_shuffled": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/F_relational_shuffled/step_00512.pt",
+    "C_hidden": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/C_hidden/step_00512.pt",
+    "B_soft": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/B_soft/step_00512.pt"
+  }
+}

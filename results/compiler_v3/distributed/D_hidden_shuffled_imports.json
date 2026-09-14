@@ -1,0 +1,26 @@
+{
+  "32": {
+    "path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/D_hidden_shuffled/step_00032.pt",
+    "sha256": "8ed4bb583914a5372fd9814f52e39e147af7a278ea4c8ed8f6eb453a4288e945"
+  },
+  "64": {
+    "path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/D_hidden_shuffled/step_00064.pt",
+    "sha256": "8e640c734a84b6846176c23e0106fe4983f80f77fc06ce95c330a75019bbd133"
+  },
+  "128": {
+    "path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/D_hidden_shuffled/step_00128.pt",
+    "sha256": "6d613954ac87ae94ae25914d45858a67d90b61d281de28d555d8451f95d3355d"
+  },
+  "256": {
+    "path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/D_hidden_shuffled/step_00256.pt",
+    "sha256": "46a2188bbb199069ad16fbbff4a8e355b69b820c9f30b767ec22897547b6ad56"
+  },
+  "384": {
+    "path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/D_hidden_shuffled/step_00384.pt",
+    "sha256": "ae1c64644370494a472076b4ef1a593f634c45b45c6cb11dc777160dbd0fcef3"
+  },
+  "512": {
+    "path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/D_hidden_shuffled/step_00512.pt",
+    "sha256": "cec7bf36c050383fdbed30533940cce7161bd9a1b5a9aa835bb18420e1795359"
+  }
+}
