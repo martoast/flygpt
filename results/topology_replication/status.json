@@ -1,6 +1,8 @@
 {
-  "stage": "preparing_rewired_graph",
-  "graph_seed": 1909,
-  "utc": "2026-09-14T18:02:02.653082+00:00",
+  "stage": "training",
+  "seed": 600,
+  "condition": "real_ce",
+  "spec": "results/topology_replication/pairs/seed_600/real_ce/spec.json",
+  "utc": "2026-09-14T18:05:03.743328+00:00",
   "final_test_opened": false
 }
