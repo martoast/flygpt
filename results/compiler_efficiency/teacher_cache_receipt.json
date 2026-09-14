@@ -1,0 +1,25 @@
+{
+  "inputs": {
+    "results/g2c_overnight/substitute_6/teacher_0/spec.json": "63979207ddd1b91be34245f85a21f7676f76ba53bc0bfd0c4fb666795c2f8b53",
+    "results/g2c_overnight/substitute_6/teacher_0/model.pt": "e5188035bb025a20df6503147dd3ff699780e157b8eea78085e2a71a13c381f7",
+    "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json": "20da00d9203117e061e7869c5dc95d67d750dbe2320642eb93d02fc4bfbce157",
+    "results/compiler_v1/teacher_training_targets.json": "9c47fd2cab4b4608d2aeaa3615177ef961bd59374e611f2820be9931dece3c2e",
+    "results/compiler_v1/teacher_training_prompts.json": "b5dc328111499cf52104bb539e09c21f90c979012aee5695fef2f8d91196bdaa",
+    "scripts/compiler_v3_engine.py": "c172ed1e6a0be7670bed27745f7cd61b2720d5655e1a4b7b6bbe4668900a3d57"
+  },
+  "cache_sha256": "b5dbfe9c83755db64b6f8d3a80b2b3010b2ec1a31f322bfba4be61c3215f5b1d",
+  "hard_answer_generation_seconds": 6.059061561012641,
+  "representation_extraction_and_cache_seconds": 0.24143598601222038,
+  "teacher_pretraining_excluded": true,
+  "timing_rule": "Charge full one-time hard-answer generation to every method; B\u2013F also charged full cache extraction. Shared-cache amortized figures are secondary.",
+  "teacher_only_targets": true,
+  "examples": 2048,
+  "hardware": {
+    "platform": "Linux-7.1.9-arch1-2-x86_64-with-glibc2.44",
+    "machine": "x86_64",
+    "torch": "2.14.0+cpu",
+    "mps": false,
+    "cuda": false,
+    "torch_threads": 4
+  }
+}

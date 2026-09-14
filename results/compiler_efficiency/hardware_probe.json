@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "peak_rss_bytes": 2443886592,
+  "wall_seconds": 46.660196387034375,
+  "checkpoint_sha256": "ae02134e4eef66e6bb812cecb26def6f41767edeccfeb9d5b381c05ac4aef922",
+  "hardware": {
+    "platform": "Linux-7.1.9-arch1-2-x86_64-with-glibc2.44",
+    "machine": "x86_64",
+    "torch": "2.14.0+cpu",
+    "mps": false,
+    "cuda": false,
+    "torch_threads": 4
+  }
+}

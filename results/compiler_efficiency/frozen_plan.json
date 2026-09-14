@@ -1,0 +1,431 @@
+{
+  "jobs": [
+    {
+      "seed": 500,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_500/B_soft/spec.json"
+    },
+    {
+      "seed": 500,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_500/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 500,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_500/A_hard/spec.json"
+    },
+    {
+      "seed": 500,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_500/C_hidden/spec.json"
+    },
+    {
+      "seed": 500,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_500/E_relational/spec.json"
+    },
+    {
+      "seed": 500,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_500/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 501,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_501/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 501,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_501/B_soft/spec.json"
+    },
+    {
+      "seed": 501,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_501/E_relational/spec.json"
+    },
+    {
+      "seed": 501,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_501/C_hidden/spec.json"
+    },
+    {
+      "seed": 501,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_501/A_hard/spec.json"
+    },
+    {
+      "seed": 501,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_501/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 502,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_502/B_soft/spec.json"
+    },
+    {
+      "seed": 502,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_502/E_relational/spec.json"
+    },
+    {
+      "seed": 502,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_502/A_hard/spec.json"
+    },
+    {
+      "seed": 502,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_502/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 502,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_502/C_hidden/spec.json"
+    },
+    {
+      "seed": 502,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_502/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 503,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_503/B_soft/spec.json"
+    },
+    {
+      "seed": 503,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_503/E_relational/spec.json"
+    },
+    {
+      "seed": 503,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_503/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 503,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_503/A_hard/spec.json"
+    },
+    {
+      "seed": 503,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_503/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 503,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_503/C_hidden/spec.json"
+    },
+    {
+      "seed": 504,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_504/C_hidden/spec.json"
+    },
+    {
+      "seed": 504,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_504/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 504,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_504/A_hard/spec.json"
+    },
+    {
+      "seed": 504,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_504/B_soft/spec.json"
+    },
+    {
+      "seed": 504,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_504/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 504,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_504/E_relational/spec.json"
+    },
+    {
+      "seed": 505,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_505/E_relational/spec.json"
+    },
+    {
+      "seed": 505,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_505/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 505,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_505/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 505,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_505/C_hidden/spec.json"
+    },
+    {
+      "seed": 505,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_505/B_soft/spec.json"
+    },
+    {
+      "seed": 505,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_505/A_hard/spec.json"
+    },
+    {
+      "seed": 506,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_506/A_hard/spec.json"
+    },
+    {
+      "seed": 506,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_506/E_relational/spec.json"
+    },
+    {
+      "seed": 506,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_506/B_soft/spec.json"
+    },
+    {
+      "seed": 506,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_506/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 506,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_506/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 506,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_506/C_hidden/spec.json"
+    },
+    {
+      "seed": 507,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_507/A_hard/spec.json"
+    },
+    {
+      "seed": 507,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_507/C_hidden/spec.json"
+    },
+    {
+      "seed": 507,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_507/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 507,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_507/E_relational/spec.json"
+    },
+    {
+      "seed": 507,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_507/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 507,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_507/B_soft/spec.json"
+    },
+    {
+      "seed": 508,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_508/A_hard/spec.json"
+    },
+    {
+      "seed": 508,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_508/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 508,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_508/B_soft/spec.json"
+    },
+    {
+      "seed": 508,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_508/C_hidden/spec.json"
+    },
+    {
+      "seed": 508,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_508/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 508,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_508/E_relational/spec.json"
+    },
+    {
+      "seed": 509,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_efficiency/seed_509/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 509,
+      "method": "A_hard",
+      "spec": "results/compiler_efficiency/seed_509/A_hard/spec.json"
+    },
+    {
+      "seed": 509,
+      "method": "C_hidden",
+      "spec": "results/compiler_efficiency/seed_509/C_hidden/spec.json"
+    },
+    {
+      "seed": 509,
+      "method": "B_soft",
+      "spec": "results/compiler_efficiency/seed_509/B_soft/spec.json"
+    },
+    {
+      "seed": 509,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_efficiency/seed_509/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 509,
+      "method": "E_relational",
+      "spec": "results/compiler_efficiency/seed_509/E_relational/spec.json"
+    }
+  ],
+  "inputs": {
+    "configs/compiler_efficiency.json": "499df954cbedadd509674f9fa9bd658d53b4de2b91de150893f91322e061ba56",
+    "COMPILER_EFFICIENCY_PREREGISTRATION.md": "9bc362141141609a35a89ac5005d68790f7780d28e9ddb457a94ce65cb352736",
+    "scripts/run_compiler_efficiency.py": "9136e44c570bbaad13fdaaa5abec722ac34b452ae1cc1bb7b2950d53ebcb5a37",
+    "scripts/compiler_efficiency_analysis.py": "e58fd7a9e714ee492b18aef6e8e4605c2c5d3824eec04ebe0f0a7e407440f02b",
+    "tests/test_compiler_efficiency.py": "5109ef02d732205fb3ea1616c64cf370453322c507e4851d25ae090a0148eedb",
+    "scripts/compiler_efficiency_engine.py": "6184952c5d00dcd41280700b1fae0ddd69fd6dc613aa1a7ca6d895a283cb56b6",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45",
+    "scripts/compiler_v3_engine.py": "c172ed1e6a0be7670bed27745f7cd61b2720d5655e1a4b7b6bbe4668900a3d57",
+    "scripts/compiler_storage.py": "f7d6eb4b3eadd2b89a580cdbb923712e24ed9a948d82d43ee5bd40ff7d1259f3",
+    "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
+    "scripts/run_compiler_v1.py": "2f273e66e98e44267692441a1461800983ba7f9a83715f6e1a12c71e25b773e7",
+    "scripts/run_compiler_v3.py": "beac49e471453c68315f6449dab3cc8194e546484b513ade1b59420d33d42c82",
+    "scripts/run_g2c_overnight.py": "87dba47fafe57c639cf4467adc1ff12e599d92998a88ff3e8d0a76fdf89808d9",
+    "scripts/compiler_confirmation_analysis.py": "00a1ccde169e4630c9387e330545f51d7e6d1763d572910fdacda35b492abc4d",
+    "results/g2c_overnight/substitute_6/teacher_0/spec.json": "63979207ddd1b91be34245f85a21f7676f76ba53bc0bfd0c4fb666795c2f8b53",
+    "results/g2c_overnight/substitute_6/teacher_0/model.pt": "e5188035bb025a20df6503147dd3ff699780e157b8eea78085e2a71a13c381f7",
+    "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json": "20da00d9203117e061e7869c5dc95d67d750dbe2320642eb93d02fc4bfbce157",
+    "results/compiler_v1/teacher_training_targets.json": "9c47fd2cab4b4608d2aeaa3615177ef961bd59374e611f2820be9931dece3c2e",
+    "results/compiler_v1/teacher_training_prompts.json": "b5dc328111499cf52104bb539e09c21f90c979012aee5695fef2f8d91196bdaa",
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+    "results/compiler_efficiency/teacher_cache.pt": "b5dbfe9c83755db64b6f8d3a80b2b3010b2ec1a31f322bfba4be61c3215f5b1d",
+    "results/compiler_efficiency/teacher_cache_receipt.json": "2066471921fd73d381df7a1a5ae446b7c2fe50168e55d5cf21dbfec2974b0647",
+    "results/compiler_efficiency/environment.json": "aaed2f8848267510ffe80211f841b0bf4c3de2cb17ec17448cbe00b4dbf0064c",
+    "data/raw/compiler_efficiency/manifest.json": "5c0326f5b4194dba14d1f65581504b2f63b3946b2e0d8266f97dd01f3339d1c9",
+    "data/raw/compiler_efficiency/train.json": "982ad03930e087da741daf0b6248a666aeb14f6498d32d060f3284fdcc4b30e5",
+    "data/raw/compiler_efficiency/validation.json": "1bb6e34c402bc6b28bdc49073548ebb6083942530e07f7bdd3808989c9c05682",
+    "data/raw/compiler_efficiency/test_compiler_efficiency.json": "db70837b3ac107562e066d8ca0bcc6c1fce2a4302bdb5832a9e5399c8f99f0a6",
+    "results/compiler_efficiency/schedule_500.json": "8d0513a9fd67b4207d5aa0962fd664dc9e5e0cbf4ed2a1728ffb5a2651a00198",
+    "results/compiler_efficiency/shuffle_audit_500.json": "976da3019f18da67797b2d669a9dea2b16a79d64a2373e62e70a679acc6e1c51",
+    "results/compiler_efficiency/schedule_501.json": "c98830f43f5b5ad9fb4a82a347fdb9083599d0c6d182889af14bd2256b74cc63",
+    "results/compiler_efficiency/shuffle_audit_501.json": "a7a62d03b01f26618758c92901cbced02e2b6780b3c90be109b2de269638d781",
+    "results/compiler_efficiency/schedule_502.json": "58f933e698fd1e7d3c6fe675f20aad916165b17afbc11f663586903163cda2a1",
+    "results/compiler_efficiency/shuffle_audit_502.json": "2e58c8a86f9cc6ff7563772311ed332d545d1fafabcce2703ffee4985a8c26d0",
+    "results/compiler_efficiency/schedule_503.json": "0ee0c69c068974ec4b03e2c92ad3557cdd26e3729e95485738a43863f08b7c1c",
+    "results/compiler_efficiency/shuffle_audit_503.json": "52e712f52e79b5063010c2551bd3c506cc7a0ac52b07046ed31ca4e0e7cda4c5",
+    "results/compiler_efficiency/schedule_504.json": "3726b82ee18069eaa3a5d951f10c13abce319ec9a5916ff51eb5b301f84c4854",
+    "results/compiler_efficiency/shuffle_audit_504.json": "57aff80572807014b5544be52c4f4d7750642cb6fe61943574c09097b8d30ca2",
+    "results/compiler_efficiency/schedule_505.json": "6861ac37780e86213b57bc4ab479db3d62f27e5b2ab50ca3013b9fa5db2ee237",
+    "results/compiler_efficiency/shuffle_audit_505.json": "b91c45ec17c6eea02fb247a0d9f98435f83d31f314970b54396588f37ce20cb4",
+    "results/compiler_efficiency/schedule_506.json": "54c009513b684c04b5a773dcf125d029d02da041f7278717146b26ae3d9396a7",
+    "results/compiler_efficiency/shuffle_audit_506.json": "597b5d71abfca49e9e0de8d66c44868669ade3f4fa7bedc6bef7334706739b21",
+    "results/compiler_efficiency/schedule_507.json": "cb52dd93c2d94f904f18b54bbdace9c57e5cfbfd67d95a6dc002e88f72f0f528",
+    "results/compiler_efficiency/shuffle_audit_507.json": "c815ad1d115aea8eaffd4cb3c9aa1f3bd73324a23f1df6a867044713cf077ab3",
+    "results/compiler_efficiency/schedule_508.json": "b6a5bc544b2054fa77e35dfe657d5ec65dcf494f46589814a5f040d95bc67255",
+    "results/compiler_efficiency/shuffle_audit_508.json": "488c6eedc982c8539f35715bf2aa5d67987a2d0372ff0dca673aeeeace1e3c5f",
+    "results/compiler_efficiency/schedule_509.json": "fa5389fefabd7207bc790d81f7f60a80bb5a60384bf71cda5a1bac94960c0385",
+    "results/compiler_efficiency/shuffle_audit_509.json": "de46720aa35a5e64a24e79166681b2cd0f41d520a45b1a5eafb9becf0782d31a",
+    "results/compiler_efficiency/seed_500/B_soft/spec.json": "08c464f6361e270efc244ac0ed28123014fce9f30b7aa8387c602dbb4419d73d",
+    "results/compiler_efficiency/seed_500/D_hidden_shuffled/spec.json": "96657f7078b02efb8b82b56ed0d40d12493d3948add6311429218e559aeaba0d",
+    "results/compiler_efficiency/seed_500/A_hard/spec.json": "3695960acd263d2b8e7c1f37a5648a6eca504c22281998308d4512029065a097",
+    "results/compiler_efficiency/seed_500/C_hidden/spec.json": "eb5e691fac9f4e2712d38a685120c72d5e36e8ee46c7eebd22bc5c4599686c42",
+    "results/compiler_efficiency/seed_500/E_relational/spec.json": "58434df5181ac6ab7c481d035b104df36a93385f08b12c98373851acad2fa7be",
+    "results/compiler_efficiency/seed_500/F_relational_shuffled/spec.json": "417a548030322a0bc2f58a1ef5dcae7c29bb330e541b6d7fc8487ebf4fe3c7d2",
+    "results/compiler_efficiency/seed_501/F_relational_shuffled/spec.json": "5bab27e1cd3be16156850063531c3defe9e17be64a2ab977c03189fddd1b34d6",
+    "results/compiler_efficiency/seed_501/B_soft/spec.json": "aadc149e778f5f7d3ffd4a4ab3bd8cce579b1a6098e2d7ff578b9acca25cf984",
+    "results/compiler_efficiency/seed_501/E_relational/spec.json": "03e3184ce42b29de522a96ac5ffc46b35a0616436f70d86dbefe568f3c87a226",
+    "results/compiler_efficiency/seed_501/C_hidden/spec.json": "9a9f49f6fb8cef216a121afb9e462aa1504c339254e3d7c02aaadd454d5c278e",
+    "results/compiler_efficiency/seed_501/A_hard/spec.json": "2f6702528a0e82f82a9e93405d3266d0b5db15e86f3cae8a470544feedbaf846",
+    "results/compiler_efficiency/seed_501/D_hidden_shuffled/spec.json": "8ae74a7615a87036fee7e01fe16d19c7c464fce62786cbf379d3c29bee150c15",
+    "results/compiler_efficiency/seed_502/B_soft/spec.json": "1be20de1e50717c90845bee2f524514d7b2a8ddefa1d9fda357e5aaedf8ea734",
+    "results/compiler_efficiency/seed_502/E_relational/spec.json": "7bf699696600a27db21507505b63bf27628ba69fb5e4cbc4c81c9da296f7d31d",
+    "results/compiler_efficiency/seed_502/A_hard/spec.json": "fde8cafad659d4275487f01b9fdf10040507706e7db137294cdcde0b7e380c31",
+    "results/compiler_efficiency/seed_502/F_relational_shuffled/spec.json": "1de5c924f791603602ecfcef9b817ddc18a875b1d8422a02730764983e6f7bfc",
+    "results/compiler_efficiency/seed_502/C_hidden/spec.json": "e789adeaf034c67909acfaeca8e41a24717f6e591f173f99fa0e3ae1c2839b37",
+    "results/compiler_efficiency/seed_502/D_hidden_shuffled/spec.json": "ae4e77b7428bd288b33c5e13d2df0705ee8de1b0dac9a0aa9fa3997961c98cfe",
+    "results/compiler_efficiency/seed_503/B_soft/spec.json": "1cd2dca3124dcf4fc20a02bd11e6bbf5fecaa85006acaa96439fe5f3df15560d",
+    "results/compiler_efficiency/seed_503/E_relational/spec.json": "c0d3faf4eb68e5e2c7519fbfb2c4abf74ad1d77a2ec19640d201db45e4b673ea",
+    "results/compiler_efficiency/seed_503/D_hidden_shuffled/spec.json": "58ede3ee8a722fc50ba1f9f0def581f3062d109590451ee22a28349341e573f6",
+    "results/compiler_efficiency/seed_503/A_hard/spec.json": "fa7525cdef408c9e14e5821f83d38c66bc81678338430716aef492a0de1a15d9",
+    "results/compiler_efficiency/seed_503/F_relational_shuffled/spec.json": "c5d1dd6812d6e1ce5742e86c99afccc86fde58d5c2038ad476ccc193501cbb9e",
+    "results/compiler_efficiency/seed_503/C_hidden/spec.json": "713bacad76d9797c765f544a5757ab4b437d56afe62540e21134cf8bc4b07845",
+    "results/compiler_efficiency/seed_504/C_hidden/spec.json": "29a9059ccb6b15f9d767ea978acf6fd0f474095c989a9307ede49860667720d8",
+    "results/compiler_efficiency/seed_504/F_relational_shuffled/spec.json": "c8ad5355bd9bc0832e34653a4451c0d4b8ee31b18091d3a6648f46de62af241c",
+    "results/compiler_efficiency/seed_504/A_hard/spec.json": "cdc6ae02989121f334816591e4e13549a9aefa274f4770c3800e92b3099919d0",
+    "results/compiler_efficiency/seed_504/B_soft/spec.json": "139a8cedf4879fb83111e0cf59888d76d913b262e911125f4fdbb505c381f8c4",
+    "results/compiler_efficiency/seed_504/D_hidden_shuffled/spec.json": "e4ec991cc35659eb9b261ecb483b08cb06f1f3e909c5495418587284dd3a35d4",
+    "results/compiler_efficiency/seed_504/E_relational/spec.json": "46b602cc1d36d93e2d8336eab1a1b55c2d7440cf37dccc3931c192386b08e998",
+    "results/compiler_efficiency/seed_505/E_relational/spec.json": "ae72d672bd64efda60ff0a9e28e225755bb54e6ca490b07b386e98ae39445387",
+    "results/compiler_efficiency/seed_505/D_hidden_shuffled/spec.json": "689d840ac8736ea5f602d9ebd87e5296347964a20f9b9c65d2c0157c78559590",
+    "results/compiler_efficiency/seed_505/F_relational_shuffled/spec.json": "f95ff6ee10fbe8aab944faa16a65989f27adf5a5b719e25970f38f2f0852196a",
+    "results/compiler_efficiency/seed_505/C_hidden/spec.json": "dc7841e3db0df4d6f4a9111ca4f86ebf4b0f4c107bb06732dac79875a1b82764",
+    "results/compiler_efficiency/seed_505/B_soft/spec.json": "5a387647b4ed1d0eeeecf6c0ea6c37587736ab750e2018b5443a274df9f6fee6",
+    "results/compiler_efficiency/seed_505/A_hard/spec.json": "fbc2aa85161865e120a22126e6919297518c08ca105b1ce14fa4afeb89380bd4",
+    "results/compiler_efficiency/seed_506/A_hard/spec.json": "146685709410db2df61131f8ce676e6b4fbd4c66e984ab74f6d7d62886817841",
+    "results/compiler_efficiency/seed_506/E_relational/spec.json": "6b6a4396c5ec888e344b8e59ee899b16520b877c6c9d963d85116b38054e89f2",
+    "results/compiler_efficiency/seed_506/B_soft/spec.json": "343fea4b4e2350aceccba467b319ba33e3b85eb3b3bb7e0c07d7160543f60389",
+    "results/compiler_efficiency/seed_506/F_relational_shuffled/spec.json": "1a5e3fdf7fa39292c000b29ff27b106b2c8b1bc07356bf7f721e46205a613d4e",
+    "results/compiler_efficiency/seed_506/D_hidden_shuffled/spec.json": "b74f135f326c40ba4322150ae4568eb3f75a249c2430721a952f7a95fe4a9513",
+    "results/compiler_efficiency/seed_506/C_hidden/spec.json": "affbcfffd6a4a1b32c8b5fe68d7b14a2d525eafba3773496f57da8a3573efa9f",
+    "results/compiler_efficiency/seed_507/A_hard/spec.json": "3b8bc299e6d1cf33f9a21ed3481dd8bde7283293b5199bbe7f370c7331b970df",
+    "results/compiler_efficiency/seed_507/C_hidden/spec.json": "b37637d13e83a8440beab1080d8d9ce2b6a5b7e174f83ce1bea4f514bb1f3efd",
+    "results/compiler_efficiency/seed_507/D_hidden_shuffled/spec.json": "f0e98a212ee88aaa691c240825f530d2366e7cc00dce01530502a3d9bd60edbc",
+    "results/compiler_efficiency/seed_507/E_relational/spec.json": "3374fe4e0580f43441e651bdc71546ef36f4863cdb9280925876625e2cab6db6",
+    "results/compiler_efficiency/seed_507/F_relational_shuffled/spec.json": "917709d888985faabb63570924f97e16ed0adbf05113048f6f1446db2c988c16",
+    "results/compiler_efficiency/seed_507/B_soft/spec.json": "222664c31debe5b766d1c89708565d1a666b18d8315cb14c92231870da903fd4",
+    "results/compiler_efficiency/seed_508/A_hard/spec.json": "94649b789c327527fa55d202576cc310d0fea7f1a358b14c6b63938450148b5b",
+    "results/compiler_efficiency/seed_508/F_relational_shuffled/spec.json": "abff252acfb03109fde6b7f86f052bf2eabec3fb9b27612479669c99ed0f1369",
+    "results/compiler_efficiency/seed_508/B_soft/spec.json": "39f9f2f92c1bf270225098728b664e49eb413c96ed71b0fd7e2f72b8a773cd8c",
+    "results/compiler_efficiency/seed_508/C_hidden/spec.json": "48375c454fad39292581e44a214d75d11dfca642b430eeb77a9f72d541f1ce8e",
+    "results/compiler_efficiency/seed_508/D_hidden_shuffled/spec.json": "e0e09496aa6f35cf0c8f91f83ea9fe3e86df67d49e7eb7f50f2ab5c6dfe345be",
+    "results/compiler_efficiency/seed_508/E_relational/spec.json": "b40cedfbb2a4d55291b41c83c2aa5b5580fcfb151a71ff56b11948aecd6bc92a",
+    "results/compiler_efficiency/seed_509/D_hidden_shuffled/spec.json": "fb86228084ce0cf1346513d82c5e907bc086df931189a42620eac923cea585b7",
+    "results/compiler_efficiency/seed_509/A_hard/spec.json": "71fd093613f9ee19993d131fe6ef5d82abef6bf8ffd2f73034d72edd87098f6a",
+    "results/compiler_efficiency/seed_509/C_hidden/spec.json": "2b3c209ba2af41b0c62b8cf72cb2954349faad56482b89978ffc79fc92f4cfd5",
+    "results/compiler_efficiency/seed_509/B_soft/spec.json": "70da69f520fbb532e69af67b6f3384fb5eb7ebe5a2d712835715f96f8f27b2af",
+    "results/compiler_efficiency/seed_509/F_relational_shuffled/spec.json": "49d484f96511b9d1af61dbd7c6daa22cb0f94070faa50b9985d17fe799f47859",
+    "results/compiler_efficiency/seed_509/E_relational/spec.json": "9403db0cd0b1434cb8249478d187d7f2e5c9fb12cced6f4818bfb4d44a09067f"
+  },
+  "final_test_gate": "All 60 final checkpoints verified before any final evaluation"
+}
