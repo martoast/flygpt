@@ -1,0 +1,29 @@
+{
+  "utc": "2026-09-14T04:22:56.385928+00:00",
+  "reason": "User requested using both computers to reduce elapsed time",
+  "m1": [
+    "D_hidden_shuffled",
+    "C_hidden"
+  ],
+  "m4": [
+    "A_hard",
+    "E_relational",
+    "F_relational_shuffled",
+    "B_soft"
+  ],
+  "existing_m4_child": 21867,
+  "probe": {
+    "passed": true,
+    "max_rss_bytes": 1821917184,
+    "wall_seconds": 26.53525916603394,
+    "checkpoint_sha256": "f7b24f05b26d24d82d5e6da2700f8243a856723df02d6334fc19a4d154ac97cf"
+  },
+  "inputs": {
+    "COMPILER_V3_HARDWARE_AMENDMENT.md": "b1368f966943dda20e7943b593578e69cead8eca39338c5d10969959f0d64868",
+    "scripts/distribute_compiler_v3.py": "b2c199b92b53fe9701b391513d71a223e3579450d36531886c4b0931f5ae01f2",
+    "tests/test_distribute_compiler_v3.py": "f036bcd3cd478f84e9f014e9be1523f2a14199f7395c150f296a8e36165d3a62",
+    "scripts/mirror_m1_checkpoints.py": "6afdda90f0316526da7d83bd5a4f1b5109336ced308b141532691bf7147dc26a",
+    "scripts/distributed_confirmation.py": "3b6f7bfe0616da62ea81511640faac36719ca60ce15e95e72a390ab57380a4a8",
+    "results/compiler_v3/frozen_plan.json": "e0f57d206962ac22ca3648cca7d585f7fccb4bafa1819f6962e1297a7256f97e"
+  }
+}
