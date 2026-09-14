@@ -45,3 +45,9 @@ data/raw/compiler_confirmation/test_compiler_confirmation.json
 results/compiler_confirmation/*.lock
 
 results/compiler_confirmation_relay/
+
+data/raw/compiler_efficiency/test_compiler_efficiency.json
+
+results/compiler_efficiency/*.lock
+
+results/compiler_efficiency_relay/

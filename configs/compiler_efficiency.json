@@ -1,0 +1,61 @@
+{
+  "study": "Compiler acquisition before saturation on Omarchy",
+  "root": "results/compiler_efficiency",
+  "dataset": "data/raw/compiler_efficiency",
+  "source_dataset": "data/raw/g2c_v1/substitute_6",
+  "reference_spec": "results/g2c_overnight/substitute_6/full/seed_0/real_ce/spec.json",
+  "teacher_spec": "results/g2c_overnight/substitute_6/teacher_0/spec.json",
+  "teacher_checkpoint": "results/g2c_overnight/substitute_6/teacher_0/model.pt",
+  "qualification_receipt": "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json",
+  "training_targets": "results/compiler_v1/teacher_training_targets.json",
+  "training_prompts": "results/compiler_v1/teacher_training_prompts.json",
+  "seeds": [
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509
+  ],
+  "batch": 8,
+  "updates": 256,
+  "checkpoints": [
+    32,
+    64,
+    96,
+    128,
+    160,
+    192,
+    224,
+    256
+  ],
+  "curve_cases": 256,
+  "threshold": 0.75,
+  "shuffle_epsilon": 1e-06,
+  "temperature": 2.0,
+  "alignment_weight": 1.0,
+  "test_count": 256,
+  "test_salt": "flygpt-compiler-efficiency-2026-09-14-locked",
+  "primary_split": "test_compiler_efficiency",
+  "methods": [
+    "A_hard",
+    "B_soft",
+    "C_hidden",
+    "D_hidden_shuffled",
+    "E_relational",
+    "F_relational_shuffled"
+  ],
+  "evidence": "Preregistered ten-seed fixed-budget acquisition study; independent of M4 replication",
+  "budget_rule": "256 updates and 2048 presentations per method; prefix at 128 updates is secondary; same fixed groups within seed",
+  "soft_rule": "B is pure temperature-2 teacher KL; hard-answer CE is diagnostic only. This differs from earlier mixed CE/KL KD.",
+  "stopping": "All 60 models stop at 256 updates before opening test; evaluate 256 primary and saved 128 prefix secondary; no adaptive changes",
+  "machine": "Omarchy Linux i7-8700K CPU SciPy four threads for every method",
+  "thresholds": [
+    0.5,
+    0.75
+  ]
+}
