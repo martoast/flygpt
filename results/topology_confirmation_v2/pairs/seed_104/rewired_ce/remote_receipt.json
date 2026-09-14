@@ -1,0 +1,11 @@
+{
+  "seed": 104,
+  "condition": "rewired_ce",
+  "checkpoint": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_104/rewired_ce/step_01024.pt",
+  "checkpoint_sha256": "9ba779fd0a5781c34c35cf747c3357e8659b6782a7bc83e8d80b07bc4edcdb8e",
+  "progress_sha256": "f8526a4bf96fed280e2eef0842395b18c231be109850e456d273e2b2d548e294",
+  "spec_sha256": "2290cabf757a06f850aa23861e2e057af6177dcec3e6c8e8c6f14439d43f7345",
+  "hardware": "Apple M4, 16 GiB; Python 3.12.12; frozen package versions",
+  "amendment_sha256": "cfa664f33ab876d5897c577282dd4ecfc3dd8a83d04b148fba282dffd496fed5",
+  "final_test_opened": false
+}
