@@ -30,7 +30,7 @@ def main():
     while True:
         try:
             command('git', '-c', 'core.sshCommand=' + SSH, 'fetch',
-                    'ssh://alex@100.98.214.41/Users/alex/flygpt_' + study,
+                    'ssh://alex@alexs-mac-mini/Users/alex/flygpt_' + study,
                     branch + ':' + ref)
             revision = command('git', 'rev-parse', ref)
             command('git', 'push', 'origin', ref + ':refs/heads/' + branch)
