@@ -74,7 +74,7 @@ def publish(message):
     # Off-machine immutable snapshot, including ignored locked test bytes.
     snapshot=Path('results/topology_replication_backup')/f'snapshot_{time.time_ns()}.tar.gz'
     snapshot.parent.mkdir(parents=True,exist_ok=True)
-    with tarfile.open(snapshot,'w:gz') as archive:
+    with tarfile.open(snapshot,'w:gz',dereference=True) as archive:
         for root in paths:
             for p in root.rglob('*') if root.is_dir() else [root]:
                 if p.is_file() and p.suffix in ('.json','.jsonl','.md','.py','.log'):archive.add(p,arcname=str(p))
