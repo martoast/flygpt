@@ -28,5 +28,65 @@
     "sha256": "ed02f89fa9e09b81df818b3d4dc2123e80fe7091ab3e47d5146e49a6529139d7",
     "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_00768.pt",
     "verified_utc_epoch": 1789343958.949131
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_01024.pt": {
+    "sha256": "5107894e3865000f3adb454947feee5b96eb11d255b177f770f59c591769fdf6",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_100/rewired_ce/step_01024.pt",
+    "verified_utc_epoch": 1789344525.279768
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00064.pt": {
+    "sha256": "24026925ca0ac0b5b20dbf50736ca122439ced388712c1738910f260879e1f78",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00064.pt",
+    "verified_utc_epoch": 1789344790.957886
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00128.pt": {
+    "sha256": "3b4093285992cbd075dbeb6999e8bf9b31614d686e9718d38e8668b401c049c0",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00128.pt",
+    "verified_utc_epoch": 1789344944.6862879
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00256.pt": {
+    "sha256": "f144463e572383e7c4254a0ab210b2d7739ff80baabcb37d00b7a8f17cdbab80",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00256.pt",
+    "verified_utc_epoch": 1789345280.4242291
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00512.pt": {
+    "sha256": "9c9a5761e92433521a91ed2a9a5164c3b43497b3254563e923a925035327e581",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00512.pt",
+    "verified_utc_epoch": 1789345874.419391
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00768.pt": {
+    "sha256": "caa37f3114ea32edc50b2b33be7e7b90449c44b1ee6a82f7753719e5745701cf",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_00768.pt",
+    "verified_utc_epoch": 1789346444.487034
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_01024.pt": {
+    "sha256": "bb5dc20f627cd773098e54682a6eb745851e18afdbd4aaa859cc14ba996d79eb",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_01024.pt",
+    "verified_utc_epoch": 1789347000.819927
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00064.pt": {
+    "sha256": "ea4a16ae6726e461ce614a82fa74e00a8e1c34e3d5952bed73481aaabb369e97",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00064.pt",
+    "verified_utc_epoch": 1789347197.9750779
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00128.pt": {
+    "sha256": "6fd12e082059480b32179b07bba4f6b61eb9a6a9a114b874140133325491848a",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00128.pt",
+    "verified_utc_epoch": 1789347399.9381561
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00256.pt": {
+    "sha256": "cda9acf40b52e6d9c181c7debf01fdc9832504d8b05b4a4c15e16e8b1f279148",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00256.pt",
+    "verified_utc_epoch": 1789347721.909305
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00512.pt": {
+    "sha256": "ec8f21d0cb08585c5a8d6fa4764451a9bc39a26c979c9c292c410411cc9f5414",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00512.pt",
+    "verified_utc_epoch": 1789348339.3746848
+  },
+  "artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00768.pt": {
+    "sha256": "4da82479533fbb36b40548b1b203e9022021d5ac3fd0d3a616dc6c5f5d264f6d",
+    "external_path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_00768.pt",
+    "verified_utc_epoch": 1789348903.514646
   }
 }
