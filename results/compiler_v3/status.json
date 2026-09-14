@@ -1,7 +1,7 @@
 {
   "stage": "training",
-  "method": "E_relational",
+  "method": "F_relational_shuffled",
   "host": "M4",
-  "utc": "2026-09-14T06:07:25.998098+00:00",
+  "utc": "2026-09-14T08:00:50.181655+00:00",
   "final_test_opened": false
 }
