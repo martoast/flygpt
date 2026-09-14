@@ -1,0 +1,181 @@
+{
+  "created_utc": "2026-09-14T04:10:30Z",
+  "code_commit": "9aa6cf7f0c53df12afc0fe51430ea8fce4a96016",
+  "source_sha256": {
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45"
+  },
+  "worktree_dirty": false,
+  "config": {
+    "kind": "graph",
+    "seed": 90001,
+    "sampling_seed": 75300,
+    "model": {
+      "vocab_size": 8,
+      "embed_dim": 16,
+      "leak": 0.65,
+      "edge_scale": 0.9,
+      "input_fraction": 0.00615,
+      "output_fraction": 0.00615,
+      "inner_steps": 2,
+      "backend": "scipy",
+      "population_seed": 2026,
+      "degree_normalize": true
+    },
+    "objective": "C_hidden",
+    "alpha": 0.5,
+    "temperature": 2.0,
+    "lr": 0.001,
+    "batch": 8,
+    "budgets": [
+      1
+    ],
+    "checkpoints": [
+      1
+    ],
+    "curve_cases": 1,
+    "dataset": "data/raw/compiler_v3",
+    "job_dir": "results/compiler_v3/memory_probe",
+    "graph": "data/processed/malecns.npz",
+    "qualification_receipt": "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json",
+    "teacher_spec": "results/g2c_overnight/substitute_6/teacher_0/spec.json",
+    "teacher_checkpoint": "results/g2c_overnight/substitute_6/teacher_0/model.pt",
+    "condition": "real_ce",
+    "substrate": "full",
+    "initialization": "same model seed, same input/output population seed; graph-dependent edges and degree normalization",
+    "evidence_tier": "One-seed engineering pilot, not a replicated finding; no topology comparison in this cohort",
+    "group_seed": 125300,
+    "correspondence_seed": 175300,
+    "method": "C_hidden",
+    "projection_seed": 225300,
+    "alignment_weight": 1.0,
+    "training_targets": "results/compiler_v1/teacher_training_targets.json",
+    "training_targets_sha256": "9c47fd2cab4b4608d2aeaa3615177ef961bd59374e611f2820be9931dece3c2e",
+    "cache": "results/compiler_v3/teacher_cache.pt",
+    "cache_receipt": "results/compiler_v3/teacher_cache_receipt.json",
+    "schedule": "results/compiler_v3/schedule_300.json",
+    "schedule_audit": "results/compiler_v3/shuffle_audit_300.json"
+  },
+  "inputs": {
+    "results/compiler_v3/memory_probe/spec.json": "d827328b64f347f25636e09dff5e290fa898e73494756c05167c6fa875840297",
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+    "results/g2c_overnight/substitute_6/teacher_0/model.pt": "e5188035bb025a20df6503147dd3ff699780e157b8eea78085e2a71a13c381f7",
+    "results/g2c_overnight/substitute_6/teacher_0/spec.json": "63979207ddd1b91be34245f85a21f7676f76ba53bc0bfd0c4fb666795c2f8b53",
+    "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json": "20da00d9203117e061e7869c5dc95d67d750dbe2320642eb93d02fc4bfbce157",
+    "results/compiler_v1/teacher_training_targets.json": "9c47fd2cab4b4608d2aeaa3615177ef961bd59374e611f2820be9931dece3c2e",
+    "results/compiler_v3/teacher_cache.pt": "1b1fe9979b3de6c48537b04bcc24942321588fd9731c3382348c8b09f1cc3c9c",
+    "results/compiler_v3/teacher_cache_receipt.json": "bea1f438ba9eb44a5b1ef2787a58c03c9369e2446db5a007563e1de65d18eb66",
+    "results/compiler_v3/schedule_300.json": "7f75bf53c7098de631b1884f157c16986a53706b43757ef491fe443c6fa50ac9",
+    "results/compiler_v3/shuffle_audit_300.json": "4b499409a3e961fa2c4e3ed5ce9565e514feff5dcce1a8a838812027fd61f34b",
+    "data/raw/compiler_v3/manifest.json": "68b0e12edea051676a979b5e1839120de6c23f8d77d697c21c179dc906f63874",
+    "data/raw/compiler_v3/validation.json": "1bb6e34c402bc6b28bdc49073548ebb6083942530e07f7bdd3808989c9c05682",
+    "/Users/alex/flygpt_compiler_v3/scripts/compiler_v3_engine.py": "c172ed1e6a0be7670bed27745f7cd61b2720d5655e1a4b7b6bbe4668900a3d57"
+  },
+  "hardware": {
+    "platform": "macOS-26.5-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.14.0",
+    "mps": true,
+    "cuda": false,
+    "torch_threads": 4
+  },
+  "evidence_domain": "computational; see graph provenance for synthetic versus MaleCNS",
+  "step": 1,
+  "trace": [
+    {
+      "step": 1,
+      "group_id": 202,
+      "ce": 2.0871503353118896,
+      "loss": 4.227346420288086,
+      "kl": null,
+      "alignment": 2.1401960849761963,
+      "gradient_norm": 29.961875915527344,
+      "hidden_rms": 0.016007795929908752,
+      "saturation": 0.0,
+      "examples_seen": 8,
+      "unique_examples_seen": 8,
+      "student_forward_seconds": 3.978074959013611,
+      "objective_seconds": 0.008358833030797541,
+      "backward_optimizer_seconds": 6.4484896249487065,
+      "acquisition_seconds": 18.353680374042597
+    }
+  ],
+  "evaluations": [
+    {
+      "step": 1,
+      "validation": {
+        "metrics": {
+          "accuracy": 0.0,
+          "response_ce": 2.096109526497977,
+          "token_accuracy": 0.0,
+          "cases": 1,
+          "response_symbols": 7,
+          "teacher_ce": 6.130753718025517e-07,
+          "teacher_kl": 2.0961009434291293,
+          "exact_teacher_agreement": 0.0,
+          "teacher_exact": 1.0
+        },
+        "rows": [
+          {
+            "id": 1909,
+            "symbols": 7,
+            "nll": 14.67276668548584,
+            "exact": 0,
+            "generated": [
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "token_correct": 0,
+            "teacher_nll": 4.291527602617862e-06,
+            "kl_sum": 14.672706604003906,
+            "exact_teacher_agreement": 0,
+            "teacher_exact": 1
+          }
+        ]
+      },
+      "examples_seen": 8,
+      "acquisition_seconds": 18.353680374042597,
+      "validation_seconds": 1.0052201669896021,
+      "wall_seconds": 19.358980041055474
+    }
+  ],
+  "archives": [
+    {
+      "step": 1,
+      "path": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/memory_probe/step_00001.pt",
+      "sha256": "a5d51e8b1984ed80b03dbd369c1332b7e16fd92737a5a362877651e928b8ef4b",
+      "storage": "verified_external"
+    }
+  ],
+  "checkpoint_sha256": "a5d51e8b1984ed80b03dbd369c1332b7e16fd92737a5a362877651e928b8ef4b",
+  "training_seconds": 10.435885292012244,
+  "setup_seconds": 4.7351481660152785,
+  "preparation_seconds": 3.1826469160150737,
+  "engine_wall_seconds": 21.513608875044156,
+  "wall_seconds": 24.69625579105923,
+  "acquisition_seconds": 18.353680374042597,
+  "examples_seen": 8,
+  "max_rss_bytes": 2572894208
+}

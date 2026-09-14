@@ -1,0 +1,73 @@
+{
+  "methods": {
+    "300": {
+      "A_hard": "results/compiler_v3/seed_300/A_hard/spec.json",
+      "B_soft": "results/compiler_v3/seed_300/B_soft/spec.json",
+      "C_hidden": "results/compiler_v3/seed_300/C_hidden/spec.json",
+      "D_hidden_shuffled": "results/compiler_v3/seed_300/D_hidden_shuffled/spec.json",
+      "E_relational": "results/compiler_v3/seed_300/E_relational/spec.json",
+      "F_relational_shuffled": "results/compiler_v3/seed_300/F_relational_shuffled/spec.json"
+    }
+  },
+  "execution_order": {
+    "300": [
+      "A_hard",
+      "D_hidden_shuffled",
+      "E_relational",
+      "F_relational_shuffled",
+      "C_hidden",
+      "B_soft"
+    ]
+  },
+  "inputs": {
+    "configs/compiler_v3.json": "67ed55831566603c418d690363f759bb86d4f2f1bd712280dbc4c9bea5b7c998",
+    "COMPILER_V3_PREREGISTRATION.md": "c1efaee143ab57f199016b6ada8184b59beb87635327d6e57b0b330f538551f9",
+    "scripts/compiler_v3_engine.py": "c172ed1e6a0be7670bed27745f7cd61b2720d5655e1a4b7b6bbe4668900a3d57",
+    "scripts/run_compiler_v3.py": "beac49e471453c68315f6449dab3cc8194e546484b513ade1b59420d33d42c82",
+    "tests/test_compiler_v3.py": "6f4fa5f56bb55eeae8da2c80060c6e930c6742f11d9f496de9bbc51890bda923",
+    "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
+    "scripts/compiler_storage.py": "f7d6eb4b3eadd2b89a580cdbb923712e24ed9a948d82d43ee5bd40ff7d1259f3",
+    "scripts/run_compiler_v1.py": "2f273e66e98e44267692441a1461800983ba7f9a83715f6e1a12c71e25b773e7",
+    "scripts/run_g2c_overnight.py": "87dba47fafe57c639cf4467adc1ff12e599d92998a88ff3e8d0a76fdf89808d9",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "results/g2c_overnight/substitute_6/teacher_0/spec.json": "63979207ddd1b91be34245f85a21f7676f76ba53bc0bfd0c4fb666795c2f8b53",
+    "results/g2c_overnight/substitute_6/teacher_0/model.pt": "e5188035bb025a20df6503147dd3ff699780e157b8eea78085e2a71a13c381f7",
+    "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json": "20da00d9203117e061e7869c5dc95d67d750dbe2320642eb93d02fc4bfbce157",
+    "results/compiler_v1/teacher_training_targets.json": "9c47fd2cab4b4608d2aeaa3615177ef961bd59374e611f2820be9931dece3c2e",
+    "results/compiler_v1/teacher_training_prompts.json": "b5dc328111499cf52104bb539e09c21f90c979012aee5695fef2f8d91196bdaa",
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+    "results/compiler_v3/teacher_cache.pt": "1b1fe9979b3de6c48537b04bcc24942321588fd9731c3382348c8b09f1cc3c9c",
+    "results/compiler_v3/teacher_cache_receipt.json": "bea1f438ba9eb44a5b1ef2787a58c03c9369e2446db5a007563e1de65d18eb66",
+    "data/raw/compiler_v3/test_compiler_v3.json": "764b885579ddcb35136a8100c24968ff462a76fdefa1b5cebc43e3c92eae6be7",
+    "data/raw/compiler_v3/validation.json": "1bb6e34c402bc6b28bdc49073548ebb6083942530e07f7bdd3808989c9c05682",
+    "data/raw/compiler_v3/train.json": "982ad03930e087da741daf0b6248a666aeb14f6498d32d060f3284fdcc4b30e5",
+    "data/raw/compiler_v3/manifest.json": "68b0e12edea051676a979b5e1839120de6c23f8d77d697c21c179dc906f63874",
+    "results/compiler_v3/seed_300/A_hard/spec.json": "b3f094462a7ec6d0a4d18223cc95bda1789beb9ebad495cd50cb01aa7f103f57",
+    "results/compiler_v3/seed_300/B_soft/spec.json": "e8ba6c4cc811085ed2b17beeddbb12894ced5bf61d4dbf9827e3f0360a675c69",
+    "results/compiler_v3/seed_300/C_hidden/spec.json": "4919128586189f696ea7a3fc06ce0a69a8d63c49be680b6e9274152932f12c88",
+    "results/compiler_v3/seed_300/D_hidden_shuffled/spec.json": "762930e38cc8693dbb8e3b82b4d815df489aa64ce448f3335e47738367ce5c4b",
+    "results/compiler_v3/seed_300/E_relational/spec.json": "46cbe7090f72469353e33abfe82b954e0637b482f5d57c8bf0bec896b0d479bd",
+    "results/compiler_v3/seed_300/F_relational_shuffled/spec.json": "ee8d158c879fe59e5c95072def8072064ba7addba59b629a63c2dbe6eb663447",
+    "results/compiler_v3/schedule_300.json": "7f75bf53c7098de631b1884f157c16986a53706b43757ef491fe443c6fa50ac9",
+    "results/compiler_v3/shuffle_audit_300.json": "4b499409a3e961fa2c4e3ed5ce9565e514feff5dcce1a8a838812027fd61f34b"
+  },
+  "final_test_gate": "All six conditions complete before evaluation",
+  "created_before_full_budget_training": true
+}

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "batch": 8,
+  "max_rss_bytes": 2572894208,
+  "wall_seconds": 24.69625579105923,
+  "checkpoint_sha256": "a5d51e8b1984ed80b03dbd369c1332b7e16fd92737a5a362877651e928b8ef4b",
+  "role": "One-update hardware feasibility check; no performance-based selection"
+}
