@@ -1,0 +1,5 @@
+{
+  "enabled": false,
+  "reason": "systemd-inhibit denied noninteractive authorization; host must remain awake",
+  "utc": "2026-09-14T17:21:46.284335+00:00"
+}
