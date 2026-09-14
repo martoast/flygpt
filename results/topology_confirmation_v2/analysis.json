@@ -1,0 +1,37 @@
+{
+  "n": 5,
+  "real_mean": 0.859375,
+  "rewired_mean": 0.521875,
+  "gaps": [
+    0.328125,
+    0.265625,
+    0.6484375,
+    0.25,
+    0.1953125
+  ],
+  "mean_gap": 0.3375,
+  "gap_sd": 0.18014547615226145,
+  "ci95": [
+    0.11381984782246224,
+    0.5611801521775378
+  ],
+  "primary_p": 0.013814956896292837,
+  "primary_pass": true,
+  "sign_flip_p": 0.0625,
+  "positive_pairs": 5,
+  "practical_secondary_lower_exceeds_10pp": true,
+  "real_sd": 0.05152697639950359,
+  "rewired_sd": 0.1481699892121377,
+  "hardware_assignment": {
+    "M1": [
+      100,
+      101
+    ],
+    "M4": [
+      102,
+      103,
+      104
+    ]
+  },
+  "hardware_scope": "Paired contrasts within machines; five-seed aggregate spans two hardware blocks. Allocation based on timing, before new final tests."
+}
