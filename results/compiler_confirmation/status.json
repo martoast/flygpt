@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "seed": 400,
-  "method": "B_soft",
-  "spec": "results/compiler_confirmation/seed_400/B_soft/spec.json",
-  "utc": "2026-09-14T20:01:37.398300+00:00",
+  "method": "F_relational_shuffled",
+  "spec": "results/compiler_confirmation/seed_400/F_relational_shuffled/spec.json",
+  "utc": "2026-09-14T21:53:20.700355+00:00",
   "final_test_opened": false
 }
