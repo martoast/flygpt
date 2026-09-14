@@ -1,7 +1,8 @@
 {
   "stage": "training",
-  "method": "B_soft",
-  "host": "M4",
-  "utc": "2026-09-14T09:54:13.933444+00:00",
+  "seed": 300,
+  "method": "A_hard",
+  "pid": 22572,
+  "utc": "2026-09-14T11:48:19.731647+00:00",
   "final_test_opened": false
 }
