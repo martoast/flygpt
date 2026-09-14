@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "seed": 300,
-  "method": "A_hard",
+  "method": "D_hidden_shuffled",
   "pid": 22572,
-  "utc": "2026-09-14T11:48:19.731647+00:00",
+  "utc": "2026-09-14T11:48:22.427770+00:00",
   "final_test_opened": false
 }

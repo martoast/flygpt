@@ -1,5 +1,6 @@
 {
   "300": {
-    "A_hard": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/A_hard/step_00512.pt"
+    "A_hard": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/A_hard/step_00512.pt",
+    "D_hidden_shuffled": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_v3/seed_300/D_hidden_shuffled/step_00512.pt"
   }
 }
