@@ -1,4 +1,5 @@
 {
   "results/compiler_confirmation/seed_400/C_hidden/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_400/C_hidden/step_00512.pt",
-  "results/compiler_confirmation/seed_400/D_hidden_shuffled/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_400/D_hidden_shuffled/step_00512.pt"
+  "results/compiler_confirmation/seed_400/D_hidden_shuffled/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_400/D_hidden_shuffled/step_00512.pt",
+  "results/compiler_confirmation/seed_400/A_hard/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_400/A_hard/step_00512.pt"
 }
