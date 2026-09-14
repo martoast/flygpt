@@ -1,0 +1,238 @@
+{
+  "jobs": [
+    {
+      "seed": 400,
+      "method": "C_hidden",
+      "spec": "results/compiler_confirmation/seed_400/C_hidden/spec.json"
+    },
+    {
+      "seed": 400,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_confirmation/seed_400/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 400,
+      "method": "A_hard",
+      "spec": "results/compiler_confirmation/seed_400/A_hard/spec.json"
+    },
+    {
+      "seed": 400,
+      "method": "E_relational",
+      "spec": "results/compiler_confirmation/seed_400/E_relational/spec.json"
+    },
+    {
+      "seed": 400,
+      "method": "B_soft",
+      "spec": "results/compiler_confirmation/seed_400/B_soft/spec.json"
+    },
+    {
+      "seed": 400,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_confirmation/seed_400/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 401,
+      "method": "A_hard",
+      "spec": "results/compiler_confirmation/seed_401/A_hard/spec.json"
+    },
+    {
+      "seed": 401,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_confirmation/seed_401/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 401,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_confirmation/seed_401/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 401,
+      "method": "E_relational",
+      "spec": "results/compiler_confirmation/seed_401/E_relational/spec.json"
+    },
+    {
+      "seed": 401,
+      "method": "C_hidden",
+      "spec": "results/compiler_confirmation/seed_401/C_hidden/spec.json"
+    },
+    {
+      "seed": 401,
+      "method": "B_soft",
+      "spec": "results/compiler_confirmation/seed_401/B_soft/spec.json"
+    },
+    {
+      "seed": 402,
+      "method": "A_hard",
+      "spec": "results/compiler_confirmation/seed_402/A_hard/spec.json"
+    },
+    {
+      "seed": 402,
+      "method": "E_relational",
+      "spec": "results/compiler_confirmation/seed_402/E_relational/spec.json"
+    },
+    {
+      "seed": 402,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_confirmation/seed_402/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 402,
+      "method": "C_hidden",
+      "spec": "results/compiler_confirmation/seed_402/C_hidden/spec.json"
+    },
+    {
+      "seed": 402,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_confirmation/seed_402/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 402,
+      "method": "B_soft",
+      "spec": "results/compiler_confirmation/seed_402/B_soft/spec.json"
+    },
+    {
+      "seed": 403,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_confirmation/seed_403/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 403,
+      "method": "A_hard",
+      "spec": "results/compiler_confirmation/seed_403/A_hard/spec.json"
+    },
+    {
+      "seed": 403,
+      "method": "E_relational",
+      "spec": "results/compiler_confirmation/seed_403/E_relational/spec.json"
+    },
+    {
+      "seed": 403,
+      "method": "C_hidden",
+      "spec": "results/compiler_confirmation/seed_403/C_hidden/spec.json"
+    },
+    {
+      "seed": 403,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_confirmation/seed_403/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 403,
+      "method": "B_soft",
+      "spec": "results/compiler_confirmation/seed_403/B_soft/spec.json"
+    },
+    {
+      "seed": 404,
+      "method": "B_soft",
+      "spec": "results/compiler_confirmation/seed_404/B_soft/spec.json"
+    },
+    {
+      "seed": 404,
+      "method": "F_relational_shuffled",
+      "spec": "results/compiler_confirmation/seed_404/F_relational_shuffled/spec.json"
+    },
+    {
+      "seed": 404,
+      "method": "C_hidden",
+      "spec": "results/compiler_confirmation/seed_404/C_hidden/spec.json"
+    },
+    {
+      "seed": 404,
+      "method": "A_hard",
+      "spec": "results/compiler_confirmation/seed_404/A_hard/spec.json"
+    },
+    {
+      "seed": 404,
+      "method": "D_hidden_shuffled",
+      "spec": "results/compiler_confirmation/seed_404/D_hidden_shuffled/spec.json"
+    },
+    {
+      "seed": 404,
+      "method": "E_relational",
+      "spec": "results/compiler_confirmation/seed_404/E_relational/spec.json"
+    }
+  ],
+  "inputs": {
+    "configs/compiler_confirmation.json": "fe38915c937ce911e71f1f5454bcc9bf77bb77e3115173d3b56f58531478289a",
+    "COMPILER_CONFIRMATION_PREREGISTRATION.md": "51fe6d1287754ac014644f5fcfec667b0301de977630407fedca14cc8553988e",
+    "scripts/run_compiler_confirmation.py": "92212edead7cc34a53a7969425988dec657a2a25deddc67816b7611d749487e5",
+    "scripts/compiler_confirmation_analysis.py": "00a1ccde169e4630c9387e330545f51d7e6d1763d572910fdacda35b492abc4d",
+    "tests/test_compiler_confirmation.py": "c6c7f546cd8dcf82d6a048c39e7ecaa71e679c6589b43bee9049bda0b6d0d3f1",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "scripts/compiler_v3_engine.py": "c172ed1e6a0be7670bed27745f7cd61b2720d5655e1a4b7b6bbe4668900a3d57",
+    "scripts/compiler_storage.py": "f7d6eb4b3eadd2b89a580cdbb923712e24ed9a948d82d43ee5bd40ff7d1259f3",
+    "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
+    "scripts/run_compiler_v1.py": "2f273e66e98e44267692441a1461800983ba7f9a83715f6e1a12c71e25b773e7",
+    "scripts/run_compiler_v3.py": "beac49e471453c68315f6449dab3cc8194e546484b513ade1b59420d33d42c82",
+    "scripts/run_g2c_overnight.py": "87dba47fafe57c639cf4467adc1ff12e599d92998a88ff3e8d0a76fdf89808d9",
+    "results/g2c_overnight/substitute_6/teacher_0/spec.json": "63979207ddd1b91be34245f85a21f7676f76ba53bc0bfd0c4fb666795c2f8b53",
+    "results/g2c_overnight/substitute_6/teacher_0/model.pt": "e5188035bb025a20df6503147dd3ff699780e157b8eea78085e2a71a13c381f7",
+    "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json": "20da00d9203117e061e7869c5dc95d67d750dbe2320642eb93d02fc4bfbce157",
+    "results/compiler_v1/teacher_training_targets.json": "9c47fd2cab4b4608d2aeaa3615177ef961bd59374e611f2820be9931dece3c2e",
+    "results/compiler_v1/teacher_training_prompts.json": "b5dc328111499cf52104bb539e09c21f90c979012aee5695fef2f8d91196bdaa",
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+    "results/compiler_confirmation/teacher_cache.pt": "1b1fe9979b3de6c48537b04bcc24942321588fd9731c3382348c8b09f1cc3c9c",
+    "results/compiler_confirmation/teacher_cache_receipt.json": "105d03ab6340d260f2786ef4d0e3180b8c42ff7d9341151cf49ba737118be252",
+    "data/raw/compiler_confirmation/validation.json": "1bb6e34c402bc6b28bdc49073548ebb6083942530e07f7bdd3808989c9c05682",
+    "data/raw/compiler_confirmation/train.json": "982ad03930e087da741daf0b6248a666aeb14f6498d32d060f3284fdcc4b30e5",
+    "data/raw/compiler_confirmation/test_compiler_confirmation.json": "ec8415bdca28ae00af5fb8a6323ef907aeb22325b1ceb2a5dea3d684a954a40d",
+    "data/raw/compiler_confirmation/manifest.json": "96c30b7fc885bc3ef381148eb6483e87f3dab5da96e099940929729445c32d36",
+    "results/compiler_confirmation/schedule_400.json": "ace3063fc163c39d80d7368d7a0f6173147a3d881dab2c194a578e7f42a09f30",
+    "results/compiler_confirmation/shuffle_audit_400.json": "805dddbd48f97c418602e7705dacbaae3c4ae8d95a51b5909f1f8a9a3da0672b",
+    "results/compiler_confirmation/schedule_401.json": "f964d4b0679e8cf8a730eac4f9c59857cf09a3cfd283a72a62a8ad2a313728ae",
+    "results/compiler_confirmation/shuffle_audit_401.json": "65fe294bfa11408b7426e33e7d4b9ec8c486b11bf656561d96f498a885a2bd2a",
+    "results/compiler_confirmation/schedule_402.json": "cbe63147d0b7f550c76a8a84d9e92a13848fad17063636f8f928bd47ffdf634c",
+    "results/compiler_confirmation/shuffle_audit_402.json": "7d48681cfef5204005132cd42f788c7232926bc59614745498f39c4cd0381a84",
+    "results/compiler_confirmation/schedule_403.json": "61cab849c52da6990cdede74e30bf54d9e61df269213e3c6e7b8c7c4c857fbd0",
+    "results/compiler_confirmation/shuffle_audit_403.json": "8c1e83ecc16e65869b72f95bd1488c0576d1785348d0fe08a6b66a16bf5d3802",
+    "results/compiler_confirmation/schedule_404.json": "66134d0377962cb10069c3bd799721a51b0051a686a171dc4e31db64745624cf",
+    "results/compiler_confirmation/shuffle_audit_404.json": "3dd943fd3a52dd3d66e8a021fc48f71bffbf9e405f558c7a3869a4caba0efbc9",
+    "results/compiler_confirmation/seed_400/C_hidden/spec.json": "e693c74619df90bec31403ab0199ba5e634d8969357b34c6c937d4127b80aabd",
+    "results/compiler_confirmation/seed_400/D_hidden_shuffled/spec.json": "185f56a8a8dc3f27a36989b1d576fbd7258e081c759c82cf98e9ea88e590de33",
+    "results/compiler_confirmation/seed_400/A_hard/spec.json": "a3a4032e6aabd9ab6ee01196991e1e30ac236d3b143040f269b942f340a8f277",
+    "results/compiler_confirmation/seed_400/E_relational/spec.json": "f1a8f021f9221a97eb68a6af92195e0ccd898a4a794960f5f33b436458af2c2f",
+    "results/compiler_confirmation/seed_400/B_soft/spec.json": "d8c104259b2e00166ddc3dab6992cccb27646083ba68f00535be0b7293cf20b2",
+    "results/compiler_confirmation/seed_400/F_relational_shuffled/spec.json": "d12937f6885938720ffea2e8da308ec153e3c6b958b57f824abecadebbc91359",
+    "results/compiler_confirmation/seed_401/A_hard/spec.json": "087631a6466442725030309bc1ad963688ca548695b6c7b7848ca077dd5e1c11",
+    "results/compiler_confirmation/seed_401/F_relational_shuffled/spec.json": "46de6d323aa9c31fe04e05b423e41964ba402ed600f0716a0c13c9c9cfc56221",
+    "results/compiler_confirmation/seed_401/D_hidden_shuffled/spec.json": "6ff3ddce9edece45e70d8e317053bf7049f37e2b50378495972f2639234f8faf",
+    "results/compiler_confirmation/seed_401/E_relational/spec.json": "6b41f7b810850e2a3f3caf1e4ad15c6ba84392cf766b8095bc83cc6ebd4804ad",
+    "results/compiler_confirmation/seed_401/C_hidden/spec.json": "c90d18fece9099baf455cb657096586543cbaf107d1c7b1dcca104bdbf9d5d49",
+    "results/compiler_confirmation/seed_401/B_soft/spec.json": "3fa61d80ae0eda5593955f60b42b0b2dfffbcf50780ff6dbfae672abbfd7df26",
+    "results/compiler_confirmation/seed_402/A_hard/spec.json": "fea05e29b71132b8644a3cfb8f97a33694b6431016d68934964aadb3a46fe225",
+    "results/compiler_confirmation/seed_402/E_relational/spec.json": "fbb5e06c74862514b97d08adfcf46049406f7a12dfd2328c5c757ea4227b46ff",
+    "results/compiler_confirmation/seed_402/F_relational_shuffled/spec.json": "5e5fd7e920980ebf7e6dd640a32af02a68ca706c4ab68c8251f99a1754285766",
+    "results/compiler_confirmation/seed_402/C_hidden/spec.json": "315fefc91d6bd98900683c5d991f50c761b5bd9890e2beb78d197205899f2abd",
+    "results/compiler_confirmation/seed_402/D_hidden_shuffled/spec.json": "16c9d23d7bcfa9882f47ccc83cb7827e8832fc280bf347cfb0b29cfa1cd8e9cc",
+    "results/compiler_confirmation/seed_402/B_soft/spec.json": "82f32ab1bef90f5ed53f2a7e16bcf2929f63055de216ce84eb70729fcd8d18f2",
+    "results/compiler_confirmation/seed_403/D_hidden_shuffled/spec.json": "20129c1753e412acefbbebbd619c8c0ca3bb08475d098e18ddcc36577e1e4da7",
+    "results/compiler_confirmation/seed_403/A_hard/spec.json": "996f884f79c8753258312b213bd18f6e49a74a72b23ba20548a4f95bdaf07b78",
+    "results/compiler_confirmation/seed_403/E_relational/spec.json": "0d432ffa79df16beb5e2faca7c51966f9037ccff5fc67309cf6269e01d2d39fc",
+    "results/compiler_confirmation/seed_403/C_hidden/spec.json": "3e6fc9c25ff25dc63a3ae9860863164c0af95f4d48b9acd188df5a9229f4f3ec",
+    "results/compiler_confirmation/seed_403/F_relational_shuffled/spec.json": "ff5f209a91075d45e8246c1869b0401d15cf75c0fceadd9f9e4a8dbd6bc1cddc",
+    "results/compiler_confirmation/seed_403/B_soft/spec.json": "1b535dea5d45d8182e4ffd3317b3dcb3b49136887336defd27ef4eb2e3f9becd",
+    "results/compiler_confirmation/seed_404/B_soft/spec.json": "b03cc21f55af138a4f550bee5f5fa4b16a5948d978b2d781d3bc114c8e8a2ffa",
+    "results/compiler_confirmation/seed_404/F_relational_shuffled/spec.json": "491aff1ebe55cf43b683a3ce0c869969503514a22978215804681131e37bd34f",
+    "results/compiler_confirmation/seed_404/C_hidden/spec.json": "eaf1ace09c3c9b9fe1097b4d1ec9a1b208d9f3a6293b44dd55f9d559e9f803af",
+    "results/compiler_confirmation/seed_404/A_hard/spec.json": "114b62e26fb0ed0cc86da9a6c63716a03e04c378ac3d847d9155972956c2ac18",
+    "results/compiler_confirmation/seed_404/D_hidden_shuffled/spec.json": "bb8a8e3bce2c5e4f5383b51fb26f6c25f6c34b0fc09cbd70e1642d936a1065fd",
+    "results/compiler_confirmation/seed_404/E_relational/spec.json": "d0a5aac81e33fe58f1b13f22cd99942dfe2813d51a8ee68c9331a7b12dfb9d42"
+  },
+  "final_test_gate": "All 30 final checkpoints verified before any final evaluation"
+}
