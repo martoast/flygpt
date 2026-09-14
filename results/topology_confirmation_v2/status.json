@@ -1,8 +1,6 @@
 {
-  "stage": "training",
-  "seed": 104,
-  "condition": "rewired_ce",
-  "utc": "2026-09-14T02:02:23.517341+00:00",
-  "pid": 27804,
-  "final_test_opened": false
+  "stage": "final_evaluation",
+  "seed": 100,
+  "utc": "2026-09-14T02:32:01.303819+00:00",
+  "pid": 27804
 }
