@@ -6,5 +6,9 @@
   "101": {
     "real_ce": "/Users/alex/Desktop/flygpt_v01/artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/real_ce/step_01024.pt",
     "rewired_ce": "/Users/alex/Desktop/flygpt_v01/artifacts/compiler_pending/results/topology_confirmation_v2/pairs/seed_101/rewired_ce/step_01024.pt"
+  },
+  "102": {
+    "real_ce": "artifacts/m4_import/seed_102/real_ce.pt",
+    "rewired_ce": "artifacts/m4_import/seed_102/rewired_ce.pt"
   }
 }
