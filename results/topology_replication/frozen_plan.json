@@ -1,0 +1,187 @@
+{
+  "jobs": [
+    {
+      "seed": 600,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_600/real_ce/spec.json"
+    },
+    {
+      "seed": 600,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_600/rewired_ce/spec.json"
+    },
+    {
+      "seed": 601,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_601/real_ce/spec.json"
+    },
+    {
+      "seed": 601,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_601/rewired_ce/spec.json"
+    },
+    {
+      "seed": 602,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_602/real_ce/spec.json"
+    },
+    {
+      "seed": 602,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_602/rewired_ce/spec.json"
+    },
+    {
+      "seed": 603,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_603/real_ce/spec.json"
+    },
+    {
+      "seed": 603,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_603/rewired_ce/spec.json"
+    },
+    {
+      "seed": 604,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_604/real_ce/spec.json"
+    },
+    {
+      "seed": 604,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_604/rewired_ce/spec.json"
+    },
+    {
+      "seed": 605,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_605/real_ce/spec.json"
+    },
+    {
+      "seed": 605,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_605/rewired_ce/spec.json"
+    },
+    {
+      "seed": 606,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_606/real_ce/spec.json"
+    },
+    {
+      "seed": 606,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_606/rewired_ce/spec.json"
+    },
+    {
+      "seed": 607,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_607/real_ce/spec.json"
+    },
+    {
+      "seed": 607,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_607/rewired_ce/spec.json"
+    },
+    {
+      "seed": 608,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_608/real_ce/spec.json"
+    },
+    {
+      "seed": 608,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_608/rewired_ce/spec.json"
+    },
+    {
+      "seed": 609,
+      "condition": "real_ce",
+      "spec": "results/topology_replication/pairs/seed_609/real_ce/spec.json"
+    },
+    {
+      "seed": 609,
+      "condition": "rewired_ce",
+      "spec": "results/topology_replication/pairs/seed_609/rewired_ce/spec.json"
+    }
+  ],
+  "inputs": {
+    "configs/topology_replication.json": "54abb2f060e0bafb7b6e8d1c99f107ea101716046c2fc6c0bd7d678cec305707",
+    "TOPOLOGY_REPLICATION_PREREGISTRATION.md": "207a8e2885ad433946fc4eb3267cc3c368df36a6fb71f22ec93b06587e059359",
+    "scripts/run_topology_replication.py": "8df7b402beb112370c2db1d96f764bcae7f57e9b71ee47b0c3734de939cc45c3",
+    "scripts/backup_topology_replication.py": "4f0ab6e104b40a7eaf7887e657940d9a3b7633fbb6e99efe889b420e735b8877",
+    "tests/test_topology_replication.py": "47c8f9be02696446ab1ae93ed1313191003338da85caca81498c5857063dca85",
+    "src/train_language.py": "e839370b4e7b01600491f79d36afc0cdf44285d47794fe200a898ef2b1fe622d",
+    "src/tinygpt.py": "78dd5bf757b13b094a77f39f9f84e1c3f8182b81e99aa5fc79c810c71e8350f1",
+    "src/train_teacher.py": "9b27e7d6e0f92df8f016f5fb95b974ae4ef552dd67e44c656b7c8b170d5acf45",
+    "src/prepare_malecns.py": "61afc5f0a6189c6667f84625114480185300aab29152eef549d3f087b3e74fa3",
+    "src/tasks.py": "2b948512a3539950088195ac949eea7b321e12c735f3365362b3837aa2e28070",
+    "src/analysis.py": "9403c6faf63302f2f05af10653220aff09c0d0afb3c95ebadeaef07a07465420",
+    "src/graph_lm.py": "a78c65e043ba4bf10aaa360388b4c95548400424d14d1f8783cf2e78c1143cdf",
+    "src/sparse_ops.py": "1a8d3797a9fd7a700976201da5faec490ef03567f62736a386c38158ec408dff",
+    "src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/train_memory.py": "5d361b96981811fd61c93bac87ef6cfad0f21f97d42ef940909569f3ea50b4da",
+    "src/model.py": "39f889a4b8083c5ab128107c0a3ecebcf9b0486cac8ba7da2c8143b152985967",
+    "src/graph_controls.py": "ee5ac695abf09bd5ec691a65d68b76508c2bfa3b3ff502858d7813a053a50f20",
+    "src/distill.py": "42ac9c7f9f1bcb6d49aaaa5b890c51eaaef9bc6da19652f0de505adc6a8832f8",
+    "src/query_flygpt.py": "1b3c867c972076b5ee0750f560f86528f3558d06e5d17dc60e4c77c17da65b23",
+    "src/provenance.py": "155637ead278cf14cf42c8ff1182516759cd5666b2fc9fb27a92a715b13dac49",
+    "src/graphs.py": "c7ee0512fd6edd2883b7aed0f3b1f2879f868434f9aad2ec1648a9a32888f270",
+    "src/audit_checkpoint.py": "237e1e09b6b4e1c1e74d83c78b1b02166987dafe9646feb3bef805259a5b0660",
+    "src/g2.py": "fd61e6b4d0c7b8d884a7b2f561f27e288a20dd2f529133781e7e896cf319893f",
+    "scripts/g2c_engine.py": "8b19b1277dc0ce5fa8eddd4416ec59186e9b7f36f29f69f91351345946eaf225",
+    "scripts/compiler_storage.py": "f7d6eb4b3eadd2b89a580cdbb923712e24ed9a948d82d43ee5bd40ff7d1259f3",
+    "scripts/run_compiler_v1.py": "2f273e66e98e44267692441a1461800983ba7f9a83715f6e1a12c71e25b773e7",
+    "scripts/run_compiler_v3.py": "beac49e471453c68315f6449dab3cc8194e546484b513ade1b59420d33d42c82",
+    "scripts/run_topology_confirmation_v2.py": "74380e75e4e82a196db08574df1a7ce472b3b90f7d56b324ff2ec38010180a43",
+    "scripts/compiler_confirmation_analysis.py": "00a1ccde169e4630c9387e330545f51d7e6d1763d572910fdacda35b492abc4d",
+    "scripts/mirror_m1_checkpoints.py": "6afdda90f0316526da7d83bd5a4f1b5109336ced308b141532691bf7147dc26a",
+    "scripts/distributed_confirmation.py": "3b6f7bfe0616da62ea81511640faac36719ca60ce15e95e72a390ab57380a4a8",
+    "scripts/run_g2c_overnight.py": "87dba47fafe57c639cf4467adc1ff12e599d92998a88ff3e8d0a76fdf89808d9",
+    "results/g2c_overnight/substitute_6/teacher_0/spec.json": "63979207ddd1b91be34245f85a21f7676f76ba53bc0bfd0c4fb666795c2f8b53",
+    "results/g2c_overnight/substitute_6/teacher_0/model.pt": "e5188035bb025a20df6503147dd3ff699780e157b8eea78085e2a71a13c381f7",
+    "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json": "20da00d9203117e061e7869c5dc95d67d750dbe2320642eb93d02fc4bfbce157",
+    "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+    "data/processed/controls/rewired_1900.npz": "a56751179a1948955d60c565346d8a91120c1ad9c2c672512e78706700fa249e",
+    "data/processed/controls/rewired_1901.npz": "50f06ecfd8506fa3588942b8c0d15fbf0521bc28d23d0e921c1edb4f22fe330b",
+    "data/processed/controls/rewired_1902.npz": "e06a2b3ddfd8ae74ae1b1890d82aa68e7a10419f19bef7d32aa0a1de87d99d28",
+    "data/processed/controls/rewired_1903.npz": "c42da7031ffa4b91f84caeb27c319c9d85db666e76bf4425fb01cad4e0140b70",
+    "data/processed/controls/rewired_1904.npz": "a488e1e0275ce654babb4b3cee1739e468b46f83523ffe8393d41fe391c54d44",
+    "data/processed/controls/rewired_1905.npz": "f0ef12ca03178cb1b384fdf3a24c578a6c167e629e92ab22b0c8f231b02c3080",
+    "data/processed/controls/rewired_1906.npz": "3776b432d4dbd87d059a23f3b63e2ab9474ea48765024e08cafd01503c0e5b06",
+    "data/processed/controls/rewired_1907.npz": "939899f1af13b19a0ea2587d6577a6a9ccef909f9a2b664ae979c199ff5af390",
+    "data/processed/controls/rewired_1908.npz": "c5e2e970c8936192550c8332a0e2d73ea5ce5d9d94ebfd6bb4ca6bcfeb5fba3a",
+    "data/processed/controls/rewired_1909.npz": "3940e418784ec7379a40bb567eee1fe13b79ea69df999c977e42d4a2d32aa78f",
+    "results/topology_replication/graph_audits/rewired_1900.json": "344c3fdf03bbf5d69e92cd74707473ecb398b2907d504a44e1c26d5b24362f2f",
+    "results/topology_replication/graph_audits/rewired_1901.json": "f6cdc5951d19788adee63d8865b70eb6e3d33fb2c377f43d6c06c63d897b7bc0",
+    "results/topology_replication/graph_audits/rewired_1902.json": "afaec81cb4bb31d0fdac82077671e4396819623289be8f2cb7823a3a54dc59a9",
+    "results/topology_replication/graph_audits/rewired_1903.json": "0ce7acdec49ca2e5e9fdcd648b3f3fcc4ad1e65411cff85983ddccb9ee93b219",
+    "results/topology_replication/graph_audits/rewired_1904.json": "16db69e0cf9606a3e5b8316d7f3eeba1caa65d548ccb13002ac645fed1339e07",
+    "results/topology_replication/graph_audits/rewired_1905.json": "d1261f78709dc1f78850c2bf2b5466062f39f01c45cbe5b4b1cfd5e056a45b5e",
+    "results/topology_replication/graph_audits/rewired_1906.json": "998b85aa11979a1771172c606b948e0d668721ea3950224e79c1583f86fe801c",
+    "results/topology_replication/graph_audits/rewired_1907.json": "bd124a04b5ff5dbf7e96c1cea87ac5c87bdc4b5488e987b735fa3e2a998e906d",
+    "results/topology_replication/graph_audits/rewired_1908.json": "ce62698174c8e27eacccd64bfc8918dad1a5c679fc65dabac72c93331d890782",
+    "results/topology_replication/graph_audits/rewired_1909.json": "15cd8463b7eb9214e23a4e743848fd6607f0a1cf38a38842deed2e981aba4fb6",
+    "data/raw/topology_replication/test_topology_replication.json": "9b6d0cced07cbeb8a47ce42aec6c53c02aeef268796699357650cd8a9b019f27",
+    "data/raw/topology_replication/validation.json": "1bb6e34c402bc6b28bdc49073548ebb6083942530e07f7bdd3808989c9c05682",
+    "data/raw/topology_replication/train.json": "982ad03930e087da741daf0b6248a666aeb14f6498d32d060f3284fdcc4b30e5",
+    "data/raw/topology_replication/manifest.json": "9a9d6fc017ddded80d18c1204cdab9fb9a2a3644bfa7d1d4a1d184ef9356dadc",
+    "results/topology_replication/pairs/seed_600/real_ce/spec.json": "2a9263652d8eab1cf272cda3bfdc0fc6f0c442a9da328e580bec1dc740336e48",
+    "results/topology_replication/pairs/seed_600/rewired_ce/spec.json": "75620cf87edd40cb3605fbdcbb7e859904111b8956d6c8f13bbed1bbd1e26a92",
+    "results/topology_replication/pairs/seed_601/real_ce/spec.json": "717a83b30c472e686e773a65c0e3c6918730e580a6d8cfe0ea4c06baa7923bf9",
+    "results/topology_replication/pairs/seed_601/rewired_ce/spec.json": "87160cd922686ae81de9e680ddd0ae457e7ae5cc44eb4998f208842ac7e7beda",
+    "results/topology_replication/pairs/seed_602/real_ce/spec.json": "262b4a7fadae543f161e45075829c3bb6640ce17edc1f7d54659c15b233cbb2f",
+    "results/topology_replication/pairs/seed_602/rewired_ce/spec.json": "b0510b5c9b164cc1bb5f435ca86ab89fba8fa5c1cfc2f12c0a7be35fd764e4ab",
+    "results/topology_replication/pairs/seed_603/real_ce/spec.json": "5079b70f937b9dfb77d975829f31cb1d74729f4c8a6373a1a4a4b02de6494f14",
+    "results/topology_replication/pairs/seed_603/rewired_ce/spec.json": "fdbd8102304b3f51d86d498ffb909e1702a9e18bc6c97b7adeab132f32fda111",
+    "results/topology_replication/pairs/seed_604/real_ce/spec.json": "66a7e6e5af035c6dd9e5849821aa4c55d7cf9234d108a0a3e65a03a6a71878ca",
+    "results/topology_replication/pairs/seed_604/rewired_ce/spec.json": "41a8ffd073e7d5a183203fe9c7c021a04c7c06d4ee46a2bc5b6fdd7a36470c1c",
+    "results/topology_replication/pairs/seed_605/real_ce/spec.json": "e64dbea0f64c80282f2b9f268d0dda22a21ba55a3a13fd5acbabcc71ffaa684c",
+    "results/topology_replication/pairs/seed_605/rewired_ce/spec.json": "eae0bfc68ca36a7cbb3306356fcdbbae64b8bb72534c19a64e75bd7eb5518373",
+    "results/topology_replication/pairs/seed_606/real_ce/spec.json": "52e1fc4b898b4945e9d5532b9f1b69bc3ceca85e9685f1a7c5e1a57f7af39646",
+    "results/topology_replication/pairs/seed_606/rewired_ce/spec.json": "ede08f077960b1ac2249f2581a4b0b3171ff4cf6591ed8414c382cece3eec328",
+    "results/topology_replication/pairs/seed_607/real_ce/spec.json": "713f785edcc96263dfbd86078753e28486d1362cc115998d2f2f656d65f5ea8a",
+    "results/topology_replication/pairs/seed_607/rewired_ce/spec.json": "50b6ebc7bf02e6ba6e842aa752b3a16c24d6d10d5e8f04535ce0e7b57b3405fd",
+    "results/topology_replication/pairs/seed_608/real_ce/spec.json": "170704941d0a337376996639570bea638bf84783a82ed6187afabe313bf1a6b1",
+    "results/topology_replication/pairs/seed_608/rewired_ce/spec.json": "1e018060d97dae330f8d10265273e562d5f3f3e57a57095a69a867c764f85a73",
+    "results/topology_replication/pairs/seed_609/real_ce/spec.json": "dbba24ac630378d5d9448ee89951a06555e3ca39c28be2bd4bc4e5184d68b833",
+    "results/topology_replication/pairs/seed_609/rewired_ce/spec.json": "9e8891fcb557980a073a5de68f0faf6ebc169ab54cde36ac43f3c31a98ca761a"
+  },
+  "test_gate": "All 20 final checkpoints complete"
+}

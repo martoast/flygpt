@@ -1,0 +1,44 @@
+{
+  "kind": "graph",
+  "seed": 602,
+  "sampling_seed": 75602,
+  "model": {
+    "vocab_size": 8,
+    "embed_dim": 16,
+    "leak": 0.65,
+    "edge_scale": 0.9,
+    "input_fraction": 0.00615,
+    "output_fraction": 0.00615,
+    "inner_steps": 2,
+    "backend": "scipy",
+    "population_seed": 2026,
+    "degree_normalize": true
+  },
+  "objective": "ce",
+  "alpha": 0.5,
+  "temperature": 2.0,
+  "lr": 0.001,
+  "batch": 1,
+  "budgets": [
+    1024
+  ],
+  "checkpoints": [
+    64,
+    128,
+    256,
+    512,
+    768,
+    1024
+  ],
+  "curve_cases": 32,
+  "dataset": "data/raw/topology_replication",
+  "job_dir": "results/topology_replication/pairs/seed_602/real_ce",
+  "graph": "data/processed/malecns.npz",
+  "qualification_receipt": "results/g2c_overnight/substitute_6/teacher_0/qualification_receipt.json",
+  "teacher_spec": "results/g2c_overnight/substitute_6/teacher_0/spec.json",
+  "teacher_checkpoint": "results/g2c_overnight/substitute_6/teacher_0/model.pt",
+  "condition": "real_ce",
+  "substrate": "full",
+  "initialization": "same model seed, same input/output population seed; graph-dependent edges and degree normalization",
+  "evidence_tier": "Independent preregistered ten-pair topology replication"
+}
