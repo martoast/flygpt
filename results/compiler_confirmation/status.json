@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "seed": 400,
-  "method": "C_hidden",
-  "spec": "results/compiler_confirmation/seed_400/C_hidden/spec.json",
-  "utc": "2026-09-14T12:36:02.144748+00:00",
+  "method": "D_hidden_shuffled",
+  "spec": "results/compiler_confirmation/seed_400/D_hidden_shuffled/spec.json",
+  "utc": "2026-09-14T14:27:06.581499+00:00",
   "final_test_opened": false
 }
