@@ -1,5 +1,8 @@
 {
-  "stage": "preparing_fresh_rewired_graphs",
-  "utc": "2026-09-14T00:07:32.168435+00:00",
-  "pid": 27804
+  "stage": "training",
+  "seed": 100,
+  "condition": "rewired_ce",
+  "utc": "2026-09-14T00:07:35.946283+00:00",
+  "pid": 27804,
+  "final_test_opened": false
 }
