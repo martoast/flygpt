@@ -1,0 +1,31 @@
+{
+  "metrics": {
+    "real_ce": {
+      "accuracy": 0.8125,
+      "response_ce": 0.0910988489171619,
+      "token_accuracy": 0.96875,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.8458479624783308e-06,
+      "teacher_kl": 0.09109296417435482,
+      "zero_edge_ce": 1.9258884159582002,
+      "exact_teacher_agreement": 0.8125,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    },
+    "rewired_ce": {
+      "accuracy": 0.546875,
+      "response_ce": 0.23760921239694913,
+      "token_accuracy": 0.9140625,
+      "cases": 128,
+      "response_symbols": 896,
+      "teacher_ce": 1.8458479624783308e-06,
+      "teacher_kl": 0.23759974396255398,
+      "zero_edge_ce": 1.7317371400339263,
+      "exact_teacher_agreement": 0.546875,
+      "teacher_exact": 1.0,
+      "zero_edge_exact": 0.0
+    }
+  },
+  "cases": 128
+}
