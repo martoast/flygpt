@@ -1,0 +1,7 @@
+{
+  "stage": "training",
+  "seed": 505,
+  "method": "E_relational",
+  "spec": "results/compiler_efficiency/seed_505/E_relational/spec.json",
+  "final_test_opened": false
+}

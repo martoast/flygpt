@@ -1,0 +1,15 @@
+{
+  "versions": {
+    "python": "3.12.7 (main, Oct  1 2024, 02:05:46) [Clang 15.0.0 (clang-1500.3.9.4)]",
+    "packages": {
+      "torch": "2.14.0",
+      "numpy": "2.5.3",
+      "scipy": "1.18.1",
+      "numba": "0.67.0",
+      "pytest": "9.1.1"
+    }
+  },
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "backend": "CPU SciPy four threads",
+  "amendment_sha256": "7291b4ced56da14ca346ff9d6dff326e5a7179b6bcd6ffd60c6be442941c4c32"
+}
