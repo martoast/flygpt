@@ -1,15 +1,3 @@
 {
-  "pid": 2863541,
-  "module": "scripts.compiler_storage",
-  "args": [
-    "--engine",
-    "scripts.compiler_efficiency_engine",
-    "train",
-    "--spec",
-    "results/compiler_efficiency/seed_501/E_relational/spec.json",
-    "--until",
-    "256"
-  ],
-  "log": "results/compiler_efficiency/seed_501/E_relational/train.log",
-  "started_utc": "2026-09-15T13:23:01.595859+00:00"
+  "idle": true
 }
