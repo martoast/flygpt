@@ -1,0 +1,25 @@
+{
+  "checkpoint_sha256": "eebbcb9cdbcbf4ac2bb714b668cb265d1754a86956304fe947ff234063afe74f",
+  "validation_ids": [
+    1909,
+    1262,
+    3846,
+    931,
+    2315,
+    3579,
+    2907,
+    1318
+  ],
+  "metrics": {
+    "accuracy": 0.625,
+    "response_ce": 0.12770671297663025,
+    "token_accuracy": 0.9464285714285714,
+    "cases": 8,
+    "response_symbols": 56,
+    "zero_edge_ce": 1.9511589322771346,
+    "zero_edge_exact": 0.0
+  },
+  "seconds": 25.82181692123413,
+  "final_test_used": false,
+  "selection": "First 8 validation cases, seed 400 teacher-hard final checkpoint; diagnostic only"
+}

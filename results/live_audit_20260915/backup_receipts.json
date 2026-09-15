@@ -1,0 +1,12 @@
+{
+  "topology": {
+    "receipt_count": 101,
+    "latest_verified_epoch": 1789450923.721194,
+    "scope": "Existing hash-verified transfer receipts, not a full archive rehash"
+  },
+  "efficiency": {
+    "receipt_count": 191,
+    "latest_verified_epoch": 1789450845.925691,
+    "scope": "Existing hash-verified transfer receipts, not a full archive rehash"
+  }
+}

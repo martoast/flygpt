@@ -1,0 +1,80 @@
+{
+  "real_neurons": 166700,
+  "real_edges": 25582938,
+  "real_self_loops": 101,
+  "controls": [
+    {
+      "seed": 1900,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    },
+    {
+      "seed": 1901,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    },
+    {
+      "seed": 1902,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    },
+    {
+      "seed": 1903,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    },
+    {
+      "seed": 1904,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    },
+    {
+      "seed": 1905,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    },
+    {
+      "seed": 1906,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    },
+    {
+      "seed": 1907,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    },
+    {
+      "seed": 1908,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    },
+    {
+      "seed": 1909,
+      "neurons": 166700,
+      "edges": 25582938,
+      "degree_match": true,
+      "self_loops": 101
+    }
+  ],
+  "passed": true,
+  "seconds": 5.326630115509033,
+  "scope": "Independent degree, neuron, edge and self-loop counts; uniqueness and swaps covered by original frozen generation audits"
+}

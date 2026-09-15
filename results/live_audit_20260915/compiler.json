@@ -1,0 +1,520 @@
+{
+  "utc": "2026-09-15T05:41:10Z",
+  "root": "results/compiler_confirmation",
+  "frozen_inputs_checked": 81,
+  "planned_models": 30,
+  "models_checked": 10,
+  "issues": [],
+  "split_counts": {
+    "train": 2048,
+    "validation": 256,
+    "test_compiler_confirmation": 512
+  },
+  "shuffle_audits": [
+    {
+      "file": "shuffle_audit_400.json",
+      "passed": true,
+      "relational_min": 3.7346968372678755
+    },
+    {
+      "file": "shuffle_audit_401.json",
+      "passed": true,
+      "relational_min": 3.6169304365591546
+    },
+    {
+      "file": "shuffle_audit_402.json",
+      "passed": true,
+      "relational_min": 3.5202771161111186
+    },
+    {
+      "file": "shuffle_audit_403.json",
+      "passed": true,
+      "relational_min": 3.5793420470511252
+    },
+    {
+      "file": "shuffle_audit_404.json",
+      "passed": true,
+      "relational_min": 3.5737775010953827
+    }
+  ],
+  "jobs": [
+    {
+      "seed": 400,
+      "condition": "C_hidden",
+      "step": 512,
+      "complete": true,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 23.408315658569336,
+      "hidden_rms_max": 0.32213640213012695,
+      "saturation_max": 0.0006823635194450617,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.00390625,
+          "ce": 1.0451289187850696,
+          "kl": 1.0451084235683084
+        },
+        {
+          "step": 64,
+          "accuracy": 0.00390625,
+          "ce": 0.7659526726097933,
+          "kl": 0.7659342461265624
+        },
+        {
+          "step": 128,
+          "accuracy": 0.12109375,
+          "ce": 0.5107862076921654,
+          "kl": 0.5107695680011862
+        },
+        {
+          "step": 256,
+          "accuracy": 0.78125,
+          "ce": 0.12132727504649665,
+          "kl": 0.1213170893523576
+        },
+        {
+          "step": 384,
+          "accuracy": 0.9921875,
+          "ce": 0.0210149563171009,
+          "kl": 0.021006616861346368
+        },
+        {
+          "step": 512,
+          "accuracy": 1.0,
+          "ce": 0.004773382676181167,
+          "kl": 0.004767714641665017
+        }
+      ],
+      "issues": []
+    },
+    {
+      "seed": 400,
+      "condition": "D_hidden_shuffled",
+      "step": 512,
+      "complete": true,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 23.452472686767578,
+      "hidden_rms_max": 0.3553885519504547,
+      "saturation_max": 0.0015086982166394591,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.0,
+          "ce": 1.0997753744678838,
+          "kl": 1.0997549159718412
+        },
+        {
+          "step": 64,
+          "accuracy": 0.0078125,
+          "ce": 0.8179687402610268,
+          "kl": 0.8179495856165886
+        },
+        {
+          "step": 128,
+          "accuracy": 0.0546875,
+          "ce": 0.5665919750463217,
+          "kl": 0.5665755583572069
+        },
+        {
+          "step": 256,
+          "accuracy": 0.46484375,
+          "ce": 0.25228744993052843,
+          "kl": 0.25227598256814027
+        },
+        {
+          "step": 384,
+          "accuracy": 0.9296875,
+          "ce": 0.049472783465587,
+          "kl": 0.049464879776288787
+        },
+        {
+          "step": 512,
+          "accuracy": 1.0,
+          "ce": 0.00839905115637001,
+          "kl": 0.008394380532828498
+        }
+      ],
+      "issues": []
+    },
+    {
+      "seed": 400,
+      "condition": "A_hard",
+      "step": 512,
+      "complete": true,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 4.67205810546875,
+      "hidden_rms_max": 0.34484079480171204,
+      "saturation_max": 0.00129124172963202,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.00390625,
+          "ce": 0.9535182581416198,
+          "kl": 0.953497595153749
+        },
+        {
+          "step": 64,
+          "accuracy": 0.01953125,
+          "ce": 0.7480794514995068,
+          "kl": 0.7480610394185143
+        },
+        {
+          "step": 128,
+          "accuracy": 0.09765625,
+          "ce": 0.5148051807357531,
+          "kl": 0.5147885888582096
+        },
+        {
+          "step": 256,
+          "accuracy": 0.72265625,
+          "ce": 0.1469461042049391,
+          "kl": 0.14693509334132873
+        },
+        {
+          "step": 384,
+          "accuracy": 0.69921875,
+          "ce": 0.12215480000096639,
+          "kl": 0.1221492261361813
+        },
+        {
+          "step": 512,
+          "accuracy": 0.87890625,
+          "ce": 0.06002243239540154,
+          "kl": 0.06001500878846855
+        }
+      ],
+      "issues": []
+    },
+    {
+      "seed": 400,
+      "condition": "E_relational",
+      "step": 512,
+      "complete": true,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 5.180088996887207,
+      "hidden_rms_max": 0.3467842638492584,
+      "saturation_max": 0.0016204259591177106,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.0,
+          "ce": 1.1954366665865694,
+          "kl": 1.1954156862837928
+        },
+        {
+          "step": 64,
+          "accuracy": 0.01171875,
+          "ce": 0.8745118358970753,
+          "kl": 0.8744929448834488
+        },
+        {
+          "step": 128,
+          "accuracy": 0.046875,
+          "ce": 0.6521693873219192,
+          "kl": 0.6521528570779732
+        },
+        {
+          "step": 256,
+          "accuracy": 0.6953125,
+          "ce": 0.16186168833727216,
+          "kl": 0.16185094837939168
+        },
+        {
+          "step": 384,
+          "accuracy": 0.9609375,
+          "ce": 0.029056781800786018,
+          "kl": 0.029049608522784962
+        },
+        {
+          "step": 512,
+          "accuracy": 0.9921875,
+          "ce": 0.009733959982765685,
+          "kl": 0.009729258826480094
+        }
+      ],
+      "issues": []
+    },
+    {
+      "seed": 400,
+      "condition": "B_soft",
+      "step": 512,
+      "complete": true,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 10.849754333496094,
+      "hidden_rms_max": 0.4971700608730316,
+      "saturation_max": 0.017518745735287666,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.0,
+          "ce": 1.3649319969117641,
+          "kl": 1.3649134981845106
+        },
+        {
+          "step": 64,
+          "accuracy": 0.00390625,
+          "ce": 1.094301814146872,
+          "kl": 1.0942833321169019
+        },
+        {
+          "step": 128,
+          "accuracy": 0.0078125,
+          "ce": 1.0686116815611189,
+          "kl": 1.0685972181547965
+        },
+        {
+          "step": 256,
+          "accuracy": 0.296875,
+          "ce": 0.4582145048396861,
+          "kl": 0.45821004217058153
+        },
+        {
+          "step": 384,
+          "accuracy": 0.890625,
+          "ce": 0.04023993923516705,
+          "kl": 0.040241498674069884
+        },
+        {
+          "step": 512,
+          "accuracy": 0.96875,
+          "ce": 0.016454715838648833,
+          "kl": 0.016460927606601672
+        }
+      ],
+      "issues": []
+    },
+    {
+      "seed": 400,
+      "condition": "F_relational_shuffled",
+      "step": 512,
+      "complete": true,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 5.13523006439209,
+      "hidden_rms_max": 0.3445703089237213,
+      "saturation_max": 0.0015881824074313045,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.0,
+          "ce": 1.1666080286460263,
+          "kl": 1.1665868586195367
+        },
+        {
+          "step": 64,
+          "accuracy": 0.01171875,
+          "ce": 0.803570758418313,
+          "kl": 0.8035518563618618
+        },
+        {
+          "step": 128,
+          "accuracy": 0.0703125,
+          "ce": 0.5863449363304036,
+          "kl": 0.586329235662041
+        },
+        {
+          "step": 256,
+          "accuracy": 0.6796875,
+          "ce": 0.16535488627102626,
+          "kl": 0.16534472405120532
+        },
+        {
+          "step": 384,
+          "accuracy": 0.93359375,
+          "ce": 0.0419449714629861,
+          "kl": 0.041937703787490524
+        },
+        {
+          "step": 512,
+          "accuracy": 0.87109375,
+          "ce": 0.06331264234345976,
+          "kl": 0.06330676993392055
+        }
+      ],
+      "issues": []
+    },
+    {
+      "seed": 401,
+      "condition": "A_hard",
+      "step": 512,
+      "complete": true,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 5.546108245849609,
+      "hidden_rms_max": 0.3282695412635803,
+      "saturation_max": 0.0014877024805173278,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.00390625,
+          "ce": 0.9603389400456633,
+          "kl": 0.9603188142978719
+        },
+        {
+          "step": 64,
+          "accuracy": 0.01171875,
+          "ce": 0.7522982515594256,
+          "kl": 0.7522794650202351
+        },
+        {
+          "step": 128,
+          "accuracy": 0.1484375,
+          "ce": 0.48893285640848,
+          "kl": 0.4889181724782767
+        },
+        {
+          "step": 256,
+          "accuracy": 0.73046875,
+          "ce": 0.13552915695098428,
+          "kl": 0.13551862252747274
+        },
+        {
+          "step": 384,
+          "accuracy": 0.95703125,
+          "ce": 0.0329762289905245,
+          "kl": 0.03297069694644961
+        },
+        {
+          "step": 512,
+          "accuracy": 0.9765625,
+          "ce": 0.018822527888330245,
+          "kl": 0.018818321914945306
+        }
+      ],
+      "issues": []
+    },
+    {
+      "seed": 401,
+      "condition": "F_relational_shuffled",
+      "step": 512,
+      "complete": true,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 4.590387344360352,
+      "hidden_rms_max": 0.31154879927635193,
+      "saturation_max": 0.0009568086243234575,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.00390625,
+          "ce": 0.9389709222263524,
+          "kl": 0.9389506703508752
+        },
+        {
+          "step": 64,
+          "accuracy": 0.0234375,
+          "ce": 0.7599137243814766,
+          "kl": 0.7598950218941484
+        },
+        {
+          "step": 128,
+          "accuracy": 0.1015625,
+          "ce": 0.5008916099156652,
+          "kl": 0.5008775669515931
+        },
+        {
+          "step": 256,
+          "accuracy": 0.5859375,
+          "ce": 0.21563579920829007,
+          "kl": 0.21562633923895191
+        },
+        {
+          "step": 384,
+          "accuracy": 0.93359375,
+          "ce": 0.045187493229605025,
+          "kl": 0.04518099174674717
+        },
+        {
+          "step": 512,
+          "accuracy": 0.8515625,
+          "ce": 0.07025968716983957,
+          "kl": 0.0702527628181997
+        }
+      ],
+      "issues": []
+    },
+    {
+      "seed": 401,
+      "condition": "D_hidden_shuffled",
+      "step": 512,
+      "complete": true,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 23.328006744384766,
+      "hidden_rms_max": 0.38988450169563293,
+      "saturation_max": 0.0037799940910190344,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.0,
+          "ce": 1.0599159224491035,
+          "kl": 1.0598955630723919
+        },
+        {
+          "step": 64,
+          "accuracy": 0.01171875,
+          "ce": 0.8110016009637288,
+          "kl": 0.8109822804773492
+        },
+        {
+          "step": 128,
+          "accuracy": 0.08203125,
+          "ce": 0.536222070671751,
+          "kl": 0.5362063047110236
+        },
+        {
+          "step": 256,
+          "accuracy": 0.78125,
+          "ce": 0.1205800559234506,
+          "kl": 0.12056992169735688
+        },
+        {
+          "step": 384,
+          "accuracy": 0.9375,
+          "ce": 0.037575399765241206,
+          "kl": 0.03756898518798023
+        },
+        {
+          "step": 512,
+          "accuracy": 0.9765625,
+          "ce": 0.02115009339286189,
+          "kl": 0.021145186019696536
+        }
+      ],
+      "issues": []
+    },
+    {
+      "seed": 401,
+      "condition": "E_relational",
+      "step": 64,
+      "complete": false,
+      "checkpoint_verified": true,
+      "loss_identity_verified": true,
+      "gradient_max": 4.517277240753174,
+      "hidden_rms_max": 0.3101895749568939,
+      "saturation_max": 0.0009770545875653625,
+      "evaluations": [
+        {
+          "step": 32,
+          "accuracy": 0.00390625,
+          "ce": 1.0243303115878786,
+          "kl": 1.0243099659149135
+        },
+        {
+          "step": 64,
+          "accuracy": 0.0078125,
+          "ce": 0.7803265063225159,
+          "kl": 0.7803077637217939
+        }
+      ],
+      "issues": []
+    }
+  ],
+  "final_test_evaluated_by_audit": false,
+  "seconds": 23.455170154571533
+}

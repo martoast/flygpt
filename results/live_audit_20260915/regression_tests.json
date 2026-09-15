@@ -1,0 +1,30 @@
+[
+  {
+    "machine": "M1",
+    "tests": [
+      "tests/test_integrity.py",
+      "tests/test_g2c.py",
+      "tests/test_topology_replication.py"
+    ],
+    "passed": 19,
+    "seconds": 5.53
+  },
+  {
+    "machine": "M4",
+    "tests": [
+      "tests/test_compiler_v3.py",
+      "tests/test_compiler_confirmation.py"
+    ],
+    "passed": 17,
+    "seconds": 3.03
+  },
+  {
+    "machine": "Omarchy",
+    "tests": [
+      "tests/test_compiler_v3.py",
+      "tests/test_compiler_efficiency.py"
+    ],
+    "passed": 14,
+    "seconds": 5.79
+  }
+]
