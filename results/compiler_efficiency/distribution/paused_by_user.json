@@ -1,0 +1,15 @@
+{
+  "paused_epoch": 1789509814.822689,
+  "worker_pid": 48927,
+  "paused_descendants": [
+    57105
+  ],
+  "mode": "Stopped; resume from verified checkpoint",
+  "reason": "User requested MacBook resources",
+  "resume": "Restart scripts.compiler_efficiency_distribution worker in this worktree; current model and optimizer resume from checkpoint",
+  "memory_released": true,
+  "checkpoint_step": 96,
+  "checkpoint_sha256": "324489055c72427a26d34437675e9ab4f9a43e621cbe953558621749de0cf911",
+  "spec": "results/compiler_efficiency/seed_505/C_hidden/spec.json",
+  "stopped_epoch": 1789509833.307034
+}
