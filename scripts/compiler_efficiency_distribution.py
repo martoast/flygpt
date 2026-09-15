@@ -77,7 +77,9 @@ def worker():
     from scripts.run_compiler_v3 import verify
     plan = read(ROOT/'frozen_plan.json')
     verify(plan['inputs'])
-    env = ROOT/'distribution/macbook_environment.json'
+    host = os.environ.get('FLYGPT_EXECUTION_HOST','macbook')
+    assert host in ['macbook','macmini']
+    env = ROOT/f'distribution/{host}_environment.json'
     from scripts.run_compiler_efficiency import environment_versions
     import platform
     value = dict(versions=environment_versions(), platform=platform.platform(),
@@ -147,6 +149,8 @@ def controller(wait_pid):
     old_publish = r.publish
     def publish(message):
         subprocess.run(['git','add',str(DOC),__file__],check=True)
+        if Path('COMPILER_EFFICIENCY_MINI_MIGRATION.md').exists():
+            subprocess.run(['git','add','COMPILER_EFFICIENCY_MINI_MIGRATION.md'],check=True)
         old_publish(message)
     r.publish = publish
     old_report = r.report
@@ -155,6 +159,11 @@ def controller(wait_pid):
         text = r.REPORT.read_text().replace('All 60 models completed on Omarchy Linux before final-test evaluation.',
             'All 60 models completed before final-test evaluation: seeds 500–504 on Omarchy, 505–509 on MacBook M1, under the published hardware amendment.')
         r.REPORT.write_text(text+'\nHardware was amended after interim validation inspection at user request. Each six-method seed block stayed on one host. Report timing within host; do not interpret pooled seconds as a compiler speedup. See COMPILER_EFFICIENCY_HARDWARE_AMENDMENT.md.\n')
+        migration=Path('COMPILER_EFFICIENCY_MINI_MIGRATION.md')
+        if migration.exists():
+            text=r.REPORT.read_text().replace('seeds 500–504 on Omarchy, 505–509 on MacBook M1','seeds 500–504 on Omarchy, seed 505 split across M1/M4, and seeds 506–509 on M4').replace('Each six-method seed block stayed on one host.','Seed 505 is a disclosed mixed-host exception; other seed blocks stayed on one host.')
+            r.REPORT.write_text(text+'\n'+migration.read_text())
+            save_json(ROOT/'distribution/without_mixed_seed_505.json',{s:m for s,m in by_seed.items() if int(s)!=505})
         save_json(ROOT/'distribution/host_results.json', {host:{s:m for s,m in by_seed.items() if owner(int(s))==host} for host in ['omarchy','macbook']})
     r.report = report
     old_freeze = r.c.freeze
@@ -162,6 +171,8 @@ def controller(wait_pid):
         if str(path)==str(ROOT/'unlock.json'):
             value['inputs'].update({str(DOC):sha256(DOC),str(Path(__file__).relative_to(Path.cwd())):sha256(__file__),
                                   str(ROOT/'distribution/macbook_environment.json'):sha256(ROOT/'distribution/macbook_environment.json')})
+            for extra in [Path('COMPILER_EFFICIENCY_MINI_MIGRATION.md'),ROOT/'distribution/macmini_environment.json',ROOT/'distribution/mini_migration.json']:
+                if extra.exists():value['inputs'][str(extra)]=sha256(extra)
         return old_freeze(path,value)
     r.c.freeze = freeze
     r.run()
