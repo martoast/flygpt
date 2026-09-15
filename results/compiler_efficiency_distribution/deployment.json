@@ -1,0 +1,32 @@
+{
+  "started_epoch": 1789485688.03354,
+  "macbook_workspace": "/Users/alex/Desktop/flygpt_efficiency_m1",
+  "macbook_seeds": [
+    505,
+    506,
+    507,
+    508,
+    509
+  ],
+  "omarchy_seeds": [
+    500,
+    501,
+    502,
+    503,
+    504
+  ],
+  "macbook_worker_pid": 48927,
+  "omarchy_coordinator_pid": 2933162,
+  "unchanged_omarchy_training_pid": 2863541,
+  "first_macbook_job": "seed_505/E_relational",
+  "checks": {
+    "frozen_inputs_verified": 124,
+    "moved_models_unstarted_before_assignment": 30,
+    "transport_probe_sha256_verified": true,
+    "distribution_tests_passed": 3,
+    "previous_compiler_regression_tests_passed": 14
+  },
+  "final_test_opened": false,
+  "macbook_checkpoint_transfer": "Each saved checkpoint atomically uploaded and SHA-256 verified on Linux before proceeding; Linux relay archives to Seagate",
+  "timing": "No MacBook full-model runtime measured yet"
+}
