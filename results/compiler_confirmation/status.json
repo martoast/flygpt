@@ -1,8 +1,8 @@
 {
   "stage": "training",
-  "seed": 401,
-  "method": "B_soft",
-  "spec": "results/compiler_confirmation/seed_401/B_soft/spec.json",
-  "utc": "2026-09-15T09:02:04.866967+00:00",
+  "seed": 402,
+  "method": "A_hard",
+  "spec": "results/compiler_confirmation/seed_402/A_hard/spec.json",
+  "utc": "2026-09-15T10:53:09.470189+00:00",
   "final_test_opened": false
 }
