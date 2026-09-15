@@ -1,0 +1,37 @@
+{
+  "epoch": 1789485585.4552634,
+  "old_parent": 2213131,
+  "unchanged_active_child": 2863541,
+  "active": {
+    "pid": 2863541,
+    "module": "scripts.compiler_storage",
+    "args": [
+      "--engine",
+      "scripts.compiler_efficiency_engine",
+      "train",
+      "--spec",
+      "results/compiler_efficiency/seed_501/E_relational/spec.json",
+      "--until",
+      "256"
+    ],
+    "log": "results/compiler_efficiency/seed_501/E_relational/train.log",
+    "started_utc": "2026-09-15T13:23:01.595859+00:00"
+  },
+  "assignment": {
+    "omarchy": [
+      500,
+      501,
+      502,
+      503,
+      504
+    ],
+    "macbook": [
+      505,
+      506,
+      507,
+      508,
+      509
+    ]
+  },
+  "amendment_sha256": "7291b4ced56da14ca346ff9d6dff326e5a7179b6bcd6ffd60c6be442941c4c32"
+}
