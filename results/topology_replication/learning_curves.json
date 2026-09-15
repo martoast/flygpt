@@ -1,0 +1,102 @@
+{
+  "600": {
+    "real_ce": {
+      "validation_accuracy_area": 0.35833333333333334,
+      "wall_seconds": 2598.9899596250616
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.171875,
+      "wall_seconds": 2546.094600750017
+    }
+  },
+  "601": {
+    "real_ce": {
+      "validation_accuracy_area": 0.3572916666666667,
+      "wall_seconds": 2422.628525041975
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.23541666666666666,
+      "wall_seconds": 2488.333299332997
+    }
+  },
+  "602": {
+    "real_ce": {
+      "validation_accuracy_area": 0.45208333333333334,
+      "wall_seconds": 2413.081319040968
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.303125,
+      "wall_seconds": 2481.3955869170604
+    }
+  },
+  "603": {
+    "real_ce": {
+      "validation_accuracy_area": 0.4125,
+      "wall_seconds": 2412.6146742919227
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.25,
+      "wall_seconds": 2478.4482661670772
+    }
+  },
+  "604": {
+    "real_ce": {
+      "validation_accuracy_area": 0.30833333333333335,
+      "wall_seconds": 2415.6661590840667
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.35,
+      "wall_seconds": 2479.9988855839474
+    }
+  },
+  "605": {
+    "real_ce": {
+      "validation_accuracy_area": 0.34791666666666665,
+      "wall_seconds": 2415.2451477079885
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.19270833333333334,
+      "wall_seconds": 2480.8406322919764
+    }
+  },
+  "606": {
+    "real_ce": {
+      "validation_accuracy_area": 0.3572916666666667,
+      "wall_seconds": 2417.201039166888
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.17083333333333334,
+      "wall_seconds": 2486.5750720829237
+    }
+  },
+  "607": {
+    "real_ce": {
+      "validation_accuracy_area": 0.31979166666666664,
+      "wall_seconds": 2420.5015322499676
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.271875,
+      "wall_seconds": 2494.259789915988
+    }
+  },
+  "608": {
+    "real_ce": {
+      "validation_accuracy_area": 0.4166666666666667,
+      "wall_seconds": 2429.752884250018
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.16458333333333333,
+      "wall_seconds": 2491.5470912499586
+    }
+  },
+  "609": {
+    "real_ce": {
+      "validation_accuracy_area": 0.2916666666666667,
+      "wall_seconds": 2418.7913290840806
+    },
+    "rewired_ce": {
+      "validation_accuracy_area": 0.2,
+      "wall_seconds": 2485.670539541985
+    }
+  }
+}

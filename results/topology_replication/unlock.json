@@ -1,0 +1,28 @@
+{
+  "split": "test_topology_replication",
+  "choices_frozen": true,
+  "inputs": {
+    "results/topology_replication/frozen_plan.json": "02b7023d922f85bff0bb6b22bb30fa4abaf862afa27f3dd767c8e61afaa836e7",
+    "results/topology_replication/publication.json": "25b70b439462e55e58a9c59036798ef439ae1f218e92cef98b23ed7815d0dffd",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_600/real_ce/step_01024.pt": "f441ccc8f8a7d538614f4c3dce5f4f4f4393e9b21cb90ed7b2299ed864165df8",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_600/rewired_ce/step_01024.pt": "5ab02b90698bf368f03942479edef2c709b960a0271d4ae88d6d7efe85cc7b37",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_601/real_ce/step_01024.pt": "b5d7d306d88b10b7ead14994cdf63fe7206ec3189d048b4c2d4d6417cb62728f",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_601/rewired_ce/step_01024.pt": "a2ef7690388c5385f8f5f51f5865aaa09999a9fbd8268654c679b35d8dd73ef6",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_602/real_ce/step_01024.pt": "20d25de027cba87d71f0efbab9dc2abbf8be8f32ea0516623f50700b19778d79",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_602/rewired_ce/step_01024.pt": "ec3d35479e9dadb9ebf5571e518458742fb07dfc8317a1231e16f0f238577ec2",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_603/real_ce/step_01024.pt": "fb411e30bc037379dc319aa6927fbca990a76b8dca8a4e0205f0b01866e9339e",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_603/rewired_ce/step_01024.pt": "ad4c0c5ab86ed6ec0f0beff4b941c69404df1efcea3654e0c14583e2935fd184",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_604/real_ce/step_01024.pt": "c691dc5c293d584c6e6bc9210e40b08f3071eef5398dd411256605c5b38cbb85",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_604/rewired_ce/step_01024.pt": "0de1e3673e87e2562f8995323469425064de80a74b9a2e29b461d7f49d3a23b0",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_605/real_ce/step_01024.pt": "9b3510ae682c4c0a6c4bdd339b6752fa8613c01a6789b44041496f3812d69589",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_605/rewired_ce/step_01024.pt": "ff6bf8ab9427d660823f07d3458d8356538f2005d615839c8261079fef53a366",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_606/real_ce/step_01024.pt": "b0d95d1c4403ea076a49927c02d572ece05a9fe81c6101b9fbb3e265321697f3",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_606/rewired_ce/step_01024.pt": "1b693f6ceaa7c43717bdd693f24f630220c897d968495a083a0faa93ec358fa1",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_607/real_ce/step_01024.pt": "5765e33f4c53e2ffc534c31e82d6ae3925b4188ad8cbfc87aedbb7311d099537",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_607/rewired_ce/step_01024.pt": "8a5486e4d9a1e64648e1e0dfa3ef1f50bf63f9ddf8194119516f65fb276f9b60",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_608/real_ce/step_01024.pt": "63bf29422f758e9e25369f29bf1bf158678591e17aa9e960679ef9459f08cbbf",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_608/rewired_ce/step_01024.pt": "fd6b1fe5cf5b1b809d3faf11a17edc643b41ea6bd4a0cd09663b4068bef09e52",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_609/real_ce/step_01024.pt": "e525c4356aede8679686c55422a84a1b6e37216d9430ac2efca527afda2155ef",
+    "/Users/alex/Desktop/flygpt_topology_replication/artifacts/compiler_pending/results/topology_replication/pairs/seed_609/rewired_ce/step_01024.pt": "5fbe69399bd8c9d9bf16de0e168a94973a62a7ee79eaf9e0ed077fc2130c15ba"
+  }
+}

@@ -1,8 +1,4 @@
 {
-  "stage": "training",
-  "seed": 609,
-  "condition": "rewired_ce",
-  "spec": "results/topology_replication/pairs/seed_609/rewired_ce/spec.json",
-  "utc": "2026-09-15T07:14:05.931289+00:00",
-  "final_test_opened": false
+  "stage": "complete",
+  "utc": "2026-09-15T10:16:07.984179+00:00"
 }

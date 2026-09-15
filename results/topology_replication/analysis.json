@@ -1,0 +1,30 @@
+{
+  "n": 10,
+  "paired_benefits": [
+    0.2734375,
+    0.3125,
+    0.2890625,
+    0.2578125,
+    0.34375,
+    0.390625,
+    0.3125,
+    0.3359375,
+    0.421875,
+    0.0546875
+  ],
+  "mean_benefit": 0.29921875,
+  "sd": 0.09964468668759736,
+  "unadjusted_95_t_interval": [
+    0.22793723523474405,
+    0.3705002647652559
+  ],
+  "paired_t_p": 5.494378981872272e-06,
+  "exact_two_sided_sign_flip_p": 0.001953125,
+  "degenerate_zero_variance": false,
+  "real_mean": 0.80859375,
+  "rewired_mean": 0.509375,
+  "real_sd": 0.09570091054694249,
+  "rewired_sd": 0.09213010218797474,
+  "positive_pairs": 10,
+  "primary_pass": true
+}
