@@ -94,6 +94,9 @@ def worker():
         spec = read(job['spec']); directory = Path(spec['job_dir'])
         receipt = directory/'macbook_complete.json'
         if receipt.exists():
+            send(directory/'progress.json', directory/'progress.json')
+            send(receipt, receipt)
+            (directory/'model.pt').unlink(missing_ok=True)
             continue
         save_json(ROOT/'distribution/macbook_status.json', dict(stage='training', **job, final_test_opened=False))
         with (directory/'train.log').open('a') as log:
@@ -118,6 +121,8 @@ def controller(wait_pid):
     lock = (ROOT/'controller.lock').open('a')
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     while wait_pid and Path(f'/proc/{wait_pid}').exists():
+        if Path(f'/proc/{wait_pid}/stat').read_text().split(') ',1)[1].startswith('Z '):
+            break
         time.sleep(10)
     old_train = r.v.train
     def routed_train(spec_path, engine):
@@ -164,8 +169,13 @@ def controller(wait_pid):
 
 if __name__ == '__main__':
     p=argparse.ArgumentParser();p.add_argument('mode',choices=['worker','train','controller']);p.add_argument('--spec');p.add_argument('--wait-pid',type=int,default=0);a=p.parse_args()
-    if a.mode=='train':train_one(a.spec)
-    elif a.mode=='worker':
-        f=(ROOT/'distribution/worker.lock');f.parent.mkdir(parents=True,exist_ok=True)
-        lock=f.open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);worker()
-    else:controller(a.wait_pid)
+    try:
+        if a.mode=='train':train_one(a.spec)
+        elif a.mode=='worker':
+            f=(ROOT/'distribution/worker.lock');f.parent.mkdir(parents=True,exist_ok=True)
+            lock=f.open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB);worker()
+        else:controller(a.wait_pid)
+    except BaseException as exc:
+        import traceback
+        save_json(ROOT/f'distribution/{a.mode}_failure.json',dict(error=repr(exc),traceback=traceback.format_exc()))
+        raise
