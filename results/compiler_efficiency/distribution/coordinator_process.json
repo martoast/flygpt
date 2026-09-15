@@ -1,5 +1,6 @@
 {
-  "pid": 2933162,
-  "wait_pid": 2863541,
-  "started_epoch": 1789485585.5561638
+  "pid": 3116587,
+  "wait_pid": 3088850,
+  "started_epoch": 1789510045.4959834,
+  "reason": "Load M4 migration provenance; active training untouched"
 }

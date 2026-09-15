@@ -1,0 +1,17 @@
+{
+  "epoch": 1789510020.095238,
+  "previous_host": "M1 MacBook",
+  "new_host": "M4 Mac mini",
+  "resumed_spec": "results/compiler_efficiency/seed_505/C_hidden/spec.json",
+  "resumed_update": 96,
+  "checkpoint_sha256": "324489055c72427a26d34437675e9ab4f9a43e621cbe953558621749de0cf911",
+  "frozen_inputs_verified": true,
+  "completed_on_m1": [
+    "E_relational",
+    "D_hidden_shuffled",
+    "F_relational_shuffled"
+  ],
+  "amendment_sha256": "73324cab347965fbedf9a4df8d37e75514b8f2106373d4c2cbb58bc01c7d0e92",
+  "concurrent_m4_confirmation": true,
+  "final_test_opened": false
+}
