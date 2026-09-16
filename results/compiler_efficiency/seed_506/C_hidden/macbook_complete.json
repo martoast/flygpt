@@ -1,0 +1,9 @@
+{
+  "seed": 506,
+  "method": "C_hidden",
+  "progress_sha256": "48e2f0562d8b2c1581d1a574672763fa0ec71d5ca75331878649b8898813a5ee",
+  "checkpoint_sha256": "0a347f9b566382e2cf03c9b65db0581ad4c6c3ab4dc29a92abdf1d7737b4a171",
+  "amendment_sha256": "7291b4ced56da14ca346ff9d6dff326e5a7179b6bcd6ffd60c6be442941c4c32",
+  "environment_sha256": "d75c777b13320f02602ea55d1f6381769b3ee3c023bb5b96f61483d6b18503b0",
+  "final_test_opened": false
+}
