@@ -23,5 +23,6 @@
   "results/compiler_confirmation/seed_403/C_hidden/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_403/C_hidden/step_00512.pt",
   "results/compiler_confirmation/seed_403/F_relational_shuffled/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_403/F_relational_shuffled/step_00512.pt",
   "results/compiler_confirmation/seed_403/B_soft/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_403/B_soft/step_00512.pt",
-  "results/compiler_confirmation/seed_404/B_soft/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_404/B_soft/step_00512.pt"
+  "results/compiler_confirmation/seed_404/B_soft/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_404/B_soft/step_00512.pt",
+  "results/compiler_confirmation/seed_404/F_relational_shuffled/spec.json": "/Volumes/Seagate/FlyGPT Backups/G2c-overnight/results/compiler_confirmation/seed_404/F_relational_shuffled/step_00512.pt"
 }
