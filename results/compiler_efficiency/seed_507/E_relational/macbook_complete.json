@@ -1,0 +1,9 @@
+{
+  "seed": 507,
+  "method": "E_relational",
+  "progress_sha256": "d8dd1f62a0cf63c6b6252e634f23e48bbf3c6e83c6f38ab7768e584c354a4eed",
+  "checkpoint_sha256": "eff99c674bf6ee531f5e1f6bf8665fc701042761ae12b608e2026aa15bb357c0",
+  "amendment_sha256": "7291b4ced56da14ca346ff9d6dff326e5a7179b6bcd6ffd60c6be442941c4c32",
+  "environment_sha256": "d75c777b13320f02602ea55d1f6381769b3ee3c023bb5b96f61483d6b18503b0",
+  "final_test_opened": false
+}
