@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "seed": 404,
-  "method": "D_hidden_shuffled",
-  "spec": "results/compiler_confirmation/seed_404/D_hidden_shuffled/spec.json",
-  "utc": "2026-09-16T18:05:36.453914+00:00",
+  "method": "E_relational",
+  "spec": "results/compiler_confirmation/seed_404/E_relational/spec.json",
+  "utc": "2026-09-16T20:12:00.008133+00:00",
   "final_test_opened": false
 }
