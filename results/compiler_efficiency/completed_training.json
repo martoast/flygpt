@@ -18,5 +18,6 @@
   "results/compiler_efficiency/seed_502/C_hidden/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_502/C_hidden/step_00256.pt",
   "results/compiler_efficiency/seed_502/D_hidden_shuffled/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_502/D_hidden_shuffled/step_00256.pt",
   "results/compiler_efficiency/seed_503/B_soft/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_503/B_soft/step_00256.pt",
-  "results/compiler_efficiency/seed_503/E_relational/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_503/E_relational/step_00256.pt"
+  "results/compiler_efficiency/seed_503/E_relational/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_503/E_relational/step_00256.pt",
+  "results/compiler_efficiency/seed_503/D_hidden_shuffled/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_503/D_hidden_shuffled/step_00256.pt"
 }
