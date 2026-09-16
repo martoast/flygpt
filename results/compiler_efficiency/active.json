@@ -1,15 +1,3 @@
 {
-  "pid": 3088850,
-  "module": "scripts.compiler_storage",
-  "args": [
-    "--engine",
-    "scripts.compiler_efficiency_engine",
-    "train",
-    "--spec",
-    "results/compiler_efficiency/seed_501/D_hidden_shuffled/spec.json",
-    "--until",
-    "256"
-  ],
-  "log": "results/compiler_efficiency/seed_501/D_hidden_shuffled/train.log",
-  "started_utc": "2026-09-15T20:58:14.821976+00:00"
+  "idle": true
 }
