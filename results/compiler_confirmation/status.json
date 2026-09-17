@@ -1,7 +1,7 @@
 {
   "stage": "evaluation",
-  "seed": 401,
-  "method": "B_soft",
-  "spec": "results/compiler_confirmation/seed_401/B_soft/spec.json",
-  "utc": "2026-09-17T02:06:52.255075+00:00"
+  "seed": 402,
+  "method": "A_hard",
+  "spec": "results/compiler_confirmation/seed_402/A_hard/spec.json",
+  "utc": "2026-09-17T02:27:53.308858+00:00"
 }
