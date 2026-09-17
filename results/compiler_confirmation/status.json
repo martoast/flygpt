@@ -1,7 +1,7 @@
 {
   "stage": "evaluation",
   "seed": 404,
-  "method": "A_hard",
-  "spec": "results/compiler_confirmation/seed_404/A_hard/spec.json",
-  "utc": "2026-09-17T07:43:39.693189+00:00"
+  "method": "D_hidden_shuffled",
+  "spec": "results/compiler_confirmation/seed_404/D_hidden_shuffled/spec.json",
+  "utc": "2026-09-17T08:04:41.328288+00:00"
 }
