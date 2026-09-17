@@ -1,7 +1,7 @@
 {
   "stage": "evaluation",
   "seed": 401,
-  "method": "E_relational",
-  "spec": "results/compiler_confirmation/seed_401/E_relational/spec.json",
-  "utc": "2026-09-17T01:25:30.028688+00:00"
+  "method": "C_hidden",
+  "spec": "results/compiler_confirmation/seed_401/C_hidden/spec.json",
+  "utc": "2026-09-17T01:46:10.872169+00:00"
 }
