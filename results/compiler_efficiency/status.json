@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "seed": 508,
-  "method": "A_hard",
-  "spec": "results/compiler_efficiency/seed_508/A_hard/spec.json",
-  "utc": "2026-09-17T20:54:46.094496+00:00",
+  "method": "F_relational_shuffled",
+  "spec": "results/compiler_efficiency/seed_508/F_relational_shuffled/spec.json",
+  "utc": "2026-09-17T20:55:08.216234+00:00",
   "final_test_opened": false
 }
