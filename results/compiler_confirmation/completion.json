@@ -1,0 +1,6 @@
+{
+  "utc": "2026-09-17T08:47:58.053807+00:00",
+  "artifact_audit_passed": true,
+  "models": 30,
+  "evidence": "Preregistered five-seed replication conditional on a fixed teacher, task and training corpus; small-N inference"
+}

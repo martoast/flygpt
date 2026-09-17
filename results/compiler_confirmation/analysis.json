@@ -1,0 +1,253 @@
+{
+  "seeds": [
+    "400",
+    "401",
+    "402",
+    "403",
+    "404"
+  ],
+  "comparisons": [
+    {
+      "method": "B_soft",
+      "control": "A_hard",
+      "endpoint": "accuracy",
+      "n": 5,
+      "paired_benefits": [
+        0.06640625,
+        -0.001953125,
+        0.07421875,
+        -0.048828125,
+        0.01953125
+      ],
+      "mean_benefit": 0.021875,
+      "sd": 0.05073239837734057,
+      "unadjusted_95_t_interval": [
+        -0.04111759260767484,
+        0.08486759260767485
+      ],
+      "paired_t_p": 0.3895664005469329,
+      "exact_two_sided_sign_flip_p": 0.375,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.9548126561672472,
+      "supported_under_preregistered_t_analysis": false
+    },
+    {
+      "method": "B_soft",
+      "control": "A_hard",
+      "endpoint": "response_ce",
+      "n": 5,
+      "paired_benefits": [
+        0.03569991462482923,
+        0.011169267455900161,
+        0.041595725273859414,
+        -0.022030098091307324,
+        0.01967965388185036
+      ],
+      "mean_benefit": 0.01722289262902637,
+      "sd": 0.025094395026813807,
+      "unadjusted_95_t_interval": [
+        -0.013935914232471917,
+        0.048381699490524656
+      ],
+      "paired_t_p": 0.19965520464264927,
+      "exact_two_sided_sign_flip_p": 0.25,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.9548126561672472,
+      "supported_under_preregistered_t_analysis": false
+    },
+    {
+      "method": "C_hidden",
+      "control": "D_hidden_shuffled",
+      "endpoint": "accuracy",
+      "n": 5,
+      "paired_benefits": [
+        0.0,
+        0.01171875,
+        0.03515625,
+        0.0078125,
+        0.0859375
+      ],
+      "mean_benefit": 0.028125,
+      "sd": 0.03487299081354007,
+      "unadjusted_95_t_interval": [
+        -0.015175537202863295,
+        0.07142553720286329
+      ],
+      "paired_t_p": 0.1456636710981694,
+      "exact_two_sided_sign_flip_p": 0.125,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.9548126561672472,
+      "supported_under_preregistered_t_analysis": false
+    },
+    {
+      "method": "C_hidden",
+      "control": "D_hidden_shuffled",
+      "endpoint": "response_ce",
+      "n": 5,
+      "paired_benefits": [
+        0.003507738830817532,
+        0.012014572220437003,
+        0.019940715632328323,
+        0.006344899358982811,
+        0.04063434046264953
+      ],
+      "mean_benefit": 0.016488453301043038,
+      "sd": 0.014885800521650292,
+      "unadjusted_95_t_interval": [
+        -0.0019947092911329414,
+        0.03497161589321902
+      ],
+      "paired_t_p": 0.06844480147038061,
+      "exact_two_sided_sign_flip_p": 0.0625,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.6160032132334254,
+      "supported_under_preregistered_t_analysis": false
+    },
+    {
+      "method": "E_relational",
+      "control": "F_relational_shuffled",
+      "endpoint": "accuracy",
+      "n": 5,
+      "paired_benefits": [
+        0.173828125,
+        0.15234375,
+        -0.005859375,
+        0.015625,
+        -0.013671875
+      ],
+      "mean_benefit": 0.064453125,
+      "sd": 0.09099340863512621,
+      "unadjusted_95_t_interval": [
+        -0.04853011457607974,
+        0.17743636457607975
+      ],
+      "paired_t_p": 0.18839653935181763,
+      "exact_two_sided_sign_flip_p": 0.3125,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.9548126561672472,
+      "supported_under_preregistered_t_analysis": false
+    },
+    {
+      "method": "E_relational",
+      "control": "F_relational_shuffled",
+      "endpoint": "response_ce",
+      "n": 5,
+      "paired_benefits": [
+        0.06287964627088627,
+        0.05350764277121861,
+        -0.0035974603576676145,
+        0.009346374524036655,
+        -0.003918133048939256
+      ],
+      "mean_benefit": 0.023643614031906932,
+      "sd": 0.032161559088424704,
+      "unadjusted_95_t_interval": [
+        -0.01629023601429309,
+        0.06357746407810695
+      ],
+      "paired_t_p": 0.17555255847273601,
+      "exact_two_sided_sign_flip_p": 0.25,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.9548126561672472,
+      "supported_under_preregistered_t_analysis": false
+    },
+    {
+      "method": "C_hidden",
+      "control": "A_hard",
+      "endpoint": "accuracy",
+      "n": 5,
+      "paired_benefits": [
+        0.109375,
+        0.015625,
+        0.083984375,
+        0.0,
+        0.021484375
+      ],
+      "mean_benefit": 0.04609375,
+      "sd": 0.0476938568317995,
+      "unadjusted_95_t_interval": [
+        -0.01312599496353007,
+        0.10531349496353007
+      ],
+      "paired_t_p": 0.0967752872345455,
+      "exact_two_sided_sign_flip_p": 0.125,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.774202297876364,
+      "supported_under_preregistered_t_analysis": false
+    },
+    {
+      "method": "C_hidden",
+      "control": "A_hard",
+      "endpoint": "response_ce",
+      "n": 5,
+      "paired_benefits": [
+        0.0520614529263485,
+        0.015192283537544427,
+        0.03797271148031963,
+        0.0008474535846890573,
+        0.01599044321236371
+      ],
+      "mean_benefit": 0.02441286894825307,
+      "sd": 0.020369086732953196,
+      "unadjusted_95_t_interval": [
+        -0.0008786927243448414,
+        0.04970443062085098
+      ],
+      "paired_t_p": 0.055229480791032626,
+      "exact_two_sided_sign_flip_p": 0.0625,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.5522948079103263,
+      "supported_under_preregistered_t_analysis": false
+    },
+    {
+      "method": "E_relational",
+      "control": "A_hard",
+      "endpoint": "accuracy",
+      "n": 5,
+      "paired_benefits": [
+        0.09765625,
+        -0.00390625,
+        0.07421875,
+        -0.001953125,
+        0.00390625
+      ],
+      "mean_benefit": 0.033984375,
+      "sd": 0.048230720423586095,
+      "unadjusted_95_t_interval": [
+        -0.025901974157397853,
+        0.09387072415739785
+      ],
+      "paired_t_p": 0.19024633112202324,
+      "exact_two_sided_sign_flip_p": 0.375,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.9548126561672472,
+      "supported_under_preregistered_t_analysis": false
+    },
+    {
+      "method": "E_relational",
+      "control": "A_hard",
+      "endpoint": "response_ce",
+      "n": 5,
+      "paired_benefits": [
+        0.04444307857668101,
+        0.0026840530863734904,
+        0.03265650579915505,
+        -0.00044159586537619207,
+        0.005101362476779059
+      ],
+      "mean_benefit": 0.016888680814722484,
+      "sd": 0.020303447694133694,
+      "unadjusted_95_t_interval": [
+        -0.008321379226496551,
+        0.04209874085594152
+      ],
+      "paired_t_p": 0.13640180802389246,
+      "exact_two_sided_sign_flip_p": 0.125,
+      "degenerate_zero_variance": false,
+      "holm_p": 0.9548126561672472,
+      "supported_under_preregistered_t_analysis": false
+    }
+  ],
+  "correction": "Holm across all ten paired-t tests",
+  "caveat": "Five paired seeds; t assumptions uncertain; exact two-sided sign-flip minimum p=.0625; fixed teacher and corpus"
+}
