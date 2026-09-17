@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "seed": 505,
-  "method": "B_soft",
-  "spec": "results/compiler_efficiency/seed_505/B_soft/spec.json",
-  "utc": "2026-09-17T20:49:32.692093+00:00",
+  "method": "A_hard",
+  "spec": "results/compiler_efficiency/seed_505/A_hard/spec.json",
+  "utc": "2026-09-17T20:49:54.139081+00:00",
   "final_test_opened": false
 }
