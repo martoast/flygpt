@@ -1,8 +1,8 @@
 {
   "stage": "training",
   "seed": 504,
-  "method": "D_hidden_shuffled",
-  "spec": "results/compiler_efficiency/seed_504/D_hidden_shuffled/spec.json",
-  "utc": "2026-09-17T15:46:23.099211+00:00",
+  "method": "E_relational",
+  "spec": "results/compiler_efficiency/seed_504/E_relational/spec.json",
+  "utc": "2026-09-17T18:16:45.065635+00:00",
   "final_test_opened": false
 }
