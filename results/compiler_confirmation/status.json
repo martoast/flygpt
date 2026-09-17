@@ -1,7 +1,7 @@
 {
   "stage": "evaluation",
   "seed": 402,
-  "method": "E_relational",
-  "spec": "results/compiler_confirmation/seed_402/E_relational/spec.json",
-  "utc": "2026-09-17T02:48:54.431448+00:00"
+  "method": "F_relational_shuffled",
+  "spec": "results/compiler_confirmation/seed_402/F_relational_shuffled/spec.json",
+  "utc": "2026-09-17T03:09:55.329820+00:00"
 }
