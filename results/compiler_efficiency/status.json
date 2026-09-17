@@ -1,8 +1,8 @@
 {
   "stage": "training",
-  "seed": 506,
-  "method": "C_hidden",
-  "spec": "results/compiler_efficiency/seed_506/C_hidden/spec.json",
-  "utc": "2026-09-17T20:52:10.156877+00:00",
+  "seed": 507,
+  "method": "A_hard",
+  "spec": "results/compiler_efficiency/seed_507/A_hard/spec.json",
+  "utc": "2026-09-17T20:52:32.798749+00:00",
   "final_test_opened": false
 }
