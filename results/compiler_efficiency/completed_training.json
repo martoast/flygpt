@@ -36,5 +36,6 @@
   "results/compiler_efficiency/seed_505/B_soft/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_505/B_soft/step_00256.pt",
   "results/compiler_efficiency/seed_505/A_hard/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_505/A_hard/step_00256.pt",
   "results/compiler_efficiency/seed_506/A_hard/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_506/A_hard/step_00256.pt",
-  "results/compiler_efficiency/seed_506/E_relational/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_506/E_relational/step_00256.pt"
+  "results/compiler_efficiency/seed_506/E_relational/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_506/E_relational/step_00256.pt",
+  "results/compiler_efficiency/seed_506/B_soft/spec.json": "/home/alex/flygpt_efficiency/artifacts/compiler_pending/results/compiler_efficiency/seed_506/B_soft/step_00256.pt"
 }
