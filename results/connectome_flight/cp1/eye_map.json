@@ -1,0 +1,14325 @@
+{
+ "version": 1,
+ "method": "Brain axes come from independent landmarks, not assumed conventions: antennal-lobe local neurons are anterior to Kenyon cells, dorsal endocrine cells are above the ventral DNg cluster, and left/right come from annotated soma sides.",
+ "inputs": {
+  "data/raw/body-annotations-male-cns-v1.0-minconf-0.5.feather": "2177e246113e4cfbf1e7772ec37c6da1955ff22e8063d0b1f833101f99a9a3b2",
+  "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+  "data/processed/malecns_body_ids.npy": "ab90597b7b0ce07cbc22cb39a65b70bea2ac73cc7fd225951bd9d73f2fc8dd3f"
+ },
+ "bodyAxesInBrainFrame": {
+  "forward": [
+   0.008841291901235657,
+   0.6793613320935631,
+   -0.7337506470277056
+  ],
+  "left": [
+   0.9998739743236177,
+   -0.01568203747238918,
+   -0.002471673726062552
+  ],
+  "up": [
+   -0.013185864697116802,
+   -0.7336363228172212,
+   -0.6794143645930775
+  ]
+ },
+ "landmarkAxisCosines": {
+  "forward": 1.0000000000000002,
+  "up": 0.7995184163630599,
+  "left": 0.9993375878220399
+ },
+ "landmarkCounts": {
+  "kenyon": 4050,
+  "alln": 416,
+  "cb_endocrine": 68,
+  "DNg": 855,
+  "left_ol": 8145,
+  "right_ol": 10175
+ },
+ "audits": {
+  "L": {
+   "laminaSomata": 462,
+   "planarFitCvMedianVoxels": 1536.6890112648828,
+   "voxelsPerHexStep": [
+    810.3998464835906,
+    851.4307189518718
+   ],
+   "hexAxisAngleDegrees": 90.30105816117417,
+   "hexAxesInBody": {
+    "h1": [
+     -0.085,
+     -0.641,
+     0.763
+    ],
+    "h2": [
+     -0.892,
+     0.393,
+     0.224
+    ]
+   },
+   "meanViewAzimuthDegrees": 56.12879431023565,
+   "meanViewElevationDegrees": 37.250746307575206,
+   "fittedSomaHexCentroid": [
+    27.06,
+    31.55
+   ],
+   "columns": 879,
+   "azimuthRangeDegrees": [
+    -6.94103231616264,
+    141.98617170982243
+   ],
+   "elevationRangeDegrees": [
+    -58.88465577356021,
+    58.95972920600017
+   ],
+   "dorsalRimColumns": 51,
+   "dorsalRimMeanElevationDegrees": 27.997997909581837,
+   "allColumnsMeanElevationDegrees": -0.06414085368991265,
+   "meanAzimuthDegrees": 67.49728473243273,
+   "azimuthPercentiles5_50_95": [
+    7.2,
+    68.1,
+    127.2
+   ],
+   "elevationPercentiles5_50_95": [
+    -46.9,
+    0.0,
+    47.7
+   ],
+   "dorsalRimAboveMean": true
+  },
+  "R": {
+   "laminaSomata": 550,
+   "planarFitCvMedianVoxels": 2049.928339938593,
+   "voxelsPerHexStep": [
+    828.1693555251891,
+    814.928951070227
+   ],
+   "hexAxisAngleDegrees": 89.67782803290504,
+   "hexAxesInBody": {
+    "h1": [
+     -0.103,
+     0.603,
+     0.791
+    ],
+    "h2": [
+     -0.769,
+     -0.549,
+     0.326
+    ]
+   },
+   "meanViewAzimuthDegrees": -42.302808309626236,
+   "meanViewElevationDegrees": 31.372918487264965,
+   "fittedSomaHexCentroid": [
+    25.81,
+    28.49
+   ],
+   "columns": 892,
+   "azimuthRangeDegrees": [
+    -118.56317100782805,
+    10.982986726555932
+   ],
+   "elevationRangeDegrees": [
+    -64.69677565164254,
+    64.3631677388723
+   ],
+   "dorsalRimColumns": 54,
+   "dorsalRimMeanElevationDegrees": 36.303392356053614,
+   "allColumnsMeanElevationDegrees": 0.272481743091299,
+   "meanAzimuthDegrees": -53.78345013232027,
+   "azimuthPercentiles5_50_95": [
+    -105.8,
+    -54.3,
+    -0.8
+   ],
+   "elevationPercentiles5_50_95": [
+    -50.9,
+    0.0,
+    52.6
+   ],
+   "dorsalRimAboveMean": true
+  },
+  "mirror": {
+   "leftMeanAzimuth": 67.49728473243273,
+   "rightMeanAzimuth": -53.78345013232027,
+   "passes": true
+  }
+ },
+ "deltaPhiDegrees": 5.0,
+ "frontAzimuthDegrees": 0.0,
+ "convention": "azimuth positive = fly left, 0 = straight ahead; elevation positive = up",
+ "eyes": {
+  "L": [
+   {
+    "hex": [
+     1,
+     7
+    ],
+    "azimuthDeg": 12.837,
+    "elevationDeg": -56.131
+   },
+   {
+    "hex": [
+     1,
+     8
+    ],
+    "azimuthDeg": 16.488,
+    "elevationDeg": -57.049
+   },
+   {
+    "hex": [
+     1,
+     10
+    ],
+    "azimuthDeg": 23.789,
+    "elevationDeg": -58.885
+   },
+   {
+    "hex": [
+     2,
+     6
+    ],
+    "azimuthDeg": 9.612,
+    "elevationDeg": -51.401
+   },
+   {
+    "hex": [
+     2,
+     7
+    ],
+    "azimuthDeg": 13.262,
+    "elevationDeg": -52.319
+   },
+   {
+    "hex": [
+     2,
+     8
+    ],
+    "azimuthDeg": 16.913,
+    "elevationDeg": -53.236
+   },
+   {
+    "hex": [
+     2,
+     9
+    ],
+    "azimuthDeg": 20.564,
+    "elevationDeg": -54.154
+   },
+   {
+    "hex": [
+     2,
+     10
+    ],
+    "azimuthDeg": 24.214,
+    "elevationDeg": -55.072
+   },
+   {
+    "hex": [
+     2,
+     11
+    ],
+    "azimuthDeg": 27.865,
+    "elevationDeg": -55.99
+   },
+   {
+    "hex": [
+     2,
+     12
+    ],
+    "azimuthDeg": 31.516,
+    "elevationDeg": -56.907
+   },
+   {
+    "hex": [
+     2,
+     13
+    ],
+    "azimuthDeg": 35.166,
+    "elevationDeg": -57.825
+   },
+   {
+    "hex": [
+     3,
+     5
+    ],
+    "azimuthDeg": 6.386,
+    "elevationDeg": -46.671
+   },
+   {
+    "hex": [
+     3,
+     6
+    ],
+    "azimuthDeg": 10.037,
+    "elevationDeg": -47.588
+   },
+   {
+    "hex": [
+     3,
+     7
+    ],
+    "azimuthDeg": 13.687,
+    "elevationDeg": -48.506
+   },
+   {
+    "hex": [
+     3,
+     8
+    ],
+    "azimuthDeg": 17.338,
+    "elevationDeg": -49.424
+   },
+   {
+    "hex": [
+     3,
+     9
+    ],
+    "azimuthDeg": 20.989,
+    "elevationDeg": -50.341
+   },
+   {
+    "hex": [
+     3,
+     10
+    ],
+    "azimuthDeg": 24.639,
+    "elevationDeg": -51.259
+   },
+   {
+    "hex": [
+     3,
+     11
+    ],
+    "azimuthDeg": 28.29,
+    "elevationDeg": -52.177
+   },
+   {
+    "hex": [
+     3,
+     12
+    ],
+    "azimuthDeg": 31.941,
+    "elevationDeg": -53.095
+   },
+   {
+    "hex": [
+     3,
+     13
+    ],
+    "azimuthDeg": 35.591,
+    "elevationDeg": -54.012
+   },
+   {
+    "hex": [
+     3,
+     14
+    ],
+    "azimuthDeg": 39.242,
+    "elevationDeg": -54.93
+   },
+   {
+    "hex": [
+     3,
+     15
+    ],
+    "azimuthDeg": 42.893,
+    "elevationDeg": -55.848
+   },
+   {
+    "hex": [
+     4,
+     3
+    ],
+    "azimuthDeg": -0.49,
+    "elevationDeg": -41.022
+   },
+   {
+    "hex": [
+     4,
+     4
+    ],
+    "azimuthDeg": 3.161,
+    "elevationDeg": -41.94
+   },
+   {
+    "hex": [
+     4,
+     5
+    ],
+    "azimuthDeg": 6.811,
+    "elevationDeg": -42.858
+   },
+   {
+    "hex": [
+     4,
+     6
+    ],
+    "azimuthDeg": 10.462,
+    "elevationDeg": -43.776
+   },
+   {
+    "hex": [
+     4,
+     7
+    ],
+    "azimuthDeg": 14.113,
+    "elevationDeg": -44.693
+   },
+   {
+    "hex": [
+     4,
+     8
+    ],
+    "azimuthDeg": 17.763,
+    "elevationDeg": -45.611
+   },
+   {
+    "hex": [
+     4,
+     9
+    ],
+    "azimuthDeg": 21.414,
+    "elevationDeg": -46.529
+   },
+   {
+    "hex": [
+     4,
+     10
+    ],
+    "azimuthDeg": 25.065,
+    "elevationDeg": -47.446
+   },
+   {
+    "hex": [
+     4,
+     11
+    ],
+    "azimuthDeg": 28.715,
+    "elevationDeg": -48.364
+   },
+   {
+    "hex": [
+     4,
+     12
+    ],
+    "azimuthDeg": 32.366,
+    "elevationDeg": -49.282
+   },
+   {
+    "hex": [
+     4,
+     13
+    ],
+    "azimuthDeg": 36.016,
+    "elevationDeg": -50.2
+   },
+   {
+    "hex": [
+     4,
+     14
+    ],
+    "azimuthDeg": 39.667,
+    "elevationDeg": -51.117
+   },
+   {
+    "hex": [
+     4,
+     15
+    ],
+    "azimuthDeg": 43.318,
+    "elevationDeg": -52.035
+   },
+   {
+    "hex": [
+     4,
+     17
+    ],
+    "azimuthDeg": 50.619,
+    "elevationDeg": -53.871
+   },
+   {
+    "hex": [
+     4,
+     18
+    ],
+    "azimuthDeg": 54.27,
+    "elevationDeg": -54.788
+   },
+   {
+    "hex": [
+     5,
+     2
+    ],
+    "azimuthDeg": -3.716,
+    "elevationDeg": -36.292
+   },
+   {
+    "hex": [
+     5,
+     3
+    ],
+    "azimuthDeg": -0.065,
+    "elevationDeg": -37.21
+   },
+   {
+    "hex": [
+     5,
+     4
+    ],
+    "azimuthDeg": 3.586,
+    "elevationDeg": -38.127
+   },
+   {
+    "hex": [
+     5,
+     5
+    ],
+    "azimuthDeg": 7.236,
+    "elevationDeg": -39.045
+   },
+   {
+    "hex": [
+     5,
+     6
+    ],
+    "azimuthDeg": 10.887,
+    "elevationDeg": -39.963
+   },
+   {
+    "hex": [
+     5,
+     7
+    ],
+    "azimuthDeg": 14.538,
+    "elevationDeg": -40.881
+   },
+   {
+    "hex": [
+     5,
+     8
+    ],
+    "azimuthDeg": 18.188,
+    "elevationDeg": -41.798
+   },
+   {
+    "hex": [
+     5,
+     9
+    ],
+    "azimuthDeg": 21.839,
+    "elevationDeg": -42.716
+   },
+   {
+    "hex": [
+     5,
+     10
+    ],
+    "azimuthDeg": 25.49,
+    "elevationDeg": -43.634
+   },
+   {
+    "hex": [
+     5,
+     11
+    ],
+    "azimuthDeg": 29.14,
+    "elevationDeg": -44.551
+   },
+   {
+    "hex": [
+     5,
+     12
+    ],
+    "azimuthDeg": 32.791,
+    "elevationDeg": -45.469
+   },
+   {
+    "hex": [
+     5,
+     13
+    ],
+    "azimuthDeg": 36.442,
+    "elevationDeg": -46.387
+   },
+   {
+    "hex": [
+     5,
+     14
+    ],
+    "azimuthDeg": 40.092,
+    "elevationDeg": -47.305
+   },
+   {
+    "hex": [
+     5,
+     15
+    ],
+    "azimuthDeg": 43.743,
+    "elevationDeg": -48.222
+   },
+   {
+    "hex": [
+     5,
+     16
+    ],
+    "azimuthDeg": 47.394,
+    "elevationDeg": -49.14
+   },
+   {
+    "hex": [
+     5,
+     17
+    ],
+    "azimuthDeg": 51.044,
+    "elevationDeg": -50.058
+   },
+   {
+    "hex": [
+     5,
+     18
+    ],
+    "azimuthDeg": 54.695,
+    "elevationDeg": -50.976
+   },
+   {
+    "hex": [
+     5,
+     19
+    ],
+    "azimuthDeg": 58.345,
+    "elevationDeg": -51.893
+   },
+   {
+    "hex": [
+     5,
+     20
+    ],
+    "azimuthDeg": 61.996,
+    "elevationDeg": -52.811
+   },
+   {
+    "hex": [
+     6,
+     1
+    ],
+    "azimuthDeg": -6.941,
+    "elevationDeg": -31.561
+   },
+   {
+    "hex": [
+     6,
+     2
+    ],
+    "azimuthDeg": -3.29,
+    "elevationDeg": -32.479
+   },
+   {
+    "hex": [
+     6,
+     3
+    ],
+    "azimuthDeg": 0.36,
+    "elevationDeg": -33.397
+   },
+   {
+    "hex": [
+     6,
+     4
+    ],
+    "azimuthDeg": 4.011,
+    "elevationDeg": -34.315
+   },
+   {
+    "hex": [
+     6,
+     5
+    ],
+    "azimuthDeg": 7.662,
+    "elevationDeg": -35.232
+   },
+   {
+    "hex": [
+     6,
+     6
+    ],
+    "azimuthDeg": 11.312,
+    "elevationDeg": -36.15
+   },
+   {
+    "hex": [
+     6,
+     7
+    ],
+    "azimuthDeg": 14.963,
+    "elevationDeg": -37.068
+   },
+   {
+    "hex": [
+     6,
+     8
+    ],
+    "azimuthDeg": 18.613,
+    "elevationDeg": -37.986
+   },
+   {
+    "hex": [
+     6,
+     9
+    ],
+    "azimuthDeg": 22.264,
+    "elevationDeg": -38.903
+   },
+   {
+    "hex": [
+     6,
+     10
+    ],
+    "azimuthDeg": 25.915,
+    "elevationDeg": -39.821
+   },
+   {
+    "hex": [
+     6,
+     11
+    ],
+    "azimuthDeg": 29.565,
+    "elevationDeg": -40.739
+   },
+   {
+    "hex": [
+     6,
+     12
+    ],
+    "azimuthDeg": 33.216,
+    "elevationDeg": -41.656
+   },
+   {
+    "hex": [
+     6,
+     13
+    ],
+    "azimuthDeg": 36.867,
+    "elevationDeg": -42.574
+   },
+   {
+    "hex": [
+     6,
+     14
+    ],
+    "azimuthDeg": 40.517,
+    "elevationDeg": -43.492
+   },
+   {
+    "hex": [
+     6,
+     15
+    ],
+    "azimuthDeg": 44.168,
+    "elevationDeg": -44.41
+   },
+   {
+    "hex": [
+     6,
+     16
+    ],
+    "azimuthDeg": 47.819,
+    "elevationDeg": -45.327
+   },
+   {
+    "hex": [
+     6,
+     17
+    ],
+    "azimuthDeg": 51.469,
+    "elevationDeg": -46.245
+   },
+   {
+    "hex": [
+     6,
+     18
+    ],
+    "azimuthDeg": 55.12,
+    "elevationDeg": -47.163
+   },
+   {
+    "hex": [
+     6,
+     19
+    ],
+    "azimuthDeg": 58.771,
+    "elevationDeg": -48.081
+   },
+   {
+    "hex": [
+     6,
+     20
+    ],
+    "azimuthDeg": 62.421,
+    "elevationDeg": -48.998
+   },
+   {
+    "hex": [
+     6,
+     21
+    ],
+    "azimuthDeg": 66.072,
+    "elevationDeg": -49.916
+   },
+   {
+    "hex": [
+     6,
+     22
+    ],
+    "azimuthDeg": 69.722,
+    "elevationDeg": -50.834
+   },
+   {
+    "hex": [
+     7,
+     1
+    ],
+    "azimuthDeg": -6.516,
+    "elevationDeg": -27.749
+   },
+   {
+    "hex": [
+     7,
+     2
+    ],
+    "azimuthDeg": -2.865,
+    "elevationDeg": -28.666
+   },
+   {
+    "hex": [
+     7,
+     3
+    ],
+    "azimuthDeg": 0.785,
+    "elevationDeg": -29.584
+   },
+   {
+    "hex": [
+     7,
+     4
+    ],
+    "azimuthDeg": 4.436,
+    "elevationDeg": -30.502
+   },
+   {
+    "hex": [
+     7,
+     5
+    ],
+    "azimuthDeg": 8.087,
+    "elevationDeg": -31.42
+   },
+   {
+    "hex": [
+     7,
+     6
+    ],
+    "azimuthDeg": 11.737,
+    "elevationDeg": -32.337
+   },
+   {
+    "hex": [
+     7,
+     7
+    ],
+    "azimuthDeg": 15.388,
+    "elevationDeg": -33.255
+   },
+   {
+    "hex": [
+     7,
+     8
+    ],
+    "azimuthDeg": 19.039,
+    "elevationDeg": -34.173
+   },
+   {
+    "hex": [
+     7,
+     9
+    ],
+    "azimuthDeg": 22.689,
+    "elevationDeg": -35.091
+   },
+   {
+    "hex": [
+     7,
+     10
+    ],
+    "azimuthDeg": 26.34,
+    "elevationDeg": -36.008
+   },
+   {
+    "hex": [
+     7,
+     11
+    ],
+    "azimuthDeg": 29.991,
+    "elevationDeg": -36.926
+   },
+   {
+    "hex": [
+     7,
+     12
+    ],
+    "azimuthDeg": 33.641,
+    "elevationDeg": -37.844
+   },
+   {
+    "hex": [
+     7,
+     13
+    ],
+    "azimuthDeg": 37.292,
+    "elevationDeg": -38.761
+   },
+   {
+    "hex": [
+     7,
+     14
+    ],
+    "azimuthDeg": 40.942,
+    "elevationDeg": -39.679
+   },
+   {
+    "hex": [
+     7,
+     15
+    ],
+    "azimuthDeg": 44.593,
+    "elevationDeg": -40.597
+   },
+   {
+    "hex": [
+     7,
+     16
+    ],
+    "azimuthDeg": 48.244,
+    "elevationDeg": -41.515
+   },
+   {
+    "hex": [
+     7,
+     17
+    ],
+    "azimuthDeg": 51.894,
+    "elevationDeg": -42.432
+   },
+   {
+    "hex": [
+     7,
+     18
+    ],
+    "azimuthDeg": 55.545,
+    "elevationDeg": -43.35
+   },
+   {
+    "hex": [
+     7,
+     19
+    ],
+    "azimuthDeg": 59.196,
+    "elevationDeg": -44.268
+   },
+   {
+    "hex": [
+     7,
+     20
+    ],
+    "azimuthDeg": 62.846,
+    "elevationDeg": -45.186
+   },
+   {
+    "hex": [
+     7,
+     21
+    ],
+    "azimuthDeg": 66.497,
+    "elevationDeg": -46.103
+   },
+   {
+    "hex": [
+     7,
+     22
+    ],
+    "azimuthDeg": 70.148,
+    "elevationDeg": -47.021
+   },
+   {
+    "hex": [
+     7,
+     23
+    ],
+    "azimuthDeg": 73.798,
+    "elevationDeg": -47.939
+   },
+   {
+    "hex": [
+     7,
+     24
+    ],
+    "azimuthDeg": 77.449,
+    "elevationDeg": -48.856
+   },
+   {
+    "hex": [
+     8,
+     1
+    ],
+    "azimuthDeg": -6.091,
+    "elevationDeg": -23.936
+   },
+   {
+    "hex": [
+     8,
+     2
+    ],
+    "azimuthDeg": -2.44,
+    "elevationDeg": -24.854
+   },
+   {
+    "hex": [
+     8,
+     3
+    ],
+    "azimuthDeg": 1.21,
+    "elevationDeg": -25.771
+   },
+   {
+    "hex": [
+     8,
+     4
+    ],
+    "azimuthDeg": 4.861,
+    "elevationDeg": -26.689
+   },
+   {
+    "hex": [
+     8,
+     5
+    ],
+    "azimuthDeg": 8.512,
+    "elevationDeg": -27.607
+   },
+   {
+    "hex": [
+     8,
+     6
+    ],
+    "azimuthDeg": 12.162,
+    "elevationDeg": -28.525
+   },
+   {
+    "hex": [
+     8,
+     7
+    ],
+    "azimuthDeg": 15.813,
+    "elevationDeg": -29.442
+   },
+   {
+    "hex": [
+     8,
+     8
+    ],
+    "azimuthDeg": 19.464,
+    "elevationDeg": -30.36
+   },
+   {
+    "hex": [
+     8,
+     9
+    ],
+    "azimuthDeg": 23.114,
+    "elevationDeg": -31.278
+   },
+   {
+    "hex": [
+     8,
+     10
+    ],
+    "azimuthDeg": 26.765,
+    "elevationDeg": -32.196
+   },
+   {
+    "hex": [
+     8,
+     11
+    ],
+    "azimuthDeg": 30.416,
+    "elevationDeg": -33.113
+   },
+   {
+    "hex": [
+     8,
+     12
+    ],
+    "azimuthDeg": 34.066,
+    "elevationDeg": -34.031
+   },
+   {
+    "hex": [
+     8,
+     13
+    ],
+    "azimuthDeg": 37.717,
+    "elevationDeg": -34.949
+   },
+   {
+    "hex": [
+     8,
+     14
+    ],
+    "azimuthDeg": 41.368,
+    "elevationDeg": -35.866
+   },
+   {
+    "hex": [
+     8,
+     15
+    ],
+    "azimuthDeg": 45.018,
+    "elevationDeg": -36.784
+   },
+   {
+    "hex": [
+     8,
+     16
+    ],
+    "azimuthDeg": 48.669,
+    "elevationDeg": -37.702
+   },
+   {
+    "hex": [
+     8,
+     17
+    ],
+    "azimuthDeg": 52.319,
+    "elevationDeg": -38.62
+   },
+   {
+    "hex": [
+     8,
+     18
+    ],
+    "azimuthDeg": 55.97,
+    "elevationDeg": -39.537
+   },
+   {
+    "hex": [
+     8,
+     19
+    ],
+    "azimuthDeg": 59.621,
+    "elevationDeg": -40.455
+   },
+   {
+    "hex": [
+     8,
+     20
+    ],
+    "azimuthDeg": 63.271,
+    "elevationDeg": -41.373
+   },
+   {
+    "hex": [
+     8,
+     21
+    ],
+    "azimuthDeg": 66.922,
+    "elevationDeg": -42.291
+   },
+   {
+    "hex": [
+     8,
+     22
+    ],
+    "azimuthDeg": 70.573,
+    "elevationDeg": -43.208
+   },
+   {
+    "hex": [
+     8,
+     23
+    ],
+    "azimuthDeg": 74.223,
+    "elevationDeg": -44.126
+   },
+   {
+    "hex": [
+     8,
+     24
+    ],
+    "azimuthDeg": 77.874,
+    "elevationDeg": -45.044
+   },
+   {
+    "hex": [
+     8,
+     25
+    ],
+    "azimuthDeg": 81.525,
+    "elevationDeg": -45.961
+   },
+   {
+    "hex": [
+     8,
+     26
+    ],
+    "azimuthDeg": 85.175,
+    "elevationDeg": -46.879
+   },
+   {
+    "hex": [
+     9,
+     1
+    ],
+    "azimuthDeg": -5.666,
+    "elevationDeg": -20.123
+   },
+   {
+    "hex": [
+     9,
+     2
+    ],
+    "azimuthDeg": -2.015,
+    "elevationDeg": -21.041
+   },
+   {
+    "hex": [
+     9,
+     3
+    ],
+    "azimuthDeg": 1.636,
+    "elevationDeg": -21.959
+   },
+   {
+    "hex": [
+     9,
+     4
+    ],
+    "azimuthDeg": 5.286,
+    "elevationDeg": -22.876
+   },
+   {
+    "hex": [
+     9,
+     5
+    ],
+    "azimuthDeg": 8.937,
+    "elevationDeg": -23.794
+   },
+   {
+    "hex": [
+     9,
+     6
+    ],
+    "azimuthDeg": 12.588,
+    "elevationDeg": -24.712
+   },
+   {
+    "hex": [
+     9,
+     7
+    ],
+    "azimuthDeg": 16.238,
+    "elevationDeg": -25.63
+   },
+   {
+    "hex": [
+     9,
+     8
+    ],
+    "azimuthDeg": 19.889,
+    "elevationDeg": -26.547
+   },
+   {
+    "hex": [
+     9,
+     9
+    ],
+    "azimuthDeg": 23.539,
+    "elevationDeg": -27.465
+   },
+   {
+    "hex": [
+     9,
+     10
+    ],
+    "azimuthDeg": 27.19,
+    "elevationDeg": -28.383
+   },
+   {
+    "hex": [
+     9,
+     11
+    ],
+    "azimuthDeg": 30.841,
+    "elevationDeg": -29.3
+   },
+   {
+    "hex": [
+     9,
+     12
+    ],
+    "azimuthDeg": 34.491,
+    "elevationDeg": -30.218
+   },
+   {
+    "hex": [
+     9,
+     13
+    ],
+    "azimuthDeg": 38.142,
+    "elevationDeg": -31.136
+   },
+   {
+    "hex": [
+     9,
+     14
+    ],
+    "azimuthDeg": 41.793,
+    "elevationDeg": -32.054
+   },
+   {
+    "hex": [
+     9,
+     15
+    ],
+    "azimuthDeg": 45.443,
+    "elevationDeg": -32.971
+   },
+   {
+    "hex": [
+     9,
+     16
+    ],
+    "azimuthDeg": 49.094,
+    "elevationDeg": -33.889
+   },
+   {
+    "hex": [
+     9,
+     17
+    ],
+    "azimuthDeg": 52.745,
+    "elevationDeg": -34.807
+   },
+   {
+    "hex": [
+     9,
+     18
+    ],
+    "azimuthDeg": 56.395,
+    "elevationDeg": -35.725
+   },
+   {
+    "hex": [
+     9,
+     19
+    ],
+    "azimuthDeg": 60.046,
+    "elevationDeg": -36.642
+   },
+   {
+    "hex": [
+     9,
+     20
+    ],
+    "azimuthDeg": 63.697,
+    "elevationDeg": -37.56
+   },
+   {
+    "hex": [
+     9,
+     21
+    ],
+    "azimuthDeg": 67.347,
+    "elevationDeg": -38.478
+   },
+   {
+    "hex": [
+     9,
+     22
+    ],
+    "azimuthDeg": 70.998,
+    "elevationDeg": -39.395
+   },
+   {
+    "hex": [
+     9,
+     23
+    ],
+    "azimuthDeg": 74.648,
+    "elevationDeg": -40.313
+   },
+   {
+    "hex": [
+     9,
+     24
+    ],
+    "azimuthDeg": 78.299,
+    "elevationDeg": -41.231
+   },
+   {
+    "hex": [
+     9,
+     25
+    ],
+    "azimuthDeg": 81.95,
+    "elevationDeg": -42.149
+   },
+   {
+    "hex": [
+     9,
+     26
+    ],
+    "azimuthDeg": 85.6,
+    "elevationDeg": -43.066
+   },
+   {
+    "hex": [
+     9,
+     27
+    ],
+    "azimuthDeg": 89.251,
+    "elevationDeg": -43.984
+   },
+   {
+    "hex": [
+     9,
+     28
+    ],
+    "azimuthDeg": 92.902,
+    "elevationDeg": -44.902
+   },
+   {
+    "hex": [
+     10,
+     2
+    ],
+    "azimuthDeg": -1.59,
+    "elevationDeg": -17.228
+   },
+   {
+    "hex": [
+     10,
+     3
+    ],
+    "azimuthDeg": 2.061,
+    "elevationDeg": -18.146
+   },
+   {
+    "hex": [
+     10,
+     4
+    ],
+    "azimuthDeg": 5.711,
+    "elevationDeg": -19.064
+   },
+   {
+    "hex": [
+     10,
+     5
+    ],
+    "azimuthDeg": 9.362,
+    "elevationDeg": -19.981
+   },
+   {
+    "hex": [
+     10,
+     6
+    ],
+    "azimuthDeg": 13.013,
+    "elevationDeg": -20.899
+   },
+   {
+    "hex": [
+     10,
+     7
+    ],
+    "azimuthDeg": 16.663,
+    "elevationDeg": -21.817
+   },
+   {
+    "hex": [
+     10,
+     8
+    ],
+    "azimuthDeg": 20.314,
+    "elevationDeg": -22.735
+   },
+   {
+    "hex": [
+     10,
+     9
+    ],
+    "azimuthDeg": 23.965,
+    "elevationDeg": -23.652
+   },
+   {
+    "hex": [
+     10,
+     10
+    ],
+    "azimuthDeg": 27.615,
+    "elevationDeg": -24.57
+   },
+   {
+    "hex": [
+     10,
+     11
+    ],
+    "azimuthDeg": 31.266,
+    "elevationDeg": -25.488
+   },
+   {
+    "hex": [
+     10,
+     12
+    ],
+    "azimuthDeg": 34.917,
+    "elevationDeg": -26.405
+   },
+   {
+    "hex": [
+     10,
+     13
+    ],
+    "azimuthDeg": 38.567,
+    "elevationDeg": -27.323
+   },
+   {
+    "hex": [
+     10,
+     14
+    ],
+    "azimuthDeg": 42.218,
+    "elevationDeg": -28.241
+   },
+   {
+    "hex": [
+     10,
+     15
+    ],
+    "azimuthDeg": 45.868,
+    "elevationDeg": -29.159
+   },
+   {
+    "hex": [
+     10,
+     16
+    ],
+    "azimuthDeg": 49.519,
+    "elevationDeg": -30.076
+   },
+   {
+    "hex": [
+     10,
+     17
+    ],
+    "azimuthDeg": 53.17,
+    "elevationDeg": -30.994
+   },
+   {
+    "hex": [
+     10,
+     18
+    ],
+    "azimuthDeg": 56.82,
+    "elevationDeg": -31.912
+   },
+   {
+    "hex": [
+     10,
+     19
+    ],
+    "azimuthDeg": 60.471,
+    "elevationDeg": -32.83
+   },
+   {
+    "hex": [
+     10,
+     20
+    ],
+    "azimuthDeg": 64.122,
+    "elevationDeg": -33.747
+   },
+   {
+    "hex": [
+     10,
+     21
+    ],
+    "azimuthDeg": 67.772,
+    "elevationDeg": -34.665
+   },
+   {
+    "hex": [
+     10,
+     22
+    ],
+    "azimuthDeg": 71.423,
+    "elevationDeg": -35.583
+   },
+   {
+    "hex": [
+     10,
+     23
+    ],
+    "azimuthDeg": 75.074,
+    "elevationDeg": -36.5
+   },
+   {
+    "hex": [
+     10,
+     24
+    ],
+    "azimuthDeg": 78.724,
+    "elevationDeg": -37.418
+   },
+   {
+    "hex": [
+     10,
+     25
+    ],
+    "azimuthDeg": 82.375,
+    "elevationDeg": -38.336
+   },
+   {
+    "hex": [
+     10,
+     26
+    ],
+    "azimuthDeg": 86.026,
+    "elevationDeg": -39.254
+   },
+   {
+    "hex": [
+     10,
+     27
+    ],
+    "azimuthDeg": 89.676,
+    "elevationDeg": -40.171
+   },
+   {
+    "hex": [
+     10,
+     28
+    ],
+    "azimuthDeg": 93.327,
+    "elevationDeg": -41.089
+   },
+   {
+    "hex": [
+     10,
+     29
+    ],
+    "azimuthDeg": 96.977,
+    "elevationDeg": -42.007
+   },
+   {
+    "hex": [
+     11,
+     1
+    ],
+    "azimuthDeg": -4.815,
+    "elevationDeg": -12.498
+   },
+   {
+    "hex": [
+     11,
+     2
+    ],
+    "azimuthDeg": -1.165,
+    "elevationDeg": -13.415
+   },
+   {
+    "hex": [
+     11,
+     3
+    ],
+    "azimuthDeg": 2.486,
+    "elevationDeg": -14.333
+   },
+   {
+    "hex": [
+     11,
+     4
+    ],
+    "azimuthDeg": 6.136,
+    "elevationDeg": -15.251
+   },
+   {
+    "hex": [
+     11,
+     5
+    ],
+    "azimuthDeg": 9.787,
+    "elevationDeg": -16.169
+   },
+   {
+    "hex": [
+     11,
+     6
+    ],
+    "azimuthDeg": 13.438,
+    "elevationDeg": -17.086
+   },
+   {
+    "hex": [
+     11,
+     7
+    ],
+    "azimuthDeg": 17.088,
+    "elevationDeg": -18.004
+   },
+   {
+    "hex": [
+     11,
+     8
+    ],
+    "azimuthDeg": 20.739,
+    "elevationDeg": -18.922
+   },
+   {
+    "hex": [
+     11,
+     9
+    ],
+    "azimuthDeg": 24.39,
+    "elevationDeg": -19.84
+   },
+   {
+    "hex": [
+     11,
+     10
+    ],
+    "azimuthDeg": 28.04,
+    "elevationDeg": -20.757
+   },
+   {
+    "hex": [
+     11,
+     11
+    ],
+    "azimuthDeg": 31.691,
+    "elevationDeg": -21.675
+   },
+   {
+    "hex": [
+     11,
+     12
+    ],
+    "azimuthDeg": 35.342,
+    "elevationDeg": -22.593
+   },
+   {
+    "hex": [
+     11,
+     13
+    ],
+    "azimuthDeg": 38.992,
+    "elevationDeg": -23.51
+   },
+   {
+    "hex": [
+     11,
+     14
+    ],
+    "azimuthDeg": 42.643,
+    "elevationDeg": -24.428
+   },
+   {
+    "hex": [
+     11,
+     15
+    ],
+    "azimuthDeg": 46.294,
+    "elevationDeg": -25.346
+   },
+   {
+    "hex": [
+     11,
+     16
+    ],
+    "azimuthDeg": 49.944,
+    "elevationDeg": -26.264
+   },
+   {
+    "hex": [
+     11,
+     17
+    ],
+    "azimuthDeg": 53.595,
+    "elevationDeg": -27.181
+   },
+   {
+    "hex": [
+     11,
+     18
+    ],
+    "azimuthDeg": 57.245,
+    "elevationDeg": -28.099
+   },
+   {
+    "hex": [
+     11,
+     19
+    ],
+    "azimuthDeg": 60.896,
+    "elevationDeg": -29.017
+   },
+   {
+    "hex": [
+     11,
+     20
+    ],
+    "azimuthDeg": 64.547,
+    "elevationDeg": -29.935
+   },
+   {
+    "hex": [
+     11,
+     21
+    ],
+    "azimuthDeg": 68.197,
+    "elevationDeg": -30.852
+   },
+   {
+    "hex": [
+     11,
+     22
+    ],
+    "azimuthDeg": 71.848,
+    "elevationDeg": -31.77
+   },
+   {
+    "hex": [
+     11,
+     23
+    ],
+    "azimuthDeg": 75.499,
+    "elevationDeg": -32.688
+   },
+   {
+    "hex": [
+     11,
+     24
+    ],
+    "azimuthDeg": 79.149,
+    "elevationDeg": -33.605
+   },
+   {
+    "hex": [
+     11,
+     25
+    ],
+    "azimuthDeg": 82.8,
+    "elevationDeg": -34.523
+   },
+   {
+    "hex": [
+     11,
+     26
+    ],
+    "azimuthDeg": 86.451,
+    "elevationDeg": -35.441
+   },
+   {
+    "hex": [
+     11,
+     27
+    ],
+    "azimuthDeg": 90.101,
+    "elevationDeg": -36.359
+   },
+   {
+    "hex": [
+     11,
+     28
+    ],
+    "azimuthDeg": 93.752,
+    "elevationDeg": -37.276
+   },
+   {
+    "hex": [
+     11,
+     29
+    ],
+    "azimuthDeg": 97.403,
+    "elevationDeg": -38.194
+   },
+   {
+    "hex": [
+     11,
+     30
+    ],
+    "azimuthDeg": 101.053,
+    "elevationDeg": -39.112
+   },
+   {
+    "hex": [
+     12,
+     1
+    ],
+    "azimuthDeg": -4.39,
+    "elevationDeg": -8.685
+   },
+   {
+    "hex": [
+     12,
+     2
+    ],
+    "azimuthDeg": -0.74,
+    "elevationDeg": -9.603
+   },
+   {
+    "hex": [
+     12,
+     3
+    ],
+    "azimuthDeg": 2.911,
+    "elevationDeg": -10.52
+   },
+   {
+    "hex": [
+     12,
+     4
+    ],
+    "azimuthDeg": 6.562,
+    "elevationDeg": -11.438
+   },
+   {
+    "hex": [
+     12,
+     5
+    ],
+    "azimuthDeg": 10.212,
+    "elevationDeg": -12.356
+   },
+   {
+    "hex": [
+     12,
+     6
+    ],
+    "azimuthDeg": 13.863,
+    "elevationDeg": -13.274
+   },
+   {
+    "hex": [
+     12,
+     7
+    ],
+    "azimuthDeg": 17.514,
+    "elevationDeg": -14.191
+   },
+   {
+    "hex": [
+     12,
+     8
+    ],
+    "azimuthDeg": 21.164,
+    "elevationDeg": -15.109
+   },
+   {
+    "hex": [
+     12,
+     9
+    ],
+    "azimuthDeg": 24.815,
+    "elevationDeg": -16.027
+   },
+   {
+    "hex": [
+     12,
+     10
+    ],
+    "azimuthDeg": 28.465,
+    "elevationDeg": -16.945
+   },
+   {
+    "hex": [
+     12,
+     11
+    ],
+    "azimuthDeg": 32.116,
+    "elevationDeg": -17.862
+   },
+   {
+    "hex": [
+     12,
+     12
+    ],
+    "azimuthDeg": 35.767,
+    "elevationDeg": -18.78
+   },
+   {
+    "hex": [
+     12,
+     13
+    ],
+    "azimuthDeg": 39.417,
+    "elevationDeg": -19.698
+   },
+   {
+    "hex": [
+     12,
+     14
+    ],
+    "azimuthDeg": 43.068,
+    "elevationDeg": -20.615
+   },
+   {
+    "hex": [
+     12,
+     15
+    ],
+    "azimuthDeg": 46.719,
+    "elevationDeg": -21.533
+   },
+   {
+    "hex": [
+     12,
+     16
+    ],
+    "azimuthDeg": 50.369,
+    "elevationDeg": -22.451
+   },
+   {
+    "hex": [
+     12,
+     17
+    ],
+    "azimuthDeg": 54.02,
+    "elevationDeg": -23.369
+   },
+   {
+    "hex": [
+     12,
+     18
+    ],
+    "azimuthDeg": 57.671,
+    "elevationDeg": -24.286
+   },
+   {
+    "hex": [
+     12,
+     19
+    ],
+    "azimuthDeg": 61.321,
+    "elevationDeg": -25.204
+   },
+   {
+    "hex": [
+     12,
+     20
+    ],
+    "azimuthDeg": 64.972,
+    "elevationDeg": -26.122
+   },
+   {
+    "hex": [
+     12,
+     21
+    ],
+    "azimuthDeg": 68.623,
+    "elevationDeg": -27.04
+   },
+   {
+    "hex": [
+     12,
+     22
+    ],
+    "azimuthDeg": 72.273,
+    "elevationDeg": -27.957
+   },
+   {
+    "hex": [
+     12,
+     23
+    ],
+    "azimuthDeg": 75.924,
+    "elevationDeg": -28.875
+   },
+   {
+    "hex": [
+     12,
+     24
+    ],
+    "azimuthDeg": 79.574,
+    "elevationDeg": -29.793
+   },
+   {
+    "hex": [
+     12,
+     25
+    ],
+    "azimuthDeg": 83.225,
+    "elevationDeg": -30.71
+   },
+   {
+    "hex": [
+     12,
+     26
+    ],
+    "azimuthDeg": 86.876,
+    "elevationDeg": -31.628
+   },
+   {
+    "hex": [
+     12,
+     27
+    ],
+    "azimuthDeg": 90.526,
+    "elevationDeg": -32.546
+   },
+   {
+    "hex": [
+     12,
+     28
+    ],
+    "azimuthDeg": 94.177,
+    "elevationDeg": -33.464
+   },
+   {
+    "hex": [
+     12,
+     29
+    ],
+    "azimuthDeg": 97.828,
+    "elevationDeg": -34.381
+   },
+   {
+    "hex": [
+     12,
+     30
+    ],
+    "azimuthDeg": 101.478,
+    "elevationDeg": -35.299
+   },
+   {
+    "hex": [
+     12,
+     31
+    ],
+    "azimuthDeg": 105.129,
+    "elevationDeg": -36.217
+   },
+   {
+    "hex": [
+     13,
+     1
+    ],
+    "azimuthDeg": -3.965,
+    "elevationDeg": -4.872
+   },
+   {
+    "hex": [
+     13,
+     2
+    ],
+    "azimuthDeg": -0.315,
+    "elevationDeg": -5.79
+   },
+   {
+    "hex": [
+     13,
+     3
+    ],
+    "azimuthDeg": 3.336,
+    "elevationDeg": -6.708
+   },
+   {
+    "hex": [
+     13,
+     4
+    ],
+    "azimuthDeg": 6.987,
+    "elevationDeg": -7.625
+   },
+   {
+    "hex": [
+     13,
+     5
+    ],
+    "azimuthDeg": 10.637,
+    "elevationDeg": -8.543
+   },
+   {
+    "hex": [
+     13,
+     6
+    ],
+    "azimuthDeg": 14.288,
+    "elevationDeg": -9.461
+   },
+   {
+    "hex": [
+     13,
+     7
+    ],
+    "azimuthDeg": 17.939,
+    "elevationDeg": -10.379
+   },
+   {
+    "hex": [
+     13,
+     8
+    ],
+    "azimuthDeg": 21.589,
+    "elevationDeg": -11.296
+   },
+   {
+    "hex": [
+     13,
+     9
+    ],
+    "azimuthDeg": 25.24,
+    "elevationDeg": -12.214
+   },
+   {
+    "hex": [
+     13,
+     10
+    ],
+    "azimuthDeg": 28.891,
+    "elevationDeg": -13.132
+   },
+   {
+    "hex": [
+     13,
+     11
+    ],
+    "azimuthDeg": 32.541,
+    "elevationDeg": -14.05
+   },
+   {
+    "hex": [
+     13,
+     12
+    ],
+    "azimuthDeg": 36.192,
+    "elevationDeg": -14.967
+   },
+   {
+    "hex": [
+     13,
+     13
+    ],
+    "azimuthDeg": 39.842,
+    "elevationDeg": -15.885
+   },
+   {
+    "hex": [
+     13,
+     14
+    ],
+    "azimuthDeg": 43.493,
+    "elevationDeg": -16.803
+   },
+   {
+    "hex": [
+     13,
+     15
+    ],
+    "azimuthDeg": 47.144,
+    "elevationDeg": -17.72
+   },
+   {
+    "hex": [
+     13,
+     16
+    ],
+    "azimuthDeg": 50.794,
+    "elevationDeg": -18.638
+   },
+   {
+    "hex": [
+     13,
+     17
+    ],
+    "azimuthDeg": 54.445,
+    "elevationDeg": -19.556
+   },
+   {
+    "hex": [
+     13,
+     18
+    ],
+    "azimuthDeg": 58.096,
+    "elevationDeg": -20.474
+   },
+   {
+    "hex": [
+     13,
+     19
+    ],
+    "azimuthDeg": 61.746,
+    "elevationDeg": -21.391
+   },
+   {
+    "hex": [
+     13,
+     20
+    ],
+    "azimuthDeg": 65.397,
+    "elevationDeg": -22.309
+   },
+   {
+    "hex": [
+     13,
+     21
+    ],
+    "azimuthDeg": 69.048,
+    "elevationDeg": -23.227
+   },
+   {
+    "hex": [
+     13,
+     22
+    ],
+    "azimuthDeg": 72.698,
+    "elevationDeg": -24.145
+   },
+   {
+    "hex": [
+     13,
+     23
+    ],
+    "azimuthDeg": 76.349,
+    "elevationDeg": -25.062
+   },
+   {
+    "hex": [
+     13,
+     24
+    ],
+    "azimuthDeg": 80.0,
+    "elevationDeg": -25.98
+   },
+   {
+    "hex": [
+     13,
+     25
+    ],
+    "azimuthDeg": 83.65,
+    "elevationDeg": -26.898
+   },
+   {
+    "hex": [
+     13,
+     26
+    ],
+    "azimuthDeg": 87.301,
+    "elevationDeg": -27.815
+   },
+   {
+    "hex": [
+     13,
+     27
+    ],
+    "azimuthDeg": 90.951,
+    "elevationDeg": -28.733
+   },
+   {
+    "hex": [
+     13,
+     28
+    ],
+    "azimuthDeg": 94.602,
+    "elevationDeg": -29.651
+   },
+   {
+    "hex": [
+     13,
+     29
+    ],
+    "azimuthDeg": 98.253,
+    "elevationDeg": -30.569
+   },
+   {
+    "hex": [
+     13,
+     30
+    ],
+    "azimuthDeg": 101.903,
+    "elevationDeg": -31.486
+   },
+   {
+    "hex": [
+     13,
+     31
+    ],
+    "azimuthDeg": 105.554,
+    "elevationDeg": -32.404
+   },
+   {
+    "hex": [
+     13,
+     32
+    ],
+    "azimuthDeg": 109.205,
+    "elevationDeg": -33.322
+   },
+   {
+    "hex": [
+     14,
+     2
+    ],
+    "azimuthDeg": 0.111,
+    "elevationDeg": -1.977
+   },
+   {
+    "hex": [
+     14,
+     3
+    ],
+    "azimuthDeg": 3.761,
+    "elevationDeg": -2.895
+   },
+   {
+    "hex": [
+     14,
+     4
+    ],
+    "azimuthDeg": 7.412,
+    "elevationDeg": -3.813
+   },
+   {
+    "hex": [
+     14,
+     5
+    ],
+    "azimuthDeg": 11.062,
+    "elevationDeg": -4.73
+   },
+   {
+    "hex": [
+     14,
+     6
+    ],
+    "azimuthDeg": 14.713,
+    "elevationDeg": -5.648
+   },
+   {
+    "hex": [
+     14,
+     7
+    ],
+    "azimuthDeg": 18.364,
+    "elevationDeg": -6.566
+   },
+   {
+    "hex": [
+     14,
+     8
+    ],
+    "azimuthDeg": 22.014,
+    "elevationDeg": -7.484
+   },
+   {
+    "hex": [
+     14,
+     9
+    ],
+    "azimuthDeg": 25.665,
+    "elevationDeg": -8.401
+   },
+   {
+    "hex": [
+     14,
+     10
+    ],
+    "azimuthDeg": 29.316,
+    "elevationDeg": -9.319
+   },
+   {
+    "hex": [
+     14,
+     11
+    ],
+    "azimuthDeg": 32.966,
+    "elevationDeg": -10.237
+   },
+   {
+    "hex": [
+     14,
+     12
+    ],
+    "azimuthDeg": 36.617,
+    "elevationDeg": -11.155
+   },
+   {
+    "hex": [
+     14,
+     13
+    ],
+    "azimuthDeg": 40.268,
+    "elevationDeg": -12.072
+   },
+   {
+    "hex": [
+     14,
+     14
+    ],
+    "azimuthDeg": 43.918,
+    "elevationDeg": -12.99
+   },
+   {
+    "hex": [
+     14,
+     15
+    ],
+    "azimuthDeg": 47.569,
+    "elevationDeg": -13.908
+   },
+   {
+    "hex": [
+     14,
+     16
+    ],
+    "azimuthDeg": 51.22,
+    "elevationDeg": -14.825
+   },
+   {
+    "hex": [
+     14,
+     17
+    ],
+    "azimuthDeg": 54.87,
+    "elevationDeg": -15.743
+   },
+   {
+    "hex": [
+     14,
+     18
+    ],
+    "azimuthDeg": 58.521,
+    "elevationDeg": -16.661
+   },
+   {
+    "hex": [
+     14,
+     19
+    ],
+    "azimuthDeg": 62.171,
+    "elevationDeg": -17.579
+   },
+   {
+    "hex": [
+     14,
+     20
+    ],
+    "azimuthDeg": 65.822,
+    "elevationDeg": -18.496
+   },
+   {
+    "hex": [
+     14,
+     21
+    ],
+    "azimuthDeg": 69.473,
+    "elevationDeg": -19.414
+   },
+   {
+    "hex": [
+     14,
+     22
+    ],
+    "azimuthDeg": 73.123,
+    "elevationDeg": -20.332
+   },
+   {
+    "hex": [
+     14,
+     23
+    ],
+    "azimuthDeg": 76.774,
+    "elevationDeg": -21.25
+   },
+   {
+    "hex": [
+     14,
+     24
+    ],
+    "azimuthDeg": 80.425,
+    "elevationDeg": -22.167
+   },
+   {
+    "hex": [
+     14,
+     25
+    ],
+    "azimuthDeg": 84.075,
+    "elevationDeg": -23.085
+   },
+   {
+    "hex": [
+     14,
+     26
+    ],
+    "azimuthDeg": 87.726,
+    "elevationDeg": -24.003
+   },
+   {
+    "hex": [
+     14,
+     27
+    ],
+    "azimuthDeg": 91.377,
+    "elevationDeg": -24.92
+   },
+   {
+    "hex": [
+     14,
+     28
+    ],
+    "azimuthDeg": 95.027,
+    "elevationDeg": -25.838
+   },
+   {
+    "hex": [
+     14,
+     29
+    ],
+    "azimuthDeg": 98.678,
+    "elevationDeg": -26.756
+   },
+   {
+    "hex": [
+     14,
+     30
+    ],
+    "azimuthDeg": 102.329,
+    "elevationDeg": -27.674
+   },
+   {
+    "hex": [
+     14,
+     31
+    ],
+    "azimuthDeg": 105.979,
+    "elevationDeg": -28.591
+   },
+   {
+    "hex": [
+     14,
+     32
+    ],
+    "azimuthDeg": 109.63,
+    "elevationDeg": -29.509
+   },
+   {
+    "hex": [
+     15,
+     2
+    ],
+    "azimuthDeg": 0.536,
+    "elevationDeg": 1.835
+   },
+   {
+    "hex": [
+     15,
+     3
+    ],
+    "azimuthDeg": 4.186,
+    "elevationDeg": 0.918
+   },
+   {
+    "hex": [
+     15,
+     4
+    ],
+    "azimuthDeg": 7.837,
+    "elevationDeg": 0.0
+   },
+   {
+    "hex": [
+     15,
+     5
+    ],
+    "azimuthDeg": 11.488,
+    "elevationDeg": -0.918
+   },
+   {
+    "hex": [
+     15,
+     6
+    ],
+    "azimuthDeg": 15.138,
+    "elevationDeg": -1.835
+   },
+   {
+    "hex": [
+     15,
+     7
+    ],
+    "azimuthDeg": 18.789,
+    "elevationDeg": -2.753
+   },
+   {
+    "hex": [
+     15,
+     8
+    ],
+    "azimuthDeg": 22.44,
+    "elevationDeg": -3.671
+   },
+   {
+    "hex": [
+     15,
+     9
+    ],
+    "azimuthDeg": 26.09,
+    "elevationDeg": -4.589
+   },
+   {
+    "hex": [
+     15,
+     10
+    ],
+    "azimuthDeg": 29.741,
+    "elevationDeg": -5.506
+   },
+   {
+    "hex": [
+     15,
+     11
+    ],
+    "azimuthDeg": 33.391,
+    "elevationDeg": -6.424
+   },
+   {
+    "hex": [
+     15,
+     12
+    ],
+    "azimuthDeg": 37.042,
+    "elevationDeg": -7.342
+   },
+   {
+    "hex": [
+     15,
+     13
+    ],
+    "azimuthDeg": 40.693,
+    "elevationDeg": -8.26
+   },
+   {
+    "hex": [
+     15,
+     14
+    ],
+    "azimuthDeg": 44.343,
+    "elevationDeg": -9.177
+   },
+   {
+    "hex": [
+     15,
+     15
+    ],
+    "azimuthDeg": 47.994,
+    "elevationDeg": -10.095
+   },
+   {
+    "hex": [
+     15,
+     16
+    ],
+    "azimuthDeg": 51.645,
+    "elevationDeg": -11.013
+   },
+   {
+    "hex": [
+     15,
+     17
+    ],
+    "azimuthDeg": 55.295,
+    "elevationDeg": -11.93
+   },
+   {
+    "hex": [
+     15,
+     18
+    ],
+    "azimuthDeg": 58.946,
+    "elevationDeg": -12.848
+   },
+   {
+    "hex": [
+     15,
+     19
+    ],
+    "azimuthDeg": 62.597,
+    "elevationDeg": -13.766
+   },
+   {
+    "hex": [
+     15,
+     20
+    ],
+    "azimuthDeg": 66.247,
+    "elevationDeg": -14.684
+   },
+   {
+    "hex": [
+     15,
+     21
+    ],
+    "azimuthDeg": 69.898,
+    "elevationDeg": -15.601
+   },
+   {
+    "hex": [
+     15,
+     22
+    ],
+    "azimuthDeg": 73.549,
+    "elevationDeg": -16.519
+   },
+   {
+    "hex": [
+     15,
+     23
+    ],
+    "azimuthDeg": 77.199,
+    "elevationDeg": -17.437
+   },
+   {
+    "hex": [
+     15,
+     24
+    ],
+    "azimuthDeg": 80.85,
+    "elevationDeg": -18.355
+   },
+   {
+    "hex": [
+     15,
+     25
+    ],
+    "azimuthDeg": 84.5,
+    "elevationDeg": -19.272
+   },
+   {
+    "hex": [
+     15,
+     26
+    ],
+    "azimuthDeg": 88.151,
+    "elevationDeg": -20.19
+   },
+   {
+    "hex": [
+     15,
+     27
+    ],
+    "azimuthDeg": 91.802,
+    "elevationDeg": -21.108
+   },
+   {
+    "hex": [
+     15,
+     28
+    ],
+    "azimuthDeg": 95.452,
+    "elevationDeg": -22.025
+   },
+   {
+    "hex": [
+     15,
+     29
+    ],
+    "azimuthDeg": 99.103,
+    "elevationDeg": -22.943
+   },
+   {
+    "hex": [
+     15,
+     30
+    ],
+    "azimuthDeg": 102.754,
+    "elevationDeg": -23.861
+   },
+   {
+    "hex": [
+     15,
+     31
+    ],
+    "azimuthDeg": 106.404,
+    "elevationDeg": -24.779
+   },
+   {
+    "hex": [
+     15,
+     32
+    ],
+    "azimuthDeg": 110.055,
+    "elevationDeg": -25.696
+   },
+   {
+    "hex": [
+     15,
+     33
+    ],
+    "azimuthDeg": 113.706,
+    "elevationDeg": -26.614
+   },
+   {
+    "hex": [
+     16,
+     3
+    ],
+    "azimuthDeg": 4.611,
+    "elevationDeg": 4.73
+   },
+   {
+    "hex": [
+     16,
+     4
+    ],
+    "azimuthDeg": 8.262,
+    "elevationDeg": 3.813
+   },
+   {
+    "hex": [
+     16,
+     5
+    ],
+    "azimuthDeg": 11.913,
+    "elevationDeg": 2.895
+   },
+   {
+    "hex": [
+     16,
+     6
+    ],
+    "azimuthDeg": 15.563,
+    "elevationDeg": 1.977
+   },
+   {
+    "hex": [
+     16,
+     7
+    ],
+    "azimuthDeg": 19.214,
+    "elevationDeg": 1.06
+   },
+   {
+    "hex": [
+     16,
+     8
+    ],
+    "azimuthDeg": 22.865,
+    "elevationDeg": 0.142
+   },
+   {
+    "hex": [
+     16,
+     9
+    ],
+    "azimuthDeg": 26.515,
+    "elevationDeg": -0.776
+   },
+   {
+    "hex": [
+     16,
+     10
+    ],
+    "azimuthDeg": 30.166,
+    "elevationDeg": -1.694
+   },
+   {
+    "hex": [
+     16,
+     11
+    ],
+    "azimuthDeg": 33.817,
+    "elevationDeg": -2.611
+   },
+   {
+    "hex": [
+     16,
+     12
+    ],
+    "azimuthDeg": 37.467,
+    "elevationDeg": -3.529
+   },
+   {
+    "hex": [
+     16,
+     13
+    ],
+    "azimuthDeg": 41.118,
+    "elevationDeg": -4.447
+   },
+   {
+    "hex": [
+     16,
+     14
+    ],
+    "azimuthDeg": 44.768,
+    "elevationDeg": -5.365
+   },
+   {
+    "hex": [
+     16,
+     15
+    ],
+    "azimuthDeg": 48.419,
+    "elevationDeg": -6.282
+   },
+   {
+    "hex": [
+     16,
+     16
+    ],
+    "azimuthDeg": 52.07,
+    "elevationDeg": -7.2
+   },
+   {
+    "hex": [
+     16,
+     17
+    ],
+    "azimuthDeg": 55.72,
+    "elevationDeg": -8.118
+   },
+   {
+    "hex": [
+     16,
+     18
+    ],
+    "azimuthDeg": 59.371,
+    "elevationDeg": -9.035
+   },
+   {
+    "hex": [
+     16,
+     19
+    ],
+    "azimuthDeg": 63.022,
+    "elevationDeg": -9.953
+   },
+   {
+    "hex": [
+     16,
+     20
+    ],
+    "azimuthDeg": 66.672,
+    "elevationDeg": -10.871
+   },
+   {
+    "hex": [
+     16,
+     21
+    ],
+    "azimuthDeg": 70.323,
+    "elevationDeg": -11.789
+   },
+   {
+    "hex": [
+     16,
+     22
+    ],
+    "azimuthDeg": 73.974,
+    "elevationDeg": -12.706
+   },
+   {
+    "hex": [
+     16,
+     23
+    ],
+    "azimuthDeg": 77.624,
+    "elevationDeg": -13.624
+   },
+   {
+    "hex": [
+     16,
+     24
+    ],
+    "azimuthDeg": 81.275,
+    "elevationDeg": -14.542
+   },
+   {
+    "hex": [
+     16,
+     25
+    ],
+    "azimuthDeg": 84.926,
+    "elevationDeg": -15.46
+   },
+   {
+    "hex": [
+     16,
+     26
+    ],
+    "azimuthDeg": 88.576,
+    "elevationDeg": -16.377
+   },
+   {
+    "hex": [
+     16,
+     27
+    ],
+    "azimuthDeg": 92.227,
+    "elevationDeg": -17.295
+   },
+   {
+    "hex": [
+     16,
+     28
+    ],
+    "azimuthDeg": 95.877,
+    "elevationDeg": -18.213
+   },
+   {
+    "hex": [
+     16,
+     29
+    ],
+    "azimuthDeg": 99.528,
+    "elevationDeg": -19.13
+   },
+   {
+    "hex": [
+     16,
+     30
+    ],
+    "azimuthDeg": 103.179,
+    "elevationDeg": -20.048
+   },
+   {
+    "hex": [
+     16,
+     31
+    ],
+    "azimuthDeg": 106.829,
+    "elevationDeg": -20.966
+   },
+   {
+    "hex": [
+     16,
+     32
+    ],
+    "azimuthDeg": 110.48,
+    "elevationDeg": -21.884
+   },
+   {
+    "hex": [
+     16,
+     33
+    ],
+    "azimuthDeg": 114.131,
+    "elevationDeg": -22.801
+   },
+   {
+    "hex": [
+     17,
+     3
+    ],
+    "azimuthDeg": 5.037,
+    "elevationDeg": 8.543
+   },
+   {
+    "hex": [
+     17,
+     4
+    ],
+    "azimuthDeg": 8.687,
+    "elevationDeg": 7.625
+   },
+   {
+    "hex": [
+     17,
+     5
+    ],
+    "azimuthDeg": 12.338,
+    "elevationDeg": 6.708
+   },
+   {
+    "hex": [
+     17,
+     6
+    ],
+    "azimuthDeg": 15.988,
+    "elevationDeg": 5.79
+   },
+   {
+    "hex": [
+     17,
+     7
+    ],
+    "azimuthDeg": 19.639,
+    "elevationDeg": 4.872
+   },
+   {
+    "hex": [
+     17,
+     8
+    ],
+    "azimuthDeg": 23.29,
+    "elevationDeg": 3.955
+   },
+   {
+    "hex": [
+     17,
+     9
+    ],
+    "azimuthDeg": 26.94,
+    "elevationDeg": 3.037
+   },
+   {
+    "hex": [
+     17,
+     10
+    ],
+    "azimuthDeg": 30.591,
+    "elevationDeg": 2.119
+   },
+   {
+    "hex": [
+     17,
+     11
+    ],
+    "azimuthDeg": 34.242,
+    "elevationDeg": 1.201
+   },
+   {
+    "hex": [
+     17,
+     12
+    ],
+    "azimuthDeg": 37.892,
+    "elevationDeg": 0.284
+   },
+   {
+    "hex": [
+     17,
+     13
+    ],
+    "azimuthDeg": 41.543,
+    "elevationDeg": -0.634
+   },
+   {
+    "hex": [
+     17,
+     14
+    ],
+    "azimuthDeg": 45.194,
+    "elevationDeg": -1.552
+   },
+   {
+    "hex": [
+     17,
+     15
+    ],
+    "azimuthDeg": 48.844,
+    "elevationDeg": -2.47
+   },
+   {
+    "hex": [
+     17,
+     16
+    ],
+    "azimuthDeg": 52.495,
+    "elevationDeg": -3.387
+   },
+   {
+    "hex": [
+     17,
+     17
+    ],
+    "azimuthDeg": 56.146,
+    "elevationDeg": -4.305
+   },
+   {
+    "hex": [
+     17,
+     18
+    ],
+    "azimuthDeg": 59.796,
+    "elevationDeg": -5.223
+   },
+   {
+    "hex": [
+     17,
+     19
+    ],
+    "azimuthDeg": 63.447,
+    "elevationDeg": -6.14
+   },
+   {
+    "hex": [
+     17,
+     20
+    ],
+    "azimuthDeg": 67.097,
+    "elevationDeg": -7.058
+   },
+   {
+    "hex": [
+     17,
+     21
+    ],
+    "azimuthDeg": 70.748,
+    "elevationDeg": -7.976
+   },
+   {
+    "hex": [
+     17,
+     22
+    ],
+    "azimuthDeg": 74.399,
+    "elevationDeg": -8.894
+   },
+   {
+    "hex": [
+     17,
+     23
+    ],
+    "azimuthDeg": 78.049,
+    "elevationDeg": -9.811
+   },
+   {
+    "hex": [
+     17,
+     24
+    ],
+    "azimuthDeg": 81.7,
+    "elevationDeg": -10.729
+   },
+   {
+    "hex": [
+     17,
+     25
+    ],
+    "azimuthDeg": 85.351,
+    "elevationDeg": -11.647
+   },
+   {
+    "hex": [
+     17,
+     26
+    ],
+    "azimuthDeg": 89.001,
+    "elevationDeg": -12.565
+   },
+   {
+    "hex": [
+     17,
+     27
+    ],
+    "azimuthDeg": 92.652,
+    "elevationDeg": -13.482
+   },
+   {
+    "hex": [
+     17,
+     28
+    ],
+    "azimuthDeg": 96.303,
+    "elevationDeg": -14.4
+   },
+   {
+    "hex": [
+     17,
+     29
+    ],
+    "azimuthDeg": 99.953,
+    "elevationDeg": -15.318
+   },
+   {
+    "hex": [
+     17,
+     30
+    ],
+    "azimuthDeg": 103.604,
+    "elevationDeg": -16.235
+   },
+   {
+    "hex": [
+     17,
+     31
+    ],
+    "azimuthDeg": 107.255,
+    "elevationDeg": -17.153
+   },
+   {
+    "hex": [
+     17,
+     32
+    ],
+    "azimuthDeg": 110.905,
+    "elevationDeg": -18.071
+   },
+   {
+    "hex": [
+     17,
+     33
+    ],
+    "azimuthDeg": 114.556,
+    "elevationDeg": -18.989
+   },
+   {
+    "hex": [
+     17,
+     34
+    ],
+    "azimuthDeg": 118.206,
+    "elevationDeg": -19.906
+   },
+   {
+    "hex": [
+     18,
+     4
+    ],
+    "azimuthDeg": 9.112,
+    "elevationDeg": 11.438
+   },
+   {
+    "hex": [
+     18,
+     5
+    ],
+    "azimuthDeg": 12.763,
+    "elevationDeg": 10.52
+   },
+   {
+    "hex": [
+     18,
+     6
+    ],
+    "azimuthDeg": 16.414,
+    "elevationDeg": 9.603
+   },
+   {
+    "hex": [
+     18,
+     7
+    ],
+    "azimuthDeg": 20.064,
+    "elevationDeg": 8.685
+   },
+   {
+    "hex": [
+     18,
+     8
+    ],
+    "azimuthDeg": 23.715,
+    "elevationDeg": 7.767
+   },
+   {
+    "hex": [
+     18,
+     9
+    ],
+    "azimuthDeg": 27.365,
+    "elevationDeg": 6.85
+   },
+   {
+    "hex": [
+     18,
+     10
+    ],
+    "azimuthDeg": 31.016,
+    "elevationDeg": 5.932
+   },
+   {
+    "hex": [
+     18,
+     11
+    ],
+    "azimuthDeg": 34.667,
+    "elevationDeg": 5.014
+   },
+   {
+    "hex": [
+     18,
+     12
+    ],
+    "azimuthDeg": 38.317,
+    "elevationDeg": 4.096
+   },
+   {
+    "hex": [
+     18,
+     13
+    ],
+    "azimuthDeg": 41.968,
+    "elevationDeg": 3.179
+   },
+   {
+    "hex": [
+     18,
+     14
+    ],
+    "azimuthDeg": 45.619,
+    "elevationDeg": 2.261
+   },
+   {
+    "hex": [
+     18,
+     15
+    ],
+    "azimuthDeg": 49.269,
+    "elevationDeg": 1.343
+   },
+   {
+    "hex": [
+     18,
+     16
+    ],
+    "azimuthDeg": 52.92,
+    "elevationDeg": 0.425
+   },
+   {
+    "hex": [
+     18,
+     17
+    ],
+    "azimuthDeg": 56.571,
+    "elevationDeg": -0.492
+   },
+   {
+    "hex": [
+     18,
+     18
+    ],
+    "azimuthDeg": 60.221,
+    "elevationDeg": -1.41
+   },
+   {
+    "hex": [
+     18,
+     19
+    ],
+    "azimuthDeg": 63.872,
+    "elevationDeg": -2.328
+   },
+   {
+    "hex": [
+     18,
+     20
+    ],
+    "azimuthDeg": 67.523,
+    "elevationDeg": -3.245
+   },
+   {
+    "hex": [
+     18,
+     21
+    ],
+    "azimuthDeg": 71.173,
+    "elevationDeg": -4.163
+   },
+   {
+    "hex": [
+     18,
+     22
+    ],
+    "azimuthDeg": 74.824,
+    "elevationDeg": -5.081
+   },
+   {
+    "hex": [
+     18,
+     23
+    ],
+    "azimuthDeg": 78.474,
+    "elevationDeg": -5.999
+   },
+   {
+    "hex": [
+     18,
+     24
+    ],
+    "azimuthDeg": 82.125,
+    "elevationDeg": -6.916
+   },
+   {
+    "hex": [
+     18,
+     25
+    ],
+    "azimuthDeg": 85.776,
+    "elevationDeg": -7.834
+   },
+   {
+    "hex": [
+     18,
+     26
+    ],
+    "azimuthDeg": 89.426,
+    "elevationDeg": -8.752
+   },
+   {
+    "hex": [
+     18,
+     27
+    ],
+    "azimuthDeg": 93.077,
+    "elevationDeg": -9.67
+   },
+   {
+    "hex": [
+     18,
+     28
+    ],
+    "azimuthDeg": 96.728,
+    "elevationDeg": -10.587
+   },
+   {
+    "hex": [
+     18,
+     29
+    ],
+    "azimuthDeg": 100.378,
+    "elevationDeg": -11.505
+   },
+   {
+    "hex": [
+     18,
+     30
+    ],
+    "azimuthDeg": 104.029,
+    "elevationDeg": -12.423
+   },
+   {
+    "hex": [
+     18,
+     31
+    ],
+    "azimuthDeg": 107.68,
+    "elevationDeg": -13.34
+   },
+   {
+    "hex": [
+     18,
+     32
+    ],
+    "azimuthDeg": 111.33,
+    "elevationDeg": -14.258
+   },
+   {
+    "hex": [
+     18,
+     33
+    ],
+    "azimuthDeg": 114.981,
+    "elevationDeg": -15.176
+   },
+   {
+    "hex": [
+     18,
+     34
+    ],
+    "azimuthDeg": 118.632,
+    "elevationDeg": -16.094
+   },
+   {
+    "hex": [
+     19,
+     4
+    ],
+    "azimuthDeg": 9.537,
+    "elevationDeg": 15.251
+   },
+   {
+    "hex": [
+     19,
+     5
+    ],
+    "azimuthDeg": 13.188,
+    "elevationDeg": 14.333
+   },
+   {
+    "hex": [
+     19,
+     6
+    ],
+    "azimuthDeg": 16.839,
+    "elevationDeg": 13.415
+   },
+   {
+    "hex": [
+     19,
+     7
+    ],
+    "azimuthDeg": 20.489,
+    "elevationDeg": 12.498
+   },
+   {
+    "hex": [
+     19,
+     8
+    ],
+    "azimuthDeg": 24.14,
+    "elevationDeg": 11.58
+   },
+   {
+    "hex": [
+     19,
+     9
+    ],
+    "azimuthDeg": 27.791,
+    "elevationDeg": 10.662
+   },
+   {
+    "hex": [
+     19,
+     10
+    ],
+    "azimuthDeg": 31.441,
+    "elevationDeg": 9.745
+   },
+   {
+    "hex": [
+     19,
+     11
+    ],
+    "azimuthDeg": 35.092,
+    "elevationDeg": 8.827
+   },
+   {
+    "hex": [
+     19,
+     12
+    ],
+    "azimuthDeg": 38.743,
+    "elevationDeg": 7.909
+   },
+   {
+    "hex": [
+     19,
+     13
+    ],
+    "azimuthDeg": 42.393,
+    "elevationDeg": 6.991
+   },
+   {
+    "hex": [
+     19,
+     14
+    ],
+    "azimuthDeg": 46.044,
+    "elevationDeg": 6.074
+   },
+   {
+    "hex": [
+     19,
+     15
+    ],
+    "azimuthDeg": 49.694,
+    "elevationDeg": 5.156
+   },
+   {
+    "hex": [
+     19,
+     16
+    ],
+    "azimuthDeg": 53.345,
+    "elevationDeg": 4.238
+   },
+   {
+    "hex": [
+     19,
+     17
+    ],
+    "azimuthDeg": 56.996,
+    "elevationDeg": 3.32
+   },
+   {
+    "hex": [
+     19,
+     18
+    ],
+    "azimuthDeg": 60.646,
+    "elevationDeg": 2.403
+   },
+   {
+    "hex": [
+     19,
+     19
+    ],
+    "azimuthDeg": 64.297,
+    "elevationDeg": 1.485
+   },
+   {
+    "hex": [
+     19,
+     20
+    ],
+    "azimuthDeg": 67.948,
+    "elevationDeg": 0.567
+   },
+   {
+    "hex": [
+     19,
+     21
+    ],
+    "azimuthDeg": 71.598,
+    "elevationDeg": -0.35
+   },
+   {
+    "hex": [
+     19,
+     22
+    ],
+    "azimuthDeg": 75.249,
+    "elevationDeg": -1.268
+   },
+   {
+    "hex": [
+     19,
+     23
+    ],
+    "azimuthDeg": 78.9,
+    "elevationDeg": -2.186
+   },
+   {
+    "hex": [
+     19,
+     24
+    ],
+    "azimuthDeg": 82.55,
+    "elevationDeg": -3.104
+   },
+   {
+    "hex": [
+     19,
+     25
+    ],
+    "azimuthDeg": 86.201,
+    "elevationDeg": -4.021
+   },
+   {
+    "hex": [
+     19,
+     26
+    ],
+    "azimuthDeg": 89.852,
+    "elevationDeg": -4.939
+   },
+   {
+    "hex": [
+     19,
+     27
+    ],
+    "azimuthDeg": 93.502,
+    "elevationDeg": -5.857
+   },
+   {
+    "hex": [
+     19,
+     28
+    ],
+    "azimuthDeg": 97.153,
+    "elevationDeg": -6.774
+   },
+   {
+    "hex": [
+     19,
+     29
+    ],
+    "azimuthDeg": 100.803,
+    "elevationDeg": -7.692
+   },
+   {
+    "hex": [
+     19,
+     30
+    ],
+    "azimuthDeg": 104.454,
+    "elevationDeg": -8.61
+   },
+   {
+    "hex": [
+     19,
+     31
+    ],
+    "azimuthDeg": 108.105,
+    "elevationDeg": -9.528
+   },
+   {
+    "hex": [
+     19,
+     32
+    ],
+    "azimuthDeg": 111.755,
+    "elevationDeg": -10.445
+   },
+   {
+    "hex": [
+     19,
+     33
+    ],
+    "azimuthDeg": 115.406,
+    "elevationDeg": -11.363
+   },
+   {
+    "hex": [
+     19,
+     34
+    ],
+    "azimuthDeg": 119.057,
+    "elevationDeg": -12.281
+   },
+   {
+    "hex": [
+     19,
+     35
+    ],
+    "azimuthDeg": 122.707,
+    "elevationDeg": -13.199
+   },
+   {
+    "hex": [
+     20,
+     5
+    ],
+    "azimuthDeg": 13.613,
+    "elevationDeg": 18.146
+   },
+   {
+    "hex": [
+     20,
+     6
+    ],
+    "azimuthDeg": 17.264,
+    "elevationDeg": 17.228
+   },
+   {
+    "hex": [
+     20,
+     7
+    ],
+    "azimuthDeg": 20.914,
+    "elevationDeg": 16.31
+   },
+   {
+    "hex": [
+     20,
+     8
+    ],
+    "azimuthDeg": 24.565,
+    "elevationDeg": 15.393
+   },
+   {
+    "hex": [
+     20,
+     9
+    ],
+    "azimuthDeg": 28.216,
+    "elevationDeg": 14.475
+   },
+   {
+    "hex": [
+     20,
+     10
+    ],
+    "azimuthDeg": 31.866,
+    "elevationDeg": 13.557
+   },
+   {
+    "hex": [
+     20,
+     11
+    ],
+    "azimuthDeg": 35.517,
+    "elevationDeg": 12.64
+   },
+   {
+    "hex": [
+     20,
+     12
+    ],
+    "azimuthDeg": 39.168,
+    "elevationDeg": 11.722
+   },
+   {
+    "hex": [
+     20,
+     13
+    ],
+    "azimuthDeg": 42.818,
+    "elevationDeg": 10.804
+   },
+   {
+    "hex": [
+     20,
+     14
+    ],
+    "azimuthDeg": 46.469,
+    "elevationDeg": 9.886
+   },
+   {
+    "hex": [
+     20,
+     15
+    ],
+    "azimuthDeg": 50.12,
+    "elevationDeg": 8.969
+   },
+   {
+    "hex": [
+     20,
+     16
+    ],
+    "azimuthDeg": 53.77,
+    "elevationDeg": 8.051
+   },
+   {
+    "hex": [
+     20,
+     17
+    ],
+    "azimuthDeg": 57.421,
+    "elevationDeg": 7.133
+   },
+   {
+    "hex": [
+     20,
+     18
+    ],
+    "azimuthDeg": 61.072,
+    "elevationDeg": 6.216
+   },
+   {
+    "hex": [
+     20,
+     19
+    ],
+    "azimuthDeg": 64.722,
+    "elevationDeg": 5.298
+   },
+   {
+    "hex": [
+     20,
+     20
+    ],
+    "azimuthDeg": 68.373,
+    "elevationDeg": 4.38
+   },
+   {
+    "hex": [
+     20,
+     21
+    ],
+    "azimuthDeg": 72.023,
+    "elevationDeg": 3.462
+   },
+   {
+    "hex": [
+     20,
+     22
+    ],
+    "azimuthDeg": 75.674,
+    "elevationDeg": 2.545
+   },
+   {
+    "hex": [
+     20,
+     23
+    ],
+    "azimuthDeg": 79.325,
+    "elevationDeg": 1.627
+   },
+   {
+    "hex": [
+     20,
+     24
+    ],
+    "azimuthDeg": 82.975,
+    "elevationDeg": 0.709
+   },
+   {
+    "hex": [
+     20,
+     25
+    ],
+    "azimuthDeg": 86.626,
+    "elevationDeg": -0.209
+   },
+   {
+    "hex": [
+     20,
+     26
+    ],
+    "azimuthDeg": 90.277,
+    "elevationDeg": -1.126
+   },
+   {
+    "hex": [
+     20,
+     27
+    ],
+    "azimuthDeg": 93.927,
+    "elevationDeg": -2.044
+   },
+   {
+    "hex": [
+     20,
+     28
+    ],
+    "azimuthDeg": 97.578,
+    "elevationDeg": -2.962
+   },
+   {
+    "hex": [
+     20,
+     29
+    ],
+    "azimuthDeg": 101.229,
+    "elevationDeg": -3.879
+   },
+   {
+    "hex": [
+     20,
+     30
+    ],
+    "azimuthDeg": 104.879,
+    "elevationDeg": -4.797
+   },
+   {
+    "hex": [
+     20,
+     31
+    ],
+    "azimuthDeg": 108.53,
+    "elevationDeg": -5.715
+   },
+   {
+    "hex": [
+     20,
+     32
+    ],
+    "azimuthDeg": 112.181,
+    "elevationDeg": -6.633
+   },
+   {
+    "hex": [
+     20,
+     33
+    ],
+    "azimuthDeg": 115.831,
+    "elevationDeg": -7.55
+   },
+   {
+    "hex": [
+     20,
+     34
+    ],
+    "azimuthDeg": 119.482,
+    "elevationDeg": -8.468
+   },
+   {
+    "hex": [
+     20,
+     35
+    ],
+    "azimuthDeg": 123.132,
+    "elevationDeg": -9.386
+   },
+   {
+    "hex": [
+     21,
+     6
+    ],
+    "azimuthDeg": 17.689,
+    "elevationDeg": 21.041
+   },
+   {
+    "hex": [
+     21,
+     7
+    ],
+    "azimuthDeg": 21.34,
+    "elevationDeg": 20.123
+   },
+   {
+    "hex": [
+     21,
+     8
+    ],
+    "azimuthDeg": 24.99,
+    "elevationDeg": 19.206
+   },
+   {
+    "hex": [
+     21,
+     9
+    ],
+    "azimuthDeg": 28.641,
+    "elevationDeg": 18.288
+   },
+   {
+    "hex": [
+     21,
+     10
+    ],
+    "azimuthDeg": 32.291,
+    "elevationDeg": 17.37
+   },
+   {
+    "hex": [
+     21,
+     11
+    ],
+    "azimuthDeg": 35.942,
+    "elevationDeg": 16.452
+   },
+   {
+    "hex": [
+     21,
+     12
+    ],
+    "azimuthDeg": 39.593,
+    "elevationDeg": 15.535
+   },
+   {
+    "hex": [
+     21,
+     13
+    ],
+    "azimuthDeg": 43.243,
+    "elevationDeg": 14.617
+   },
+   {
+    "hex": [
+     21,
+     14
+    ],
+    "azimuthDeg": 46.894,
+    "elevationDeg": 13.699
+   },
+   {
+    "hex": [
+     21,
+     15
+    ],
+    "azimuthDeg": 50.545,
+    "elevationDeg": 12.781
+   },
+   {
+    "hex": [
+     21,
+     16
+    ],
+    "azimuthDeg": 54.195,
+    "elevationDeg": 11.864
+   },
+   {
+    "hex": [
+     21,
+     17
+    ],
+    "azimuthDeg": 57.846,
+    "elevationDeg": 10.946
+   },
+   {
+    "hex": [
+     21,
+     18
+    ],
+    "azimuthDeg": 61.497,
+    "elevationDeg": 10.028
+   },
+   {
+    "hex": [
+     21,
+     19
+    ],
+    "azimuthDeg": 65.147,
+    "elevationDeg": 9.111
+   },
+   {
+    "hex": [
+     21,
+     20
+    ],
+    "azimuthDeg": 68.798,
+    "elevationDeg": 8.193
+   },
+   {
+    "hex": [
+     21,
+     21
+    ],
+    "azimuthDeg": 72.449,
+    "elevationDeg": 7.275
+   },
+   {
+    "hex": [
+     21,
+     22
+    ],
+    "azimuthDeg": 76.099,
+    "elevationDeg": 6.357
+   },
+   {
+    "hex": [
+     21,
+     23
+    ],
+    "azimuthDeg": 79.75,
+    "elevationDeg": 5.44
+   },
+   {
+    "hex": [
+     21,
+     24
+    ],
+    "azimuthDeg": 83.4,
+    "elevationDeg": 4.522
+   },
+   {
+    "hex": [
+     21,
+     25
+    ],
+    "azimuthDeg": 87.051,
+    "elevationDeg": 3.604
+   },
+   {
+    "hex": [
+     21,
+     26
+    ],
+    "azimuthDeg": 90.702,
+    "elevationDeg": 2.686
+   },
+   {
+    "hex": [
+     21,
+     27
+    ],
+    "azimuthDeg": 94.352,
+    "elevationDeg": 1.769
+   },
+   {
+    "hex": [
+     21,
+     28
+    ],
+    "azimuthDeg": 98.003,
+    "elevationDeg": 0.851
+   },
+   {
+    "hex": [
+     21,
+     29
+    ],
+    "azimuthDeg": 101.654,
+    "elevationDeg": -0.067
+   },
+   {
+    "hex": [
+     21,
+     30
+    ],
+    "azimuthDeg": 105.304,
+    "elevationDeg": -0.984
+   },
+   {
+    "hex": [
+     21,
+     31
+    ],
+    "azimuthDeg": 108.955,
+    "elevationDeg": -1.902
+   },
+   {
+    "hex": [
+     21,
+     32
+    ],
+    "azimuthDeg": 112.606,
+    "elevationDeg": -2.82
+   },
+   {
+    "hex": [
+     21,
+     33
+    ],
+    "azimuthDeg": 116.256,
+    "elevationDeg": -3.738
+   },
+   {
+    "hex": [
+     21,
+     34
+    ],
+    "azimuthDeg": 119.907,
+    "elevationDeg": -4.655
+   },
+   {
+    "hex": [
+     21,
+     35
+    ],
+    "azimuthDeg": 123.558,
+    "elevationDeg": -5.573
+   },
+   {
+    "hex": [
+     21,
+     36
+    ],
+    "azimuthDeg": 127.208,
+    "elevationDeg": -6.491
+   },
+   {
+    "hex": [
+     22,
+     7
+    ],
+    "azimuthDeg": 21.765,
+    "elevationDeg": 23.936
+   },
+   {
+    "hex": [
+     22,
+     8
+    ],
+    "azimuthDeg": 25.415,
+    "elevationDeg": 23.018
+   },
+   {
+    "hex": [
+     22,
+     9
+    ],
+    "azimuthDeg": 29.066,
+    "elevationDeg": 22.101
+   },
+   {
+    "hex": [
+     22,
+     10
+    ],
+    "azimuthDeg": 32.717,
+    "elevationDeg": 21.183
+   },
+   {
+    "hex": [
+     22,
+     11
+    ],
+    "azimuthDeg": 36.367,
+    "elevationDeg": 20.265
+   },
+   {
+    "hex": [
+     22,
+     12
+    ],
+    "azimuthDeg": 40.018,
+    "elevationDeg": 19.347
+   },
+   {
+    "hex": [
+     22,
+     13
+    ],
+    "azimuthDeg": 43.669,
+    "elevationDeg": 18.43
+   },
+   {
+    "hex": [
+     22,
+     14
+    ],
+    "azimuthDeg": 47.319,
+    "elevationDeg": 17.512
+   },
+   {
+    "hex": [
+     22,
+     15
+    ],
+    "azimuthDeg": 50.97,
+    "elevationDeg": 16.594
+   },
+   {
+    "hex": [
+     22,
+     16
+    ],
+    "azimuthDeg": 54.62,
+    "elevationDeg": 15.676
+   },
+   {
+    "hex": [
+     22,
+     17
+    ],
+    "azimuthDeg": 58.271,
+    "elevationDeg": 14.759
+   },
+   {
+    "hex": [
+     22,
+     18
+    ],
+    "azimuthDeg": 61.922,
+    "elevationDeg": 13.841
+   },
+   {
+    "hex": [
+     22,
+     19
+    ],
+    "azimuthDeg": 65.572,
+    "elevationDeg": 12.923
+   },
+   {
+    "hex": [
+     22,
+     20
+    ],
+    "azimuthDeg": 69.223,
+    "elevationDeg": 12.006
+   },
+   {
+    "hex": [
+     22,
+     21
+    ],
+    "azimuthDeg": 72.874,
+    "elevationDeg": 11.088
+   },
+   {
+    "hex": [
+     22,
+     22
+    ],
+    "azimuthDeg": 76.524,
+    "elevationDeg": 10.17
+   },
+   {
+    "hex": [
+     22,
+     23
+    ],
+    "azimuthDeg": 80.175,
+    "elevationDeg": 9.252
+   },
+   {
+    "hex": [
+     22,
+     24
+    ],
+    "azimuthDeg": 83.826,
+    "elevationDeg": 8.335
+   },
+   {
+    "hex": [
+     22,
+     25
+    ],
+    "azimuthDeg": 87.476,
+    "elevationDeg": 7.417
+   },
+   {
+    "hex": [
+     22,
+     26
+    ],
+    "azimuthDeg": 91.127,
+    "elevationDeg": 6.499
+   },
+   {
+    "hex": [
+     22,
+     27
+    ],
+    "azimuthDeg": 94.778,
+    "elevationDeg": 5.581
+   },
+   {
+    "hex": [
+     22,
+     28
+    ],
+    "azimuthDeg": 98.428,
+    "elevationDeg": 4.664
+   },
+   {
+    "hex": [
+     22,
+     29
+    ],
+    "azimuthDeg": 102.079,
+    "elevationDeg": 3.746
+   },
+   {
+    "hex": [
+     22,
+     30
+    ],
+    "azimuthDeg": 105.729,
+    "elevationDeg": 2.828
+   },
+   {
+    "hex": [
+     22,
+     31
+    ],
+    "azimuthDeg": 109.38,
+    "elevationDeg": 1.911
+   },
+   {
+    "hex": [
+     22,
+     32
+    ],
+    "azimuthDeg": 113.031,
+    "elevationDeg": 0.993
+   },
+   {
+    "hex": [
+     22,
+     33
+    ],
+    "azimuthDeg": 116.681,
+    "elevationDeg": 0.075
+   },
+   {
+    "hex": [
+     22,
+     34
+    ],
+    "azimuthDeg": 120.332,
+    "elevationDeg": -0.843
+   },
+   {
+    "hex": [
+     22,
+     35
+    ],
+    "azimuthDeg": 123.983,
+    "elevationDeg": -1.76
+   },
+   {
+    "hex": [
+     22,
+     36
+    ],
+    "azimuthDeg": 127.633,
+    "elevationDeg": -2.678
+   },
+   {
+    "hex": [
+     23,
+     8
+    ],
+    "azimuthDeg": 25.84,
+    "elevationDeg": 26.831
+   },
+   {
+    "hex": [
+     23,
+     9
+    ],
+    "azimuthDeg": 29.491,
+    "elevationDeg": 25.913
+   },
+   {
+    "hex": [
+     23,
+     10
+    ],
+    "azimuthDeg": 33.142,
+    "elevationDeg": 24.996
+   },
+   {
+    "hex": [
+     23,
+     11
+    ],
+    "azimuthDeg": 36.792,
+    "elevationDeg": 24.078
+   },
+   {
+    "hex": [
+     23,
+     12
+    ],
+    "azimuthDeg": 40.443,
+    "elevationDeg": 23.16
+   },
+   {
+    "hex": [
+     23,
+     13
+    ],
+    "azimuthDeg": 44.094,
+    "elevationDeg": 22.242
+   },
+   {
+    "hex": [
+     23,
+     14
+    ],
+    "azimuthDeg": 47.744,
+    "elevationDeg": 21.325
+   },
+   {
+    "hex": [
+     23,
+     15
+    ],
+    "azimuthDeg": 51.395,
+    "elevationDeg": 20.407
+   },
+   {
+    "hex": [
+     23,
+     16
+    ],
+    "azimuthDeg": 55.046,
+    "elevationDeg": 19.489
+   },
+   {
+    "hex": [
+     23,
+     17
+    ],
+    "azimuthDeg": 58.696,
+    "elevationDeg": 18.571
+   },
+   {
+    "hex": [
+     23,
+     18
+    ],
+    "azimuthDeg": 62.347,
+    "elevationDeg": 17.654
+   },
+   {
+    "hex": [
+     23,
+     19
+    ],
+    "azimuthDeg": 65.998,
+    "elevationDeg": 16.736
+   },
+   {
+    "hex": [
+     23,
+     20
+    ],
+    "azimuthDeg": 69.648,
+    "elevationDeg": 15.818
+   },
+   {
+    "hex": [
+     23,
+     21
+    ],
+    "azimuthDeg": 73.299,
+    "elevationDeg": 14.901
+   },
+   {
+    "hex": [
+     23,
+     22
+    ],
+    "azimuthDeg": 76.949,
+    "elevationDeg": 13.983
+   },
+   {
+    "hex": [
+     23,
+     23
+    ],
+    "azimuthDeg": 80.6,
+    "elevationDeg": 13.065
+   },
+   {
+    "hex": [
+     23,
+     24
+    ],
+    "azimuthDeg": 84.251,
+    "elevationDeg": 12.147
+   },
+   {
+    "hex": [
+     23,
+     25
+    ],
+    "azimuthDeg": 87.901,
+    "elevationDeg": 11.23
+   },
+   {
+    "hex": [
+     23,
+     26
+    ],
+    "azimuthDeg": 91.552,
+    "elevationDeg": 10.312
+   },
+   {
+    "hex": [
+     23,
+     27
+    ],
+    "azimuthDeg": 95.203,
+    "elevationDeg": 9.394
+   },
+   {
+    "hex": [
+     23,
+     28
+    ],
+    "azimuthDeg": 98.853,
+    "elevationDeg": 8.476
+   },
+   {
+    "hex": [
+     23,
+     29
+    ],
+    "azimuthDeg": 102.504,
+    "elevationDeg": 7.559
+   },
+   {
+    "hex": [
+     23,
+     30
+    ],
+    "azimuthDeg": 106.155,
+    "elevationDeg": 6.641
+   },
+   {
+    "hex": [
+     23,
+     31
+    ],
+    "azimuthDeg": 109.805,
+    "elevationDeg": 5.723
+   },
+   {
+    "hex": [
+     23,
+     32
+    ],
+    "azimuthDeg": 113.456,
+    "elevationDeg": 4.806
+   },
+   {
+    "hex": [
+     23,
+     33
+    ],
+    "azimuthDeg": 117.107,
+    "elevationDeg": 3.888
+   },
+   {
+    "hex": [
+     23,
+     34
+    ],
+    "azimuthDeg": 120.757,
+    "elevationDeg": 2.97
+   },
+   {
+    "hex": [
+     23,
+     35
+    ],
+    "azimuthDeg": 124.408,
+    "elevationDeg": 2.052
+   },
+   {
+    "hex": [
+     23,
+     36
+    ],
+    "azimuthDeg": 128.058,
+    "elevationDeg": 1.135
+   },
+   {
+    "hex": [
+     23,
+     37
+    ],
+    "azimuthDeg": 131.709,
+    "elevationDeg": 0.217
+   },
+   {
+    "hex": [
+     24,
+     9
+    ],
+    "azimuthDeg": 29.916,
+    "elevationDeg": 29.726
+   },
+   {
+    "hex": [
+     24,
+     10
+    ],
+    "azimuthDeg": 33.567,
+    "elevationDeg": 28.808
+   },
+   {
+    "hex": [
+     24,
+     11
+    ],
+    "azimuthDeg": 37.217,
+    "elevationDeg": 27.891
+   },
+   {
+    "hex": [
+     24,
+     12
+    ],
+    "azimuthDeg": 40.868,
+    "elevationDeg": 26.973
+   },
+   {
+    "hex": [
+     24,
+     13
+    ],
+    "azimuthDeg": 44.519,
+    "elevationDeg": 26.055
+   },
+   {
+    "hex": [
+     24,
+     14
+    ],
+    "azimuthDeg": 48.169,
+    "elevationDeg": 25.137
+   },
+   {
+    "hex": [
+     24,
+     15
+    ],
+    "azimuthDeg": 51.82,
+    "elevationDeg": 24.22
+   },
+   {
+    "hex": [
+     24,
+     16
+    ],
+    "azimuthDeg": 55.471,
+    "elevationDeg": 23.302
+   },
+   {
+    "hex": [
+     24,
+     17
+    ],
+    "azimuthDeg": 59.121,
+    "elevationDeg": 22.384
+   },
+   {
+    "hex": [
+     24,
+     18
+    ],
+    "azimuthDeg": 62.772,
+    "elevationDeg": 21.466
+   },
+   {
+    "hex": [
+     24,
+     19
+    ],
+    "azimuthDeg": 66.423,
+    "elevationDeg": 20.549
+   },
+   {
+    "hex": [
+     24,
+     20
+    ],
+    "azimuthDeg": 70.073,
+    "elevationDeg": 19.631
+   },
+   {
+    "hex": [
+     24,
+     21
+    ],
+    "azimuthDeg": 73.724,
+    "elevationDeg": 18.713
+   },
+   {
+    "hex": [
+     24,
+     22
+    ],
+    "azimuthDeg": 77.375,
+    "elevationDeg": 17.796
+   },
+   {
+    "hex": [
+     24,
+     23
+    ],
+    "azimuthDeg": 81.025,
+    "elevationDeg": 16.878
+   },
+   {
+    "hex": [
+     24,
+     24
+    ],
+    "azimuthDeg": 84.676,
+    "elevationDeg": 15.96
+   },
+   {
+    "hex": [
+     24,
+     25
+    ],
+    "azimuthDeg": 88.326,
+    "elevationDeg": 15.042
+   },
+   {
+    "hex": [
+     24,
+     26
+    ],
+    "azimuthDeg": 91.977,
+    "elevationDeg": 14.125
+   },
+   {
+    "hex": [
+     24,
+     27
+    ],
+    "azimuthDeg": 95.628,
+    "elevationDeg": 13.207
+   },
+   {
+    "hex": [
+     24,
+     28
+    ],
+    "azimuthDeg": 99.278,
+    "elevationDeg": 12.289
+   },
+   {
+    "hex": [
+     24,
+     29
+    ],
+    "azimuthDeg": 102.929,
+    "elevationDeg": 11.371
+   },
+   {
+    "hex": [
+     24,
+     30
+    ],
+    "azimuthDeg": 106.58,
+    "elevationDeg": 10.454
+   },
+   {
+    "hex": [
+     24,
+     31
+    ],
+    "azimuthDeg": 110.23,
+    "elevationDeg": 9.536
+   },
+   {
+    "hex": [
+     24,
+     32
+    ],
+    "azimuthDeg": 113.881,
+    "elevationDeg": 8.618
+   },
+   {
+    "hex": [
+     24,
+     33
+    ],
+    "azimuthDeg": 117.532,
+    "elevationDeg": 7.701
+   },
+   {
+    "hex": [
+     24,
+     34
+    ],
+    "azimuthDeg": 121.182,
+    "elevationDeg": 6.783
+   },
+   {
+    "hex": [
+     24,
+     35
+    ],
+    "azimuthDeg": 124.833,
+    "elevationDeg": 5.865
+   },
+   {
+    "hex": [
+     24,
+     36
+    ],
+    "azimuthDeg": 128.484,
+    "elevationDeg": 4.947
+   },
+   {
+    "hex": [
+     24,
+     37
+    ],
+    "azimuthDeg": 132.134,
+    "elevationDeg": 4.03
+   },
+   {
+    "hex": [
+     25,
+     10
+    ],
+    "azimuthDeg": 33.992,
+    "elevationDeg": 32.621
+   },
+   {
+    "hex": [
+     25,
+     11
+    ],
+    "azimuthDeg": 37.643,
+    "elevationDeg": 31.703
+   },
+   {
+    "hex": [
+     25,
+     12
+    ],
+    "azimuthDeg": 41.293,
+    "elevationDeg": 30.786
+   },
+   {
+    "hex": [
+     25,
+     13
+    ],
+    "azimuthDeg": 44.944,
+    "elevationDeg": 29.868
+   },
+   {
+    "hex": [
+     25,
+     14
+    ],
+    "azimuthDeg": 48.595,
+    "elevationDeg": 28.95
+   },
+   {
+    "hex": [
+     25,
+     15
+    ],
+    "azimuthDeg": 52.245,
+    "elevationDeg": 28.032
+   },
+   {
+    "hex": [
+     25,
+     16
+    ],
+    "azimuthDeg": 55.896,
+    "elevationDeg": 27.115
+   },
+   {
+    "hex": [
+     25,
+     17
+    ],
+    "azimuthDeg": 59.546,
+    "elevationDeg": 26.197
+   },
+   {
+    "hex": [
+     25,
+     18
+    ],
+    "azimuthDeg": 63.197,
+    "elevationDeg": 25.279
+   },
+   {
+    "hex": [
+     25,
+     19
+    ],
+    "azimuthDeg": 66.848,
+    "elevationDeg": 24.361
+   },
+   {
+    "hex": [
+     25,
+     20
+    ],
+    "azimuthDeg": 70.498,
+    "elevationDeg": 23.444
+   },
+   {
+    "hex": [
+     25,
+     21
+    ],
+    "azimuthDeg": 74.149,
+    "elevationDeg": 22.526
+   },
+   {
+    "hex": [
+     25,
+     22
+    ],
+    "azimuthDeg": 77.8,
+    "elevationDeg": 21.608
+   },
+   {
+    "hex": [
+     25,
+     23
+    ],
+    "azimuthDeg": 81.45,
+    "elevationDeg": 20.691
+   },
+   {
+    "hex": [
+     25,
+     24
+    ],
+    "azimuthDeg": 85.101,
+    "elevationDeg": 19.773
+   },
+   {
+    "hex": [
+     25,
+     25
+    ],
+    "azimuthDeg": 88.752,
+    "elevationDeg": 18.855
+   },
+   {
+    "hex": [
+     25,
+     26
+    ],
+    "azimuthDeg": 92.402,
+    "elevationDeg": 17.937
+   },
+   {
+    "hex": [
+     25,
+     27
+    ],
+    "azimuthDeg": 96.053,
+    "elevationDeg": 17.02
+   },
+   {
+    "hex": [
+     25,
+     28
+    ],
+    "azimuthDeg": 99.704,
+    "elevationDeg": 16.102
+   },
+   {
+    "hex": [
+     25,
+     29
+    ],
+    "azimuthDeg": 103.354,
+    "elevationDeg": 15.184
+   },
+   {
+    "hex": [
+     25,
+     30
+    ],
+    "azimuthDeg": 107.005,
+    "elevationDeg": 14.266
+   },
+   {
+    "hex": [
+     25,
+     31
+    ],
+    "azimuthDeg": 110.655,
+    "elevationDeg": 13.349
+   },
+   {
+    "hex": [
+     25,
+     32
+    ],
+    "azimuthDeg": 114.306,
+    "elevationDeg": 12.431
+   },
+   {
+    "hex": [
+     25,
+     33
+    ],
+    "azimuthDeg": 117.957,
+    "elevationDeg": 11.513
+   },
+   {
+    "hex": [
+     25,
+     34
+    ],
+    "azimuthDeg": 121.607,
+    "elevationDeg": 10.596
+   },
+   {
+    "hex": [
+     25,
+     35
+    ],
+    "azimuthDeg": 125.258,
+    "elevationDeg": 9.678
+   },
+   {
+    "hex": [
+     25,
+     36
+    ],
+    "azimuthDeg": 128.909,
+    "elevationDeg": 8.76
+   },
+   {
+    "hex": [
+     25,
+     37
+    ],
+    "azimuthDeg": 132.559,
+    "elevationDeg": 7.842
+   },
+   {
+    "hex": [
+     25,
+     38
+    ],
+    "azimuthDeg": 136.21,
+    "elevationDeg": 6.925
+   },
+   {
+    "hex": [
+     26,
+     11
+    ],
+    "azimuthDeg": 38.068,
+    "elevationDeg": 35.516
+   },
+   {
+    "hex": [
+     26,
+     12
+    ],
+    "azimuthDeg": 41.718,
+    "elevationDeg": 34.598
+   },
+   {
+    "hex": [
+     26,
+     13
+    ],
+    "azimuthDeg": 45.369,
+    "elevationDeg": 33.681
+   },
+   {
+    "hex": [
+     26,
+     14
+    ],
+    "azimuthDeg": 49.02,
+    "elevationDeg": 32.763
+   },
+   {
+    "hex": [
+     26,
+     15
+    ],
+    "azimuthDeg": 52.67,
+    "elevationDeg": 31.845
+   },
+   {
+    "hex": [
+     26,
+     16
+    ],
+    "azimuthDeg": 56.321,
+    "elevationDeg": 30.927
+   },
+   {
+    "hex": [
+     26,
+     17
+    ],
+    "azimuthDeg": 59.972,
+    "elevationDeg": 30.01
+   },
+   {
+    "hex": [
+     26,
+     18
+    ],
+    "azimuthDeg": 63.622,
+    "elevationDeg": 29.092
+   },
+   {
+    "hex": [
+     26,
+     19
+    ],
+    "azimuthDeg": 67.273,
+    "elevationDeg": 28.174
+   },
+   {
+    "hex": [
+     26,
+     20
+    ],
+    "azimuthDeg": 70.923,
+    "elevationDeg": 27.256
+   },
+   {
+    "hex": [
+     26,
+     21
+    ],
+    "azimuthDeg": 74.574,
+    "elevationDeg": 26.339
+   },
+   {
+    "hex": [
+     26,
+     22
+    ],
+    "azimuthDeg": 78.225,
+    "elevationDeg": 25.421
+   },
+   {
+    "hex": [
+     26,
+     23
+    ],
+    "azimuthDeg": 81.875,
+    "elevationDeg": 24.503
+   },
+   {
+    "hex": [
+     26,
+     24
+    ],
+    "azimuthDeg": 85.526,
+    "elevationDeg": 23.586
+   },
+   {
+    "hex": [
+     26,
+     25
+    ],
+    "azimuthDeg": 89.177,
+    "elevationDeg": 22.668
+   },
+   {
+    "hex": [
+     26,
+     26
+    ],
+    "azimuthDeg": 92.827,
+    "elevationDeg": 21.75
+   },
+   {
+    "hex": [
+     26,
+     27
+    ],
+    "azimuthDeg": 96.478,
+    "elevationDeg": 20.832
+   },
+   {
+    "hex": [
+     26,
+     28
+    ],
+    "azimuthDeg": 100.129,
+    "elevationDeg": 19.915
+   },
+   {
+    "hex": [
+     26,
+     29
+    ],
+    "azimuthDeg": 103.779,
+    "elevationDeg": 18.997
+   },
+   {
+    "hex": [
+     26,
+     30
+    ],
+    "azimuthDeg": 107.43,
+    "elevationDeg": 18.079
+   },
+   {
+    "hex": [
+     26,
+     31
+    ],
+    "azimuthDeg": 111.081,
+    "elevationDeg": 17.161
+   },
+   {
+    "hex": [
+     26,
+     32
+    ],
+    "azimuthDeg": 114.731,
+    "elevationDeg": 16.244
+   },
+   {
+    "hex": [
+     26,
+     33
+    ],
+    "azimuthDeg": 118.382,
+    "elevationDeg": 15.326
+   },
+   {
+    "hex": [
+     26,
+     34
+    ],
+    "azimuthDeg": 122.032,
+    "elevationDeg": 14.408
+   },
+   {
+    "hex": [
+     26,
+     35
+    ],
+    "azimuthDeg": 125.683,
+    "elevationDeg": 13.491
+   },
+   {
+    "hex": [
+     26,
+     36
+    ],
+    "azimuthDeg": 129.334,
+    "elevationDeg": 12.573
+   },
+   {
+    "hex": [
+     26,
+     37
+    ],
+    "azimuthDeg": 132.984,
+    "elevationDeg": 11.655
+   },
+   {
+    "hex": [
+     26,
+     38
+    ],
+    "azimuthDeg": 136.635,
+    "elevationDeg": 10.737
+   },
+   {
+    "hex": [
+     27,
+     12
+    ],
+    "azimuthDeg": 42.143,
+    "elevationDeg": 38.411
+   },
+   {
+    "hex": [
+     27,
+     13
+    ],
+    "azimuthDeg": 45.794,
+    "elevationDeg": 37.493
+   },
+   {
+    "hex": [
+     27,
+     14
+    ],
+    "azimuthDeg": 49.445,
+    "elevationDeg": 36.576
+   },
+   {
+    "hex": [
+     27,
+     15
+    ],
+    "azimuthDeg": 53.095,
+    "elevationDeg": 35.658
+   },
+   {
+    "hex": [
+     27,
+     16
+    ],
+    "azimuthDeg": 56.746,
+    "elevationDeg": 34.74
+   },
+   {
+    "hex": [
+     27,
+     17
+    ],
+    "azimuthDeg": 60.397,
+    "elevationDeg": 33.822
+   },
+   {
+    "hex": [
+     27,
+     18
+    ],
+    "azimuthDeg": 64.047,
+    "elevationDeg": 32.905
+   },
+   {
+    "hex": [
+     27,
+     19
+    ],
+    "azimuthDeg": 67.698,
+    "elevationDeg": 31.987
+   },
+   {
+    "hex": [
+     27,
+     20
+    ],
+    "azimuthDeg": 71.349,
+    "elevationDeg": 31.069
+   },
+   {
+    "hex": [
+     27,
+     21
+    ],
+    "azimuthDeg": 74.999,
+    "elevationDeg": 30.151
+   },
+   {
+    "hex": [
+     27,
+     22
+    ],
+    "azimuthDeg": 78.65,
+    "elevationDeg": 29.234
+   },
+   {
+    "hex": [
+     27,
+     23
+    ],
+    "azimuthDeg": 82.301,
+    "elevationDeg": 28.316
+   },
+   {
+    "hex": [
+     27,
+     24
+    ],
+    "azimuthDeg": 85.951,
+    "elevationDeg": 27.398
+   },
+   {
+    "hex": [
+     27,
+     25
+    ],
+    "azimuthDeg": 89.602,
+    "elevationDeg": 26.481
+   },
+   {
+    "hex": [
+     27,
+     26
+    ],
+    "azimuthDeg": 93.252,
+    "elevationDeg": 25.563
+   },
+   {
+    "hex": [
+     27,
+     27
+    ],
+    "azimuthDeg": 96.903,
+    "elevationDeg": 24.645
+   },
+   {
+    "hex": [
+     27,
+     28
+    ],
+    "azimuthDeg": 100.554,
+    "elevationDeg": 23.727
+   },
+   {
+    "hex": [
+     27,
+     29
+    ],
+    "azimuthDeg": 104.204,
+    "elevationDeg": 22.81
+   },
+   {
+    "hex": [
+     27,
+     30
+    ],
+    "azimuthDeg": 107.855,
+    "elevationDeg": 21.892
+   },
+   {
+    "hex": [
+     27,
+     31
+    ],
+    "azimuthDeg": 111.506,
+    "elevationDeg": 20.974
+   },
+   {
+    "hex": [
+     27,
+     32
+    ],
+    "azimuthDeg": 115.156,
+    "elevationDeg": 20.056
+   },
+   {
+    "hex": [
+     27,
+     33
+    ],
+    "azimuthDeg": 118.807,
+    "elevationDeg": 19.139
+   },
+   {
+    "hex": [
+     27,
+     34
+    ],
+    "azimuthDeg": 122.458,
+    "elevationDeg": 18.221
+   },
+   {
+    "hex": [
+     27,
+     35
+    ],
+    "azimuthDeg": 126.108,
+    "elevationDeg": 17.303
+   },
+   {
+    "hex": [
+     27,
+     36
+    ],
+    "azimuthDeg": 129.759,
+    "elevationDeg": 16.386
+   },
+   {
+    "hex": [
+     27,
+     37
+    ],
+    "azimuthDeg": 133.41,
+    "elevationDeg": 15.468
+   },
+   {
+    "hex": [
+     27,
+     38
+    ],
+    "azimuthDeg": 137.06,
+    "elevationDeg": 14.55
+   },
+   {
+    "hex": [
+     27,
+     39
+    ],
+    "azimuthDeg": 140.711,
+    "elevationDeg": 13.632
+   },
+   {
+    "hex": [
+     28,
+     13
+    ],
+    "azimuthDeg": 46.219,
+    "elevationDeg": 41.306
+   },
+   {
+    "hex": [
+     28,
+     14
+    ],
+    "azimuthDeg": 49.87,
+    "elevationDeg": 40.388
+   },
+   {
+    "hex": [
+     28,
+     15
+    ],
+    "azimuthDeg": 53.521,
+    "elevationDeg": 39.471
+   },
+   {
+    "hex": [
+     28,
+     16
+    ],
+    "azimuthDeg": 57.171,
+    "elevationDeg": 38.553
+   },
+   {
+    "hex": [
+     28,
+     17
+    ],
+    "azimuthDeg": 60.822,
+    "elevationDeg": 37.635
+   },
+   {
+    "hex": [
+     28,
+     18
+    ],
+    "azimuthDeg": 64.472,
+    "elevationDeg": 36.717
+   },
+   {
+    "hex": [
+     28,
+     19
+    ],
+    "azimuthDeg": 68.123,
+    "elevationDeg": 35.8
+   },
+   {
+    "hex": [
+     28,
+     20
+    ],
+    "azimuthDeg": 71.774,
+    "elevationDeg": 34.882
+   },
+   {
+    "hex": [
+     28,
+     21
+    ],
+    "azimuthDeg": 75.424,
+    "elevationDeg": 33.964
+   },
+   {
+    "hex": [
+     28,
+     22
+    ],
+    "azimuthDeg": 79.075,
+    "elevationDeg": 33.046
+   },
+   {
+    "hex": [
+     28,
+     23
+    ],
+    "azimuthDeg": 82.726,
+    "elevationDeg": 32.129
+   },
+   {
+    "hex": [
+     28,
+     24
+    ],
+    "azimuthDeg": 86.376,
+    "elevationDeg": 31.211
+   },
+   {
+    "hex": [
+     28,
+     25
+    ],
+    "azimuthDeg": 90.027,
+    "elevationDeg": 30.293
+   },
+   {
+    "hex": [
+     28,
+     26
+    ],
+    "azimuthDeg": 93.678,
+    "elevationDeg": 29.376
+   },
+   {
+    "hex": [
+     28,
+     27
+    ],
+    "azimuthDeg": 97.328,
+    "elevationDeg": 28.458
+   },
+   {
+    "hex": [
+     28,
+     28
+    ],
+    "azimuthDeg": 100.979,
+    "elevationDeg": 27.54
+   },
+   {
+    "hex": [
+     28,
+     29
+    ],
+    "azimuthDeg": 104.63,
+    "elevationDeg": 26.622
+   },
+   {
+    "hex": [
+     28,
+     30
+    ],
+    "azimuthDeg": 108.28,
+    "elevationDeg": 25.705
+   },
+   {
+    "hex": [
+     28,
+     31
+    ],
+    "azimuthDeg": 111.931,
+    "elevationDeg": 24.787
+   },
+   {
+    "hex": [
+     28,
+     32
+    ],
+    "azimuthDeg": 115.581,
+    "elevationDeg": 23.869
+   },
+   {
+    "hex": [
+     28,
+     33
+    ],
+    "azimuthDeg": 119.232,
+    "elevationDeg": 22.951
+   },
+   {
+    "hex": [
+     28,
+     34
+    ],
+    "azimuthDeg": 122.883,
+    "elevationDeg": 22.034
+   },
+   {
+    "hex": [
+     28,
+     35
+    ],
+    "azimuthDeg": 126.533,
+    "elevationDeg": 21.116
+   },
+   {
+    "hex": [
+     28,
+     36
+    ],
+    "azimuthDeg": 130.184,
+    "elevationDeg": 20.198
+   },
+   {
+    "hex": [
+     28,
+     37
+    ],
+    "azimuthDeg": 133.835,
+    "elevationDeg": 19.281
+   },
+   {
+    "hex": [
+     28,
+     38
+    ],
+    "azimuthDeg": 137.485,
+    "elevationDeg": 18.363
+   },
+   {
+    "hex": [
+     28,
+     39
+    ],
+    "azimuthDeg": 141.136,
+    "elevationDeg": 17.445
+   },
+   {
+    "hex": [
+     29,
+     14
+    ],
+    "azimuthDeg": 50.295,
+    "elevationDeg": 44.201
+   },
+   {
+    "hex": [
+     29,
+     15
+    ],
+    "azimuthDeg": 53.946,
+    "elevationDeg": 43.283
+   },
+   {
+    "hex": [
+     29,
+     16
+    ],
+    "azimuthDeg": 57.596,
+    "elevationDeg": 42.366
+   },
+   {
+    "hex": [
+     29,
+     17
+    ],
+    "azimuthDeg": 61.247,
+    "elevationDeg": 41.448
+   },
+   {
+    "hex": [
+     29,
+     18
+    ],
+    "azimuthDeg": 64.898,
+    "elevationDeg": 40.53
+   },
+   {
+    "hex": [
+     29,
+     19
+    ],
+    "azimuthDeg": 68.548,
+    "elevationDeg": 39.612
+   },
+   {
+    "hex": [
+     29,
+     20
+    ],
+    "azimuthDeg": 72.199,
+    "elevationDeg": 38.695
+   },
+   {
+    "hex": [
+     29,
+     21
+    ],
+    "azimuthDeg": 75.849,
+    "elevationDeg": 37.777
+   },
+   {
+    "hex": [
+     29,
+     22
+    ],
+    "azimuthDeg": 79.5,
+    "elevationDeg": 36.859
+   },
+   {
+    "hex": [
+     29,
+     23
+    ],
+    "azimuthDeg": 83.151,
+    "elevationDeg": 35.941
+   },
+   {
+    "hex": [
+     29,
+     24
+    ],
+    "azimuthDeg": 86.801,
+    "elevationDeg": 35.024
+   },
+   {
+    "hex": [
+     29,
+     25
+    ],
+    "azimuthDeg": 90.452,
+    "elevationDeg": 34.106
+   },
+   {
+    "hex": [
+     29,
+     26
+    ],
+    "azimuthDeg": 94.103,
+    "elevationDeg": 33.188
+   },
+   {
+    "hex": [
+     29,
+     27
+    ],
+    "azimuthDeg": 97.753,
+    "elevationDeg": 32.271
+   },
+   {
+    "hex": [
+     29,
+     28
+    ],
+    "azimuthDeg": 101.404,
+    "elevationDeg": 31.353
+   },
+   {
+    "hex": [
+     29,
+     29
+    ],
+    "azimuthDeg": 105.055,
+    "elevationDeg": 30.435
+   },
+   {
+    "hex": [
+     29,
+     30
+    ],
+    "azimuthDeg": 108.705,
+    "elevationDeg": 29.517
+   },
+   {
+    "hex": [
+     29,
+     31
+    ],
+    "azimuthDeg": 112.356,
+    "elevationDeg": 28.6
+   },
+   {
+    "hex": [
+     29,
+     32
+    ],
+    "azimuthDeg": 116.007,
+    "elevationDeg": 27.682
+   },
+   {
+    "hex": [
+     29,
+     33
+    ],
+    "azimuthDeg": 119.657,
+    "elevationDeg": 26.764
+   },
+   {
+    "hex": [
+     29,
+     34
+    ],
+    "azimuthDeg": 123.308,
+    "elevationDeg": 25.846
+   },
+   {
+    "hex": [
+     29,
+     35
+    ],
+    "azimuthDeg": 126.958,
+    "elevationDeg": 24.929
+   },
+   {
+    "hex": [
+     29,
+     36
+    ],
+    "azimuthDeg": 130.609,
+    "elevationDeg": 24.011
+   },
+   {
+    "hex": [
+     29,
+     37
+    ],
+    "azimuthDeg": 134.26,
+    "elevationDeg": 23.093
+   },
+   {
+    "hex": [
+     29,
+     38
+    ],
+    "azimuthDeg": 137.91,
+    "elevationDeg": 22.176
+   },
+   {
+    "hex": [
+     29,
+     39
+    ],
+    "azimuthDeg": 141.561,
+    "elevationDeg": 21.258
+   },
+   {
+    "hex": [
+     30,
+     15
+    ],
+    "azimuthDeg": 54.371,
+    "elevationDeg": 47.096
+   },
+   {
+    "hex": [
+     30,
+     16
+    ],
+    "azimuthDeg": 58.021,
+    "elevationDeg": 46.178
+   },
+   {
+    "hex": [
+     30,
+     17
+    ],
+    "azimuthDeg": 61.672,
+    "elevationDeg": 45.261
+   },
+   {
+    "hex": [
+     30,
+     18
+    ],
+    "azimuthDeg": 65.323,
+    "elevationDeg": 44.343
+   },
+   {
+    "hex": [
+     30,
+     19
+    ],
+    "azimuthDeg": 68.973,
+    "elevationDeg": 43.425
+   },
+   {
+    "hex": [
+     30,
+     20
+    ],
+    "azimuthDeg": 72.624,
+    "elevationDeg": 42.507
+   },
+   {
+    "hex": [
+     30,
+     21
+    ],
+    "azimuthDeg": 76.275,
+    "elevationDeg": 41.59
+   },
+   {
+    "hex": [
+     30,
+     22
+    ],
+    "azimuthDeg": 79.925,
+    "elevationDeg": 40.672
+   },
+   {
+    "hex": [
+     30,
+     23
+    ],
+    "azimuthDeg": 83.576,
+    "elevationDeg": 39.754
+   },
+   {
+    "hex": [
+     30,
+     24
+    ],
+    "azimuthDeg": 87.227,
+    "elevationDeg": 38.836
+   },
+   {
+    "hex": [
+     30,
+     25
+    ],
+    "azimuthDeg": 90.877,
+    "elevationDeg": 37.919
+   },
+   {
+    "hex": [
+     30,
+     26
+    ],
+    "azimuthDeg": 94.528,
+    "elevationDeg": 37.001
+   },
+   {
+    "hex": [
+     30,
+     27
+    ],
+    "azimuthDeg": 98.178,
+    "elevationDeg": 36.083
+   },
+   {
+    "hex": [
+     30,
+     28
+    ],
+    "azimuthDeg": 101.829,
+    "elevationDeg": 35.166
+   },
+   {
+    "hex": [
+     30,
+     29
+    ],
+    "azimuthDeg": 105.48,
+    "elevationDeg": 34.248
+   },
+   {
+    "hex": [
+     30,
+     30
+    ],
+    "azimuthDeg": 109.13,
+    "elevationDeg": 33.33
+   },
+   {
+    "hex": [
+     30,
+     31
+    ],
+    "azimuthDeg": 112.781,
+    "elevationDeg": 32.412
+   },
+   {
+    "hex": [
+     30,
+     32
+    ],
+    "azimuthDeg": 116.432,
+    "elevationDeg": 31.495
+   },
+   {
+    "hex": [
+     30,
+     33
+    ],
+    "azimuthDeg": 120.082,
+    "elevationDeg": 30.577
+   },
+   {
+    "hex": [
+     30,
+     34
+    ],
+    "azimuthDeg": 123.733,
+    "elevationDeg": 29.659
+   },
+   {
+    "hex": [
+     30,
+     35
+    ],
+    "azimuthDeg": 127.384,
+    "elevationDeg": 28.742
+   },
+   {
+    "hex": [
+     30,
+     36
+    ],
+    "azimuthDeg": 131.034,
+    "elevationDeg": 27.824
+   },
+   {
+    "hex": [
+     30,
+     37
+    ],
+    "azimuthDeg": 134.685,
+    "elevationDeg": 26.906
+   },
+   {
+    "hex": [
+     30,
+     38
+    ],
+    "azimuthDeg": 138.336,
+    "elevationDeg": 25.988
+   },
+   {
+    "hex": [
+     30,
+     39
+    ],
+    "azimuthDeg": 141.986,
+    "elevationDeg": 25.071
+   },
+   {
+    "hex": [
+     31,
+     16
+    ],
+    "azimuthDeg": 58.446,
+    "elevationDeg": 49.991
+   },
+   {
+    "hex": [
+     31,
+     17
+    ],
+    "azimuthDeg": 62.097,
+    "elevationDeg": 49.073
+   },
+   {
+    "hex": [
+     31,
+     18
+    ],
+    "azimuthDeg": 65.748,
+    "elevationDeg": 48.156
+   },
+   {
+    "hex": [
+     31,
+     19
+    ],
+    "azimuthDeg": 69.398,
+    "elevationDeg": 47.238
+   },
+   {
+    "hex": [
+     31,
+     20
+    ],
+    "azimuthDeg": 73.049,
+    "elevationDeg": 46.32
+   },
+   {
+    "hex": [
+     31,
+     21
+    ],
+    "azimuthDeg": 76.7,
+    "elevationDeg": 45.402
+   },
+   {
+    "hex": [
+     31,
+     22
+    ],
+    "azimuthDeg": 80.35,
+    "elevationDeg": 44.485
+   },
+   {
+    "hex": [
+     31,
+     23
+    ],
+    "azimuthDeg": 84.001,
+    "elevationDeg": 43.567
+   },
+   {
+    "hex": [
+     31,
+     24
+    ],
+    "azimuthDeg": 87.652,
+    "elevationDeg": 42.649
+   },
+   {
+    "hex": [
+     31,
+     25
+    ],
+    "azimuthDeg": 91.302,
+    "elevationDeg": 41.732
+   },
+   {
+    "hex": [
+     31,
+     26
+    ],
+    "azimuthDeg": 94.953,
+    "elevationDeg": 40.814
+   },
+   {
+    "hex": [
+     31,
+     27
+    ],
+    "azimuthDeg": 98.604,
+    "elevationDeg": 39.896
+   },
+   {
+    "hex": [
+     31,
+     28
+    ],
+    "azimuthDeg": 102.254,
+    "elevationDeg": 38.978
+   },
+   {
+    "hex": [
+     31,
+     29
+    ],
+    "azimuthDeg": 105.905,
+    "elevationDeg": 38.061
+   },
+   {
+    "hex": [
+     31,
+     30
+    ],
+    "azimuthDeg": 109.555,
+    "elevationDeg": 37.143
+   },
+   {
+    "hex": [
+     31,
+     31
+    ],
+    "azimuthDeg": 113.206,
+    "elevationDeg": 36.225
+   },
+   {
+    "hex": [
+     31,
+     32
+    ],
+    "azimuthDeg": 116.857,
+    "elevationDeg": 35.307
+   },
+   {
+    "hex": [
+     31,
+     33
+    ],
+    "azimuthDeg": 120.507,
+    "elevationDeg": 34.39
+   },
+   {
+    "hex": [
+     31,
+     34
+    ],
+    "azimuthDeg": 124.158,
+    "elevationDeg": 33.472
+   },
+   {
+    "hex": [
+     31,
+     35
+    ],
+    "azimuthDeg": 127.809,
+    "elevationDeg": 32.554
+   },
+   {
+    "hex": [
+     31,
+     36
+    ],
+    "azimuthDeg": 131.459,
+    "elevationDeg": 31.637
+   },
+   {
+    "hex": [
+     31,
+     37
+    ],
+    "azimuthDeg": 135.11,
+    "elevationDeg": 30.719
+   },
+   {
+    "hex": [
+     31,
+     38
+    ],
+    "azimuthDeg": 138.761,
+    "elevationDeg": 29.801
+   },
+   {
+    "hex": [
+     32,
+     18
+    ],
+    "azimuthDeg": 66.173,
+    "elevationDeg": 51.968
+   },
+   {
+    "hex": [
+     32,
+     19
+    ],
+    "azimuthDeg": 69.824,
+    "elevationDeg": 51.051
+   },
+   {
+    "hex": [
+     32,
+     20
+    ],
+    "azimuthDeg": 73.474,
+    "elevationDeg": 50.133
+   },
+   {
+    "hex": [
+     32,
+     21
+    ],
+    "azimuthDeg": 77.125,
+    "elevationDeg": 49.215
+   },
+   {
+    "hex": [
+     32,
+     22
+    ],
+    "azimuthDeg": 80.775,
+    "elevationDeg": 48.297
+   },
+   {
+    "hex": [
+     32,
+     23
+    ],
+    "azimuthDeg": 84.426,
+    "elevationDeg": 47.38
+   },
+   {
+    "hex": [
+     32,
+     24
+    ],
+    "azimuthDeg": 88.077,
+    "elevationDeg": 46.462
+   },
+   {
+    "hex": [
+     32,
+     25
+    ],
+    "azimuthDeg": 91.727,
+    "elevationDeg": 45.544
+   },
+   {
+    "hex": [
+     32,
+     26
+    ],
+    "azimuthDeg": 95.378,
+    "elevationDeg": 44.627
+   },
+   {
+    "hex": [
+     32,
+     27
+    ],
+    "azimuthDeg": 99.029,
+    "elevationDeg": 43.709
+   },
+   {
+    "hex": [
+     32,
+     28
+    ],
+    "azimuthDeg": 102.679,
+    "elevationDeg": 42.791
+   },
+   {
+    "hex": [
+     32,
+     29
+    ],
+    "azimuthDeg": 106.33,
+    "elevationDeg": 41.873
+   },
+   {
+    "hex": [
+     32,
+     30
+    ],
+    "azimuthDeg": 109.981,
+    "elevationDeg": 40.956
+   },
+   {
+    "hex": [
+     32,
+     31
+    ],
+    "azimuthDeg": 113.631,
+    "elevationDeg": 40.038
+   },
+   {
+    "hex": [
+     32,
+     32
+    ],
+    "azimuthDeg": 117.282,
+    "elevationDeg": 39.12
+   },
+   {
+    "hex": [
+     32,
+     33
+    ],
+    "azimuthDeg": 120.933,
+    "elevationDeg": 38.202
+   },
+   {
+    "hex": [
+     32,
+     34
+    ],
+    "azimuthDeg": 124.583,
+    "elevationDeg": 37.285
+   },
+   {
+    "hex": [
+     32,
+     35
+    ],
+    "azimuthDeg": 128.234,
+    "elevationDeg": 36.367
+   },
+   {
+    "hex": [
+     32,
+     36
+    ],
+    "azimuthDeg": 131.884,
+    "elevationDeg": 35.449
+   },
+   {
+    "hex": [
+     32,
+     37
+    ],
+    "azimuthDeg": 135.535,
+    "elevationDeg": 34.532
+   },
+   {
+    "hex": [
+     32,
+     38
+    ],
+    "azimuthDeg": 139.186,
+    "elevationDeg": 33.614
+   },
+   {
+    "hex": [
+     33,
+     19
+    ],
+    "azimuthDeg": 70.249,
+    "elevationDeg": 54.863
+   },
+   {
+    "hex": [
+     33,
+     20
+    ],
+    "azimuthDeg": 73.899,
+    "elevationDeg": 53.946
+   },
+   {
+    "hex": [
+     33,
+     21
+    ],
+    "azimuthDeg": 77.55,
+    "elevationDeg": 53.028
+   },
+   {
+    "hex": [
+     33,
+     22
+    ],
+    "azimuthDeg": 81.201,
+    "elevationDeg": 52.11
+   },
+   {
+    "hex": [
+     33,
+     23
+    ],
+    "azimuthDeg": 84.851,
+    "elevationDeg": 51.192
+   },
+   {
+    "hex": [
+     33,
+     24
+    ],
+    "azimuthDeg": 88.502,
+    "elevationDeg": 50.275
+   },
+   {
+    "hex": [
+     33,
+     25
+    ],
+    "azimuthDeg": 92.153,
+    "elevationDeg": 49.357
+   },
+   {
+    "hex": [
+     33,
+     26
+    ],
+    "azimuthDeg": 95.803,
+    "elevationDeg": 48.439
+   },
+   {
+    "hex": [
+     33,
+     27
+    ],
+    "azimuthDeg": 99.454,
+    "elevationDeg": 47.522
+   },
+   {
+    "hex": [
+     33,
+     28
+    ],
+    "azimuthDeg": 103.104,
+    "elevationDeg": 46.604
+   },
+   {
+    "hex": [
+     33,
+     29
+    ],
+    "azimuthDeg": 106.755,
+    "elevationDeg": 45.686
+   },
+   {
+    "hex": [
+     33,
+     30
+    ],
+    "azimuthDeg": 110.406,
+    "elevationDeg": 44.768
+   },
+   {
+    "hex": [
+     33,
+     31
+    ],
+    "azimuthDeg": 114.056,
+    "elevationDeg": 43.851
+   },
+   {
+    "hex": [
+     33,
+     32
+    ],
+    "azimuthDeg": 117.707,
+    "elevationDeg": 42.933
+   },
+   {
+    "hex": [
+     33,
+     33
+    ],
+    "azimuthDeg": 121.358,
+    "elevationDeg": 42.015
+   },
+   {
+    "hex": [
+     33,
+     34
+    ],
+    "azimuthDeg": 125.008,
+    "elevationDeg": 41.097
+   },
+   {
+    "hex": [
+     33,
+     35
+    ],
+    "azimuthDeg": 128.659,
+    "elevationDeg": 40.18
+   },
+   {
+    "hex": [
+     33,
+     36
+    ],
+    "azimuthDeg": 132.31,
+    "elevationDeg": 39.262
+   },
+   {
+    "hex": [
+     33,
+     37
+    ],
+    "azimuthDeg": 135.96,
+    "elevationDeg": 38.344
+   },
+   {
+    "hex": [
+     34,
+     22
+    ],
+    "azimuthDeg": 81.626,
+    "elevationDeg": 55.923
+   },
+   {
+    "hex": [
+     34,
+     23
+    ],
+    "azimuthDeg": 85.276,
+    "elevationDeg": 55.005
+   },
+   {
+    "hex": [
+     34,
+     24
+    ],
+    "azimuthDeg": 88.927,
+    "elevationDeg": 54.087
+   },
+   {
+    "hex": [
+     34,
+     25
+    ],
+    "azimuthDeg": 92.578,
+    "elevationDeg": 53.17
+   },
+   {
+    "hex": [
+     34,
+     26
+    ],
+    "azimuthDeg": 96.228,
+    "elevationDeg": 52.252
+   },
+   {
+    "hex": [
+     34,
+     27
+    ],
+    "azimuthDeg": 99.879,
+    "elevationDeg": 51.334
+   },
+   {
+    "hex": [
+     34,
+     28
+    ],
+    "azimuthDeg": 103.53,
+    "elevationDeg": 50.417
+   },
+   {
+    "hex": [
+     34,
+     29
+    ],
+    "azimuthDeg": 107.18,
+    "elevationDeg": 49.499
+   },
+   {
+    "hex": [
+     34,
+     30
+    ],
+    "azimuthDeg": 110.831,
+    "elevationDeg": 48.581
+   },
+   {
+    "hex": [
+     34,
+     31
+    ],
+    "azimuthDeg": 114.481,
+    "elevationDeg": 47.663
+   },
+   {
+    "hex": [
+     34,
+     32
+    ],
+    "azimuthDeg": 118.132,
+    "elevationDeg": 46.746
+   },
+   {
+    "hex": [
+     34,
+     33
+    ],
+    "azimuthDeg": 121.783,
+    "elevationDeg": 45.828
+   },
+   {
+    "hex": [
+     34,
+     34
+    ],
+    "azimuthDeg": 125.433,
+    "elevationDeg": 44.91
+   },
+   {
+    "hex": [
+     34,
+     35
+    ],
+    "azimuthDeg": 129.084,
+    "elevationDeg": 43.992
+   },
+   {
+    "hex": [
+     34,
+     36
+    ],
+    "azimuthDeg": 132.735,
+    "elevationDeg": 43.075
+   },
+   {
+    "hex": [
+     34,
+     37
+    ],
+    "azimuthDeg": 136.385,
+    "elevationDeg": 42.157
+   },
+   {
+    "hex": [
+     35,
+     24
+    ],
+    "azimuthDeg": 89.352,
+    "elevationDeg": 57.9
+   },
+   {
+    "hex": [
+     35,
+     25
+    ],
+    "azimuthDeg": 93.003,
+    "elevationDeg": 56.982
+   },
+   {
+    "hex": [
+     35,
+     26
+    ],
+    "azimuthDeg": 96.653,
+    "elevationDeg": 56.065
+   },
+   {
+    "hex": [
+     35,
+     27
+    ],
+    "azimuthDeg": 100.304,
+    "elevationDeg": 55.147
+   },
+   {
+    "hex": [
+     35,
+     28
+    ],
+    "azimuthDeg": 103.955,
+    "elevationDeg": 54.229
+   },
+   {
+    "hex": [
+     35,
+     29
+    ],
+    "azimuthDeg": 107.605,
+    "elevationDeg": 53.312
+   },
+   {
+    "hex": [
+     35,
+     30
+    ],
+    "azimuthDeg": 111.256,
+    "elevationDeg": 52.394
+   },
+   {
+    "hex": [
+     35,
+     31
+    ],
+    "azimuthDeg": 114.907,
+    "elevationDeg": 51.476
+   },
+   {
+    "hex": [
+     35,
+     32
+    ],
+    "azimuthDeg": 118.557,
+    "elevationDeg": 50.558
+   },
+   {
+    "hex": [
+     35,
+     33
+    ],
+    "azimuthDeg": 122.208,
+    "elevationDeg": 49.641
+   },
+   {
+    "hex": [
+     35,
+     34
+    ],
+    "azimuthDeg": 125.859,
+    "elevationDeg": 48.723
+   },
+   {
+    "hex": [
+     35,
+     35
+    ],
+    "azimuthDeg": 129.509,
+    "elevationDeg": 47.805
+   },
+   {
+    "hex": [
+     35,
+     36
+    ],
+    "azimuthDeg": 133.16,
+    "elevationDeg": 46.887
+   },
+   {
+    "hex": [
+     36,
+     27
+    ],
+    "azimuthDeg": 100.729,
+    "elevationDeg": 58.96
+   },
+   {
+    "hex": [
+     36,
+     28
+    ],
+    "azimuthDeg": 104.38,
+    "elevationDeg": 58.042
+   },
+   {
+    "hex": [
+     36,
+     29
+    ],
+    "azimuthDeg": 108.03,
+    "elevationDeg": 57.124
+   },
+   {
+    "hex": [
+     36,
+     30
+    ],
+    "azimuthDeg": 111.681,
+    "elevationDeg": 56.207
+   },
+   {
+    "hex": [
+     36,
+     32
+    ],
+    "azimuthDeg": 118.982,
+    "elevationDeg": 54.371
+   },
+   {
+    "hex": [
+     36,
+     33
+    ],
+    "azimuthDeg": 122.633,
+    "elevationDeg": 53.453
+   },
+   {
+    "hex": [
+     36,
+     34
+    ],
+    "azimuthDeg": 126.284,
+    "elevationDeg": 52.536
+   }
+  ],
+  "R": [
+   {
+    "hex": [
+     1,
+     7
+    ],
+    "azimuthDeg": -4.874,
+    "elevationDeg": -62.949
+   },
+   {
+    "hex": [
+     1,
+     8
+    ],
+    "azimuthDeg": -7.945,
+    "elevationDeg": -63.532
+   },
+   {
+    "hex": [
+     1,
+     10
+    ],
+    "azimuthDeg": -14.087,
+    "elevationDeg": -64.697
+   },
+   {
+    "hex": [
+     2,
+     5
+    ],
+    "azimuthDeg": 0.755,
+    "elevationDeg": -57.83
+   },
+   {
+    "hex": [
+     2,
+     6
+    ],
+    "azimuthDeg": -2.316,
+    "elevationDeg": -58.413
+   },
+   {
+    "hex": [
+     2,
+     7
+    ],
+    "azimuthDeg": -5.388,
+    "elevationDeg": -58.995
+   },
+   {
+    "hex": [
+     2,
+     8
+    ],
+    "azimuthDeg": -8.459,
+    "elevationDeg": -59.578
+   },
+   {
+    "hex": [
+     2,
+     9
+    ],
+    "azimuthDeg": -11.53,
+    "elevationDeg": -60.16
+   },
+   {
+    "hex": [
+     2,
+     10
+    ],
+    "azimuthDeg": -14.601,
+    "elevationDeg": -60.743
+   },
+   {
+    "hex": [
+     2,
+     11
+    ],
+    "azimuthDeg": -17.672,
+    "elevationDeg": -61.326
+   },
+   {
+    "hex": [
+     2,
+     12
+    ],
+    "azimuthDeg": -20.743,
+    "elevationDeg": -61.908
+   },
+   {
+    "hex": [
+     2,
+     13
+    ],
+    "azimuthDeg": -23.814,
+    "elevationDeg": -62.491
+   },
+   {
+    "hex": [
+     3,
+     4
+    ],
+    "azimuthDeg": 3.312,
+    "elevationDeg": -53.294
+   },
+   {
+    "hex": [
+     3,
+     5
+    ],
+    "azimuthDeg": 0.241,
+    "elevationDeg": -53.876
+   },
+   {
+    "hex": [
+     3,
+     6
+    ],
+    "azimuthDeg": -2.83,
+    "elevationDeg": -54.459
+   },
+   {
+    "hex": [
+     3,
+     7
+    ],
+    "azimuthDeg": -5.901,
+    "elevationDeg": -55.041
+   },
+   {
+    "hex": [
+     3,
+     8
+    ],
+    "azimuthDeg": -8.972,
+    "elevationDeg": -55.624
+   },
+   {
+    "hex": [
+     3,
+     9
+    ],
+    "azimuthDeg": -12.043,
+    "elevationDeg": -56.207
+   },
+   {
+    "hex": [
+     3,
+     10
+    ],
+    "azimuthDeg": -15.114,
+    "elevationDeg": -56.789
+   },
+   {
+    "hex": [
+     3,
+     11
+    ],
+    "azimuthDeg": -18.185,
+    "elevationDeg": -57.372
+   },
+   {
+    "hex": [
+     3,
+     12
+    ],
+    "azimuthDeg": -21.256,
+    "elevationDeg": -57.954
+   },
+   {
+    "hex": [
+     3,
+     13
+    ],
+    "azimuthDeg": -24.328,
+    "elevationDeg": -58.537
+   },
+   {
+    "hex": [
+     3,
+     14
+    ],
+    "azimuthDeg": -27.399,
+    "elevationDeg": -59.12
+   },
+   {
+    "hex": [
+     3,
+     15
+    ],
+    "azimuthDeg": -30.47,
+    "elevationDeg": -59.702
+   },
+   {
+    "hex": [
+     4,
+     3
+    ],
+    "azimuthDeg": 5.869,
+    "elevationDeg": -48.757
+   },
+   {
+    "hex": [
+     4,
+     4
+    ],
+    "azimuthDeg": 2.798,
+    "elevationDeg": -49.34
+   },
+   {
+    "hex": [
+     4,
+     5
+    ],
+    "azimuthDeg": -0.273,
+    "elevationDeg": -49.922
+   },
+   {
+    "hex": [
+     4,
+     6
+    ],
+    "azimuthDeg": -3.344,
+    "elevationDeg": -50.505
+   },
+   {
+    "hex": [
+     4,
+     7
+    ],
+    "azimuthDeg": -6.415,
+    "elevationDeg": -51.088
+   },
+   {
+    "hex": [
+     4,
+     8
+    ],
+    "azimuthDeg": -9.486,
+    "elevationDeg": -51.67
+   },
+   {
+    "hex": [
+     4,
+     9
+    ],
+    "azimuthDeg": -12.557,
+    "elevationDeg": -52.253
+   },
+   {
+    "hex": [
+     4,
+     10
+    ],
+    "azimuthDeg": -15.628,
+    "elevationDeg": -52.835
+   },
+   {
+    "hex": [
+     4,
+     11
+    ],
+    "azimuthDeg": -18.699,
+    "elevationDeg": -53.418
+   },
+   {
+    "hex": [
+     4,
+     12
+    ],
+    "azimuthDeg": -21.77,
+    "elevationDeg": -54.001
+   },
+   {
+    "hex": [
+     4,
+     13
+    ],
+    "azimuthDeg": -24.841,
+    "elevationDeg": -54.583
+   },
+   {
+    "hex": [
+     4,
+     14
+    ],
+    "azimuthDeg": -27.912,
+    "elevationDeg": -55.166
+   },
+   {
+    "hex": [
+     4,
+     15
+    ],
+    "azimuthDeg": -30.983,
+    "elevationDeg": -55.749
+   },
+   {
+    "hex": [
+     4,
+     16
+    ],
+    "azimuthDeg": -34.054,
+    "elevationDeg": -56.331
+   },
+   {
+    "hex": [
+     4,
+     17
+    ],
+    "azimuthDeg": -37.125,
+    "elevationDeg": -56.914
+   },
+   {
+    "hex": [
+     4,
+     18
+    ],
+    "azimuthDeg": -40.196,
+    "elevationDeg": -57.496
+   },
+   {
+    "hex": [
+     5,
+     2
+    ],
+    "azimuthDeg": 8.426,
+    "elevationDeg": -44.221
+   },
+   {
+    "hex": [
+     5,
+     3
+    ],
+    "azimuthDeg": 5.355,
+    "elevationDeg": -44.803
+   },
+   {
+    "hex": [
+     5,
+     4
+    ],
+    "azimuthDeg": 2.284,
+    "elevationDeg": -45.386
+   },
+   {
+    "hex": [
+     5,
+     5
+    ],
+    "azimuthDeg": -0.787,
+    "elevationDeg": -45.969
+   },
+   {
+    "hex": [
+     5,
+     6
+    ],
+    "azimuthDeg": -3.858,
+    "elevationDeg": -46.551
+   },
+   {
+    "hex": [
+     5,
+     7
+    ],
+    "azimuthDeg": -6.929,
+    "elevationDeg": -47.134
+   },
+   {
+    "hex": [
+     5,
+     8
+    ],
+    "azimuthDeg": -10.0,
+    "elevationDeg": -47.717
+   },
+   {
+    "hex": [
+     5,
+     9
+    ],
+    "azimuthDeg": -13.071,
+    "elevationDeg": -48.299
+   },
+   {
+    "hex": [
+     5,
+     10
+    ],
+    "azimuthDeg": -16.142,
+    "elevationDeg": -48.882
+   },
+   {
+    "hex": [
+     5,
+     11
+    ],
+    "azimuthDeg": -19.213,
+    "elevationDeg": -49.464
+   },
+   {
+    "hex": [
+     5,
+     12
+    ],
+    "azimuthDeg": -22.284,
+    "elevationDeg": -50.047
+   },
+   {
+    "hex": [
+     5,
+     13
+    ],
+    "azimuthDeg": -25.355,
+    "elevationDeg": -50.63
+   },
+   {
+    "hex": [
+     5,
+     14
+    ],
+    "azimuthDeg": -28.426,
+    "elevationDeg": -51.212
+   },
+   {
+    "hex": [
+     5,
+     15
+    ],
+    "azimuthDeg": -31.497,
+    "elevationDeg": -51.795
+   },
+   {
+    "hex": [
+     5,
+     16
+    ],
+    "azimuthDeg": -34.568,
+    "elevationDeg": -52.377
+   },
+   {
+    "hex": [
+     5,
+     17
+    ],
+    "azimuthDeg": -37.639,
+    "elevationDeg": -52.96
+   },
+   {
+    "hex": [
+     5,
+     18
+    ],
+    "azimuthDeg": -40.71,
+    "elevationDeg": -53.543
+   },
+   {
+    "hex": [
+     5,
+     19
+    ],
+    "azimuthDeg": -43.781,
+    "elevationDeg": -54.125
+   },
+   {
+    "hex": [
+     5,
+     20
+    ],
+    "azimuthDeg": -46.852,
+    "elevationDeg": -54.708
+   },
+   {
+    "hex": [
+     6,
+     1
+    ],
+    "azimuthDeg": 10.983,
+    "elevationDeg": -39.684
+   },
+   {
+    "hex": [
+     6,
+     2
+    ],
+    "azimuthDeg": 7.912,
+    "elevationDeg": -40.267
+   },
+   {
+    "hex": [
+     6,
+     3
+    ],
+    "azimuthDeg": 4.841,
+    "elevationDeg": -40.85
+   },
+   {
+    "hex": [
+     6,
+     4
+    ],
+    "azimuthDeg": 1.77,
+    "elevationDeg": -41.432
+   },
+   {
+    "hex": [
+     6,
+     5
+    ],
+    "azimuthDeg": -1.301,
+    "elevationDeg": -42.015
+   },
+   {
+    "hex": [
+     6,
+     6
+    ],
+    "azimuthDeg": -4.372,
+    "elevationDeg": -42.598
+   },
+   {
+    "hex": [
+     6,
+     7
+    ],
+    "azimuthDeg": -7.443,
+    "elevationDeg": -43.18
+   },
+   {
+    "hex": [
+     6,
+     8
+    ],
+    "azimuthDeg": -10.514,
+    "elevationDeg": -43.763
+   },
+   {
+    "hex": [
+     6,
+     9
+    ],
+    "azimuthDeg": -13.585,
+    "elevationDeg": -44.345
+   },
+   {
+    "hex": [
+     6,
+     10
+    ],
+    "azimuthDeg": -16.656,
+    "elevationDeg": -44.928
+   },
+   {
+    "hex": [
+     6,
+     11
+    ],
+    "azimuthDeg": -19.727,
+    "elevationDeg": -45.511
+   },
+   {
+    "hex": [
+     6,
+     12
+    ],
+    "azimuthDeg": -22.798,
+    "elevationDeg": -46.093
+   },
+   {
+    "hex": [
+     6,
+     13
+    ],
+    "azimuthDeg": -25.869,
+    "elevationDeg": -46.676
+   },
+   {
+    "hex": [
+     6,
+     14
+    ],
+    "azimuthDeg": -28.94,
+    "elevationDeg": -47.258
+   },
+   {
+    "hex": [
+     6,
+     15
+    ],
+    "azimuthDeg": -32.011,
+    "elevationDeg": -47.841
+   },
+   {
+    "hex": [
+     6,
+     16
+    ],
+    "azimuthDeg": -35.082,
+    "elevationDeg": -48.424
+   },
+   {
+    "hex": [
+     6,
+     17
+    ],
+    "azimuthDeg": -38.153,
+    "elevationDeg": -49.006
+   },
+   {
+    "hex": [
+     6,
+     18
+    ],
+    "azimuthDeg": -41.224,
+    "elevationDeg": -49.589
+   },
+   {
+    "hex": [
+     6,
+     19
+    ],
+    "azimuthDeg": -44.295,
+    "elevationDeg": -50.171
+   },
+   {
+    "hex": [
+     6,
+     20
+    ],
+    "azimuthDeg": -47.366,
+    "elevationDeg": -50.754
+   },
+   {
+    "hex": [
+     6,
+     21
+    ],
+    "azimuthDeg": -50.437,
+    "elevationDeg": -51.337
+   },
+   {
+    "hex": [
+     6,
+     22
+    ],
+    "azimuthDeg": -53.508,
+    "elevationDeg": -51.919
+   },
+   {
+    "hex": [
+     7,
+     1
+    ],
+    "azimuthDeg": 10.469,
+    "elevationDeg": -35.731
+   },
+   {
+    "hex": [
+     7,
+     2
+    ],
+    "azimuthDeg": 7.398,
+    "elevationDeg": -36.313
+   },
+   {
+    "hex": [
+     7,
+     3
+    ],
+    "azimuthDeg": 4.327,
+    "elevationDeg": -36.896
+   },
+   {
+    "hex": [
+     7,
+     4
+    ],
+    "azimuthDeg": 1.256,
+    "elevationDeg": -37.479
+   },
+   {
+    "hex": [
+     7,
+     5
+    ],
+    "azimuthDeg": -1.815,
+    "elevationDeg": -38.061
+   },
+   {
+    "hex": [
+     7,
+     6
+    ],
+    "azimuthDeg": -4.886,
+    "elevationDeg": -38.644
+   },
+   {
+    "hex": [
+     7,
+     7
+    ],
+    "azimuthDeg": -7.957,
+    "elevationDeg": -39.226
+   },
+   {
+    "hex": [
+     7,
+     8
+    ],
+    "azimuthDeg": -11.028,
+    "elevationDeg": -39.809
+   },
+   {
+    "hex": [
+     7,
+     9
+    ],
+    "azimuthDeg": -14.099,
+    "elevationDeg": -40.392
+   },
+   {
+    "hex": [
+     7,
+     10
+    ],
+    "azimuthDeg": -17.17,
+    "elevationDeg": -40.974
+   },
+   {
+    "hex": [
+     7,
+     11
+    ],
+    "azimuthDeg": -20.241,
+    "elevationDeg": -41.557
+   },
+   {
+    "hex": [
+     7,
+     12
+    ],
+    "azimuthDeg": -23.312,
+    "elevationDeg": -42.139
+   },
+   {
+    "hex": [
+     7,
+     13
+    ],
+    "azimuthDeg": -26.383,
+    "elevationDeg": -42.722
+   },
+   {
+    "hex": [
+     7,
+     14
+    ],
+    "azimuthDeg": -29.454,
+    "elevationDeg": -43.305
+   },
+   {
+    "hex": [
+     7,
+     15
+    ],
+    "azimuthDeg": -32.525,
+    "elevationDeg": -43.887
+   },
+   {
+    "hex": [
+     7,
+     16
+    ],
+    "azimuthDeg": -35.596,
+    "elevationDeg": -44.47
+   },
+   {
+    "hex": [
+     7,
+     17
+    ],
+    "azimuthDeg": -38.667,
+    "elevationDeg": -45.052
+   },
+   {
+    "hex": [
+     7,
+     18
+    ],
+    "azimuthDeg": -41.738,
+    "elevationDeg": -45.635
+   },
+   {
+    "hex": [
+     7,
+     19
+    ],
+    "azimuthDeg": -44.809,
+    "elevationDeg": -46.218
+   },
+   {
+    "hex": [
+     7,
+     20
+    ],
+    "azimuthDeg": -47.88,
+    "elevationDeg": -46.8
+   },
+   {
+    "hex": [
+     7,
+     21
+    ],
+    "azimuthDeg": -50.951,
+    "elevationDeg": -47.383
+   },
+   {
+    "hex": [
+     7,
+     22
+    ],
+    "azimuthDeg": -54.022,
+    "elevationDeg": -47.966
+   },
+   {
+    "hex": [
+     7,
+     23
+    ],
+    "azimuthDeg": -57.093,
+    "elevationDeg": -48.548
+   },
+   {
+    "hex": [
+     7,
+     24
+    ],
+    "azimuthDeg": -60.164,
+    "elevationDeg": -49.131
+   },
+   {
+    "hex": [
+     8,
+     1
+    ],
+    "azimuthDeg": 9.955,
+    "elevationDeg": -31.777
+   },
+   {
+    "hex": [
+     8,
+     2
+    ],
+    "azimuthDeg": 6.884,
+    "elevationDeg": -32.36
+   },
+   {
+    "hex": [
+     8,
+     3
+    ],
+    "azimuthDeg": 3.813,
+    "elevationDeg": -32.942
+   },
+   {
+    "hex": [
+     8,
+     4
+    ],
+    "azimuthDeg": 0.742,
+    "elevationDeg": -33.525
+   },
+   {
+    "hex": [
+     8,
+     5
+    ],
+    "azimuthDeg": -2.329,
+    "elevationDeg": -34.107
+   },
+   {
+    "hex": [
+     8,
+     6
+    ],
+    "azimuthDeg": -5.4,
+    "elevationDeg": -34.69
+   },
+   {
+    "hex": [
+     8,
+     7
+    ],
+    "azimuthDeg": -8.471,
+    "elevationDeg": -35.273
+   },
+   {
+    "hex": [
+     8,
+     8
+    ],
+    "azimuthDeg": -11.542,
+    "elevationDeg": -35.855
+   },
+   {
+    "hex": [
+     8,
+     9
+    ],
+    "azimuthDeg": -14.613,
+    "elevationDeg": -36.438
+   },
+   {
+    "hex": [
+     8,
+     10
+    ],
+    "azimuthDeg": -17.684,
+    "elevationDeg": -37.02
+   },
+   {
+    "hex": [
+     8,
+     11
+    ],
+    "azimuthDeg": -20.755,
+    "elevationDeg": -37.603
+   },
+   {
+    "hex": [
+     8,
+     12
+    ],
+    "azimuthDeg": -23.826,
+    "elevationDeg": -38.186
+   },
+   {
+    "hex": [
+     8,
+     13
+    ],
+    "azimuthDeg": -26.897,
+    "elevationDeg": -38.768
+   },
+   {
+    "hex": [
+     8,
+     14
+    ],
+    "azimuthDeg": -29.968,
+    "elevationDeg": -39.351
+   },
+   {
+    "hex": [
+     8,
+     15
+    ],
+    "azimuthDeg": -33.039,
+    "elevationDeg": -39.933
+   },
+   {
+    "hex": [
+     8,
+     16
+    ],
+    "azimuthDeg": -36.11,
+    "elevationDeg": -40.516
+   },
+   {
+    "hex": [
+     8,
+     17
+    ],
+    "azimuthDeg": -39.181,
+    "elevationDeg": -41.099
+   },
+   {
+    "hex": [
+     8,
+     18
+    ],
+    "azimuthDeg": -42.252,
+    "elevationDeg": -41.681
+   },
+   {
+    "hex": [
+     8,
+     19
+    ],
+    "azimuthDeg": -45.323,
+    "elevationDeg": -42.264
+   },
+   {
+    "hex": [
+     8,
+     20
+    ],
+    "azimuthDeg": -48.394,
+    "elevationDeg": -42.847
+   },
+   {
+    "hex": [
+     8,
+     21
+    ],
+    "azimuthDeg": -51.465,
+    "elevationDeg": -43.429
+   },
+   {
+    "hex": [
+     8,
+     22
+    ],
+    "azimuthDeg": -54.536,
+    "elevationDeg": -44.012
+   },
+   {
+    "hex": [
+     8,
+     23
+    ],
+    "azimuthDeg": -57.607,
+    "elevationDeg": -44.594
+   },
+   {
+    "hex": [
+     8,
+     24
+    ],
+    "azimuthDeg": -60.678,
+    "elevationDeg": -45.177
+   },
+   {
+    "hex": [
+     8,
+     25
+    ],
+    "azimuthDeg": -63.749,
+    "elevationDeg": -45.76
+   },
+   {
+    "hex": [
+     8,
+     26
+    ],
+    "azimuthDeg": -66.82,
+    "elevationDeg": -46.342
+   },
+   {
+    "hex": [
+     9,
+     1
+    ],
+    "azimuthDeg": 9.441,
+    "elevationDeg": -27.823
+   },
+   {
+    "hex": [
+     9,
+     2
+    ],
+    "azimuthDeg": 6.37,
+    "elevationDeg": -28.406
+   },
+   {
+    "hex": [
+     9,
+     3
+    ],
+    "azimuthDeg": 3.299,
+    "elevationDeg": -28.988
+   },
+   {
+    "hex": [
+     9,
+     4
+    ],
+    "azimuthDeg": 0.228,
+    "elevationDeg": -29.571
+   },
+   {
+    "hex": [
+     9,
+     5
+    ],
+    "azimuthDeg": -2.843,
+    "elevationDeg": -30.154
+   },
+   {
+    "hex": [
+     9,
+     6
+    ],
+    "azimuthDeg": -5.914,
+    "elevationDeg": -30.736
+   },
+   {
+    "hex": [
+     9,
+     7
+    ],
+    "azimuthDeg": -8.985,
+    "elevationDeg": -31.319
+   },
+   {
+    "hex": [
+     9,
+     8
+    ],
+    "azimuthDeg": -12.056,
+    "elevationDeg": -31.901
+   },
+   {
+    "hex": [
+     9,
+     9
+    ],
+    "azimuthDeg": -15.127,
+    "elevationDeg": -32.484
+   },
+   {
+    "hex": [
+     9,
+     10
+    ],
+    "azimuthDeg": -18.198,
+    "elevationDeg": -33.067
+   },
+   {
+    "hex": [
+     9,
+     11
+    ],
+    "azimuthDeg": -21.269,
+    "elevationDeg": -33.649
+   },
+   {
+    "hex": [
+     9,
+     12
+    ],
+    "azimuthDeg": -24.34,
+    "elevationDeg": -34.232
+   },
+   {
+    "hex": [
+     9,
+     13
+    ],
+    "azimuthDeg": -27.411,
+    "elevationDeg": -34.815
+   },
+   {
+    "hex": [
+     9,
+     14
+    ],
+    "azimuthDeg": -30.482,
+    "elevationDeg": -35.397
+   },
+   {
+    "hex": [
+     9,
+     15
+    ],
+    "azimuthDeg": -33.553,
+    "elevationDeg": -35.98
+   },
+   {
+    "hex": [
+     9,
+     16
+    ],
+    "azimuthDeg": -36.624,
+    "elevationDeg": -36.562
+   },
+   {
+    "hex": [
+     9,
+     17
+    ],
+    "azimuthDeg": -39.695,
+    "elevationDeg": -37.145
+   },
+   {
+    "hex": [
+     9,
+     18
+    ],
+    "azimuthDeg": -42.766,
+    "elevationDeg": -37.728
+   },
+   {
+    "hex": [
+     9,
+     19
+    ],
+    "azimuthDeg": -45.837,
+    "elevationDeg": -38.31
+   },
+   {
+    "hex": [
+     9,
+     20
+    ],
+    "azimuthDeg": -48.908,
+    "elevationDeg": -38.893
+   },
+   {
+    "hex": [
+     9,
+     21
+    ],
+    "azimuthDeg": -51.979,
+    "elevationDeg": -39.475
+   },
+   {
+    "hex": [
+     9,
+     22
+    ],
+    "azimuthDeg": -55.05,
+    "elevationDeg": -40.058
+   },
+   {
+    "hex": [
+     9,
+     23
+    ],
+    "azimuthDeg": -58.121,
+    "elevationDeg": -40.641
+   },
+   {
+    "hex": [
+     9,
+     24
+    ],
+    "azimuthDeg": -61.192,
+    "elevationDeg": -41.223
+   },
+   {
+    "hex": [
+     9,
+     25
+    ],
+    "azimuthDeg": -64.263,
+    "elevationDeg": -41.806
+   },
+   {
+    "hex": [
+     9,
+     26
+    ],
+    "azimuthDeg": -67.334,
+    "elevationDeg": -42.388
+   },
+   {
+    "hex": [
+     9,
+     27
+    ],
+    "azimuthDeg": -70.405,
+    "elevationDeg": -42.971
+   },
+   {
+    "hex": [
+     9,
+     28
+    ],
+    "azimuthDeg": -73.476,
+    "elevationDeg": -43.554
+   },
+   {
+    "hex": [
+     10,
+     1
+    ],
+    "azimuthDeg": 8.927,
+    "elevationDeg": -23.869
+   },
+   {
+    "hex": [
+     10,
+     2
+    ],
+    "azimuthDeg": 5.856,
+    "elevationDeg": -24.452
+   },
+   {
+    "hex": [
+     10,
+     3
+    ],
+    "azimuthDeg": 2.785,
+    "elevationDeg": -25.035
+   },
+   {
+    "hex": [
+     10,
+     4
+    ],
+    "azimuthDeg": -0.286,
+    "elevationDeg": -25.617
+   },
+   {
+    "hex": [
+     10,
+     5
+    ],
+    "azimuthDeg": -3.357,
+    "elevationDeg": -26.2
+   },
+   {
+    "hex": [
+     10,
+     6
+    ],
+    "azimuthDeg": -6.428,
+    "elevationDeg": -26.782
+   },
+   {
+    "hex": [
+     10,
+     7
+    ],
+    "azimuthDeg": -9.499,
+    "elevationDeg": -27.365
+   },
+   {
+    "hex": [
+     10,
+     8
+    ],
+    "azimuthDeg": -12.57,
+    "elevationDeg": -27.948
+   },
+   {
+    "hex": [
+     10,
+     9
+    ],
+    "azimuthDeg": -15.641,
+    "elevationDeg": -28.53
+   },
+   {
+    "hex": [
+     10,
+     10
+    ],
+    "azimuthDeg": -18.712,
+    "elevationDeg": -29.113
+   },
+   {
+    "hex": [
+     10,
+     11
+    ],
+    "azimuthDeg": -21.783,
+    "elevationDeg": -29.696
+   },
+   {
+    "hex": [
+     10,
+     12
+    ],
+    "azimuthDeg": -24.854,
+    "elevationDeg": -30.278
+   },
+   {
+    "hex": [
+     10,
+     13
+    ],
+    "azimuthDeg": -27.925,
+    "elevationDeg": -30.861
+   },
+   {
+    "hex": [
+     10,
+     14
+    ],
+    "azimuthDeg": -30.996,
+    "elevationDeg": -31.443
+   },
+   {
+    "hex": [
+     10,
+     15
+    ],
+    "azimuthDeg": -34.067,
+    "elevationDeg": -32.026
+   },
+   {
+    "hex": [
+     10,
+     16
+    ],
+    "azimuthDeg": -37.138,
+    "elevationDeg": -32.609
+   },
+   {
+    "hex": [
+     10,
+     17
+    ],
+    "azimuthDeg": -40.209,
+    "elevationDeg": -33.191
+   },
+   {
+    "hex": [
+     10,
+     18
+    ],
+    "azimuthDeg": -43.28,
+    "elevationDeg": -33.774
+   },
+   {
+    "hex": [
+     10,
+     19
+    ],
+    "azimuthDeg": -46.351,
+    "elevationDeg": -34.356
+   },
+   {
+    "hex": [
+     10,
+     20
+    ],
+    "azimuthDeg": -49.422,
+    "elevationDeg": -34.939
+   },
+   {
+    "hex": [
+     10,
+     21
+    ],
+    "azimuthDeg": -52.493,
+    "elevationDeg": -35.522
+   },
+   {
+    "hex": [
+     10,
+     22
+    ],
+    "azimuthDeg": -55.564,
+    "elevationDeg": -36.104
+   },
+   {
+    "hex": [
+     10,
+     23
+    ],
+    "azimuthDeg": -58.635,
+    "elevationDeg": -36.687
+   },
+   {
+    "hex": [
+     10,
+     24
+    ],
+    "azimuthDeg": -61.706,
+    "elevationDeg": -37.269
+   },
+   {
+    "hex": [
+     10,
+     25
+    ],
+    "azimuthDeg": -64.777,
+    "elevationDeg": -37.852
+   },
+   {
+    "hex": [
+     10,
+     26
+    ],
+    "azimuthDeg": -67.848,
+    "elevationDeg": -38.435
+   },
+   {
+    "hex": [
+     10,
+     27
+    ],
+    "azimuthDeg": -70.919,
+    "elevationDeg": -39.017
+   },
+   {
+    "hex": [
+     10,
+     28
+    ],
+    "azimuthDeg": -73.99,
+    "elevationDeg": -39.6
+   },
+   {
+    "hex": [
+     10,
+     29
+    ],
+    "azimuthDeg": -77.061,
+    "elevationDeg": -40.182
+   },
+   {
+    "hex": [
+     11,
+     1
+    ],
+    "azimuthDeg": 8.413,
+    "elevationDeg": -19.916
+   },
+   {
+    "hex": [
+     11,
+     2
+    ],
+    "azimuthDeg": 5.342,
+    "elevationDeg": -20.498
+   },
+   {
+    "hex": [
+     11,
+     3
+    ],
+    "azimuthDeg": 2.271,
+    "elevationDeg": -21.081
+   },
+   {
+    "hex": [
+     11,
+     4
+    ],
+    "azimuthDeg": -0.8,
+    "elevationDeg": -21.663
+   },
+   {
+    "hex": [
+     11,
+     5
+    ],
+    "azimuthDeg": -3.871,
+    "elevationDeg": -22.246
+   },
+   {
+    "hex": [
+     11,
+     6
+    ],
+    "azimuthDeg": -6.942,
+    "elevationDeg": -22.829
+   },
+   {
+    "hex": [
+     11,
+     7
+    ],
+    "azimuthDeg": -10.013,
+    "elevationDeg": -23.411
+   },
+   {
+    "hex": [
+     11,
+     8
+    ],
+    "azimuthDeg": -13.084,
+    "elevationDeg": -23.994
+   },
+   {
+    "hex": [
+     11,
+     9
+    ],
+    "azimuthDeg": -16.155,
+    "elevationDeg": -24.577
+   },
+   {
+    "hex": [
+     11,
+     10
+    ],
+    "azimuthDeg": -19.226,
+    "elevationDeg": -25.159
+   },
+   {
+    "hex": [
+     11,
+     11
+    ],
+    "azimuthDeg": -22.297,
+    "elevationDeg": -25.742
+   },
+   {
+    "hex": [
+     11,
+     12
+    ],
+    "azimuthDeg": -25.368,
+    "elevationDeg": -26.324
+   },
+   {
+    "hex": [
+     11,
+     13
+    ],
+    "azimuthDeg": -28.439,
+    "elevationDeg": -26.907
+   },
+   {
+    "hex": [
+     11,
+     14
+    ],
+    "azimuthDeg": -31.51,
+    "elevationDeg": -27.49
+   },
+   {
+    "hex": [
+     11,
+     15
+    ],
+    "azimuthDeg": -34.581,
+    "elevationDeg": -28.072
+   },
+   {
+    "hex": [
+     11,
+     16
+    ],
+    "azimuthDeg": -37.652,
+    "elevationDeg": -28.655
+   },
+   {
+    "hex": [
+     11,
+     17
+    ],
+    "azimuthDeg": -40.723,
+    "elevationDeg": -29.237
+   },
+   {
+    "hex": [
+     11,
+     18
+    ],
+    "azimuthDeg": -43.794,
+    "elevationDeg": -29.82
+   },
+   {
+    "hex": [
+     11,
+     19
+    ],
+    "azimuthDeg": -46.865,
+    "elevationDeg": -30.403
+   },
+   {
+    "hex": [
+     11,
+     20
+    ],
+    "azimuthDeg": -49.936,
+    "elevationDeg": -30.985
+   },
+   {
+    "hex": [
+     11,
+     21
+    ],
+    "azimuthDeg": -53.007,
+    "elevationDeg": -31.568
+   },
+   {
+    "hex": [
+     11,
+     22
+    ],
+    "azimuthDeg": -56.078,
+    "elevationDeg": -32.15
+   },
+   {
+    "hex": [
+     11,
+     23
+    ],
+    "azimuthDeg": -59.149,
+    "elevationDeg": -32.733
+   },
+   {
+    "hex": [
+     11,
+     24
+    ],
+    "azimuthDeg": -62.22,
+    "elevationDeg": -33.316
+   },
+   {
+    "hex": [
+     11,
+     25
+    ],
+    "azimuthDeg": -65.291,
+    "elevationDeg": -33.898
+   },
+   {
+    "hex": [
+     11,
+     26
+    ],
+    "azimuthDeg": -68.362,
+    "elevationDeg": -34.481
+   },
+   {
+    "hex": [
+     11,
+     27
+    ],
+    "azimuthDeg": -71.433,
+    "elevationDeg": -35.064
+   },
+   {
+    "hex": [
+     11,
+     28
+    ],
+    "azimuthDeg": -74.504,
+    "elevationDeg": -35.646
+   },
+   {
+    "hex": [
+     11,
+     29
+    ],
+    "azimuthDeg": -77.575,
+    "elevationDeg": -36.229
+   },
+   {
+    "hex": [
+     11,
+     30
+    ],
+    "azimuthDeg": -80.646,
+    "elevationDeg": -36.811
+   },
+   {
+    "hex": [
+     12,
+     1
+    ],
+    "azimuthDeg": 7.9,
+    "elevationDeg": -15.962
+   },
+   {
+    "hex": [
+     12,
+     2
+    ],
+    "azimuthDeg": 4.829,
+    "elevationDeg": -16.545
+   },
+   {
+    "hex": [
+     12,
+     3
+    ],
+    "azimuthDeg": 1.758,
+    "elevationDeg": -17.127
+   },
+   {
+    "hex": [
+     12,
+     4
+    ],
+    "azimuthDeg": -1.313,
+    "elevationDeg": -17.71
+   },
+   {
+    "hex": [
+     12,
+     5
+    ],
+    "azimuthDeg": -4.384,
+    "elevationDeg": -18.292
+   },
+   {
+    "hex": [
+     12,
+     6
+    ],
+    "azimuthDeg": -7.456,
+    "elevationDeg": -18.875
+   },
+   {
+    "hex": [
+     12,
+     7
+    ],
+    "azimuthDeg": -10.527,
+    "elevationDeg": -19.458
+   },
+   {
+    "hex": [
+     12,
+     8
+    ],
+    "azimuthDeg": -13.598,
+    "elevationDeg": -20.04
+   },
+   {
+    "hex": [
+     12,
+     9
+    ],
+    "azimuthDeg": -16.669,
+    "elevationDeg": -20.623
+   },
+   {
+    "hex": [
+     12,
+     10
+    ],
+    "azimuthDeg": -19.74,
+    "elevationDeg": -21.205
+   },
+   {
+    "hex": [
+     12,
+     11
+    ],
+    "azimuthDeg": -22.811,
+    "elevationDeg": -21.788
+   },
+   {
+    "hex": [
+     12,
+     12
+    ],
+    "azimuthDeg": -25.882,
+    "elevationDeg": -22.371
+   },
+   {
+    "hex": [
+     12,
+     13
+    ],
+    "azimuthDeg": -28.953,
+    "elevationDeg": -22.953
+   },
+   {
+    "hex": [
+     12,
+     14
+    ],
+    "azimuthDeg": -32.024,
+    "elevationDeg": -23.536
+   },
+   {
+    "hex": [
+     12,
+     15
+    ],
+    "azimuthDeg": -35.095,
+    "elevationDeg": -24.118
+   },
+   {
+    "hex": [
+     12,
+     16
+    ],
+    "azimuthDeg": -38.166,
+    "elevationDeg": -24.701
+   },
+   {
+    "hex": [
+     12,
+     17
+    ],
+    "azimuthDeg": -41.237,
+    "elevationDeg": -25.284
+   },
+   {
+    "hex": [
+     12,
+     18
+    ],
+    "azimuthDeg": -44.308,
+    "elevationDeg": -25.866
+   },
+   {
+    "hex": [
+     12,
+     19
+    ],
+    "azimuthDeg": -47.379,
+    "elevationDeg": -26.449
+   },
+   {
+    "hex": [
+     12,
+     20
+    ],
+    "azimuthDeg": -50.45,
+    "elevationDeg": -27.031
+   },
+   {
+    "hex": [
+     12,
+     21
+    ],
+    "azimuthDeg": -53.521,
+    "elevationDeg": -27.614
+   },
+   {
+    "hex": [
+     12,
+     22
+    ],
+    "azimuthDeg": -56.592,
+    "elevationDeg": -28.197
+   },
+   {
+    "hex": [
+     12,
+     23
+    ],
+    "azimuthDeg": -59.663,
+    "elevationDeg": -28.779
+   },
+   {
+    "hex": [
+     12,
+     24
+    ],
+    "azimuthDeg": -62.734,
+    "elevationDeg": -29.362
+   },
+   {
+    "hex": [
+     12,
+     25
+    ],
+    "azimuthDeg": -65.805,
+    "elevationDeg": -29.945
+   },
+   {
+    "hex": [
+     12,
+     26
+    ],
+    "azimuthDeg": -68.876,
+    "elevationDeg": -30.527
+   },
+   {
+    "hex": [
+     12,
+     27
+    ],
+    "azimuthDeg": -71.947,
+    "elevationDeg": -31.11
+   },
+   {
+    "hex": [
+     12,
+     28
+    ],
+    "azimuthDeg": -75.018,
+    "elevationDeg": -31.692
+   },
+   {
+    "hex": [
+     12,
+     29
+    ],
+    "azimuthDeg": -78.089,
+    "elevationDeg": -32.275
+   },
+   {
+    "hex": [
+     12,
+     30
+    ],
+    "azimuthDeg": -81.16,
+    "elevationDeg": -32.858
+   },
+   {
+    "hex": [
+     12,
+     31
+    ],
+    "azimuthDeg": -84.231,
+    "elevationDeg": -33.44
+   },
+   {
+    "hex": [
+     13,
+     1
+    ],
+    "azimuthDeg": 7.386,
+    "elevationDeg": -12.008
+   },
+   {
+    "hex": [
+     13,
+     2
+    ],
+    "azimuthDeg": 4.315,
+    "elevationDeg": -12.591
+   },
+   {
+    "hex": [
+     13,
+     3
+    ],
+    "azimuthDeg": 1.244,
+    "elevationDeg": -13.173
+   },
+   {
+    "hex": [
+     13,
+     4
+    ],
+    "azimuthDeg": -1.827,
+    "elevationDeg": -13.756
+   },
+   {
+    "hex": [
+     13,
+     5
+    ],
+    "azimuthDeg": -4.898,
+    "elevationDeg": -14.339
+   },
+   {
+    "hex": [
+     13,
+     6
+    ],
+    "azimuthDeg": -7.969,
+    "elevationDeg": -14.921
+   },
+   {
+    "hex": [
+     13,
+     7
+    ],
+    "azimuthDeg": -11.04,
+    "elevationDeg": -15.504
+   },
+   {
+    "hex": [
+     13,
+     8
+    ],
+    "azimuthDeg": -14.111,
+    "elevationDeg": -16.086
+   },
+   {
+    "hex": [
+     13,
+     9
+    ],
+    "azimuthDeg": -17.182,
+    "elevationDeg": -16.669
+   },
+   {
+    "hex": [
+     13,
+     10
+    ],
+    "azimuthDeg": -20.253,
+    "elevationDeg": -17.252
+   },
+   {
+    "hex": [
+     13,
+     11
+    ],
+    "azimuthDeg": -23.324,
+    "elevationDeg": -17.834
+   },
+   {
+    "hex": [
+     13,
+     12
+    ],
+    "azimuthDeg": -26.396,
+    "elevationDeg": -18.417
+   },
+   {
+    "hex": [
+     13,
+     13
+    ],
+    "azimuthDeg": -29.467,
+    "elevationDeg": -18.999
+   },
+   {
+    "hex": [
+     13,
+     14
+    ],
+    "azimuthDeg": -32.538,
+    "elevationDeg": -19.582
+   },
+   {
+    "hex": [
+     13,
+     15
+    ],
+    "azimuthDeg": -35.609,
+    "elevationDeg": -20.165
+   },
+   {
+    "hex": [
+     13,
+     16
+    ],
+    "azimuthDeg": -38.68,
+    "elevationDeg": -20.747
+   },
+   {
+    "hex": [
+     13,
+     17
+    ],
+    "azimuthDeg": -41.751,
+    "elevationDeg": -21.33
+   },
+   {
+    "hex": [
+     13,
+     18
+    ],
+    "azimuthDeg": -44.822,
+    "elevationDeg": -21.912
+   },
+   {
+    "hex": [
+     13,
+     19
+    ],
+    "azimuthDeg": -47.893,
+    "elevationDeg": -22.495
+   },
+   {
+    "hex": [
+     13,
+     20
+    ],
+    "azimuthDeg": -50.964,
+    "elevationDeg": -23.078
+   },
+   {
+    "hex": [
+     13,
+     21
+    ],
+    "azimuthDeg": -54.035,
+    "elevationDeg": -23.66
+   },
+   {
+    "hex": [
+     13,
+     22
+    ],
+    "azimuthDeg": -57.106,
+    "elevationDeg": -24.243
+   },
+   {
+    "hex": [
+     13,
+     23
+    ],
+    "azimuthDeg": -60.177,
+    "elevationDeg": -24.826
+   },
+   {
+    "hex": [
+     13,
+     24
+    ],
+    "azimuthDeg": -63.248,
+    "elevationDeg": -25.408
+   },
+   {
+    "hex": [
+     13,
+     25
+    ],
+    "azimuthDeg": -66.319,
+    "elevationDeg": -25.991
+   },
+   {
+    "hex": [
+     13,
+     26
+    ],
+    "azimuthDeg": -69.39,
+    "elevationDeg": -26.573
+   },
+   {
+    "hex": [
+     13,
+     27
+    ],
+    "azimuthDeg": -72.461,
+    "elevationDeg": -27.156
+   },
+   {
+    "hex": [
+     13,
+     28
+    ],
+    "azimuthDeg": -75.532,
+    "elevationDeg": -27.739
+   },
+   {
+    "hex": [
+     13,
+     29
+    ],
+    "azimuthDeg": -78.603,
+    "elevationDeg": -28.321
+   },
+   {
+    "hex": [
+     13,
+     30
+    ],
+    "azimuthDeg": -81.674,
+    "elevationDeg": -28.904
+   },
+   {
+    "hex": [
+     13,
+     31
+    ],
+    "azimuthDeg": -84.745,
+    "elevationDeg": -29.486
+   },
+   {
+    "hex": [
+     13,
+     32
+    ],
+    "azimuthDeg": -87.816,
+    "elevationDeg": -30.069
+   },
+   {
+    "hex": [
+     14,
+     2
+    ],
+    "azimuthDeg": 3.801,
+    "elevationDeg": -8.637
+   },
+   {
+    "hex": [
+     14,
+     3
+    ],
+    "azimuthDeg": 0.73,
+    "elevationDeg": -9.22
+   },
+   {
+    "hex": [
+     14,
+     4
+    ],
+    "azimuthDeg": -2.341,
+    "elevationDeg": -9.802
+   },
+   {
+    "hex": [
+     14,
+     5
+    ],
+    "azimuthDeg": -5.412,
+    "elevationDeg": -10.385
+   },
+   {
+    "hex": [
+     14,
+     6
+    ],
+    "azimuthDeg": -8.483,
+    "elevationDeg": -10.967
+   },
+   {
+    "hex": [
+     14,
+     7
+    ],
+    "azimuthDeg": -11.554,
+    "elevationDeg": -11.55
+   },
+   {
+    "hex": [
+     14,
+     8
+    ],
+    "azimuthDeg": -14.625,
+    "elevationDeg": -12.133
+   },
+   {
+    "hex": [
+     14,
+     9
+    ],
+    "azimuthDeg": -17.696,
+    "elevationDeg": -12.715
+   },
+   {
+    "hex": [
+     14,
+     10
+    ],
+    "azimuthDeg": -20.767,
+    "elevationDeg": -13.298
+   },
+   {
+    "hex": [
+     14,
+     11
+    ],
+    "azimuthDeg": -23.838,
+    "elevationDeg": -13.88
+   },
+   {
+    "hex": [
+     14,
+     12
+    ],
+    "azimuthDeg": -26.909,
+    "elevationDeg": -14.463
+   },
+   {
+    "hex": [
+     14,
+     13
+    ],
+    "azimuthDeg": -29.98,
+    "elevationDeg": -15.046
+   },
+   {
+    "hex": [
+     14,
+     14
+    ],
+    "azimuthDeg": -33.051,
+    "elevationDeg": -15.628
+   },
+   {
+    "hex": [
+     14,
+     15
+    ],
+    "azimuthDeg": -36.122,
+    "elevationDeg": -16.211
+   },
+   {
+    "hex": [
+     14,
+     16
+    ],
+    "azimuthDeg": -39.193,
+    "elevationDeg": -16.794
+   },
+   {
+    "hex": [
+     14,
+     17
+    ],
+    "azimuthDeg": -42.264,
+    "elevationDeg": -17.376
+   },
+   {
+    "hex": [
+     14,
+     18
+    ],
+    "azimuthDeg": -45.336,
+    "elevationDeg": -17.959
+   },
+   {
+    "hex": [
+     14,
+     19
+    ],
+    "azimuthDeg": -48.407,
+    "elevationDeg": -18.541
+   },
+   {
+    "hex": [
+     14,
+     20
+    ],
+    "azimuthDeg": -51.478,
+    "elevationDeg": -19.124
+   },
+   {
+    "hex": [
+     14,
+     21
+    ],
+    "azimuthDeg": -54.549,
+    "elevationDeg": -19.707
+   },
+   {
+    "hex": [
+     14,
+     22
+    ],
+    "azimuthDeg": -57.62,
+    "elevationDeg": -20.289
+   },
+   {
+    "hex": [
+     14,
+     23
+    ],
+    "azimuthDeg": -60.691,
+    "elevationDeg": -20.872
+   },
+   {
+    "hex": [
+     14,
+     24
+    ],
+    "azimuthDeg": -63.762,
+    "elevationDeg": -21.454
+   },
+   {
+    "hex": [
+     14,
+     25
+    ],
+    "azimuthDeg": -66.833,
+    "elevationDeg": -22.037
+   },
+   {
+    "hex": [
+     14,
+     26
+    ],
+    "azimuthDeg": -69.904,
+    "elevationDeg": -22.62
+   },
+   {
+    "hex": [
+     14,
+     27
+    ],
+    "azimuthDeg": -72.975,
+    "elevationDeg": -23.202
+   },
+   {
+    "hex": [
+     14,
+     28
+    ],
+    "azimuthDeg": -76.046,
+    "elevationDeg": -23.785
+   },
+   {
+    "hex": [
+     14,
+     29
+    ],
+    "azimuthDeg": -79.117,
+    "elevationDeg": -24.367
+   },
+   {
+    "hex": [
+     14,
+     30
+    ],
+    "azimuthDeg": -82.188,
+    "elevationDeg": -24.95
+   },
+   {
+    "hex": [
+     14,
+     31
+    ],
+    "azimuthDeg": -85.259,
+    "elevationDeg": -25.533
+   },
+   {
+    "hex": [
+     14,
+     32
+    ],
+    "azimuthDeg": -88.33,
+    "elevationDeg": -26.115
+   },
+   {
+    "hex": [
+     15,
+     2
+    ],
+    "azimuthDeg": 3.287,
+    "elevationDeg": -4.683
+   },
+   {
+    "hex": [
+     15,
+     3
+    ],
+    "azimuthDeg": 0.216,
+    "elevationDeg": -5.266
+   },
+   {
+    "hex": [
+     15,
+     4
+    ],
+    "azimuthDeg": -2.855,
+    "elevationDeg": -5.848
+   },
+   {
+    "hex": [
+     15,
+     5
+    ],
+    "azimuthDeg": -5.926,
+    "elevationDeg": -6.431
+   },
+   {
+    "hex": [
+     15,
+     6
+    ],
+    "azimuthDeg": -8.997,
+    "elevationDeg": -7.014
+   },
+   {
+    "hex": [
+     15,
+     7
+    ],
+    "azimuthDeg": -12.068,
+    "elevationDeg": -7.596
+   },
+   {
+    "hex": [
+     15,
+     8
+    ],
+    "azimuthDeg": -15.139,
+    "elevationDeg": -8.179
+   },
+   {
+    "hex": [
+     15,
+     9
+    ],
+    "azimuthDeg": -18.21,
+    "elevationDeg": -8.761
+   },
+   {
+    "hex": [
+     15,
+     10
+    ],
+    "azimuthDeg": -21.281,
+    "elevationDeg": -9.344
+   },
+   {
+    "hex": [
+     15,
+     11
+    ],
+    "azimuthDeg": -24.352,
+    "elevationDeg": -9.927
+   },
+   {
+    "hex": [
+     15,
+     12
+    ],
+    "azimuthDeg": -27.423,
+    "elevationDeg": -10.509
+   },
+   {
+    "hex": [
+     15,
+     13
+    ],
+    "azimuthDeg": -30.494,
+    "elevationDeg": -11.092
+   },
+   {
+    "hex": [
+     15,
+     14
+    ],
+    "azimuthDeg": -33.565,
+    "elevationDeg": -11.675
+   },
+   {
+    "hex": [
+     15,
+     15
+    ],
+    "azimuthDeg": -36.636,
+    "elevationDeg": -12.257
+   },
+   {
+    "hex": [
+     15,
+     16
+    ],
+    "azimuthDeg": -39.707,
+    "elevationDeg": -12.84
+   },
+   {
+    "hex": [
+     15,
+     17
+    ],
+    "azimuthDeg": -42.778,
+    "elevationDeg": -13.422
+   },
+   {
+    "hex": [
+     15,
+     18
+    ],
+    "azimuthDeg": -45.849,
+    "elevationDeg": -14.005
+   },
+   {
+    "hex": [
+     15,
+     19
+    ],
+    "azimuthDeg": -48.92,
+    "elevationDeg": -14.588
+   },
+   {
+    "hex": [
+     15,
+     20
+    ],
+    "azimuthDeg": -51.991,
+    "elevationDeg": -15.17
+   },
+   {
+    "hex": [
+     15,
+     21
+    ],
+    "azimuthDeg": -55.062,
+    "elevationDeg": -15.753
+   },
+   {
+    "hex": [
+     15,
+     22
+    ],
+    "azimuthDeg": -58.133,
+    "elevationDeg": -16.335
+   },
+   {
+    "hex": [
+     15,
+     23
+    ],
+    "azimuthDeg": -61.204,
+    "elevationDeg": -16.918
+   },
+   {
+    "hex": [
+     15,
+     24
+    ],
+    "azimuthDeg": -64.276,
+    "elevationDeg": -17.501
+   },
+   {
+    "hex": [
+     15,
+     25
+    ],
+    "azimuthDeg": -67.347,
+    "elevationDeg": -18.083
+   },
+   {
+    "hex": [
+     15,
+     26
+    ],
+    "azimuthDeg": -70.418,
+    "elevationDeg": -18.666
+   },
+   {
+    "hex": [
+     15,
+     27
+    ],
+    "azimuthDeg": -73.489,
+    "elevationDeg": -19.248
+   },
+   {
+    "hex": [
+     15,
+     28
+    ],
+    "azimuthDeg": -76.56,
+    "elevationDeg": -19.831
+   },
+   {
+    "hex": [
+     15,
+     29
+    ],
+    "azimuthDeg": -79.631,
+    "elevationDeg": -20.414
+   },
+   {
+    "hex": [
+     15,
+     30
+    ],
+    "azimuthDeg": -82.702,
+    "elevationDeg": -20.996
+   },
+   {
+    "hex": [
+     15,
+     31
+    ],
+    "azimuthDeg": -85.773,
+    "elevationDeg": -21.579
+   },
+   {
+    "hex": [
+     15,
+     32
+    ],
+    "azimuthDeg": -88.844,
+    "elevationDeg": -22.161
+   },
+   {
+    "hex": [
+     15,
+     33
+    ],
+    "azimuthDeg": -91.915,
+    "elevationDeg": -22.744
+   },
+   {
+    "hex": [
+     16,
+     3
+    ],
+    "azimuthDeg": -0.298,
+    "elevationDeg": -1.312
+   },
+   {
+    "hex": [
+     16,
+     4
+    ],
+    "azimuthDeg": -3.369,
+    "elevationDeg": -1.895
+   },
+   {
+    "hex": [
+     16,
+     5
+    ],
+    "azimuthDeg": -6.44,
+    "elevationDeg": -2.477
+   },
+   {
+    "hex": [
+     16,
+     6
+    ],
+    "azimuthDeg": -9.511,
+    "elevationDeg": -3.06
+   },
+   {
+    "hex": [
+     16,
+     7
+    ],
+    "azimuthDeg": -12.582,
+    "elevationDeg": -3.643
+   },
+   {
+    "hex": [
+     16,
+     8
+    ],
+    "azimuthDeg": -15.653,
+    "elevationDeg": -4.225
+   },
+   {
+    "hex": [
+     16,
+     9
+    ],
+    "azimuthDeg": -18.724,
+    "elevationDeg": -4.808
+   },
+   {
+    "hex": [
+     16,
+     10
+    ],
+    "azimuthDeg": -21.795,
+    "elevationDeg": -5.39
+   },
+   {
+    "hex": [
+     16,
+     11
+    ],
+    "azimuthDeg": -24.866,
+    "elevationDeg": -5.973
+   },
+   {
+    "hex": [
+     16,
+     12
+    ],
+    "azimuthDeg": -27.937,
+    "elevationDeg": -6.556
+   },
+   {
+    "hex": [
+     16,
+     13
+    ],
+    "azimuthDeg": -31.008,
+    "elevationDeg": -7.138
+   },
+   {
+    "hex": [
+     16,
+     14
+    ],
+    "azimuthDeg": -34.079,
+    "elevationDeg": -7.721
+   },
+   {
+    "hex": [
+     16,
+     15
+    ],
+    "azimuthDeg": -37.15,
+    "elevationDeg": -8.303
+   },
+   {
+    "hex": [
+     16,
+     16
+    ],
+    "azimuthDeg": -40.221,
+    "elevationDeg": -8.886
+   },
+   {
+    "hex": [
+     16,
+     17
+    ],
+    "azimuthDeg": -43.292,
+    "elevationDeg": -9.469
+   },
+   {
+    "hex": [
+     16,
+     18
+    ],
+    "azimuthDeg": -46.363,
+    "elevationDeg": -10.051
+   },
+   {
+    "hex": [
+     16,
+     19
+    ],
+    "azimuthDeg": -49.434,
+    "elevationDeg": -10.634
+   },
+   {
+    "hex": [
+     16,
+     20
+    ],
+    "azimuthDeg": -52.505,
+    "elevationDeg": -11.216
+   },
+   {
+    "hex": [
+     16,
+     21
+    ],
+    "azimuthDeg": -55.576,
+    "elevationDeg": -11.799
+   },
+   {
+    "hex": [
+     16,
+     22
+    ],
+    "azimuthDeg": -58.647,
+    "elevationDeg": -12.382
+   },
+   {
+    "hex": [
+     16,
+     23
+    ],
+    "azimuthDeg": -61.718,
+    "elevationDeg": -12.964
+   },
+   {
+    "hex": [
+     16,
+     24
+    ],
+    "azimuthDeg": -64.789,
+    "elevationDeg": -13.547
+   },
+   {
+    "hex": [
+     16,
+     25
+    ],
+    "azimuthDeg": -67.86,
+    "elevationDeg": -14.129
+   },
+   {
+    "hex": [
+     16,
+     26
+    ],
+    "azimuthDeg": -70.931,
+    "elevationDeg": -14.712
+   },
+   {
+    "hex": [
+     16,
+     27
+    ],
+    "azimuthDeg": -74.002,
+    "elevationDeg": -15.295
+   },
+   {
+    "hex": [
+     16,
+     28
+    ],
+    "azimuthDeg": -77.073,
+    "elevationDeg": -15.877
+   },
+   {
+    "hex": [
+     16,
+     29
+    ],
+    "azimuthDeg": -80.144,
+    "elevationDeg": -16.46
+   },
+   {
+    "hex": [
+     16,
+     30
+    ],
+    "azimuthDeg": -83.215,
+    "elevationDeg": -17.043
+   },
+   {
+    "hex": [
+     16,
+     31
+    ],
+    "azimuthDeg": -86.287,
+    "elevationDeg": -17.625
+   },
+   {
+    "hex": [
+     16,
+     32
+    ],
+    "azimuthDeg": -89.358,
+    "elevationDeg": -18.208
+   },
+   {
+    "hex": [
+     16,
+     33
+    ],
+    "azimuthDeg": -92.429,
+    "elevationDeg": -18.79
+   },
+   {
+    "hex": [
+     17,
+     3
+    ],
+    "azimuthDeg": -0.812,
+    "elevationDeg": 2.642
+   },
+   {
+    "hex": [
+     17,
+     4
+    ],
+    "azimuthDeg": -3.883,
+    "elevationDeg": 2.059
+   },
+   {
+    "hex": [
+     17,
+     5
+    ],
+    "azimuthDeg": -6.954,
+    "elevationDeg": 1.476
+   },
+   {
+    "hex": [
+     17,
+     6
+    ],
+    "azimuthDeg": -10.025,
+    "elevationDeg": 0.894
+   },
+   {
+    "hex": [
+     17,
+     7
+    ],
+    "azimuthDeg": -13.096,
+    "elevationDeg": 0.311
+   },
+   {
+    "hex": [
+     17,
+     8
+    ],
+    "azimuthDeg": -16.167,
+    "elevationDeg": -0.271
+   },
+   {
+    "hex": [
+     17,
+     9
+    ],
+    "azimuthDeg": -19.238,
+    "elevationDeg": -0.854
+   },
+   {
+    "hex": [
+     17,
+     10
+    ],
+    "azimuthDeg": -22.309,
+    "elevationDeg": -1.437
+   },
+   {
+    "hex": [
+     17,
+     11
+    ],
+    "azimuthDeg": -25.38,
+    "elevationDeg": -2.019
+   },
+   {
+    "hex": [
+     17,
+     12
+    ],
+    "azimuthDeg": -28.451,
+    "elevationDeg": -2.602
+   },
+   {
+    "hex": [
+     17,
+     13
+    ],
+    "azimuthDeg": -31.522,
+    "elevationDeg": -3.184
+   },
+   {
+    "hex": [
+     17,
+     14
+    ],
+    "azimuthDeg": -34.593,
+    "elevationDeg": -3.767
+   },
+   {
+    "hex": [
+     17,
+     15
+    ],
+    "azimuthDeg": -37.664,
+    "elevationDeg": -4.35
+   },
+   {
+    "hex": [
+     17,
+     16
+    ],
+    "azimuthDeg": -40.735,
+    "elevationDeg": -4.932
+   },
+   {
+    "hex": [
+     17,
+     17
+    ],
+    "azimuthDeg": -43.806,
+    "elevationDeg": -5.515
+   },
+   {
+    "hex": [
+     17,
+     18
+    ],
+    "azimuthDeg": -46.877,
+    "elevationDeg": -6.097
+   },
+   {
+    "hex": [
+     17,
+     19
+    ],
+    "azimuthDeg": -49.948,
+    "elevationDeg": -6.68
+   },
+   {
+    "hex": [
+     17,
+     20
+    ],
+    "azimuthDeg": -53.019,
+    "elevationDeg": -7.263
+   },
+   {
+    "hex": [
+     17,
+     21
+    ],
+    "azimuthDeg": -56.09,
+    "elevationDeg": -7.845
+   },
+   {
+    "hex": [
+     17,
+     22
+    ],
+    "azimuthDeg": -59.161,
+    "elevationDeg": -8.428
+   },
+   {
+    "hex": [
+     17,
+     23
+    ],
+    "azimuthDeg": -62.232,
+    "elevationDeg": -9.01
+   },
+   {
+    "hex": [
+     17,
+     24
+    ],
+    "azimuthDeg": -65.303,
+    "elevationDeg": -9.593
+   },
+   {
+    "hex": [
+     17,
+     25
+    ],
+    "azimuthDeg": -68.374,
+    "elevationDeg": -10.176
+   },
+   {
+    "hex": [
+     17,
+     26
+    ],
+    "azimuthDeg": -71.445,
+    "elevationDeg": -10.758
+   },
+   {
+    "hex": [
+     17,
+     27
+    ],
+    "azimuthDeg": -74.516,
+    "elevationDeg": -11.341
+   },
+   {
+    "hex": [
+     17,
+     28
+    ],
+    "azimuthDeg": -77.587,
+    "elevationDeg": -11.924
+   },
+   {
+    "hex": [
+     17,
+     29
+    ],
+    "azimuthDeg": -80.658,
+    "elevationDeg": -12.506
+   },
+   {
+    "hex": [
+     17,
+     30
+    ],
+    "azimuthDeg": -83.729,
+    "elevationDeg": -13.089
+   },
+   {
+    "hex": [
+     17,
+     31
+    ],
+    "azimuthDeg": -86.8,
+    "elevationDeg": -13.671
+   },
+   {
+    "hex": [
+     17,
+     32
+    ],
+    "azimuthDeg": -89.871,
+    "elevationDeg": -14.254
+   },
+   {
+    "hex": [
+     17,
+     33
+    ],
+    "azimuthDeg": -92.942,
+    "elevationDeg": -14.837
+   },
+   {
+    "hex": [
+     17,
+     34
+    ],
+    "azimuthDeg": -96.013,
+    "elevationDeg": -15.419
+   },
+   {
+    "hex": [
+     18,
+     4
+    ],
+    "azimuthDeg": -4.397,
+    "elevationDeg": 6.013
+   },
+   {
+    "hex": [
+     18,
+     5
+    ],
+    "azimuthDeg": -7.468,
+    "elevationDeg": 5.43
+   },
+   {
+    "hex": [
+     18,
+     6
+    ],
+    "azimuthDeg": -10.539,
+    "elevationDeg": 4.848
+   },
+   {
+    "hex": [
+     18,
+     7
+    ],
+    "azimuthDeg": -13.61,
+    "elevationDeg": 4.265
+   },
+   {
+    "hex": [
+     18,
+     8
+    ],
+    "azimuthDeg": -16.681,
+    "elevationDeg": 3.682
+   },
+   {
+    "hex": [
+     18,
+     9
+    ],
+    "azimuthDeg": -19.752,
+    "elevationDeg": 3.1
+   },
+   {
+    "hex": [
+     18,
+     10
+    ],
+    "azimuthDeg": -22.823,
+    "elevationDeg": 2.517
+   },
+   {
+    "hex": [
+     18,
+     11
+    ],
+    "azimuthDeg": -25.894,
+    "elevationDeg": 1.935
+   },
+   {
+    "hex": [
+     18,
+     12
+    ],
+    "azimuthDeg": -28.965,
+    "elevationDeg": 1.352
+   },
+   {
+    "hex": [
+     18,
+     13
+    ],
+    "azimuthDeg": -32.036,
+    "elevationDeg": 0.769
+   },
+   {
+    "hex": [
+     18,
+     14
+    ],
+    "azimuthDeg": -35.107,
+    "elevationDeg": 0.187
+   },
+   {
+    "hex": [
+     18,
+     15
+    ],
+    "azimuthDeg": -38.178,
+    "elevationDeg": -0.396
+   },
+   {
+    "hex": [
+     18,
+     16
+    ],
+    "azimuthDeg": -41.249,
+    "elevationDeg": -0.978
+   },
+   {
+    "hex": [
+     18,
+     17
+    ],
+    "azimuthDeg": -44.32,
+    "elevationDeg": -1.561
+   },
+   {
+    "hex": [
+     18,
+     18
+    ],
+    "azimuthDeg": -47.391,
+    "elevationDeg": -2.144
+   },
+   {
+    "hex": [
+     18,
+     19
+    ],
+    "azimuthDeg": -50.462,
+    "elevationDeg": -2.726
+   },
+   {
+    "hex": [
+     18,
+     20
+    ],
+    "azimuthDeg": -53.533,
+    "elevationDeg": -3.309
+   },
+   {
+    "hex": [
+     18,
+     21
+    ],
+    "azimuthDeg": -56.604,
+    "elevationDeg": -3.892
+   },
+   {
+    "hex": [
+     18,
+     22
+    ],
+    "azimuthDeg": -59.675,
+    "elevationDeg": -4.474
+   },
+   {
+    "hex": [
+     18,
+     23
+    ],
+    "azimuthDeg": -62.746,
+    "elevationDeg": -5.057
+   },
+   {
+    "hex": [
+     18,
+     24
+    ],
+    "azimuthDeg": -65.817,
+    "elevationDeg": -5.639
+   },
+   {
+    "hex": [
+     18,
+     25
+    ],
+    "azimuthDeg": -68.888,
+    "elevationDeg": -6.222
+   },
+   {
+    "hex": [
+     18,
+     26
+    ],
+    "azimuthDeg": -71.959,
+    "elevationDeg": -6.805
+   },
+   {
+    "hex": [
+     18,
+     27
+    ],
+    "azimuthDeg": -75.03,
+    "elevationDeg": -7.387
+   },
+   {
+    "hex": [
+     18,
+     28
+    ],
+    "azimuthDeg": -78.101,
+    "elevationDeg": -7.97
+   },
+   {
+    "hex": [
+     18,
+     29
+    ],
+    "azimuthDeg": -81.172,
+    "elevationDeg": -8.552
+   },
+   {
+    "hex": [
+     18,
+     30
+    ],
+    "azimuthDeg": -84.243,
+    "elevationDeg": -9.135
+   },
+   {
+    "hex": [
+     18,
+     31
+    ],
+    "azimuthDeg": -87.314,
+    "elevationDeg": -9.718
+   },
+   {
+    "hex": [
+     18,
+     32
+    ],
+    "azimuthDeg": -90.385,
+    "elevationDeg": -10.3
+   },
+   {
+    "hex": [
+     18,
+     33
+    ],
+    "azimuthDeg": -93.456,
+    "elevationDeg": -10.883
+   },
+   {
+    "hex": [
+     18,
+     34
+    ],
+    "azimuthDeg": -96.527,
+    "elevationDeg": -11.465
+   },
+   {
+    "hex": [
+     19,
+     4
+    ],
+    "azimuthDeg": -4.911,
+    "elevationDeg": 9.967
+   },
+   {
+    "hex": [
+     19,
+     5
+    ],
+    "azimuthDeg": -7.982,
+    "elevationDeg": 9.384
+   },
+   {
+    "hex": [
+     19,
+     6
+    ],
+    "azimuthDeg": -11.053,
+    "elevationDeg": 8.801
+   },
+   {
+    "hex": [
+     19,
+     7
+    ],
+    "azimuthDeg": -14.124,
+    "elevationDeg": 8.219
+   },
+   {
+    "hex": [
+     19,
+     8
+    ],
+    "azimuthDeg": -17.195,
+    "elevationDeg": 7.636
+   },
+   {
+    "hex": [
+     19,
+     9
+    ],
+    "azimuthDeg": -20.266,
+    "elevationDeg": 7.054
+   },
+   {
+    "hex": [
+     19,
+     10
+    ],
+    "azimuthDeg": -23.337,
+    "elevationDeg": 6.471
+   },
+   {
+    "hex": [
+     19,
+     11
+    ],
+    "azimuthDeg": -26.408,
+    "elevationDeg": 5.888
+   },
+   {
+    "hex": [
+     19,
+     12
+    ],
+    "azimuthDeg": -29.479,
+    "elevationDeg": 5.306
+   },
+   {
+    "hex": [
+     19,
+     13
+    ],
+    "azimuthDeg": -32.55,
+    "elevationDeg": 4.723
+   },
+   {
+    "hex": [
+     19,
+     14
+    ],
+    "azimuthDeg": -35.621,
+    "elevationDeg": 4.141
+   },
+   {
+    "hex": [
+     19,
+     15
+    ],
+    "azimuthDeg": -38.692,
+    "elevationDeg": 3.558
+   },
+   {
+    "hex": [
+     19,
+     16
+    ],
+    "azimuthDeg": -41.763,
+    "elevationDeg": 2.975
+   },
+   {
+    "hex": [
+     19,
+     17
+    ],
+    "azimuthDeg": -44.834,
+    "elevationDeg": 2.393
+   },
+   {
+    "hex": [
+     19,
+     18
+    ],
+    "azimuthDeg": -47.905,
+    "elevationDeg": 1.81
+   },
+   {
+    "hex": [
+     19,
+     19
+    ],
+    "azimuthDeg": -50.976,
+    "elevationDeg": 1.227
+   },
+   {
+    "hex": [
+     19,
+     20
+    ],
+    "azimuthDeg": -54.047,
+    "elevationDeg": 0.645
+   },
+   {
+    "hex": [
+     19,
+     21
+    ],
+    "azimuthDeg": -57.118,
+    "elevationDeg": 0.062
+   },
+   {
+    "hex": [
+     19,
+     22
+    ],
+    "azimuthDeg": -60.189,
+    "elevationDeg": -0.52
+   },
+   {
+    "hex": [
+     19,
+     23
+    ],
+    "azimuthDeg": -63.26,
+    "elevationDeg": -1.103
+   },
+   {
+    "hex": [
+     19,
+     24
+    ],
+    "azimuthDeg": -66.331,
+    "elevationDeg": -1.686
+   },
+   {
+    "hex": [
+     19,
+     25
+    ],
+    "azimuthDeg": -69.402,
+    "elevationDeg": -2.268
+   },
+   {
+    "hex": [
+     19,
+     26
+    ],
+    "azimuthDeg": -72.473,
+    "elevationDeg": -2.851
+   },
+   {
+    "hex": [
+     19,
+     27
+    ],
+    "azimuthDeg": -75.544,
+    "elevationDeg": -3.433
+   },
+   {
+    "hex": [
+     19,
+     28
+    ],
+    "azimuthDeg": -78.615,
+    "elevationDeg": -4.016
+   },
+   {
+    "hex": [
+     19,
+     29
+    ],
+    "azimuthDeg": -81.686,
+    "elevationDeg": -4.599
+   },
+   {
+    "hex": [
+     19,
+     30
+    ],
+    "azimuthDeg": -84.757,
+    "elevationDeg": -5.181
+   },
+   {
+    "hex": [
+     19,
+     31
+    ],
+    "azimuthDeg": -87.828,
+    "elevationDeg": -5.764
+   },
+   {
+    "hex": [
+     19,
+     32
+    ],
+    "azimuthDeg": -90.899,
+    "elevationDeg": -6.346
+   },
+   {
+    "hex": [
+     19,
+     33
+    ],
+    "azimuthDeg": -93.97,
+    "elevationDeg": -6.929
+   },
+   {
+    "hex": [
+     19,
+     34
+    ],
+    "azimuthDeg": -97.041,
+    "elevationDeg": -7.512
+   },
+   {
+    "hex": [
+     19,
+     35
+    ],
+    "azimuthDeg": -100.112,
+    "elevationDeg": -8.094
+   },
+   {
+    "hex": [
+     20,
+     5
+    ],
+    "azimuthDeg": -8.496,
+    "elevationDeg": 13.338
+   },
+   {
+    "hex": [
+     20,
+     6
+    ],
+    "azimuthDeg": -11.567,
+    "elevationDeg": 12.755
+   },
+   {
+    "hex": [
+     20,
+     7
+    ],
+    "azimuthDeg": -14.638,
+    "elevationDeg": 12.173
+   },
+   {
+    "hex": [
+     20,
+     8
+    ],
+    "azimuthDeg": -17.709,
+    "elevationDeg": 11.59
+   },
+   {
+    "hex": [
+     20,
+     9
+    ],
+    "azimuthDeg": -20.78,
+    "elevationDeg": 11.007
+   },
+   {
+    "hex": [
+     20,
+     10
+    ],
+    "azimuthDeg": -23.851,
+    "elevationDeg": 10.425
+   },
+   {
+    "hex": [
+     20,
+     11
+    ],
+    "azimuthDeg": -26.922,
+    "elevationDeg": 9.842
+   },
+   {
+    "hex": [
+     20,
+     12
+    ],
+    "azimuthDeg": -29.993,
+    "elevationDeg": 9.259
+   },
+   {
+    "hex": [
+     20,
+     13
+    ],
+    "azimuthDeg": -33.064,
+    "elevationDeg": 8.677
+   },
+   {
+    "hex": [
+     20,
+     14
+    ],
+    "azimuthDeg": -36.135,
+    "elevationDeg": 8.094
+   },
+   {
+    "hex": [
+     20,
+     15
+    ],
+    "azimuthDeg": -39.206,
+    "elevationDeg": 7.512
+   },
+   {
+    "hex": [
+     20,
+     16
+    ],
+    "azimuthDeg": -42.277,
+    "elevationDeg": 6.929
+   },
+   {
+    "hex": [
+     20,
+     17
+    ],
+    "azimuthDeg": -45.348,
+    "elevationDeg": 6.346
+   },
+   {
+    "hex": [
+     20,
+     18
+    ],
+    "azimuthDeg": -48.419,
+    "elevationDeg": 5.764
+   },
+   {
+    "hex": [
+     20,
+     19
+    ],
+    "azimuthDeg": -51.49,
+    "elevationDeg": 5.181
+   },
+   {
+    "hex": [
+     20,
+     20
+    ],
+    "azimuthDeg": -54.561,
+    "elevationDeg": 4.599
+   },
+   {
+    "hex": [
+     20,
+     21
+    ],
+    "azimuthDeg": -57.632,
+    "elevationDeg": 4.016
+   },
+   {
+    "hex": [
+     20,
+     22
+    ],
+    "azimuthDeg": -60.703,
+    "elevationDeg": 3.433
+   },
+   {
+    "hex": [
+     20,
+     23
+    ],
+    "azimuthDeg": -63.774,
+    "elevationDeg": 2.851
+   },
+   {
+    "hex": [
+     20,
+     24
+    ],
+    "azimuthDeg": -66.845,
+    "elevationDeg": 2.268
+   },
+   {
+    "hex": [
+     20,
+     25
+    ],
+    "azimuthDeg": -69.916,
+    "elevationDeg": 1.686
+   },
+   {
+    "hex": [
+     20,
+     26
+    ],
+    "azimuthDeg": -72.987,
+    "elevationDeg": 1.103
+   },
+   {
+    "hex": [
+     20,
+     27
+    ],
+    "azimuthDeg": -76.058,
+    "elevationDeg": 0.52
+   },
+   {
+    "hex": [
+     20,
+     28
+    ],
+    "azimuthDeg": -79.129,
+    "elevationDeg": -0.062
+   },
+   {
+    "hex": [
+     20,
+     29
+    ],
+    "azimuthDeg": -82.2,
+    "elevationDeg": -0.645
+   },
+   {
+    "hex": [
+     20,
+     30
+    ],
+    "azimuthDeg": -85.271,
+    "elevationDeg": -1.227
+   },
+   {
+    "hex": [
+     20,
+     31
+    ],
+    "azimuthDeg": -88.342,
+    "elevationDeg": -1.81
+   },
+   {
+    "hex": [
+     20,
+     32
+    ],
+    "azimuthDeg": -91.413,
+    "elevationDeg": -2.393
+   },
+   {
+    "hex": [
+     20,
+     33
+    ],
+    "azimuthDeg": -94.484,
+    "elevationDeg": -2.975
+   },
+   {
+    "hex": [
+     20,
+     34
+    ],
+    "azimuthDeg": -97.555,
+    "elevationDeg": -3.558
+   },
+   {
+    "hex": [
+     20,
+     35
+    ],
+    "azimuthDeg": -100.626,
+    "elevationDeg": -4.141
+   },
+   {
+    "hex": [
+     21,
+     6
+    ],
+    "azimuthDeg": -12.081,
+    "elevationDeg": 16.709
+   },
+   {
+    "hex": [
+     21,
+     7
+    ],
+    "azimuthDeg": -15.152,
+    "elevationDeg": 16.126
+   },
+   {
+    "hex": [
+     21,
+     8
+    ],
+    "azimuthDeg": -18.223,
+    "elevationDeg": 15.544
+   },
+   {
+    "hex": [
+     21,
+     9
+    ],
+    "azimuthDeg": -21.294,
+    "elevationDeg": 14.961
+   },
+   {
+    "hex": [
+     21,
+     10
+    ],
+    "azimuthDeg": -24.365,
+    "elevationDeg": 14.378
+   },
+   {
+    "hex": [
+     21,
+     11
+    ],
+    "azimuthDeg": -27.436,
+    "elevationDeg": 13.796
+   },
+   {
+    "hex": [
+     21,
+     12
+    ],
+    "azimuthDeg": -30.507,
+    "elevationDeg": 13.213
+   },
+   {
+    "hex": [
+     21,
+     13
+    ],
+    "azimuthDeg": -33.578,
+    "elevationDeg": 12.631
+   },
+   {
+    "hex": [
+     21,
+     14
+    ],
+    "azimuthDeg": -36.649,
+    "elevationDeg": 12.048
+   },
+   {
+    "hex": [
+     21,
+     15
+    ],
+    "azimuthDeg": -39.72,
+    "elevationDeg": 11.465
+   },
+   {
+    "hex": [
+     21,
+     16
+    ],
+    "azimuthDeg": -42.791,
+    "elevationDeg": 10.883
+   },
+   {
+    "hex": [
+     21,
+     17
+    ],
+    "azimuthDeg": -45.862,
+    "elevationDeg": 10.3
+   },
+   {
+    "hex": [
+     21,
+     18
+    ],
+    "azimuthDeg": -48.933,
+    "elevationDeg": 9.718
+   },
+   {
+    "hex": [
+     21,
+     19
+    ],
+    "azimuthDeg": -52.004,
+    "elevationDeg": 9.135
+   },
+   {
+    "hex": [
+     21,
+     20
+    ],
+    "azimuthDeg": -55.075,
+    "elevationDeg": 8.552
+   },
+   {
+    "hex": [
+     21,
+     21
+    ],
+    "azimuthDeg": -58.146,
+    "elevationDeg": 7.97
+   },
+   {
+    "hex": [
+     21,
+     22
+    ],
+    "azimuthDeg": -61.217,
+    "elevationDeg": 7.387
+   },
+   {
+    "hex": [
+     21,
+     23
+    ],
+    "azimuthDeg": -64.288,
+    "elevationDeg": 6.805
+   },
+   {
+    "hex": [
+     21,
+     24
+    ],
+    "azimuthDeg": -67.359,
+    "elevationDeg": 6.222
+   },
+   {
+    "hex": [
+     21,
+     25
+    ],
+    "azimuthDeg": -70.43,
+    "elevationDeg": 5.639
+   },
+   {
+    "hex": [
+     21,
+     26
+    ],
+    "azimuthDeg": -73.501,
+    "elevationDeg": 5.057
+   },
+   {
+    "hex": [
+     21,
+     27
+    ],
+    "azimuthDeg": -76.572,
+    "elevationDeg": 4.474
+   },
+   {
+    "hex": [
+     21,
+     28
+    ],
+    "azimuthDeg": -79.643,
+    "elevationDeg": 3.892
+   },
+   {
+    "hex": [
+     21,
+     29
+    ],
+    "azimuthDeg": -82.714,
+    "elevationDeg": 3.309
+   },
+   {
+    "hex": [
+     21,
+     30
+    ],
+    "azimuthDeg": -85.785,
+    "elevationDeg": 2.726
+   },
+   {
+    "hex": [
+     21,
+     31
+    ],
+    "azimuthDeg": -88.856,
+    "elevationDeg": 2.144
+   },
+   {
+    "hex": [
+     21,
+     32
+    ],
+    "azimuthDeg": -91.927,
+    "elevationDeg": 1.561
+   },
+   {
+    "hex": [
+     21,
+     33
+    ],
+    "azimuthDeg": -94.998,
+    "elevationDeg": 0.978
+   },
+   {
+    "hex": [
+     21,
+     34
+    ],
+    "azimuthDeg": -98.069,
+    "elevationDeg": 0.396
+   },
+   {
+    "hex": [
+     21,
+     35
+    ],
+    "azimuthDeg": -101.14,
+    "elevationDeg": -0.187
+   },
+   {
+    "hex": [
+     21,
+     36
+    ],
+    "azimuthDeg": -104.211,
+    "elevationDeg": -0.769
+   },
+   {
+    "hex": [
+     22,
+     7
+    ],
+    "azimuthDeg": -15.666,
+    "elevationDeg": 20.08
+   },
+   {
+    "hex": [
+     22,
+     8
+    ],
+    "azimuthDeg": -18.737,
+    "elevationDeg": 19.497
+   },
+   {
+    "hex": [
+     22,
+     9
+    ],
+    "azimuthDeg": -21.808,
+    "elevationDeg": 18.915
+   },
+   {
+    "hex": [
+     22,
+     10
+    ],
+    "azimuthDeg": -24.879,
+    "elevationDeg": 18.332
+   },
+   {
+    "hex": [
+     22,
+     11
+    ],
+    "azimuthDeg": -27.95,
+    "elevationDeg": 17.75
+   },
+   {
+    "hex": [
+     22,
+     12
+    ],
+    "azimuthDeg": -31.021,
+    "elevationDeg": 17.167
+   },
+   {
+    "hex": [
+     22,
+     13
+    ],
+    "azimuthDeg": -34.092,
+    "elevationDeg": 16.584
+   },
+   {
+    "hex": [
+     22,
+     14
+    ],
+    "azimuthDeg": -37.163,
+    "elevationDeg": 16.002
+   },
+   {
+    "hex": [
+     22,
+     15
+    ],
+    "azimuthDeg": -40.234,
+    "elevationDeg": 15.419
+   },
+   {
+    "hex": [
+     22,
+     16
+    ],
+    "azimuthDeg": -43.305,
+    "elevationDeg": 14.837
+   },
+   {
+    "hex": [
+     22,
+     17
+    ],
+    "azimuthDeg": -46.376,
+    "elevationDeg": 14.254
+   },
+   {
+    "hex": [
+     22,
+     18
+    ],
+    "azimuthDeg": -49.447,
+    "elevationDeg": 13.671
+   },
+   {
+    "hex": [
+     22,
+     19
+    ],
+    "azimuthDeg": -52.518,
+    "elevationDeg": 13.089
+   },
+   {
+    "hex": [
+     22,
+     20
+    ],
+    "azimuthDeg": -55.589,
+    "elevationDeg": 12.506
+   },
+   {
+    "hex": [
+     22,
+     21
+    ],
+    "azimuthDeg": -58.66,
+    "elevationDeg": 11.924
+   },
+   {
+    "hex": [
+     22,
+     22
+    ],
+    "azimuthDeg": -61.731,
+    "elevationDeg": 11.341
+   },
+   {
+    "hex": [
+     22,
+     23
+    ],
+    "azimuthDeg": -64.802,
+    "elevationDeg": 10.758
+   },
+   {
+    "hex": [
+     22,
+     24
+    ],
+    "azimuthDeg": -67.873,
+    "elevationDeg": 10.176
+   },
+   {
+    "hex": [
+     22,
+     25
+    ],
+    "azimuthDeg": -70.944,
+    "elevationDeg": 9.593
+   },
+   {
+    "hex": [
+     22,
+     26
+    ],
+    "azimuthDeg": -74.015,
+    "elevationDeg": 9.01
+   },
+   {
+    "hex": [
+     22,
+     27
+    ],
+    "azimuthDeg": -77.086,
+    "elevationDeg": 8.428
+   },
+   {
+    "hex": [
+     22,
+     28
+    ],
+    "azimuthDeg": -80.157,
+    "elevationDeg": 7.845
+   },
+   {
+    "hex": [
+     22,
+     29
+    ],
+    "azimuthDeg": -83.228,
+    "elevationDeg": 7.263
+   },
+   {
+    "hex": [
+     22,
+     30
+    ],
+    "azimuthDeg": -86.299,
+    "elevationDeg": 6.68
+   },
+   {
+    "hex": [
+     22,
+     31
+    ],
+    "azimuthDeg": -89.37,
+    "elevationDeg": 6.097
+   },
+   {
+    "hex": [
+     22,
+     32
+    ],
+    "azimuthDeg": -92.441,
+    "elevationDeg": 5.515
+   },
+   {
+    "hex": [
+     22,
+     33
+    ],
+    "azimuthDeg": -95.512,
+    "elevationDeg": 4.932
+   },
+   {
+    "hex": [
+     22,
+     34
+    ],
+    "azimuthDeg": -98.583,
+    "elevationDeg": 4.35
+   },
+   {
+    "hex": [
+     22,
+     35
+    ],
+    "azimuthDeg": -101.654,
+    "elevationDeg": 3.767
+   },
+   {
+    "hex": [
+     22,
+     36
+    ],
+    "azimuthDeg": -104.725,
+    "elevationDeg": 3.184
+   },
+   {
+    "hex": [
+     23,
+     8
+    ],
+    "azimuthDeg": -19.25,
+    "elevationDeg": 23.451
+   },
+   {
+    "hex": [
+     23,
+     9
+    ],
+    "azimuthDeg": -22.321,
+    "elevationDeg": 22.869
+   },
+   {
+    "hex": [
+     23,
+     10
+    ],
+    "azimuthDeg": -25.392,
+    "elevationDeg": 22.286
+   },
+   {
+    "hex": [
+     23,
+     11
+    ],
+    "azimuthDeg": -28.464,
+    "elevationDeg": 21.703
+   },
+   {
+    "hex": [
+     23,
+     12
+    ],
+    "azimuthDeg": -31.535,
+    "elevationDeg": 21.121
+   },
+   {
+    "hex": [
+     23,
+     13
+    ],
+    "azimuthDeg": -34.606,
+    "elevationDeg": 20.538
+   },
+   {
+    "hex": [
+     23,
+     14
+    ],
+    "azimuthDeg": -37.677,
+    "elevationDeg": 19.956
+   },
+   {
+    "hex": [
+     23,
+     15
+    ],
+    "azimuthDeg": -40.748,
+    "elevationDeg": 19.373
+   },
+   {
+    "hex": [
+     23,
+     16
+    ],
+    "azimuthDeg": -43.819,
+    "elevationDeg": 18.79
+   },
+   {
+    "hex": [
+     23,
+     17
+    ],
+    "azimuthDeg": -46.89,
+    "elevationDeg": 18.208
+   },
+   {
+    "hex": [
+     23,
+     18
+    ],
+    "azimuthDeg": -49.961,
+    "elevationDeg": 17.625
+   },
+   {
+    "hex": [
+     23,
+     19
+    ],
+    "azimuthDeg": -53.032,
+    "elevationDeg": 17.043
+   },
+   {
+    "hex": [
+     23,
+     20
+    ],
+    "azimuthDeg": -56.103,
+    "elevationDeg": 16.46
+   },
+   {
+    "hex": [
+     23,
+     21
+    ],
+    "azimuthDeg": -59.174,
+    "elevationDeg": 15.877
+   },
+   {
+    "hex": [
+     23,
+     22
+    ],
+    "azimuthDeg": -62.245,
+    "elevationDeg": 15.295
+   },
+   {
+    "hex": [
+     23,
+     23
+    ],
+    "azimuthDeg": -65.316,
+    "elevationDeg": 14.712
+   },
+   {
+    "hex": [
+     23,
+     24
+    ],
+    "azimuthDeg": -68.387,
+    "elevationDeg": 14.129
+   },
+   {
+    "hex": [
+     23,
+     25
+    ],
+    "azimuthDeg": -71.458,
+    "elevationDeg": 13.547
+   },
+   {
+    "hex": [
+     23,
+     26
+    ],
+    "azimuthDeg": -74.529,
+    "elevationDeg": 12.964
+   },
+   {
+    "hex": [
+     23,
+     27
+    ],
+    "azimuthDeg": -77.6,
+    "elevationDeg": 12.382
+   },
+   {
+    "hex": [
+     23,
+     28
+    ],
+    "azimuthDeg": -80.671,
+    "elevationDeg": 11.799
+   },
+   {
+    "hex": [
+     23,
+     29
+    ],
+    "azimuthDeg": -83.742,
+    "elevationDeg": 11.216
+   },
+   {
+    "hex": [
+     23,
+     30
+    ],
+    "azimuthDeg": -86.813,
+    "elevationDeg": 10.634
+   },
+   {
+    "hex": [
+     23,
+     31
+    ],
+    "azimuthDeg": -89.884,
+    "elevationDeg": 10.051
+   },
+   {
+    "hex": [
+     23,
+     32
+    ],
+    "azimuthDeg": -92.955,
+    "elevationDeg": 9.469
+   },
+   {
+    "hex": [
+     23,
+     33
+    ],
+    "azimuthDeg": -96.026,
+    "elevationDeg": 8.886
+   },
+   {
+    "hex": [
+     23,
+     34
+    ],
+    "azimuthDeg": -99.097,
+    "elevationDeg": 8.303
+   },
+   {
+    "hex": [
+     23,
+     35
+    ],
+    "azimuthDeg": -102.168,
+    "elevationDeg": 7.721
+   },
+   {
+    "hex": [
+     23,
+     36
+    ],
+    "azimuthDeg": -105.239,
+    "elevationDeg": 7.138
+   },
+   {
+    "hex": [
+     23,
+     37
+    ],
+    "azimuthDeg": -108.31,
+    "elevationDeg": 6.556
+   },
+   {
+    "hex": [
+     24,
+     9
+    ],
+    "azimuthDeg": -22.835,
+    "elevationDeg": 26.822
+   },
+   {
+    "hex": [
+     24,
+     10
+    ],
+    "azimuthDeg": -25.906,
+    "elevationDeg": 26.24
+   },
+   {
+    "hex": [
+     24,
+     11
+    ],
+    "azimuthDeg": -28.977,
+    "elevationDeg": 25.657
+   },
+   {
+    "hex": [
+     24,
+     12
+    ],
+    "azimuthDeg": -32.048,
+    "elevationDeg": 25.075
+   },
+   {
+    "hex": [
+     24,
+     13
+    ],
+    "azimuthDeg": -35.119,
+    "elevationDeg": 24.492
+   },
+   {
+    "hex": [
+     24,
+     14
+    ],
+    "azimuthDeg": -38.19,
+    "elevationDeg": 23.909
+   },
+   {
+    "hex": [
+     24,
+     15
+    ],
+    "azimuthDeg": -41.261,
+    "elevationDeg": 23.327
+   },
+   {
+    "hex": [
+     24,
+     16
+    ],
+    "azimuthDeg": -44.332,
+    "elevationDeg": 22.744
+   },
+   {
+    "hex": [
+     24,
+     17
+    ],
+    "azimuthDeg": -47.404,
+    "elevationDeg": 22.161
+   },
+   {
+    "hex": [
+     24,
+     18
+    ],
+    "azimuthDeg": -50.475,
+    "elevationDeg": 21.579
+   },
+   {
+    "hex": [
+     24,
+     19
+    ],
+    "azimuthDeg": -53.546,
+    "elevationDeg": 20.996
+   },
+   {
+    "hex": [
+     24,
+     20
+    ],
+    "azimuthDeg": -56.617,
+    "elevationDeg": 20.414
+   },
+   {
+    "hex": [
+     24,
+     21
+    ],
+    "azimuthDeg": -59.688,
+    "elevationDeg": 19.831
+   },
+   {
+    "hex": [
+     24,
+     22
+    ],
+    "azimuthDeg": -62.759,
+    "elevationDeg": 19.248
+   },
+   {
+    "hex": [
+     24,
+     23
+    ],
+    "azimuthDeg": -65.83,
+    "elevationDeg": 18.666
+   },
+   {
+    "hex": [
+     24,
+     24
+    ],
+    "azimuthDeg": -68.901,
+    "elevationDeg": 18.083
+   },
+   {
+    "hex": [
+     24,
+     25
+    ],
+    "azimuthDeg": -71.972,
+    "elevationDeg": 17.501
+   },
+   {
+    "hex": [
+     24,
+     26
+    ],
+    "azimuthDeg": -75.043,
+    "elevationDeg": 16.918
+   },
+   {
+    "hex": [
+     24,
+     27
+    ],
+    "azimuthDeg": -78.114,
+    "elevationDeg": 16.335
+   },
+   {
+    "hex": [
+     24,
+     28
+    ],
+    "azimuthDeg": -81.185,
+    "elevationDeg": 15.753
+   },
+   {
+    "hex": [
+     24,
+     29
+    ],
+    "azimuthDeg": -84.256,
+    "elevationDeg": 15.17
+   },
+   {
+    "hex": [
+     24,
+     30
+    ],
+    "azimuthDeg": -87.327,
+    "elevationDeg": 14.588
+   },
+   {
+    "hex": [
+     24,
+     31
+    ],
+    "azimuthDeg": -90.398,
+    "elevationDeg": 14.005
+   },
+   {
+    "hex": [
+     24,
+     32
+    ],
+    "azimuthDeg": -93.469,
+    "elevationDeg": 13.422
+   },
+   {
+    "hex": [
+     24,
+     33
+    ],
+    "azimuthDeg": -96.54,
+    "elevationDeg": 12.84
+   },
+   {
+    "hex": [
+     24,
+     34
+    ],
+    "azimuthDeg": -99.611,
+    "elevationDeg": 12.257
+   },
+   {
+    "hex": [
+     24,
+     35
+    ],
+    "azimuthDeg": -102.682,
+    "elevationDeg": 11.675
+   },
+   {
+    "hex": [
+     24,
+     36
+    ],
+    "azimuthDeg": -105.753,
+    "elevationDeg": 11.092
+   },
+   {
+    "hex": [
+     24,
+     37
+    ],
+    "azimuthDeg": -108.824,
+    "elevationDeg": 10.509
+   },
+   {
+    "hex": [
+     25,
+     10
+    ],
+    "azimuthDeg": -26.42,
+    "elevationDeg": 30.194
+   },
+   {
+    "hex": [
+     25,
+     11
+    ],
+    "azimuthDeg": -29.491,
+    "elevationDeg": 29.611
+   },
+   {
+    "hex": [
+     25,
+     12
+    ],
+    "azimuthDeg": -32.562,
+    "elevationDeg": 29.028
+   },
+   {
+    "hex": [
+     25,
+     13
+    ],
+    "azimuthDeg": -35.633,
+    "elevationDeg": 28.446
+   },
+   {
+    "hex": [
+     25,
+     14
+    ],
+    "azimuthDeg": -38.704,
+    "elevationDeg": 27.863
+   },
+   {
+    "hex": [
+     25,
+     15
+    ],
+    "azimuthDeg": -41.775,
+    "elevationDeg": 27.28
+   },
+   {
+    "hex": [
+     25,
+     16
+    ],
+    "azimuthDeg": -44.846,
+    "elevationDeg": 26.698
+   },
+   {
+    "hex": [
+     25,
+     17
+    ],
+    "azimuthDeg": -47.917,
+    "elevationDeg": 26.115
+   },
+   {
+    "hex": [
+     25,
+     18
+    ],
+    "azimuthDeg": -50.988,
+    "elevationDeg": 25.533
+   },
+   {
+    "hex": [
+     25,
+     19
+    ],
+    "azimuthDeg": -54.059,
+    "elevationDeg": 24.95
+   },
+   {
+    "hex": [
+     25,
+     20
+    ],
+    "azimuthDeg": -57.13,
+    "elevationDeg": 24.367
+   },
+   {
+    "hex": [
+     25,
+     21
+    ],
+    "azimuthDeg": -60.201,
+    "elevationDeg": 23.785
+   },
+   {
+    "hex": [
+     25,
+     22
+    ],
+    "azimuthDeg": -63.272,
+    "elevationDeg": 23.202
+   },
+   {
+    "hex": [
+     25,
+     23
+    ],
+    "azimuthDeg": -66.344,
+    "elevationDeg": 22.62
+   },
+   {
+    "hex": [
+     25,
+     24
+    ],
+    "azimuthDeg": -69.415,
+    "elevationDeg": 22.037
+   },
+   {
+    "hex": [
+     25,
+     25
+    ],
+    "azimuthDeg": -72.486,
+    "elevationDeg": 21.454
+   },
+   {
+    "hex": [
+     25,
+     26
+    ],
+    "azimuthDeg": -75.557,
+    "elevationDeg": 20.872
+   },
+   {
+    "hex": [
+     25,
+     27
+    ],
+    "azimuthDeg": -78.628,
+    "elevationDeg": 20.289
+   },
+   {
+    "hex": [
+     25,
+     28
+    ],
+    "azimuthDeg": -81.699,
+    "elevationDeg": 19.707
+   },
+   {
+    "hex": [
+     25,
+     29
+    ],
+    "azimuthDeg": -84.77,
+    "elevationDeg": 19.124
+   },
+   {
+    "hex": [
+     25,
+     30
+    ],
+    "azimuthDeg": -87.841,
+    "elevationDeg": 18.541
+   },
+   {
+    "hex": [
+     25,
+     31
+    ],
+    "azimuthDeg": -90.912,
+    "elevationDeg": 17.959
+   },
+   {
+    "hex": [
+     25,
+     32
+    ],
+    "azimuthDeg": -93.983,
+    "elevationDeg": 17.376
+   },
+   {
+    "hex": [
+     25,
+     33
+    ],
+    "azimuthDeg": -97.054,
+    "elevationDeg": 16.794
+   },
+   {
+    "hex": [
+     25,
+     34
+    ],
+    "azimuthDeg": -100.125,
+    "elevationDeg": 16.211
+   },
+   {
+    "hex": [
+     25,
+     35
+    ],
+    "azimuthDeg": -103.196,
+    "elevationDeg": 15.628
+   },
+   {
+    "hex": [
+     25,
+     36
+    ],
+    "azimuthDeg": -106.267,
+    "elevationDeg": 15.046
+   },
+   {
+    "hex": [
+     25,
+     37
+    ],
+    "azimuthDeg": -109.338,
+    "elevationDeg": 14.463
+   },
+   {
+    "hex": [
+     25,
+     38
+    ],
+    "azimuthDeg": -112.409,
+    "elevationDeg": 13.88
+   },
+   {
+    "hex": [
+     26,
+     11
+    ],
+    "azimuthDeg": -30.005,
+    "elevationDeg": 33.565
+   },
+   {
+    "hex": [
+     26,
+     12
+    ],
+    "azimuthDeg": -33.076,
+    "elevationDeg": 32.982
+   },
+   {
+    "hex": [
+     26,
+     13
+    ],
+    "azimuthDeg": -36.147,
+    "elevationDeg": 32.399
+   },
+   {
+    "hex": [
+     26,
+     14
+    ],
+    "azimuthDeg": -39.218,
+    "elevationDeg": 31.817
+   },
+   {
+    "hex": [
+     26,
+     15
+    ],
+    "azimuthDeg": -42.289,
+    "elevationDeg": 31.234
+   },
+   {
+    "hex": [
+     26,
+     16
+    ],
+    "azimuthDeg": -45.36,
+    "elevationDeg": 30.652
+   },
+   {
+    "hex": [
+     26,
+     17
+    ],
+    "azimuthDeg": -48.431,
+    "elevationDeg": 30.069
+   },
+   {
+    "hex": [
+     26,
+     18
+    ],
+    "azimuthDeg": -51.502,
+    "elevationDeg": 29.486
+   },
+   {
+    "hex": [
+     26,
+     19
+    ],
+    "azimuthDeg": -54.573,
+    "elevationDeg": 28.904
+   },
+   {
+    "hex": [
+     26,
+     20
+    ],
+    "azimuthDeg": -57.644,
+    "elevationDeg": 28.321
+   },
+   {
+    "hex": [
+     26,
+     21
+    ],
+    "azimuthDeg": -60.715,
+    "elevationDeg": 27.739
+   },
+   {
+    "hex": [
+     26,
+     22
+    ],
+    "azimuthDeg": -63.786,
+    "elevationDeg": 27.156
+   },
+   {
+    "hex": [
+     26,
+     23
+    ],
+    "azimuthDeg": -66.857,
+    "elevationDeg": 26.573
+   },
+   {
+    "hex": [
+     26,
+     24
+    ],
+    "azimuthDeg": -69.928,
+    "elevationDeg": 25.991
+   },
+   {
+    "hex": [
+     26,
+     25
+    ],
+    "azimuthDeg": -72.999,
+    "elevationDeg": 25.408
+   },
+   {
+    "hex": [
+     26,
+     26
+    ],
+    "azimuthDeg": -76.07,
+    "elevationDeg": 24.826
+   },
+   {
+    "hex": [
+     26,
+     27
+    ],
+    "azimuthDeg": -79.141,
+    "elevationDeg": 24.243
+   },
+   {
+    "hex": [
+     26,
+     28
+    ],
+    "azimuthDeg": -82.212,
+    "elevationDeg": 23.66
+   },
+   {
+    "hex": [
+     26,
+     29
+    ],
+    "azimuthDeg": -85.284,
+    "elevationDeg": 23.078
+   },
+   {
+    "hex": [
+     26,
+     30
+    ],
+    "azimuthDeg": -88.355,
+    "elevationDeg": 22.495
+   },
+   {
+    "hex": [
+     26,
+     31
+    ],
+    "azimuthDeg": -91.426,
+    "elevationDeg": 21.912
+   },
+   {
+    "hex": [
+     26,
+     32
+    ],
+    "azimuthDeg": -94.497,
+    "elevationDeg": 21.33
+   },
+   {
+    "hex": [
+     26,
+     33
+    ],
+    "azimuthDeg": -97.568,
+    "elevationDeg": 20.747
+   },
+   {
+    "hex": [
+     26,
+     34
+    ],
+    "azimuthDeg": -100.639,
+    "elevationDeg": 20.165
+   },
+   {
+    "hex": [
+     26,
+     35
+    ],
+    "azimuthDeg": -103.71,
+    "elevationDeg": 19.582
+   },
+   {
+    "hex": [
+     26,
+     36
+    ],
+    "azimuthDeg": -106.781,
+    "elevationDeg": 18.999
+   },
+   {
+    "hex": [
+     26,
+     37
+    ],
+    "azimuthDeg": -109.852,
+    "elevationDeg": 18.417
+   },
+   {
+    "hex": [
+     26,
+     38
+    ],
+    "azimuthDeg": -112.923,
+    "elevationDeg": 17.834
+   },
+   {
+    "hex": [
+     27,
+     11
+    ],
+    "azimuthDeg": -30.519,
+    "elevationDeg": 37.518
+   },
+   {
+    "hex": [
+     27,
+     12
+    ],
+    "azimuthDeg": -33.59,
+    "elevationDeg": 36.936
+   },
+   {
+    "hex": [
+     27,
+     13
+    ],
+    "azimuthDeg": -36.661,
+    "elevationDeg": 36.353
+   },
+   {
+    "hex": [
+     27,
+     14
+    ],
+    "azimuthDeg": -39.732,
+    "elevationDeg": 35.771
+   },
+   {
+    "hex": [
+     27,
+     15
+    ],
+    "azimuthDeg": -42.803,
+    "elevationDeg": 35.188
+   },
+   {
+    "hex": [
+     27,
+     16
+    ],
+    "azimuthDeg": -45.874,
+    "elevationDeg": 34.605
+   },
+   {
+    "hex": [
+     27,
+     17
+    ],
+    "azimuthDeg": -48.945,
+    "elevationDeg": 34.023
+   },
+   {
+    "hex": [
+     27,
+     18
+    ],
+    "azimuthDeg": -52.016,
+    "elevationDeg": 33.44
+   },
+   {
+    "hex": [
+     27,
+     19
+    ],
+    "azimuthDeg": -55.087,
+    "elevationDeg": 32.858
+   },
+   {
+    "hex": [
+     27,
+     20
+    ],
+    "azimuthDeg": -58.158,
+    "elevationDeg": 32.275
+   },
+   {
+    "hex": [
+     27,
+     21
+    ],
+    "azimuthDeg": -61.229,
+    "elevationDeg": 31.692
+   },
+   {
+    "hex": [
+     27,
+     22
+    ],
+    "azimuthDeg": -64.3,
+    "elevationDeg": 31.11
+   },
+   {
+    "hex": [
+     27,
+     23
+    ],
+    "azimuthDeg": -67.371,
+    "elevationDeg": 30.527
+   },
+   {
+    "hex": [
+     27,
+     24
+    ],
+    "azimuthDeg": -70.442,
+    "elevationDeg": 29.945
+   },
+   {
+    "hex": [
+     27,
+     25
+    ],
+    "azimuthDeg": -73.513,
+    "elevationDeg": 29.362
+   },
+   {
+    "hex": [
+     27,
+     26
+    ],
+    "azimuthDeg": -76.584,
+    "elevationDeg": 28.779
+   },
+   {
+    "hex": [
+     27,
+     27
+    ],
+    "azimuthDeg": -79.655,
+    "elevationDeg": 28.197
+   },
+   {
+    "hex": [
+     27,
+     28
+    ],
+    "azimuthDeg": -82.726,
+    "elevationDeg": 27.614
+   },
+   {
+    "hex": [
+     27,
+     29
+    ],
+    "azimuthDeg": -85.797,
+    "elevationDeg": 27.031
+   },
+   {
+    "hex": [
+     27,
+     30
+    ],
+    "azimuthDeg": -88.868,
+    "elevationDeg": 26.449
+   },
+   {
+    "hex": [
+     27,
+     31
+    ],
+    "azimuthDeg": -91.939,
+    "elevationDeg": 25.866
+   },
+   {
+    "hex": [
+     27,
+     32
+    ],
+    "azimuthDeg": -95.01,
+    "elevationDeg": 25.284
+   },
+   {
+    "hex": [
+     27,
+     33
+    ],
+    "azimuthDeg": -98.081,
+    "elevationDeg": 24.701
+   },
+   {
+    "hex": [
+     27,
+     34
+    ],
+    "azimuthDeg": -101.152,
+    "elevationDeg": 24.118
+   },
+   {
+    "hex": [
+     27,
+     35
+    ],
+    "azimuthDeg": -104.223,
+    "elevationDeg": 23.536
+   },
+   {
+    "hex": [
+     27,
+     36
+    ],
+    "azimuthDeg": -107.295,
+    "elevationDeg": 22.953
+   },
+   {
+    "hex": [
+     27,
+     37
+    ],
+    "azimuthDeg": -110.366,
+    "elevationDeg": 22.371
+   },
+   {
+    "hex": [
+     27,
+     38
+    ],
+    "azimuthDeg": -113.437,
+    "elevationDeg": 21.788
+   },
+   {
+    "hex": [
+     27,
+     39
+    ],
+    "azimuthDeg": -116.508,
+    "elevationDeg": 21.205
+   },
+   {
+    "hex": [
+     28,
+     13
+    ],
+    "azimuthDeg": -37.175,
+    "elevationDeg": 40.307
+   },
+   {
+    "hex": [
+     28,
+     14
+    ],
+    "azimuthDeg": -40.246,
+    "elevationDeg": 39.724
+   },
+   {
+    "hex": [
+     28,
+     15
+    ],
+    "azimuthDeg": -43.317,
+    "elevationDeg": 39.142
+   },
+   {
+    "hex": [
+     28,
+     16
+    ],
+    "azimuthDeg": -46.388,
+    "elevationDeg": 38.559
+   },
+   {
+    "hex": [
+     28,
+     17
+    ],
+    "azimuthDeg": -49.459,
+    "elevationDeg": 37.977
+   },
+   {
+    "hex": [
+     28,
+     18
+    ],
+    "azimuthDeg": -52.53,
+    "elevationDeg": 37.394
+   },
+   {
+    "hex": [
+     28,
+     19
+    ],
+    "azimuthDeg": -55.601,
+    "elevationDeg": 36.811
+   },
+   {
+    "hex": [
+     28,
+     20
+    ],
+    "azimuthDeg": -58.672,
+    "elevationDeg": 36.229
+   },
+   {
+    "hex": [
+     28,
+     21
+    ],
+    "azimuthDeg": -61.743,
+    "elevationDeg": 35.646
+   },
+   {
+    "hex": [
+     28,
+     22
+    ],
+    "azimuthDeg": -64.814,
+    "elevationDeg": 35.064
+   },
+   {
+    "hex": [
+     28,
+     23
+    ],
+    "azimuthDeg": -67.885,
+    "elevationDeg": 34.481
+   },
+   {
+    "hex": [
+     28,
+     24
+    ],
+    "azimuthDeg": -70.956,
+    "elevationDeg": 33.898
+   },
+   {
+    "hex": [
+     28,
+     25
+    ],
+    "azimuthDeg": -74.027,
+    "elevationDeg": 33.316
+   },
+   {
+    "hex": [
+     28,
+     26
+    ],
+    "azimuthDeg": -77.098,
+    "elevationDeg": 32.733
+   },
+   {
+    "hex": [
+     28,
+     27
+    ],
+    "azimuthDeg": -80.169,
+    "elevationDeg": 32.15
+   },
+   {
+    "hex": [
+     28,
+     28
+    ],
+    "azimuthDeg": -83.24,
+    "elevationDeg": 31.568
+   },
+   {
+    "hex": [
+     28,
+     29
+    ],
+    "azimuthDeg": -86.311,
+    "elevationDeg": 30.985
+   },
+   {
+    "hex": [
+     28,
+     30
+    ],
+    "azimuthDeg": -89.382,
+    "elevationDeg": 30.403
+   },
+   {
+    "hex": [
+     28,
+     31
+    ],
+    "azimuthDeg": -92.453,
+    "elevationDeg": 29.82
+   },
+   {
+    "hex": [
+     28,
+     32
+    ],
+    "azimuthDeg": -95.524,
+    "elevationDeg": 29.237
+   },
+   {
+    "hex": [
+     28,
+     33
+    ],
+    "azimuthDeg": -98.595,
+    "elevationDeg": 28.655
+   },
+   {
+    "hex": [
+     28,
+     34
+    ],
+    "azimuthDeg": -101.666,
+    "elevationDeg": 28.072
+   },
+   {
+    "hex": [
+     28,
+     35
+    ],
+    "azimuthDeg": -104.737,
+    "elevationDeg": 27.49
+   },
+   {
+    "hex": [
+     28,
+     36
+    ],
+    "azimuthDeg": -107.808,
+    "elevationDeg": 26.907
+   },
+   {
+    "hex": [
+     28,
+     37
+    ],
+    "azimuthDeg": -110.879,
+    "elevationDeg": 26.324
+   },
+   {
+    "hex": [
+     28,
+     38
+    ],
+    "azimuthDeg": -113.95,
+    "elevationDeg": 25.742
+   },
+   {
+    "hex": [
+     28,
+     39
+    ],
+    "azimuthDeg": -117.021,
+    "elevationDeg": 25.159
+   },
+   {
+    "hex": [
+     29,
+     14
+    ],
+    "azimuthDeg": -40.76,
+    "elevationDeg": 43.678
+   },
+   {
+    "hex": [
+     29,
+     15
+    ],
+    "azimuthDeg": -43.831,
+    "elevationDeg": 43.096
+   },
+   {
+    "hex": [
+     29,
+     16
+    ],
+    "azimuthDeg": -46.902,
+    "elevationDeg": 42.513
+   },
+   {
+    "hex": [
+     29,
+     17
+    ],
+    "azimuthDeg": -49.973,
+    "elevationDeg": 41.93
+   },
+   {
+    "hex": [
+     29,
+     18
+    ],
+    "azimuthDeg": -53.044,
+    "elevationDeg": 41.348
+   },
+   {
+    "hex": [
+     29,
+     19
+    ],
+    "azimuthDeg": -56.115,
+    "elevationDeg": 40.765
+   },
+   {
+    "hex": [
+     29,
+     20
+    ],
+    "azimuthDeg": -59.186,
+    "elevationDeg": 40.182
+   },
+   {
+    "hex": [
+     29,
+     21
+    ],
+    "azimuthDeg": -62.257,
+    "elevationDeg": 39.6
+   },
+   {
+    "hex": [
+     29,
+     22
+    ],
+    "azimuthDeg": -65.328,
+    "elevationDeg": 39.017
+   },
+   {
+    "hex": [
+     29,
+     23
+    ],
+    "azimuthDeg": -68.399,
+    "elevationDeg": 38.435
+   },
+   {
+    "hex": [
+     29,
+     24
+    ],
+    "azimuthDeg": -71.47,
+    "elevationDeg": 37.852
+   },
+   {
+    "hex": [
+     29,
+     25
+    ],
+    "azimuthDeg": -74.541,
+    "elevationDeg": 37.269
+   },
+   {
+    "hex": [
+     29,
+     26
+    ],
+    "azimuthDeg": -77.612,
+    "elevationDeg": 36.687
+   },
+   {
+    "hex": [
+     29,
+     27
+    ],
+    "azimuthDeg": -80.683,
+    "elevationDeg": 36.104
+   },
+   {
+    "hex": [
+     29,
+     28
+    ],
+    "azimuthDeg": -83.754,
+    "elevationDeg": 35.522
+   },
+   {
+    "hex": [
+     29,
+     29
+    ],
+    "azimuthDeg": -86.825,
+    "elevationDeg": 34.939
+   },
+   {
+    "hex": [
+     29,
+     30
+    ],
+    "azimuthDeg": -89.896,
+    "elevationDeg": 34.356
+   },
+   {
+    "hex": [
+     29,
+     31
+    ],
+    "azimuthDeg": -92.967,
+    "elevationDeg": 33.774
+   },
+   {
+    "hex": [
+     29,
+     32
+    ],
+    "azimuthDeg": -96.038,
+    "elevationDeg": 33.191
+   },
+   {
+    "hex": [
+     29,
+     33
+    ],
+    "azimuthDeg": -99.109,
+    "elevationDeg": 32.609
+   },
+   {
+    "hex": [
+     29,
+     34
+    ],
+    "azimuthDeg": -102.18,
+    "elevationDeg": 32.026
+   },
+   {
+    "hex": [
+     29,
+     35
+    ],
+    "azimuthDeg": -105.251,
+    "elevationDeg": 31.443
+   },
+   {
+    "hex": [
+     29,
+     36
+    ],
+    "azimuthDeg": -108.322,
+    "elevationDeg": 30.861
+   },
+   {
+    "hex": [
+     29,
+     37
+    ],
+    "azimuthDeg": -111.393,
+    "elevationDeg": 30.278
+   },
+   {
+    "hex": [
+     29,
+     38
+    ],
+    "azimuthDeg": -114.464,
+    "elevationDeg": 29.696
+   },
+   {
+    "hex": [
+     29,
+     39
+    ],
+    "azimuthDeg": -117.535,
+    "elevationDeg": 29.113
+   },
+   {
+    "hex": [
+     30,
+     15
+    ],
+    "azimuthDeg": -44.345,
+    "elevationDeg": 47.049
+   },
+   {
+    "hex": [
+     30,
+     16
+    ],
+    "azimuthDeg": -47.416,
+    "elevationDeg": 46.467
+   },
+   {
+    "hex": [
+     30,
+     17
+    ],
+    "azimuthDeg": -50.487,
+    "elevationDeg": 45.884
+   },
+   {
+    "hex": [
+     30,
+     18
+    ],
+    "azimuthDeg": -53.558,
+    "elevationDeg": 45.301
+   },
+   {
+    "hex": [
+     30,
+     19
+    ],
+    "azimuthDeg": -56.629,
+    "elevationDeg": 44.719
+   },
+   {
+    "hex": [
+     30,
+     20
+    ],
+    "azimuthDeg": -59.7,
+    "elevationDeg": 44.136
+   },
+   {
+    "hex": [
+     30,
+     21
+    ],
+    "azimuthDeg": -62.771,
+    "elevationDeg": 43.554
+   },
+   {
+    "hex": [
+     30,
+     22
+    ],
+    "azimuthDeg": -65.842,
+    "elevationDeg": 42.971
+   },
+   {
+    "hex": [
+     30,
+     23
+    ],
+    "azimuthDeg": -68.913,
+    "elevationDeg": 42.388
+   },
+   {
+    "hex": [
+     30,
+     24
+    ],
+    "azimuthDeg": -71.984,
+    "elevationDeg": 41.806
+   },
+   {
+    "hex": [
+     30,
+     25
+    ],
+    "azimuthDeg": -75.055,
+    "elevationDeg": 41.223
+   },
+   {
+    "hex": [
+     30,
+     26
+    ],
+    "azimuthDeg": -78.126,
+    "elevationDeg": 40.641
+   },
+   {
+    "hex": [
+     30,
+     27
+    ],
+    "azimuthDeg": -81.197,
+    "elevationDeg": 40.058
+   },
+   {
+    "hex": [
+     30,
+     28
+    ],
+    "azimuthDeg": -84.268,
+    "elevationDeg": 39.475
+   },
+   {
+    "hex": [
+     30,
+     29
+    ],
+    "azimuthDeg": -87.339,
+    "elevationDeg": 38.893
+   },
+   {
+    "hex": [
+     30,
+     30
+    ],
+    "azimuthDeg": -90.41,
+    "elevationDeg": 38.31
+   },
+   {
+    "hex": [
+     30,
+     31
+    ],
+    "azimuthDeg": -93.481,
+    "elevationDeg": 37.728
+   },
+   {
+    "hex": [
+     30,
+     32
+    ],
+    "azimuthDeg": -96.552,
+    "elevationDeg": 37.145
+   },
+   {
+    "hex": [
+     30,
+     33
+    ],
+    "azimuthDeg": -99.623,
+    "elevationDeg": 36.562
+   },
+   {
+    "hex": [
+     30,
+     34
+    ],
+    "azimuthDeg": -102.694,
+    "elevationDeg": 35.98
+   },
+   {
+    "hex": [
+     30,
+     35
+    ],
+    "azimuthDeg": -105.765,
+    "elevationDeg": 35.397
+   },
+   {
+    "hex": [
+     30,
+     36
+    ],
+    "azimuthDeg": -108.836,
+    "elevationDeg": 34.815
+   },
+   {
+    "hex": [
+     30,
+     37
+    ],
+    "azimuthDeg": -111.907,
+    "elevationDeg": 34.232
+   },
+   {
+    "hex": [
+     30,
+     38
+    ],
+    "azimuthDeg": -114.978,
+    "elevationDeg": 33.649
+   },
+   {
+    "hex": [
+     30,
+     39
+    ],
+    "azimuthDeg": -118.049,
+    "elevationDeg": 33.067
+   },
+   {
+    "hex": [
+     31,
+     16
+    ],
+    "azimuthDeg": -47.93,
+    "elevationDeg": 50.42
+   },
+   {
+    "hex": [
+     31,
+     17
+    ],
+    "azimuthDeg": -51.001,
+    "elevationDeg": 49.838
+   },
+   {
+    "hex": [
+     31,
+     18
+    ],
+    "azimuthDeg": -54.072,
+    "elevationDeg": 49.255
+   },
+   {
+    "hex": [
+     31,
+     19
+    ],
+    "azimuthDeg": -57.143,
+    "elevationDeg": 48.673
+   },
+   {
+    "hex": [
+     31,
+     20
+    ],
+    "azimuthDeg": -60.214,
+    "elevationDeg": 48.09
+   },
+   {
+    "hex": [
+     31,
+     21
+    ],
+    "azimuthDeg": -63.285,
+    "elevationDeg": 47.507
+   },
+   {
+    "hex": [
+     31,
+     22
+    ],
+    "azimuthDeg": -66.356,
+    "elevationDeg": 46.925
+   },
+   {
+    "hex": [
+     31,
+     23
+    ],
+    "azimuthDeg": -69.427,
+    "elevationDeg": 46.342
+   },
+   {
+    "hex": [
+     31,
+     24
+    ],
+    "azimuthDeg": -72.498,
+    "elevationDeg": 45.76
+   },
+   {
+    "hex": [
+     31,
+     25
+    ],
+    "azimuthDeg": -75.569,
+    "elevationDeg": 45.177
+   },
+   {
+    "hex": [
+     31,
+     26
+    ],
+    "azimuthDeg": -78.64,
+    "elevationDeg": 44.594
+   },
+   {
+    "hex": [
+     31,
+     27
+    ],
+    "azimuthDeg": -81.711,
+    "elevationDeg": 44.012
+   },
+   {
+    "hex": [
+     31,
+     28
+    ],
+    "azimuthDeg": -84.782,
+    "elevationDeg": 43.429
+   },
+   {
+    "hex": [
+     31,
+     29
+    ],
+    "azimuthDeg": -87.853,
+    "elevationDeg": 42.847
+   },
+   {
+    "hex": [
+     31,
+     30
+    ],
+    "azimuthDeg": -90.924,
+    "elevationDeg": 42.264
+   },
+   {
+    "hex": [
+     31,
+     31
+    ],
+    "azimuthDeg": -93.995,
+    "elevationDeg": 41.681
+   },
+   {
+    "hex": [
+     31,
+     32
+    ],
+    "azimuthDeg": -97.066,
+    "elevationDeg": 41.099
+   },
+   {
+    "hex": [
+     31,
+     33
+    ],
+    "azimuthDeg": -100.137,
+    "elevationDeg": 40.516
+   },
+   {
+    "hex": [
+     31,
+     34
+    ],
+    "azimuthDeg": -103.208,
+    "elevationDeg": 39.933
+   },
+   {
+    "hex": [
+     31,
+     35
+    ],
+    "azimuthDeg": -106.279,
+    "elevationDeg": 39.351
+   },
+   {
+    "hex": [
+     31,
+     36
+    ],
+    "azimuthDeg": -109.35,
+    "elevationDeg": 38.768
+   },
+   {
+    "hex": [
+     31,
+     37
+    ],
+    "azimuthDeg": -112.421,
+    "elevationDeg": 38.186
+   },
+   {
+    "hex": [
+     31,
+     38
+    ],
+    "azimuthDeg": -115.492,
+    "elevationDeg": 37.603
+   },
+   {
+    "hex": [
+     31,
+     39
+    ],
+    "azimuthDeg": -118.563,
+    "elevationDeg": 37.02
+   },
+   {
+    "hex": [
+     32,
+     18
+    ],
+    "azimuthDeg": -54.586,
+    "elevationDeg": 53.209
+   },
+   {
+    "hex": [
+     32,
+     19
+    ],
+    "azimuthDeg": -57.657,
+    "elevationDeg": 52.626
+   },
+   {
+    "hex": [
+     32,
+     20
+    ],
+    "azimuthDeg": -60.728,
+    "elevationDeg": 52.044
+   },
+   {
+    "hex": [
+     32,
+     21
+    ],
+    "azimuthDeg": -63.799,
+    "elevationDeg": 51.461
+   },
+   {
+    "hex": [
+     32,
+     22
+    ],
+    "azimuthDeg": -66.87,
+    "elevationDeg": 50.879
+   },
+   {
+    "hex": [
+     32,
+     23
+    ],
+    "azimuthDeg": -69.941,
+    "elevationDeg": 50.296
+   },
+   {
+    "hex": [
+     32,
+     24
+    ],
+    "azimuthDeg": -73.012,
+    "elevationDeg": 49.713
+   },
+   {
+    "hex": [
+     32,
+     25
+    ],
+    "azimuthDeg": -76.083,
+    "elevationDeg": 49.131
+   },
+   {
+    "hex": [
+     32,
+     26
+    ],
+    "azimuthDeg": -79.154,
+    "elevationDeg": 48.548
+   },
+   {
+    "hex": [
+     32,
+     27
+    ],
+    "azimuthDeg": -82.225,
+    "elevationDeg": 47.966
+   },
+   {
+    "hex": [
+     32,
+     28
+    ],
+    "azimuthDeg": -85.296,
+    "elevationDeg": 47.383
+   },
+   {
+    "hex": [
+     32,
+     29
+    ],
+    "azimuthDeg": -88.367,
+    "elevationDeg": 46.8
+   },
+   {
+    "hex": [
+     32,
+     30
+    ],
+    "azimuthDeg": -91.438,
+    "elevationDeg": 46.218
+   },
+   {
+    "hex": [
+     32,
+     31
+    ],
+    "azimuthDeg": -94.509,
+    "elevationDeg": 45.635
+   },
+   {
+    "hex": [
+     32,
+     32
+    ],
+    "azimuthDeg": -97.58,
+    "elevationDeg": 45.052
+   },
+   {
+    "hex": [
+     32,
+     33
+    ],
+    "azimuthDeg": -100.651,
+    "elevationDeg": 44.47
+   },
+   {
+    "hex": [
+     32,
+     34
+    ],
+    "azimuthDeg": -103.722,
+    "elevationDeg": 43.887
+   },
+   {
+    "hex": [
+     32,
+     35
+    ],
+    "azimuthDeg": -106.793,
+    "elevationDeg": 43.305
+   },
+   {
+    "hex": [
+     32,
+     36
+    ],
+    "azimuthDeg": -109.864,
+    "elevationDeg": 42.722
+   },
+   {
+    "hex": [
+     32,
+     37
+    ],
+    "azimuthDeg": -112.935,
+    "elevationDeg": 42.139
+   },
+   {
+    "hex": [
+     32,
+     38
+    ],
+    "azimuthDeg": -116.006,
+    "elevationDeg": 41.557
+   },
+   {
+    "hex": [
+     33,
+     19
+    ],
+    "azimuthDeg": -58.171,
+    "elevationDeg": 56.58
+   },
+   {
+    "hex": [
+     33,
+     20
+    ],
+    "azimuthDeg": -61.242,
+    "elevationDeg": 55.998
+   },
+   {
+    "hex": [
+     33,
+     21
+    ],
+    "azimuthDeg": -64.313,
+    "elevationDeg": 55.415
+   },
+   {
+    "hex": [
+     33,
+     22
+    ],
+    "azimuthDeg": -67.384,
+    "elevationDeg": 54.832
+   },
+   {
+    "hex": [
+     33,
+     23
+    ],
+    "azimuthDeg": -70.455,
+    "elevationDeg": 54.25
+   },
+   {
+    "hex": [
+     33,
+     24
+    ],
+    "azimuthDeg": -73.526,
+    "elevationDeg": 53.667
+   },
+   {
+    "hex": [
+     33,
+     25
+    ],
+    "azimuthDeg": -76.597,
+    "elevationDeg": 53.084
+   },
+   {
+    "hex": [
+     33,
+     26
+    ],
+    "azimuthDeg": -79.668,
+    "elevationDeg": 52.502
+   },
+   {
+    "hex": [
+     33,
+     27
+    ],
+    "azimuthDeg": -82.739,
+    "elevationDeg": 51.919
+   },
+   {
+    "hex": [
+     33,
+     28
+    ],
+    "azimuthDeg": -85.81,
+    "elevationDeg": 51.337
+   },
+   {
+    "hex": [
+     33,
+     29
+    ],
+    "azimuthDeg": -88.881,
+    "elevationDeg": 50.754
+   },
+   {
+    "hex": [
+     33,
+     30
+    ],
+    "azimuthDeg": -91.952,
+    "elevationDeg": 50.171
+   },
+   {
+    "hex": [
+     33,
+     31
+    ],
+    "azimuthDeg": -95.023,
+    "elevationDeg": 49.589
+   },
+   {
+    "hex": [
+     33,
+     32
+    ],
+    "azimuthDeg": -98.094,
+    "elevationDeg": 49.006
+   },
+   {
+    "hex": [
+     33,
+     33
+    ],
+    "azimuthDeg": -101.165,
+    "elevationDeg": 48.424
+   },
+   {
+    "hex": [
+     33,
+     34
+    ],
+    "azimuthDeg": -104.236,
+    "elevationDeg": 47.841
+   },
+   {
+    "hex": [
+     33,
+     35
+    ],
+    "azimuthDeg": -107.307,
+    "elevationDeg": 47.258
+   },
+   {
+    "hex": [
+     33,
+     36
+    ],
+    "azimuthDeg": -110.378,
+    "elevationDeg": 46.676
+   },
+   {
+    "hex": [
+     33,
+     37
+    ],
+    "azimuthDeg": -113.449,
+    "elevationDeg": 46.093
+   },
+   {
+    "hex": [
+     33,
+     38
+    ],
+    "azimuthDeg": -116.52,
+    "elevationDeg": 45.511
+   },
+   {
+    "hex": [
+     34,
+     21
+    ],
+    "azimuthDeg": -64.827,
+    "elevationDeg": 59.369
+   },
+   {
+    "hex": [
+     34,
+     22
+    ],
+    "azimuthDeg": -67.898,
+    "elevationDeg": 58.786
+   },
+   {
+    "hex": [
+     34,
+     23
+    ],
+    "azimuthDeg": -70.969,
+    "elevationDeg": 58.203
+   },
+   {
+    "hex": [
+     34,
+     24
+    ],
+    "azimuthDeg": -74.04,
+    "elevationDeg": 57.621
+   },
+   {
+    "hex": [
+     34,
+     25
+    ],
+    "azimuthDeg": -77.111,
+    "elevationDeg": 57.038
+   },
+   {
+    "hex": [
+     34,
+     26
+    ],
+    "azimuthDeg": -80.182,
+    "elevationDeg": 56.456
+   },
+   {
+    "hex": [
+     34,
+     27
+    ],
+    "azimuthDeg": -83.253,
+    "elevationDeg": 55.873
+   },
+   {
+    "hex": [
+     34,
+     28
+    ],
+    "azimuthDeg": -86.324,
+    "elevationDeg": 55.29
+   },
+   {
+    "hex": [
+     34,
+     29
+    ],
+    "azimuthDeg": -89.395,
+    "elevationDeg": 54.708
+   },
+   {
+    "hex": [
+     34,
+     30
+    ],
+    "azimuthDeg": -92.466,
+    "elevationDeg": 54.125
+   },
+   {
+    "hex": [
+     34,
+     31
+    ],
+    "azimuthDeg": -95.537,
+    "elevationDeg": 53.543
+   },
+   {
+    "hex": [
+     34,
+     32
+    ],
+    "azimuthDeg": -98.608,
+    "elevationDeg": 52.96
+   },
+   {
+    "hex": [
+     34,
+     33
+    ],
+    "azimuthDeg": -101.679,
+    "elevationDeg": 52.377
+   },
+   {
+    "hex": [
+     34,
+     34
+    ],
+    "azimuthDeg": -104.75,
+    "elevationDeg": 51.795
+   },
+   {
+    "hex": [
+     34,
+     35
+    ],
+    "azimuthDeg": -107.821,
+    "elevationDeg": 51.212
+   },
+   {
+    "hex": [
+     34,
+     36
+    ],
+    "azimuthDeg": -110.892,
+    "elevationDeg": 50.63
+   },
+   {
+    "hex": [
+     34,
+     37
+    ],
+    "azimuthDeg": -113.963,
+    "elevationDeg": 50.047
+   },
+   {
+    "hex": [
+     34,
+     38
+    ],
+    "azimuthDeg": -117.034,
+    "elevationDeg": 49.464
+   },
+   {
+    "hex": [
+     35,
+     23
+    ],
+    "azimuthDeg": -71.483,
+    "elevationDeg": 62.157
+   },
+   {
+    "hex": [
+     35,
+     24
+    ],
+    "azimuthDeg": -74.554,
+    "elevationDeg": 61.575
+   },
+   {
+    "hex": [
+     35,
+     25
+    ],
+    "azimuthDeg": -77.625,
+    "elevationDeg": 60.992
+   },
+   {
+    "hex": [
+     35,
+     26
+    ],
+    "azimuthDeg": -80.696,
+    "elevationDeg": 60.409
+   },
+   {
+    "hex": [
+     35,
+     27
+    ],
+    "azimuthDeg": -83.767,
+    "elevationDeg": 59.827
+   },
+   {
+    "hex": [
+     35,
+     28
+    ],
+    "azimuthDeg": -86.838,
+    "elevationDeg": 59.244
+   },
+   {
+    "hex": [
+     35,
+     29
+    ],
+    "azimuthDeg": -89.909,
+    "elevationDeg": 58.662
+   },
+   {
+    "hex": [
+     35,
+     30
+    ],
+    "azimuthDeg": -92.98,
+    "elevationDeg": 58.079
+   },
+   {
+    "hex": [
+     35,
+     31
+    ],
+    "azimuthDeg": -96.051,
+    "elevationDeg": 57.496
+   },
+   {
+    "hex": [
+     35,
+     32
+    ],
+    "azimuthDeg": -99.122,
+    "elevationDeg": 56.914
+   },
+   {
+    "hex": [
+     35,
+     33
+    ],
+    "azimuthDeg": -102.193,
+    "elevationDeg": 56.331
+   },
+   {
+    "hex": [
+     35,
+     34
+    ],
+    "azimuthDeg": -105.264,
+    "elevationDeg": 55.749
+   },
+   {
+    "hex": [
+     35,
+     35
+    ],
+    "azimuthDeg": -108.335,
+    "elevationDeg": 55.166
+   },
+   {
+    "hex": [
+     35,
+     36
+    ],
+    "azimuthDeg": -111.406,
+    "elevationDeg": 54.583
+   },
+   {
+    "hex": [
+     36,
+     26
+    ],
+    "azimuthDeg": -81.209,
+    "elevationDeg": 64.363
+   },
+   {
+    "hex": [
+     36,
+     27
+    ],
+    "azimuthDeg": -84.28,
+    "elevationDeg": 63.781
+   },
+   {
+    "hex": [
+     36,
+     28
+    ],
+    "azimuthDeg": -87.352,
+    "elevationDeg": 63.198
+   },
+   {
+    "hex": [
+     36,
+     29
+    ],
+    "azimuthDeg": -90.423,
+    "elevationDeg": 62.615
+   },
+   {
+    "hex": [
+     36,
+     30
+    ],
+    "azimuthDeg": -93.494,
+    "elevationDeg": 62.033
+   },
+   {
+    "hex": [
+     36,
+     31
+    ],
+    "azimuthDeg": -96.565,
+    "elevationDeg": 61.45
+   },
+   {
+    "hex": [
+     36,
+     32
+    ],
+    "azimuthDeg": -99.636,
+    "elevationDeg": 60.868
+   },
+   {
+    "hex": [
+     36,
+     33
+    ],
+    "azimuthDeg": -102.707,
+    "elevationDeg": 60.285
+   },
+   {
+    "hex": [
+     36,
+     34
+    ],
+    "azimuthDeg": -105.778,
+    "elevationDeg": 59.702
+   },
+   {
+    "hex": [
+     36,
+     35
+    ],
+    "azimuthDeg": -108.849,
+    "elevationDeg": 59.12
+   }
+  ]
+ }
+}

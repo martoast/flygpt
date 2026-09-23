@@ -5,7 +5,8 @@ from src.provenance import sha256, save_json
 
 BASE = 'https://storage.googleapis.com/flyem-male-cns/v1.0/connectome-data/flat-connectome/'
 FILES = ['connectome-weights-male-cns-v1.0-minconf-0.5.feather',
-         'body-annotations-male-cns-v1.0-minconf-0.5.feather']
+         'body-annotations-male-cns-v1.0-minconf-0.5.feather',
+         'body-neurotransmitters-male-cns-v1.0.feather']
 
 
 def main():
