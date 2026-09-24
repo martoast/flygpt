@@ -80,3 +80,50 @@ linear readout absorbs as an offset.
 
 **Cost:** about 5 min per 30 s flight at 20 Hz on the M1. The engine is a
 straightforward Numba loop and has not been optimised yet.
+
+## Stimulated neurons keep their refractory period
+
+Shiu et al. drop the refractory period of the neurons they stimulate, which are
+sensory afferents with little recurrent input. Our stimulated L1/L2 are recurrently
+driven interneurons. Without a refractory period they fired on every 0.1 ms step
+(about 4,800 Hz) and produced 3/4 of all spikes. They now keep the standard 2.2 ms.
+
+Drive check (`lif_propagation.json`):
+- 7,634 neurons spike, mostly in the optic lobe, with a mean non-stimulated rate of
+  2.7 Hz.
+- 54 DNs respond: about 31 active and 75 spikes per 50 ms with vision, **0 blind**.
+- After the input stops, the whole brain is silent within 50 ms, with no
+  reverberation at all.
+
+## Engine speed: can this be a real drone brain?
+
+`lif_equivalence.json` compares the multi-core engine with the single-core reference.
+Spike counts are **identical for all 166,700 neurons** (1,216,524 spikes in both),
+because spikes are delivered in the same order.
+
+| Engine (Apple M1, 8 threads) | Wall time per 50 ms of brain time | Speed vs real time |
+|---|---|---|
+| First version (no refractory on stimulated neurons, dense) | 0.46–0.57 s | 0.09–0.11× |
+| Dense, stimulated neurons refractory | 0.23–0.25 s | 0.2× |
+| **Parallel (one parallel pass per step, serial delivery)** | **0.12–0.15 s** | **0.33–0.42×** |
+| Parallel, visual input off | 0.05–0.06 s | about 1× |
+
+**Tried and rejected:**
+- An event-driven engine that skips resting neurons: exact, but slower, because
+  subthreshold activity spreads widely.
+- Parallel spike delivery by target block: slower, because a second parallel region
+  per step costs more in thread-launch overhead than it saves.
+
+**Workload:** 166,700 neurons × 10,000 steps per second (dt 0.1 ms), which is about
+1.7 G neuron updates per simulated second, plus about 160 M synaptic deliveries at
+this activity level. The M1 CPU is 2.5–3× short of real time.
+
+**Paths to real time, none of them measured yet:**
+- A faster CPU (the M4).
+- dt 0.2 ms, which halves the updates but must be validated against 0.1 ms.
+- A GPU. This is a small, regular workload for one; GeNN and brian2cuda target
+  exactly this kind of model.
+- Neuromorphic hardware.
+
+For a physical drone, the brain would run on a Jetson-class GPU onboard or on a
+ground computer over the radio link.

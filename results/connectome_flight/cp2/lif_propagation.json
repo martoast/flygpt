@@ -10,254 +10,253 @@
   "w_syn": 0.15895953757225437,
   "f_poi": 432.49999999999994,
   "r_poi_max": 150.0,
-  "dt": 0.1
+  "dt": 0.1,
+  "stim_refractory": true
  },
  "stimulatedNeurons": 1748,
- "secondsPer50msWindow": 0.488691185391508,
- "neuronsThatSpiked": 24249,
+ "secondsPer50msWindow": 0.2848671145970002,
+ "neuronsThatSpiked": 7634,
  "spikingBySuperclass": {
-  "ol_intrinsic": 18865,
-  "cb_intrinsic": 1949,
-  "visual_projection": 1248,
-  "vnc_intrinsic": 1062,
-  "ol_sensory": 322,
-  "descending_neuron": 293,
-  "vnc_motor": 193,
-  "ascending_neuron": 153,
-  "visual_centrifugal": 109,
-  "cb_motor": 29,
-  "vnc_efferent": 14,
-  "efferent_ascending": 7
+  "ol_intrinsic": 6894,
+  "vnc_intrinsic": 218,
+  "cb_intrinsic": 202,
+  "visual_projection": 104,
+  "vnc_motor": 96,
+  "descending_neuron": 54,
+  "ascending_neuron": 32,
+  "visual_centrifugal": 23,
+  "cb_motor": 9,
+  "efferent_ascending": 2
  },
  "readout": {
-  "dnThatSpiked": 293,
+  "dnThatSpiked": 54,
   "of": 1314,
-  "meanRateHz": 11.237442922374429,
-  "maxRateHz": 348.0
+  "meanRateHz": 1.147640791476408,
+  "maxRateHz": 163.0
  },
- "nonStimulatedMeanRateHz": 14.818056161792521,
+ "nonStimulatedMeanRateHz": 2.7303579223046706,
  "windows": [
   {
    "window": 0,
    "input": true,
-   "spikes": 8912,
+   "spikes": 8577,
    "dnSpikes": 0,
    "dnActive": 0
   },
   {
    "window": 1,
    "input": true,
-   "spikes": 558555,
-   "dnSpikes": 501,
-   "dnActive": 170
+   "spikes": 61627,
+   "dnSpikes": 59,
+   "dnActive": 32
   },
   {
    "window": 2,
    "input": true,
-   "spikes": 573425,
-   "dnSpikes": 790,
-   "dnActive": 207
+   "spikes": 63873,
+   "dnSpikes": 83,
+   "dnActive": 38
   },
   {
    "window": 3,
    "input": true,
-   "spikes": 573139,
-   "dnSpikes": 809,
-   "dnActive": 208
+   "spikes": 63845,
+   "dnSpikes": 87,
+   "dnActive": 35
   },
   {
    "window": 4,
    "input": true,
-   "spikes": 573981,
-   "dnSpikes": 820,
-   "dnActive": 221
+   "spikes": 62405,
+   "dnSpikes": 67,
+   "dnActive": 24
   },
   {
    "window": 5,
    "input": true,
-   "spikes": 571609,
-   "dnSpikes": 770,
-   "dnActive": 211
+   "spikes": 63724,
+   "dnSpikes": 83,
+   "dnActive": 33
   },
   {
    "window": 6,
    "input": true,
-   "spikes": 573117,
-   "dnSpikes": 766,
-   "dnActive": 199
+   "spikes": 63997,
+   "dnSpikes": 85,
+   "dnActive": 35
   },
   {
    "window": 7,
    "input": true,
-   "spikes": 574086,
-   "dnSpikes": 822,
-   "dnActive": 217
+   "spikes": 63361,
+   "dnSpikes": 86,
+   "dnActive": 34
   },
   {
    "window": 8,
    "input": true,
-   "spikes": 572828,
-   "dnSpikes": 818,
-   "dnActive": 224
+   "spikes": 62906,
+   "dnSpikes": 80,
+   "dnActive": 33
   },
   {
    "window": 9,
    "input": true,
-   "spikes": 572253,
-   "dnSpikes": 740,
-   "dnActive": 193
+   "spikes": 63794,
+   "dnSpikes": 86,
+   "dnActive": 38
   },
   {
    "window": 10,
    "input": true,
-   "spikes": 572105,
-   "dnSpikes": 799,
-   "dnActive": 208
+   "spikes": 63798,
+   "dnSpikes": 73,
+   "dnActive": 26
   },
   {
    "window": 11,
    "input": true,
-   "spikes": 573003,
-   "dnSpikes": 773,
-   "dnActive": 212
+   "spikes": 62204,
+   "dnSpikes": 75,
+   "dnActive": 29
   },
   {
    "window": 12,
    "input": true,
-   "spikes": 571736,
-   "dnSpikes": 787,
-   "dnActive": 216
+   "spikes": 64009,
+   "dnSpikes": 75,
+   "dnActive": 32
   },
   {
    "window": 13,
    "input": true,
-   "spikes": 573759,
-   "dnSpikes": 786,
-   "dnActive": 207
+   "spikes": 63804,
+   "dnSpikes": 86,
+   "dnActive": 35
   },
   {
    "window": 14,
    "input": true,
-   "spikes": 573179,
-   "dnSpikes": 806,
-   "dnActive": 213
+   "spikes": 63623,
+   "dnSpikes": 82,
+   "dnActive": 34
   },
   {
    "window": 15,
    "input": true,
-   "spikes": 571904,
-   "dnSpikes": 806,
-   "dnActive": 216
+   "spikes": 62567,
+   "dnSpikes": 78,
+   "dnActive": 32
   },
   {
    "window": 16,
    "input": true,
-   "spikes": 572909,
-   "dnSpikes": 798,
-   "dnActive": 216
+   "spikes": 63856,
+   "dnSpikes": 84,
+   "dnActive": 31
   },
   {
    "window": 17,
    "input": true,
-   "spikes": 571169,
-   "dnSpikes": 805,
-   "dnActive": 214
+   "spikes": 63933,
+   "dnSpikes": 80,
+   "dnActive": 31
   },
   {
    "window": 18,
    "input": true,
-   "spikes": 573191,
-   "dnSpikes": 788,
-   "dnActive": 216
+   "spikes": 63352,
+   "dnSpikes": 84,
+   "dnActive": 32
   },
   {
    "window": 19,
    "input": true,
-   "spikes": 572964,
-   "dnSpikes": 782,
-   "dnActive": 210
+   "spikes": 62852,
+   "dnSpikes": 75,
+   "dnActive": 32
   },
   {
    "window": 20,
    "input": false,
-   "spikes": 14625,
-   "dnSpikes": 243,
-   "dnActive": 140
+   "spikes": 4417,
+   "dnSpikes": 21,
+   "dnActive": 18
   },
   {
    "window": 21,
    "input": false,
-   "spikes": 353,
-   "dnSpikes": 28,
-   "dnActive": 2
+   "spikes": 0,
+   "dnSpikes": 0,
+   "dnActive": 0
   },
   {
    "window": 22,
    "input": false,
-   "spikes": 305,
-   "dnSpikes": 28,
-   "dnActive": 2
+   "spikes": 0,
+   "dnSpikes": 0,
+   "dnActive": 0
   },
   {
    "window": 23,
    "input": false,
-   "spikes": 293,
-   "dnSpikes": 27,
-   "dnActive": 2
+   "spikes": 0,
+   "dnSpikes": 0,
+   "dnActive": 0
   },
   {
    "window": 24,
    "input": false,
-   "spikes": 311,
-   "dnSpikes": 27,
-   "dnActive": 2
+   "spikes": 0,
+   "dnSpikes": 0,
+   "dnActive": 0
   },
   {
    "window": 25,
    "input": false,
-   "spikes": 306,
-   "dnSpikes": 28,
-   "dnActive": 2
+   "spikes": 0,
+   "dnSpikes": 0,
+   "dnActive": 0
   },
   {
    "window": 26,
    "input": false,
-   "spikes": 303,
-   "dnSpikes": 28,
-   "dnActive": 2
+   "spikes": 0,
+   "dnSpikes": 0,
+   "dnActive": 0
   },
   {
    "window": 27,
    "input": false,
-   "spikes": 300,
-   "dnSpikes": 28,
-   "dnActive": 2
+   "spikes": 0,
+   "dnSpikes": 0,
+   "dnActive": 0
   },
   {
    "window": 28,
    "input": false,
-   "spikes": 311,
-   "dnSpikes": 28,
-   "dnActive": 2
+   "spikes": 0,
+   "dnSpikes": 0,
+   "dnActive": 0
   },
   {
    "window": 29,
    "input": false,
-   "spikes": 303,
-   "dnSpikes": 28,
-   "dnActive": 2
+   "spikes": 0,
+   "dnSpikes": 0,
+   "dnActive": 0
   }
  ],
  "spikesPer50msAfterInputOff": [
-  14625,
-  353,
-  305,
-  293,
-  311,
-  306,
-  303,
-  300,
-  311,
-  303
+  4417,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0
  ]
 }
