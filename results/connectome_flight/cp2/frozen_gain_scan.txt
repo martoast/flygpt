@@ -1,0 +1,9 @@
+gain 1.00: DN active 0.010  saturated 0.0000  residual after 1 s off 2.40e-12  
+gain 1.25: DN active 0.025  saturated 0.0000  residual after 1 s off 3.86e-03  
+gain 1.50: DN active 0.091  saturated 0.0000  residual after 1 s off 3.63e-02  
+gain 1.75: DN active 0.231  saturated 0.0000  residual after 1 s off 1.92e-01  
+gain 2.00: DN active 0.823  saturated 0.0000  residual after 1 s off 5.56e-01  
+gain 2.25: DN active 0.900  saturated 0.0001  residual after 1 s off 6.66e-01  
+gain 2.50: DN active 0.948  saturated 0.0005  residual after 1 s off 7.19e-01  
+gain 2.75: DN active 0.960  saturated 0.0028  residual after 1 s off 7.72e-01  
+gain 3.00: DN active 0.980  saturated 0.0088  residual after 1 s off 8.33e-01  

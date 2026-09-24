@@ -1,0 +1,135 @@
+{
+ "machine": {
+  "platform": "macOS-26.5-arm64-arm-64bit",
+  "processor": "arm",
+  "python": "3.12.7"
+ },
+ "inputs": {
+  "data/processed/malecns.npz": "57af7b45a6040fc5b2fd01c2a0f074e0feae2ef0ef8a0c3e608e4aa2302bc02d",
+  "data/processed/malecns_body_ids.npy": "ab90597b7b0ce07cbc22cb39a65b70bea2ac73cc7fd225951bd9d73f2fc8dd3f",
+  "data/raw/body-neurotransmitters-male-cns-v1.0.feather": "95c9289220663abeb3409f3ad9e5a7f8a53f8093f5139d15502cd08da8879621",
+  "results/connectome_flight/cp1/io_map.json": "fbd5120161021e6370f47230473cd46db8b1e6331b9cca0314296ea344bff85f",
+  "results/connectome_flight/cp1/connectome-pilot-v1.json": "dbaac6c9bfc990ed829a15f8d169ca245a6fe8b57da569b763209550dc02f15a"
+ },
+ "nNeurons": 166700,
+ "nEdges": 25582938,
+ "tickTiming": {
+  "1": {
+   "forwardSeconds": 0.025273666018620133,
+   "backwardSeconds": 0.04525508405640721,
+   "forwardBackwardSeconds": 0.07052875007502735
+  },
+  "8": {
+   "forwardSeconds": 0.28725933306850493,
+   "backwardSeconds": 0.3615065421909094,
+   "forwardBackwardSeconds": 0.6487658752594143
+  },
+  "32": {
+   "forwardSeconds": 0.2994473341386765,
+   "backwardSeconds": 1.034577916841954,
+   "forwardBackwardSeconds": 1.3340252509806305
+  }
+ },
+ "projection": {
+  "100Hz": {
+   "ticksPerFlight": 12000,
+   "forwardOnlySecondsPerFlight": 303.2839922234416,
+   "forwardBackwardSecondsPerFlightBatch1": 846.3450009003282
+  },
+  "20Hz": {
+   "ticksPerFlight": 2400,
+   "forwardOnlySecondsPerFlight": 60.65679844468832,
+   "forwardBackwardSecondsPerFlightBatch1": 169.26900018006563
+  }
+ },
+ "frozen": {
+  "signCounts": {
+   "excitatory": 103720,
+   "inhibitory": 59262,
+   "zeroFastWeight": 3718,
+   "unclearResolvedByCellType": 2999
+  },
+  "edgesWithFastWeight": 24559135,
+  "rawSpectralRadius": 3777.5682677840396,
+  "globalGain": 0.00023824850702908654,
+  "targetSpectralRadius": 0.9,
+  "eigenSeconds": 0.9586875839158893
+ },
+ "frozenDriveCheck": {
+  "note": "random uniform(0,1) per depth cell per step into anatomical L1/L2 channels; no input gains or readout trained",
+  "trace": [
+   {
+    "step": 20,
+    "meanAbsAll": 0.004368006717413664,
+    "meanAbsReadout": 6.265077900025062e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   },
+   {
+    "step": 40,
+    "meanAbsAll": 0.00500169163569808,
+    "meanAbsReadout": 6.953597221581731e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   },
+   {
+    "step": 60,
+    "meanAbsAll": 0.005275017116218805,
+    "meanAbsReadout": 6.8598628786276095e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   },
+   {
+    "step": 80,
+    "meanAbsAll": 0.0050627682358026505,
+    "meanAbsReadout": 6.482294338638894e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   },
+   {
+    "step": 100,
+    "meanAbsAll": 0.005390380043536425,
+    "meanAbsReadout": 6.739996933902148e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   },
+   {
+    "step": 120,
+    "meanAbsAll": 0.004881200380623341,
+    "meanAbsReadout": 6.63250602883636e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   },
+   {
+    "step": 140,
+    "meanAbsAll": 0.005005063489079475,
+    "meanAbsReadout": 7.001245649007615e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   },
+   {
+    "step": 160,
+    "meanAbsAll": 0.005035041365772486,
+    "meanAbsReadout": 7.223082775453804e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   },
+   {
+    "step": 180,
+    "meanAbsAll": 0.004709598142653704,
+    "meanAbsReadout": 6.4594437390042e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   },
+   {
+    "step": 200,
+    "meanAbsAll": 0.003969318699091673,
+    "meanAbsReadout": 6.582302830793196e-06,
+    "fractionSaturated": 0.0,
+    "readoutActive": 0.0
+   }
+  ],
+  "bounded": true
+ },
+ "peakRssBytes": 1394147328
+}
