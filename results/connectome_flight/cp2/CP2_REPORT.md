@@ -56,3 +56,27 @@ Biological selectivity depends on firing thresholds, which is why the published
 whole-brain fly model (Shiu et al. 2024) is spiking (LIF). This is a pre-flight finding
 and requires a documented amendment to the CP1 weight-model rule before the frozen arm
 can be piloted.
+
+## Frozen arm switched to a spiking LIF brain (user decision, 2026-09-23)
+
+The frozen arm now uses the published Shiu et al. 2024 LIF model, with w_syn
+calibrated from FlyWire to MaleCNS: 0.275 → 0.159 mV, matching the median total
+synaptic input per neuron. The rule change is recorded in
+`cp1/connectome-pilot-v1.1-amendment.json`. Drive check: `lif_propagation.json`
+(calibrated) and `lif_propagation_published_wsyn.json`.
+
+| | Published w_syn 0.275 mV | Calibrated 0.159 mV |
+|---|---|---|
+| Neurons spiking (of 166,700) | 32,941 | 24,249 (78% optic lobe) |
+| Descending neurons that fired | 493 | 293 |
+| Descending-neuron spikes / active per 50 ms, vision on | 1,284 / 283 | 738 / 199 |
+| Descending-neuron spikes / active per 50 ms, vision off | 36–103 / 3–52 | 28 / **2** (steady) |
+| Total spikes per 50 ms after input off | about 1,700–2,500 | about 300 (98% drop) |
+| Compute per 50 ms of brain time (M1) | 0.57 s | 0.49 s |
+
+The calibrated brain carries vision selectively to the descending neurons and is
+nearly silent at the readout when blind. Only a 2-DN residual loop remains, which a
+linear readout absorbs as an offset.
+
+**Cost:** about 5 min per 30 s flight at 20 Hz on the M1. The engine is a
+straightforward Numba loop and has not been optimised yet.

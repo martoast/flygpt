@@ -1,0 +1,17 @@
+{
+  "amends": "connectome-pilot-v1.json (weightModels.frozenBiological only; everything else unchanged)",
+  "date": "2026-09-23",
+  "reason": "CP2 pre-flight drive checks (no flight, nothing selected by performance): the v1 rule (synapse count x sign, spectral radius 0.9) silenced the descending-neuron readout (raw radius 3,778 from hubs), and a threshold-free rate model with input-fraction normalisation either lost the eye-to-DN signal or became self-sustaining at every gain (results/connectome_flight/cp2/CP2_REPORT.md). The user chose a spiking model, as in the published whole-brain fly model.",
+  "frozenBiological": {
+    "neuronModel": "leaky integrate-and-fire, Shiu et al. 2024 (github.com/philshiu/Drosophila_brain_model model.py, MIT): v_0 = v_rst = -52 mV, v_th = -45 mV, t_mbr 20 ms, tau 5 ms, refractory 2.2 ms, synaptic delay 1.8 ms, dt 0.1 ms, exact integration; implementation scripts/connectome_flight/lif.py",
+    "weights": "sign(pre) x synapse count x w_syn, fixed; signs as v1 (ACh +, GABA/Glu/histamine -, others 0)",
+    "wSynCalibration": "w_syn = 0.275 mV x (FlyWire 783 median total input synapses 200 / MaleCNS median 346) = 0.159 mV, so the median neuron receives the same total synaptic drive as in the dataset Shiu fitted w_syn on. Both tables are unthresholded. Depends only on the two datasets.",
+    "visualInput": "Poisson spikes into the anatomical L1/L2 neurons of each mapped depth cell at rate 150 Hz x channel value (the published maximum Poisson rate), kick w_syn x f_poi = 68.75 mV, no refractory period on stimulated neurons (as published)",
+    "nonVisualInput": "same Poisson encoding into the declared mechanosensory and non-biological channel populations, rate 150 Hz x a fixed affine map of the channel value to [0, 1] declared before training",
+    "readout": "spike counts of all 1,314 descending neurons per control window, linear readout fitted by ridge regression (reservoir style). The brain is never trained; there is no backpropagation through it.",
+    "controlRate": "20 Hz (50 ms windows) for the frozen arm; 100 Hz would cost about 25 min per 30 s flight on the M1",
+    "propagationCriteriaMet": "calibrated drive check: 199 DNs active per 50 ms window with vision (738 spikes) versus 2 DNs (28 spikes) blind, bounded, 98% drop in total activity within 50 ms of input off. Published (uncalibrated) w_syn: a fifth of the CNS active and 3-52 DNs still firing after input off.",
+    "rewiredControl": "each edge keeps sign x count on its rewired endpoint, with the same w_syn and neuron model"
+  },
+  "unchanged": ["io map and channels", "readout population", "trained-weights arm (rate model, ticks = 4)", "Stage A output target"]
+}

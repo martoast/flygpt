@@ -1,0 +1,263 @@
+{
+ "params": {
+  "v_0": -52.0,
+  "v_rst": -52.0,
+  "v_th": -45.0,
+  "t_mbr": 20.0,
+  "tau": 5.0,
+  "t_rfc": 2.2,
+  "t_dly": 1.8,
+  "w_syn": 0.275,
+  "f_poi": 250.0,
+  "r_poi_max": 150.0,
+  "dt": 0.1
+ },
+ "stimulatedNeurons": 1748,
+ "secondsPer50msWindow": 0.5749586582998745,
+ "neuronsThatSpiked": 32941,
+ "spikingBySuperclass": {
+  "ol_intrinsic": 21979,
+  "cb_intrinsic": 4555,
+  "vnc_intrinsic": 2689,
+  "visual_projection": 1786,
+  "ol_sensory": 544,
+  "descending_neuron": 493,
+  "ascending_neuron": 325,
+  "vnc_motor": 284,
+  "visual_centrifugal": 185,
+  "vnc_efferent": 38,
+  "cb_motor": 35,
+  "vnc_endocrine": 14
+ },
+ "readout": {
+  "dnThatSpiked": 493,
+  "of": 1314,
+  "meanRateHz": 19.541856925418568,
+  "maxRateHz": 392.0
+ },
+ "nonStimulatedMeanRateHz": 20.909967748193413,
+ "windows": [
+  {
+   "window": 0,
+   "input": true,
+   "spikes": 10708,
+   "dnSpikes": 1,
+   "dnActive": 1
+  },
+  {
+   "window": 1,
+   "input": true,
+   "spikes": 609123,
+   "dnSpikes": 1336,
+   "dnActive": 428
+  },
+  {
+   "window": 2,
+   "input": true,
+   "spikes": 626045,
+   "dnSpikes": 1384,
+   "dnActive": 299
+  },
+  {
+   "window": 3,
+   "input": true,
+   "spikes": 625316,
+   "dnSpikes": 1318,
+   "dnActive": 295
+  },
+  {
+   "window": 4,
+   "input": true,
+   "spikes": 626809,
+   "dnSpikes": 1400,
+   "dnActive": 286
+  },
+  {
+   "window": 5,
+   "input": true,
+   "spikes": 624478,
+   "dnSpikes": 1366,
+   "dnActive": 289
+  },
+  {
+   "window": 6,
+   "input": true,
+   "spikes": 625869,
+   "dnSpikes": 1298,
+   "dnActive": 281
+  },
+  {
+   "window": 7,
+   "input": true,
+   "spikes": 626962,
+   "dnSpikes": 1374,
+   "dnActive": 291
+  },
+  {
+   "window": 8,
+   "input": true,
+   "spikes": 624837,
+   "dnSpikes": 1345,
+   "dnActive": 283
+  },
+  {
+   "window": 9,
+   "input": true,
+   "spikes": 625683,
+   "dnSpikes": 1363,
+   "dnActive": 294
+  },
+  {
+   "window": 10,
+   "input": true,
+   "spikes": 625526,
+   "dnSpikes": 1404,
+   "dnActive": 308
+  },
+  {
+   "window": 11,
+   "input": true,
+   "spikes": 627050,
+   "dnSpikes": 1418,
+   "dnActive": 305
+  },
+  {
+   "window": 12,
+   "input": true,
+   "spikes": 625166,
+   "dnSpikes": 1347,
+   "dnActive": 278
+  },
+  {
+   "window": 13,
+   "input": true,
+   "spikes": 625846,
+   "dnSpikes": 1319,
+   "dnActive": 287
+  },
+  {
+   "window": 14,
+   "input": true,
+   "spikes": 626585,
+   "dnSpikes": 1342,
+   "dnActive": 290
+  },
+  {
+   "window": 15,
+   "input": true,
+   "spikes": 624909,
+   "dnSpikes": 1353,
+   "dnActive": 291
+  },
+  {
+   "window": 16,
+   "input": true,
+   "spikes": 625307,
+   "dnSpikes": 1300,
+   "dnActive": 286
+  },
+  {
+   "window": 17,
+   "input": true,
+   "spikes": 624816,
+   "dnSpikes": 1374,
+   "dnActive": 291
+  },
+  {
+   "window": 18,
+   "input": true,
+   "spikes": 626047,
+   "dnSpikes": 1345,
+   "dnActive": 292
+  },
+  {
+   "window": 19,
+   "input": true,
+   "spikes": 625615,
+   "dnSpikes": 1291,
+   "dnActive": 282
+  },
+  {
+   "window": 20,
+   "input": false,
+   "spikes": 26829,
+   "dnSpikes": 565,
+   "dnActive": 241
+  },
+  {
+   "window": 21,
+   "input": false,
+   "spikes": 1832,
+   "dnSpikes": 36,
+   "dnActive": 3
+  },
+  {
+   "window": 22,
+   "input": false,
+   "spikes": 2356,
+   "dnSpikes": 103,
+   "dnActive": 52
+  },
+  {
+   "window": 23,
+   "input": false,
+   "spikes": 1820,
+   "dnSpikes": 38,
+   "dnActive": 6
+  },
+  {
+   "window": 24,
+   "input": false,
+   "spikes": 1755,
+   "dnSpikes": 52,
+   "dnActive": 20
+  },
+  {
+   "window": 25,
+   "input": false,
+   "spikes": 2546,
+   "dnSpikes": 94,
+   "dnActive": 53
+  },
+  {
+   "window": 26,
+   "input": false,
+   "spikes": 2157,
+   "dnSpikes": 79,
+   "dnActive": 36
+  },
+  {
+   "window": 27,
+   "input": false,
+   "spikes": 1687,
+   "dnSpikes": 37,
+   "dnActive": 5
+  },
+  {
+   "window": 28,
+   "input": false,
+   "spikes": 1766,
+   "dnSpikes": 43,
+   "dnActive": 8
+  },
+  {
+   "window": 29,
+   "input": false,
+   "spikes": 2029,
+   "dnSpikes": 77,
+   "dnActive": 32
+  }
+ ],
+ "silentAfterInputOff": [
+  26829,
+  1832,
+  2356,
+  1820,
+  1755,
+  2546,
+  2157,
+  1687,
+  1766,
+  2029
+ ]
+}
